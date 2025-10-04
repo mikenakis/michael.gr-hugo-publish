@@ -1,1 +1,196 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Michael's Blog</title><link>//localhost:1313/tags/</link><description>Recent content in Tags on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 30 Sep 2025 16:27:03 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>Papers</title><link>//localhost:1313/tags/papers/</link><pubDate>Tue, 30 Sep 2025 13:04:12 +0200</pubDate><guid>//localhost:1313/tags/papers/</guid><description/></item><item><title>Software-Engineering</title><link>//localhost:1313/tags/software-engineering/</link><pubDate>Tue, 30 Sep 2025 13:04:12 +0200</pubDate><guid>//localhost:1313/tags/software-engineering/</guid><description/></item><item><title>Software-Architecture</title><link>//localhost:1313/tags/software-architecture/</link><pubDate>Mon, 29 Sep 2025 13:33:45 +0200</pubDate><guid>//localhost:1313/tags/software-architecture/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Michael&#39;s Blog</title>
+        <link>//localhost:1313/tags/</link>
+        <description>Recent content in Tags on Michael&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
+        <lastBuildDate>Sat, 04 Oct 2025 16:52:32 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>00223A</title>
+        <link>//localhost:1313/tags/00223a/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/00223a/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>28282B</title>
+        <link>//localhost:1313/tags/28282b/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/28282b/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Artificial-Intelligence</title>
+        <link>//localhost:1313/tags/artificial-intelligence/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/artificial-intelligence/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Astrophysics</title>
+        <link>//localhost:1313/tags/astrophysics/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/astrophysics/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Biological-Anthropology</title>
+        <link>//localhost:1313/tags/biological-anthropology/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/biological-anthropology/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Biology</title>
+        <link>//localhost:1313/tags/biology/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/biology/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>CCCCFF</title>
+        <link>//localhost:1313/tags/ccccff/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/ccccff/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Code-Review</title>
+        <link>//localhost:1313/tags/code-review/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/code-review/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Concept</title>
+        <link>//localhost:1313/tags/concept/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/concept/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Cosmology</title>
+        <link>//localhost:1313/tags/cosmology/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/cosmology/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DDD1B2</title>
+        <link>//localhost:1313/tags/ddd1b2/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/ddd1b2/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>DotNet</title>
+        <link>//localhost:1313/tags/dotnet/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/dotnet/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>EDE6D6</title>
+        <link>//localhost:1313/tags/ede6d6/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/ede6d6/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Else</title>
+        <link>//localhost:1313/tags/else/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/else/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Endif</title>
+        <link>//localhost:1313/tags/endif/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/endif/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Engineering</title>
+        <link>//localhost:1313/tags/engineering/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/engineering/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Essays</title>
+        <link>//localhost:1313/tags/essays/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/essays/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Evolution</title>
+        <link>//localhost:1313/tags/evolution/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/evolution/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Papers</title>
+        <link>//localhost:1313/tags/papers/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/papers/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Software-Architecture</title>
+        <link>//localhost:1313/tags/software-architecture/</link>
+        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/software-architecture/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Movies</title>
+        <link>//localhost:1313/tags/movies/</link>
+        <pubDate>Tue, 30 Sep 2025 13:04:12 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/movies/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Music</title>
+        <link>//localhost:1313/tags/music/</link>
+        <pubDate>Tue, 30 Sep 2025 13:04:12 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/music/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Software-Engineering</title>
+        <link>//localhost:1313/tags/software-engineering/</link>
+        <pubDate>Tue, 30 Sep 2025 13:04:12 +0200</pubDate>
+        
+        <guid>//localhost:1313/tags/software-engineering/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
