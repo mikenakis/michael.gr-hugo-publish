@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Music on Michael&#39;s Blog</title>
+        <link>//localhost:1313/tags/music/</link>
+        <description>Recent content in Music on Michael&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
+        <lastBuildDate>Sat, 04 Oct 2025 16:52:32 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/music/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Post without image</title>
+        <link>//localhost:1313/p/post-without-image/</link>
+        <pubDate>Tue, 30 Sep 2025 13:04:12 +0200</pubDate>
+        
+        <guid>//localhost:1313/p/post-without-image/</guid>
+        <description>&lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;p&gt;It works better if you plug it in&lt;/p&gt;
+&lt;p&gt;have you got a 27B-6?&lt;/p&gt;
+&lt;p&gt;This post has no image.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Another Post</title>
+        <link>//localhost:1313/p/another-post/</link>
+        <pubDate>Tue, 02 Sep 2025 07:41:01 +0200</pubDate>
+        
+        <guid>//localhost:1313/p/another-post/</guid>
+        <description>&lt;img src="//localhost:1313/p/another-post/another-post-cover.png" alt="Featured image of post Another Post" /&gt;&lt;p&gt;Lorem ipsum&lt;/p&gt;
+&lt;p&gt;It works better if you plug it in&lt;/p&gt;
+&lt;p&gt;have you got a 27B-6?&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
