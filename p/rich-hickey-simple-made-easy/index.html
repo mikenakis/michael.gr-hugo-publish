@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="&ldquo;Simple Made Easy&rdquo; presentation by Rich Hickey from the InfoQ Software Development Conference, recorded at Strangeloop 2011\nWatch the presentation here:\nhttps://www.infoq.com/presentations/Simple-Made-Easy\n(the slideshow plays alongside with the video.)\nMy notes on the presentation:\n&ldquo;Simplicity is prerequisite for reliability&rdquo; - Edsger W. Dijkstra\nSimple vs. Complex, Easy vs. Hard\n">
+<title>Rich Hickey - Simple Made Easy</title>
+
+<link rel='canonical' href='//localhost:1313/p/rich-hickey-simple-made-easy/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Rich Hickey - Simple Made Easy">
+<meta property='og:description' content="&ldquo;Simple Made Easy&rdquo; presentation by Rich Hickey from the InfoQ Software Development Conference, recorded at Strangeloop 2011\nWatch the presentation here:\nhttps://www.infoq.com/presentations/Simple-Made-Easy\n(the slideshow plays alongside with the video.)\nMy notes on the presentation:\n&ldquo;Simplicity is prerequisite for reliability&rdquo; - Edsger W. Dijkstra\nSimple vs. Complex, Easy vs. Hard\n">
+<meta property='og:url' content='//localhost:1313/p/rich-hickey-simple-made-easy/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:published_time' content='2017-07-12T10:46:10&#43;00:00'/><meta property='article:modified_time' content='2025-10-13T13:16:45&#43;02:00'/>
+<meta name="twitter:title" content="Rich Hickey - Simple Made Easy">
+<meta name="twitter:description" content="&ldquo;Simple Made Easy&rdquo; presentation by Rich Hickey from the InfoQ Software Development Conference, recorded at Strangeloop 2011\nWatch the presentation here:\nhttps://www.infoq.com/presentations/Simple-Made-Easy\n(the slideshow plays alongside with the video.)\nMy notes on the presentation:\n&ldquo;Simplicity is prerequisite for reliability&rdquo; - Edsger W. Dijkstra\nSimple vs. Complex, Easy vs. Hard\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/rich-hickey-simple-made-easy/">Rich Hickey - Simple Made Easy</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2017-07-12 Wed 10:46:10 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>&ldquo;Simple Made Easy&rdquo; presentation by Rich Hickey from the InfoQ Software Development Conference, recorded at Strangeloop 2011</p>
+<p>Watch the presentation here:</p>
+<p><a class="external" 
+   href="https://www.infoq.com/presentations/Simple-Made-Easy" target="_blank"
+   >https://www.infoq.com/presentations/Simple-Made-Easy</a></p>
+<p>(the slideshow plays alongside with the video.)</p>
+<p>My notes on the presentation:</p>
+<p>&ldquo;Simplicity is prerequisite for reliability&rdquo; - Edsger W. Dijkstra</p>
+<p>Simple vs. Complex, Easy vs. Hard</p>
+<p>Simple: one role; one task; one concept; one dimension.  (But not one instance; one operation.)  Lack of interleaving, but not lack of cardinality.  Objective notion.</p>
+<p>Easy: near, at hand;  near to our understanding / skill set;  familiar;  near our capabilities.  Relative notion.</p>
+<p>Regarding &ldquo;at hand&rdquo; and &ldquo;familiar&rdquo;:</p>
+<blockquote>
+<p>I think that collectively we are infatuated with these two notions of easy.</p>
+<p>We are just so self-involved in these two aspects, it&rsquo;s hurting us tremendously.</p>
+<p>All we care about is, can I get it instantly and start running it in five seconds?</p>
+<p>It could be this giant hairball that you got, but all you care for is can you get it?</p>
+<p>In addition, we are fixated on &ldquo;oh, I can&rsquo;t, I can&rsquo;t read that.&rdquo;</p>
+<p>I can&rsquo;t read German. Does this mean that German is unreadable? No! I don&rsquo;t know German!</p>
+<p>So, you know, this sort of approach is definitely not helpful.</p>
+<p>In particular, if you want everything to be familiar you will never learn anything new</p>
+<p>&lsquo;cause it can&rsquo;t be significantly different from what you already know, and not drift</p>
+<p>away from the familiarity.</p></blockquote>
+<p>Regarding &ldquo;near to our capabilities&rdquo;:</p>
+<blockquote>
+<p>due to a combination of hubris and insecurity we never really talk about whether or not something is outside of our capabilities.</p></blockquote>
+<p>Regarding easy being &ldquo;relative&rdquo;:</p>
+<blockquote>
+<p>Playing the violin and reading German are really hard for me; they are easy for other people; certain other people.</p></blockquote>
+<blockquote>
+<p>So, unlike simple, where we can go and look for interleavings, look for braiding, easy is always going to be easy for whom; or hard for whom; it is a relative term. The fact that we throw these things around, sort of casually saying, oh I like to use that technology cause it is simple, and when I am saying simple I mean easy, and when I am saying easy I mean because I already know something that looks very much alike that, is how this whole thing degrades, and we can never have an objective discussion about the qualities that matter to us in our software.</p></blockquote>
+<p>Constructs and artifacts</p>
+<blockquote>
+<p>We program with constructs. We have programming languages, we use particular libraries, and those things in and of themselves, when we look at them, when we look at the code we write, have certain characteristics in and of themselves.  But we are in a business of artifacts, right? We don&rsquo;t ship source code, and the user doesn&rsquo;t look at our source code and say &ldquo;oh, this is so pleasant&rdquo;.  They run our software. And they run it for a long period of time. [&hellip;] all that stuff, the running of it, the performance of it, the ability to change it, all is an attribute of the artifact. Not the original construct.  But again, here we still focus so much on our experience of the use of the construct.  &ndash;Oh look, I only had to type 16 characters.  Wow, that&rsquo;s great, no semicolons.  Or things like that.  This whole notion of programmer convenience.  Again, we are infatuated by it, not to our benefit.</p></blockquote>
+<blockquote>
+<p>So, we are going to contrast this with the impacts of long term use.  What does this mean to use this long term?  And, what&rsquo;s there?  What&rsquo;s there is all the meat, right? Does the software do what it is supposed to do?  Is it of high quality?  Can we rely on it doing what it&rsquo;s supposed to do?  Can we fix problems when they arise, and if we are given a new requirement, can we change it?  These things have nothing to do with the construct as we typed it in, or very little to do with it, and have a lot to do with the attributes of the artifact.</p></blockquote>
+<blockquote>
+<p>We have to start assessing our constructs based around the artifacts, not around the look and feel of the experience of typing it in, or the cultural aspects of it.</p></blockquote>
+<blockquote>
+<p>We can only hope to make reliable those things we can understand.</p>
+<p>We can only consider a few things at a time.</p>
+<p>Intertwined things must be considered together.</p>
+<p>Complexity undermines understanding.</p></blockquote>
+<blockquote>
+<p>What&rsquo;s true of every bug found in the field?</p>
+<p>It passed the type checker.</p>
+<p>What else did it do?</p>
+<p>It passed all the tests.</p>
+<p>Your ability to reason about your program is critical to debugging.</p></blockquote>
+<p>Development speed:</p>
+<blockquote>
+<p>Now, of course everyone is going to start moaning, but I have all this speed, I am agile, I&rsquo;m fast, this easy stuff is making my life good because I have a lot of speed.</p></blockquote>
+<blockquote>
+<p>So, what kind of runner can run as fast as they possibly can from the very start of the race?</p>
+<p>(Audience: Sprinters.)</p>
+<p>Right. Only someone who runs really short races!</p>
+<p>But of course we are programmers, and we are smarter than runners, apparently, because we know how to fix that problem, right? We just fire the starting pistol every hundred yards; and call it a new sprint. Right?</p>
+<p>(Applause)</p>
+<p>I don&rsquo;t know why they haven&rsquo;t figured that out.</p>
+<p>It&rsquo;s my contention, based on experience, that if you ignore complexity you will slow down, you will invariably slow down over the long haul. Of course if you are doing something that is really short term, you don&rsquo;t need any of this, you can write it, you know, in ones and zeros.</p></blockquote>
+<blockquote>
+<p>Emphasizing ease gives early speed.</p>
+<p>Ignoring complexity will slow you down over the long haul.</p>
+<p>On throwaway or trivial projects, nothing much matters.</p></blockquote>
+<blockquote>
+<p>If you focus on ease, and ignore simplicity (so I am not saying you can&rsquo;t try to do both, that&rsquo;d be great) but if you focus on ease you will be able to go as fast as possible from the beginning of the race, but no matter what technology you use, or sprints or firing pistols or whatever, the complexity will eventually kill you; it will kill you in a way that will make every sprint accomplish less, most sprints being about completely redoing things that you have already done, and the net event is that you are not moving forward in any significant way.</p></blockquote>
+<blockquote>
+<p>Now, if you start by focusing on simplicity why can&rsquo;t you go as fast as possible right from the beginning?  Cause some tools that are simple are actually as easy to use as some tools that are not, why can&rsquo;t you go as fast then?  You have to think &ndash;you have to actually apply some simplicity work to the problem before you start, and that&rsquo;s going to give you this ramp-up.</p></blockquote>
+<blockquote>
+<p>So, one of the problems I think we have is this conundrum that some things that are easy actually are complex.</p></blockquote>
+<blockquote>
+<p>But we don&rsquo;t care about that, right? Again, the user does not look at our software and they don&rsquo;t actually care very much about how good a time we had when we were writing it.  What they care about is what the program does, and if it works well it will be related to whether or not the output of those constructs were simple &ndash;in other words, what complexity did they yield.</p></blockquote>
+<blockquote>
+<p>When there is complexity there, we are going to call that _incidental complexity_.   It was not part of the user asked us to do, we chose the tool, it had some incidental complexity.</p></blockquote>
+<p>The mental capability part</p>
+<blockquote>
+<p>The fact is we can learn more things, we actually can&rsquo;t get much smarter.  We are not going to move our brain closer to the complexity, we have to make things near by simplifying them.  The truth here is that there are not these super bright people who can do these amazing things and everyone else is stuck.  Because the juggling analogy is pretty close.  The average juggler can do three balls.  The most amazing juggler in the world can do like nine balls or twelve, or something like that. They can&rsquo;t do twenty, or a hundred. We are all very limited.  Compared to the complexity we can create, we are all statistically at the same point in our ability to understand it, which is not very good.</p></blockquote>
+<p>(section about parens rather uninteresting to anyone not using them.)</p>
+<blockquote>
+<p>You never see in these discussions was there a tradeoff?  Is there any downside?  Is there anything bad that comes along with this? Never, nothing; we are looking all for benefits. So I think that as programmers now I think we are looking all for benefits and we are not looking at the byproducts.</p></blockquote>
+<p>Complect vs. Compose</p>
+<ul>
+<li>Composing simple components is the key to writing robust software.</li>
+</ul>
+<p>State is Never Simple</p>
+<ul>
+<li>Complects value and time</li>
+<li>It is easy, in the at-hand and familiar senses</li>
+<li>Interweaves everything that touches it, directly or indirectly</li>
+<li>Not mitigated by modules, encapsulation</li>
+</ul>
+<p>The Complexity Toolkit</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Construct</th>
+          <th>Complects</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>State</td>
+          <td>Everything that touches it</td>
+      </tr>
+      <tr>
+          <td>Objects</td>
+          <td>State, identity, value</td>
+      </tr>
+      <tr>
+          <td>Methods</td>
+          <td>Function and state, namespaces</td>
+      </tr>
+      <tr>
+          <td>Syntax</td>
+          <td>Meaning, order</td>
+      </tr>
+      <tr>
+          <td>Inheritance</td>
+          <td>Types</td>
+      </tr>
+      <tr>
+          <td>Switch/matching</td>
+          <td>Multiple who/what pairs</td>
+      </tr>
+      <tr>
+          <td>var(iable)s</td>
+          <td>Value, time</td>
+      </tr>
+      <tr>
+          <td>Imperative loops, fold</td>
+          <td>what/how</td>
+      </tr>
+      <tr>
+          <td>Actors</td>
+          <td>what/who</td>
+      </tr>
+      <tr>
+          <td>ORM</td>
+          <td>OMG</td>
+      </tr>
+      <tr>
+          <td>Conditionals</td>
+          <td>Why, rest of program</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>The Simplicity Toolkit</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>Construct</th>
+          <th>Get it via&hellip;</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Values</td>
+          <td>final, persistent collections</td>
+      </tr>
+      <tr>
+          <td>Functions</td>
+          <td>a.k.a. stateless methods</td>
+      </tr>
+      <tr>
+          <td>Namespaces</td>
+          <td>language support</td>
+      </tr>
+      <tr>
+          <td>Data</td>
+          <td>Maps, arrays, sets, XML, JSON etc</td>
+      </tr>
+      <tr>
+          <td>Polymorphism a la carte</td>
+          <td>Protocols, type classes</td>
+      </tr>
+      <tr>
+          <td>Managed refs</td>
+          <td>Clojure/Haskell refs</td>
+      </tr>
+      <tr>
+          <td>Set functions</td>
+          <td>Libraries</td>
+      </tr>
+      <tr>
+          <td>Queues</td>
+          <td>Libraries</td>
+      </tr>
+      <tr>
+          <td>Declarative data manipulation</td>
+          <td>SQL/LINQ/Datalog</td>
+      </tr>
+      <tr>
+          <td>Rules</td>
+          <td>Libraries, Prolog</td>
+      </tr>
+      <tr>
+          <td>Consistency</td>
+          <td>Transactions, values</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Complexity that you have no control over: Environmental Complexity (Inherent)</p>
+<p>Not part of the problem, part of the implementation.  (You cannot go back to the customer and say the thing you wanted is not good because I have GC problems.)</p>
+<p>&ldquo;Programming, when stripped of all its circumstantial irrelevancies, boils down to no more and no less than very effective thinking so as to avoid unmastered complexity, to very vigorous separation of your many different concerns&rdquo;.  &ndash;Edsger W. Dijkstra</p>
+<p>Strictly separating what from how is the key to making how somebody else&rsquo;s problem.</p>
+<p>&ldquo;Simplicity is the ultimate sophistication&rdquo;.  &ndash;Leonardo da Vinci</p>
+<p>Here is a somewhat shorter and somewhat different version of this presentation:</p>
+<iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/rI8tNMsozo0" width="560"></iframe>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-13 Mon 13:16:45 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

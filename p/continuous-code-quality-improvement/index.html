@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" While working on code in the context of a certain task, a programmer often discovers some preexisting quality issue. When this happens, there is a choice to be made:\nFix the quality issue on the spot, and commit the fix in the context of the task at hand; or: Only make changes that are strictly necessary for the task at hand, and introduce a separate task for fixing the quality issue. ">
+<title>Continuous Code Quality Improvement</title>
+
+<link rel='canonical' href='//localhost:1313/p/continuous-code-quality-improvement/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Continuous Code Quality Improvement">
+<meta property='og:description' content=" While working on code in the context of a certain task, a programmer often discovers some preexisting quality issue. When this happens, there is a choice to be made:\nFix the quality issue on the spot, and commit the fix in the context of the task at hand; or: Only make changes that are strictly necessary for the task at hand, and introduce a separate task for fixing the quality issue. ">
+<meta property='og:url' content='//localhost:1313/p/continuous-code-quality-improvement/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='essays' /><meta property='article:tag' content='software-engineering' /><meta property='article:published_time' content='2024-04-12T10:48:53&#43;00:00'/><meta property='article:modified_time' content='2025-10-17T19:53:27&#43;02:00'/>
+<meta name="twitter:title" content="Continuous Code Quality Improvement">
+<meta name="twitter:description" content=" While working on code in the context of a certain task, a programmer often discovers some preexisting quality issue. When this happens, there is a choice to be made:\nFix the quality issue on the spot, and commit the fix in the context of the task at hand; or: Only make changes that are strictly necessary for the task at hand, and introduce a separate task for fixing the quality issue. ">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#the-problem">The problem</a></li>
+      </ol>
+    </li>
+    <li><a href="#the-bureaucracy">The bureaucracy</a></li>
+    <li><a href="#enter-continuous-code-quality-improvement-ccqi">Enter Continuous Code Quality Improvement (CCQI)</a></li>
+    <li><a href="#what-about-time-tracking">What about time-tracking?</a></li>
+    <li><a href="#what-about-the-commit-history">What about the commit history?</a></li>
+    <li><a href="#what-about-code-review">What about code review?</a></li>
+    <li><a href="#and-what-about-the-management">And what about the management?</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/continuous-code-quality-improvement/">Continuous Code Quality Improvement</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-04-12 Fri 10:48:53 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    10 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/continuous-code-quality-improvement/images/quality.svg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+
+While working on code in the context of a certain task, a programmer often discovers some preexisting quality issue. When this happens, there is a choice to be made:</p>
+<ul>
+<li>Fix the quality issue on the spot, and commit the fix in the context of the task at hand; or:</li>
+<li>Only make changes that are strictly necessary for the task at hand, and introduce a separate task for fixing the quality issue.</li>
+</ul>
+<p>(Useful pre-reading: <a 
+   href="/p/about-these-papers/"
+   >About these papers</a>)</p>
+<p>The practice of continuously improving the quality of the code-base is called <em><strong>Boy-Scouting</strong></em>. The term comes from a rule of the <em><strong>Boy Scouts of America</strong></em> that says: <em><strong>Always leave the campground cleaner than you found it</strong></em>. In the first chapter of <em>Clean Code</em> by Robert C. Martin there is a
+short section titled <em>The Boy Scout Rule</em> where the author gives an adaptation of that rule for software: <em><strong>Always leave the code you are editing a little better than you found it</strong></em>.</p>
+<p>Opinions vary as to exactly what constitutes Boy-Scouting, and whether it is a good thing or a bad thing. Some people believe that Boy-Scouting should be avoided; they say that when a quality issue is discovered while working on a certain task, a new ticket must always be created and handled separately.</p>
+<p>I once worked at a company where different development teams within the same department had different approaches: most frowned upon boy-scouting, but some embraced it. Since Boy-Scouting had a bad name overall within that company, one team that insisted on practicing it decided to rebrand it by inventing their own term for it: they called it <em><strong>Quality Osmosis</strong></em>. (TopDesk, Team Octarine 2016-2017.)</p>
+<h4 id="the-problem">The problem
+</h4><p>Arguments raised against Boy-Scouting include the following:</p>
+<ol>
+<li>Boy-Scouting interferes with time tracking, because the hours it takes to complete a certain task get inflated by fixing quality issues, whereas the hours spent on fixing quality issues is unaccounted for.</li>
+<li>Boy-Scouting renders quality improvements untraceable, because each quality improvement is hidden inside a commit for some other task.</li>
+<li>Boy-Scouting adds extra burden to code review, because the reviewer has to examine not only the changes for the task at hand, but also additional changes that are unrelated to, or strictly speaking unnecessary for, or in any case not directly aiming to solve, the task at hand.</li>
+</ol>
+<p>Furthermore, Boy-Scouting is viewed as undesirable in some management-heavy environments because it is seen as giving programmers too much autonomy:</p>
+<ul>
+<li>Boy-Scouting implies that programmers are free to get sidetracked, instead of always being laser-focused on (what management perceives to be) their job.</li>
+<li>Boy-Scouting implies that programmers have carte blanche to be making any modifications they see fit to the code base without prior authorization, so who knows what else they might be doing.</li>
+</ul>
+<p>(Note that these concerns are rarely voiced, but often implied.)</p>
+<p>Let us look at the different kinds of quality issues that may be encountered while working on a task:</p>
+<ul>
+<li><strong>Low-impact</strong> - e.g. a misspelled identifier or a violation of formatting guidelines.</li>
+<li><strong>Medium-impact</strong> - e.g. a code construct which is more convoluted than necessary and could be simplified to make it more understandable.</li>
+<li><strong>High-impact:</strong> - e.g. a previously undiscovered bug.</li>
+</ul>
+<p><strong>Low-impact issues</strong></p>
+<p>A low impact quality issue is by definition so trivial that it is not worth creating a new task for it; imagine a ticket with the title &ldquo;fix spelling mistake in identifier such-and-such&rdquo; or &ldquo;abstract class so-and-so constructor is public, make it protected&rdquo;; nobody wants to go through the motions of creating, grooming, and resolving such tickets; everyone is better off if no such tickets ever exist. So, unless the low-impact issue gets fixed the moment it is discovered, and committed as part of the task at hand, it will never get fixed. This means that we can safely establish the following rule:</p>
+<blockquote>
+<p>When a low-impact quality issue is discovered while working on a certain task, the quality issue should be fixed on the spot, and committed as part of the task at hand.</p></blockquote>
+<p>Note that fixing a spelling mistake may involve modifying a large number of source files, which would not otherwise need to be modified in the context of the task at hand; this means that the code reviewer will have more work to do; we will address this problem later.</p>
+<p><strong>Medium-impact and high-impact issues</strong></p>
+<p>A medium-impact or high-impact quality issue does, in principle, deserve creating a separate ticket for, but first we need to ask whether it can actually be handled separately from the task at hand, because if not, then creating a separate ticket is moot point.</p>
+<p>If it is known beyond a shadow of a doubt that the quality issue does not interfere at all with the task at hand, then the straightforward approach is in fact to create a separate ticket for the quality issue, and handle it after the task at hand has been completed; however, it is often very difficult to know for sure that a piece of code really does not affect another piece of code. There may be obscure mechanisms at play, through which a malfunction creeps through the system in non-obvious ways, and manifests in another place that nobody expected.</p>
+<p>When we come across a code construct which is convoluted or buggy, what we essentially have in our hands is code that works in mysterious ways, so we do not necessarily know exactly how it behaves; we could try to reason about that code, throw the debugger at it if necessary, get down to the bottom of it, and determine whether it does in fact interfere or not with the task at hand, but:</p>
+<ul>
+<li>Nobody has time for that.</li>
+<li>It is futile, because the convoluted or buggy code has to be fixed anyway.</li>
+<li>Whatever conclusion you arrive to, can you actually be sure?</li>
+</ul>
+<p>Ascertaining that two different parts of a software system are completely isolated from each other is difficult, in the same way that it is difficult to ascertain pretty much anything when it comes to code. (See <a class="external" 
+   href="https://en.wikipedia.org/wiki/Halting_problem" target="_blank"
+   >Halting Problem</a>.) As a matter of fact, it is so difficult, that we usually prefer to not have to ascertain things ourselves, and to write tests instead, that will ascertain things for us. However, writing tests to check whether flawed code interferes or not with other code is an exercise in futility, especially if we consider that the flawed code has to be fixed, sooner or later, anyway.</p>
+<p>Therefore, when a quality issue is discovered while working on a certain task, and we suspect that it might be interfering with the task, it must be treated as if it does.</p>
+<h3 id="the-bureaucracy">The bureaucracy
+</h3><p>Now, some will insist that even if the quality issue interferes, or is suspected to interfere, with the task at hand, and must therefore be resolved before the task can be completed, the quality issue must nonetheless be resolved as a separate ticket. Let us look at the workflow necessary for that:</p>
+<ul>
+<li>Work on the task at hand must be suspended.</li>
+<li>A new ticket must be created for the quality issue, and given immediate priority.</li>
+<li>A new branch must be created, from master, for fixing the quality issue.</li>
+<li>A fix for the quality issue must be devised, coded, tested, and committed.</li>
+<li>The changes made in the new branch must undergo code review.</li>
+<li>The reviewed branch must be merged into the master branch.</li>
+<li>The master branch must be merged into the branch of the task at hand.</li>
+<li>Merge conflicts must be resolved.</li>
+<li>Work on the task at hand can now resume.</li>
+</ul>
+<p>Note that merge conflicts are very likely to happen even if nobody else in the entire shop has touched the code in the mean time, because the quality issue was discovered while working on the task at hand, therefore the code affected by fixing the quality issue most likely overlaps with code that has already been modified in the context of the task at hand.</p>
+<p>Also note that the programmer who is likely to fix the quality issue is the same programmer who was working on the original task, because they are probably free, since work on the original task has been suspended. When this programmer started working on the original task, they branched off from master; the code coming from master had a certain shape, and then they started making changes to it, giving it a new shape, which they are now intimately familiar with. By going back and branching off from master again in order to fix the quality issue, this programmer is now faced with the code in its original shape, which is in conflict with the shape that they have become intimately familiar with; this is <em><strong>brainfuck</strong></em>. When the programmer is done fixing the quality issue and returns to the branch of the task at hand, there is bound to be <em><strong>more brainfuck</strong></em>.</p>
+<p>Apparently, there are no limits to the bureaucracy and the inconvenience that some people are willing to suffer in the name of some purist notion of &ldquo;doing things right&rdquo;. I prefer a more pragmatic approach.</p>
+<h3 id="enter-continuous-code-quality-improvement-ccqi">Enter Continuous Code Quality Improvement (CCQI)
+</h3><p><sup><sub>a.k.a. Boy-Scouting / Quality Osmosis.</sub></sup></p>
+<p>When a quality issue is discovered while working on a certain task, and the issue interferes, or it is suspected to interfere, with the task at hand, then the quality issue should be fixed on the spot, (while the programmer is <em>in the flow</em>,) and committed as part of the task at hand.</p>
+<p>If someone wants to create a ticket, fine, but then a single commit will constitute a fix for multiple tickets.</p>
+<p>Of course, an exception to this rule is the case where fixing the quality issue is going to be a month-long project in and of itself, in which case another pragmatic approach is necessary: make do with the quality issue as it is for the time being, and handle it later, when a month is available to spare.</p>
+<h3 id="what-about-time-tracking">What about time-tracking?
+</h3><p>As mentioned earlier, Boy-Scouting interferes with time tracking, because the hours it takes to complete a certain task get inflated by fixing quality issues, whereas the hours spent on fixing quality issues is unaccounted for.</p>
+<p>The solution to this is simple: whoever is in charge of time-tracking should be using larger error bars. The work of the programmers is difficult enough as it stands, it will not be made more difficult for the convenience of those who do time-tracking.</p>
+<h3 id="what-about-the-commit-history">What about the commit history?
+</h3><p>As mentioned earlier, Boy-Scouting renders the history of quality improvements
+untraceable, because each quality improvement is hidden inside a commit for
+some other task.</p>
+<p>The solution to this is also simple: there shall be no traceable history for quality improvements, because quality improvements are being continuously applied to the code-base as it is being worked on.</p>
+<h3 id="what-about-code-review">What about code review?
+</h3><p>As mentioned earlier, Boy-Scouting adds extra burden to code review, because the reviewer has to examine not only changes pertinent to the task at hand, but also changes that are unrelated to, or strictly speaking unnecessary for, or in any case not directly aiming to solve, the task at hand.</p>
+<p>The solution to this is the simplest of all: the reviewer needs to get used to it.</p>
+<h3 id="and-what-about-the-management">And what about the management?
+</h3><p>As mentioned earlier, management tends to be skeptical of Boy-Scouting because it gives programmers too much autonomy.</p>
+<p>The solution to this is very similar to the solution for code review: the management needs to get used to it. If programmers are competent enough to work on software development tasks, they are competent enough to decide exactly what needs to be done in the context of each task.</p>
+<hr>
+<p>Cover image by <a class="external" 
+   href="https://michael.gr/" target="_blank"
+   >michael.gr</a> based on <a class="external" 
+   href="https://thenounproject.com/icon/quality-6554761/" target="_blank"
+   >&ldquo;Quality&rdquo; by Sutriman</a> (CC BY 3.0), <a class="external" 
+   href="https://thenounproject.com/icon/thumb-up-2107329/" target="_blank"
+   >&ldquo;Thumb up&rdquo; by Sewon Park</a> (CC BY 3.0), and <a class="external" 
+   href="https://thenounproject.com/icon/five-stars-5786731/" target="_blank"
+   >&ldquo;Five Stars&rdquo; by Tyler Gobberdiel</a> (CC BY 3.0), from <a class="external" 
+   href="https://thenounproject.com" target="_blank"
+   >the Noun Project</a>.</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/essays/">Essays</a>
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-17 Fri 19:53:27 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

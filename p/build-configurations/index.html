@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Abstract The popular practice of having only two different kinds of builds (Debug and Release) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.\n">
+<title>Build configurations</title>
+
+<link rel='canonical' href='//localhost:1313/p/build-configurations/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Build configurations">
+<meta property='og:description' content=" Abstract The popular practice of having only two different kinds of builds (Debug and Release) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.\n">
+<meta property='og:url' content='//localhost:1313/p/build-configurations/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='DotNet' /><meta property='article:tag' content='C#' /><meta property='article:tag' content='MSBuild' /><meta property='article:tag' content='papers' /><meta property='article:published_time' content='2025-05-04T13:39:03&#43;00:00'/><meta property='article:modified_time' content='2025-10-21T19:00:42&#43;02:00'/>
+<meta name="twitter:title" content="Build configurations">
+<meta name="twitter:description" content=" Abstract The popular practice of having only two different kinds of builds (Debug and Release) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#the-issue">The Issue</a></li>
+    <li><a href="#the-history">The History</a></li>
+    <li><a href="#the-problem">The Problem</a></li>
+    <li><a href="#the-solution">The Solution</a></li>
+    <li><a href="#conclusions">Conclusions</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/build-configurations/">Build configurations</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-05-04 Sun 13:39:03 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    10 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
+	width="1536"
+	height="1024"
+	srcset="/p/build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, /p/build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
+	
+>
+</p>
+<h3 id="abstract">Abstract
+</h3><p>The popular practice of having only two different kinds of builds (<em>Debug</em> and <em>Release</em>) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.</p>
+<p>(Useful pre-reading: <a 
+   href="/p/about-these-papers/"
+   >About these papers</a>)</p>
+<h3 id="the-issue">The Issue
+</h3><p>In software development we often want our creations to have different characteristics under different circumstances; for example:</p>
+<ul>
+<li>Optimizations:
+<ul>
+<li>While developing we usually do not want them, because they interfere with debugging.</li>
+<li>On the final shipped product we want them, because they make it run faster.</li>
+</ul>
+</li>
+<li>Preconditions, assertions, and other kinds of runtime checks:
+<ul>
+<li>While developing we want them, because they help us catch bugs.</li>
+<li>On the final shipped product we do not want them, because they slow it down.</li>
+</ul>
+</li>
+</ul>
+<h3 id="the-history">The History
+</h3><p>In C and C++, different behavior has historically been achieved by means of compiler options controlling optimization, and preprocessor macros controlling conditional compilation. The standard stipulates an NDEBUG macro which, if defined, causes assertions to compile to nothing. This means that software systems written in C and C++ generally have two builds: a <em>Debug</em> build, for use while debugging, and a <em>Release</em> build, for shipping or deploying to production.</p>
+<p>When Java came along, it was decided that a single build should be good for everyone: conditional compilation was abolished<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, all optimization-related choices were delegated to the Just-In-Time compiler (JITter,) assertions were made to always compile into the binaries, and the <code>enableassertions</code> switch was added to the virtual machine for controlling during runtime, rather than during compilation, whether assertions should be executing or not. This essentially gives Java developers the ability to choose between a <em>debug <strong>run</strong></em> or a <em>release <strong>run</strong></em>, as opposed to a debug build or a release build.</p>
+<p>C# has brought back a compiler option for controlling optimization, and conditional compilation by means of a simplified version of the preprocessor macros (called &ldquo;define constants&rdquo; in C#) and the <code>Conditional</code> attribute. Two different kinds of builds (called <em><strong>Build Configurations</strong></em>) are predefined: <code>Debug</code> and <code>Release</code>. The build system offers great flexibility in defining additional build configurations, but C# developers rarely bother with that.</p>
+<h3 id="the-problem">The Problem
+</h3><p>Since developers rarely bother with defining any build configurations besides the predefined ones, the vast majority of dotnet projects use only the two predefined ones: &lsquo;Debug&rsquo; and &lsquo;Release&rsquo;. (Many projects actually use only &lsquo;Debug&rsquo;, but let us pretend we never heard of them.) Thus all different needs and usage scenarios are being shoe-horned to fit into one of those two options. For example:</p>
+<ul>
+<li>There is only one configuration that can be tested, namely the <code>Debug</code> configuration, which means that this configuration is used not only for running tests on a developer&rsquo;s computer, but also for running tests on the build server.</li>
+<li>There is only one configuration of a library that can be published, namely the &lsquo;Release&rsquo; configuration, which means that this configuration is used not only in production scenarios, but also in development scenarios, where software is being developed that is making use of a published library.</li>
+</ul>
+<p>This is problematic because:</p>
+<ul>
+<li>
+<p>It slows down test runs on build servers.</p>
+<p>The &lsquo;Debug&rsquo; configuration is unoptimized, to avoid interference with debugging; however, by common practice, the same &lsquo;Debug&rsquo; configuration is used for running tests on the build server, because that is the only configuration that can be tested; thus, the world is full of build servers executing unoptimized tests, exercising unoptimized code.</p>
+<p>If the tests and the code they are exercising are long-running and computationally expensive, lack of optimization will make them run even slower.</p>
+<p>However, virtually nothing ever gets debugged on a build server, so there is virtually never a need to have it running unoptimized code.</p>
+</li>
+<li>
+<p>It slows down the software on production.</p>
+<p>When a library is published as a package, the configuration that gets packaged is, by common practice, the &lsquo;Release&rsquo; configuration. This configuration executes preconditions, since it may be referenced by a project under development; however, at some point, that project together with the library are released to production, where the library is still executing preconditions.</p>
+<p>This amounts to nothing but a waste of clock cycles, because:</p>
+<ul>
+<li>
+<p>By the time the software using the library gets shipped to production, it has been tested and can be reasonably assumed to be invoking the library only in valid ways.</p>
+</li>
+<li>
+<p>Even if the software did happen to make invalid use of the library on production, it makes very little difference whether the resulting catastrophic failure would be signaled by a precondition failure or by some index out of range exception further down.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Many preconditions are omitted in the name of performance.</p>
+<p>Library programmers often refrain from asserting certain preconditions, if they suspect them to be even slightly expensive, in light of the fact that preconditions in a library will always be executing, even on production.</p>
+<p>An extreme example to illustrate this scenario is the binary search function, which should, in principle, be enforcing the precondition that the array to search must be sorted. Yes, this means guarding a <strong>O(log<sub>2</sub>(N))</strong> operation with a <strong>O(N)</strong> operation. This is fine during development, because we test with small amounts of data anyway, but is a terrible thing to be doing on production; thus, there is virtually no library in existence with such a precondition in it, despite the fact that it is necessary.</p>
+</li>
+</ul>
+<h3 id="the-solution">The Solution
+</h3><p>From the description of the problem it becomes evident that preconditions must be controlled separately from assertions, and both of those must be controlled separately from optimizations. Therefore, four different build configurations can be thought of:</p>
+<ol>
+<li>
+<p>A &lsquo;Debug&rsquo; configuration</p>
+<p>Everyone is more or less already familiar with this. It is meant for use by a developer when testing and debugging software on their local computer. Assertions are enabled, preconditions are enabled, and optimizations are disabled, because they interfere with debugging.</p>
+</li>
+<li>
+<p>An &lsquo;Optimized&rsquo; configuration</p>
+<p>This is the same as Debug except that optimizations are enabled. It is meant to run on the build server, where we do not usually debug, so there is no reason to be running unoptimized software. Note that this configuration is only useful for projects that suffer from long-running, computationally expensive tests; projects that do testing right, with very short and lightweight tests, are likely to see a performance degradation from this configuration, due to the additional JITting overhead <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+</li>
+<li>
+<p>A &lsquo;Develop&rsquo; configuration</p>
+<p>This configuration is only applicable to libraries, not to applications. It is identical to what was previously understood as the Release configuration, where optimizations are enabled, assertions are disabled, and preconditions are enabled; however, it is only meant to be used when developing software that makes use of the library, not for shipping to production, because we do not want to be executing preconditions on production.</p>
+</li>
+<li>
+<p>A &lsquo;Release&rsquo; configuration</p>
+<p>This is similar to the Develop configuration, except that preconditions are also disabled. It is the configuration which is meant for shipping to production. Note that the benefit of using this configuration is not just maximum performance on production; it is also the freedom to add as many preconditions as necessary to the library, knowing that they cost nothing on production.</p>
+</li>
+</ol>
+<p>Here is the feature matrix:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: right"></th>
+          <th style="text-align: center">Debug</th>
+          <th style="text-align: center">Optimized</th>
+          <th style="text-align: center">Develop</th>
+          <th style="text-align: center">Release</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: right">Optimizations disabled</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">⬜</td>
+          <td style="text-align: center">⬜</td>
+          <td style="text-align: center">⬜</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">Assertions enabled</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">⬜</td>
+          <td style="text-align: center">⬜</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">Overflow checking</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">⬜</td>
+          <td style="text-align: center">⬜</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">Preconditions enabled</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">⬜</td>
+      </tr>
+      <tr>
+          <td style="text-align: right">Code analysis</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">✅</td>
+          <td style="text-align: center">⬜</td>
+          <td style="text-align: center">⬜</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Here is an excerpt from a <code>.csproj</code> file implementing the above matrix, assuming that we have defined our own set of assertion functions, dependent upon an <code>ASSERTIONS</code> define-constant, and our own set of precondition functions, dependent upon a <code>PRECONDITIONS</code> define-constant.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;Choose&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;When</span> <span class="na">Condition=</span><span class="s">&#34;&#39;$(Configuration)&#39;==&#39;Debug&#39;&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;Optimize&gt;</span>False<span class="nt">&lt;/Optimize&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DefineConstants&gt;</span>$(DefineConstants);PRECONDITIONS;ASSERTIONS<span class="nt">&lt;/DefineConstants&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;CheckForOverflowUnderflow&gt;</span>True<span class="nt">&lt;/CheckForOverflowUnderflow&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;EnableNETAnalyzers&gt;</span>True<span class="nt">&lt;/EnableNETAnalyzers&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DebugType&gt;</span>Full<span class="nt">&lt;/DebugType&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/When&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;When</span> <span class="na">Condition=</span><span class="s">&#34;&#39;$(Configuration)&#39;==&#39;Optimized&#39;&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;Optimize&gt;</span>True<span class="nt">&lt;/Optimize&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DefineConstants&gt;</span>$(DefineConstants);PRECONDITIONS;ASSERTIONS<span class="nt">&lt;/DefineConstants&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;CheckForOverflowUnderflow&gt;</span>True<span class="nt">&lt;/CheckForOverflowUnderflow&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;EnableNETAnalyzers&gt;</span>True<span class="nt">&lt;/EnableNETAnalyzers&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DebugType&gt;</span>Full<span class="nt">&lt;/DebugType&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;OutputPath&gt;</span>bin\$(Configuration)\<span class="nt">&lt;/OutputPath&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/When&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;When</span> <span class="na">Condition=</span><span class="s">&#34;&#39;$(Configuration)&#39;==&#39;Develop&#39;&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;Optimize&gt;</span>True<span class="nt">&lt;/Optimize&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DefineConstants&gt;</span>$(DefineConstants);PRECONDITIONS<span class="nt">&lt;/DefineConstants&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;CheckForOverflowUnderflow&gt;</span>False<span class="nt">&lt;/CheckForOverflowUnderflow&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;EnableNETAnalyzers&gt;</span>False<span class="nt">&lt;/EnableNETAnalyzers&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DebugType&gt;</span>Portable<span class="nt">&lt;/DebugType&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;OutputPath&gt;</span>bin\$(Configuration)\<span class="nt">&lt;/OutputPath&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/When&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;When</span> <span class="na">Condition=</span><span class="s">&#34;&#39;$(Configuration)&#39;==&#39;Release&#39;&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;Optimize&gt;</span>True<span class="nt">&lt;/Optimize&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DefineConstants&gt;</span>$(DefineConstants)<span class="nt">&lt;/DefineConstants&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;CheckForOverflowUnderflow&gt;</span>False<span class="nt">&lt;/CheckForOverflowUnderflow&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;EnableNETAnalyzers&gt;</span>False<span class="nt">&lt;/EnableNETAnalyzers&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DebugType&gt;</span>Portable<span class="nt">&lt;/DebugType&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;Deterministic&gt;</span>True<span class="nt">&lt;/Deterministic&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;DeterministicSourcePaths&gt;</span>True<span class="nt">&lt;/DeterministicSourcePaths&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/When&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;Otherwise&gt;</span>
+</span></span><span class="line"><span class="cl">  ...
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/Otherwise&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/Choose&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the &lsquo;Develop&rsquo; package, and the &lsquo;Release&rsquo; package.</p>
+<ul>
+<li>The &lsquo;Develop&rsquo; package is to be referenced by software under development.</li>
+<li>The &lsquo;Release&rsquo; package is to be referenced by software that is being shipped to production.</li>
+</ul>
+<p>The generation of two different packages for a single library can be accomplished by building twice, once for each configuration, and constructing the assembly name as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">  <span class="nt">&lt;AssemblyName&gt;</span>$(MSBuildProjectName)-$(Configuration)<span class="nt">&lt;/AssemblyName&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This way, instead of a single package called <code>MyPackage</code> we create two packages: <code>MyPackage-Develop</code> and <code>MyPackage-Release</code>.</p>
+<p>There may be a better way to build a library, so that only one package gets generated, containing both the develop and release builds, and the right binaries somehow end up in the right output directory; however, I have not been able to figure that out yet. If you know how to do it, please let me know.</p>
+<p>For any build configuration of a certain module, (either an application or a library,) the build configuration of the libraries it uses can be determined using the following table:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Build configuration of<br>module using library</th>
+          <th style="text-align: center">Build configuration of<br>library</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">&lsquo;Debug&rsquo;</td>
+          <td style="text-align: center">&lsquo;Develop&rsquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&lsquo;Optimized&rsquo;</td>
+          <td style="text-align: center">&lsquo;Develop&rsquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&lsquo;Develop&rsquo;</td>
+          <td style="text-align: center">&lsquo;Develop&rsquo;</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">&lsquo;Release&rsquo;</td>
+          <td style="text-align: center">&lsquo;Release&rsquo;</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Note that the &lsquo;Develop&rsquo; configuration of a module could, in theory, make use of the better-performing &lsquo;Release&rsquo; configuration of a library, instead of the &lsquo;Develop&rsquo; configuration; however, that can only work if the module does not expose the library, or if there is no other module in the solution that uses the &lsquo;Develop&rsquo; configuration of the library. Otherwise, there are going to be type mismatch errors, where code built to make use of the &lsquo;Develop&rsquo; configuration of a library is given to work with the &lsquo;Release&rsquo; configuration, and vice versa.</p>
+<p>Here is an excerpt of a .csproj file implementing the above table:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;PropertyGroup&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;PackagesConfiguration</span> <span class="na">Condition=</span><span class="s">&#34;&#39;$(Configuration)&#39;==&#39;Debug&#39;&#34;</span>    <span class="nt">&gt;</span>Develop<span class="nt">&lt;/PackagesConfiguration&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;PackagesConfiguration</span> <span class="na">Condition=</span><span class="s">&#34;&#39;$(Configuration)&#39;==&#39;Optimized&#39;&#34;</span><span class="nt">&gt;</span>Develop<span class="nt">&lt;/PackagesConfiguration&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;PackagesConfiguration</span> <span class="na">Condition=</span><span class="s">&#34;&#39;$(Configuration)&#39;==&#39;Develop&#39;&#34;</span>  <span class="nt">&gt;</span>Develop<span class="nt">&lt;/PackagesConfiguration&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;PackagesConfiguration</span> <span class="na">Condition=</span><span class="s">&#34;&#39;$(Configuration)&#39;==&#39;Release&#39;&#34;</span>  <span class="nt">&gt;</span>Release<span class="nt">&lt;/PackagesConfiguration&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/PropertyGroup&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then, packages can be referenced as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">  <span class="nt">&lt;PackageReference</span> <span class="na">Include=</span><span class="s">&#34;MyPackage-$(PackagesConfiguration)&#34;</span> <span class="na">Version=</span><span class="s">&#34;...&#34;</span> <span class="nt">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="conclusions">Conclusions
+</h3><ul>
+<li>An &lsquo;Optimized&rsquo; build configuration has been proposed, for cutting in half the time it takes to run slow, computationally expensive tests on build servers. (Not needed by projects with small, fast tests.)</li>
+<li>A &lsquo;Develop&rsquo; build configuration for libraries has been proposed, intended for use during development of software using the libraries, but not for shipping to production. It has preconditions enabled, in order to catch bugs in the software using the libraries.</li>
+<li>A &lsquo;Release&rsquo; build configuration for libraries has been proposed, intended for shipping to production. It improves performance by not executing preconditions.</li>
+<li>Under the proposed schema, preconditions in libraries do not incur a performance penalty on production anymore, so programmers can apply them more liberally, leading to more robust software.</li>
+<li>Under the proposed schema, when a library is published, two packages should be generated: the &lsquo;Develop&rsquo; package, for developing software that uses the library, and the &lsquo;Release&rsquo; package, for shipping to production.</li>
+</ul>
+<hr>
+<p>Cover image generated by ChatGPT, and then retouched by michael.gr. The prompt used was: &ldquo;Please give me an image conveying the concept of highly complex and highly technical software development. Make it in landscape format, of photographic quality, with warm colors&rdquo; and then &ldquo;Please make the programmer look more senior&rdquo;.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>The creators of Java made it so that the generation of code within an <code>if()</code> statement controlled by a compile-time constant is suppressed if that constant evaluates to <code>false</code>, but they intentionally deprived developers from the ability to specify the value of a compile-time constant via external means, such as the command-line of the compiler. They defended this choice by saying that there is inherent merit in being able to guarantee that in Java every compilation unit has one and only one set of semantics. The usefulness of this merit is debatable. It can be argued that this is simply Java treating developers the same way that Apple has been treating users: as idiots.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>In C# most optimizations are performed by the Just-In-Time compiler (JITter), and people say that the optimizations performed by the language compiler do not make much of a difference. However, my experiments have shown otherwise: computation-intensive code tends to run twice as fast when optimizations are enabled than when not, and this difference can be observed on a build server, so it is unaffected by any optimization choices that the JITter might make due to a debugger being attached or not. I suspect that this is happening because the language compiler saves the &ldquo;optimize&rdquo; flag in the binary, and the JITter subsequently observes this flag.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+            <a href="/tags/dotnet/">DotNet</a>
+        
+            <a href="/tags/c%23/">C#</a>
+        
+            <a href="/tags/msbuild/">MSBuild</a>
+        
+            <a href="/tags/papers/">Papers</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-21 Tue 19:00:42 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/immutability-assessment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Immutability Assessment</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/testana-a-better-way-of-running-tests/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Testana: A better way of running tests</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/intertwine/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Intertwine</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/intertwine-normalizing-interface-invocations/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Intertwine: Normalizing Interface Invocations</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/refactoring-strong-vs-weak/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Refactoring: strong vs weak</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

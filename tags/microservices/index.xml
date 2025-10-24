@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Microservices on Michael&#39;s Blog</title>
+        <link>//localhost:1313/tags/microservices/</link>
+        <description>Recent content in Microservices on Michael&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
+        <lastBuildDate>Thu, 23 Oct 2025 22:45:18 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/microservices/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>So, what is a Microservice, anyway?</title>
+        <link>//localhost:1313/p/so-what-is-a-microservice-anyway/</link>
+        <pubDate>Thu, 14 Oct 2021 17:39:23 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/so-what-is-a-microservice-anyway/</guid>
+        <description>&lt;p&gt;This article attempts to shed some light on what a microservice really is; it
+is meant as support material for other posts of mine that discuss
+microservices, mainly
+&lt;a 
+   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   &gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/media/microservices.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;what-is-a-microservice&#34;&gt;What is a microservice?
+&lt;/h3&gt;&lt;p&gt;If you go looking for information on what a microservice is, you will find
+many different descriptions, exhibiting considerable difference of opinion.
+Most claims about microservices are non-technical rather than technical, for
+example the allegedly &amp;ldquo;independent&amp;rdquo; software development style around
+microservices, or some alleged organization of microservices &amp;ldquo;around business
+capabilities&amp;rdquo;. Even when the claims do stick within the technical realm, they
+are often unwarranted; for example, I have seen statements to the effect that
+a microservice is supposed to live in its very own source code repository,
+that microservices must communicate with each other via nothing but REST, etc.
+My favorite one is that they must necessarily be stateless. This paper is a
+first step in dispelling the statelessness myth.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a 
+   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;To clear up the confusion a little bit, I would like to propose a purely
+technical definition of a microservice which is brief and to the point:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;From a purely technical standpoint, a microservice is a scalable module.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;So, what I am proposing here is that the only fundamental technical
+requirement for a microservice is scalability, and that all other purported
+characteristics mentioned in the literature are either non-technical, or they
+are byproducts of this fundamental technical requirement.&lt;/p&gt;
+&lt;p&gt;You see, there was a time back in the late 1990s to early 2000s when users
+were joining websites at exponential rates, and servers running monolithic web
+apps were reaching capacity and could not deliver service anymore; the
+business people were asking the technologists to fix this, because they were
+losing money, and the technologists were saying that they could not do
+anything, because they already had the biggest, most expensive server that
+money could buy. The business people would na?vely say &amp;ldquo;well, add more
+servers!&amp;rdquo; to which the technologists would (equally na?vely) reply &amp;ldquo;you don&amp;rsquo;t
+understand, that&amp;rsquo;s impossible!&amp;rdquo; Later on the technologists started realizing
+that it is in fact possible, it just requires a radical change in their way of
+thinking, and a radical redesign of all their systems. When the sums of money
+at stake were high enough to justify redoing everything from scratch, scalable
+systems started appearing, and are commonplace today.&lt;/p&gt;
+&lt;p&gt;The new software development paradigm that was allowing web sites to achieve
+scalability received a name quite some time after it first started being put
+to use; the naming happened some time in the mid 2000s, and it was
+&lt;em&gt;microservices&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Then of course came the evangelists. Unfortunately, when people become
+salespersons of a cause, for some reason they never seem to be satisfied with
+simply mentioning the one real, game-changing advantage that their product has
+over the alternatives; instead, they feel compelled to throw as much as
+possible at the customer, inventing advantages if possible. That&amp;rsquo;s how all the
+fictitious characteristics of microservices came to be. However, the truth
+remains that there was one and only one thing that business needed which could
+not be achieved otherwise, and therefore business was willing to pay for it
+limitlessly, and that one thing was scalability, nothing else. (1)&lt;/p&gt;
+&lt;p&gt;Business could not care less whether the software gets deployed in pieces or
+in a big bang; business could not care less whether development is done by
+autonomous teams or by all the programmers shouting at each other in one big
+room; business could not care less whether the software communicates via REST
+or via pheromone secretion. Things were getting done before, and things would
+continue getting done, regardless of those alleged &amp;ldquo;advantages&amp;rdquo; of
+microservices. Scalability was the only thing that was impossible before
+microservices and was made possible by microservices.&lt;/p&gt;
+&lt;p&gt;Of course, you might not agree with this definition; if not, then please take
+it as nothing but a working definition, and only for the purpose of these
+papers about statelessness.&lt;/p&gt;
+&lt;p&gt;There is one more characteristic of microservices which is not really fundamental, because it is a direct
+consequence of the first, but it is so
+important that it deserves mentioning as a requirement, and this is resilience.&lt;/p&gt;
+&lt;p&gt;You see, scalable architectures are not magically capable of performing better
+than monolithic ones; in fact, quite the opposite is true: in terms of raw
+throughput per unit of hardware, scalable architectures perform much worse
+than monolithic ones. In order to accommodate the same workload that you used
+to have with a single server running a monolithic application, you might need several
+servers running microservices. The benefit of the scalable architecture is
+that you can in fact now throw more hardware at the problem, instead of being
+stuck with a single piece of hardware. So, given enough money to buy enough
+hardware you can end up with a higher sum of throughput despite the worse
+throughput per unit of hardware. Thus, when we are talking about scalability, we
+are usually talking about a lot of hardware. And by this I mean &lt;em&gt;an awful lot&lt;/em&gt; of hardware.&lt;/p&gt;
+&lt;p&gt;Now, it just so happens that hardware, being necessarily bound to the
+constraints of the &lt;em&gt;physical world?&lt;/em&gt;, has this inconvenient
+characteristic called &amp;ldquo;Mean Time Before Failure&amp;rdquo; (MTBF) which is of a somewhat
+statistical nature: the more pieces of hardware you have, the higher the
+chances are that any one of them will fail at any given moment. Furthermore,
+as these pieces age, their individual chances of failure at any given moment
+increase. The result of all this is that hardware failure in server farms
+becomes not just something that there is a high risk of; not even just
+something that is inevitable; it actually becomes a regularly occurring
+phenomenon. As such, hardware failure cannot be addressed on an as-needed
+basis via crisis management responses; it must be addressed systematically, as
+a normal part of the operation of the system. This means that the software
+that runs on that hardware must be capable of continuing to function as if
+nothing happened despite pieces of the hardware randomly failing and being
+replaced all the time.&lt;/p&gt;
+&lt;p&gt;A software system that manages to continue functioning despite parts of it
+ceasing to work is called a resilient software system. If we want to add the
+resilience concern into our definition, then this is what we are left with:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;From a purely technical standpoint, a microservice is a scalable and resilient
+module.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Further reading: &lt;a 
+   href=&#34;//localhost:1313/p/on-stateless-microservices/&#34;
+   &gt;On Stateless Microservices&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;(1) According to Neal Ford, this started with Pets.com; see &lt;a class=&#34;external&#34; 
+   href=&#34;https://youtu.be/fYWvTYFmVYs?t=2156&#34; target=&#34;_blank&#34;
+   &gt;Neal Ford: &amp;ldquo;Stories Every Developer Should Know&amp;rdquo; at YOW! 2018, starting at 35:56&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>The Stateful Microservice</title>
+        <link>//localhost:1313/p/the-stateful-microservice/</link>
+        <pubDate>Thu, 14 Oct 2021 16:58:10 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/the-stateful-microservice/</guid>
+        <description>&lt;p&gt;I did a quick search for the term and did not find anything concrete, so I
+thought I might as well publicly document my thoughts.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/the-stateful-microservice/media/elephants.jpg&#34;
+	width=&#34;2048&#34;
+	height=&#34;1365&#34;
+	srcset=&#34;//localhost:1313/p/the-stateful-microservice/media/elephants_hu_cfac862bf8819bb5.jpg 480w, //localhost:1313/p/the-stateful-microservice/media/elephants_hu_6c0c09c376128914.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading:
+&lt;a 
+   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Almost everyone doing microservices today will tell you that microservices
+need to be stateless. In another post of mine I explain that statelessness is
+not an end in and of itself; instead, it is just a means to an end. The
+desired technical ends are scalability and resilience, and statelessness is just one way of achieving them. Furthermore, I explain that statelessness
+in particular is a very cowardly solution from an engineering standpoint, and
+it performs very badly. For details, please see
+&lt;a 
+   href=&#34;//localhost:1313/p/on-stateless-microservices/&#34;
+   &gt;On Stateless Microservices&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What remains to be shown is whether there exists an alternative.&lt;/p&gt;
+&lt;p&gt;Obviously, an alternative to the stateless microservice would be the stateful
+microservice, so what we are about to examine here is what a stateful
+microservice could possibly be, and how it would compare to a stateless
+microservice.&lt;/p&gt;
+&lt;h4 id=&#34;what-is-a-stateful-microservice&#34;&gt;What is a stateful microservice
+&lt;/h4&gt;&lt;p&gt;A stateful microservice maintains state for the purpose of expediting the
+processing of incoming requests, reducing overall server load, (trading memory
+for processing power and data storage traffic,) and achieving certain things
+that are difficult to achieve otherwise, such as server-initiated client
+updates.&lt;/p&gt;
+&lt;p&gt;The state kept by a stateful microservice can include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;State that has been obtained from the main data store and has possibly
+undergone expensive transformations. The benefit of maintaining such
+transient state within the microservice is that the data store does not
+need to be re-queried, and the possibly expensive transformations do not
+need to be repeated, with each incoming request; the loading and
+processing of the data only needs to happen once when the microservice
+starts, and to be repeated only in response to a notification from the
+system&amp;rsquo;s messaging backbone that the original data in the main data store
+has changed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;State that does not exist in the main data store, and does not need to,
+because it is of a transient nature, for example information that is only
+needed during user&amp;rsquo;s visit to a web site and can be dismissed afterwards.
+This can include information necessary for maintaining a session, such as
+the session token, and view-related information, such as which page (or
+pages) of the web site the user is currently viewing. View-related
+information may be useful for the server to have for various reasons, for
+example for the purpose of sending server-initiated client updates that
+are specific to the web page(s) that are being viewed.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;State that may eventually be entered into the main data store but has not
+yet been entered due to various workflow demands or optimization concerns.
+For example, the user may be sequentially visiting each page of a wizard
+workflow, and entering information on each page, but this information
+should not be merged into the main data store unless the user first
+reaches the last page of the wizard workflow and confirms their actions.&lt;/p&gt;
+&lt;p&gt;From the above it should be obvious that a stateful microservice is
+necessarily session-oriented, meaning that it requires a specific client to
+talk to. Session-agnostic stateful microservices already exist, and we do not
+think of them as anything special; they are microservices that implement
+caches, containing information that is pertinent to not just one client, but
+to all clients. These microservices are already scalable and resilient because
+a cache can be trivially duplicated to an arbitrary degree and it can also be
+destroyed and trivially re-created from scratch.&lt;/p&gt;
+&lt;p&gt;We now need to show how a stateful microservice can still be called a
+microservice.&lt;/p&gt;
+&lt;p&gt;In a previous post of mine I examined what a microservice really is, and I
+came to the conclusion that from a purely technical standpoint, it is simply a scalable and resilient module. (See
+&lt;a 
+   href=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/&#34;
+   &gt;So, what is a Microservice, anyway?&lt;/a&gt;) Even if you disagree with this definition, and you regard microservices as
+necessarily more than that, I hope you will at least agree that the purpose of
+statelessness in microservices is precisely to achieve scalability and
+resilience, so the definition of a microservice as a scalable and resilient
+module can serve as a working definition for the purposes of this discussion.&lt;/p&gt;
+&lt;p&gt;So, we need to show how stateful microservices can be scalable and resilient,
+just as their stateless counterparts are.&lt;/p&gt;
+&lt;p&gt;Scalability in stateful microservices can be achieved by means of a
+header-inspecting, session-aware, load balancing gateway which routes new
+session requests to the least busy server, and from that moment on keeps
+routing requests of that same session to the same server. Under such a
+scenario, rebalancing of the server farm can be achieved simply by killing
+microservices on overloaded servers and letting the resilience mechanism
+described next make things right.&lt;/p&gt;
+&lt;p&gt;Resilience can be achieved by having each instance of a stateful microservice
+continuously persisting its transient state in an efficient manner into a
+high-performance backup store which is accessible by all servers in the farm.
+Thus, if a microservice unexpectedly ceases to exist, it can be reconstructed
+from that backup on any other server. The trick, as we shall see, is that the
+backup is taken very efficiently, and in the event that the microservice needs
+to be reconstructed, the restoration from the backup is also done very
+efficiently.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In more detail, it works as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When a client initially connects to the server farm, no session has been
+established yet, so the first request that it sends is sessionless.&lt;/li&gt;
+&lt;li&gt;The sessionless request arrives at the load-balancing gateway, which routes
+it to the least busy server in the farm. This mostly takes care of
+scalability, since we can always add more servers, which will initially be
+idle, but as requests for new sessions keep arriving, they are routed to the
+idle servers instead of the busy ones, so over time, the load distribution
+evens out.&lt;/li&gt;
+&lt;li&gt;The server that receives the sessionless request creates a new instance of a
+stateful microservice to handle that request, and the session is established
+between that microservice and the client.&lt;/li&gt;
+&lt;li&gt;From that moment on, any further incoming requests for that same session are
+routed by the gateway to the same server, and the server delegates them to
+the same instance of the stateful microservice. (Alternatively, the
+microservice and the client may negotiate a direct persistent connection
+between the two, thus bypassing any middlemen from that moment on.)&lt;/li&gt;
+&lt;li&gt;The newly spawned stateful microservice registers with the messaging
+backbone of the system to receive notifications about system-wide events, so
+as to be able to keep its state always up to date.&lt;/li&gt;
+&lt;li&gt;The newly spawned stateful microservice loads whatever state it is going to
+need, and keeps that state in memory.&lt;/li&gt;
+&lt;li&gt;The microservice processes the request and sends back a response.
+&lt;ul&gt;
+&lt;li&gt;Possibly also changing its own transient state.&lt;/li&gt;
+&lt;li&gt;Possibly also updating the main data store with information that must
+always be globally available and up to date, and issuing system-wide
+notifications about these changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The microservice takes a backup of itself.
+&lt;ul&gt;
+&lt;li&gt;The microservice serializes the entirety of its state into a binary blob&lt;/li&gt;
+&lt;li&gt;The blob is written into a persistent key-value store, using the session
+id as the key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;This persistent key-value store is used as a backup, meaning that it is
+written often, but it is never read unless something bad happens.
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Continuous persistence of stateful microservices is not expected to pose a
+performance problem, because:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Serialization to and from a binary format performs much better than
+general-purpose serialization into a textual markup like JSON or XML.&lt;/li&gt;
+&lt;li&gt;The size of the blob is expected to be relatively small. (Of the order of
+kilobytes.)&lt;/li&gt;
+&lt;li&gt;Key-value stores tend to have very high performance characteristics.&lt;/li&gt;
+&lt;li&gt;The backup store can be physically separate from the main data store,
+(even on a different network,) thus avoiding contention.&lt;/li&gt;
+&lt;li&gt;The act of serializing an in-memory data structure into a single in-memory
+blob and then sending that blob as one piece into persistent storage is
+bound to perform far better than a series of operations to update a
+structured data store. (For one thing, there are no index updates.)&lt;/li&gt;
+&lt;li&gt;Persisting the blob can be done asynchronously and in parallel to the
+sending of the response to the client, so it does not contribute to
+user-perceived latency.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For as long as the session does not expire, the stateful microservice can
+remain alive, continuing to serve requests efficiently, taking advantage of
+the transient state that it contains and keeps up-to-date. Contrast this
+with the stateless microservice approach, which requires that any request
+can be handled by any server, therefore each microservice must contain no
+state at all:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The processing of each request begins with zero knowledge of the state of
+the system, so persistent storage must always be queried to obtain state.&lt;/li&gt;
+&lt;li&gt;These queries represent overhead, and this overhead must be suffered in
+full before the request can be serviced, thus manifesting as latency to
+the user.&lt;/li&gt;
+&lt;li&gt;The results of these queries may not be cached, because they may at any
+moment be rendered out-of-date by any other microservice in the system.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An instance of a stateful microservice may prematurely cease to exist due to
+a number of reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The microservice may be terminated on demand in order to rebalance the
+server farm.&lt;/li&gt;
+&lt;li&gt;The server hosting the microservice may become unavailable due to hardware
+failure.&lt;/li&gt;
+&lt;li&gt;The microservice may fall victim to the whim of the chaos monkey.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If for whatever reason a microservice ceases to exist, the gateway discovers
+this either on its own, or when the next request arrives from the client.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The gateway routes the request to the least busy server in the farm.&lt;/li&gt;
+&lt;li&gt;The server that receives the request sees that there is no microservice to
+handle requests for that session, so it creates a new one.&lt;/li&gt;
+&lt;li&gt;The newly instantiated microservice checks, whether the key-value store
+contains a backup for the current session, and discovers that it does.&lt;/li&gt;
+&lt;li&gt;The microservice restores its state from the backup.&lt;/li&gt;
+&lt;li&gt;Operation continues from that moment on as if nothing happened.&lt;/li&gt;
+&lt;li&gt;Between the moment in time that a certain microservice instance
+prematurely ceases to exist, and the moment in time that a new incarnation
+of that microservice is ready for showtime on a freshly assigned server,
+some events from the messaging backbone may be lost. To avoid
+inconsistencies in the state of the microservice, we must utilize a
+messaging backbone which is capable of replaying events. For example, if
+we use Kafka, then the stateful microservice can make sure to include
+among its persistent state what is known in Kafka terminology as the
+&amp;ldquo;consumer offset&amp;rdquo;. Thus, when the microservice gets reconstructed, it asks
+Kafka for events starting at that offset, so Kafka replays any missed
+events before it starts sending new ones. Thus, we ensure that the state
+of the microservice is always up to date, even in the case of termination
+and reconstruction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thus, stateful microservices can achieve not only scalability but also
+resilience.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: Photo of two elephants friendly interacting with each other, from
+&lt;a class=&#34;external&#34; 
+   href=&#34;https://www.scientificamerican.com/article/elephants-never-forget/&#34; target=&#34;_blank&#34;
+   &gt;The Scientific American: &lt;em&gt;Fact or Fiction?: Elephants Never Forget&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>On Stateless Microservices</title>
+        <link>//localhost:1313/p/on-stateless-microservices/</link>
+        <pubDate>Thu, 14 Oct 2021 10:53:38 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/on-stateless-microservices/</guid>
+        <description>&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as
+support material for other posts of mine that discuss microservices, mainly
+&lt;a 
+   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   &gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-stateless-microservices/media/8.png&#34;
+	width=&#34;1378&#34;
+	height=&#34;2048&#34;
+	srcset=&#34;//localhost:1313/p/on-stateless-microservices/media/8_hu_48b7be9e0748ac79.png 480w, //localhost:1313/p/on-stateless-microservices/media/8_hu_56b2bd321fd1677a.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;67&#34;
+		data-flex-basis=&#34;161px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;h4 id=&#34;is-statelessness-a-requirement-for-a-microservice&#34;&gt;Is statelessness a requirement for a microservice?
+&lt;/h4&gt;&lt;p&gt;In another post (see
+&lt;a 
+   href=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/&#34;
+   &gt;So, what is a Microservice, anyway?&lt;/a&gt;) I examine what a microservice really is, and I come to the conclusion that from a purely technical standpoint, a working definition could be
+as simple as this:&lt;/p&gt;
+&lt;p&gt;A microservice is a scalable and resilient module.&lt;/p&gt;
+&lt;p&gt;Even if you disagree with the terseness of this definition, and you regard
+microservices as necessarily more than that, I hope you will at least agree
+that it is precisely scalability and resilience that statelessness in microservices aims to address, so this definition serves its
+purpose at least in the context of this series of posts.&lt;/p&gt;
+&lt;p&gt;There are many who will try to convince you that in order to build a scalable
+and resilient system, you need statelessness; so much so, that microservices
+have almost come to be regarded as synonymous with statelessness. This post
+examines whether this is that in fact so, and what is the cost of doing things
+this way.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a 
+   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;If we take a step back for a moment and examine the issue from a somewhat
+distanced point of view, we notice that there is no such thing as a stateless
+software system. If there was such a thing, it would not be capable of
+performing any function worth speaking of, and it would necessarily be less
+useful than a brick, because a brick has physical existence, so you can, at
+the very least, throw it at someone.&lt;/p&gt;
+&lt;p&gt;If there is one thing that a software system necessarily has, it is state, so
+there is no word that is more unsuitable to go with the word &amp;ldquo;software&amp;rdquo; than
+the word &amp;ldquo;stateless&amp;rdquo;. (By the way, that is also a little something that
+functional programming aficionados should perhaps take a moment to
+philosophically ponder about.)&lt;/p&gt;
+&lt;p&gt;What this all means is that even if you build a system using so-called
+stateless microservices, that system will still have state; for example, if it
+is a web shop, it will very conveniently remember me when I come to visit
+again, and if I order any goods during my visit, it will very inconveniently
+&lt;em&gt;not&lt;/em&gt; forget to send me an invoice. That is all happening due to state, which is
+stored in the database system of the web shop. So, when people speak of
+microservices with no state what they actually mean is microservices with no
+&lt;em&gt;transient&lt;/em&gt; state. The state is definitely there, the system just does
+not rely on any microservice remembering any of it. Each microservice
+refrains from keeping any state in memory for any longer than it absolutely
+has to; it always begins the processing of every single transaction by
+querying the database for all necessary state, and it makes sure to persist
+any changed state into the database before proclaiming the transaction
+complete.&lt;/p&gt;
+&lt;p&gt;Stateless microservices were invented because statelessness is an easy way of
+achieving scalability and resilience: if a module does not keep any state, then an
+indefinite number of copies of that module can be created to process requests in
+parallel; any request arriving at the server farm can be serviced by any
+instance of that module, and any subset of copies of the module can be destroyed at any moment,
+without depriving the system from its ability to function.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s great, but statelessness is not an end in and of itself; it is a means
+to an end; it is just one way of achieving scalability and
+resilience. This is proven by the fact that the database systems upon which
+stateless microservice architectures are built are most certainly not
+stateless at all, and yet they do somehow manage to be scalable and resilient.
+Obviously, they are doing something differently.&lt;/p&gt;
+&lt;h4 id=&#34;what-is-wrong-with-statelessness&#34;&gt;What is wrong with statelessness?
+&lt;/h4&gt;&lt;p&gt;When building a system which needs to be scalable and resilient, and also
+needs to be very stateful as a whole, one has to begin with a scalable and
+resilient data layer as a foundation. Luckily, there exist various
+commercially available products that accomplish this. On top of that
+foundation, one has to build their application-specific logic in a way that is
+also scalable and resilient. Stateless microservices will achieve this, but
+they are one of the &lt;strong&gt;worst performing&lt;/strong&gt;, and from an engineering
+standpoint most &lt;em&gt;&lt;strong&gt;cowardly&lt;/strong&gt;&lt;/em&gt; ways of achieving scalability and
+resilience. Choosing the stateless microservices approach is like saying the
+following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;State is hard; we do not have the slightest clue as to how we can maintain
+state and at the same time remain scalable and resilient; but look, the
+creators of our database system are very smart folks, they seem to have
+figured it all out! So, here is what we will do: we will delegate the entire
+task of maintaining state to them!&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;That is how we arrived at the stateless microservice model, which I like to
+call the &amp;ldquo;Dory&amp;rdquo; model, after the fish that suffered from amnesia in the
+&lt;em&gt;Finding Nemo&lt;/em&gt; movie.&lt;/p&gt;
+&lt;p&gt;In the Dory model, every single incoming transaction gets processed by a
+microservice that is drawing a complete blank. Upon receiving the request, the
+microservice starts with very basic questions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Who am I, and what is this strange place I am running in?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Who are these folks sending me requests, and why?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Should I respond to them, or should I four-oh-three them away?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Let&amp;rsquo;s start by authenticating them&amp;hellip;&lt;/p&gt;
+&lt;p&gt;&amp;hellip;and it goes on like that. For every single request, there are multiple
+round-trips to the database while the microservice is discovering more and more
+about what it is being requested to do and whether it should in fact do it,
+and even more round-trips to retrieve the information that will go into the
+response, including very basic information that hardly ever changes, such as
+the name of the visitor on whose behalf the request was sent, and in multi-tenancy scenarios even
+the name of the tenant on whose behalf the website is being served.&lt;/p&gt;
+&lt;p&gt;When the transaction is nearing completion, the stateless microservice will
+meticulously store every single little piece of changed state in its exact
+right place in the database, as if it is making notes to itself, lest it
+forgets.&lt;/p&gt;
+&lt;p&gt;Finally, once the transaction is completed, the microservice will proceed to
+deliberately forget absolutely everything that it learned during the
+processing of the transaction, before it starts to wait for the next
+transaction.&lt;/p&gt;
+&lt;p&gt;I am not going to say that this is preposterously inefficient, but
+it is &lt;em&gt;&lt;strong&gt;preposterously inefficient.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Incidentally, the magnificent inefficiency of stateless microservices makes
+them to a certain extent a self-serving paradigm: in order to scale up you
+might think you need them, but once you have them, they will perform so badly,
+that boy oh boy, are you going to need to scale up!&lt;/p&gt;
+&lt;p&gt;Another problem with stateless microservices is that they cannot take any
+initiative of their own, they are restricted to only responding to incoming
+requests. This poses a problem with server-initiated client updates, which in
+certain circles are known as &amp;ldquo;push notifications&amp;rdquo;. A server-initiated client
+update happens when the server decides to send some data to the client at an
+arbitrary moment in time, as a result of some event occurring on the server,
+without the client first having to request that data.&lt;/p&gt;
+&lt;p&gt;Actually, the very term &amp;ldquo;push notification&amp;rdquo; seems to have originated from
+system designs in which such sending of data is a difficult task, as if the
+developers have to put their shoulders against the notification and push it
+all together to make it straddle the great divide between the server and the
+client. In other designs, where asynchronous bi-directional communication is
+the default mode of operation, there is no need for such laboriousness;
+server-initiated client updates are just part of the normal way things work.
+Alas, you cannot have that with stateless microservices, because
+bi-directional communication requires the notion of a session, which in turn
+implies a notion of state, which is a no-no.&lt;/p&gt;
+&lt;p&gt;Consequently, software systems that utilize the stateless microservice design
+pattern address the problem of server-initiated client updates in various
+wacky hacky ways:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Some opt to not have any; if the user wants to see what has changed, let
+them refresh the page. This can cause serious problems in systems where
+multiple clients may edit the same data, since the system has no way of
+alerting a client that the data they are editing is also being edited by
+another client at the same time.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Some use polling, meaning that each client keeps sending requests to the
+server at regular intervals asking whether there are any updates. This is wasteful, because each of these requests represents work that needs to
+be done, but very few of them will result in anything useful happening. At
+the same time, in order to reduce server load, the polling cannot be too
+frequent, which in turn means that there will always be a time
+lapse between the moment that an event occurs on the server and the moment
+that the clients take notice.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Some opt to have special stateful modules working side by side with the
+stateless microservices to handle the push notifications in a completely
+separate way, under the assumption that notifications are a kind of optional, &amp;ldquo;nice to have&amp;rdquo; thing anyway, so if performance suffers due to lack
+of scaling, or if service is interrupted due to lack of resilience, it will
+not hurt too much. On top of being clunky, this approach is also
+short-sighted because from the entire broad topic of server-initiated client
+updates it only considers the narrow case of updates being used for the sole
+purpose of on-screen notifications.&lt;/p&gt;
+&lt;p&gt;Further reading: &lt;a 
+   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   &gt;The Stateful Microservice&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: &lt;em&gt;Dory&lt;/em&gt;, the yellow-blue fish (a &lt;em&gt;Royal Blue Tang&lt;/em&gt;) that
+suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pixar.&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>My notes on &#34;Greg Young - The Long Sad History of Microservices&#34;</title>
+        <link>//localhost:1313/p/my-notes-on-greg-young-the-long-sad-history-of-microservices/</link>
+        <pubDate>Fri, 27 Oct 2017 08:32:53 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/my-notes-on-greg-young-the-long-sad-history-of-microservices/</guid>
+        <description>&lt;iframe allowfullscreen=&#34;&#34; class=&#34;YOUTUBE-iframe-video&#34; data-thumbnail-src=&#34;https://i.ytimg.com/vi/MjIfWe6bn40/0.jpg&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MjIfWe6bn40?feature=player_embedded&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Greg Young - The Long Sad History of Microservices&lt;/p&gt;
+&lt;p&gt;From the &amp;ldquo;Build Stuff&amp;rdquo; event of April 2017.&lt;/p&gt;
+&lt;p&gt;Talk begins at 9:45.&lt;/p&gt;
+&lt;p&gt;Highlights of the talk:&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;27:00 Placing a network between modules simply to enforce programmer discipline&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;29:05 There is other levels of isolation I can go to.  I can run a docker container per service.  That&amp;rsquo;s the coolest stuff right?  What that means is I can make it work on my machine so I send my machine to production.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;29:52 Now, one thing that&amp;rsquo;s very useful is I don&amp;rsquo;t necessarily want to make this decision up front. And I don&amp;rsquo;t necessarily want to make the same decision in dev as in production.  I may want in dev to have a different way that we run things, why? because bringing up 19 docker containers on your laptop is not very much fun.  I may prefer to host everything inside a single process to make debugging and such a lot easier when I am running on dev in my laptop.  Whereas in production we may go off to multiple nodes.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;34:16 If you have maintenance windows, why are you working towards getting rid of your maintenance windows?  Is this a business drive or is this you just being like C.V. driven development?&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;My notes:&lt;/p&gt;
+&lt;p&gt;Unfortunately his shrieky voice makes him sound like he is bitching about things, which in a sense he is, but it would help his cause to deliver his criticism in a more palatable tone.  Also, in order to make his point about microservices being nothing new he seems to disregard statelessness.&lt;/p&gt;
+&lt;p&gt;Resources referenced in the talk:&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;external&#34; 
+   href=&#34;https://en.wikipedia.org/wiki/Queueing_theory&#34; target=&#34;_blank&#34;
+   &gt;https://en.wikipedia.org/wiki/Queueing_theory&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;external&#34; 
+   href=&#34;https://en.wikipedia.org/wiki/%CE%A0-calculus&#34; target=&#34;_blank&#34;
+   &gt;https://en.wikipedia.org/wiki/π-calculus&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;external&#34; 
+   href=&#34;https://en.wikipedia.org/wiki/Actor_model&#34; target=&#34;_blank&#34;
+   &gt;https://en.wikipedia.org/wiki/Actor_model&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Leslie Lamport - Time, Clocks, and the Ordering of Events in a Distributed System&lt;/p&gt;
+&lt;p&gt;(available on the interwebz)&lt;/p&gt;
+&lt;p&gt;C.A.R. Hoare - Communicating Sequential Processes&lt;/p&gt;
+&lt;p&gt;(available on the interwebz)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Devoxx 2016 Belgium - Microservices Evolution: How to break your monolithic database by Edson Yanaga </title>
+        <link>//localhost:1313/p/devoxx-2016-belgium-microservices-evolution-how-to-break-your-monolithic-database-by-edson-yanaga/</link>
+        <pubDate>Thu, 18 May 2017 19:08:00 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/devoxx-2016-belgium-microservices-evolution-how-to-break-your-monolithic-database-by-edson-yanaga/</guid>
+        <description>&lt;p&gt;My notes on Devoxx 2016 Belgium - Microservices Evolution: How to break your monolithic database by Edson Yanaga (I attended this conference)&lt;/p&gt;
+&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/6dfBd-2Oq1M&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Reduce maintenance window&lt;/p&gt;
+&lt;p&gt;Achieve zero downtime deployments&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Code is easy, state is hard&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Changes in a database schema from one version to another are called database migrations&lt;/p&gt;
+&lt;p&gt;Tools: Flyweight Liquibase&lt;/p&gt;
+&lt;p&gt;Migrations require back and forward compatibility&lt;/p&gt;
+&lt;p&gt;Baby steps = Smallest Possible Batch Size&lt;/p&gt;
+&lt;p&gt;Too many rows = Long Locks&lt;/p&gt;
+&lt;p&gt;Shard your updates (not updating the entire table in one go)&lt;/p&gt;
+&lt;p&gt;Renaming a column&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ALTER TABLE customers RENAME COLUMN wrong TO correct;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;becomes:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ALTER TABLE customers ADD COLUMN correct VARCHAR(20);
+UPDATE customers SET correct = wrong WHERE id &amp;amp;lt; 100;
+UPDATE customers SET correct = wrong WHERE id &amp;amp;gt;= 100 AND id &amp;amp;lt; 200;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;{&amp;hellip;}&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(later)ALTER TABLE customers DELETE COLUMN wrong;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Adding a column&lt;/p&gt;
+&lt;p&gt;ADD COLUMN, setting NULL/DEFAULT value/computed value&lt;/p&gt;
+&lt;p&gt;Next release: Use Column&lt;/p&gt;
+&lt;p&gt;Renaming / Changeing Type / Format of a Column:
+Next version: ADD COLUMN, Copy data using small shards
+Next release: Code reads from old column and writes to both
+Next release: Code reads from new column and writes to both
+Next release: Code reads and writes from new column
+Next release: Delete old column&lt;/p&gt;
+&lt;p&gt;Deleting a column&lt;/p&gt;
+&lt;p&gt;Next version: Stop using the column but keep updating the column
+Next version: Delete the column&lt;/p&gt;
+&lt;p&gt;For migrating from a monolithic application with a monolithic database to many microservices with own database each:&lt;/p&gt;
+&lt;p&gt;Using Event Sourcing&lt;/p&gt;
+&lt;p&gt;tool: debezium.io&lt;/p&gt;
+&lt;p&gt;You tell it which tables you want to monitor, and from then on it monitors them and generates an event for each DDL/DML statement you issue.  The event is propagated to as many event consumers as you want. So, microservices can receive these events and update their own databases.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;HTTP and REST are incredibly slow&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>GOTO 2016 - Microservices at Netflix Scale: Principles, Tradeoffs &amp; Lessons Learned - R- Meshenberg </title>
+        <link>//localhost:1313/p/goto-2016-microservices-at-netflix-scale-principles-tradeoffs-lessons-learned-r-meshenberg/</link>
+        <pubDate>Thu, 18 May 2017 18:20:46 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/goto-2016-microservices-at-netflix-scale-principles-tradeoffs-lessons-learned-r-meshenberg/</guid>
+        <description>&lt;p&gt;My notes on GOTO 2016 - Microservices at Netflix Scale: Principles, Tradeoffs &amp;amp; Lessons Learned - R. Meshenberg&lt;/p&gt;
+&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/57UK46qfBLY&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;They have a division making a layer of tools for other teams to build their stuff on top of it.&lt;/p&gt;
+&lt;p&gt;Exceptions for statelessness are persistence (of course) but also caching.&lt;/p&gt;
+&lt;p&gt;Destructive testing - Chaos monkey -&amp;gt; simian army - in production, all the time. (During office hours)&lt;/p&gt;
+&lt;p&gt;Their separation of concerns looks like a grid, not like a vertical or horizontal table.&lt;/p&gt;
+&lt;p&gt;They have open sourced many of their tools, we can find them at netflix.github.com&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>GOTO 2015 - DDD &amp; Microservices: At Last, Some Boundaries! - Eric Evans</title>
+        <link>//localhost:1313/p/goto-2015-ddd-microservices-at-last-some-boundaries-eric-evans/</link>
+        <pubDate>Thu, 18 May 2017 18:19:17 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/goto-2015-ddd-microservices-at-last-some-boundaries-eric-evans/</guid>
+        <description>&lt;p&gt;My notes on GOTO 2015 - DDD &amp;amp; Microservices: At Last, Some Boundaries! - Eric Evans&lt;/p&gt;
+&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/yPvef9R3k-M&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Microservices and Netflix - what is the connection?&lt;/p&gt;
+&lt;p&gt;Isolated data stores&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;A service is something that can consume messages and can produce messages&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>GΟΤΟ 2014 - Microservices - Martin Fowler</title>
+        <link>//localhost:1313/p/g%CE%BF%CF%84%CE%BF-2014-microservices-martin-fowler/</link>
+        <pubDate>Thu, 18 May 2017 18:14:12 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/g%CE%BF%CF%84%CE%BF-2014-microservices-martin-fowler/</guid>
+        <description>&lt;p&gt;My notes on GΟΤΟ 2014 - Microservices - Martin Fowler&lt;/p&gt;
+&lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/wgdBVIX9ifA&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
+&lt;p&gt;Characteristics of Microservices&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Componentization&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Organized around business capabilities&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Products not Projects&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Smart endpoints and dumb pipes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Decentralized Governance&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Decentralized Data Management&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Infrastructure Automation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Design for failure&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Evolutionary Design&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With services we typically use some kind of interprocess communication facilities such as web service calls or messaging or something of that kind.&lt;/p&gt;
+&lt;p&gt;How big should a microservice be?&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;It should have one responsibility&amp;rdquo; &amp;ndash;too vague&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;It should fit in my head&amp;rdquo; &amp;ndash;fairly good&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;You should not have a team that you cannot feed with 2 pizzas&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

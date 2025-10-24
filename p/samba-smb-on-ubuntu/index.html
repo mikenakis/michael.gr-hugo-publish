@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Right out of the box, an Ubuntu 18.04 machine will not see any Microsoft Windows machines on the network, and Windows machines will not see it. Unfortunately, there is an incredible amount of work necessary to get it to work properly. So, here are my notes on setting up an Ubuntu 18.04 Linux workstation to act both as a Samba server and as a Samba client in a Windows Workgroup.\nServer ">
+<title>Samba (SMB) on Ubuntu</title>
+
+<link rel='canonical' href='//localhost:1313/p/samba-smb-on-ubuntu/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Samba (SMB) on Ubuntu">
+<meta property='og:description' content="Right out of the box, an Ubuntu 18.04 machine will not see any Microsoft Windows machines on the network, and Windows machines will not see it. Unfortunately, there is an incredible amount of work necessary to get it to work properly. So, here are my notes on setting up an Ubuntu 18.04 Linux workstation to act both as a Samba server and as a Samba client in a Windows Workgroup.\nServer ">
+<meta property='og:url' content='//localhost:1313/p/samba-smb-on-ubuntu/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2019-04-22T18:41:39&#43;00:00'/><meta property='article:modified_time' content='2025-10-13T22:08:31&#43;02:00'/>
+<meta name="twitter:title" content="Samba (SMB) on Ubuntu">
+<meta name="twitter:description" content="Right out of the box, an Ubuntu 18.04 machine will not see any Microsoft Windows machines on the network, and Windows machines will not see it. Unfortunately, there is an incredible amount of work necessary to get it to work properly. So, here are my notes on setting up an Ubuntu 18.04 Linux workstation to act both as a Samba server and as a Samba client in a Windows Workgroup.\nServer ">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#server">Server</a></li>
+        <li><a href="#client">Client</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/samba-smb-on-ubuntu/">Samba (SMB) on Ubuntu</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2019-04-22 Mon 18:41:39 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Right out of the box, an Ubuntu 18.04 machine will not see any Microsoft Windows machines on the network, and Windows machines will not see it.  Unfortunately, there is an incredible amount of work necessary to get it to work properly.  So, here are my notes on setting up an Ubuntu 18.04 Linux workstation to act both as a Samba server and as a Samba client in a Windows Workgroup.</p>
+<h4 id="server">Server
+</h4><p>Here is my setup script, <strong>which works,</strong> but be sure to keep reading, because the script alone is not enough.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get install samba winbind libnss-winbind
+</span></span><span class="line"><span class="cl">sudo ufw allow Samba
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="o">[[</span> ! -f /etc/samba/smb.conf.original <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl"> sudo mv /etc/samba/smb.conf /etc/samba/smb.conf.original
+</span></span><span class="line"><span class="cl"> sudo write /etc/samba/smb.conf <span class="s">&lt;&lt;EOF
+</span></span></span><span class="line"><span class="cl"><span class="s"># See /etc/samba/smb.conf.original
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">[global]
+</span></span></span><span class="line"><span class="cl"><span class="s">map to guest = bad user
+</span></span></span><span class="line"><span class="cl"><span class="s">server role = standalone server
+</span></span></span><span class="line"><span class="cl"><span class="s">server services = smb
+</span></span></span><span class="line"><span class="cl"><span class="s">unix extensions = no
+</span></span></span><span class="line"><span class="cl"><span class="s">wide links = yes
+</span></span></span><span class="line"><span class="cl"><span class="s">client max protocol = NT1
+</span></span></span><span class="line"><span class="cl"><span class="s">dns proxy = yes
+</span></span></span><span class="line"><span class="cl"><span class="s">wins support = yes
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s"># This is necessary here so that user-specific clones of &#34;[homes]&#34; will be browseable.
+</span></span></span><span class="line"><span class="cl"><span class="s">browseable = yes
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">[homes]
+</span></span></span><span class="line"><span class="cl"><span class="s">read only = no
+</span></span></span><span class="line"><span class="cl"><span class="s">comment = %U&#39;s Home Directory
+</span></span></span><span class="line"><span class="cl"><span class="s"># browseable = no is necessary here, or else &#34;homes&#34; will appear in the browse list.
+</span></span></span><span class="line"><span class="cl"><span class="s">browseable = no
+</span></span></span><span class="line"><span class="cl"><span class="s">valid users = %U
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl"><span class="k">fi</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The above script will install samba and configure it. (If it has not been installed already.) The old configuration file is saved as /etc/samba/smb.conf.original so that it can be consulted in the future.</p>
+<p>After this, windows machines will successfully list my Ubuntu machine among other machines under &ldquo;Network&rdquo;, and if I click on it I will be prompted for credentials.  When entering credentials I must remember the incredible, ages long &ldquo;Domain&rdquo; gotcha: do not just enter the username, enter MACHINE\username instead.  Then, Windows will correctly list the shares.</p>
+<p>The <code>[homes]</code> section in the above script defines a share which will magically have the same name as the authenticated user, and will magically map to the user&rsquo;s home folder.  That&rsquo;s all I need.</p>
+<p>A minor annoyance is that <code>testparm</code> will always report the following error:</p>
+<p><code>rlimit_max: increasing rlimit_max (1024) to minimum Windows limit (16384)</code></p>
+<p>After much searching around on the interwebz I found that:</p>
+<ol>
+<li>It is allegedly a warning, not an error, so it allegedly does not matter, and</li>
+<li>There simply seems to be absolutely no way to make it go away, so you better get used to it.</li>
+</ol>
+<h4 id="client">Client
+</h4><p>Things turn out to be considerably more difficult in making the Ubuntu machine successfully act as a client.  In the beginning nothing worked.</p>
+<p>Under Nautilus (the Gnome file manager) going to &ldquo;Other Locations&rdquo; and trying to open &ldquo;Windows Network&rdquo; would fail.  Trying to &ldquo;Connect to Server&rdquo; with smb://servername would also fail.</p>
+<p>The smbtree command would initially list only the local host, and if you let things stand for a while, it would eventually also show other machines, but not their shares.</p>
+<p>The smbclient command would fail with a very informative error message saying &ldquo;Error NT_STATUS_UNSUCCESSFUL&rdquo;.</p>
+<p>The nmblookup command would fail with a very informative message saying &ldquo;name_query failed to find name&rdquo;.</p>
+<p>The interwebz abound with discussions about the connectivity issues between Ubuntu 18.04 and Windows, but none of the solutions offered seemed to work for me.  Some of the discussions even arrive at the conclusion that it is impossible to get it to work.</p>
+<p>So, I started troubleshooting with smbtree and &ndash;debuglevel=3. (Because debuglevel=10 is like trying to drink water from a fire hydrant.)</p>
+<p>The first thing I noticed was that samba was complaining about it being supposed to use a WINS server, but having no address configured for it. I suppose that if there is no mention of WINS in smb.conf, then by default samba will neither try to act as a WINS server, nor will it know who the WINS server is.  Which kind of makes sense, but what does not make sense is that samba does not complain in any way about this erroneous situation during startup, and instead we need to look at debug information in order to discover it happening.</p>
+<p>I have no WINS server on my network, because this is apparently an advanced feature that is only found on Windows Server products, so I added &ldquo;wins support = yes&rdquo; to my smb.conf, to tell samba to act as a WINS server for me, because Linux gives these things for free, that&rsquo;s how it rolls.</p>
+<p>By doing that, the error about WINS went away.  Unfortunately, everything else remained as broken as before.</p>
+<p>Then it dawned upon me to look at what is going on with the firewall.  I had enabled the firewall and I had added the necessary rules to allow samba, but you never know.</p>
+<p>Again, because trying to read the logs is like trying to drink water from a fire hydrant, I had to write the following little script:</p>
+<p>ufwwatch</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="k">function</span> process
+</span></span><span class="line"><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">local</span> -a <span class="nv">array</span><span class="o">=(</span> <span class="si">${</span><span class="nv">1</span><span class="p">// / </span><span class="si">}</span> <span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">local</span> <span class="nv">time</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">array</span><span class="p">[2]</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">local</span> <span class="nv">action</span><span class="o">=</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">array</span><span class="p">[7]%</span><span class="se">\]</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="k">if</span> <span class="o">[[</span> <span class="s2">&#34;</span><span class="nv">$action</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;BLOCK&#34;</span> <span class="o">]]</span><span class="p">;</span> <span class="k">then</span> <span class="k">return</span><span class="p">;</span> <span class="k">fi</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">local</span> -a <span class="nv">remainder</span><span class="o">=(</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">array</span><span class="p">[@]:</span><span class="nv">8</span><span class="si">}</span><span class="s2">&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">local</span> -A <span class="nv">map</span><span class="o">=()</span>
+</span></span><span class="line"><span class="cl"> <span class="k">for</span> part in <span class="s2">&#34;</span><span class="si">${</span><span class="nv">remainder</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">local</span> -a <span class="nv">subparts</span><span class="o">=(</span> <span class="si">${</span><span class="nv">part</span><span class="p">//=/ </span><span class="si">}</span> <span class="o">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">local</span> <span class="nv">left</span><span class="o">=</span><span class="si">${</span><span class="nv">subparts</span><span class="p">[0]</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">local</span> <span class="nv">right</span><span class="o">=</span><span class="si">${</span><span class="nv">subparts</span><span class="p">[1]</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">  map<span class="o">[</span><span class="nv">$left</span><span class="o">]=</span><span class="s2">&#34;</span><span class="nv">$right</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="k">done</span>
+</span></span><span class="line"><span class="cl"> <span class="nb">echo</span> <span class="nv">$time</span> <span class="nv">$action</span> <span class="si">${</span><span class="nv">map</span><span class="p">[PROTO]</span><span class="si">}</span> <span class="nv">in</span><span class="o">=</span><span class="si">${</span><span class="nv">map</span><span class="p">[IN]</span><span class="si">}</span> <span class="nv">out</span><span class="o">=</span><span class="si">${</span><span class="nv">map</span><span class="p">[OUT]</span><span class="si">}</span> <span class="nv">src</span><span class="o">=</span><span class="si">${</span><span class="nv">map</span><span class="p">[SRC]</span><span class="si">}</span>:<span class="si">${</span><span class="nv">map</span><span class="p">[SPT]</span><span class="si">}</span> <span class="nv">dst</span><span class="o">=</span><span class="si">${</span><span class="nv">map</span><span class="p">[DST]</span><span class="si">}</span>:<span class="si">${</span><span class="nv">map</span><span class="p">[DPT]</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> Displaying blocked packets as they happen:
+</span></span><span class="line"><span class="cl">tail -f /var/log/ufw.log <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line<span class="p">;</span> <span class="k">do</span> process <span class="s2">&#34;</span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">;</span> <span class="k">done</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>By running this script I discovered to my astonishment and horror that some packets were in fact being blocked each time I tried running smbtree.  The packets were UDP packets arriving from my Windows machines to my Ubuntu machine.  The port on the originating machine&rsquo;s side was 137, but the ports on which they were arriving on my Ubuntu machine were random.  This is typical behavior when communicating via UDP, but the problem is that <strong>the standard ufw rules for &ldquo;Samba&rdquo; do not account for this</strong>! (WTF?)</p>
+<p>Here is what happens.</p>
+<p>Let us begin without any rules:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">michael@pegasus:~$ sudo ufw status numbered
+</span></span><span class="line"><span class="cl">Status: active
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now, let us add the standard rules for &ldquo;Samba&rdquo;:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">michael@pegasus:~$ sudo ufw allow Samba
+</span></span><span class="line"><span class="cl">Rule added
+</span></span><span class="line"><span class="cl">Rule added (v6)
+</span></span><span class="line"><span class="cl">michael@pegasus:~$ sudo ufw status verbose
+</span></span><span class="line"><span class="cl">Status: active
+</span></span><span class="line"><span class="cl">Logging: on (full)
+</span></span><span class="line"><span class="cl">Default: deny (incoming), allow (outgoing), disabled (routed)
+</span></span><span class="line"><span class="cl">New profiles: skip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To                         Action      From
+</span></span><span class="line"><span class="cl">--                         ------      ----
+</span></span><span class="line"><span class="cl">137,138/udp (Samba)        ALLOW IN    Anywhere                  
+</span></span><span class="line"><span class="cl">139,445/tcp (Samba)        ALLOW IN    Anywhere                  
+</span></span><span class="line"><span class="cl">137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)             
+</span></span><span class="line"><span class="cl">139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)             
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The problem is that with these rules, incoming packets from remote port 137 to random local ports get filtered.  So, although the Samba server works, the Samba client does not work. Here is what I had to do in order to fix this:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">michael@pegasus:~$ sudo ufw allow in proto udp from any port 137,138 to any
+</span></span><span class="line"><span class="cl">Rule added
+</span></span><span class="line"><span class="cl">Rule added (v6)
+</span></span><span class="line"><span class="cl">michael@pegasus:~$ sudo ufw status verbose
+</span></span><span class="line"><span class="cl">Status: active
+</span></span><span class="line"><span class="cl">Logging: on (full)
+</span></span><span class="line"><span class="cl">Default: deny (incoming), allow (outgoing), disabled (routed)
+</span></span><span class="line"><span class="cl">New profiles: skip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To                         Action      From
+</span></span><span class="line"><span class="cl">--                         ------      ----
+</span></span><span class="line"><span class="cl">137,138/udp (Samba)        ALLOW IN    Anywhere                  
+</span></span><span class="line"><span class="cl">139,445/tcp (Samba)        ALLOW IN    Anywhere                  
+</span></span><span class="line"><span class="cl">Anywhere                   ALLOW IN    137,138/udp               
+</span></span><span class="line"><span class="cl">137,138/udp (Samba (v6))   ALLOW IN    Anywhere (v6)             
+</span></span><span class="line"><span class="cl">139,445/tcp (Samba (v6))   ALLOW IN    Anywhere (v6)             
+</span></span><span class="line"><span class="cl">Anywhere (v6)              ALLOW IN    137,138/udp (v6)          
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After this, the smbtree command started listing Windows workstations.</p>
+<p>The final piece of the puzzle was to get a proper listing of the shares of each Windows workstation.</p>
+<p>Unfortunately I had to do an awful lot of tweaking around in order to get this to work, and I do not remember anymore every step of the process, but I am documenting what I remember, and I will refine this when I get the chance.</p>
+<p>The final steps that worked were the following:</p>
+<ul>
+<li>Go to Control Panel -&gt; Network and Sharing Center -&gt; Change Advanced Sharing Settings -&gt; All Networks -&gt; Password protected sharing and:
+<ul>
+<li>Select &ldquo;Turn off password protected sharing&rdquo;</li>
+</ul>
+</li>
+<li>In the Group Policy Editor (gpedit.msc) Go to Computer Configuration -&gt; Windows Settings -&gt; Security Settings -&gt; Local Policies -&gt; Security Options and modify the following:
+<ul>
+<li>Enable &ldquo;Network access: Let Everone permissions apply to anonymous users&rdquo;</li>
+</ul>
+</li>
+<li>And of course make sure the firewall allows samba packets to go through.</li>
+</ul>
+<p>Of course the above were probably not the only things required to make it work.  While troubleshooting, I also did several other things which, although they did not have any immediately visible result, may have contributed to the success of the configuration as a whole.  Those included  the following:</p>
+<p>In an elevated command prompt, execute:</p>
+<ul>
+<li><code>net user guest /active:yes</code> to enable the guest account.</li>
+<li><code>net user guest &quot;&quot;</code> to make sure that the guest account has a blank password.</li>
+</ul>
+<p>Go to Windows Explorer -&gt; This PC (&ldquo;My Computer&rdquo;) -&gt; Uninstall or Change a program -&gt; Turn Windows features on or off</p>
+<ul>
+<li>Make sure &ldquo;SMB 1.0/CIFS File Sharing Support&rdquo; is checked.</li>
+</ul>
+<p>Here is a relevant discussion for reference:
+<a class="external" 
+   href="https://unix.stackexchange.com/q/453944/141190" target="_blank"
+   >https://unix.stackexchange.com/q/453944/141190</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-13 Mon 22:08:31 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

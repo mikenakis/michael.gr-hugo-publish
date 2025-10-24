@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Ux on Michael&#39;s Blog</title>
+        <link>//localhost:1313/tags/ux/</link>
+        <description>Recent content in Ux on Michael&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
+        <lastBuildDate>Thu, 23 Oct 2025 17:41:50 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/ux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Simplification of triple-choice prompts to dual-choice</title>
+        <link>//localhost:1313/p/simplification-of-triple-choice-prompts-to-dual-choice/</link>
+        <pubDate>Fri, 31 May 2024 09:53:03 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/simplification-of-triple-choice-prompts-to-dual-choice/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/simplification-of-triple-choice-prompts-to-dual-choice/images/image.png&#34;
+	width=&#34;400&#34;
+	height=&#34;132&#34;
+	srcset=&#34;//localhost:1313/p/simplification-of-triple-choice-prompts-to-dual-choice/images/image_hu_f5edf689a035ac41.png 480w, //localhost:1313/p/simplification-of-triple-choice-prompts-to-dual-choice/images/image_hu_c6205dafb643c637.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;303&#34;
+		data-flex-basis=&#34;727px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I have a lot to say about the modern trend in graphical user interface design which aims to achieve an impossibly clean look at the expense of usability, but this is going to be the subject of another blog post. In this post, I want to talk about simplifying the user interface when the simplification is clearly a win, both from a usability point of view and, incidentally, from an aesthetics point of view. Specifically, I want to show how a yes/no/cancel prompt can be reduced to just a yes/cancel prompt.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a 
+   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;A typical example of such a prompt is when an application asks the user what to do when the user tries to quit the application while a file is unsaved.&lt;/p&gt;
+&lt;p&gt;We have two boolean variables:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;To save or not to save.&lt;/li&gt;
+&lt;li&gt;To quit or not to quit.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Since there are two boolean variables, there is a total of four conceivable options:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Save and quit.&lt;/li&gt;
+&lt;li&gt;Quit without saving.&lt;/li&gt;
+&lt;li&gt;Save without quitting.&lt;/li&gt;
+&lt;li&gt;Do not save and do not quit.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The very first programmers of interactive applications did not fail to notice that saving without quitting is not particularly useful, so in fact we only need three options, and this has given us the traditional triple-choice yes / no / cancel prompt, variations of which you see in almost all applications out there. One of the variations is as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Save the file before quitting? [Yes] / [No] / [Cancel]&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Needless to say, presenting the user with an application-modal prompt containing not one, not two, but three options is terrible. (If you think that
+&amp;ldquo;terrible&amp;rdquo; is a harsh word for such a low-impact problem, then please read &lt;a 
+   href=&#34;//localhost:1313/p/incident-impact-calculation-formula/&#34;
+   &gt;Incident Impact Calculation Formula&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;Note that the replacement of a generic &amp;ldquo;Yes&amp;rdquo; / &amp;ldquo;No&amp;rdquo; / &amp;ldquo;Cancel&amp;rdquo; prompt with a more specific &amp;ldquo;Save and exit&amp;rdquo; / &amp;ldquo;Exit without saving&amp;rdquo; / &amp;ldquo;Do not exit&amp;rdquo; prompt is probably an improvement, but this is not what I am discussing here. I would like to reduce the number of choices to less than three; once the number of choices has been reduced, finding some better wording for the remaining choices is all the better.&lt;/p&gt;
+&lt;p&gt;Also note that the best solution to multiple choice application-modal prompts is of course to restructure software, to rethink software from scratch if need be, so that they can be completely eliminated. For example, all prompts about saving before quitting could be a thing of the past if we were to abandon the notion of saving, or even the notion of quitting. However, such exotic approaches are off-topic in this discussion.&lt;/p&gt;
+&lt;p&gt;A blog author who has also examined the problem of triple-choice prompts, and explains it better than me, is &lt;a class=&#34;external&#34; 
+   href=&#34;https://martin.kleppmann.com/2007/07/19/yes-no-cancel-causes-aspirin-sales-to-soar.html&#34; target=&#34;_blank&#34;
+   &gt;Martin Kleppmann in &amp;ldquo;Yes/No/Cancel causes Aspirin sales to soar&amp;rdquo;&lt;/a&gt;.  Interestingly enough, Martin Kleppmann follows a thought process which is similar to mine, but does not present a proposal as to what to do instead.&lt;/p&gt;
+&lt;p&gt;So, here is my contribution to the subject:&lt;/p&gt;
+&lt;p&gt;Quite often, a triple choice prompt can be simplified to a dual-choice prompt!&lt;/p&gt;
+&lt;p&gt;We can eliminate the option to save and quit because we offer the option to not quit, which, if chosen, makes saving or not saving irrelevant: for as long as the application is still running, the user can always achieve saving and quitting by simply saving, and then quitting. (Duh!)&lt;/p&gt;
+&lt;p&gt;Thus, we can offer the following simplified prompt:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Quit without saving? [Yes] / [Cancel]&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The only way in which this could be further simplified would be to tell the user that they cannot quit because they have unsaved changes, and only show an [OK] button, but that would be annoying.&lt;/p&gt;
+&lt;p&gt;The traditional triple-choice prompt may have been invented for the benefit of users who are in the habit of quitting while having unsaved changes that they intend to keep, but I hope that we can all agree that this is not a healthy habit worth facilitating, certainly not if facilitating it would add the slightest bit of inconvenience to other, more legitimate, (and I suspect more frequently occurring,) use cases:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The user quits intending to revert changes.&lt;/li&gt;
+&lt;li&gt;The user attempts to quit while unaware that they have made changes.&lt;/li&gt;
+&lt;li&gt;The user does not intend to quit, but issues the quit command accidentally.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Special workflows can be facilitated by separate commands that specially target such workflows. For example, saving every single unmodified file can be accomplished with a &amp;ldquo;Save All&amp;rdquo; command, and this has the benefits of:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Being useful at any time, not only when quitting, and&lt;/li&gt;
+&lt;li&gt;Sparing the user from having to do one click per unmodified file.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To summarize:&lt;/p&gt;
+&lt;p&gt;Presenting the user with only two choices is immensely better than presenting the user with three choices, when the missing choice can be trivially accomplished by the user, in a way which is intuitively obvious to the user.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

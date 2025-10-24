@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="svg-icon"
+   style="overflow:hidden;fill:currentColor"
+   viewBox="0 0 1620 1000"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="cpp-2.svg"
+   width="1620"
+   height="1000"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.89111328"
+     inkscape:cx="1293.326"
+     inkscape:cy="605.42247"
+     inkscape:window-width="3840"
+     inkscape:window-height="2081"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="m 724.66665,669.38667 17.49333,104.10666 c -11.09333,5.97334 -29.01333,11.52 -52.90666,16.64 -24.32001,5.54667 -52.90666,8.53334 -85.76,8.53334 C 509.19998,796.96 438.37331,768.8 391.01331,715.04 c -47.78666,-54.18667 -71.68,-122.88 -71.68,-206.08 2.13334,-98.56 30.72,-174.08 85.33334,-226.98667 56.32,-53.33333 126.29333,-80.64 210.77333,-80.64 32,0 59.73333,2.98667 82.77333,8.10667 23.04,5.12 40.10667,10.66667 51.2,17.06667 l -24.74666,106.24 L 679.43998,318.24 c -17.06667,-4.26667 -36.69333,-6.4 -59.30666,-6.4 -49.49333,-0.42667 -90.45334,15.36 -122.45334,46.93333 -32.42667,31.14667 -49.06667,78.93334 -50.34667,142.50667 0,58.02667 15.78667,103.25333 46.08,136.53333 30.29334,32.85334 72.96,49.92 127.57334,50.34667 l 56.74666,-5.12 c 18.34667,-3.41333 33.70667,-8.10667 46.93334,-13.65333 m 21.33333,-212.05334 h 85.33333 V 372 h 85.33334 v 85.33333 H 1002 v 85.33334 H 916.66665 V 628 h -85.33334 v -85.33333 h -85.33333 v -85.33334 m 298.66672,0 H 1130 V 372 h 85.3333 v 85.33333 h 85.3334 v 85.33334 h -85.3334 V 628 H 1130 v -85.33333 h -85.3333 z"
+     fill="#0277bd"
+     id="path1" />
+  <rect
+     style="opacity:0.8;fill:none;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:100"
+     id="rect1"
+     width="1620"
+     height="1000"
+     x="0"
+     y="0" />
+</svg>

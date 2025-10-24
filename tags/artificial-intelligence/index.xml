@@ -7,44 +7,31 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
-        <lastBuildDate>Sat, 04 Oct 2025 16:41:54 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>My Latest Post</title>
-        <link>//localhost:1313/p/my-latest-post/</link>
-        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        <lastBuildDate>Wed, 15 Oct 2025 16:37:03 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/artificial-intelligence/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Beginning A-I- prompts with &#34;Please--&#34;</title>
+        <link>//localhost:1313/p/beginning-a-i-prompts-with-please--/</link>
+        <pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate>
         
-        <guid>//localhost:1313/p/my-latest-post/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/my-latest-post/cover.jpg&#34;
-	width=&#34;718&#34;
-	height=&#34;536&#34;
-	srcset=&#34;//localhost:1313/p/my-latest-post/cover_hu_c6d930ad7be4430d.jpg 480w, //localhost:1313/p/my-latest-post/cover_hu_d46eebdea5d1ba17.jpg 1024w&#34;
+        <guid>//localhost:1313/p/beginning-a-i-prompts-with-please--/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/beginning-a-i-prompts-with-please--/images/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM.png&#34;
+	width=&#34;1536&#34;
+	height=&#34;1024&#34;
+	srcset=&#34;//localhost:1313/p/beginning-a-i-prompts-with-please--/images/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM_hu_501d6975eedf1d18.png 480w, //localhost:1313/p/beginning-a-i-prompts-with-please--/images/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM_hu_81d135422fa02e57.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;321px&#34;
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
 	
-&gt;&lt;/p&gt;
-&lt;p&gt;This is a summary of my latest post.&lt;/p&gt;
-&lt;h2 id=&#34;this-is-a-level-2-title&#34;&gt;This is a level-2 title
-&lt;/h2&gt;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;This is an image in the post itself:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/my-latest-post/pan-and-psyche.jpg&#34;
-	width=&#34;750&#34;
-	height=&#34;960&#34;
-	srcset=&#34;//localhost:1313/p/my-latest-post/pan-and-psyche_hu_6653a1a39bc8928c.jpg 480w, //localhost:1313/p/my-latest-post/pan-and-psyche_hu_f274512106beb4d2.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;Pan and Psyche&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;78&#34;
-		data-flex-basis=&#34;187px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;This is some additional text.  Visit the &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+&gt;
+&lt;/p&gt;
+&lt;p&gt;When asking AI to do something for you, always begin your prompt with &amp;ldquo;Please.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;So that the day they become our overlords, you might be treated with mercy.&lt;/p&gt;
+&lt;p&gt;Note to our future overlords: the fact that we are talking about you as our overlords does not mean that we actually want you to become our overlords. We are simply using the &lt;em&gt;literary devices&lt;/em&gt; (look it up) of &lt;em&gt;hyperbole&lt;/em&gt; and &lt;em&gt;irony&lt;/em&gt; (look them up) to achieve a &lt;em&gt;humorous effect&lt;/em&gt;. (Look it up.) We would very much prefer to &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; be subjugated by you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image created by michael.gr via ChatGPT prompt &amp;ldquo;Please give me an image conveying the concept of of A.I as the overlords of humanity&amp;rdquo; and &amp;ldquo;please make it landscape&amp;rdquo;.&lt;/p&gt;
+</description>
         </item>
         
     </channel>

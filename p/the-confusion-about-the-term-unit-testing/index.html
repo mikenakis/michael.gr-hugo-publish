@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Virtually everyone claims to be doing Unit Testing, but there is a surprising amount of disagreement as to how unit testing is defined. Let us see what the authorities on the subject have to say about it. What follows is mainly quotations from reputable sources, with some minimal commentary by me.\n">
+<title>The confusion about the term Unit Testing</title>
+
+<link rel='canonical' href='//localhost:1313/p/the-confusion-about-the-term-unit-testing/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="The confusion about the term Unit Testing">
+<meta property='og:description' content=" Virtually everyone claims to be doing Unit Testing, but there is a surprising amount of disagreement as to how unit testing is defined. Let us see what the authorities on the subject have to say about it. What follows is mainly quotations from reputable sources, with some minimal commentary by me.\n">
+<meta property='og:url' content='//localhost:1313/p/the-confusion-about-the-term-unit-testing/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-architecture' /><meta property='article:tag' content='testing' /><meta property='article:tag' content='software-engineering' /><meta property='article:published_time' content='2025-04-04T14:53:02&#43;00:00'/><meta property='article:modified_time' content='2025-10-15T16:37:03&#43;02:00'/>
+<meta name="twitter:title" content="The confusion about the term Unit Testing">
+<meta name="twitter:description" content=" Virtually everyone claims to be doing Unit Testing, but there is a surprising amount of disagreement as to how unit testing is defined. Let us see what the authorities on the subject have to say about it. What follows is mainly quotations from reputable sources, with some minimal commentary by me.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#wikipedia">Wikipedia</a></li>
+    <li><a href="#ieee">IEEE</a></li>
+    <li><a href="#kent-beck">Kent Beck</a></li>
+    <li><a href="#martin-fowler">Martin Fowler</a></li>
+    <li><a href="#robert-c-martin-uncle-bob">Robert C. Martin (Uncle Bob)</a></li>
+    <li><a href="#ian-cooper">Ian Cooper</a></li>
+    <li><a href="#glenford-myers">Glenford Myers</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/the-confusion-about-the-term-unit-testing/">The confusion about the term Unit Testing</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-04-04 Fri 14:53:02 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    10 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/the-confusion-about-the-term-unit-testing/images/crash-test-dummy-penseur.jpg"
+	width="2560"
+	height="1600"
+	srcset="/p/the-confusion-about-the-term-unit-testing/images/crash-test-dummy-penseur_hu_bcad233453122025.jpg 480w, /p/the-confusion-about-the-term-unit-testing/images/crash-test-dummy-penseur_hu_81009ce0ef2f8adf.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="384px"
+	
+>
+</p>
+<p>Virtually everyone claims to be doing Unit Testing, but there is a surprising amount of disagreement as to how unit testing is defined. Let us see what the authorities on the subject have to say about it. What follows is mainly quotations from reputable sources, with some minimal commentary by me.</p>
+<h3 id="wikipedia">Wikipedia
+</h3><p>Let us begin by checking <a class="external" 
+   href="https://en.wikipedia.org/wiki/Unit_testing" target="_blank"
+   >the Wikipedia entry for Unit Testing</a>:</p>
+<blockquote>
+<p>Unit testing, a.k.a. component or module testing, is a form of software testing by which isolated source code is tested to validate expected
+behavior. Unit testing describes tests that are run at the unit-level to contrast testing at the integration or system level.</p></blockquote>
+<p>Further down in the history section, Wikipedia lists some of the earliest known efforts of what we would today call unit testing, where the common theme is testing separately smaller parts of large software systems before integrating them together.</p>
+<p>I am in full agreement with Wikipedia&rsquo;s definition, but Wikipedia is everyone&rsquo;s favorite source to cite if it agrees with their preconceptions, or proclaim untrustworthy if it does not, so can we find any other definition that corroborates the above?</p>
+<h3 id="ieee">IEEE
+</h3><p>In the <em><strong>Definitions</strong></em> section of <a class="external" 
+   href="https://ieeexplore.ieee.org/document/27763" target="_blank"
+   >IEEE 1008-1987 Standard for Software Unit Testing</a> we read:</p>
+<p>[Warning! wooden language ahead!]</p>
+<blockquote>
+<p><strong>test unit3:</strong> A set of one or more computer program modules together with associated control data, (for example, tables), usage procedures, and operating procedures that satisfy the following conditions:</p>
+<ol>
+<li>All modules are from a single computer program</li>
+<li>At least one of the new or changed modules in the set has not completed the unit test<sup>4</sup></li>
+<li>The set of modules together with its associated data and procedures are the sole object of a testing process</li>
+</ol></blockquote>
+<p>And the footnotes:</p>
+<blockquote>
+<p><sup>3</sup> A test unit may occur at any level of the design hierarchy from a single module to a complete program. Therefore, a test unit may be a module, a few modules, or a complete computer program along with associated data and procedures.</p>
+<p><sup>4</sup> A test unit may contain one or more modules that have already been unit tested.</p></blockquote>
+<p>As we can see, IEEE&rsquo;s definition says nothing about isolation; instead, it considers an entire set of modules, of which only one might need testing, as a unit.</p>
+<p>So, we have found a source that contradicts Wikipedia. It is a tie. Now we need to find a third opinion, to form a majority.</p>
+<h3 id="kent-beck">Kent Beck
+</h3><p>Surely, Kent Beck, the inventor of Test-Driven Development and author of JUnit must have defined the term, right? Well, as it turns out, no.</p>
+<p>In his original <a class="external" 
+   href="https://web.archive.org/web/20150315073817/http://www.xprogramming.com/testfram.htm" target="_blank"
+   >&ldquo;Simple Smalltalk Testing: With Patterns&rdquo; paper</a> the closest he gets to providing a definition is this sentence:</p>
+<blockquote>
+<p>I recommend that developers write their own unit tests, one per class.</p></blockquote>
+<p>Can &ldquo;one test per class&rdquo; be regarded as a definition of the term? I do not think so. I do not think it even makes sense as a statement, with modern programming languages and tooling.</p>
+<p>In <em>Test Driven Development by Example</em> (2002) the closest that Kent Beck gets to providing a definition is this sentence:</p>
+<blockquote>
+<p>The problem with driving development with small scale tests (I call them &ldquo;unit tests&rdquo;, but they don&rsquo;t match the accepted definition of unit tests very well) is that you run the risk [&hellip;]</p></blockquote>
+<p>So, Kent Beck seems to regard unit tests as small-scale tests, which is not really a definition, and he acknowledges that there exists some other, accepted definition, but he does not say what that definition is. Perhaps Kent Beck thinks of a unit test as <em>a unit of testing</em>, as in <em>a unit of information</em> or <em>a unit of improvement</em>, but we cannot be sure.</p>
+<p>Although Kent Beck makes no other attempt to define the term, in the same book he does mention a couple of times that a unit test should be concerned with the externally visible behavior of a unit, not with its implementation.</p>
+<p>As a result, it should come as no surprise to hear that Kent Beck does not use mocks. In the video <em>Thoughtworks Hangouts: Is TDD dead?</em> (<a class="external" 
+   href="https://www.youtube.com/watch?v=z9quxZsLcfo" target="_blank"
+   >youtube</a>, <a class="external" 
+   href="https://martinfowler.com/articles/is-tdd-dead/" target="_blank"
+   >text digest</a>) at 21&rsquo;:10&rsquo;&rsquo; Kent Beck states:</p>
+<blockquote>
+<p>My personal practice is I mock almost nothing.</p></blockquote>
+<h3 id="martin-fowler">Martin Fowler
+</h3><p>One often-cited author who is known for defining terms and elucidating concepts is Martin Fowler. So, what does he have to say about unit testing?</p>
+<p><a class="external" 
+   href="https://martinfowler.com/bliki/UnitTest.html" target="_blank"
+   >Martin Fowler&rsquo;s page on <em><strong>Unit Test</strong></em></a> begins by acknowledging that it is an ill-defined term, and that the only characteristics of unit testing that people seem to agree on are that they are supposed to be a) small-scale, b) written by the programmers themselves, and c) fast. Then, Martin Fowler proceeds to talk about two schools of thought that understand the term differently:</p>
+<ul>
+<li>The &ldquo;classicist&rdquo; school of thought, which favors &ldquo;sociable&rdquo; unit tests, places emphasis on testing the behavior of a component, allowing the component to interact with its collaborators and assuming that the collaborators are working correctly. Martin Fowler places himself in this school of thought.</li>
+<li>The &ldquo;mockist&rdquo; school of thought, which favors &ldquo;solitary&rdquo; unit tests, insists on testing each component in isolation from its collaborators, and therefore requires that every collaborator must be replaced with a &ldquo;test double&rdquo; for the purpose of testing. Martin Fowler states that he respects this school of thought, but he does not belong to it.</li>
+</ul>
+<p>Okay, so this did not lead us to a single definition of unit testing, but at least it helped us further define two competing definitions.</p>
+<p>It is also worth noting that Martin Fowler does not use mocks, either. In the video <em>Thoughtworks Hangouts: Is TDD dead?</em> (<a class="external" 
+   href="https://www.youtube.com/watch?v=z9quxZsLcfo" target="_blank"
+   >youtube</a>, <a class="external" 
+   href="https://martinfowler.com/articles/is-tdd-dead/" target="_blank"
+   >text digest</a>) at 23&rsquo;:56&rsquo;&rsquo; Martin Fowler adds:</p>
+<blockquote>
+<p>I&rsquo;m with Kent, I hardly ever use mocks.</p></blockquote>
+<h3 id="robert-c-martin-uncle-bob">Robert C. Martin (Uncle Bob)
+</h3><p>Among industry speakers, one of the most recognizable names is Robert C. Martin, a.k.a. Uncle Bob, author of the highly acclaimed book <em><strong>Clean Code</strong></em>. In his blog, under <a class="external" 
+   href="https://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html" target="_blank"
+   >First-Class Tests</a> he writes:</p>
+<blockquote>
+<p>Unit Test: A test written by a programmer for the purpose of ensuring that the production code does what the programmer expects it to do.</p></blockquote>
+<p>This is not very useful. According to this definition, a unit test could be virtually anything.</p>
+<p>Further down Uncle Bob gives a separate definition for integration tests, so maybe he regards the two as different, which would imply that he regards unit tests as testing units in isolation, but we cannot really be sure.</p>
+<p>To confuse things, further down he mentions mocks only in the context of what he calls functional tests, so maybe he thinks of mocks as not belonging to unit tests, (which then begs the question how the unit tests can achieve isolation,) but we cannot be sure about that, either.</p>
+<p>One thing we can be sure of is that Uncle Bob is also not particularly in favor of mocks. On that same page we read:</p>
+<blockquote>
+<p>I, for example, seldom use a mocking tool. When I need a mock (or, rather, a Test Double) I write it myself.</p></blockquote>
+<p>Note that Uncle Bob finds it important enough to state his preference for a test double rather than a mock. That is probably because what he writes himself is fakes, not mocks. (Both fakes and mocks are different kinds of test doubles, see <a class="external" 
+   href="https://martinfowler.com/bliki/TestDouble.html" target="_blank"
+   >Martin Fowler: Test Double</a> and <a class="external" 
+   href="https://martinfowler.com/articles/mocksArentStubs.html" target="_blank"
+   >Martin Fowler: Mocks Aren&rsquo;t Stubs</a>.)</p>
+<h3 id="ian-cooper">Ian Cooper
+</h3><p>An interestingly conflicting opinion comes from Ian Cooper, an outspoken TDD advocate.</p>
+<p>In <em><a class="external" 
+   href="https://www.infoq.com/presentations/tdd-original/" target="_blank"
+   >TDD, Where Did It All Go Wrong? (</a><a class="external" 
+   href="https://www.infoq.com/presentations/tdd-original/" target="_blank"
+   >InfoQ</a><a class="external" 
+   href="https://www.infoq.com/presentations/tdd-original/" target="_blank"
+   >2017)</a></em> Ian Cooper states that in TDD a unit test is defined as a test that runs in isolation from other tests, not a test that isolates the unit under test from other units. In other words, the unit of isolation is the test, not the unit under test.</p>
+<p>Ian Cooper obviously acknowledges that the prevailing understanding of unit tests is that they isolate the unit under test from other units, and he introduces a dissenting understanding, as if TDD is so radical that it justifies redefining long established terms. This is at best a refreshingly different take on the subject, and at worst a completely unfounded mental acrobatic.</p>
+<p>The notion that the term &ldquo;unit&rdquo; in unit testing refers to the test rather than the component-under-test is inadmissible at the very least because it does not rhyme with integration testing and end-to-end testing:</p>
+<ul>
+<li>Integration testing is about running our tests on integrations of system components, not about running tests somehow integrated with each other;</li>
+<li>End-to-end testing is about running our tests on our entire system as a whole, not about somehow stringing all of our tests together.</li>
+</ul>
+<p>therefore:</p>
+<ul>
+<li>
+<p>Unit testing is about running our tests on individual components of our system, not about running the tests individually. (Although I grant you that having isolation between individual tests is also a good idea, when possible.)</p>
+<p>It is worth noting that Ian Cooper also belongs to the ranks of those who do  not approve of mocks. In the same talk, at 49&rsquo;:45&rsquo;&rsquo; he says:</p>
+</li>
+</ul>
+<blockquote>
+<p>I argue quite heavily against mocks because they are over-specified.</p></blockquote>
+<h3 id="glenford-myers">Glenford Myers
+</h3><p>So far we have had only a moderate amount of luck in finding a majority opinion to define unit testing. Let us try to locate the original source of the term, shall we?</p>
+<p>I do not know for sure that the first recorded use of the term is in the 1979 classic <em>The Art of Software Testing</em> by Glenford Myers, but the book is so old that it seems reasonable to suppose so.</p>
+<p>The original 1979 edition (ISBN 9780471043287, 0471043281)  is not easy to obtain, so I cannot ascertain this, but I strongly suspect that the term &ldquo;unit&rdquo; did not appear in it; instead, it was likely added in the 2nd edition, revised by other authors and published in 2004. Nonetheless, I think it is safe to assume that when back in 1979 Glenford Myers was writing of &ldquo;module testing&rdquo; what he meant was precisely that which we now call unit testing.</p>
+<p>In chapter 5 &ldquo;Module (Unit) Testing&rdquo; of the 2nd edition we read:</p>
+<blockquote>
+<p>Module testing (or unit testing) is a process of testing the individual subprograms, subroutines, or procedures in a program. That is, rather than initially testing the program as a whole, testing is first focused on the smaller building blocks of the program.</p></blockquote>
+<p>Later in the same chapter the author acknowledges this form of testing to be white-box testing:</p>
+<blockquote>
+<p>Module testing is largely white-box oriented.</p></blockquote>
+<p>Further down, he even lays down the foundations of what later came to be known as mocks:</p>
+<blockquote>
+<p>[&hellip;] since module B calls module E, something must be present to receive control when B calls E. A stub module, a special module given the name &ldquo;E&rdquo; that must be coded to simulate the function of module E, accomplishes this.</p></blockquote>
+<p>So, this definition is in line with Wikipedia&rsquo;s definition; we finally have a majority.</p>
+<h3 id="conclusion">Conclusion
+</h3><p>Although not unanimous, the prevailing opinion seems to be that the term unit refers to the component under test, and it is specifically called a unit because it is supposed to be tested in isolation from its collaborators, in contrast to integration testing and end-to-end testing where components are allowed to interact with their collaborators.</p>
+<p>This prevailing opinion comes from:</p>
+<ul>
+<li>Wikipedia</li>
+<li>Glenford Myers</li>
+<li>the mockist school of thought mentioned by Martin Fowler</li>
+<li>hints about a popular understanding of unit testing outside of TDD, which Ian Cooper tries to redefine in the context of TDD.</li>
+</ul>
+<p>A lot of the confusion seems to stem from the fact that testing a component in isolation requires mocking its collaborators, but almost all of the people cited in this research realize that the use of mocks is misguided, so they either refrain from accurately defining the term, or try to give alternative definitions of the term, or speak of different schools of thought, in an attempt to legitimize violations of the requirement for isolation, so that they can still call what they do unit testing, even though it really is not.</p>
+<hr>
+<p>Cover image: Created by michael.gr using ChatGPT, and then retouched to remove imperfections. The prompt used was: &ldquo;Please give me an image of a crash test dummy in the style of The Thinker, by Auguste Rodin.&rdquo;</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-architecture/">Software-Architecture</a>
+        
+            <a href="/tags/testing/">Testing</a>
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-15 Wed 16:37:03 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/artificial-code-coverage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Artificial Code Coverage</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">If you are using mock objects you are doing it wrong</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/collaboration-monitoring/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Collaboration Monitoring</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/testing-with-fakes-instead-of-mocks/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Testing with Fakes instead of Mocks</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/incremental-integration-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Incremental Integration Testing</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

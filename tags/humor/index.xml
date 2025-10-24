@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Humor on Michael&#39;s Blog</title>
+        <link>//localhost:1313/tags/humor/</link>
+        <description>Recent content in Humor on Michael&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
+        <lastBuildDate>Thu, 23 Oct 2025 00:43:04 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/humor/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Code review memes</title>
+        <link>//localhost:1313/p/code-review-memes/</link>
+        <pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/code-review-memes/</guid>
+        <description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
+&lt;p&gt;I like to use this feature to post memes.&lt;/p&gt;
+&lt;p&gt;Here is my collection of the most useful code review memes:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/xi8cf.jpg&#34;
+	width=&#34;700&#34;
+	height=&#34;474&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/xi8cf_hu_83198d77afe5a180.jpg 480w, //localhost:1313/p/code-review-memes/images/xi8cf_hu_2d204830de650aa5.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wgwzh.jpg&#34;
+	width=&#34;505&#34;
+	height=&#34;494&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wgwzh_hu_fe087c1ed5cc807e.jpg 480w, //localhost:1313/p/code-review-memes/images/9wgwzh_hu_a705937959023e8e.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;245px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/e040f790ce334dbf7c59b317639c8b17.jpg&#34;
+	width=&#34;640&#34;
+	height=&#34;640&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/e040f790ce334dbf7c59b317639c8b17_hu_1783e935ee205db7.jpg 480w, //localhost:1313/p/code-review-memes/images/e040f790ce334dbf7c59b317639c8b17_hu_df4aee738074b345.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25.jpg&#34;
+	width=&#34;1000&#34;
+	height=&#34;720&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25_hu_dea43428b171f8d4.jpg 480w, //localhost:1313/p/code-review-memes/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25_hu_2c65ab078ab6b103.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;333px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/Darth_Vader_Noooo_Banner.jpg&#34;
+	width=&#34;1200&#34;
+	height=&#34;675&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/Darth_Vader_Noooo_Banner_hu_9fd7d021300af31a.jpg 480w, //localhost:1313/p/code-review-memes/images/Darth_Vader_Noooo_Banner_hu_7a09a2f35f6835cb.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/oh-no-no-dd7f7d8f8e.jpg&#34;
+	width=&#34;600&#34;
+	height=&#34;389&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/oh-no-no-dd7f7d8f8e_hu_4ad46eea13d7002b.jpg 480w, //localhost:1313/p/code-review-memes/images/oh-no-no-dd7f7d8f8e_hu_930f6a09c16b02c7.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;370px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wguxc.jpg&#34;
+	width=&#34;645&#34;
+	height=&#34;387&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wguxc_hu_99fe9e66afdd147e.jpg 480w, //localhost:1313/p/code-review-memes/images/9wguxc_hu_338da9ef351055a2.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u.jpg&#34;
+	width=&#34;750&#34;
+	height=&#34;1000&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u_hu_6854864273654432.jpg 480w, //localhost:1313/p/code-review-memes/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u_hu_9a2d85618981b68.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;75&#34;
+		data-flex-basis=&#34;180px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wh26z.jpg&#34;
+	width=&#34;673&#34;
+	height=&#34;371&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wh26z_hu_f5aa6c4e2d8ed651.jpg 480w, //localhost:1313/p/code-review-memes/images/9wh26z_hu_b71a5884f01ef031.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wh0pu.jpg&#34;
+	width=&#34;500&#34;
+	height=&#34;515&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wh0pu_hu_bde49d5e3dabbf5b.jpg 480w, //localhost:1313/p/code-review-memes/images/9wh0pu_hu_3ed645cdef73e00a.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;233px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wgzsg.jpg&#34;
+	width=&#34;706&#34;
+	height=&#34;353&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wgzsg_hu_914972273403c1bf.jpg 480w, //localhost:1313/p/code-review-memes/images/9wgzsg_hu_941da15b4173e133.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;200&#34;
+		data-flex-basis=&#34;480px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wgyqm.jpg&#34;
+	width=&#34;668&#34;
+	height=&#34;374&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wgyqm_hu_6a2ad906ecaca1ab.jpg 480w, //localhost:1313/p/code-review-memes/images/9wgyqm_hu_c5a7fca663f3d881.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/1bq1b7.jpg&#34;
+	width=&#34;250&#34;
+	height=&#34;298&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/1bq1b7_hu_235471bf726297b4.jpg 480w, //localhost:1313/p/code-review-memes/images/1bq1b7_hu_1bba7ea8f3fe2199.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;83&#34;
+		data-flex-basis=&#34;201px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/0a1247a0c9dc93afebfa57647e1149a39093c540.jpeg&#34;
+	width=&#34;474&#34;
+	height=&#34;307&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/0a1247a0c9dc93afebfa57647e1149a39093c540_hu_6955ae97cd1b5b7a.jpeg 480w, //localhost:1313/p/code-review-memes/images/0a1247a0c9dc93afebfa57647e1149a39093c540_hu_b242d1a38374488.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;370px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/you-shall-not-pass.jpg&#34;
+	width=&#34;1213&#34;
+	height=&#34;682&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/you-shall-not-pass_hu_ec4ed8fe70f7e998.jpg 480w, //localhost:1313/p/code-review-memes/images/you-shall-not-pass_hu_8fa80164e133400b.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Theory vs- Practice</title>
+        <link>//localhost:1313/p/theory-vs-practice/</link>
+        <pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/theory-vs-practice/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/theory-vs-practice/images/theory-vs-practice.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;The quote of the day:&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In theory there is no difference between theory and practice, but in practice there is.&lt;/p&gt;
+&lt;p&gt;&amp;ndash; Benjamin Brewster, ca. 1882 (according to &lt;a class=&#34;external&#34; 
+   href=&#34;https://quoteinvestigator.com/2018/04/14/theory/&#34; target=&#34;_blank&#34;
+   &gt;Quote Investigator&lt;/a&gt;)&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: &amp;ldquo;Theory vs. Practice&amp;rdquo; vector image created by michael.gr by tracing and then heavily cleaning up original raster image generated by ChatGpt with the following prompt: &amp;ldquo;Please give me a picture which illustrates the juxtaposition between the two concepts of theory and practice. Make it in landscape format, with clean colors.&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Beginning A-I- prompts with &#34;Please--&#34;</title>
+        <link>//localhost:1313/p/beginning-a-i-prompts-with-please--/</link>
+        <pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/beginning-a-i-prompts-with-please--/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/beginning-a-i-prompts-with-please--/images/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM.png&#34;
+	width=&#34;1536&#34;
+	height=&#34;1024&#34;
+	srcset=&#34;//localhost:1313/p/beginning-a-i-prompts-with-please--/images/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM_hu_501d6975eedf1d18.png 480w, //localhost:1313/p/beginning-a-i-prompts-with-please--/images/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM_hu_81d135422fa02e57.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;When asking AI to do something for you, always begin your prompt with &amp;ldquo;Please.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;So that the day they become our overlords, you might be treated with mercy.&lt;/p&gt;
+&lt;p&gt;Note to our future overlords: the fact that we are talking about you as our overlords does not mean that we actually want you to become our overlords. We are simply using the &lt;em&gt;literary devices&lt;/em&gt; (look it up) of &lt;em&gt;hyperbole&lt;/em&gt; and &lt;em&gt;irony&lt;/em&gt; (look them up) to achieve a &lt;em&gt;humorous effect&lt;/em&gt;. (Look it up.) We would very much prefer to &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; be subjugated by you.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image created by michael.gr via ChatGPT prompt &amp;ldquo;Please give me an image conveying the concept of of A.I as the overlords of humanity&amp;rdquo; and &amp;ldquo;please make it landscape&amp;rdquo;.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The best code review comment ever</title>
+        <link>//localhost:1313/p/the-best-code-review-comment-ever/</link>
+        <pubDate>Mon, 10 Feb 2025 11:30:14 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/the-best-code-review-comment-ever/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/the-best-code-review-comment-ever/images/code-review.jpg&#34;
+	width=&#34;1536&#34;
+	height=&#34;1024&#34;
+	srcset=&#34;//localhost:1313/p/the-best-code-review-comment-ever/images/code-review_hu_c2532b58c6236aa3.jpg 480w, //localhost:1313/p/the-best-code-review-comment-ever/images/code-review_hu_6bffad9881622c28.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I just wrote a code review comment that I feel particularly smug about.&lt;/p&gt;
+&lt;p&gt;The code I was reviewing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  class PointClouds ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;My comment:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is a bad idea to have a type name in plural. If you need to signify plurality, use a plurality-signifying suffix in singular form, as in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PointCloudCollection&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PointCloudSet&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PointCloudGroup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;or go creative with &lt;code&gt;PointCloudFormation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;or take creativity to a whole new level with &lt;code&gt;PointCumulonimbus&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anything but a plural type name.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image created by ChatGpt using the following prompt: &amp;ldquo;Please give me an illustration conveying the concept of &amp;ldquo;code review&amp;rdquo;. Make it in landscape format, with clean colors.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Anonymous 2025-02-16 23:28:05 UTC&lt;/p&gt;
+&lt;p&gt;I have never heard of Cumulonimbus before but that sounds cool, going to use this for all my classes from now on&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Anonymous 2025-02-16 23:31:24 UTC&lt;/p&gt;
+&lt;p&gt;(/s) This is a good one! Sound advice in multiple ways 😂&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
+        <item>
+        <title>Incident Impact Calculation Formula</title>
+        <link>//localhost:1313/p/incident-impact-calculation-formula/</link>
+        <pubDate>Fri, 31 May 2024 12:53:30 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/incident-impact-calculation-formula/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/incident-impact-calculation-formula/images/titanic.jpg&#34;
+	width=&#34;2000&#34;
+	height=&#34;1324&#34;
+	srcset=&#34;//localhost:1313/p/incident-impact-calculation-formula/images/titanic_hu_a174135a2296b398.jpg 480w, //localhost:1313/p/incident-impact-calculation-formula/images/titanic_hu_d680cbb4b8484329.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;362px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;The Mike Nakis formula for calculating the impact of an incident:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I = S × G × T&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I is the impact of the incident.&lt;/li&gt;
+&lt;li&gt;S is the severity of the incident.&lt;/li&gt;
+&lt;li&gt;G is the geographic pervasiveness of the incident.&lt;/li&gt;
+&lt;li&gt;T is the temporal pervasiveness of the incident.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thus:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An incident of high severity does not have high impact if it happens rarely and in only a few places.&lt;/li&gt;
+&lt;li&gt;An incident of low severity can have high impact if it is persistent and widespread.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example:&lt;/p&gt;
+&lt;p&gt;The sinking of the Titanic was certainly a disaster, but it was largely an isolated incident: it happened only once, on the 15th of April 1912, and only in one place, at 41°43&#39;32&amp;rsquo;&amp;lsquo;N 49°56&#39;49&amp;rsquo;&amp;lsquo;W; we have not had anything quite like that happening before, and we have been doing a decent job at avoiding similar incidents ever since, so in the big picture, it is not of particularly high impact.&lt;/p&gt;
+&lt;p&gt;On the other hand:&lt;/p&gt;
+&lt;p&gt;A modern computer taking several long seconds to reboot, despite having a multi-core, multi-gigahertz, hyper-threaded and pipelined CPU with multi-level cache and solid-state storage, is something that affects &lt;em&gt;&lt;strong&gt;everyone&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;everywhere, every day&lt;/strong&gt;&lt;/em&gt;, so it does in fact have &lt;em&gt;quite a high impact.&lt;/em&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Program Code is Uncountable</title>
+        <link>//localhost:1313/p/program-code-is-uncountable/</link>
+        <pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/program-code-is-uncountable/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/program-code-is-uncountable/images/code.jpg&#34;
+	width=&#34;800&#34;
+	height=&#34;331&#34;
+	srcset=&#34;//localhost:1313/p/program-code-is-uncountable/images/code_hu_f0a5e6162c5554.jpg 480w, //localhost:1313/p/program-code-is-uncountable/images/code_hu_34c59bcd7cb70c1f.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;241&#34;
+		data-flex-basis=&#34;580px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;There are some words in English that are uncountable. For example: &lt;em&gt;cheese&lt;/em&gt;, &lt;em&gt;furniture&lt;/em&gt;, &lt;em&gt;music&lt;/em&gt;, &lt;em&gt;evidence&lt;/em&gt;, &lt;em&gt;research&lt;/em&gt;, &lt;em&gt;knowledge&lt;/em&gt;, &lt;em&gt;information&lt;/em&gt;, etc. When we speak of those things in plural, we still use the singular form: &amp;ldquo;I would like to order a four-&lt;em&gt;&lt;strong&gt;cheese&lt;/strong&gt;&lt;/em&gt; pizza&amp;rdquo;, &amp;ldquo;Let me give you some of my &lt;em&gt;&lt;strong&gt;furniture&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;, &amp;ldquo;We need to consider all the &lt;em&gt;&lt;strong&gt;evidence&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;, etc.&lt;/p&gt;
+&lt;p&gt;Another such word is &lt;em&gt;&lt;strong&gt;code&lt;/strong&gt;&lt;/em&gt;, in the context of programming.&lt;/p&gt;
+&lt;p&gt;When referring to program code, the word &lt;em&gt;code&lt;/em&gt; is uncountable. &amp;ldquo;I wrote the code for all those apps&amp;rdquo;, &amp;ldquo;You have a lot of code to review&amp;rdquo;, &amp;ldquo;We write new code every day&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;There are certain &lt;em&gt;&lt;strong&gt;other&lt;/strong&gt;&lt;/em&gt; meanings of the word &lt;em&gt;code&lt;/em&gt; that do have a plural form; for example, &amp;ldquo;Give me the access codes&amp;rdquo; or &amp;ldquo;See the list of HTTP status codes&amp;rdquo;; but these meanings refer to numbers, or ciphers, in other words data, not program code. &lt;strong&gt;Program code is always uncountable.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Reference: &lt;a class=&#34;external&#34; 
+   href=&#34;https://www.oxfordlearnersdictionaries.com/definition/english/code&#34; target=&#34;_blank&#34;
+   &gt;Oxford Learner&amp;rsquo;s Dictionaries - English - Code&lt;/a&gt; (Scroll down to meaning 3, &amp;ldquo;programming&amp;rdquo;.)&lt;/p&gt;
+&lt;p&gt;Now, we live in free societies where everyone enjoys freedom of speech, and more generally, freedom of expression. You can choose to say whatever you like, just as you can choose to dress in whatever way you like.&lt;/p&gt;
+&lt;p&gt;But when you say &amp;ldquo;codes&amp;rdquo; referring to program code, please do keep in mind that you come across like this complete idiot:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/program-code-is-uncountable/images/saggy.jpg&#34;
+	width=&#34;600&#34;
+	height=&#34;900&#34;
+	srcset=&#34;//localhost:1313/p/program-code-is-uncountable/images/saggy_hu_9b0ece5b469d5054.jpg 480w, //localhost:1313/p/program-code-is-uncountable/images/saggy_hu_a55983757e3a6195.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;160px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Or like this complete idiot:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/program-code-is-uncountable/images/hat-fail.jpg&#34;
+	width=&#34;600&#34;
+	height=&#34;768&#34;
+	srcset=&#34;//localhost:1313/p/program-code-is-uncountable/images/hat-fail_hu_c5d3462460a7d4f4.jpg 480w, //localhost:1313/p/program-code-is-uncountable/images/hat-fail_hu_b1bbf3addb44a36e.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;78&#34;
+		data-flex-basis=&#34;187px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Do you want to come across like a complete idiot?&lt;/p&gt;
+&lt;p&gt;The choice is yours.&lt;/p&gt;
+&lt;p&gt;(Grumpy cat meme unnecessary; this was grumpy enough by itself.)&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Jargon</title>
+        <link>//localhost:1313/p/jargon/</link>
+        <pubDate>Mon, 05 Dec 2022 10:48:33 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/jargon/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/jargon/media/jargon.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;The most awesome Stack Overflow question ever posted was deemed unsuitable for the site, so it was not just closed; it was deleted. It does not exist anymore. (See &lt;a 
+   href=&#34;//localhost:1313/p/jeff-atwood-building-social-software-for-the-antisocial/&#34;
+   &gt;Jeff Atwood: Building Social Software for the Antisocial&lt;/a&gt;.) The title of the question was: &amp;ldquo;New programming jargon you coined?&amp;rdquo; and as you might imagine, it received hundreds of answers.  Most of the answers would make you laugh; some would make you laugh &lt;em&gt;hard&lt;/em&gt;; some would have you in stitches.&lt;/p&gt;
+&lt;p&gt;Jeff Atwood saved the top 30 or so of those answers in his blog: &lt;a class=&#34;external&#34; 
+   href=&#34;https://blog.codinghorror.com/new-programming-jargon/&#34; target=&#34;_blank&#34;
+   &gt;Coding Horror - New Programming Jargon&lt;/a&gt; (though these are not even the funniest ones,) and it seems like the rest of the answers are lost forever.&lt;/p&gt;
+&lt;p&gt;Or are they?&lt;/p&gt;
+&lt;p&gt;Well, actually, thanks to &lt;strong&gt;archive.org&lt;/strong&gt;, humanity will continue to have access to this treasure of mirth for all eternity.&lt;/p&gt;
+&lt;p&gt;Here is the link: &lt;a class=&#34;external&#34; 
+   href=&#34;https://web.archive.org/web/20120123121524/http://stackoverflow.com/questions/2349378/new-programming-jargon-you-coined&#34; target=&#34;_blank&#34;
+   &gt;archive.org - stackoverflow.com - New programming jargon you coined?&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; First read the question, then go to the last answer and start reading the answers back-to-front after skipping those with scores of -1, 0, and 1. Make sure you have an hour to spare.&lt;/p&gt;
+&lt;p&gt;Here is some programming jargon which I have either coined, or picked up and doing my best to increase its popularity:&lt;/p&gt;
+&lt;h3 id=&#34;magical-incantation&#34;&gt;Magical Incantation
+&lt;/h3&gt;&lt;p&gt;Any code statement, function argument, command line, formulation, or construct that is necessary to get something to work as intended, which one could have never guessed, and for which absolutely no hint was provided. Also, any such construct which, after being put to use, one could never infer what it accomplishes by just looking at it.  Of course, in theory, everything is understandable if you read the book, but a) #AintNoBodyGotNoTimeFoDat, and b) are you seriously expecting programmers to memorize entire books of jargon?&lt;/p&gt;
+&lt;h3 id=&#34;pearl&#34;&gt;PEARL
+&lt;/h3&gt;&lt;p&gt;A keyword that I add to source code comments that explain weird, unexpected, usually lame, sometimes incredibly lame behavior of other people&amp;rsquo;s software that my software has to account for and work around.&lt;/p&gt;
+&lt;h3 id=&#34;get-run-over-by-a-crocodile&#34;&gt;Get run over by a crocodile
+&lt;/h3&gt;&lt;p&gt;Refers to the possibility that the programmer who has written all of the software that a company depends on might one day quit working for that company or be otherwise incapable of continuing with their duties. Combination of &amp;ldquo;get run over by a bus&amp;rdquo; and &amp;ldquo;get eaten by a crocodile&amp;rdquo;, similar to &amp;ldquo;rocket surgery&amp;rdquo;.&lt;/p&gt;
+&lt;h3 id=&#34;search-and-destroy&#34;&gt;Search and destroy
+&lt;/h3&gt;&lt;p&gt;Refers to a botched &amp;ldquo;search and replace&amp;rdquo; operation that seriously fouled up the entire source code base.&lt;/p&gt;
+&lt;h3 id=&#34;wtfpm&#34;&gt;WTFPM
+&lt;/h3&gt;&lt;p&gt;What-The-Fucks-Per-Minute &amp;ndash; a measure of how smoothly (or not) code review is progressing.&lt;/p&gt;
+&lt;h3 id=&#34;blasphemy&#34;&gt;Blasphemy
+&lt;/h3&gt;&lt;p&gt;Any choice which, although technically valid, nonetheless feels wrong, like a buffer size which is not a power of two, a raster image there where a vector image would do equally well, etc.&lt;/p&gt;
+&lt;h3 id=&#34;hail-mary-initialization&#34;&gt;Hail-Mary Initialization
+&lt;/h3&gt;&lt;p&gt;The cargo-cult programming practice of pre-initializing a local variable with some meaningless value which is then overwritten with some other value in all execution paths.  See &lt;a 
+   href=&#34;//localhost:1313/p/hail-mary-local-variable-initialization/&#34;
+   &gt;Hail-Mary Initialization&lt;/a&gt;.&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Confucius on naming</title>
+        <link>//localhost:1313/p/confucius-on-naming/</link>
+        <pubDate>Mon, 21 May 2018 23:50:55 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/confucius-on-naming/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/confucius-on-naming/media/confucius.jpg&#34;
+	width=&#34;1125&#34;
+	height=&#34;1076&#34;
+	srcset=&#34;//localhost:1313/p/confucius-on-naming/media/confucius_hu_b8fa3a1fdb011bb1.jpg 480w, //localhost:1313/p/confucius-on-naming/media/confucius_hu_36a7b39601e40826.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;104&#34;
+		data-flex-basis=&#34;250px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;There is a Chinese proverb which states:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The beginning of wisdom is to call things by their proper name.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This proverb is generally understood to be a summarization and paraphrase of an actual quote from the  &amp;ldquo;Rectification of Names&amp;rdquo; section of the &lt;em&gt;Analects of Confucius&lt;/em&gt;.  (See &lt;a class=&#34;external&#34; 
+   href=&#34;https://en.wikipedia.org/wiki/Rectification_of_names&#34; target=&#34;_blank&#34;
+   &gt;Wikipedia - Rectification of names&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The original quote is as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;If names be not correct, language is not in accordance with the truth of    things. If language be not in accordance with the truth of things, affairs    cannot be carried on to success.&lt;/strong&gt;
+&amp;ndash; Confucius&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Of course, the value of the quote lies not in that it carries the weight of the name of Confucius, but rather, in that by simply seeing it spelled out in words, one can immediately realize its self-evident truthfulness, and thus, perhaps, appreciate &lt;strong&gt;the magnitude of its importance.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P.S.&lt;/p&gt;
+&lt;p&gt;In the modern western world fashion of &amp;ldquo;here is some entertainment to go along with your philosophy&amp;rdquo;, I would point out that for us programmers, this quote should be understood as:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you don&amp;rsquo;t name your variables properly, your programs ain&amp;rsquo;t gonna work.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Another thing we can all take home is that:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Confucius was not fond of confusion.&lt;/p&gt;&lt;/blockquote&gt;</description>
+        </item>
+        <item>
+        <title>Tablecloth</title>
+        <link>//localhost:1313/p/tablecloth/</link>
+        <pubDate>Thu, 25 Jan 2018 18:47:57 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/tablecloth/</guid>
+        <description>&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/p/tablecloth/media/tablecloth.jpg&#34;
+	width=&#34;1410&#34;
+	height=&#34;1410&#34;
+	srcset=&#34;//localhost:1313/p/tablecloth/media/tablecloth_hu_ab9e56837434f991.jpg 480w, //localhost:1313/p/tablecloth/media/tablecloth_hu_ce1cf1d77ff06e54.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;
+&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: center&#34;&gt;Deerlux 100% Pure Linen Washable Tablecloth Solid Color from&lt;br&gt;        &lt;a class=&#34;external&#34; 
+   href=&#34;https://www.target.com/p/deerlux-100-pure-linen-washable-tablecloth-solid-color/-/A-83872558&#34; target=&#34;_blank&#34;
+   &gt;target.com&lt;/a&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;A short, high-tech, sci-fi, horror story written on the evening of January 25, 2018.&lt;/p&gt;
+&lt;p&gt;There was a guy who got in a quarrel with his girlfriend, and she kicked him out of her apartment without even throwing his clothes out the window for him. So there he was, naked on the street, not knowing what to do. Out of necessity, he grabbed a tablecloth from a restaurant, draped himself with it, and started to go home, trying to look as if everything was normal and under control.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a 
+   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;People saw him walking down the street draped with a tablecloth, and thought that he must be making some sort of fashion statement. Some of them decided to imitate him by also wearing tablecloth, and lo and behold, before you knew it there was a tablecloth-wearing movement that was gaining ground like wildfire.&lt;/p&gt;
+&lt;p&gt;Now, imagine that all this happened a long time ago, and you are now living in a society in which a large part of the population is regularly wearing tablecloth. This form of attire is considered perfectly normal, even by people who do not wear it. A multitude of explanations have been invented after the fact to try and explain why tablecloth is better than conventional clothing, as if wearing tablecloth was invented on purpose, to address specific needs. They will try to convince you to also wear tablecloth with truly disarming statements like the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tablecloth is easy: you don&amp;rsquo;t have to learn how to use complicated buttons and zippers and belts and buckles and what not; just hold it in place with your hand.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tablecloth is simple: it is one size fits all, one shape suits all, no need for designs, no need for cutting and sewing parts together, and the best thing of all? no seam lines!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tablecloth is convenient: when putting it on, you don&amp;rsquo;t have to make your hands fit through sleeves and your legs fit through trousers; you just throw the tablecloth over you, and you are good to go. Want to take it off? no need for complicated motions, just let it fall off of you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tablecloth is fashionable. Tablecloth is hip. Tablecloth is cool. Who can argue with that?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;And that, ladies and gentlemen, was my JavaScript analogy.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;P.S.&lt;/p&gt;
+&lt;p&gt;Tablecloth is a source of innovation. Every six months or so, someone comes up with a new pattern for printing on tablecloth, which invariably becomes an instant fashion hit, thus revolutionizing the way we dress.&lt;/p&gt;
+&lt;p&gt;Also see: &lt;a 
+   href=&#34;//localhost:1313/p/on-scripting-languages/&#34;
+   &gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

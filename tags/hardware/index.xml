@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Hardware on Michael&#39;s Blog</title>
+        <link>//localhost:1313/tags/hardware/</link>
+        <description>Recent content in Hardware on Michael&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
+        <lastBuildDate>Wed, 15 Oct 2025 16:37:03 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/hardware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>On Moore&#39;s Law</title>
+        <link>//localhost:1313/p/on-moores-law/</link>
+        <pubDate>Tue, 25 Feb 2025 07:25:13 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/on-moores-law/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-moores-law/images/moores-law.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1200&#34;
+	srcset=&#34;//localhost:1313/p/on-moores-law/images/moores-law_hu_c159cd8910a785dc.jpg 480w, //localhost:1313/p/on-moores-law/images/moores-law_hu_2a6ac2f363812ab6.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;384px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;It is not a law.&lt;/p&gt;
+&lt;p&gt;It never was a law.&lt;/p&gt;
+&lt;p&gt;An observation is all that it ever was, or a prediction, but not a law.&lt;/p&gt;
+&lt;p&gt;And surprise, it does not hold true anymore.&lt;/p&gt;
+&lt;p&gt;The prophecy was false, after all.&lt;/p&gt;
+&lt;p&gt;I am appalled by the entire industry&amp;rsquo;s willingness to accept it being called a law, when it was clearly failing to meet the criteria for a law.&lt;/p&gt;
+&lt;p&gt;I remember, when I heard the term for the first time, as a child, I felt there was something wrong about it; there was an objection inside of me wanting to get out, but I knew that no one around me cared to debate this.&lt;/p&gt;
+&lt;p&gt;So, I remained silent, and I accepted the term, but only provisionally, under the excuse of poetic license, as a statement patently employing absurdity in order to impress.&lt;/p&gt;
+&lt;p&gt;And now the time has come that it does not impress anymore.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover photo by &lt;a class=&#34;external&#34; 
+   href=&#34;https://unsplash.com/@maxence_pira?utm_content=creditCopyText&amp;amp;amp;utm_medium=referral&amp;amp;amp;utm_source=unsplash&#34; target=&#34;_blank&#34;
+   &gt;Maxence Pira&lt;/a&gt; on &lt;a class=&#34;external&#34; 
+   href=&#34;https://unsplash.com/photos/a-close-up-of-a-pattern-of-small-squares-7hR3FrFs4Q0?utm_content=creditCopyText&amp;amp;amp;utm_medium=referral&amp;amp;amp;utm_source=unsplash&#34; target=&#34;_blank&#34;
+   &gt;Unsplash&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Mouse Wheel Natural Scrolling in Windows</title>
+        <link>//localhost:1313/p/mouse-wheel-natural-scrolling-in-windows/</link>
+        <pubDate>Wed, 16 Mar 2022 09:55:12 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/mouse-wheel-natural-scrolling-in-windows/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/mouse-wheel-natural-scrolling-in-windows/media/mouse-and-wheel.jpg&#34;
+	width=&#34;640&#34;
+	height=&#34;225&#34;
+	srcset=&#34;//localhost:1313/p/mouse-wheel-natural-scrolling-in-windows/media/mouse-and-wheel_hu_e10eea3d8d8f8ad3.jpg 480w, //localhost:1313/p/mouse-wheel-natural-scrolling-in-windows/media/mouse-and-wheel_hu_c6a8fcd1fcd7c75f.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;284&#34;
+		data-flex-basis=&#34;682px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Some time ago and for about a year I used a Mac, which had natural scrolling by default. I decided to resist the urge to immediately configure it to work like Windows, and instead I made it a point to give natural scrolling a try for at least a while before making up my mind as to whether to keep it or lose it. While giving it a try, I was surprised to see that it was very easy for me to adjust to it, despite the fact that I have been using the unnatural Windows scrolling mode for nearly 30 years. (Ever since the mouse wheel became a thing.) I found that natural scrolling was indeed&amp;hellip; natural. So, I kept using it, and I became addicted to it. Ever since then, I always have to configure natural scrolling on any Windows machine that I get my hands on before I can start using that machine.&lt;/p&gt;
+&lt;p&gt;Windows is so poor that it does not offer any user interface through which a novice user can change the mouse wheel scrolling mode. To do that you have to edit the registry, and the setting you are going to be modifying is a machine setting, so you will be affecting the mouse wheel mode for all users, not just for yourself. This is unbelievably lame, but hey, that&amp;rsquo;s Windows, we are totally used to lame.&lt;/p&gt;
+&lt;p&gt;There exists a procedure for finding a specific mouse device and modifying the wheel mode of only that device, but it is a hassle, and it does not even guarantee that you will be modifying the settings for the right device, so we will be skipping that procedure and modifying the setting for all mouse devices that are currently connected or have ever been connected. If a new mouse is connected to the system, the procedure will need to be repeated.&lt;/p&gt;
+&lt;p&gt;Luckily, I do not have any contractual obligations to give warnings regarding the alleged dangers of modifying the registry; so, without further ado, here is what you need to do in order to configure natural scrolling under Windows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open up RegEdit, and navigate to the following key:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Search for values named FlipFlopWheel&lt;/li&gt;
+&lt;li&gt;For each value you find, if the data is 0, change the data to 1.&lt;/li&gt;
+&lt;li&gt;You are done when &lt;em&gt;Find Next&lt;/em&gt; (F3) starts yielding results that are outside of the above key. (i.e. when you reach Computer\HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase.)&lt;/li&gt;
+&lt;li&gt;Restart Windows.  (Logging out and back in will not work, because remember, this is a Windows-wide setting, not a per-user setting.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: Artwork by michael.gr based on original mouse-15887 by Arkthus from the Noun Project&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

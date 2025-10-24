@@ -7,44 +7,258 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
-        <lastBuildDate>Sat, 04 Oct 2025 16:41:54 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/code-review/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>My Latest Post</title>
-        <link>//localhost:1313/p/my-latest-post/</link>
-        <pubDate>Sat, 04 Oct 2025 13:33:45 +0200</pubDate>
+        <lastBuildDate>Wed, 15 Oct 2025 17:21:08 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/code-review/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Code review memes</title>
+        <link>//localhost:1313/p/code-review-memes/</link>
+        <pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate>
         
-        <guid>//localhost:1313/p/my-latest-post/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/my-latest-post/cover.jpg&#34;
-	width=&#34;718&#34;
-	height=&#34;536&#34;
-	srcset=&#34;//localhost:1313/p/my-latest-post/cover_hu_c6d930ad7be4430d.jpg 480w, //localhost:1313/p/my-latest-post/cover_hu_d46eebdea5d1ba17.jpg 1024w&#34;
+        <guid>//localhost:1313/p/code-review-memes/</guid>
+        <description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
+&lt;p&gt;I like to use this feature to post memes.&lt;/p&gt;
+&lt;p&gt;Here is my collection of the most useful code review memes:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/xi8cf.jpg&#34;
+	width=&#34;700&#34;
+	height=&#34;474&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/xi8cf_hu_83198d77afe5a180.jpg 480w, //localhost:1313/p/code-review-memes/images/xi8cf_hu_2d204830de650aa5.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;321px&#34;
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
 	
-&gt;&lt;/p&gt;
-&lt;p&gt;This is a summary of my latest post.&lt;/p&gt;
-&lt;h2 id=&#34;this-is-a-level-2-title&#34;&gt;This is a level-2 title
-&lt;/h2&gt;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;
-&lt;p&gt;This is an image in the post itself:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/my-latest-post/pan-and-psyche.jpg&#34;
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wgwzh.jpg&#34;
+	width=&#34;505&#34;
+	height=&#34;494&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wgwzh_hu_fe087c1ed5cc807e.jpg 480w, //localhost:1313/p/code-review-memes/images/9wgwzh_hu_a705937959023e8e.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;245px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/e040f790ce334dbf7c59b317639c8b17.jpg&#34;
+	width=&#34;640&#34;
+	height=&#34;640&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/e040f790ce334dbf7c59b317639c8b17_hu_1783e935ee205db7.jpg 480w, //localhost:1313/p/code-review-memes/images/e040f790ce334dbf7c59b317639c8b17_hu_df4aee738074b345.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25.jpg&#34;
+	width=&#34;1000&#34;
+	height=&#34;720&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25_hu_dea43428b171f8d4.jpg 480w, //localhost:1313/p/code-review-memes/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25_hu_2c65ab078ab6b103.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;333px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/Darth_Vader_Noooo_Banner.jpg&#34;
+	width=&#34;1200&#34;
+	height=&#34;675&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/Darth_Vader_Noooo_Banner_hu_9fd7d021300af31a.jpg 480w, //localhost:1313/p/code-review-memes/images/Darth_Vader_Noooo_Banner_hu_7a09a2f35f6835cb.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/oh-no-no-dd7f7d8f8e.jpg&#34;
+	width=&#34;600&#34;
+	height=&#34;389&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/oh-no-no-dd7f7d8f8e_hu_4ad46eea13d7002b.jpg 480w, //localhost:1313/p/code-review-memes/images/oh-no-no-dd7f7d8f8e_hu_930f6a09c16b02c7.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;370px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wguxc.jpg&#34;
+	width=&#34;645&#34;
+	height=&#34;387&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wguxc_hu_99fe9e66afdd147e.jpg 480w, //localhost:1313/p/code-review-memes/images/9wguxc_hu_338da9ef351055a2.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u.jpg&#34;
 	width=&#34;750&#34;
-	height=&#34;960&#34;
-	srcset=&#34;//localhost:1313/p/my-latest-post/pan-and-psyche_hu_6653a1a39bc8928c.jpg 480w, //localhost:1313/p/my-latest-post/pan-and-psyche_hu_f274512106beb4d2.jpg 1024w&#34;
+	height=&#34;1000&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u_hu_6854864273654432.jpg 480w, //localhost:1313/p/code-review-memes/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u_hu_9a2d85618981b68.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
-	
-		alt=&#34;Pan and Psyche&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;78&#34;
-		data-flex-basis=&#34;187px&#34;
+		data-flex-grow=&#34;75&#34;
+		data-flex-basis=&#34;180px&#34;
 	
-&gt;&lt;/p&gt;
-&lt;p&gt;This is some additional text.  Visit the &lt;a class=&#34;link&#34; href=&#34;https://gohugo.io&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wh26z.jpg&#34;
+	width=&#34;673&#34;
+	height=&#34;371&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wh26z_hu_f5aa6c4e2d8ed651.jpg 480w, //localhost:1313/p/code-review-memes/images/9wh26z_hu_b71a5884f01ef031.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;435px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wh0pu.jpg&#34;
+	width=&#34;500&#34;
+	height=&#34;515&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wh0pu_hu_bde49d5e3dabbf5b.jpg 480w, //localhost:1313/p/code-review-memes/images/9wh0pu_hu_3ed645cdef73e00a.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;233px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wgzsg.jpg&#34;
+	width=&#34;706&#34;
+	height=&#34;353&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wgzsg_hu_914972273403c1bf.jpg 480w, //localhost:1313/p/code-review-memes/images/9wgzsg_hu_941da15b4173e133.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;200&#34;
+		data-flex-basis=&#34;480px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/9wgyqm.jpg&#34;
+	width=&#34;668&#34;
+	height=&#34;374&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/9wgyqm_hu_6a2ad906ecaca1ab.jpg 480w, //localhost:1313/p/code-review-memes/images/9wgyqm_hu_c5a7fca663f3d881.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/1bq1b7.jpg&#34;
+	width=&#34;250&#34;
+	height=&#34;298&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/1bq1b7_hu_235471bf726297b4.jpg 480w, //localhost:1313/p/code-review-memes/images/1bq1b7_hu_1bba7ea8f3fe2199.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;83&#34;
+		data-flex-basis=&#34;201px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/0a1247a0c9dc93afebfa57647e1149a39093c540.jpeg&#34;
+	width=&#34;474&#34;
+	height=&#34;307&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/0a1247a0c9dc93afebfa57647e1149a39093c540_hu_6955ae97cd1b5b7a.jpeg 480w, //localhost:1313/p/code-review-memes/images/0a1247a0c9dc93afebfa57647e1149a39093c540_hu_b242d1a38374488.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;370px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/code-review-memes/images/you-shall-not-pass.jpg&#34;
+	width=&#34;1213&#34;
+	height=&#34;682&#34;
+	srcset=&#34;//localhost:1313/p/code-review-memes/images/you-shall-not-pass_hu_ec4ed8fe70f7e998.jpg 480w, //localhost:1313/p/code-review-memes/images/you-shall-not-pass_hu_8fa80164e133400b.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;
+&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>The best code review comment ever</title>
+        <link>//localhost:1313/p/the-best-code-review-comment-ever/</link>
+        <pubDate>Mon, 10 Feb 2025 11:30:14 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/the-best-code-review-comment-ever/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/the-best-code-review-comment-ever/images/code-review.jpg&#34;
+	width=&#34;1536&#34;
+	height=&#34;1024&#34;
+	srcset=&#34;//localhost:1313/p/the-best-code-review-comment-ever/images/code-review_hu_c2532b58c6236aa3.jpg 480w, //localhost:1313/p/the-best-code-review-comment-ever/images/code-review_hu_6bffad9881622c28.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I just wrote a code review comment that I feel particularly smug about.&lt;/p&gt;
+&lt;p&gt;The code I was reviewing:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  class PointClouds ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;My comment:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is a bad idea to have a type name in plural. If you need to signify plurality, use a plurality-signifying suffix in singular form, as in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PointCloudCollection&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PointCloudSet&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;PointCloudGroup&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;or go creative with &lt;code&gt;PointCloudFormation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;or take creativity to a whole new level with &lt;code&gt;PointCumulonimbus&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Anything but a plural type name.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image created by ChatGpt using the following prompt: &amp;ldquo;Please give me an illustration conveying the concept of &amp;ldquo;code review&amp;rdquo;. Make it in landscape format, with clean colors.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Anonymous 2025-02-16 23:28:05 UTC&lt;/p&gt;
+&lt;p&gt;I have never heard of Cumulonimbus before but that sounds cool, going to use this for all my classes from now on&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Anonymous 2025-02-16 23:31:24 UTC&lt;/p&gt;
+&lt;p&gt;(/s) This is a good one! Sound advice in multiple ways 😂&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description>
         </item>
         
     </channel>

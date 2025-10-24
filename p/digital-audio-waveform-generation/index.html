@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="For various projects of mine I need to be able to synthesize sound, so I decided to take a quick dabble in the realm of Digital Signal Processing. I mean, how hard could it be, right?\nAfter some fooling around with the Sampled Audio Subsystem of the Java Virtual Machine I was able to hear sinusoidal waveforms of various frequencies from my speakers, and I was starting to think that I am probably almost done, until I tried to play square waveforms. That&rsquo;s when I realized that I had barely scratched the surface. The square waveforms sounded pretty awful at any frequency, and especially at high octaves they sounded like random notes. Triangular waveforms, sawtooth waveforms, really anything except sinusoidal waveforms all suffered from the same problem.\nA bit of googling around soon revealed the name of the source of my troubles: aliasing.\nA naïvely sampled square wave,\nexhibiting a bad case of aliasing. Note how some of the peaks and valleys consist of 3 samples, while some consist of only 2 samples. ">
+<title>Digital Audio Waveform Generation</title>
+
+<link rel='canonical' href='//localhost:1313/p/digital-audio-waveform-generation/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Digital Audio Waveform Generation">
+<meta property='og:description' content="For various projects of mine I need to be able to synthesize sound, so I decided to take a quick dabble in the realm of Digital Signal Processing. I mean, how hard could it be, right?\nAfter some fooling around with the Sampled Audio Subsystem of the Java Virtual Machine I was able to hear sinusoidal waveforms of various frequencies from my speakers, and I was starting to think that I am probably almost done, until I tried to play square waveforms. That&rsquo;s when I realized that I had barely scratched the surface. The square waveforms sounded pretty awful at any frequency, and especially at high octaves they sounded like random notes. Triangular waveforms, sawtooth waveforms, really anything except sinusoidal waveforms all suffered from the same problem.\nA bit of googling around soon revealed the name of the source of my troubles: aliasing.\nA naïvely sampled square wave,\nexhibiting a bad case of aliasing. Note how some of the peaks and valleys consist of 3 samples, while some consist of only 2 samples. ">
+<meta property='og:url' content='//localhost:1313/p/digital-audio-waveform-generation/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2021-04-21T04:33:08&#43;00:00'/><meta property='article:modified_time' content='2025-10-14T18:13:51&#43;02:00'/>
+<meta name="twitter:title" content="Digital Audio Waveform Generation">
+<meta name="twitter:description" content="For various projects of mine I need to be able to synthesize sound, so I decided to take a quick dabble in the realm of Digital Signal Processing. I mean, how hard could it be, right?\nAfter some fooling around with the Sampled Audio Subsystem of the Java Virtual Machine I was able to hear sinusoidal waveforms of various frequencies from my speakers, and I was starting to think that I am probably almost done, until I tried to play square waveforms. That&rsquo;s when I realized that I had barely scratched the surface. The square waveforms sounded pretty awful at any frequency, and especially at high octaves they sounded like random notes. Triangular waveforms, sawtooth waveforms, really anything except sinusoidal waveforms all suffered from the same problem.\nA bit of googling around soon revealed the name of the source of my troubles: aliasing.\nA naïvely sampled square wave,\nexhibiting a bad case of aliasing. Note how some of the peaks and valleys consist of 3 samples, while some consist of only 2 samples. ">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/digital-audio-waveform-generation/">Digital Audio Waveform Generation</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2021-04-21 Wed 04:33:08 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    16 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>For various projects of mine I need to be able to synthesize sound, so I decided to take a quick dabble in the realm of Digital Signal Processing. I mean, how hard could it be, right?</p>
+<p>After some fooling around with the Sampled Audio Subsystem of the Java Virtual Machine I was able to hear sinusoidal waveforms of various frequencies from my speakers, and I was starting to think that I am probably almost done, until I tried to play square waveforms. That&rsquo;s when I realized that I had barely scratched the surface. The square waveforms sounded pretty awful at any frequency, and especially at high octaves they sounded like random notes. Triangular waveforms, sawtooth waveforms, really anything except sinusoidal waveforms all suffered from the same problem.</p>
+<p>A bit of googling around soon revealed the name of the source of my troubles: <em><strong>aliasing</strong></em>.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597251.jpg"
+	width="1591"
+	height="186"
+	srcset="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597251_hu_e9409f8cba53ef08.jpg 480w, /p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597251_hu_5bd2d4458b8dcdd3.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="855"
+		data-flex-basis="2052px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">A naïvely sampled square wave,<br>        exhibiting a bad case of aliasing. Note how some of the peaks and valleys consist of 3 samples, while some consist of only 2 samples.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>(Useful pre-reading:  <a 
+   href="/p/about-these-papers/"
+   >About these papers</a>)</p>
+<p>The Wikipedia article about aliasing (<a class="external" 
+   href="https://en.wikipedia.org/wiki/Aliasing" target="_blank"
+   >https://en.wikipedia.org/wiki/Aliasing</a>) has a lot to say, but in my own words, aliasing is a phenomenon that occurs when we try to digitally approximate an analog signal by naïvely generating samples that try to match as closely as possible the approximated signal. It occurs with graphics, when we try to approximate an ideal line using pixels of a certain discrete size, and it also occurs with sound, when we try to approximate an ideal waveform using samples at certain discrete intervals. Aliasing essentially means that our digital approximation will not only deviate from the ideal signal, but it will actually deviate by varying degrees along the signal, and these varying degrees of deviation will exhibit cycles of repetition. These repetitive variations in the deviation are, more often than not, perceptible by our senses, and rather unpleasant.</p>
+<p>When looking for a solution to the problem of aliasing in audio, the first port of call is of course the various Sound Engineering and Digital Signal Processing forums, like <a class="external" 
+   href="https://dsp.stackexchange.com/" target="_blank"
+   >dsp.stackexchange.com</a> or <a class="external" 
+   href="https://kvraudio.com/forum" target="_blank"
+   >kvraudio.com/forum</a>. Unfortunately, folks involved with audio tend to speak an exotic language which consists of the articles and prepositions of English, with nothing but utterly incomprehensible jargon in-between. They like to talk about harmonics, and band-limited waves, and band-pass filters, and Nyquist frequencies, and Lagrange interpolations, and DC compensations, and all sorts of mumbo jumbo that seems, at least to me, to bear absolutely no relation to buffers containing floating point sample values, which is all that my little world consists of. This makes it very hard for someone who is not a sound engineer to obtain useful information and apply it to solve problems.</p>
+<p>Furthermore, some of the jargon that DSP folks use refers to concepts that are computationally expensive to the point of being inapplicable to any practical problem. I found a certain solution here: <a class="external" 
+   href="https://www.nayuki.io/page/band-limited-square-waves" target="_blank"
+   >https://www.nayuki.io/page/band-limited-square-waves</a> which even includes source code in Java, and it does indeed sound awesome: all undesirable effects are gone, and each note sounds pure and at the right frequency. Unfortunately, this solution is an application of the well known and hopelessly theoretical approach to square waveform generation by means of adding up an infinite number of sine waves, so it is extremely computationally expensive and therefore completely useless for any real-world purpose.</p>
+<p>The fact that a square waveform can be generated using the infinite sine wave superposition method may, in some utterly roundabout way, have some application in something I guess, but as far as the real world is concerned, it is nothing more than a curiosity; an &ldquo;interesting to know&rdquo; factoid, about as useful as the factoid which says that the tomato is technically a fruit rather than a vegetable.</p>
+<p>Then I managed to find floating on the interwebz a very promising solution that goes by the bizarre name of &ldquo;PolyBLEP&rdquo;. It came with C++ code which I ported to Java. The C++ code can be found here: <a class="external" 
+   href="https://github.com/martinfinke/PolyBLEP" target="_blank"
+   >https://github.com/martinfinke/PolyBLEP</a> and discussion by its author, Martin Finke, is here: <a class="external" 
+   href="https://www.martin-finke.de/blog/articles/audio-plugins-018-polyblep-oscillator" target="_blank"
+   >http://www.martin-finke.de/blog/articles/audio-plugins-018-polyblep-oscillator</a> Later I also came across a library called &ldquo;DaisySP&rdquo;, which contains more or less the same code.</p>
+<p>Even though a square waveform generated using Polyblep looks anything but square, it sounds exactly right, and it does not suffer from aliasing. Also, Polyblep is not too expensive computationally.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597252.jpg"
+	width="1591"
+	height="188"
+	srcset="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597252_hu_a5090157ecf9a5e4.jpg 480w, /p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597252_hu_13e24a231b3433f4.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="846"
+		data-flex-basis="2031px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">A square waveform generated using PolyBLEP.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Unfortunately, I have a few problems with Polyblep:</p>
+<ul>
+<li>The math is just voodoo magic to me; I do not have the slightest clue as to how it works.</li>
+<li>The code is specifically written to generate a number of predefined waveforms; it will not work with just any waveform.</li>
+<li>My inability to understand the math means that I cannot adapt the algorithm to work with any waveform.</li>
+</ul>
+<p>So, I decided to ask for help.</p>
+<p>I created a post on stackoverflow: &ldquo;Efficient generation of sampled waveforms without aliasing artifacts&rdquo; <a class="external" 
+   href="https://stackoverflow.com/q/66943566/773113" target="_blank"
+   >https://stackoverflow.com/q/66943566/773113</a> and a post on the KVR forum: &ldquo;Call for help regarding anti-aliasing&rdquo; <a class="external" 
+   href="https://www.kvraudio.com/forum/viewtopic.php?p=8370848" target="_blank"
+   >https://www.kvraudio.com/forum/viewtopic.php?p=8370848</a></p>
+<p>A number of kind people posted answers, and I did learn some useful things from these answers; unfortunately, it was not enough to help me solve my problem, and so far, nobody has volunteered to open up a conversation with me.</p>
+<p>Also, some of the people who tried to enlighten me, although undoubtedly well intended, and although admittedly quite lucid in their explanations, seem to suffer from delusions, or misconceptions at best. For example, I heard it being said that a good digitization of a square waveform that is free from aliasing is supposed to have wiggles right before and right after each cliff. These are the wiggles that are characteristically produced by their favorite preposterous method for square waveform generation, the infinite sine superposition method, which as I have already explained, is useless. I came across people who are under the impression that this is what Polyblep does. Well, sorry, but it does not.</p>
+<p>I may not fully understand how Polyblep works, but I have seen its results on a wave editor, and there most definitely exist no such wiggles. And there could be no such wiggles, because Polyblep only operates on one, maximum two samples before and after each cliff, regardless of frequency and sampling rate, and you need several samples in order to produce wiggles. To put it in other words, generating such wiggles would necessarily be computationally expensive, and Polyblep does not do anything that is anywhere near expensive enough. And yet, Polyblep sounds quite good without any such wiggles, which proves that the wiggles are unnecessary.</p>
+<p>It does not take a genius to figure that out, because these wiggles are tiny compared to one entire cycle of a wave, which means that they represent frequencies that are far beyond the audible range, which in turn means that they could not possibly have any effect on anything whatsoever. These wiggles are just a relic from the analog times, and yet people keep superstitiously referring to them at this digital day and age.</p>
+<p>So, I decided to try and tackle the problem all by myself, reasoning that it is just buffers containing floating point sample values, so the solution should come from the realm of algebra and geometry, without the need for lofty DSP concepts, nor deep math.</p>
+<p>First of all, let us state the goal:</p>
+<p>I want to be able to describe any waveform using what I like to call the &ldquo;Unit Wave&rdquo;.  This is a series of connected straight line segments in two dimensions, where Y corresponds to amplitude and X corresponds to phase. Y varies between -1.0 and +1.0, while X varies from 0.0 to 1.0, and is of course non-decreasing. (In the future I might upgrade the concept from straight line segments to polynomial curve segments, but for now, straight line segments will do.)</p>
+<p>A Unit Wave describes a single period of a certain waveform, irrespective of frequency or sampling rate. The idea is that for any waveform imaginable, one can construct a Unit Wave describing it or approximating it, and by repetitively sampling that Unit Wave, one should be able to generate a continuous stream of that waveform at any desired frequency and at any desired sampling rate.  So, the Unit Wave is supposed to be the ultimate solution to the problem of synthetic waveform generation.</p>
+<p>The trick is that the generated waveform must somehow come out anti-aliased.</p>
+<p>First I had an idea which I decided to call &ldquo;Slicing&rdquo;. (See Appendix A: The &ldquo;Slicing&rdquo; algorithm.) I had high hopes that slicing would provide a solution to the problem, but it did not. The resulting waveform sounded much better than the naïvely generated waveform, but it was not nearly as good as Polyblep: it still suffered from distinctly audible aliasing artifacts.</p>
+<p>Then, I had another idea, which I called &ldquo;Smoothing&rdquo;. (See Appendix B: The &ldquo;Smoothing&rdquo; algorithm.) The algorithm is not very well defined yet, and there are various features that can be found in waveforms that I am not sure how to handle, but it is pretty straightforward in the case of the square waveform, so I decided that for the time being I would experiment with only square waves. Again I had high hopes that Smoothing would provide a solution, and again I was let down, in exactly the same way: better than naïve, not nearly as good as Polyblep.</p>
+<p>When I loaded all four waveforms (Naïve, Polyblep, Slicing, Smoothing) into a multitrack audio editor and saw them one below the other, I noticed that Slicing looked identical to Polyblep about half of the time, while the other half of the time it looked more like the naïve waveform, while Smoothing exhibited the same pattern: half the time right, half the time wrong. Then I made a startling discovery: when Slicing was right, Smoothing was wrong; and when Slicing was wrong, Smoothing was right.</p>
+<p>Of course, this immediately prompted me to try both Slicing and Smoothing cumulatively applied, and voila, the result was an excellent waveform, virtually indistinguishable from Polyblep both to the eye, and to the ear, and to the spectrum analyzer.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>PolyBLEP</th>
+          <th></th>
+          <th style="text-align: center"><img src="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597253.jpg"
+	width="1591"
+	height="188"
+	srcset="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597253_hu_a5090157ecf9a5e4.jpg 480w, /p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597253_hu_13e24a231b3433f4.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="846"
+		data-flex-basis="2031px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Slicing + Smoothing</td>
+          <td></td>
+          <td style="text-align: center"><img src="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597254.jpg"
+	width="1591"
+	height="185"
+	srcset="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597254_hu_db490cbd1e8685e5.jpg 480w, /p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597254_hu_9d8aa83231d6697.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="860"
+		data-flex-basis="2064px"
+	
+>
+</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>This alone should be causing some ruffling of feathers in the DSP community: in some corner of the world, some programmer with practically zero knowledge of DSP and calculus-level mathematics managed to produce results virtually identical to Polyblep using algorithms that he just empirically came up with, utilizing nothing but algebra and geometry, bypassing all their lofty theory and their indecipherable jargon.</p>
+<p>Also, note that Polyblep is criticized as not being 100% accurate, so the difference between my results and Polyblep that can (barely) be observed using a spectrum analyzer might not necessarily be due to some inaccuracy of my algorithms; it may be due to some inaccuracy of Polyblep.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597255.jpg"
+	width="540"
+	height="456"
+	srcset="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597255_hu_9c53910f6f8d8f06.jpg 480w, /p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597255_hu_1e275e49507017a8.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="118"
+		data-flex-basis="284px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The naïvely sampled square waveform</td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597256.jpg"
+	width="540"
+	height="456"
+	srcset="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597256_hu_7f3a6eeed873c1d5.jpg 480w, /p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597256_hu_23b9bb894bd8c71e.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="118"
+		data-flex-basis="284px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The same square waveform generated using PolyBLEP</td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597257.jpg"
+	width="540"
+	height="456"
+	srcset="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597257_hu_af802ba6266ccb95.jpg 480w, /p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597257_hu_3a3e09a7cb57f25e.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="118"
+		data-flex-basis="284px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The same square waveform generated using Slicing + Smoothing.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>There is practically no visible difference between Polyblep and Slicing + Smoothing; the two plots look identical to such a degree that it is as if someone made a mistake and pasted the same image twice.</p>
+<p>The (very subtle) differences become visible with the help of an animated gif:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597258.jpg"
+	width="540"
+	height="456"
+	srcset="/p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597258_hu_698c7867c4e26e81.jpg 480w, /p/digital-audio-waveform-generation/media/tag-blogger.com,1999-blog-3494795920779884230.post-83080641899831597258_hu_6fc02e86b11196d8.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="118"
+		data-flex-basis="284px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Animated gif showing the difference<br>between PolyBLEP and Slicing+Smoothing</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Unfortunately, I am still faced with several problems:</p>
+<ul>
+<li>I have some idea as to why slicing produces good results only half of the time, but I am not sure yet how to go about fixing this.</li>
+<li>Smoothing is still not well defined; specifically, the only kind of waveform on which it will currently produce the intended results is the square waveform.</li>
+<li>I do not know why, even on the square waveform, smoothing produces good results only half of the time.</li>
+<li>I do not know why the half of the time that slicing produces good results is the exact opposite of the half of the time that smoothing produces good results. (It is just a fortuitous happenstance that this is so, because it allows me to obtain very good overall results by cumulatively applying both methods.)</li>
+<li>As a result of the above, I am not sure whether I should put further work into one of the two approaches, to make it work by itself, or whether I should continue in the direction of cumulatively applying both approaches. (Which still necessarily involves improving the as of yet incomplete smoothing method.)</li>
+<li>Adding to my dilemma, I am not sure whether I should continue at all in any of the above directions or whether I should instead try to construct a general-purpose implementation of Polyblep which works with any waveform.</li>
+</ul>
+<p>These are my notes so far.</p>
+<p>This document will be updated with developments.</p>
+<hr>
+<p>Appendix A: The &ldquo;Slicing&rdquo; algorithm</p>
+<p>Generating the samples that describe a waveform is a lot like sampling an analog signal using an Analog-To-Digital converter. The input to the converter is line segments that describe a wave, and the output is sample values. Of course we are talking about software here, so strictly speaking, there is nothing analog per se, but the input can be thought of as being analog in the sense that: a) we are using floating point values, and b) a line segment consists of an infinite number of points along a slope.</p>
+<p>The naïve approach to digitizing an analog signal is to generate samples by reading the signal at discrete, infinitesimally narrow points in time. However, if you do this, you are guaranteed to experience aliasing.  So instead, let us try something different: Instead of considering infinitesimally narrow points along the wave, let us consider entire slices of the wave, each slice as broad as one sampling period.</p>
+<p>In other words, for each sample, let us calculate the surface area of a shape defined as follows:</p>
+<ul>
+<li>Along the x axis, it extends from the current sample time (x) until the next sample time (x+dx).</li>
+<li>Along the y axis, it extends from y=0 to the line given by the wave function f(x).</li>
+</ul>
+<p>Let us then convert that measurement of area to a linear sample value by applying some kind of normalization.</p>
+<p>Since the range of our sample values is from -1 to +1, this will involve an exotic notion of negative area, but that should not matter, it should all work out in the end.</p>
+<p>It stands to reason that the normalization step should consist of dividing the computed wave slice surface area by the maximum slice surface area, which is the surface area of the rectangle with a height of 1 and width equal to dx. So, normalization is essentially just dividing by dx, or multiplying by 1/dx for those of us who are extremely performance-oriented.</p>
+<p>Let us first try this approach with a sine wave, as a proof of concept. It has been a very long time since I was at the University, but luckily I still remember some of the basic principles of Calculus, so I know that the surface area between the curve described by the function y=f(x) and the line at y=0 is the integral of that function. The Calculus book says that the integral of sin(x) from x=x1 to x=x2 is cos(x1) - cos(x2).  Therefore, to produce a sine wave using the wave slice approach, we need the following computation:</p>
+<p>y = cos( 2π x1 ) - cos( 2π x2 ) / ((1/samplesPerWave) * 2π)</p>
+<p>So I tried this, and the resulting waveform is exactly the same as the one produced by y=sin(x), so we are on a good path.</p>
+<p>When dealing with line segments, things are even more simple: at each step, the surface whose area we want to compute is the trapezoid defined by one straight horizontal line at y=0, two parallel straight vertical lines at x and x+dx, and one straight slanted line from f(x) to f(x+dx).  So, we do not even have to compute the area and then divide by dx, we can just take the midpoint of the slanted segment, which is ( f(x) + f(x+dx) ) / 2.</p>
+<p>As I have already explained, the slicing approach is better than the naïve approach but not as good as Polyblep. The reason seems to be that it tends to reproduce many of the points of the original analog signal a bit too faithfully, and as I have already explained, faithful reproduction of the original signal is naïve. Specifically, when sampling a square wave at a rate of dx, near a cliff going up, it may happen that a slice will be considered right before and just barely including the cliff, and the next slice will be right after the cliff. Since the cliff will be at exactly the end of the first slice, it will have an infinitesimally small contribution to the computed surface area, so the first slice will measure nothing but flat valley before the cliff at -1.0, while the next slice will measure nothing but flat top after the cliff at +1.0, thereby reproducing the absolute hardness of the cliff, which is something that never happens with Polyblep. I am not sure yet how to go about mitigating this.</p>
+<hr>
+<p>Appendix B: The &ldquo;Smoothing&rdquo; algorithm</p>
+<p>It appears to me that aliasing occurs because the process of sampling at discrete time intervals is bound to sometimes catch, and sometimes miss, various features of a waveform.  Take, for example, the peak of a triangular waveform. If a sample happens to be taken exactly at the peak, then no information will be lost. However, far more often, a sample will be taken before the peak, and the next sample will be taken after the peak. Furthermore, the two samples will almost never be equidistant from the peak; one of the samples will always be closer to the peak than the other, their relative distances from the peak will vary, and the variation will exhibit some periodicity, dependent upon the sampling rate and the frequency. This is bound to cause aliasing.</p>
+<p>So, I am putting forth the hypothesis that if every feature of the waveform was at least as broad as one sampling period, then every feature of the waveform would be sampled at least once during each cycle of the waveform, and so there might be no aliasing.</p>
+<p>Therefore, the question is: can we somehow pre-process a Unit Wave for a given sampling rate to ensure that each of its features is at least as broad as the sampling period?</p>
+<p>Waveforms consisting of straight line segments can have the following kinds of features:</p>
+<ol>
+<li>A non-vertical line segment followed by another non-vertical line segment of a different slope but same slope sign. (For example, two successive segments on the same upwards or downwards slope of a sine wave that is being approximated using line segments.)</li>
+<li>A non-vertical line segment followed by another non-vertical line segment with a slope of the opposite sign. (For example, the segment right before the peak of a triangular wave, and the segment right after the peak.)</li>
+<li>A non-vertical line segment followed by a vertical line segment. (For example, a slope followed by a cliff on a sawtooth wave.)</li>
+<li>A vertical line segment followed by a non-vertical line segment. (For example, a cliff followed by a valley on a square wave.)</li>
+</ol>
+<p>It is yet unclear to me exactly how to go about pre-processing these cases, but at least I know what to do in the case of a horizontal line segment followed by a vertical line segment followed by another horizontal line segment, which is the one and only feature found on the square waveform.</p>
+<p>The idea is to displace the top of the vertical line segment horizontally in one direction by dx/2, and the bottom of the vertical line in the other direction by another dx/2.</p>
+<p>This will turn the vertical line segment into a sloped line segment whose projection on the x axis has a length of dx, and will ensure that some point along this segment will always be sampled on each cycle of the waveform.</p>
+<p>Unfortunately, this approach suffers from various problems. Even though some strategy could be devised as to how to handle each type of feature that can be found along a waveform, it is entirely unclear to me what should happen in cases where shifting a point to the left or to the right makes it bump a previous or next point belonging to the preceding or succeeding feature of the waveform.</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-14 Tue 18:13:51 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

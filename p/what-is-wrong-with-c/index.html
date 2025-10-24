@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.\nI will be amending and revising these texts over time.\n">
+<title>What is wrong with C#</title>
+
+<link rel='canonical' href='//localhost:1313/p/what-is-wrong-with-c/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="What is wrong with C#">
+<meta property='og:description' content=" This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.\nI will be amending and revising these texts over time.\n">
+<meta property='og:url' content='//localhost:1313/p/what-is-wrong-with-c/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='programming-languages' /><meta property='article:published_time' content='2021-10-04T15:25:56&#43;00:00'/><meta property='article:modified_time' content='2025-10-22T22:48:11&#43;02:00'/>
+<meta name="twitter:title" content="What is wrong with C#">
+<meta name="twitter:description" content=" This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.\nI will be amending and revising these texts over time.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/what-is-wrong-with-c/">What is wrong with C#</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2021-10-04 Mon 15:25:56 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/what-is-wrong-with-c/media/csharp.svg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+</p>
+<p>This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with.  The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.</p>
+<p>I will be amending and revising these texts over time.</p>
+<p>(Useful pre-reading: <a 
+   href="/p/about-these-papers/"
+   >About these papers</a>)</p>
+<h2 id="what-is-wrong-with-c">What is wrong with C#:
+</h2><ul>
+<li>The garbage collector.</li>
+<li>Curly braces.</li>
+<li>Member initializers execute in a static context.
+<ul>
+<li>This is far worse than Java&rsquo;s deficiency of member initializers not having access to constructor parameters; this renders the language almost unusable.</li>
+</ul>
+</li>
+<li>Delegates are superfluous and problematic.
+<ul>
+<li>They could have been implemented as single-method interfaces, as in Java, thus keeping the language simpler.</li>
+<li>The ability to have an anonymous method implementing a delegate is far less useful than the ability to have an anonymous class implementing an interface.</li>
+</ul>
+</li>
+<li>The built-in collection model is lame:
+<ul>
+<li>Arrays implement the <code>IList</code> interface, which might initially seem like a great idea, until you realize that <code>IList</code> has <code>Add()</code>, <code>Insert()</code> and <code>Remove()</code> methods, which of course cannot be honored by an array.</li>
+<li>The <code>IReadOnlyList</code> interface was added as an afterthought, and it is not a super-interface of <code>IList</code>.</li>
+<li>The <code>IReadOnlyList</code> interface does not have an <code>IndexOf()</code> method. This poses problems that cannot be solved by adding an extension method, because the object implementing <code>IReadOnlyList</code> may have its own <code>IEqualityComparator</code>, which the extension method will be blissfully unaware of.</li>
+<li>Enumerators still have to implement the legacy, non-generic <code>GetEnumerator()</code> method.</li>
+<li>Fluent style (Linq) is limited to working almost exclusively with <code>IEnumerable&amp;lt;&amp;gt;</code>.</li>
+</ul>
+</li>
+<li>Built-in events are problematic. They are unsuitable as a language feature and should have been left for runtime libraries to implement.
+<ul>
+<li>If one event handler throws, the rest will not be invoked.</li>
+<li>If one event handler causes another event handler to be removed, the removed event handler will still be invoked.</li>
+<li>An event is a special kind of thing which cannot be passed to a function, not even by reference. (As all properties are.) As a result, you have to always hand-code the addition of a handler to an event, and to also separately hand-code the corresponding removal. It is absolutely impossible to pass an event to a function, along with a handler and a boolean flag specifying whether to add or remove the handler. This makes it impossible to gather all symmetric initialization and cleanup operations in one place, which in turn leads to buggy software.</li>
+</ul>
+</li>
+<li>Extension methods
+<ul>
+<li>They are a hack.</li>
+<li>They are one of the most calamitously misused features of the language.</li>
+<li>Java has shown how to do this right with default interface methods.</li>
+<li>Allegedly, default interface methods will also come to C#, but it is not like extension methods will ever be removed from the language to undo the harm they have caused.</li>
+</ul>
+</li>
+<li>Parameters declared with <code>ref</code> or <code>out</code>
+<ul>
+<li>Prior to the introduction of tuples, <code>ref</code> and <code>out</code> parameters could sometimes come in handy, but only in very rare cases.</li>
+<li>At the same time, they are one of the most misused features of the language.</li>
+<li>Now that tuples are part of the language syntax, parameters by reference are nothing but a liability.</li>
+</ul>
+</li>
+<li>Names of variables poison enclosing scopes.
+<ul>
+<li>If you declare a local variable inside the curly braces of a <code>for</code> loop, you are not allowed to declare a variable with the same name after the closing brace of the <code>for</code> loop. Duh?</li>
+</ul>
+</li>
+<li>No function-local classes.
+<ul>
+<li>You can have function-local functions, which is awesome, but you cannot have function-local classes. Duh?</li>
+</ul>
+</li>
+<li>The language runtime is shared with other languages like Visual Basic, and some decisions have been made there in favor of Visual Basic.
+<ul>
+<li>For example, when you dereference a null pointer you do not get a &ldquo;Null Pointer Exception&rdquo;, you get an &ldquo;Object Reference Is Not Set To An Instance Of An Object&rdquo; exception.  (Presumably because the words &ldquo;Null&rdquo; and &ldquo;Pointer&rdquo; would cause epileptic seizures to Visual Basic programmers.)</li>
+</ul>
+</li>
+<li>No compiler-enforced function purity.
+<ul>
+<li>You cannot somehow declare that a method must be pure and have the compiler enforce that the method, and any overrides of that method, are pure.</li>
+</ul>
+</li>
+<li>No compiler-enforced immutability.
+<ul>
+<li>You cannot somehow declare and advertise that a class is immutable and have the compiler enforce that the class, and its descendants, are immutable.</li>
+</ul>
+</li>
+<li>Certain things about the runtime are completely bonkers. For example:
+<ul>
+<li>The notion of a &ldquo;current directory&rdquo;, which is a piece of mutable global state that is shared across all threads, and even across all AppDomains within a process.  (So much for AppDomain isolation!)</li>
+<li>The behavior of the <code>ThreadAbortException</code>.</li>
+<li>What happens to the process exit code if the dotNet process exits due to an unhandled exception. (See <a class="external" 
+   href="https://stackoverflow.com/q/60729865/773113" target="_blank"
+   >https://stackoverflow.com/q/60729865/773113</a>)</li>
+<li>Collecting a stack trace is a ridiculously slow operation.</li>
+<li>Throwing an exception is a <em>stupendously</em> slow operation.</li>
+<li>In order to send a file to the recycle bin, everyone suggests that you should include a module called &ldquo;Microsoft.VisualBasic&rdquo;. Duh?
+<ul>
+<li>Adding injury to insult, if you try this, you will discover that it is broken, it just does not work.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>No namespace-private visibility
+<ul>
+<li>C# has always provided assembly-private visibility, which is much more useful than Java&rsquo;s package-private visibility, however at some point Java somewhat fixed that by introducing modules, and the ability to specify which packages are exposed by a module. Now C# lags behind Java in that it does not support namespace-private visibility, which means that everything is visible to everything within an assembly, which can easily lead to chaos if the assembly is large. There is a way to somewhat mitigate this by using partial classes as if they were namespaces, but it is hacky.</li>
+</ul>
+</li>
+<li>Interface method implementations are not tied to the interfaces they implement.
+<ul>
+<li>When you declare a class to implement a certain interface, and then you add a method to that class which implements a certain method of that interface, there is absolutely nothing in the declaration of that method to indicate or even hint that it is implementing a method of that interface. Consequently, if you remove the interface from the list of interfaces implemented by the class, the compiler cannot warn you that methods within this class that were implementing methods of that interface are not meaningful anymore. You can try to overcome this problem with explicit interface method implementation, but it is optional and therefore its use cannot be enforced, plus if you use it then you are stuck with other problems, see below.</li>
+</ul>
+</li>
+<li>Explicit interface method implementations are not directly accessible.
+<ul>
+<li>If you declare a method within a class that explicitly implements a method of an interface implemented by the class, then you cannot invoke that method from within that class, unless you first cast <code>this</code> to that interface. What the actual fuck?</li>
+</ul>
+</li>
+<li>The <code>switch</code> statement requires a <code>break</code> at the end.
+<ul>
+<li>If you omit the <code>break</code> at the end, the compiler complains that <code>Control cannot fall out of switch from final case label</code>.  Huh?</li>
+</ul>
+</li>
+</ul>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+            <a href="/tags/programming-languages/">Programming-Languages</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-22 Wed 22:48:11 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/on-messages-and-message-passing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">On messages and message-passing</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/intertwine/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Intertwine</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/on-visual-programming-languages/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">On Visual Programming Languages</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/what-is-wrong-with-scala/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is wrong with Scala</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/what-is-wrong-with-java/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is wrong with Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

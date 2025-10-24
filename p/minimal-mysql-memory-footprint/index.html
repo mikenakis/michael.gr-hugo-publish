@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" As a developer, I have configured MySQL to launch automatically at startup, because I will probably be using it, if this is a workday, and if my computer is starting up during work hours, and if my work these days involves databases. That&rsquo;s a lot of ifs. Quite often, I launch it but do not use it, so, it would be nice if it is as unobtrusive as possible. Unfortunately, it is obtrusive in at least one way: it occupies a large amount of memory, which is unreasonably large for a piece of software that is just sitting there doing nothing.\nIn this post I show how to configure it to occupy as little memory as possible.\nThe following image shows the mind-boggling amount of memory occupied by MySQL 5.6 server on Windows 7 64-bit.\n(This is despite the fact that during installation I explicitly specified that this MySQL server is going to be used for development, not for production.)\nA quick search on the web shows that this preposterous amount of memory can be reduced to something less preposterous by editing my.ini (usually found in some place like ProgramData\\MySQL\\MySQL Server 5.6) and replacing the following line:\ntable_definition_cache=1400\nwith this line:\ntable_definition_cache=400\nUnfortunately, even though the savings are huge, the memory footprint of mysql is still nothing short of gargantuan:\n">
+<title>Minimal MySQL Memory Footprint</title>
+
+<link rel='canonical' href='//localhost:1313/p/minimal-mysql-memory-footprint/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Minimal MySQL Memory Footprint">
+<meta property='og:description' content=" As a developer, I have configured MySQL to launch automatically at startup, because I will probably be using it, if this is a workday, and if my computer is starting up during work hours, and if my work these days involves databases. That&rsquo;s a lot of ifs. Quite often, I launch it but do not use it, so, it would be nice if it is as unobtrusive as possible. Unfortunately, it is obtrusive in at least one way: it occupies a large amount of memory, which is unreasonably large for a piece of software that is just sitting there doing nothing.\nIn this post I show how to configure it to occupy as little memory as possible.\nThe following image shows the mind-boggling amount of memory occupied by MySQL 5.6 server on Windows 7 64-bit.\n(This is despite the fact that during installation I explicitly specified that this MySQL server is going to be used for development, not for production.)\nA quick search on the web shows that this preposterous amount of memory can be reduced to something less preposterous by editing my.ini (usually found in some place like ProgramData\\MySQL\\MySQL Server 5.6) and replacing the following line:\ntable_definition_cache=1400\nwith this line:\ntable_definition_cache=400\nUnfortunately, even though the savings are huge, the memory footprint of mysql is still nothing short of gargantuan:\n">
+<meta property='og:url' content='//localhost:1313/p/minimal-mysql-memory-footprint/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2015-03-03T22:10:45&#43;00:00'/><meta property='article:modified_time' content='2025-10-18T00:12:34&#43;02:00'/>
+<meta name="twitter:title" content="Minimal MySQL Memory Footprint">
+<meta name="twitter:description" content=" As a developer, I have configured MySQL to launch automatically at startup, because I will probably be using it, if this is a workday, and if my computer is starting up during work hours, and if my work these days involves databases. That&rsquo;s a lot of ifs. Quite often, I launch it but do not use it, so, it would be nice if it is as unobtrusive as possible. Unfortunately, it is obtrusive in at least one way: it occupies a large amount of memory, which is unreasonably large for a piece of software that is just sitting there doing nothing.\nIn this post I show how to configure it to occupy as little memory as possible.\nThe following image shows the mind-boggling amount of memory occupied by MySQL 5.6 server on Windows 7 64-bit.\n(This is despite the fact that during installation I explicitly specified that this MySQL server is going to be used for development, not for production.)\nA quick search on the web shows that this preposterous amount of memory can be reduced to something less preposterous by editing my.ini (usually found in some place like ProgramData\\MySQL\\MySQL Server 5.6) and replacing the following line:\ntable_definition_cache=1400\nwith this line:\ntable_definition_cache=400\nUnfortunately, even though the savings are huge, the memory footprint of mysql is still nothing short of gargantuan:\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/minimal-mysql-memory-footprint/">Minimal MySQL Memory Footprint</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2015-03-03 Tue 22:10:45 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/minimal-mysql-memory-footprint/media/mysql-logo.svg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+
+As a developer, I have configured MySQL to launch automatically at startup, because I will probably be using it, if this is a workday, and if my computer is starting up during work hours, and if my work these days involves databases. That&rsquo;s a lot of ifs. Quite often, I launch it but do not use it, so, it would be nice if it is as unobtrusive as possible. Unfortunately, it is obtrusive in at least one way: it occupies a large amount of memory, which is unreasonably large for a piece of software that is just sitting there doing nothing.</p>
+<p>In this post I show how to configure it to occupy as little memory as possible.</p>
+<!-- more -->
+<p>The following image shows the mind-boggling amount of memory occupied by MySQL 5.6 server on Windows 7 64-bit.</p>
+<p><img src="/p/minimal-mysql-memory-footprint/media/mysql-630MB.png"
+	width="449"
+	height="73"
+	srcset="/p/minimal-mysql-memory-footprint/media/mysql-630MB_hu_e607934093f0f9b4.png 480w, /p/minimal-mysql-memory-footprint/media/mysql-630MB_hu_180fa4de177b19b3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="615"
+		data-flex-basis="1476px"
+	
+>
+</p>
+<p>(This is despite the fact that during installation I explicitly specified that this MySQL server is going to be used for development, not for production.)</p>
+<p>A quick search on the web shows that this preposterous amount of memory can be reduced to something less preposterous by editing my.ini (usually found in some place like ProgramData\MySQL\MySQL Server 5.6) and replacing the following line:</p>
+<blockquote>
+<p><code>table_definition_cache=1400</code></p></blockquote>
+<p>with this line:</p>
+<blockquote>
+<p><code>table_definition_cache=400</code></p></blockquote>
+<p>Unfortunately, even though the savings are huge, the memory footprint of mysql is still nothing short of gargantuan:</p>
+<p><img src="/p/minimal-mysql-memory-footprint/media/mysql-275MB.png"
+	width="449"
+	height="73"
+	srcset="/p/minimal-mysql-memory-footprint/media/mysql-275MB_hu_e430b2a883d1c8c9.png 480w, /p/minimal-mysql-memory-footprint/media/mysql-275MB_hu_dfde18a1d0ed5d3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="615"
+		data-flex-basis="1476px"
+	
+>
+</p>
+<p>So, I tried to trim it down as much as possible by doing some more reading up on the subject and tweaking with more settings of my.ini, and this is what I finally managed to get it down to:</p>
+<p><img src="/p/minimal-mysql-memory-footprint/media/mysql-20MB.png"
+	width="449"
+	height="73"
+	srcset="/p/minimal-mysql-memory-footprint/media/mysql-20MB_hu_86dcfc210f71ad43.png 480w, /p/minimal-mysql-memory-footprint/media/mysql-20MB_hu_4e5b34c80a011352.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="615"
+		data-flex-basis="1476px"
+	
+>
+</p>
+<p>So, the &ldquo;private bytes&rdquo; went from 630MB down to 20MB and the &ldquo;working set&rdquo; went from 450MB down to 21MB.  Not bad, eh?</p>
+<p>The server is functional, too, meaning that I ran the tests of a medium-sized project, which do heavily hit the database, and they all completed as easily as they used to with the bloated out-of-the-box server.</p>
+<p>This is the my.ini file that achieves these savings:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1"># MySQL Server Instance Configuration File</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">client</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">no</span><span class="o">-</span><span class="n">beep</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># pipe</span>
+</span></span><span class="line"><span class="cl"><span class="n">socket</span><span class="o">=</span><span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">port</span><span class="o">=</span><span class="mi">3306</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">mysql</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">default</span><span class="o">-</span><span class="n">character</span><span class="o">-</span><span class="n">set</span><span class="o">=</span><span class="n">utf8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># server_type=3</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">mysqld</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># skip-networking</span>
+</span></span><span class="line"><span class="cl"><span class="n">enable</span><span class="o">-</span><span class="n">named</span><span class="o">-</span><span class="n">pipe</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># shared-memory</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># shared-memory-base-name=MYSQL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">socket</span><span class="o">=</span><span class="n">MYSQL</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">port</span><span class="o">=</span><span class="mi">3306</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># basedir=&#34;C:/Program Files/MySQL/MySQL Server 5.6/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">datadir</span><span class="o">=</span><span class="n">C</span><span class="p">:</span><span class="o">/</span><span class="n">ProgramData</span><span class="o">/</span><span class="n">MySQL</span><span class="o">/</span><span class="n">MySQL</span> <span class="n">Server</span> <span class="mf">5.6</span><span class="o">/</span><span class="n">Data</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">character</span><span class="o">-</span><span class="n">set</span><span class="o">-</span><span class="n">server</span><span class="o">=</span><span class="n">utf8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">default</span><span class="o">-</span><span class="n">storage</span><span class="o">-</span><span class="n">engine</span><span class="o">=</span><span class="n">INNODB</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">sql</span><span class="o">-</span><span class="n">mode</span><span class="o">=</span><span class="s2">&#34;STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># plugin-load=authentication_windows.dll</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">log</span><span class="o">-</span><span class="n">output</span><span class="o">=</span><span class="n">FILE</span>
+</span></span><span class="line"><span class="cl"><span class="n">general</span><span class="o">-</span><span class="nb">log</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">general_log_file</span><span class="o">=</span><span class="s2">&#34;PEGASUS.log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">slow</span><span class="o">-</span><span class="n">query</span><span class="o">-</span><span class="nb">log</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">slow_query_log_file</span><span class="o">=</span><span class="s2">&#34;PEGASUS-slow.log&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">long_query_time</span><span class="o">=</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># log-bin</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">log</span><span class="o">-</span><span class="n">error</span><span class="o">=</span><span class="s2">&#34;PEGASUS.err&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">server</span><span class="o">-</span><span class="n">id</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: 151</span>
+</span></span><span class="line"><span class="cl"><span class="n">max_connections</span><span class="o">=</span><span class="mi">20</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">query_cache_size</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: table_open_cache=2000</span>
+</span></span><span class="line"><span class="cl"><span class="n">table_open_cache</span><span class="o">=</span><span class="mi">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">tmp_table_size</span><span class="o">=</span><span class="mi">44</span><span class="n">M</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: 9</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread_cache_size</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">myisam_max_sort_file_size</span><span class="o">=</span><span class="mi">100</span><span class="n">G</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: 80M</span>
+</span></span><span class="line"><span class="cl"><span class="n">myisam_sort_buffer_size</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: 8M</span>
+</span></span><span class="line"><span class="cl"><span class="n">key_buffer_size</span><span class="o">=</span><span class="mi">8</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: read_buffer_size=64K</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* minimum appears to be 8K.</span>
+</span></span><span class="line"><span class="cl"><span class="n">read_buffer_size</span><span class="o">=</span><span class="mi">8</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: read_rnd_buffer_size=256K</span>
+</span></span><span class="line"><span class="cl"><span class="n">read_rnd_buffer_size</span><span class="o">=</span><span class="mi">8</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: sort_buffer_size=256K</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* minimum appears to be 32K</span>
+</span></span><span class="line"><span class="cl"><span class="n">sort_buffer_size</span><span class="o">=</span><span class="mi">32</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># innodb_data_home_dir=0.0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># skip-innodb</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB*: If this setting is enabled, the server fails to start with message &#34;this option is deprecated and will be removed in a future release.&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: innodb_additional_mem_pool_size=6M</span>
+</span></span><span class="line"><span class="cl"><span class="n">innodb_additional_mem_pool_size</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: innodb_flush_log_at_trx_commit=1</span>
+</span></span><span class="line"><span class="cl"><span class="n">innodb_flush_log_at_trx_commit</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: innodb_log_buffer_size=4M</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* minimum appears to be 256K</span>
+</span></span><span class="line"><span class="cl"><span class="n">innodb_log_buffer_size</span><span class="o">=</span><span class="mi">256</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: innodb_buffer_pool_size=255M</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* minimum appears to be 5M</span>
+</span></span><span class="line"><span class="cl"><span class="n">innodb_buffer_pool_size</span><span class="o">=</span><span class="mi">5</span><span class="n">M</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">innodb_log_file_size</span><span class="o">=</span><span class="mi">48</span><span class="n">M</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">innodb_thread_concurrency</span><span class="o">=</span><span class="mi">9</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">innodb_autoextend_increment</span><span class="o">=</span><span class="mi">64</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: innodb_buffer_pool_instances=8</span>
+</span></span><span class="line"><span class="cl"><span class="n">innodb_buffer_pool_instances</span><span class="o">=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: innodb_concurrency_tickets=5000</span>
+</span></span><span class="line"><span class="cl"><span class="n">innodb_concurrency_tickets</span><span class="o">=</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">innodb_old_blocks_time</span><span class="o">=</span><span class="mi">1000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># The minimum value is 10.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: innodb_open_files=300</span>
+</span></span><span class="line"><span class="cl"><span class="n">innodb_open_files</span><span class="o">=</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">innodb_stats_on_metadata</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">innodb_file_per_table</span><span class="o">=</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">innodb_checksum_algorithm</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: back_log=80</span>
+</span></span><span class="line"><span class="cl"><span class="n">back_log</span><span class="o">=</span><span class="mi">5</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: flush_time=0</span>
+</span></span><span class="line"><span class="cl"><span class="n">flush_time</span><span class="o">=</span><span class="mi">10</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: join_buffer_size=256K</span>
+</span></span><span class="line"><span class="cl"><span class="n">join_buffer_size</span><span class="o">=</span><span class="mi">16</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: max_allowed_packet=4M</span>
+</span></span><span class="line"><span class="cl"><span class="n">max_allowed_packet</span><span class="o">=</span><span class="mi">1</span><span class="n">M</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">max_connect_errors</span><span class="o">=</span><span class="mi">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: open_files_limit=4161</span>
+</span></span><span class="line"><span class="cl"><span class="n">open_files_limit</span><span class="o">=</span><span class="mi">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: query_cache_type=0</span>
+</span></span><span class="line"><span class="cl"><span class="n">query_cache_type</span><span class="o">=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># The minimum and default values are both 400.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># *MB* original: table_definition_cache=1400</span>
+</span></span><span class="line"><span class="cl"><span class="n">table_definition_cache</span><span class="o">=</span><span class="mi">400</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># The value should be a multiple of 256.</span>
+</span></span><span class="line"><span class="cl"><span class="n">binlog_row_event_max_size</span><span class="o">=</span><span class="mi">8</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">sync_master_info</span><span class="o">=</span><span class="mi">10000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">sync_relay_log</span><span class="o">=</span><span class="mi">10000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">sync_relay_log_info</span><span class="o">=</span><span class="mi">10000</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># additional hints from http://www.tocker.ca/2014/03/10/configuring-mysql-to-use-minimal-memory.html</span>
+</span></span><span class="line"><span class="cl"><span class="n">host_cache_size</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">thread_stack</span><span class="o">=</span><span class="mi">128</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl"><span class="n">max_heap_table_size</span><span class="o">=</span><span class="mi">16</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl"><span class="n">bulk_insert_buffer_size</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">net_buffer_length</span><span class="o">=</span><span class="mi">1</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl"><span class="n">innodb_sort_buffer_size</span><span class="o">=</span><span class="mi">64</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl"><span class="n">binlog_cache_size</span><span class="o">=</span><span class="mi">4</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl"><span class="n">binlog_stmt_cache_size</span><span class="o">=</span><span class="mi">4</span><span class="n">K</span>
+</span></span><span class="line"><span class="cl"><span class="n">performance_schema</span><span class="o">=</span><span class="mi">0</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-18 Sat 00:12:34 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

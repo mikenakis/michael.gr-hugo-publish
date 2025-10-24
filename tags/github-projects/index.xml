@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Github-Projects on Michael&#39;s Blog</title>
+        <link>//localhost:1313/tags/github-projects/</link>
+        <description>Recent content in Github-Projects on Michael&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
+        <lastBuildDate>Thu, 23 Oct 2025 23:01:53 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/github-projects/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Testana: A better way of running tests</title>
+        <link>//localhost:1313/p/testana-a-better-way-of-running-tests/</link>
+        <pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/testana-a-better-way-of-running-tests/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/testana-a-better-way-of-running-tests/media/testana-logo.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;abstract&#34;&gt;Abstract
+&lt;/h3&gt;&lt;p&gt;A software testing tool is presented, which uses &lt;em&gt;&lt;strong&gt;dependency analysis&lt;/strong&gt;&lt;/em&gt; to greatly optimize the process of running tests.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a 
+   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;what-is-testana&#34;&gt;What is Testana?
+&lt;/h3&gt;&lt;p&gt;Testana is a console application that you launch when you want to run your tests. So far, I have created two implementations of Testana:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A Java implementation, supporting JUnit 4 annotations in Maven-based projects.&lt;/li&gt;
+&lt;li&gt;A C# implementation, supporting MSTest attributes in MSBuild solutions.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;what-does-testana-achieve-that-existing-tools-do-not&#34;&gt;What does Testana achieve that existing tools do not?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Testana &lt;em&gt;&lt;strong&gt;runs only the subset of test modules that actually need to run&lt;/strong&gt;&lt;/em&gt;, based on the last successful run time of each test module, and whether it, or any of its dependencies, have changed.&lt;/li&gt;
+&lt;li&gt;Testana &lt;em&gt;&lt;strong&gt;always considers all test modules in your entire code base as candidates for running&lt;/strong&gt;&lt;/em&gt;, so you never have to manually select a subset of the tests to run in the interest of saving time.&lt;/li&gt;
+&lt;li&gt;Testana &lt;em&gt;&lt;strong&gt;runs test modules by order of dependency&lt;/strong&gt;&lt;/em&gt;, meaning that tests of modules that have no dependencies run first, tests of modules that depend on those run next, and so on.&lt;/li&gt;
+&lt;li&gt;Testana &lt;em&gt;&lt;strong&gt;runs test methods in Natural Method Order,&lt;/strong&gt;&lt;/em&gt; which is the order in which the methods appear in the source file. (This is the norm in C#, but not in Java, where extra measures are necessary to accomplish.)&lt;/li&gt;
+&lt;li&gt;Testana &lt;em&gt;&lt;strong&gt;runs test methods in ascending order of inheritance&lt;/strong&gt;&lt;/em&gt;, meaning that test methods in the base-most test class run first, and test methods in derived test classes run afterwards.&lt;/li&gt;
+&lt;li&gt;Testana &lt;em&gt;&lt;strong&gt;discovers and reports mistakes&lt;/strong&gt;&lt;/em&gt; in the formulation of test methods, instead of ignoring the mistakes, which is what most other test frameworks do. (Silent failure.)&lt;/li&gt;
+&lt;li&gt;Testana &lt;em&gt;&lt;strong&gt;does not catch any exceptions when debugging&lt;/strong&gt;&lt;/em&gt;, thus allowing your debugger to stop on the source line that threw the exception.  (Testana will catch and report exceptions when not debugging, as the case is when running on a continuous build server.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;how-does-testana-work&#34;&gt;How does Testana work?
+&lt;/h3&gt;&lt;p&gt;Testana begins by constructing the dependency graph of your software system. Since this process is expensive, Testana cashes the dependency graph in a file, and recalculates it only when the structure of the system changes. The cache is stored in a text file, which is located at the root of the source tree, and is meant to be excluded from source control.&lt;/p&gt;
+&lt;p&gt;Then:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Testana locates the modules that depend on nothing else within the system, and runs the tests of those modules.&lt;/li&gt;
+&lt;li&gt;Once these tests are done, Testana finds modules that depend only on modules that have already been tested, and runs their tests.&lt;/li&gt;
+&lt;li&gt;Testana keeps repeating the previous step, until all tests have been run.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Testana keeps a diary where it records the last successful run time of each test module. This diary is also stored in a text file, which is also located
+at the root of the source tree, and is also meant to be excluded from source control.&lt;/p&gt;
+&lt;p&gt;Next time Testana runs, it considers the last successful run time of each test module, versus the last modification time of that module and its dependencies. Testana then refrains from running the test module if neither it, nor any of its dependencies, have changed.&lt;/p&gt;
+&lt;h3 id=&#34;why-should-i-care-about-running-only-the-tests-that-need-to-run&#34;&gt;Why should I care about running only the tests that need to run?
+&lt;/h3&gt;&lt;p&gt;The usual situation with large code bases is that tests take an unreasonably long time to run, so developers tend to take shortcuts in running them. One approach some developers take is that they simply commit code without running any tests, leaving it up to the continuous build server to run the tests and notify them of any test failures. This has multiple disadvantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It causes repeated interruptions in the workflow, due to the slow turnaround of the continuous build, which is often of the order of an hour, sometimes longer, and even in the fastest cases, always longer than a normal person&amp;rsquo;s attention span. (This is so by definition; if it was not, then there would be no problem with quickly running all tests locally before committing.)&lt;/li&gt;
+&lt;li&gt;The failed tests require additional commits to fix, and each commit requires a meaningful commit message, which increases the overall level of bureaucracy in the development process.&lt;/li&gt;
+&lt;li&gt;The commit history becomes bloated with commits that were done in vain and should never be checked out because they contain bugs that are fixed in later commits.&lt;/li&gt;
+&lt;li&gt;Untested commits that contain bugs are regularly being made to branches in the repository; these bugs stay there while the continuous build does its thing; eventually the tests fail, the developers take notice, and commit fixes. This whole process takes time, during which other unsuspecting developers might pull from those branches, thus receiving the bugs. Kind of like &lt;em&gt;Continuous Infection&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Testana solves the above problems by figuring out which tests need to run based on what has changed, and only running those tests. This cuts down the time it takes to run tests to a tiny fraction of what it is when blindly running all tests, which means that running the tests now becomes piece of cake and can usually be done real quick before committing, as it should.&lt;/p&gt;
+&lt;p&gt;Also, running the tests real quick right after each pull from source control now becomes feasible, so a developer can avoid starting to work on source code on which the tests are failing. (How often have you found yourself in a situation where you pull from source control, change something, run the tests, the tests fail, and you are now wondering whether they fail due to the changes you just made, or due to changes you pulled from the repository?)&lt;/p&gt;
+&lt;h3 id=&#34;why-should-i-care-about-considering-all-test-modules-in-my-entire-code-base-as-candidates-for-running&#34;&gt;Why should I care about considering all test modules in my entire code base as candidates for running?
+&lt;/h3&gt;&lt;p&gt;Another approach taken by some developers, in the interest of saving time, is manually choosing which tests to run, based on their knowledge of what may have been affected by the changes they just made.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One simple reason why this is problematic is that it requires cognitive effort to figure out which tests might need running, and manual work to launch them individually; it is not as easy as pressing a single button that  stands for &amp;ldquo;run whatever tests need to run in response to the changes I just made.&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;A far bigger problem is that in manually selecting the tests to run, the developer is making assumptions about the dependencies of the code that they have modified. In complex systems, dependency graphs can be difficult to grasp, and as systems evolve, the dependencies keep changing. This often leads to situations where no single developer in the house has a complete grasp of the dependency graph of the entire system. Unfortunately, unknown or not-fully-understood dependencies are a major source of bugs, and yet by hand-selecting what to test based on our assumptions about the dependencies, it is precisely the not-fully-understood dependencies that are likely to not be tested. This is a recipe for disaster.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Testana solves the above problems by always considering all test modules as candidates for running. It does not hurt to do that, because the tests that do not actually need to run will not be run by Testana anyway.&lt;/p&gt;
+&lt;h3 id=&#34;why-should-i-care-about-running-test-modules-in-order-of-dependency&#34;&gt;Why should I care about running test modules in order of dependency?
+&lt;/h3&gt;&lt;p&gt;Existing test frameworks do not do anything intelligent in the direction of automatically figuring out some order of test execution that has any purpose or merit. The order tends to be arbitrary, and not configurable. In the best case it is alphabetic, but this is still problematic, because our criteria for naming test modules usually have nothing to do with the order in which we would like to see them executing.&lt;/p&gt;
+&lt;p&gt;For example, it is very common for a code base to contain a module called &amp;ldquo;Utilities&amp;rdquo;, which most other modules depend on; Since it is a highly dependent-upon module, it should be tested first, but since its name begins with a &amp;ldquo;U&amp;rdquo;, it tends to be tested last.&lt;/p&gt;
+&lt;p&gt;Testana executes test modules in order of dependency. This means that modules with no dependencies are tested first, modules that depend upon them are tested next, and so on until everything has been tested. Thus, the first test failure is guaranteed to point at the most fundamental problem; there is no need to look further down in case some other test failure indicates a more fundamental problem. Subsequently, Testana stops executing tests after the first failure, so it saves even more time.&lt;/p&gt;
+&lt;p&gt;For more information about this way of testing, see &lt;a 
+   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;why-should-i-care-about-running-test-methods-in-natural-order&#34;&gt;Why should I care about running test methods in natural order?
+&lt;/h3&gt;&lt;p&gt;Test frameworks in the C# world tend to run test methods in natural order, which is great, but in the Java world, the JUnit framework runs test methods in random order, which is at best useless, and arguably treacherous.&lt;/p&gt;
+&lt;p&gt;One reason for wanting the test methods to run in the order in which they appear in the source file is because we usually test fundamental operations of our software before we test operations that depend upon them. (Note: it is the operations of the components under test that depend upon each other, not the tests themselves that depend upon each other!) So, if a fundamental operation fails, we want that to be the very first error that gets reported.&lt;/p&gt;
+&lt;p&gt;Tests of operations that rely upon an operation whose test has failed might as well be skipped, because they can all be expected to fail. Reporting those failures before the failure of the more fundamental operation is an act of sabotage against the developer, because it is sending us looking for problems in places where there are no problems to be found, and it is making it more difficult for us to locate the real problem, which typically lies in the test that failed first &lt;em&gt;&lt;strong&gt;in the source file&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;To give an example, suppose I am developing some kind of data store with insert and find functionality, and I am writing tests to make sure this functionality works. The find-item-in-store test necessarily involves insertion before finding, so I am likely to precede it with an insert-item-to-store test. In such a scenario, it is counter-productive to be told that my find-item-in-store test failed, sending me to troubleshoot the find function, and only later to be told that my insert-item-to-store test failed, which obviously means that it was in fact the insert function that needed troubleshooting; if insert-item-to-store fails, it is game over; no other operation on this store can possibly succeed, so there is no point in running any other tests on it, just as there is no point in beating a dead horse.&lt;/p&gt;
+&lt;p&gt;Finally, another very simple, very straightforward, and very important reason for wanting the test methods to be executed in natural order is because seeing the test methods listed in any other order is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;A related rant can be found here: &lt;a 
+   href=&#34;//localhost:1313/p/on-junits-random-order-of-test-method-execution/&#34;
+   &gt;On JUnit&amp;rsquo;s random order of test method execution&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;why-should-i-care-for-running-test-methods-in-ascending-order-of-inheritance&#34;&gt;Why should I care for running test methods in ascending order of inheritance?
+&lt;/h3&gt;&lt;p&gt;This feature of Testana might be irrelevant to you if you never use inheritance in test classes, but I do, and I consider it very important. I also consider the typical behavior of existing test frameworks on this matter very annoying, because they tend to do the exact opposite of what is useful.&lt;/p&gt;
+&lt;p&gt;Inheritance in test classes can help to achieve great code coverage while reducing the total amount of test code. Suppose you have a collection hierarchy to test: you have an ArrayList class and a HashSet class, and you also have their corresponding test classes: ArrayListTest and HashSetTest. Now, both ArrayList and HashSet inherit from Collection, which means that lots of tests are going to be identical between ArrayListTest and HashSetTest. One way to eliminate duplication is to have a CollectionTest abstract base class, which tests only Collection methods, and then have both ArrayListTest and HashSetTest inherit from CollectionTest and provide additional tests for functionality that is specific to ArrayList and HashSet respectively. Under this scenario, when ArrayListTest or HashSetTest runs, we want the methods of CollectionTest to be executed first, because they are testing the fundamental (more general) functionality.&lt;/p&gt;
+&lt;p&gt;To make the example more specific, CollectionTest is likely to add an item to the collection and then check whether the collection contains the item. If this test fails, there is absolutely no point in proceeding with tests of ArrayListTest which will, for example, add multiple items to the collection and check to make sure that IndexOf() returns the right results.&lt;/p&gt;
+&lt;p&gt;Again, existing test frameworks tend to handle this in a way which is exactly the opposite of what we would want: they execute the descendant (more specialized) methods first, and the ancestor (more general) methods last.&lt;/p&gt;
+&lt;p&gt;Testana corrects this by executing ancestor methods first, descendant methods last.&lt;/p&gt;
+&lt;h3 id=&#34;what-additional-error-checking-does-testana-perform&#34;&gt;What additional error checking does Testana perform?
+&lt;/h3&gt;&lt;p&gt;While running tests, Testana will warn the programmer if it discovers any method that has been declared as a test method but fails to meet the requirements for a test method.&lt;/p&gt;
+&lt;p&gt;Usually, test frameworks require that a test method must be a public instance method, must accept no parameters, and must return nothing; however, when these frameworks encounter a method that is declared as a test and yet fails to meet those requirements, (for example, a test method declared static,) they fail to report the mistake.&lt;/p&gt;
+&lt;p&gt;Testana does not fail to report such mistakes.&lt;/p&gt;
+&lt;h3 id=&#34;can-testana-be-fooled-by-inversion-of-control&#34;&gt;Can Testana be fooled by Inversion of Control?
+&lt;/h3&gt;&lt;p&gt;No. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, the test of A still has to instantiate both A and B in order to supply A with the I interface of B, so the test depends on both A and B, which means that Testana will run the test if there is a change in either A or B.&lt;/p&gt;
+&lt;h3 id=&#34;can-testana-be-fooled-by-the-use-of-mocks&#34;&gt;Can Testana be fooled by the use of mocks?
+&lt;/h3&gt;&lt;p&gt;Yes, Testana can be fooled by mocks, because that is what mocks do: they make a mockery out of the software testing process. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, and the test of A also refrains from depending on B by just mocking I, Testana will of course not run the test of A when there is a change in B. This, however, should not be a problem, because you should not be using mocks anyway; for more information, see &lt;a 
+   href=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/&#34;
+   &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;can-testana-be-fooled-by-the-use-of-fakes&#34;&gt;Can Testana be fooled by the use of fakes?
+&lt;/h3&gt;&lt;p&gt;No, as long as you do your testing properly. A test that utilizes a fake will be run by Testana only when there is a change in the fake, not when there is a change in the real thing; however, you should have a separate test which ensures that the behavior of the fake is identical to the behavior of the real thing in all aspects that matter. This test will be run by Testana when you modify either the fake, or the real thing, or both. Thus:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you make a breaking change to the real thing, then your tests will show you that you need to make the corresponding change to the fake; the change in the fake will in turn cause Testana to run the tests that utilize the fake.&lt;/li&gt;
+&lt;li&gt;If you make a non-breaking change to the real thing, then the fake will remain unchanged, and this is what gives you the luxury of not having to re-run tests utilizing the fake when you make a change that only affects the real thing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For more information, see &lt;a 
+   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;what-about-undiscoverable-dependencies-due-to-weak-typing-the-use-of-rest-etc&#34;&gt;What about undiscoverable dependencies due to weak typing, the use of REST, etc?
+&lt;/h3&gt;&lt;p&gt;The following &amp;ldquo;hip&amp;rdquo; and &amp;ldquo;trendy&amp;rdquo; practices of the modern day are not supported by Testana, and there is no plan to ever support them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Squandering dependencies via &lt;em&gt;&lt;strong&gt;weak typing&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Obscuring dependencies via &lt;em&gt;&lt;strong&gt;duck-typing&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Denaturing dependencies via &lt;em&gt;&lt;strong&gt;stringly-typing.&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Disavowing dependencies via &lt;em&gt;&lt;strong&gt;configuration files&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Abnegating dependencies via &lt;em&gt;&lt;strong&gt;non-programmatic interfaces&lt;/strong&gt;&lt;/em&gt; such as REST.&lt;/li&gt;
+&lt;li&gt;Fragmenting dependencies via &lt;em&gt;&lt;strong&gt;cross-language invocations&lt;/strong&gt;&lt;/em&gt; (following the &lt;em&gt;&lt;strong&gt;polyglot craze&lt;/strong&gt;&lt;/em&gt;.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Seriously, stop all this fuckery and use a single, &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt; programming language, (that is, a programming language with &lt;em&gt;&lt;strong&gt;strong typing&lt;/strong&gt;&lt;/em&gt;,) encode your dependencies via the type system, and everything will be fine. For more information, see &lt;a 
+   href=&#34;//localhost:1313/p/on-scripting-languages/&#34;
+   &gt;On scripting languages&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;how-compatible-is-testana-with-what-i-already-have&#34;&gt;How compatible is Testana with what I already have?
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;The Java implementation of Testana:
+&lt;ul&gt;
+&lt;li&gt;Works with maven projects (pom.xml files.)&lt;/li&gt;
+&lt;li&gt;Supports JUnit 4.
+&lt;ul&gt;
+&lt;li&gt;Supports only the basic, minimum viable subset of JUnit 4 functionality, namely the @Test, @Before, @After, and @Ignore annotations, without any parameters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The C# implementation of Testana:
+&lt;ul&gt;
+&lt;li&gt;Works with MSBuild projects (.sln and .csproj files)&lt;/li&gt;
+&lt;li&gt;Supports MSTest.
+&lt;ul&gt;
+&lt;li&gt;Supports only the basic, minimum viable subset of MSTest functionality, namely the [TestClass], [TestMethod], [ClassInitialize], [ClassCleanup], and [Ignore] attributes, without any parameters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Support for more languages, more project formats, more test frameworks, and more functionality may be added in the future.&lt;/p&gt;
+&lt;h3 id=&#34;how-is-it-like-using-testana&#34;&gt;How is it like using Testana?
+&lt;/h3&gt;&lt;p&gt;You run Testana every time you want to run your tests. You launch it at the root of your source tree, without any command-line arguments, and its default behavior is to figure out everything by itself and do the right thing.&lt;/p&gt;
+&lt;p&gt;Note that the first time you run Testana, there may be a noticeable delay while information is being collected; the information is cached, so this delay will not be there next time you run Testana.&lt;/p&gt;
+&lt;p&gt;The first time you run Testana, it will run all tests.&lt;/p&gt;
+&lt;p&gt;If you immediately re-run Testana, it will not run any tests, because nothing will have changed.&lt;/p&gt;
+&lt;p&gt;If you touch one of your source files, build your project, and re-run Testana, it will only run tests that either directly or indirectly depend on the
+changed file. If you run Testana with &amp;ndash;help it will give you a rundown of the command-line arguments it supports.&lt;/p&gt;
+&lt;h3 id=&#34;where-can-i-find-testana&#34;&gt;Where can I find Testana?
+&lt;/h3&gt;&lt;p&gt;The Java implementation of Testana is here:
+&lt;a class=&#34;external&#34; 
+   href=&#34;https://github.com/mikenakis/Public/tree/master/testana&#34; target=&#34;_blank&#34;
+   &gt;https://github.com/mikenakis/Public/tree/master/testana&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The C# implementation of Testana is coming soon. (As soon as I turn it into an independent solution, because currently it is a project within a larger solution.)&lt;/p&gt;
+&lt;h3 id=&#34;notes&#34;&gt;Notes
+&lt;/h3&gt;&lt;p&gt;In episode 167 of the Software Engineering Podcast (&lt;a class=&#34;external&#34; 
+   href=&#34;https://se-radio.net/2010/09/episode-167-the-history-of-junit-and-the-future-of-testing-with-kent-beck/&#34; target=&#34;_blank&#34;
+   &gt;SE Radio 167: The History of JUnit and the Future of Testing with Kent Beck&lt;/a&gt;) at about 40&amp;rsquo;:00&amp;rsquo;&amp;rsquo; Kent Beck says that recently failed tests have the highest probability of failing again in the near future, so he suggests using this statistical fact at as a heuristic for picking which tests to run first. Testana optimizes the testing process deterministically, so there is no need to resort to heuristics.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: The Testana logo, &lt;em&gt;profile of a crash test dummy&lt;/em&gt; by michael.gr. Based on &lt;a class=&#34;external&#34; 
+   href=&#34;https://thenounproject.com/term/crash-test-dummy/401583/&#34; target=&#34;_blank&#34;
+   &gt;original work by Wes Breazell&lt;/a&gt; and &lt;a class=&#34;external&#34; 
+   href=&#34;https://thenounproject.com/term/woman/129498/&#34; target=&#34;_blank&#34;
+   &gt;Alexander Skowalsky&lt;/a&gt;. Used under &lt;a class=&#34;external&#34; 
+   href=&#34;https://creativecommons.org/licenses/by/3.0/us/&#34; target=&#34;_blank&#34;
+   &gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>New GitHub project: VsDebugLogger</title>
+        <link>//localhost:1313/p/new-github-project-vsdebuglogger/</link>
+        <pubDate>Thu, 09 Feb 2023 10:41:59 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/new-github-project-vsdebuglogger/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/new-github-project-vsdebuglogger/media/vs-debug-logger-logo.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Speeds up Visual Studio debug output by orders of magnitude.&lt;/p&gt;
+&lt;p&gt;On GitHub: &lt;a class=&#34;external&#34; 
+   href=&#34;https://github.com/mikenakis/VsDebugLogger&#34; target=&#34;_blank&#34;
+   &gt;https://github.com/mikenakis/VsDebugLogger&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Intertwine</title>
+        <link>//localhost:1313/p/intertwine/</link>
+        <pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/intertwine/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/intertwine/media/intertwine-logo.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;/p&gt;
+&lt;h3 id=&#34;abstract&#34;&gt;Abstract
+&lt;/h3&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a 
+   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;the-problem&#34;&gt;The Problem
+&lt;/h3&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Logging:&lt;/strong&gt; Recording information about each invocation being made.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multicasting:&lt;/strong&gt; Delivering a single invocation to multiple recipients.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Remoting:&lt;/strong&gt; Placing invocations across machine boundaries.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desynchronization:&lt;/strong&gt; Queuing invocations for later execution, possibly on a different thread.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Synchronization:&lt;/strong&gt; Obtaining and holding a lock for the duration of the invocation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Transformation:&lt;/strong&gt; Converting between invocation formats, e.g. method calls to REST and back.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ordinarily, the components doing the invocations are application-specific, and the interfaces between them are also application-specific, but the operators that we want to interject between them are general-purpose, so they need to remain agnostic of the application-specific details of the invocations, in a way analogous to how a general-purpose sorting algorithm is agnostic of the application-specific format of the data it sorts.&lt;/p&gt;
+&lt;p&gt;Therefore, we need some way of expressing application-specific invocations in a general-purpose form.&lt;/p&gt;
+&lt;h3 id=&#34;prior-art&#34;&gt;Prior Art
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a 
+   href=&#34;//localhost:1313/p/on-messages-and-message-passing/&#34;
+   &gt;On messages and message-passing&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Parameterless lambdas:&lt;/strong&gt; Application-specific method calls can be wrapped inside parameterless lambdas, and since all parameterless lambdas look the same, they can be handled by general-purpose code which may for example add them to a queue, and later dequeue and invoke them.
+Unfortunately:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The wrapping of each application-specific method call inside a parameterless lambda must happen at each call site, which is cumbersome and reveals details about the underlying invocation delivery mechanism.&lt;/li&gt;
+&lt;li&gt;The evaluation of the parameters that are passed to the application-specific method happens at the moment that the lambda makes the call, not at the moment that the lambda is constructed, which can lead to insidious bugs even if the evaluations have no side-effects. (And &lt;em&gt;woe to you on earth and sea&lt;/em&gt; if they do have side-effects.)&lt;/li&gt;
+&lt;li&gt;The parameterless lambda completely hides the values of the parameters that are being passed to the application-specific method, as well as the identity of the method being invoked. Thus, parameterless lambdas cannot be used in scenarios that require information about each call being made.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dynamic Proxies:&lt;/strong&gt; Both in Java and in C# there exist mechanisms that can be used to convert application-specific invocations to a general-purpose form, but not the other way around. These are &lt;code&gt;java.lang.reflect.Proxy&lt;/code&gt; for Java, and various libraries like Castle&amp;rsquo;s and LinFu for C#. The reverse operation can be achieved using reflection, but this involves a round-trip to native-land, which incurs a heavy performance penalty. Furthermore, these mechanisms suffer from additional issues, such as messing with exceptions, doing more work than necessary, etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-solution&#34;&gt;The Solution
+&lt;/h3&gt;&lt;p&gt;In order to be able to perform general-purpose operations on application-specific invocations we need a mechanism for converting application-specific invocations into a general-purpose form and back, so that the operators can act upon the general-purpose form. What follows is a description of such a mechanism, which I call &lt;em&gt;&lt;strong&gt;Intertwine&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Intertwine introduces a general-purpose form for expressing invocations, which is called &lt;em&gt;&lt;strong&gt;the normal form of invocations&lt;/strong&gt;&lt;/em&gt;, and is represented by a single method of the following signature:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;MethodKey&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arguments&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;In C#, &lt;code&gt;AnyCall&lt;/code&gt; would be a &lt;em&gt;delegate.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;In Java, &lt;code&gt;AnyCall&lt;/code&gt; would be a &lt;em&gt;single-method interface&lt;/em&gt;, otherwise known as a &lt;em&gt;functional interface&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This method signature represents the fact that every conceivable interface method call can be fully described in terms of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A return value, of the common denominator type &lt;code&gt;Object&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;A unique key which identifies which method of the interface is being invoked.&lt;/li&gt;
+&lt;li&gt;An array containing arguments, of the common denominator type &lt;code&gt;Object&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please note that the method identifier is &lt;code&gt;MethodKey&lt;/code&gt; in the Java implementation, but &lt;code&gt;int selector&lt;/code&gt; in the C# implementation. This is because the Java implementation was made a considerable time after the C# implementation, and is therefore a bit more advanced.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;MethodKey&lt;/code&gt; used in the Java implementation allows the caller and the callee to unambiguously identify methods even in situations where binary compatibility between the caller and the callee is not guaranteed, and therefore an integer method index does not necessarily refer to the same method on both the caller and the callee.&lt;/p&gt;
+&lt;p&gt;The Java implementation of intertwine provides efficient means of converting back and forth between a &lt;code&gt;MethodKey&lt;/code&gt; and any of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The reflection &amp;ldquo;Method&amp;rdquo; object of the method. (This is &lt;code&gt;java.lang.reflect.Method&lt;/code&gt; in Java, or &lt;code&gt;System.Reflection.MethodInfo&lt;/code&gt; in C#.)&lt;/li&gt;
+&lt;li&gt;The string representation of the prototype of the method.&lt;/li&gt;
+&lt;li&gt;The zero-based method index of the method.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The sample code that follows was written for C#, so it uses an &lt;code&gt;int selector&lt;/code&gt;  instead of &lt;code&gt;MethodKey key&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;For methods of &lt;code&gt;void&lt;/code&gt; return type the value returned by AnyCall is unspecified. (It will in all likelihood be &lt;code&gt;null&lt;/code&gt;, but nobody should rely on this.)&lt;/li&gt;
+&lt;li&gt;Value types (primitives) are boxed and unboxed as necessary.&lt;/li&gt;
+&lt;li&gt;Certain features such as the &lt;code&gt;ref&lt;/code&gt; and &lt;code&gt;out&lt;/code&gt; parameters in C#, receive special handling.&lt;/li&gt;
+&lt;li&gt;Other features such as properties, indexers, virtual events, etc. are nothing but syntactic sugar which is implemented using regular method calls under the hood, so they require no special handling.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, the problem can now be restated as follows:&lt;/p&gt;
+&lt;p&gt;How to convert any interface method invocation to an invocation of an AnyCall method, and how to convert back from an invocation of an AnyCall method to an invocation of the original interface method.&lt;/p&gt;
+&lt;p&gt;For this, Intertwine introduces two new concepts: &lt;em&gt;&lt;strong&gt;Entwiners&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Untwiners&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;An Entwiner of interface &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt; is a class which exposes (implements) interface &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt; and delegates to an instance of &lt;em&gt;AnyCall&lt;/em&gt;. It can also be thought of as a &lt;em&gt;normalizer&lt;/em&gt; or &lt;em&gt;generalizer&lt;/em&gt; or &lt;em&gt;multiplexer.&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;An Untwiner of interface &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt; is a class which exposes an &lt;em&gt;AnyCall&lt;/em&gt; method and delegates to an instance of &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt;. It can also be thought of as a &lt;em&gt;denormalizer&lt;/em&gt; or &lt;em&gt;specializer&lt;/em&gt; or &lt;em&gt;demultiplexer.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More specifically:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The entwiner of &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt; does the following:
+&lt;ul&gt;
+&lt;li&gt;Accepts an instance of &lt;code&gt;Anycall&lt;/code&gt; as a constructor parameter and stores it in a &lt;code&gt;final&lt;/code&gt;/&lt;code&gt;readonly&lt;/code&gt; field.&lt;/li&gt;
+&lt;li&gt;Implements each method of &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt; as follows:
+&lt;ul&gt;
+&lt;li&gt;Packs the parameters that were passed to the method into an array of &lt;code&gt;Object&lt;/code&gt;, performing any boxing necessary.&lt;/li&gt;
+&lt;li&gt;Invokes anyCall passing it a key that uniquely identifies the method, and the array of parameters.&lt;/li&gt;
+&lt;li&gt;Returns, possibly after unboxing, whatever was returned by the invocation of anyCall.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The untwiner of &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt; performs the opposite and complementary operation of the entwiner, namely:
+&lt;ul&gt;
+&lt;li&gt;Accepts an instance of &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt; as a constructor parameter and stores it in a &lt;code&gt;final&lt;/code&gt;/&lt;code&gt;readonly&lt;/code&gt; field.&lt;/li&gt;
+&lt;li&gt;Implements the &lt;code&gt;anycall&lt;/code&gt; method of the &lt;code&gt;Anycall&lt;/code&gt; interface as follows:&lt;/li&gt;
+&lt;li&gt;It uses the supplied &lt;code&gt;MethodKey&lt;/code&gt; to determine which method of  &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt; is being invoked, and for each method it does the
+following:
+&lt;ul&gt;
+&lt;li&gt;Unpacks the parameters from the array of &lt;code&gt;Object&lt;/code&gt;, performing any unboxing necessary.&lt;/li&gt;
+&lt;li&gt;Invokes the method of &lt;em&gt;&lt;strong&gt;T&lt;/strong&gt;&lt;/em&gt;, passing it the unpacked parameters.&lt;/li&gt;
+&lt;li&gt;Returns, possibly after boxing, whatever was returned by the method, or &lt;code&gt;null&lt;/code&gt; if the method was of &lt;code&gt;void&lt;/code&gt; return type.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;a-hand-crafted-implementation&#34;&gt;A hand-crafted implementation
+&lt;/h3&gt;&lt;p&gt;Before we look at the automatic creation of entwiners and untwiners, let us take a look at an example of how we would implement an entwiner and untwiner for a certain interface if we were to do it by hand.&lt;/p&gt;
+&lt;p&gt;Let us consider the following interface:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;IFooable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Moo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Boo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;And let us consider the following class implementing that interface:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;FooImplementation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Moo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WriteLine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;i: &amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Boo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Console&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WriteLine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;s: &amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;, b: &amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;And then let us consider the following method which invokes the interface:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InvokeFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Moo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;42&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Boo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;fubar!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The InvokeFoo method can be directly hooked up to an instance of the implementing class in a completely conventional way as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Run1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FooImplementation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;InvokeFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Now, an entwiner for our IFooable interface could be hand-crafted as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;EntwinerForFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Constructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;anycall&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;anycall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Moo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Boo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Whereas an untwiner for IFooable could be hand-crafted as follows:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;UntwinerForFooable&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Constructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Target&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;selector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;switch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;selector&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Moo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;case&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Boo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;],&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;bool&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;break&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;default&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;InvalidOperationException&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;With the above classes, we can now write the following piece of awesomeness:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Run2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FooImplementation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;untwiner&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;UntwinerForFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;entwiner&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;EntwinerForFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;untwiner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;InvokeFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;entwiner&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Note that &lt;code&gt;Run2()&lt;/code&gt; has exactly the same end-result as &lt;code&gt;Run1()&lt;/code&gt;, but there is a big difference in what goes on under the hood: all outbound interface method calls from the &lt;code&gt;InvokeFoo&lt;/code&gt; function are now arriving at the entwiner, which converts them to &lt;code&gt;AnyCall&lt;/code&gt; invocations, which are then forwarded to the untwiner, which converts them back to &lt;code&gt;IFooable&lt;/code&gt; calls, which are then forwarded to our &lt;code&gt;FooImplementation&lt;/code&gt; object. This means that if we wanted to, we could interject a chain of objects between the entwiner and the untwiner, each one of these objects implementing an &lt;code&gt;AnyCall&lt;/code&gt; delegate and invoking another &lt;code&gt;AnyCall&lt;/code&gt; delegate, thus enabling us to perform any conceivable operation upon those invocations without having any built-in knowledge of the &lt;code&gt;IFooable&lt;/code&gt; interface.&lt;/p&gt;
+&lt;p&gt;As the complexity of the interface increases, and as additional subtleties come into the picture, such as parameters passed with ref or out, coding entwiners and untwiners by hand can become very tedious and error-prone, so, obviously, we would like to have it automated.&lt;/p&gt;
+&lt;h3 id=&#34;automating-it-with-reflection&#34;&gt;Automating it with reflection
+&lt;/h3&gt;&lt;p&gt;It is possible to write a general-purpose untwiner that does its job using reflection, but reflection is slow, so the result is going to suffer performance-wise. For the sake of completeness, here is a possible implementation for a general-purpose reflecting untwiner using reflection:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ReflectingUntwiner&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//WARNING: SLOW AS MOLASSES&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;readonly&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Reflection&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MethodInfo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Methodinfos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Constructor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Type&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;twinee&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;Target&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;n&#34;&gt;Methodinfos&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;twinee&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;GetMethods&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BindingFlags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Public&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;n&#34;&gt;BindingFlags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NonPublic&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BindingFlags&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Instance&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;object&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;selector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arguments&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Methodinfos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;selector&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Invoke&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Target&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arguments&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Note that untwiner creation could be optimized by caching the MethodInfos of frequently used types, but that&amp;rsquo;s not the problem; the real bottleneck is the &lt;code&gt;MethodInfo.Invoke()&lt;/code&gt; call. If you put a breakpoint on the target and examine the stack, you will see that between the &lt;code&gt;AnyCall&lt;/code&gt; frame and the target frame there will be a managed-to-native transition and a native-to-managed transition, which is something to be avoided at all costs.&lt;/p&gt;
+&lt;p&gt;Also note: it is impossible to write a reflecting entwiner.&lt;/p&gt;
+&lt;h3 id=&#34;automating-it-with-intertwine&#34;&gt;Automating it with Intertwine
+&lt;/h3&gt;&lt;p&gt;The Intertwine library will automatically generate for us a pair of optimally-performing entwiner and untwiner classes for any interface. These classes are generated at runtime, so no extra build step is needed. To accomplish this, the C# implementation of Intertwine generates MSIL and creates assemblies from it; the Java Implementation generates bytecode and creates classes from it.&lt;/p&gt;
+&lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an entwiner:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NewEntwiner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;anycall&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For &lt;code&gt;T&lt;/code&gt; we give the type of our interface, and for &lt;code&gt;anycall&lt;/code&gt; we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given &lt;code&gt;AnyCall&lt;/code&gt; instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our &lt;code&gt;AnyCall&lt;/code&gt; delegate.&lt;/p&gt;
+&lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an untwiner:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;NewUntwiner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;target&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;For target we give an implementation of our interface, and what we get is a reference to an &lt;code&gt;AnyCall&lt;/code&gt; delegate implemented by an Untwiner-derived class that was dynamically generated specifically for our interface, and instantiated to work with the given target instance. For every call received through the &lt;code&gt;AnyCall&lt;/code&gt; delegate, this special untwiner will be unmarshalling the arguments and forwarding the call to the appropriate method of our target interface.&lt;/p&gt;
+&lt;p&gt;So, with the dynamically generated entwiners and untwiners we can now do the following epicness:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Run3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;FooImplementation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;AnyCall&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;untwiner&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intertwine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Factory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NewUntwiner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fooable&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;entwiner&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intertwine&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Factory&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;NewEntwiner&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;IFooable&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;untwiner&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;InvokeFoo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;entwiner&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The actual implementation of &lt;code&gt;Intertwine.Factory&lt;/code&gt; is pretty straightforward, so there is not much to talk about. As one might expect, the generated types are cached. A static factory method is generated with each generated type, for instantiating the type, so as to avoid having to call &lt;code&gt;Activator.CreateInstance()&lt;/code&gt;, because that method uses reflection. The static factory method is invoked using &lt;code&gt;Delegate.Invoke()&lt;/code&gt;, which does not use reflection. You will find the code-generating code choke-full of comments, explaining exactly what each emitted opcode does.&lt;/p&gt;
+&lt;p&gt;Intertwine for C#:
+&lt;a class=&#34;external&#34; 
+   href=&#34;https://github.com/mikenakis/IntertwineCSharp&#34; target=&#34;_blank&#34;
+   &gt;https://github.com/mikenakis/IntertwineCSharp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Intertwine for Java:
+&lt;a class=&#34;external&#34; 
+   href=&#34;https://github.com/mikenakis/Public/tree/master/intertwine&#34; target=&#34;_blank&#34;
+   &gt;https://github.com/mikenakis/Public/tree/master/intertwine&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;appendix-an-example-interface-multicasts-events-in-c&#34;&gt;Appendix: An example: Interface multicasts (events) in C#
+&lt;/h3&gt;&lt;p&gt;If you are still with me you may be thinking that it is about time for a demonstration. What follows is not just an example, but actually a complete and useful application of intertwine which you may be able to start utilizing in your projects right away.&lt;/p&gt;
+&lt;p&gt;The C# language has built-in support for multicasts (events) but only delegates can be used as event observers. There are many cases, however, where interfaces would be more suitable. Java does not even have built-in support for multicasts, so programmers generally have to write their own, using single-method (functional) interfaces. In either language, if you want to achieve multicasting on multi-method interfaces, you have to rewrite the multicasting code for every single method of every single interface.&lt;/p&gt;
+&lt;p&gt;Consider the following interface:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;ITableNotification&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RowInserted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Fields&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fields&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RowDeleted&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;RowUpdated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Key&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Fields&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fields&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;And consider the following hypothetical (not actually possible) way of using it:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;event&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ITableNotification&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tableNotificationEvent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tableNotificationEvent&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;my_observer&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tableNotificationEvent&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RowUpdated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fields&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The above does not work because events in C# work only with delegates, not with interfaces. However, with Intertwine, the next best thing is actually possible:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;tableNotificationEventManager&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;InterfaceEventManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ITableNotifcation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tableNotificationEventManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Source&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RegisterObserver&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;my_observer&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;tableNotificationEventManager&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Trigger&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;RowUpdated&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fields&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;This approach is self-explanatory, and the amount of code you have to write in order to use it is optimal; you do not need to deal with anything more than what is necessary, and if you ever add a notification, it will be a new interface method, so all existing implementations of that interface will automatically be flagged by the compiler as incomplete. With the help of Intertwine, this event manager is implemented in just 150 lines of code, including extensive comments.&lt;/p&gt;
+&lt;h3 id=&#34;end-notes&#34;&gt;End-notes
+&lt;/h3&gt;&lt;p&gt;Back in 2011 I posted a question on stackoverflow.com, titled &lt;a class=&#34;external&#34; 
+   href=&#34;https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing&#34; target=&#34;_blank&#34;
+   &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
+&lt;p&gt;This post supersedes the original post from 2011: &lt;a 
+   href=&#34;//localhost:1313/p/intertwine-normalizing-interface-invocations/&#34;
+   &gt;Intertwine: Normalizing Interface Invocations&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>Bathyscaphe</title>
+        <link>//localhost:1313/p/bathyscaphe/</link>
+        <pubDate>Tue, 19 Apr 2022 10:54:08 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/bathyscaphe/</guid>
+        <description>&lt;p&gt;![[media/bathyscaphe-logo.svg]]&lt;/p&gt;
+&lt;h2 id=&#34;abstract&#34;&gt;Abstract
+&lt;/h2&gt;&lt;p&gt;This article introduces Bathyscaphe, an open-source java library that you can use to assert that your objects are immutable and/or thread-safe.&lt;/p&gt;
+&lt;h2 id=&#34;the-problem&#34;&gt;The problem
+&lt;/h2&gt;&lt;p&gt;Programmers all over the world are embracing immutability more and more; however, mutation is still a thing, and in all likelihood will continue being a thing for as long as there will be programmers. In a world where both mutable and immutable objects exist side by side, there is often a need to ascertain that an object is of the immutable variety before proceeding to use it for certain purposes. For example, when an object is used as a key in a hash map, it better be immutable, or else the hash code of the key may change, causing the map to severely malfunction.&lt;/p&gt;
+&lt;p&gt;Furthermore, when an object is not immutable, there is often the need to ascertain that it is at least thread-safe before sharing it between threads, otherwise there will be race conditions, with catastrophic results.&lt;/p&gt;
+&lt;p&gt;Note that when any of the above goes wrong, it tends to be a bug which is very difficult to troubleshoot.&lt;/p&gt;
+&lt;p&gt;Unfortunately, assessment of thread safety and immutability is not an easy task. Most don&amp;rsquo;t even consider it, few talk about it, even fewer attempt it. Programmers all over the world are accustomed to routinely using objects in situations where thread-safety and/or immutability are absolute requirements, but without ever ascertaining them, essentially &lt;em&gt;praying&lt;/em&gt; that the objects be thread-safe and/or immutable.&lt;/p&gt;
+&lt;p&gt;As far as I can tell, in the world of the JVM there exist no libraries that will ascertain thread-safety. As for immutability, there are some that purport to do so, but Judging by how marginal status these libraries have in the greater technology landscape, they are not being put into much use. This is not surprising, because they rely exclusively on static analysis, which does not really solve the problem, as I will show.&lt;/p&gt;
+&lt;h2 id=&#34;introducing-bathyscaphe&#34;&gt;Introducing Bathyscaphe
+&lt;/h2&gt;&lt;p&gt;Bathyscaphe aims to give the Java world another chance at addressing the problem of thread-safety and immutability assessment instead of letting it linger on like a chronic ailment. Bathyscaphe is really easy to use, and produces correct and useful results. It is also very small:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The JAR file is only about 100 kilobytes.&lt;/li&gt;
+&lt;li&gt;Setting aside the test module, which necessarily depends on JUnit, Bathyscaphe does not have any dependencies outside the Java Runtime Environment. Let me repeat this: Bathyscaphe. Has. No. Dependencies. It depends on nothing. When you include Bathyscaphe in a project, you are including its tiny JAR file and nothing else.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;why-existing-solutions-do-not-work&#34;&gt;Why existing solutions do not work
+&lt;/h2&gt;&lt;p&gt;Oftentimes we can tell whether an object is mutable or immutable just by looking at its class, and indeed there exist static analysis tools that examine classes and classify them as either mutable or immutable. The widespread understanding is that once a class has been classified, all instances of that class can receive the same classification. However, in many cases it is not enough to just look at the class to determine immutability; instead, it is necessary to examine each and every instance of the class at runtime. When static analysis tools assess such classes, they yield results that are erroneous, or in the best case useless.&lt;/p&gt;
+&lt;p&gt;Examples where static analysis &lt;em&gt;&lt;strong&gt;does not&lt;/strong&gt;&lt;/em&gt; work and &lt;strong&gt;cannot&lt;/strong&gt; work:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Static analysis does not work when a class contains a field which is final, receives its value from a constructor parameter, and the type of the field is an interface or a non-final class. Static analysis can determine that the field itself will not mutate, but has no way of knowing whether the value referenced by the field can mutate.
+&lt;ul&gt;
+&lt;li&gt;In order to err on the safe side, static analysis tools tend to assess
+classes containing such fields as mutable, but this is arbitrary, and it
+constitutes a false negative when the field is in fact initialized with an
+immutable value.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Static analysis does not work when a class is an unmodifiable collection of elements, where the elements can be of any type. The most famous examples in this category are the JDK-internal classes &lt;code&gt;java.util.ListN&lt;/code&gt; and &lt;code&gt;java.util.List12&lt;/code&gt;, instances of which are returned by &lt;code&gt;java.util.List.of()&lt;/code&gt; and its overloads.
+&lt;ul&gt;
+&lt;li&gt;Some static analysis tools assess such classes as immutable, which can be
+a false positive, e.g. in the case of &lt;code&gt;List.of( new StringBuilder() )&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Some static analysis tools assess such classes as mutable, which can be a
+false negative, e.g. in the case of &lt;code&gt;List.of( 1 )&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Static analysis does not work when a class is &lt;em&gt;&lt;strong&gt;freezable&lt;/strong&gt;&lt;/em&gt;. By this we mean a class whose instances begin life as mutable, and are at some point instructed to transition from being mutable to being immutable. For an explanation as to why freezable classes are important, see related appendix.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the above it follows that in many cases, examining a class is not enough; in these cases, we need to examine each and every instance of the class at runtime. Furthermore, we need to examine not only the instance at hand, but the entire object graph referenced by that instance. In other words, we must not just assess shallow (superficial) immutability, we must assess deep immutability. That&amp;rsquo;s what Bathyscaphe does. And that&amp;rsquo;s why it is called Bathyscaphe.&lt;/p&gt;
+&lt;h2 id=&#34;how-bathyscaphe-works&#34;&gt;How Bathyscaphe Works
+&lt;/h2&gt;&lt;p&gt;In a nutshell, Bathyscaphe uses reflection to examine each field of a class, and recursively the type of each field. If all fields of a class can be conclusively assessed as immutable, then all instances of that class will be assessed as immutable. However, if the actual type of the runtime value of a certain field cannot be known by a static examination of the class, then for each instance of the class at runtime, Bathyscaphe will read the value of the field, obtain the actual type of the value, and recursively assess the type of that value.&lt;/p&gt;
+&lt;p&gt;In most cases Bathyscaphe can determine by itself whether a field is immutable or not; however, in some cases, things are not what they seem to be. For example, lazily initialized fields look mutable, but they are effectively immutable. Bathyscaphe does not attempt to analyze bytecode and detect how a certain field is used; that kind of detective work belongs to the realm of static analysis tools. In such cases, it is necessary to guide Bathyscaphe by using annotations to mark fields that might look mutable but should be considered as immutable.&lt;/p&gt;
+&lt;p&gt;These annotations are essentially claims made by the programmer: Bathyscaphe does not, and cannot, verify the truthfulness of these claims. In this sense, Bathyscaphe does not provide a 100% fool-proof solution, because the programmer may code these annotations wrongly. In the future some synergy between Bathyscaphe and static analysis tools might be achieved, so as to provide 100% fool-proof results, but the benefit of using Bathyscaphe &lt;em&gt;&lt;strong&gt;now&lt;/strong&gt;&lt;/em&gt; lies in the fact that given correct annotations, Bathyscaphe will yield correct and usable results in all cases, whereas static analysis &lt;em&gt;does not&lt;/em&gt; work in all cases and by its nature &lt;em&gt;cannot&lt;/em&gt; work in all cases.&lt;/p&gt;
+&lt;h2 id=&#34;where-to-find-bathyscaphe&#34;&gt;Where to find Bathyscaphe
+&lt;/h2&gt;&lt;p&gt;Bathyscaphe is hosted on GitHub; see &lt;a class=&#34;external&#34; 
+   href=&#34;https://github.com/mikenakis/Bathyscaphe&#34; target=&#34;_blank&#34;
+   &gt;https://github.com/mikenakis/Bathyscaphe&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;appendix-goals-of-bathyscaphe&#34;&gt;Appendix: Goals of Bathyscaphe
+&lt;/h2&gt;&lt;p&gt;I decided to write my own immutability assessment facility with the following
+goals in mind:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I want to be able to write framework-level code such as the following:
+&lt;ul&gt;
+&lt;li&gt;A hash-map which asserts that any and all keys added to it are immutable.&lt;/li&gt;
+&lt;li&gt;A message-passing framework which asserts that every single message that it is asked to deliver is either immutable or at the very least thread-safe.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I want results that are always accurate, meaning that there must be no false positives or false negatives, no compromises, no &amp;ldquo;aiming to cover the majority of use cases&amp;rdquo;. All use cases should be covered, and they should be covered correctly.&lt;/li&gt;
+&lt;li&gt;I want to assess the immutability of objects, not classes, because I have observed that from a certain class we can sometimes construct instances that are mutable, and sometimes construct instances that are immutable. For example, both of the following method calls yield instances of the exact same class, and yet one instance is mutable, while the other instance is immutable:
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;List.of( 1 )&lt;/code&gt; (immutable)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;List.of( new StringBuilder() )&lt;/code&gt; (mutable)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I want to assess the immutability of the entire graph of objects referenced by a certain object, not the immutability of that object alone. In other words, I want deep immutability assessment, as opposed to shallow or superficial immutability assessment.&lt;/li&gt;
+&lt;li&gt;When assessment cannot be achieved in an entirely automatic fashion, (as the case is, for example, with classes that perform lazy initialization,) I want to be able to achieve it by either:
+&lt;ul&gt;
+&lt;li&gt;adding special annotations to certain fields, or&lt;/li&gt;
+&lt;li&gt;adding a manual preassessment (assessment override) for that specific  class.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I want the immutability assessment facility to account for freezable classes. This necessitates the introduction of a special self-assessment interface, so that instances can be asked whether they are immutable or not.&lt;/li&gt;
+&lt;li&gt;When an immutability assertion fails, meaning that an object which I had intended to be immutable has been found to actually be mutable, I want to receive extensive diagnostics in human-readable form, explaining precisely why this happened.&lt;/li&gt;
+&lt;li&gt;I want the immutability assessment library which achieves all this to be attractive to programmers, by being:
+&lt;ul&gt;
+&lt;li&gt;very easy to integrate&lt;/li&gt;
+&lt;li&gt;very easy to use&lt;/li&gt;
+&lt;li&gt;very small&lt;/li&gt;
+&lt;li&gt;having no dependencies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;appendix-non-goals-of-bathyscaphe&#34;&gt;Appendix: Non-goals of Bathyscaphe
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Predicting what code will do.
+&lt;ul&gt;
+&lt;li&gt;That is the job of static analysis tools. Bathyscaphe is meant to issue accurate and useful assessments assuming correctly annotated classes. The correctness of the annotations is a lesser, and largely different problem, which is suitable as the focus of static analysis tools.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Dealing with untrustworthy classes.
+&lt;ul&gt;
+&lt;li&gt;Immutability can always be compromised via reflection, so trying to assess immutability in an environment which is not completely trustworthy is a hopeless endeavor.&lt;/li&gt;
+&lt;li&gt;Therefore, assessment is to be done on a full-trust basis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Dealing with buggy classes.
+&lt;ul&gt;
+&lt;li&gt;If a class promises, either by means of annotations or the self-assessment interface, that it will behave immutably, but in fact it does not, the fault is with that class, not with the immutability assessment facility.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Dealing with inaccessible classes.
+&lt;ul&gt;
+&lt;li&gt;Due to security restrictions, the inner workings of certain JDK classes are inaccessible.&lt;/li&gt;
+&lt;li&gt;Since every single one of those classes can receive a manual preassessment, this is not an issue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Dealing with farcery.
+&lt;ul&gt;
+&lt;li&gt;If we create a subclass of a mutable class and override each mutation method to always throw an exception, do we have a mutable or immutable class in our hands?&lt;/li&gt;
+&lt;li&gt;Some say it is mutable;&lt;/li&gt;
+&lt;li&gt;others say it is immutable;&lt;/li&gt;
+&lt;li&gt;I say it is a farce, and not worth considering.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Performance.
+&lt;ul&gt;
+&lt;li&gt;Immutability assessment can be computationally expensive, but it is only meant to be performed through assertions, so its overhead is to be suffered only on development runs.&lt;/li&gt;
+&lt;li&gt;On production runs, where assertions are supposed to be disabled, the performance penalty of using Bathyscaphe is to be zero.&lt;/li&gt;
+&lt;li&gt;Therefore, performance is not an issue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Non-assertive assessment.
+&lt;ul&gt;
+&lt;li&gt;Non-assertive assessment means yielding an assessment result object which can then be further examined, as opposed to assertive assessment which means either passing the immutability check or throwing an exception.&lt;/li&gt;
+&lt;li&gt;Non-assertive assessment would require publicly exposing the entire assessment hierarchy of Bathyscaphe, which would then make bathyscaphe impossible to refactor without breaking code that is already making use of it.&lt;/li&gt;
+&lt;li&gt;Therefore, non-assertive assessment is not a goal.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Static analysis.
+&lt;ul&gt;
+&lt;li&gt;While it is indeed possible in many cases to conclusively assess a class as mutable or immutable by just looking at the class, in many other cases (and certainly in all &lt;em&gt;interesting&lt;/em&gt; cases) examining the class is not enough, as the example of &lt;code&gt;List.of( 1 )&lt;/code&gt; vs. &lt;code&gt;List.of( new StringBuilder())&lt;/code&gt; demonstrates.&lt;/li&gt;
+&lt;li&gt;Thus, the use of Bathyscaphe as a static analysis tool is not a goal.&lt;/li&gt;
+&lt;li&gt;If you need a static immutability analysis tool for Java, please see &amp;ldquo;MutabilityDetector&amp;rdquo; on github:
+&lt;a class=&#34;external&#34; 
+   href=&#34;https://github.com/MutabilityDetector&#34; target=&#34;_blank&#34;
+   &gt;https://github.com/MutabilityDetector&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;appendix-a-note-on-reference-types&#34;&gt;Appendix: A note on reference types
+&lt;/h3&gt;&lt;p&gt;If you decide to incorporate Bathyscaphe in a project, the first thing you are likely to do is what I did: introduce your own HashMap class which asserts that every key added to it is immutable. In doing so you might discover some bugs in your code, but you will also notice something seemingly strange: Bathyscaphe is preventing you from using reference types as keys, which kind of makes sense because they are in fact mutable, but you have never had any issues with that before, so why is it becoming a problem now?&lt;/p&gt;
+&lt;p&gt;What is happening is that your reference types refrain from overriding &lt;code&gt;equals()&lt;/code&gt; and &lt;code&gt;hashCode()&lt;/code&gt;, so they inherit the reference-equals function and the identity hash-code function from &lt;code&gt;Object&lt;/code&gt;. A reference to an object remains the same regardless of mutations that the object undergoes during its lifetime, and the same holds true for its identity hash-code. This has been allowing you to use reference types as keys in in hash maps, despite the fact that they undergo mutations, but it has only been working by coincidence.&lt;/p&gt;
+&lt;p&gt;Another word for &amp;ldquo;coincidence&amp;rdquo; is &amp;ldquo;accident&amp;rdquo;, and Bathyscaphe is meant to be used precisely in order to avoid accidents, so you cannot keep doing this anymore. From now on, you will have to be using  &lt;code&gt;IdentityHashMap&lt;/code&gt; for reference types, and &lt;code&gt;HashMap&lt;/code&gt; for value types.&lt;/p&gt;
+&lt;h3 id=&#34;appendix-a-note-on-so-called-immutable-collections&#34;&gt;Appendix: A note on so-called immutable collections
+&lt;/h3&gt;&lt;p&gt;When Java 9 introduced the new &lt;code&gt;java.util.List.of()&lt;/code&gt; method and its various overloads, the documentation referred to the objects returned by that method as immutable lists. Specifically, in the Java 9 API docs we read &amp;ldquo;Returns an &lt;em&gt;&lt;strong&gt;immutable&lt;/strong&gt;&lt;/em&gt; list containing one element.&amp;rdquo; Later, the Java people realized that this is inaccurate, so in JDK issue 8191517 hey decided among other things to &amp;ldquo;Adjust terminology to prefer &amp;lsquo;unmodifiable&amp;rsquo; over &amp;lsquo;immutable&amp;rsquo;.&amp;rdquo; Thus, if we look at the documentation today, (for example, in the Java 18 API documentation,) it reads &amp;ldquo;Returns an &lt;em&gt;&lt;strong&gt;unmodifiable&lt;/strong&gt;&lt;/em&gt; list containing one element.&amp;rdquo;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Java 9 API docs: &lt;a class=&#34;external&#34; 
+   href=&#34;https://docs.oracle.com/javase/9/docs/api/java/util/List.html&#34; target=&#34;_blank&#34;
+   &gt;https://docs.oracle.com/javase/9/docs/api/java/util/List.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JDK issue 8191517: &lt;a class=&#34;external&#34; 
+   href=&#34;https://bugs.openjdk.java.net/browse/JDK-8191517&#34; target=&#34;_blank&#34;
+   &gt;https://bugs.openjdk.java.net/browse/JDK-8191517&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Java 18 API docs: &lt;a class=&#34;external&#34; 
+   href=&#34;https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/List.html&#34; target=&#34;_blank&#34;
+   &gt;https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/List.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dropping the word &amp;ldquo;immutable&amp;rdquo; was the right thing to do, because there is no such thing as an immutable collection, at least when type erasure is involved. That&amp;rsquo;s because a collection contains elements, the immutability of which it is in no position to vouch for.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the term &amp;ldquo;unmodifiable&amp;rdquo; is also problematic for describing these collections, because that term already had a meaning before &lt;code&gt;List.of()&lt;/code&gt; was introduced, and the meaning was &amp;ldquo;an unmodifiable-&lt;em&gt;&lt;strong&gt;to-you&lt;/strong&gt;&lt;/em&gt; view
+of &lt;strong&gt;my&lt;/strong&gt; collection, which is still &lt;em&gt;&lt;strong&gt;very mutable&lt;/strong&gt;&lt;/em&gt;, and any mutations I make &lt;em&gt;&lt;strong&gt;will be visible to you&lt;/strong&gt;&lt;/em&gt;.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Luckily, &lt;code&gt;List.of()&lt;/code&gt; does better than that: it returns a list that cannot be modified by anyone. So, I would rather call it &amp;ldquo;unchangeable&amp;rdquo; or &amp;ldquo;superficially immutable&amp;rdquo; to indicate that it falls short of achieving true immutability only in the sense that it cannot guarantee deep immutability.&lt;/p&gt;
+&lt;h3 id=&#34;appendix-a-note-on-assessment-overrides&#34;&gt;Appendix: A note on assessment overrides
+&lt;/h3&gt;&lt;p&gt;An assessment override on an effectively immutable class (for example, on a class which contains a lazily initialized field) is a drastic measure which should be used as seldom as possible. That&amp;rsquo;s because an assessment override is also a blanket measure: it will prevent the immutability assessment facility from ascertaining the immutability of not only the lazily initialized field, but also of all other fields in the class, and in so doing it may hide errors. Assessment overrides should only be used on classes whose source code we do not control, and therefore we cannot annotate on a field-per-field basis.&lt;/p&gt;
+&lt;h3 id=&#34;appendix-freezable-classes&#34;&gt;Appendix: Freezable classes
+&lt;/h3&gt;&lt;p&gt;As a rule, immutable objects tend to be immutable-upon-construction, meaning that any and all objects that they reference must be supplied as constructor parameters. There is, however, an exception: there is a category of objects called &amp;ldquo;freezable&amp;rdquo; which begin their life as mutable, (so that they can undergo complex initialization,) and are at some later moment instructed to transition to being immutable, that is, to &amp;ldquo;freeze&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Freezing happens in-place, it is permanent from the moment it is applied, and it is trivial to implement: all it takes is to set a &lt;code&gt;frozen&lt;/code&gt; field to &lt;code&gt;true&lt;/code&gt;. (A few more things are nice to have, for example assertions ensuring that no mutation methods are invoked once frozen, and splitting the interface of the object in two separate interfaces for mutable and immutable functionality respectively, so that once the object has been frozen, we can forget our reference to the mutable interface and only retain the immutable one.)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Freezing is useful for performance:
+&lt;ul&gt;
+&lt;li&gt;Creating a mutable object, initializing it, and then freezing it performs much better than creating a mutable object, initializing it, and then copying its contents into a freshly allocated immutable object.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Freezing can achieve things that are otherwise hard, or impossible:
+&lt;ul&gt;
+&lt;li&gt;The creation of immutable cyclic graphs requires objects to be mutable while the graph is being constructed, and to become immutable in-place once construction is complete. This problem cannot be solved using the builder pattern, because the builder is bound to run into the same problem: how to construct A with a reference to B when B must be constructed with a reference to A.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To accommodate freezable classes, Bathyscaphe introduces the &lt;code&gt;ImmutabilitySelfAssessable&lt;/code&gt; interface. If a class implements this interface, then Bathyscaphe will be invoking instances of this class to ask them whether they are immutable or not.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: the Bathyscaphe logo, a line drawing of &lt;em&gt;&lt;strong&gt;bathyscaphe Trieste&lt;/strong&gt;&lt;/em&gt; by michael.gr, based on art found at &lt;a class=&#34;external&#34; 
+   href=&#34;https://bertrandpiccard.com/3-generations/jacques-piccard&#34; target=&#34;_blank&#34;
+   &gt;bertrandpiccard.com&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>GitHub project: mikenakis-classdump</title>
+        <link>//localhost:1313/p/github-project-mikenakis-classdump/</link>
+        <pubDate>Sat, 07 Apr 2018 21:28:50 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/github-project-mikenakis-classdump/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/github-project-mikenakis-classdump/media/mikenakis-classdump-512.png&#34;
+	width=&#34;512&#34;
+	height=&#34;512&#34;
+	srcset=&#34;//localhost:1313/p/github-project-mikenakis-classdump/media/mikenakis-classdump-512_hu_27662c5971d41324.png 480w, //localhost:1313/p/github-project-mikenakis-classdump/media/mikenakis-classdump-512_hu_2a44735ad5001a27.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;A command-line utility for dumping the contents of class files.&lt;/p&gt;
+&lt;p&gt;Read the README.md file at &lt;a class=&#34;external&#34; 
+   href=&#34;https://github.com/mikenakis/Public/tree/master/classdump&#34; target=&#34;_blank&#34;
+   &gt;https://github.com/mikenakis/Public/tree/master/classdump&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cover image: The &lt;code&gt;mikenakis-classdump&lt;/code&gt; logo. Based on an image found on the interwebz.&lt;/p&gt;</description>
+        </item>
+        <item>
+        <title>GitHub project: mikenakis-bytecode</title>
+        <link>//localhost:1313/p/github-project-mikenakis-bytecode/</link>
+        <pubDate>Sat, 07 Apr 2018 19:24:50 +0000</pubDate>
+        
+        <guid>//localhost:1313/p/github-project-mikenakis-bytecode/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/github-project-mikenakis-bytecode/media/mikenakis-bytecode.svg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;/p&gt;
+&lt;p&gt;A lightweight framework for manipulating JVM bytecode.&lt;/p&gt;
+&lt;p&gt;Read the README.md file at &lt;a class=&#34;external&#34; 
+   href=&#34;https://github.com/mikenakis/Public/tree/master/bytecode&#34; target=&#34;_blank&#34;
+   &gt;https://github.com/mikenakis/Public/tree/master/bytecode&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cover image: The mikenakis-bytecode Logo, &lt;em&gt;an old-fashioned coffee grinder&lt;/em&gt;, by michael.gr, based on &lt;a class=&#34;external&#34; 
+   href=&#34;https://thenounproject.com/browse/?i=19046&#34; target=&#34;_blank&#34;
+   &gt;original work by Gregory Sujkowski from the Noun Project&lt;/a&gt;. Used under &lt;a class=&#34;external&#34; 
+   href=&#34;https://creativecommons.org/licenses/by/3.0/us/&#34; target=&#34;_blank&#34;
+   &gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

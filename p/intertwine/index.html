@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Abstract A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method normal form and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.\n">
+<title>Intertwine</title>
+
+<link rel='canonical' href='//localhost:1313/p/intertwine/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Intertwine">
+<meta property='og:description' content=" Abstract A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method normal form and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.\n">
+<meta property='og:url' content='//localhost:1313/p/intertwine/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C#' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='software-architecture' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='programming-languages' /><meta property='article:tag' content='papers' /><meta property='article:tag' content='github-projects' /><meta property='article:published_time' content='2022-12-11T16:18:00&#43;00:00'/><meta property='article:modified_time' content='2025-10-23T19:26:45&#43;02:00'/>
+<meta name="twitter:title" content="Intertwine">
+<meta name="twitter:description" content=" Abstract A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method normal form and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#the-problem">The Problem</a></li>
+    <li><a href="#prior-art">Prior Art</a></li>
+    <li><a href="#the-solution">The Solution</a></li>
+    <li><a href="#a-hand-crafted-implementation">A hand-crafted implementation</a></li>
+    <li><a href="#automating-it-with-reflection">Automating it with reflection</a></li>
+    <li><a href="#automating-it-with-intertwine">Automating it with Intertwine</a></li>
+    <li><a href="#appendix-an-example-interface-multicasts-events-in-c">Appendix: An example: Interface multicasts (events) in C#</a></li>
+    <li><a href="#end-notes">End-notes</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/intertwine/">Intertwine</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2022-12-11 Sun 16:18:00 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    13 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/intertwine/media/intertwine-logo.svg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+</p>
+<h3 id="abstract">Abstract
+</h3><p>A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method <em><strong>normal form</strong></em> and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.</p>
+<p>(Useful pre-reading: <a 
+   href="/p/about-these-papers/"
+   >About these papers</a>)</p>
+<h3 id="the-problem">The Problem
+</h3><p>When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:</p>
+<ul>
+<li><strong>Logging:</strong> Recording information about each invocation being made.</li>
+<li><strong>Multicasting:</strong> Delivering a single invocation to multiple recipients.</li>
+<li><strong>Remoting:</strong> Placing invocations across machine boundaries.</li>
+<li><strong>Desynchronization:</strong> Queuing invocations for later execution, possibly on a different thread.</li>
+<li><strong>Synchronization:</strong> Obtaining and holding a lock for the duration of the invocation.</li>
+<li><strong>Transformation:</strong> Converting between invocation formats, e.g. method calls to REST and back.</li>
+</ul>
+<p>Ordinarily, the components doing the invocations are application-specific, and the interfaces between them are also application-specific, but the operators that we want to interject between them are general-purpose, so they need to remain agnostic of the application-specific details of the invocations, in a way analogous to how a general-purpose sorting algorithm is agnostic of the application-specific format of the data it sorts.</p>
+<p>Therefore, we need some way of expressing application-specific invocations in a general-purpose form.</p>
+<h3 id="prior-art">Prior Art
+</h3><ul>
+<li>
+<p><strong>Messages and message-passing:</strong> The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see <a 
+   href="/p/on-messages-and-message-passing/"
+   >On messages and message-passing</a>.</p>
+</li>
+<li>
+<p><strong>Parameterless lambdas:</strong> Application-specific method calls can be wrapped inside parameterless lambdas, and since all parameterless lambdas look the same, they can be handled by general-purpose code which may for example add them to a queue, and later dequeue and invoke them.
+Unfortunately:</p>
+<ul>
+<li>The wrapping of each application-specific method call inside a parameterless lambda must happen at each call site, which is cumbersome and reveals details about the underlying invocation delivery mechanism.</li>
+<li>The evaluation of the parameters that are passed to the application-specific method happens at the moment that the lambda makes the call, not at the moment that the lambda is constructed, which can lead to insidious bugs even if the evaluations have no side-effects. (And <em>woe to you on earth and sea</em> if they do have side-effects.)</li>
+<li>The parameterless lambda completely hides the values of the parameters that are being passed to the application-specific method, as well as the identity of the method being invoked. Thus, parameterless lambdas cannot be used in scenarios that require information about each call being made.</li>
+</ul>
+</li>
+<li>
+<p><strong>Dynamic Proxies:</strong> Both in Java and in C# there exist mechanisms that can be used to convert application-specific invocations to a general-purpose form, but not the other way around. These are <code>java.lang.reflect.Proxy</code> for Java, and various libraries like Castle&rsquo;s and LinFu for C#. The reverse operation can be achieved using reflection, but this involves a round-trip to native-land, which incurs a heavy performance penalty. Furthermore, these mechanisms suffer from additional issues, such as messing with exceptions, doing more work than necessary, etc.</p>
+</li>
+</ul>
+<h3 id="the-solution">The Solution
+</h3><p>In order to be able to perform general-purpose operations on application-specific invocations we need a mechanism for converting application-specific invocations into a general-purpose form and back, so that the operators can act upon the general-purpose form. What follows is a description of such a mechanism, which I call <em><strong>Intertwine</strong></em>.</p>
+<p>Intertwine introduces a general-purpose form for expressing invocations, which is called <em><strong>the normal form of invocations</strong></em>, and is represented by a single method of the following signature:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl">    <span class="n">Object</span> <span class="n">AnyCall</span><span class="p">(</span> <span class="n">MethodKey</span> <span class="n">key</span><span class="p">,</span> <span class="n">Object</span><span class="p">[]</span> <span class="n">arguments</span> <span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>In C#, <code>AnyCall</code> would be a <em>delegate.</em></li>
+<li>In Java, <code>AnyCall</code> would be a <em>single-method interface</em>, otherwise known as a <em>functional interface</em>.</li>
+</ul>
+<p>This method signature represents the fact that every conceivable interface method call can be fully described in terms of:</p>
+<ul>
+<li>A return value, of the common denominator type <code>Object</code>.</li>
+<li>A unique key which identifies which method of the interface is being invoked.</li>
+<li>An array containing arguments, of the common denominator type <code>Object</code>.</li>
+</ul>
+<p>Please note that the method identifier is <code>MethodKey</code> in the Java implementation, but <code>int selector</code> in the C# implementation. This is because the Java implementation was made a considerable time after the C# implementation, and is therefore a bit more advanced.</p>
+<p>The <code>MethodKey</code> used in the Java implementation allows the caller and the callee to unambiguously identify methods even in situations where binary compatibility between the caller and the callee is not guaranteed, and therefore an integer method index does not necessarily refer to the same method on both the caller and the callee.</p>
+<p>The Java implementation of intertwine provides efficient means of converting back and forth between a <code>MethodKey</code> and any of the following:</p>
+<ul>
+<li>The reflection &ldquo;Method&rdquo; object of the method. (This is <code>java.lang.reflect.Method</code> in Java, or <code>System.Reflection.MethodInfo</code> in C#.)</li>
+<li>The string representation of the prototype of the method.</li>
+<li>The zero-based method index of the method.</li>
+</ul>
+<p>The sample code that follows was written for C#, so it uses an <code>int selector</code>  instead of <code>MethodKey key</code>.</p>
+<p>Note:</p>
+<ul>
+<li>For methods of <code>void</code> return type the value returned by AnyCall is unspecified. (It will in all likelihood be <code>null</code>, but nobody should rely on this.)</li>
+<li>Value types (primitives) are boxed and unboxed as necessary.</li>
+<li>Certain features such as the <code>ref</code> and <code>out</code> parameters in C#, receive special handling.</li>
+<li>Other features such as properties, indexers, virtual events, etc. are nothing but syntactic sugar which is implemented using regular method calls under the hood, so they require no special handling.</li>
+</ul>
+<p>So, the problem can now be restated as follows:</p>
+<p>How to convert any interface method invocation to an invocation of an AnyCall method, and how to convert back from an invocation of an AnyCall method to an invocation of the original interface method.</p>
+<p>For this, Intertwine introduces two new concepts: <em><strong>Entwiners</strong></em> and <em><strong>Untwiners</strong></em>.</p>
+<ul>
+<li>An Entwiner of interface <em><strong>T</strong></em> is a class which exposes (implements) interface <em><strong>T</strong></em> and delegates to an instance of <em>AnyCall</em>. It can also be thought of as a <em>normalizer</em> or <em>generalizer</em> or <em>multiplexer.</em></li>
+<li>An Untwiner of interface <em><strong>T</strong></em> is a class which exposes an <em>AnyCall</em> method and delegates to an instance of <em><strong>T</strong></em>. It can also be thought of as a <em>denormalizer</em> or <em>specializer</em> or <em>demultiplexer.</em></li>
+</ul>
+<p>More specifically:</p>
+<ul>
+<li>The entwiner of <em><strong>T</strong></em> does the following:
+<ul>
+<li>Accepts an instance of <code>Anycall</code> as a constructor parameter and stores it in a <code>final</code>/<code>readonly</code> field.</li>
+<li>Implements each method of <em><strong>T</strong></em> as follows:
+<ul>
+<li>Packs the parameters that were passed to the method into an array of <code>Object</code>, performing any boxing necessary.</li>
+<li>Invokes anyCall passing it a key that uniquely identifies the method, and the array of parameters.</li>
+<li>Returns, possibly after unboxing, whatever was returned by the invocation of anyCall.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The untwiner of <em><strong>T</strong></em> performs the opposite and complementary operation of the entwiner, namely:
+<ul>
+<li>Accepts an instance of <em><strong>T</strong></em> as a constructor parameter and stores it in a <code>final</code>/<code>readonly</code> field.</li>
+<li>Implements the <code>anycall</code> method of the <code>Anycall</code> interface as follows:</li>
+<li>It uses the supplied <code>MethodKey</code> to determine which method of  <em><strong>T</strong></em> is being invoked, and for each method it does the
+following:
+<ul>
+<li>Unpacks the parameters from the array of <code>Object</code>, performing any unboxing necessary.</li>
+<li>Invokes the method of <em><strong>T</strong></em>, passing it the unpacked parameters.</li>
+<li>Returns, possibly after boxing, whatever was returned by the method, or <code>null</code> if the method was of <code>void</code> return type.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="a-hand-crafted-implementation">A hand-crafted implementation
+</h3><p>Before we look at the automatic creation of entwiners and untwiners, let us take a look at an example of how we would implement an entwiner and untwiner for a certain interface if we were to do it by hand.</p>
+<p>Let us consider the following interface:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">interface</span> <span class="nc">IFooable</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">Moo</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">Boo</span><span class="p">(</span> <span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">b</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And let us consider the following class implementing that interface:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">FooImplementation</span><span class="p">:</span> <span class="n">IFooable</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">IFooable</span><span class="p">.</span><span class="n">Moo</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">)</span> <span class="p">{</span> <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="s">&#34;i: &#34;</span> <span class="p">+</span> <span class="n">i</span> <span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">IFooable</span><span class="p">.</span><span class="n">Boo</span><span class="p">(</span> <span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">b</span> <span class="p">)</span> <span class="p">{</span> <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="s">&#34;s: &#34;</span> <span class="p">+</span> <span class="n">s</span> <span class="p">+</span> <span class="s">&#34;, b: &#34;</span> <span class="p">+</span> <span class="n">b</span> <span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And then let us consider the following method which invokes the interface:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">void</span> <span class="n">InvokeFoo</span><span class="p">(</span> <span class="n">IFooable</span> <span class="n">fooable</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fooable</span><span class="p">.</span><span class="n">Moo</span><span class="p">(</span> <span class="m">42</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fooable</span><span class="p">.</span><span class="n">Boo</span><span class="p">(</span> <span class="s">&#34;fubar!&#34;</span><span class="p">,</span> <span class="kc">true</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The InvokeFoo method can be directly hooked up to an instance of the implementing class in a completely conventional way as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">void</span> <span class="n">Run1</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IFooable</span> <span class="n">fooable</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FooImplementation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">InvokeFoo</span><span class="p">(</span> <span class="n">fooable</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Now, an entwiner for our IFooable interface could be hand-crafted as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">EntwinerForFooable</span><span class="p">:</span> <span class="n">IFooable</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">readonly</span> <span class="n">AnyCall</span> <span class="n">AnyCall</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Constructor</span><span class="p">(</span> <span class="n">AnyCall</span> <span class="n">anycall</span> <span class="p">)</span> <span class="p">{</span> <span class="n">AnyCall</span> <span class="p">=</span> <span class="n">anycall</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">IFooable</span><span class="p">.</span><span class="n">Moo</span><span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="p">)</span> <span class="p">{</span> <span class="n">AnyCall</span><span class="p">(</span> <span class="m">0</span><span class="p">,</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[]{</span> <span class="n">i</span> <span class="p">}</span> <span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">IFooable</span><span class="p">.</span><span class="n">Boo</span><span class="p">(</span> <span class="kt">string</span> <span class="n">s</span><span class="p">,</span> <span class="kt">bool</span> <span class="n">b</span> <span class="p">)</span> <span class="p">{</span> <span class="n">AnyCall</span><span class="p">(</span> <span class="m">1</span><span class="p">,</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[]{</span> <span class="n">s</span><span class="p">,</span> <span class="n">b</span> <span class="p">}</span> <span class="p">);</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Whereas an untwiner for IFooable could be hand-crafted as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">UntwinerForFooable</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="k">readonly</span> <span class="n">IFooable</span> <span class="n">Target</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">Constructor</span><span class="p">(</span> <span class="n">IFooable</span> <span class="n">target</span> <span class="p">)</span> <span class="p">{</span> <span class="n">Target</span> <span class="p">=</span> <span class="n">target</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">object</span> <span class="n">AnyCall</span><span class="p">(</span> <span class="kt">int</span> <span class="n">selector</span><span class="p">,</span> <span class="kt">object</span><span class="p">[]</span> <span class="n">args</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">switch</span><span class="p">(</span> <span class="n">selector</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="m">0</span><span class="p">:</span> <span class="n">Target</span><span class="p">.</span><span class="n">Moo</span><span class="p">(</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">args</span><span class="p">[</span><span class="m">0</span><span class="p">]</span> <span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">case</span> <span class="m">1</span><span class="p">:</span> <span class="n">Target</span><span class="p">.</span><span class="n">Boo</span><span class="p">(</span> <span class="p">(</span><span class="kt">string</span><span class="p">)</span><span class="n">args</span><span class="p">[</span><span class="m">0</span><span class="p">],</span> <span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="n">args</span><span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="p">);</span> <span class="k">break</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="k">default</span><span class="p">:</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">System</span><span class="p">.</span><span class="n">InvalidOperationException</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>With the above classes, we can now write the following piece of awesomeness:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">void</span> <span class="n">Run2</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IFooable</span> <span class="n">fooable</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FooImplementation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">untwiner</span> <span class="p">=</span> <span class="k">new</span> <span class="n">UntwinerForFooable</span><span class="p">(</span> <span class="n">fooable</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">var</span> <span class="n">entwiner</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EntwinerForFooable</span><span class="p">(</span> <span class="n">untwiner</span><span class="p">.</span><span class="n">AnyCall</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">InvokeFoo</span><span class="p">(</span> <span class="n">entwiner</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Note that <code>Run2()</code> has exactly the same end-result as <code>Run1()</code>, but there is a big difference in what goes on under the hood: all outbound interface method calls from the <code>InvokeFoo</code> function are now arriving at the entwiner, which converts them to <code>AnyCall</code> invocations, which are then forwarded to the untwiner, which converts them back to <code>IFooable</code> calls, which are then forwarded to our <code>FooImplementation</code> object. This means that if we wanted to, we could interject a chain of objects between the entwiner and the untwiner, each one of these objects implementing an <code>AnyCall</code> delegate and invoking another <code>AnyCall</code> delegate, thus enabling us to perform any conceivable operation upon those invocations without having any built-in knowledge of the <code>IFooable</code> interface.</p>
+<p>As the complexity of the interface increases, and as additional subtleties come into the picture, such as parameters passed with ref or out, coding entwiners and untwiners by hand can become very tedious and error-prone, so, obviously, we would like to have it automated.</p>
+<h3 id="automating-it-with-reflection">Automating it with reflection
+</h3><p>It is possible to write a general-purpose untwiner that does its job using reflection, but reflection is slow, so the result is going to suffer performance-wise. For the sake of completeness, here is a possible implementation for a general-purpose reflecting untwiner using reflection:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ReflectingUntwiner</span> <span class="c1">//WARNING: SLOW AS MOLASSES</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">readonly</span> <span class="kt">object</span> <span class="n">Target</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">private</span> <span class="k">readonly</span> <span class="n">System</span><span class="p">.</span><span class="n">Reflection</span><span class="p">.</span><span class="n">MethodInfo</span><span class="p">[]</span> <span class="n">Methodinfos</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="n">Constructor</span><span class="p">(</span> <span class="n">Type</span> <span class="n">twinee</span><span class="p">,</span> <span class="kt">object</span> <span class="n">target</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Target</span> <span class="p">=</span> <span class="n">target</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="n">Methodinfos</span> <span class="p">=</span> <span class="n">twinee</span><span class="p">.</span><span class="n">GetMethods</span><span class="p">(</span> <span class="n">BindingFlags</span><span class="p">.</span><span class="n">Public</span> <span class="p">|</span>
+</span></span><span class="line"><span class="cl">                <span class="n">BindingFlags</span><span class="p">.</span><span class="n">NonPublic</span> <span class="p">|</span> <span class="n">BindingFlags</span><span class="p">.</span><span class="n">Instance</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kt">object</span> <span class="n">AnyCall</span><span class="p">(</span> <span class="kt">int</span> <span class="n">selector</span><span class="p">,</span> <span class="kt">object</span><span class="p">[]</span> <span class="n">arguments</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">Methodinfos</span><span class="p">[</span><span class="n">selector</span><span class="p">].</span><span class="n">Invoke</span><span class="p">(</span> <span class="n">Target</span><span class="p">,</span> <span class="n">arguments</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Note that untwiner creation could be optimized by caching the MethodInfos of frequently used types, but that&rsquo;s not the problem; the real bottleneck is the <code>MethodInfo.Invoke()</code> call. If you put a breakpoint on the target and examine the stack, you will see that between the <code>AnyCall</code> frame and the target frame there will be a managed-to-native transition and a native-to-managed transition, which is something to be avoided at all costs.</p>
+<p>Also note: it is impossible to write a reflecting entwiner.</p>
+<h3 id="automating-it-with-intertwine">Automating it with Intertwine
+</h3><p>The Intertwine library will automatically generate for us a pair of optimally-performing entwiner and untwiner classes for any interface. These classes are generated at runtime, so no extra build step is needed. To accomplish this, the C# implementation of Intertwine generates MSIL and creates assemblies from it; the Java Implementation generates bytecode and creates classes from it.</p>
+<p>The following method of the <code>Intertwine.Factory</code> class creates an entwiner:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="n">T</span> <span class="n">NewEntwiner</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span> <span class="n">AnyCall</span> <span class="n">anycall</span> <span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>For <code>T</code> we give the type of our interface, and for <code>anycall</code> we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given <code>AnyCall</code> instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our <code>AnyCall</code> delegate.</p>
+<p>The following method of the <code>Intertwine.Factory</code> class creates an untwiner:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="n">AnyCall</span> <span class="n">NewUntwiner</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span> <span class="n">T</span> <span class="n">target</span> <span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>For target we give an implementation of our interface, and what we get is a reference to an <code>AnyCall</code> delegate implemented by an Untwiner-derived class that was dynamically generated specifically for our interface, and instantiated to work with the given target instance. For every call received through the <code>AnyCall</code> delegate, this special untwiner will be unmarshalling the arguments and forwarding the call to the appropriate method of our target interface.</p>
+<p>So, with the dynamically generated entwiners and untwiners we can now do the following epicness:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">void</span> <span class="n">Run3</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IFooable</span> <span class="n">fooable</span> <span class="p">=</span> <span class="k">new</span> <span class="n">FooImplementation</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="n">AnyCall</span> <span class="n">untwiner</span> <span class="p">=</span> <span class="n">Intertwine</span><span class="p">.</span><span class="n">Factory</span><span class="p">.</span><span class="n">NewUntwiner</span><span class="p">&lt;</span><span class="n">IFooable</span><span class="p">&gt;(</span> <span class="n">fooable</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">IFooable</span> <span class="n">entwiner</span> <span class="p">=</span> <span class="n">Intertwine</span><span class="p">.</span><span class="n">Factory</span><span class="p">.</span><span class="n">NewEntwiner</span><span class="p">&lt;</span><span class="n">IFooable</span><span class="p">&gt;(</span> <span class="n">untwiner</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">InvokeFoo</span><span class="p">(</span> <span class="n">entwiner</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The actual implementation of <code>Intertwine.Factory</code> is pretty straightforward, so there is not much to talk about. As one might expect, the generated types are cached. A static factory method is generated with each generated type, for instantiating the type, so as to avoid having to call <code>Activator.CreateInstance()</code>, because that method uses reflection. The static factory method is invoked using <code>Delegate.Invoke()</code>, which does not use reflection. You will find the code-generating code choke-full of comments, explaining exactly what each emitted opcode does.</p>
+<p>Intertwine for C#:
+<a class="external" 
+   href="https://github.com/mikenakis/IntertwineCSharp" target="_blank"
+   >https://github.com/mikenakis/IntertwineCSharp</a></p>
+<p>Intertwine for Java:
+<a class="external" 
+   href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank"
+   >https://github.com/mikenakis/Public/tree/master/intertwine</a></p>
+<h3 id="appendix-an-example-interface-multicasts-events-in-c">Appendix: An example: Interface multicasts (events) in C#
+</h3><p>If you are still with me you may be thinking that it is about time for a demonstration. What follows is not just an example, but actually a complete and useful application of intertwine which you may be able to start utilizing in your projects right away.</p>
+<p>The C# language has built-in support for multicasts (events) but only delegates can be used as event observers. There are many cases, however, where interfaces would be more suitable. Java does not even have built-in support for multicasts, so programmers generally have to write their own, using single-method (functional) interfaces. In either language, if you want to achieve multicasting on multi-method interfaces, you have to rewrite the multicasting code for every single method of every single interface.</p>
+<p>Consider the following interface:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">interface</span> <span class="nc">ITableNotification</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">RowInserted</span><span class="p">(</span> <span class="n">Fields</span> <span class="n">fields</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">RowDeleted</span><span class="p">(</span> <span class="n">Key</span> <span class="n">key</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="n">RowUpdated</span><span class="p">(</span> <span class="n">Key</span> <span class="n">key</span><span class="p">,</span> <span class="n">Fields</span> <span class="n">fields</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>And consider the following hypothetical (not actually possible) way of using it:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">event</span> <span class="n">ITableNotification</span> <span class="n">tableNotificationEvent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">tableNotificationEvent</span> <span class="p">+=</span> <span class="n">my_observer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">tableNotificationEvent</span><span class="p">.</span><span class="n">RowUpdated</span><span class="p">(</span> <span class="n">key</span><span class="p">,</span> <span class="n">fields</span> <span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The above does not work because events in C# work only with delegates, not with interfaces. However, with Intertwine, the next best thing is actually possible:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="kt">var</span> <span class="n">tableNotificationEventManager</span> <span class="p">=</span> <span class="k">new</span> <span class="n">InterfaceEventManager</span><span class="p">&lt;</span><span class="n">ITableNotifcation</span><span class="p">&gt;();</span>
+</span></span><span class="line"><span class="cl"><span class="n">tableNotificationEventManager</span><span class="p">.</span><span class="n">Source</span><span class="p">.</span><span class="n">RegisterObserver</span><span class="p">(</span> <span class="n">my_observer</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">tableNotificationEventManager</span><span class="p">.</span><span class="n">Trigger</span><span class="p">.</span><span class="n">RowUpdated</span><span class="p">(</span> <span class="n">key</span><span class="p">,</span> <span class="n">fields</span> <span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This approach is self-explanatory, and the amount of code you have to write in order to use it is optimal; you do not need to deal with anything more than what is necessary, and if you ever add a notification, it will be a new interface method, so all existing implementations of that interface will automatically be flagged by the compiler as incomplete. With the help of Intertwine, this event manager is implemented in just 150 lines of code, including extensive comments.</p>
+<h3 id="end-notes">End-notes
+</h3><p>Back in 2011 I posted a question on stackoverflow.com, titled <a class="external" 
+   href="https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing" target="_blank"
+   >Multiplexing interface method calls into a single delegate and demultiplexing</a> asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.</p>
+<p>This post supersedes the original post from 2011: <a 
+   href="/p/intertwine-normalizing-interface-invocations/"
+   >Intertwine: Normalizing Interface Invocations</a></p>
+<hr>
+<p>Cover image: The Intertwine Logo, by michael.gr</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/c%23/">C#</a>
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/software-architecture/">Software-Architecture</a>
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+            <a href="/tags/programming-languages/">Programming-Languages</a>
+        
+            <a href="/tags/papers/">Papers</a>
+        
+            <a href="/tags/github-projects/">Github-Projects</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-23 Thu 19:26:45 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/testana-a-better-way-of-running-tests/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Testana: A better way of running tests</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/immutability-assessment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Immutability Assessment</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/on-messages-and-message-passing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">On messages and message-passing</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/build-configurations/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Build configurations</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/artificial-code-coverage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Artificial Code Coverage</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Abstract The need is identified for programmatically ascertaining, in languages like C# and Java, the immutability of certain objects used in situations where they are expected to be immutable. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.\n">
+<title>Immutability Assessment</title>
+
+<link rel='canonical' href='//localhost:1313/p/immutability-assessment/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Immutability Assessment">
+<meta property='og:description' content=" Abstract The need is identified for programmatically ascertaining, in languages like C# and Java, the immutability of certain objects used in situations where they are expected to be immutable. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.\n">
+<meta property='og:url' content='//localhost:1313/p/immutability-assessment/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='C#' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='Immutability' /><meta property='article:tag' content='papers' /><meta property='article:published_time' content='2025-06-02T13:16:41&#43;00:00'/><meta property='article:modified_time' content='2025-10-18T02:51:16&#43;02:00'/>
+<meta name="twitter:title" content="Immutability Assessment">
+<meta name="twitter:description" content=" Abstract The need is identified for programmatically ascertaining, in languages like C# and Java, the immutability of certain objects used in situations where they are expected to be immutable. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#superficial-vs-deep-immutability">Superficial vs. Deep Immutability</a></li>
+    <li><a href="#static-analysis">Static Analysis</a></li>
+    <li><a href="#delayed-immutability">Delayed Immutability</a></li>
+    <li><a href="#dynamic-analysis">Dynamic Analysis</a></li>
+    <li><a href="#code-analysis">Code analysis</a></li>
+    <li><a href="#preassessment">Preassessment</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#field-overrides">Field Overrides</a></li>
+    <li><a href="#array-field-overrides">Array Field Overrides</a></li>
+    <li><a href="#elucidation">Elucidation</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/immutability-assessment/">Immutability Assessment</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-06-02 Mon 13:16:41 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    15 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/immutability-assessment/images/diamond.svg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+</p>
+<h2 id="abstract">Abstract
+</h2><p>The need is identified for programmatically ascertaining, in languages like C# and Java, the immutability of certain objects used in situations where they are expected to be immutable. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.</p>
+<p>(Useful pre-reading: <a 
+   href="/p/about-these-papers/"
+   >About these papers</a>)</p>
+<h2 id="the-problem">The Problem
+</h2><p>Raise your hand if you have ever had to troubleshoot a bug that manifested itself in mysterious ways, defied rational explanation, tenaciously evaded detection, made you rage at the absurdity of the observed behavior, and after much weeping and wailing and gnashing of teeth, turned out to be due to one of the following reasons:</p>
+<ol>
+<li>
+<p>Inadvertently mutating an object that has been added as a key in a hash map.</p>
+</li>
+<li>
+<p>Inadvertently mutating an object that has been passed to another thread.</p>
+</li>
+</ol>
+<p>in general:</p>
+<ol start="3">
+<li>One piece of code mutating an object that another piece of code groundlessly assumes that it remains unchanged.</li>
+</ol>
+<p>These mishaps of course happen due to the fact that the objects involved should have been immutable, but they were not. If an object is immutable, nobody can mutate it, and therefore nobody has to <em>assume</em> that it will not change.</p>
+<p>So, could hash maps somehow require that their keys be immutable? Could threads somehow require that objects shared among them be immutable?</p>
+<p>This leads us to the more general question of how to ascertain immutability, which is certainly not an easy task. Most programmers don&rsquo;t even consider it; few talk about it; even fewer attempt it. Programmers all over the world are accustomed to routinely using objects in situations where immutability is an absolute requirement, but without ever ascertaining it, essentially <em>praying</em> that the objects be immutable.</p>
+<h2 id="compiler-enforced-immutability">Compiler-Enforced Immutability
+</h2><p>Inadvertent mutation is not a problem in purely functional programming languages, where there simply is no such thing as mutation. However, most programmers do not use such languages, because they are cumbersome to work with. Most programmers use languages like Java and C#, which are not purely functional, so they allow mutation, and so inadvertent mutation can sometimes happen.</p>
+<p>Java and C# do support a few constructs for defining invariable (final/readonly) class members, but they are woefully inadequate. Systematic compiler support for declaring and requiring immutability would greatly help to reduce the volume of mistakes being made, but nothing like that exists, and even if it did exist, it would not be a panacea, because there are situations where the compiler cannot help.</p>
+<p>Since compiler-enforced immutability is not available, we have to enforce it ourselves, which means that we have to programmatically detect immutability and ascertain it.</p>
+<p>Languages like Java and C# offer full reflection support, so we can examine every field of every type, (static analysis,) and we can even examine the values of fields of instances. (Dynamic analysis.) Furthermore, these languages compile into intermediate code, which is relatively easy to parse and reason about, meaning that we can even analyze executable code if we want to. (More static analysis.)</p>
+<p>So, the question is what to analyze, and how.</p>
+<h3 id="superficial-vs-deep-immutability">Superficial vs. Deep Immutability
+</h3><p>Many classes have the term &ldquo;immutable&rdquo; in their name, but they are only superficially immutable. Take a generic immutable collection or example: <code>ImmutableCollection&lt;T&gt;</code>. Let us trust that it does in fact behave perfectly immutably, and therefore it does, arguably, deserve to be called immutable; let us now ask: would an instance of this class be safe to pass to another thread? The answer is that it depends on the actual type of the generic parameter: If <code>T</code> is immutable, it is safe; but if <code>T</code> is mutable, then it is absolutely not safe.</p>
+<p>So, in order to reap any benefits whatsoever from immutability, it must be deep immutability. Shallow immutability is irrelevant. Please keep this in mind, as it has severe implications in our quest to ascertain the immutability of anything.</p>
+<h3 id="static-analysis">Static Analysis
+</h3><p>The term &ldquo;static analysis&rdquo; refers to examining the code that makes a program, (as written, or as compiled,) but not the state of the program as it runs. Consequently, static analysis can examine the definitions of data structures, but not the actual contents of those data structures during runtime.</p>
+<p>A popular but naïve understanding of immutability is that it is an inherent characteristic of types, and that the instances of the types (i.e. the objects) simply follow suit. According to this understanding, all we need to do is to ascertain that a certain type is immutable, and from that moment on we know that all of its instances are immutable.</p>
+<p>This understanding is not entirely false, but it is very limiting, because it means that only concrete and non-extensible (a.k.a. final, sealed) types can potentially be assessed as immutable: All interfaces must necessarily be considered as mutable, because we have no idea how they may be implemented, and all abstract or simply extensible types must also necessarily be considered as mutable, because we have no idea how they may be extended.</p>
+<p>This poses an insurmountable problem if we wanted to have, say, a queue for exchanging messages between threads, where the messages are organized in a class hierarchy: such a queue would not be able to ascertain the immutability of the messages it handles, because all it knows is the base-most &lsquo;Message&rsquo; class, which is necessarily extensible, and therefore mutable, as far as static analysis can tell.</p>
+<p>Now, consider that many perfectly immutable classes tend to be passed around as interfaces, (e.g. <code>Comparer</code>, <code>Hasher</code>, <code>Predicate</code>, all sorts of stateless converters, etc.) that these interfaces are often stored in fields, and that a field of mutable type makes the class containing that field also mutable. It quickly becomes evident that static analysis can only work in a universe where no abstraction is utilized; however, we do not live in such a universe: we make use of languages like Java and C# precisely because we want the benefits of <em>unlimited</em> abstraction.</p>
+<p>One final nail in the coffin of static analysis is the issue of delayed immutability.</p>
+<h3 id="delayed-immutability">Delayed Immutability
+</h3><p>Some objects begin life as mutable, so that they can undergo some non-trivial initialization, and become immutable later, once initialization is complete. This behavior is necessary when creating cyclic graphs of immutable objects, or when creating an immutable object while loading its contents from some
+external storage. (Alternative terms used by others for this kind of immutability are <em>Freezing</em> and <em>Popsicle immutability</em>.)</p>
+<p>There is no standard way of representing delayed immutability, so let me propose one real quick:</p>
+<p>Let there be a <code>SelfAssessing</code> interface, which is to be implemented by any class that utilizes delayed immutability. This interface is to have just one method, <code>IsImmutable()</code>, which is expected to return <code>false</code> for as long as the object is mutable, and to start returning <code>true</code> once the object becomes immutable.</p>
+<p>Note that static analysis is by nature limited to examining types, but delayed immutability requires invoking a method of an instance of a type. Thus, static analysis completely fails to assess delayed immutability. Furthermore, a delayed immutable may appear as a field in any type, meaning that static analysis fails to assess potentially any type.</p>
+<p>Since static analysis fails in the presence of abstraction and/or delayed immutability, it follows that we have to examine not just types, but also the instances of types in the running software system. This calls for <em>dynamic analysis</em>.</p>
+<h3 id="dynamic-analysis">Dynamic Analysis
+</h3><p>The term &ldquo;dynamic analysis&rdquo; refers to examining various aspects of a software system as it runs. In some cases the aim is to examine the behavior of the software, in other cases (such as the case at hand) it is to examine the data structures it creates. Dynamic analysis may require (and in the case at hand it does require) static analysis as a prerequisite.</p>
+<p>With dynamic analysis we can look past the advertised type of a field, which may be abstract, and obtain the instance stored in the field, (the value of the field,) in order to find out the actual, concrete type of that instance.</p>
+<p>Once we have the concrete type of an instance, we can assess whether it is immutable, and this may involve recursively assessing any instances referenced by that instance. If everything is immutable, then and only then can the containing instance assessed as immutable.</p>
+<p>To make all of this work, we begin with static analysis where we use reflection to examine a type with the goal of giving it one of <em>three</em> possible assessments:</p>
+<ul>
+<li>Mutable</li>
+<li>Immutable</li>
+<li>Inconclusive</li>
+</ul>
+<p>These type assessments are issued as follows:</p>
+<ul>
+<li>The <strong>mutable</strong> type assessment is issued if:
+<ul>
+<li>The type has any fields that are variable, (non-final/non-readonly,) because such fields are mutable no matter what their advertised type (field type) is.</li>
+<li>The type has nothing but invariable fields, but one or more of them is of an advertised type that has received a mutable assessment, because this means that the containing type is not deeply immutable.</li>
+</ul>
+</li>
+<li>The <strong>immutable</strong> type assessment is issued if a type consists exclusively of fields that are both invariable and of an advertised type which has received an immutable assessment.</li>
+<li>The <strong>inconclusive</strong> type assessment is issued if:
+<ul>
+<li>The type is abstract or extensible (non-final/non-sealed.)</li>
+<li>The type is self-assessing.</li>
+<li>The type contains any fields of an advertised type that has in turn received an inconclusive assessment.</li>
+</ul>
+</li>
+</ul>
+<p>Note that the above are <em>type</em> assessments, issued on types, by static analysis alone.</p>
+<p>Every instance of a type that has received a mutable or immutable assessment is in turn mutable or immutable without the need to examine the contents of the instance; however, every instance of a type that has received an inconclusive assessment must be further examined to issue a final assessment for that instance only.</p>
+<ul>
+<li>The value of each field must be obtained from the instance, and assessment must recursively be applied on that value.</li>
+<li>If the type is self-assessing, then the <code>IsImmutable()</code> method must be invoked on the instance, to ask it whether it is immutable or not.</li>
+</ul>
+<p>Both type assessment and instance assessment can be expensive; however, note the following:</p>
+<ol>
+<li>Once a type assessment has been issued, it will never change, so it can be
+cached, and never recomputed again.</li>
+<li>Instance assessments can be requested only from within assertions, meaning
+that they can incur zero runtime overhead on production.</li>
+</ol>
+<p>Note that for static analysis we employed nothing but reflection to examine the fields of a type, and for dynamic analysis we also employed nothing but reflection to examine the values of fields of instances, so no code analysis was necessary. However, for the sake of completeness, let us also take a brief look at code analysis.</p>
+<h3 id="code-analysis">Code analysis
+</h3><p>There is a school of thought according to which the answer to the immutability assessment question lies in analyzing the executable instructions that comprise a type to determine whether any fields are mutated by code outside of the constructor.</p>
+<p>The problem with code analysis is that it is a form of static analysis, so it suffers from the disadvantages of static analysis that were previously explained.</p>
+<p>Suppose that code analysis determines that a type does not mutate any fields outside of its constructor; suppose, however, that the type contains a field of abstract type, which gets initialized from a constructor parameter; is this type mutable or immutable? Obviously, it depends on the concrete type of the instance that will be stored, at runtime, in that field. So, we are back at square one, where static analysis simply does not work in the face of abstraction. Therefore, code analysis is not the answer.</p>
+<p>Code analysis could potentially be useful, as a supplement to dynamic analysis, in the following ways:</p>
+<ul>
+<li>In some cases, a type contains a field which is written by a method other than the constructor. For this to work, the field has to be variable. (Non-final/non-readonly.) Thus, with the use of reflection alone, this type will be assessed as mutable. However, it may be that the method which writes the field makes sure that the field is only written once during the lifetime of the instance, and that it gets written before it is ever read, so it will never appear to mutate as far as external observers can tell. Thus, the type is effectively immutable. It is in theory possible (though not easy) for code analysis to detect that the field is treated in this way, thus allowing the type to be assessed as immutable.</li>
+<li>Sometimes a type contains fields that are only written by the constructor, but the programmer who wrote that type forgot to declare them as invariable (final/readonly) and did not pay attention to the warnings / inspections / analysis messages. If we were to only use reflection, these fields would be considered variable, so the type would in turn be assessed as mutable. Code analysis can detect that the fields are not written outside of the constructor, allowing them to be assessed as invariable, and therefore the type to be assessed as immutable.</li>
+</ul>
+<h3 id="preassessment">Preassessment
+</h3><p>There exist types that would normally receive a mutable assessment, but we know for sure that they are practically immutable. A famous example of such a type, both in Java and in C#, is class <code>String</code>. In such cases, we must be able to <em>preassess</em> the type as immutable, which means to assign an  immutable assessment to the type, without analyzing it.</p>
+<p>Note that preassessment constitutes a promise, and promises can be false. If a type which is actually mutable is mistakenly preassessed as immutable, bad things are bound to happen.</p>
+<h2 id="generic-shallow-preassessment">Generic Shallow Preassessment
+</h2><p>Some generic types are effectively immutable containers. In Java, which uses type erasure, these are essentially containers of elements of type <code>object</code>, so they are by definition inconclusive; however, in C# the type of the generic type argument is known at runtime, so we do better than that. When a generic effectively immutable container type is constructed with an actual type parameter, the immutability of the resulting type depends on the immutability of that parameter:</p>
+<ul>
+<li>If the generic type parameter is a mutable type, then the constructed generic container type is mutable, so instances of that type do not need to be assessed.</li>
+<li>If the generic type parameter is an immutable type, then the constructed generic container type is immutable, so again, instances of that type do not need to be assessed.</li>
+<li>If the generic type parameter is inconclusive, then the constructed generic container type is inconclusive, which means that for every instance of that type, all elements in the container must be assessed.</li>
+</ul>
+<p>In order to be able to assess the elements of a container, the preassessment for the container must include an object known as a <em>deconstructor</em>. Dynamic analysis will be invoking the deconstructor to enumerate the elements contained within each instance of the container, so that each element can be assessed. Deconstructors are generally trivial:</p>
+<ul>
+<li>The deconstructor for collections simply yields all the elements of the collection.</li>
+<li>The deconstructor for maps/dictionaries simply yields all the mappings. (Map entries / key-value pairs.)</li>
+<li>The deconstructor for <code>Lazy&lt;T&gt;</code> simply yields the one and only value contained within the lazy object.</li>
+</ul>
+<p>Preassessment is mainly intended for types that have been defined by others, and thus we cannot modify their source code. For types that we write ourselves, we want a finer level of control: we want to be able to override the assessment of specific fields only, and allow all other fields to be assessed the normal way, to catch situations where we thought that some field was immutable, while in fact assessment of that field shows that it is not immutable. For that, we need <em>field overrides</em>.</p>
+<h3 id="field-overrides">Field Overrides
+</h3><p>Sometimes a field is variable, but we want to promise that we will only vary it in an effectively immutable way. For such cases, there must be an annotation/attribute that we can attach to that field, to indicate that analysis should treat the field as invariable.</p>
+<h3 id="array-field-overrides">Array Field Overrides
+</h3><p>Arrays are by definition mutable in Java and C#, and by extension so is any type that contains an array field, even if the field itself is invariable. If we want to be able to create an immutable type that contains an array field, there must be an annotation/attribute that we can attach to that array field, to indicate that analysis should treat the array itself as invariable.</p>
+<h3 id="elucidation">Elucidation
+</h3><p>Once we have immutability assessment working as described in the preceding sections, a new challenge becomes apparent: sometimes, a data structure that was intended to be immutable will be assessed as mutable due to some tiny programmer mistake. If the data structure is large and complex, it might not be obvious where the mistake is. The programmer will receive a mutable assessment, but will not know why it was given and where to look to find the problem.</p>
+<p>For this reason, every mutable instance assessment must come with a sentence explaining to the programmer why the assessment was issued. Since every mutable instance assessment typically has one or more other assessments that are the reasons that led to it, these sentences will often form entire trees, each sentence being further explained by nested sentences.</p>
+<p>I call this feature elucidation.</p>
+<hr>
+<h2 id="further-reading">Further reading
+</h2><p>Eric Lippert&rsquo;s must-read post about the different kinds of immutability:
+<a class="external" 
+   href="https://ericlippert.com/2007/11/13/immutability-in-c-part-one-kinds-of-immutability/" target="_blank"
+   >Immutability in C# Part One: Kinds of Immutability</a></p>
+<hr>
+<h2 id="appendix">Appendix
+</h2><p>Immutability assessment is awesome, but the more the compiler can do for us, the better.</p>
+<p>Here are some examples of what compilers of (non-purely functional) programming languages could be doing for us in the direction of compiler-enforced immutability:</p>
+<ul>
+<li>A language could support an &lsquo;immutable&rsquo; class modifier, which would require the class to contain only immutable members. An immutable class may not extend a mutable class, and a mutable class may not extend an immutable class. (Although a mutable class may extend a class which has not been marked as immutable, even if that class happens to be immutable.)</li>
+<li>A language could support an &lsquo;immutable&rsquo; modifier for function arguments and for fields, requiring that they may only be assigned from concrete types that are immutable, or from other fields or function arguments that are also immutable.</li>
+<li>A language could support an &lsquo;immutable&rsquo; generic parameter constraint, which would mandate that only immutable types can be used as generic type arguments.</li>
+<li>A language could support a &lsquo;stable&rsquo; field modifier, allowing a mutable field to appear in an immutable class, and acting as a promise that the field will only be mutated in a way which upholds effective immutability.</li>
+<li>A language could support a &lsquo;stable array&rsquo; field modifier for array fields, allowing an array to appear in an immutable class, and acting as a promise that the contents of the array will either not be mutated, or they will only be mutated in a way which upholds effective immutability.</li>
+<li>etc.</li>
+</ul>
+<hr>
+<p>Cover image from <a class="external" 
+   href="https://thenounproject.com/icon/diamond-4452869/" target="_blank"
+   >Oleksandr Panasovskyi from The Noun Project</a></p>
+<hr>
+<p><strong>Scratch</strong></p>
+<p>(Ignore)</p>
+<ul>
+<li>As it turns out, the mutability of value types is largely irrelevant, as explained here:</li>
+</ul>
+<p><a class="external" 
+   href="http://mustoverride.com/tuples%5C_structs/" target="_blank"
+   >Vladimir Sadov: &ldquo;C# Tuples. Why mutable structs?&rdquo;</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+            <a href="/tags/c%23/">C#</a>
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/immutability/">Immutability</a>
+        
+            <a href="/tags/papers/">Papers</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-18 Sat 02:51:16 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/testana-a-better-way-of-running-tests/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Testana: A better way of running tests</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/intertwine/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Intertwine</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/build-configurations/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Build configurations</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/intertwine-normalizing-interface-invocations/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Intertwine: Normalizing Interface Invocations</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/refactoring-strong-vs-weak/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Refactoring: strong vs weak</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

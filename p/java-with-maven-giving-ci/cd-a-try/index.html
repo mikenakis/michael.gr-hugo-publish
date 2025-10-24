@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Please note that this is work in progress. I am still working on it and refining it, as my understanding of it improves.\nI have a set of public repositories on GitHub showcasing my work, (⬀) which is in java with maven. These projects are interdependent, so when you check out one of them, in order to compile and run it you need the binaries of some of the others. You could manually check out all of them and put them in an IDE project, but that&rsquo;s too much work. Solving this problem requires having Continuous Integration &amp; Continuous Deployment (CI/CD) in place, so I decided to try my luck in setting one up using free services only.\n">
+<title>Java with Maven: Giving CI/CD a try</title>
+
+<link rel='canonical' href='//localhost:1313/p/java-with-maven-giving-ci/cd-a-try/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Java with Maven: Giving CI/CD a try">
+<meta property='og:description' content="Please note that this is work in progress. I am still working on it and refining it, as my understanding of it improves.\nI have a set of public repositories on GitHub showcasing my work, (⬀) which is in java with maven. These projects are interdependent, so when you check out one of them, in order to compile and run it you need the binaries of some of the others. You could manually check out all of them and put them in an IDE project, but that&rsquo;s too much work. Solving this problem requires having Continuous Integration &amp; Continuous Deployment (CI/CD) in place, so I decided to try my luck in setting one up using free services only.\n">
+<meta property='og:url' content='//localhost:1313/p/java-with-maven-giving-ci/cd-a-try/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='software-engineering' /><meta property='article:published_time' content='2021-02-10T10:34:45&#43;00:00'/><meta property='article:modified_time' content='2025-10-14T12:23:37&#43;02:00'/>
+<meta name="twitter:title" content="Java with Maven: Giving CI/CD a try">
+<meta name="twitter:description" content="Please note that this is work in progress. I am still working on it and refining it, as my understanding of it improves.\nI have a set of public repositories on GitHub showcasing my work, (⬀) which is in java with maven. These projects are interdependent, so when you check out one of them, in order to compile and run it you need the binaries of some of the others. You could manually check out all of them and put them in an IDE project, but that&rsquo;s too much work. Solving this problem requires having Continuous Integration &amp; Continuous Deployment (CI/CD) in place, so I decided to try my luck in setting one up using free services only.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#setting-up-the-artifact-repository">Setting up the Artifact Repository</a></li>
+        <li><a href="#testing-the-artifact-repository">Testing the Artifact Repository</a></li>
+        <li><a href="#setting-up-the-cicd-provider">Setting up the CI/CD Provider</a></li>
+        <li><a href="#completing-the-configuration">Completing the configuration</a></li>
+        <li><a href="#firing-it-up">Firing it up</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+	
+
+    <div class="article-title-wrapper">
+		<h2 class="article-title">
+			<a href="/p/java-with-maven-giving-ci/cd-a-try/">Java with Maven: Giving CI/CD a try</a>
+		</h2>
+    
+		
+
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2021-02-10 Wed 10:34:45 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>Please note that this is work in progress.  I am still working on it and refining it, as my understanding of it improves.</p>
+<p>I have a set of public repositories on GitHub showcasing my work, (<a class="external" 
+   href="https://github.com/mikenakis" target="_blank"
+   >⬀</a>) which is in java with maven. These projects are interdependent, so when you check out one of them, in order to compile and run it you need the binaries of some of the others. You could manually check out all of them and put them in an IDE project, but that&rsquo;s too much work. Solving this problem requires having Continuous Integration &amp; Continuous Deployment (CI/CD) in place, so I decided to try my luck in setting one up using free services only.</p>
+<p>The process involves three entities:</p>
+<ul>
+<li>
+<p><strong>A Source Repository.</strong>  (Where our source code is hosted.)</p>
+<ul>
+<li>I use <strong>GitHub</strong> for this.</li>
+<li>Possible alternatives:
+<ul>
+<li>GitLab</li>
+<li>BitBucket</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>A CI/CD provider.</strong> (Where the actual CI/CD takes place.)</p>
+<ul>
+<li>I decided to use <strong>CircleCI</strong> for this, but in retrospect it was a bad idea, because it does not support GitLab.</li>
+<li>Possible alternatives:
+<ul>
+<li>GitLab - I want to use it as a source code repository, and I don&rsquo;t want to put all my eggs in one basket, so I don&rsquo;t want to use it for anything else.</li>
+<li>GitHub - I want to use it as a source code repository, and I don&rsquo;t want to put all my eggs in one basket, so I don&rsquo;t want to use it for anything else.</li>
+<li>BitBucket - it is by Atlassian. Need I say more.</li>
+<li>Appveyor - gives various errors like &ldquo;There was an error while trying to complete the current operation. Please contact AppVeyor support.&rdquo; &ndash; Lots of open source projects are using it though, so it might be worth a second try.</li>
+<li>Travis CI - only works with github.</li>
+<li>JFrog - overwhelmingly fancy front page followed by a not particularly fancy user experience once you get past the front page. Once I have registered, there is no way for me to log back in.</li>
+<li>semaphoreci.com - only works with github.</li>
+<li>buddy.works - after you have given them your e-mail address, they tell you that it is free but they require a valid payment method.</li>
+<li>atlassian.com/software/bamboo - it is by Atlassian, need I say more.</li>
+<li>drone.io - not only it works with nothing other than github, they assume that I am using github, which is very annoying.</li>
+<li>octopus.com - registration fails with &ldquo;Please use your work email address.&rdquo;</li>
+<li>buildkite.com - might work; not particularly user friendly.</li>
+<li>codefresh.io - might work; they unnecessarily complicate things with mandatory docker images.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>An Artifact Repository.</strong> (Where the binaries are stored.)</p>
+<ul>
+<li>I found a place called Repsy for this; Repsy is minimalistic, unrefined,
+and they even have bad English on their web site, but it will do for now.</li>
+<li>Possible alternatives:
+<ul>
+<li>GitHub Packages</li>
+<li>GitLab Package Registry</li>
+<li>JFrog Artifactory</li>
+</ul>
+</li>
+</ul>
+<p>We begin with a situation where we already have the Source Repository (GitHub) and we want to set-up the CI/CD Provider (CircleCI) and the Artifact Repository (Repsy).</p>
+</li>
+</ul>
+<h4 id="setting-up-the-artifact-repository">Setting up the Artifact Repository
+</h4><ul>
+<li>Go to Repsy (<a class="external" 
+   href="https://repsy.io" target="_blank"
+   >⬀</a>) and create a free account. The username in this case will be <code>mikenakis</code>.</li>
+<li>Create a public maven repository in Repsy. The repository name in this case is <code>mikenakis-public</code>.</li>
+</ul>
+<h4 id="testing-the-artifact-repository">Testing the Artifact Repository
+</h4><p>Next, we need to make certain changes to our local setup so as to be able to deploy artifacts from within our local Development Environment directly to Repsy, to make sure this works before we even try CI/CD.</p>
+<ul>
+<li>In the maven folder (which is under <code>~/.m2</code> in Linux, <code>%USERPROFILE%\.m2</code> in Windows) create a <code>settings.xml</code> with the following content (or if one already exists, make sure it includes the following content)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;settings&gt;
+</span></span><span class="line"><span class="cl">	&lt;servers&gt;
+</span></span><span class="line"><span class="cl">		&lt;server&gt;
+</span></span><span class="line"><span class="cl">			&lt;id&gt;repsy-mikenakis-public&lt;/id&gt;
+</span></span><span class="line"><span class="cl">			&lt;username&gt;mikenakis&lt;/username&gt; &lt;!-- Repsy username --&gt;
+</span></span><span class="line"><span class="cl">			&lt;password&gt;\*\*\*\*\*\*\*\*&lt;/password&gt; &lt;!-- Repsy password --?
+</span></span><span class="line"><span class="cl">		&lt;/server&gt;
+</span></span><span class="line"><span class="cl">    &lt;/servers&gt;
+</span></span><span class="line"><span class="cl">&lt;settings&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Note:
+<ul>
+<li>The username and password for deploying artifacts into Repsy repositories is the same as the username and password of the Repsy account.</li>
+<li>The password does not have to be included here as plaintext; it can be encrypted. For instructions on how to do that, see <a class="external" 
+   href="https://maven.apache.org/guides/mini/guide-encryption.html" target="_blank"
+   >Apache/ Maven/ Password Encryption (⬀)</a>.</li>
+</ul>
+</li>
+<li>Add the following to each and every <code>pom.xml</code> file that is going to take part in CI/CD:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;repositories&gt;
+</span></span><span class="line"><span class="cl">	&lt;repository&gt;
+</span></span><span class="line"><span class="cl">		&lt;id&gt;repsy-mikenakis-public&lt;/id&gt;
+</span></span><span class="line"><span class="cl">		&lt;url&gt;https://repo.repsy.io/mvn/mikenakis/mikenakis-public&lt;/url&gt;
+</span></span><span class="line"><span class="cl">	&lt;/repository&gt;
+</span></span><span class="line"><span class="cl">&lt;/repositories&gt;
+</span></span><span class="line"><span class="cl">&lt;distributionManagement&gt;
+</span></span><span class="line"><span class="cl">	&lt;repository&gt;
+</span></span><span class="line"><span class="cl">		&lt;id&gt;repsy-mikenakis-public&lt;/id&gt;
+</span></span><span class="line"><span class="cl">		&lt;url&gt;https://repo.repsy.io/mvn/mikenakis/mikenakis-public&lt;/url&gt;
+</span></span><span class="line"><span class="cl">	&lt;/repository&gt;
+</span></span><span class="line"><span class="cl">&lt;/distributionManagement&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>That&rsquo;s it, we should now be able to execute <code>mvn deploy</code> in our local environment and deploy to Repsy.</p>
+<p>Note: in reality I had many problems getting <code>mvn deploy</code> to work, because I have not really been using maven, I have only been using <code>pom.xml</code> files to describe my projects and then letting IntelliJ IDEA handle everything else, and it turns out that IntelliJ IDEA is a lot smarter and a lot more forgiving than maven is.  My <code>pom.xml</code> files needed a lot of re-working to get them to actually work with maven. But that&rsquo;s a different story.</p>
+<h4 id="setting-up-the-cicd-provider">Setting up the CI/CD Provider
+</h4><ul>
+<li>Go to CircleCI (<a class="external" 
+   href="https://circleci.com" target="_blank"
+   >⬀</a>) and create a free account.</li>
+<li>Go to &ldquo;Organization Settings&rdquo; -&gt; &ldquo;Contexts&rdquo; and create a new context; let&rsquo;s call it <code>my-context</code>.</li>
+<li>Add an environment variable to the context with name <code>REPSY_PASS</code> and the value being the password of the Repsy repository.
+<ul>
+<li>This way, our scripts will later have access to our Repsy password without us having to include it in any publicly visible source code. CircleCI promises to take extra measures to make sure that environment variables specified via contexts are never exposed to prying eyes.</li>
+</ul>
+</li>
+<li>Create a CircleCI project which will correspond to one of our source repositories.  The source repository in this case will be <code>bytecode-dump</code>, so the CircleCI project will also be named <code>bytecode-dump</code>.
+<ul>
+<li>As soon as we have created our project, CircleCI slaps us with their configuration editor, which they must think is very cool, and prevents us from going any further. We are not going to bother with it, because it is quite unhelpful, so:</li>
+</ul>
+</li>
+<li>Click the &ldquo;Use Existing Config&rdquo; button.
+<ul>
+<li>A dialog will pop up saying &ldquo;Have you added a config.yml file?&rdquo; and offering a couple of vague options that both seem to be dead ends. You might think you are stuck, but fear not and proceed to the next step.</li>
+</ul>
+</li>
+<li>Select the &ldquo;Start building&rdquo; option.
+<ul>
+<li>CircleCI will complain that there is no configuration, but that&rsquo;s okay, we will take care of it later. At least we can now access the project settings.</li>
+</ul>
+</li>
+<li>Go to &ldquo;Project Settings&rdquo; -&gt; &ldquo;SSH Keys&rdquo; -&gt; &ldquo;Checkout SSH Keys&rdquo;.
+<ul>
+<li>This is not about checking out any SSH keys, this is about specifying keys for CircleCI to be able to checkout.</li>
+</ul>
+</li>
+<li>Click &ldquo;Add Key&rdquo;.
+<ul>
+<li>You might think that you then need to do something with this key, but actually you don&rsquo;t. If you allow a few seconds to pass for the systems to do their magic, and then go to your project on GitHub -&gt; &ldquo;Security&rdquo; -&gt; &ldquo;Settings&rdquo; -&gt; &ldquo;Deploy Keys&rdquo;, you will see that a key will be there, (which though looks entirely different from what CircleCI shows,) and GitHub will say that this key has been added by CircleCI with authorization from you. Whatever. Magic.</li>
+</ul>
+</li>
+</ul>
+<h4 id="completing-the-configuration">Completing the configuration
+</h4><ul>
+<li>Back in our local development environment, in the root directory of our source repository (same level as the <code>pom.xml</code> or parent <code>pom.xml</code>) create a folder called <code>.circleci</code>.</li>
+<li>In the <code>.circleci</code> folder add a file called <code>mvn-settings.xml</code> with the following content:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;settings&gt;
+</span></span><span class="line"><span class="cl">	&lt;servers&gt;
+</span></span><span class="line"><span class="cl">		&lt;server&gt;
+</span></span><span class="line"><span class="cl">			&lt;id&gt;repsy-mikenakis-public&lt;/id&gt;
+</span></span><span class="line"><span class="cl">			&lt;username&gt;mikenakis&lt;/username&gt;
+</span></span><span class="line"><span class="cl">			&lt;password&gt;${REPSY\_PASS}&lt;/password&gt;
+</span></span><span class="line"><span class="cl">		&lt;/server&gt;
+</span></span><span class="line"><span class="cl">	&lt;/servers&gt;
+</span></span><span class="line"><span class="cl">&lt;/settings&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>In the <code>.circleci</code> folder also add a file called <code>config.yml</code> with the following content:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">version: 2.1
+</span></span><span class="line"><span class="cl">workflows:
+</span></span><span class="line"><span class="cl">	my-workflow:
+</span></span><span class="line"><span class="cl">		jobs:
+</span></span><span class="line"><span class="cl">			- build:
+</span></span><span class="line"><span class="cl">				context: my-context
+</span></span><span class="line"><span class="cl">jobs:
+</span></span><span class="line"><span class="cl">	build:
+</span></span><span class="line"><span class="cl">		docker:
+</span></span><span class="line"><span class="cl">			- image: cimg/openjdk:15.0.1
+</span></span><span class="line"><span class="cl">		steps:
+</span></span><span class="line"><span class="cl">			- checkout
+</span></span><span class="line"><span class="cl">			- run: mvn -s .circleci/mvn-settings.xml clean
+</span></span><span class="line"><span class="cl">			- run: mvn -s .circleci/mvn-settings.xml install
+</span></span><span class="line"><span class="cl">			- run: mvn -s .circleci/mvn-settings.xml deploy
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Note that we are supposed to add some additional notation to achieve caching of our maven dependencies, so that they are not all fetched from scratch each time the CI/CD build pipeline runs, but:
+<ul>
+<li>I have not found a definitive description of how to do this;</li>
+<li>A magical incantation that I found somewhere initially seemed to work, but then later it caused problems, so I ditched it, and</li>
+<li>CircleCI should really be automating this in a way which is totally transparent to us.
+So, for now caching will need to wait.</li>
+</ul>
+</li>
+<li>If OpenJDK 15 does not suit you, then you will need to find another docker image, CircleCI has many available. I later switched to JDK 16 with no problems.</li>
+<li>There are 3 separate maven goals so that the <code>clean</code> goal can be easily commented out, and so that if the <code>install</code> goal fails then the <code>deploy</code> goal will not be executed at all. (Otherwise, rumor has it that you might get partial deployments.)</li>
+</ul>
+<h4 id="firing-it-up">Firing it up
+</h4><ul>
+<li>Commit and push to GitHub.</li>
+</ul>
+<p>Once these files have been committed to GitHub, CircleCI will take notice, and it will run our CI/CD pipeline. Do not expect it to run successfully on the first try; there will be errors, and there will be trouble. But once you get it to work successfully, it will be worth the trouble.</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-14 Tue 12:23:37 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/immutability-assessment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Immutability Assessment</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/testana-a-better-way-of-running-tests/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Testana: A better way of running tests</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/solved-maven-deploy-fails-with-status-422-unprocessable-entity/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">[SOLVED] Maven deploy fails with status 422 unprocessable entity</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/intertwine/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Intertwine</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/bathyscaphe/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bathyscaphe</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
