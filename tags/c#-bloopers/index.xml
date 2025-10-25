@@ -9,12 +9,12 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Sun, 12 Oct 2025 22:20:49 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/c%23-bloopers/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>C# Blooper №14: Weird / annoying interface method visibility rules</title>
-        <link>//localhost:1313/p/c%23-blooper-14-weird-/-annoying-interface-method-visibility-rules/</link>
+        <link>//localhost:1313/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/</link>
         <pubDate>Fri, 04 Jan 2013 11:51:30 +0000</pubDate>
         
-        <guid>//localhost:1313/p/c%23-blooper-14-weird-/-annoying-interface-method-visibility-rules/</guid>
+        <guid>//localhost:1313/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/</guid>
         <description>&lt;p&gt;Before reading any further, &lt;a 
-   href=&#34;//localhost:1313/p/csharp-bloopers/&#34;
+   href=&#34;//localhost:1313/post/2012-01-05-csharp-bloopers/&#34;
    &gt;please read the disclaimer&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As it turns out, an explicit interface method implementation in C# must be tied to the base-most interface to which it belongs; it cannot be tied to a descendant interface.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

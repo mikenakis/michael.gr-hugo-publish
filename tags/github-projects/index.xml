@@ -9,11 +9,11 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Thu, 23 Oct 2025 23:01:53 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/github-projects/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Testana: A better way of running tests</title>
-        <link>//localhost:1313/p/testana-a-better-way-of-running-tests/</link>
+        <link>//localhost:1313/post/2024-10-testana/</link>
         <pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate>
         
-        <guid>//localhost:1313/p/testana-a-better-way-of-running-tests/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/testana-a-better-way-of-running-tests/media/testana-logo.svg&#34;
+        <guid>//localhost:1313/post/2024-10-testana/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2024-10-testana/media/testana-logo.svg&#34;
 	
 	
 	
@@ -25,7 +25,7 @@
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A software testing tool is presented, which uses &lt;em&gt;&lt;strong&gt;dependency analysis&lt;/strong&gt;&lt;/em&gt; to greatly optimize the process of running tests.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;what-is-testana&#34;&gt;What is Testana?
 &lt;/h3&gt;&lt;p&gt;Testana is a console application that you launch when you want to run your tests. So far, I have created two implementations of Testana:&lt;/p&gt;
@@ -76,7 +76,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;p&gt;For example, it is very common for a code base to contain a module called &amp;ldquo;Utilities&amp;rdquo;, which most other modules depend on; Since it is a highly dependent-upon module, it should be tested first, but since its name begins with a &amp;ldquo;U&amp;rdquo;, it tends to be tested last.&lt;/p&gt;
 &lt;p&gt;Testana executes test modules in order of dependency. This means that modules with no dependencies are tested first, modules that depend upon them are tested next, and so on until everything has been tested. Thus, the first test failure is guaranteed to point at the most fundamental problem; there is no need to look further down in case some other test failure indicates a more fundamental problem. Subsequently, Testana stops executing tests after the first failure, so it saves even more time.&lt;/p&gt;
 &lt;p&gt;For more information about this way of testing, see &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;why-should-i-care-about-running-test-methods-in-natural-order&#34;&gt;Why should I care about running test methods in natural order?
 &lt;/h3&gt;&lt;p&gt;Test frameworks in the C# world tend to run test methods in natural order, which is great, but in the Java world, the JUnit framework runs test methods in random order, which is at best useless, and arguably treacherous.&lt;/p&gt;
@@ -85,7 +85,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;p&gt;To give an example, suppose I am developing some kind of data store with insert and find functionality, and I am writing tests to make sure this functionality works. The find-item-in-store test necessarily involves insertion before finding, so I am likely to precede it with an insert-item-to-store test. In such a scenario, it is counter-productive to be told that my find-item-in-store test failed, sending me to troubleshoot the find function, and only later to be told that my insert-item-to-store test failed, which obviously means that it was in fact the insert function that needed troubleshooting; if insert-item-to-store fails, it is game over; no other operation on this store can possibly succeed, so there is no point in running any other tests on it, just as there is no point in beating a dead horse.&lt;/p&gt;
 &lt;p&gt;Finally, another very simple, very straightforward, and very important reason for wanting the test methods to be executed in natural order is because seeing the test methods listed in any other order is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;A related rant can be found here: &lt;a 
-   href=&#34;//localhost:1313/p/on-junits-random-order-of-test-method-execution/&#34;
+   href=&#34;//localhost:1313/post/2018-04-random-order-of-tests/&#34;
    &gt;On JUnit&amp;rsquo;s random order of test method execution&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;why-should-i-care-for-running-test-methods-in-ascending-order-of-inheritance&#34;&gt;Why should I care for running test methods in ascending order of inheritance?
 &lt;/h3&gt;&lt;p&gt;This feature of Testana might be irrelevant to you if you never use inheritance in test classes, but I do, and I consider it very important. I also consider the typical behavior of existing test frameworks on this matter very annoying, because they tend to do the exact opposite of what is useful.&lt;/p&gt;
@@ -101,7 +101,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;/h3&gt;&lt;p&gt;No. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, the test of A still has to instantiate both A and B in order to supply A with the I interface of B, so the test depends on both A and B, which means that Testana will run the test if there is a change in either A or B.&lt;/p&gt;
 &lt;h3 id=&#34;can-testana-be-fooled-by-the-use-of-mocks&#34;&gt;Can Testana be fooled by the use of mocks?
 &lt;/h3&gt;&lt;p&gt;Yes, Testana can be fooled by mocks, because that is what mocks do: they make a mockery out of the software testing process. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, and the test of A also refrains from depending on B by just mocking I, Testana will of course not run the test of A when there is a change in B. This, however, should not be a problem, because you should not be using mocks anyway; for more information, see &lt;a 
-   href=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/&#34;
+   href=&#34;//localhost:1313/post/2023-01-14-mocking/&#34;
    &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;can-testana-be-fooled-by-the-use-of-fakes&#34;&gt;Can Testana be fooled by the use of fakes?
 &lt;/h3&gt;&lt;p&gt;No, as long as you do your testing properly. A test that utilizes a fake will be run by Testana only when there is a change in the fake, not when there is a change in the real thing; however, you should have a separate test which ensures that the behavior of the fake is identical to the behavior of the real thing in all aspects that matter. This test will be run by Testana when you modify either the fake, or the real thing, or both. Thus:&lt;/p&gt;
@@ -110,7 +110,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;li&gt;If you make a non-breaking change to the real thing, then the fake will remain unchanged, and this is what gives you the luxury of not having to re-run tests utilizing the fake when you make a change that only affects the real thing.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   href=&#34;//localhost:1313/post/2022-10-testing-with-fakes/&#34;
    &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;what-about-undiscoverable-dependencies-due-to-weak-typing-the-use-of-rest-etc&#34;&gt;What about undiscoverable dependencies due to weak typing, the use of REST, etc?
 &lt;/h3&gt;&lt;p&gt;The following &amp;ldquo;hip&amp;rdquo; and &amp;ldquo;trendy&amp;rdquo; practices of the modern day are not supported by Testana, and there is no plan to ever support them:&lt;/p&gt;
@@ -123,7 +123,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;li&gt;Fragmenting dependencies via &lt;em&gt;&lt;strong&gt;cross-language invocations&lt;/strong&gt;&lt;/em&gt; (following the &lt;em&gt;&lt;strong&gt;polyglot craze&lt;/strong&gt;&lt;/em&gt;.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Seriously, stop all this fuckery and use a single, &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt; programming language, (that is, a programming language with &lt;em&gt;&lt;strong&gt;strong typing&lt;/strong&gt;&lt;/em&gt;,) encode your dependencies via the type system, and everything will be fine. For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/on-scripting-languages/&#34;
+   href=&#34;//localhost:1313/post/2017-05-on-scripting-languages/&#34;
    &gt;On scripting languages&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;how-compatible-is-testana-with-what-i-already-have&#34;&gt;How compatible is Testana with what I already have?
 &lt;/h3&gt;&lt;ul&gt;
@@ -177,11 +177,11 @@ changed file. If you run Testana with &amp;ndash;help it will give you a rundown
         </item>
         <item>
         <title>New GitHub project: VsDebugLogger</title>
-        <link>//localhost:1313/p/new-github-project-vsdebuglogger/</link>
+        <link>//localhost:1313/post/2023-02-09-vs-debug-logger/</link>
         <pubDate>Thu, 09 Feb 2023 10:41:59 +0000</pubDate>
         
-        <guid>//localhost:1313/p/new-github-project-vsdebuglogger/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/new-github-project-vsdebuglogger/media/vs-debug-logger-logo.svg&#34;
+        <guid>//localhost:1313/post/2023-02-09-vs-debug-logger/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-02-09-vs-debug-logger/media/vs-debug-logger-logo.svg&#34;
 	
 	
 	
@@ -198,11 +198,11 @@ changed file. If you run Testana with &amp;ndash;help it will give you a rundown
         </item>
         <item>
         <title>Intertwine</title>
-        <link>//localhost:1313/p/intertwine/</link>
+        <link>//localhost:1313/post/2022-12-intertwine/</link>
         <pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate>
         
-        <guid>//localhost:1313/p/intertwine/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/intertwine/media/intertwine-logo.svg&#34;
+        <guid>//localhost:1313/post/2022-12-intertwine/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-intertwine/media/intertwine-logo.svg&#34;
 	
 	
 	
@@ -214,7 +214,7 @@ changed file. If you run Testana with &amp;ndash;help it will give you a rundown
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;the-problem&#34;&gt;The Problem
 &lt;/h3&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
@@ -232,7 +232,7 @@ changed file. If you run Testana with &amp;ndash;help it will give you a rundown
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a 
-   href=&#34;//localhost:1313/p/on-messages-and-message-passing/&#34;
+   href=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/&#34;
    &gt;On messages and message-passing&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -618,17 +618,17 @@ following:
    href=&#34;https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing&#34; target=&#34;_blank&#34;
    &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
 &lt;p&gt;This post supersedes the original post from 2011: &lt;a 
-   href=&#34;//localhost:1313/p/intertwine-normalizing-interface-invocations/&#34;
+   href=&#34;//localhost:1313/post/2011-10-16-intertwine-normalizing-interface/&#34;
    &gt;Intertwine: Normalizing Interface Invocations&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description>
         </item>
         <item>
         <title>Bathyscaphe</title>
-        <link>//localhost:1313/p/bathyscaphe/</link>
+        <link>//localhost:1313/post/2022-05-bathyscaphe/</link>
         <pubDate>Tue, 19 Apr 2022 10:54:08 +0000</pubDate>
         
-        <guid>//localhost:1313/p/bathyscaphe/</guid>
+        <guid>//localhost:1313/post/2022-05-bathyscaphe/</guid>
         <description>&lt;p&gt;![[media/bathyscaphe-logo.svg]]&lt;/p&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;This article introduces Bathyscaphe, an open-source java library that you can use to assert that your objects are immutable and/or thread-safe.&lt;/p&gt;
@@ -814,14 +814,14 @@ of &lt;strong&gt;my&lt;/strong&gt; collection, which is still &lt;em&gt;&lt;stro
         </item>
         <item>
         <title>GitHub project: mikenakis-classdump</title>
-        <link>//localhost:1313/p/github-project-mikenakis-classdump/</link>
+        <link>//localhost:1313/post/2018-04-github-project-classdump/</link>
         <pubDate>Sat, 07 Apr 2018 21:28:50 +0000</pubDate>
         
-        <guid>//localhost:1313/p/github-project-mikenakis-classdump/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/github-project-mikenakis-classdump/media/mikenakis-classdump-512.png&#34;
+        <guid>//localhost:1313/post/2018-04-github-project-classdump/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2018-04-github-project-classdump/media/mikenakis-classdump-512.png&#34;
 	width=&#34;512&#34;
 	height=&#34;512&#34;
-	srcset=&#34;//localhost:1313/p/github-project-mikenakis-classdump/media/mikenakis-classdump-512_hu_27662c5971d41324.png 480w, //localhost:1313/p/github-project-mikenakis-classdump/media/mikenakis-classdump-512_hu_2a44735ad5001a27.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2018-04-github-project-classdump/media/mikenakis-classdump-512_hu_27662c5971d41324.png 480w, //localhost:1313/post/2018-04-github-project-classdump/media/mikenakis-classdump-512_hu_2a44735ad5001a27.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -839,11 +839,11 @@ of &lt;strong&gt;my&lt;/strong&gt; collection, which is still &lt;em&gt;&lt;stro
         </item>
         <item>
         <title>GitHub project: mikenakis-bytecode</title>
-        <link>//localhost:1313/p/github-project-mikenakis-bytecode/</link>
+        <link>//localhost:1313/post/2018-04-github-project-bytecode/</link>
         <pubDate>Sat, 07 Apr 2018 19:24:50 +0000</pubDate>
         
-        <guid>//localhost:1313/p/github-project-mikenakis-bytecode/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/github-project-mikenakis-bytecode/media/mikenakis-bytecode.svg&#34;
+        <guid>//localhost:1313/post/2018-04-github-project-bytecode/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2018-04-github-project-bytecode/media/mikenakis-bytecode.svg&#34;
 	
 	
 	

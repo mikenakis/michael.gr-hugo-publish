@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="So, since we do software testing, we should quit placing assert statements in production code, right? Let me count the ways in which this is wrong:\n(TL;DR: skip to the paragraph containing a red sentence and read only that.)\n1. Assertions are optional. Each programming language has its own mechanism for enabling or disabling assertions. In languages like C++ and C# there is a distinction between a release build and a debug build, and assertions are generally only enabled in the debug build. Java has a simpler mechanism: there is only one build, but assertions do not execute unless the -enableassertions (-ea for short) option is specified in the command line which started the virtual machine. Therefore, if someone absolutely cannot stand the idea that assertions may be executing in a production environment, they can simply refrain from supplying the -ea option; problem solved.\n">
+<title>Assertions and Testing</title>
+
+<link rel='canonical' href='//localhost:1313/post/2014-09-assertions-and-testing/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Assertions and Testing">
+<meta property='og:description' content="So, since we do software testing, we should quit placing assert statements in production code, right? Let me count the ways in which this is wrong:\n(TL;DR: skip to the paragraph containing a red sentence and read only that.)\n1. Assertions are optional. Each programming language has its own mechanism for enabling or disabling assertions. In languages like C++ and C# there is a distinction between a release build and a debug build, and assertions are generally only enabled in the debug build. Java has a simpler mechanism: there is only one build, but assertions do not execute unless the -enableassertions (-ea for short) option is specified in the command line which started the virtual machine. Therefore, if someone absolutely cannot stand the idea that assertions may be executing in a production environment, they can simply refrain from supplying the -ea option; problem solved.\n">
+<meta property='og:url' content='//localhost:1313/post/2014-09-assertions-and-testing/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='papers' /><meta property='article:published_time' content='2014-09-19T15:27:57&#43;00:00'/><meta property='article:modified_time' content='2025-10-13T02:58:43&#43;02:00'/>
+<meta name="twitter:title" content="Assertions and Testing">
+<meta name="twitter:description" content="So, since we do software testing, we should quit placing assert statements in production code, right? Let me count the ways in which this is wrong:\n(TL;DR: skip to the paragraph containing a red sentence and read only that.)\n1. Assertions are optional. Each programming language has its own mechanism for enabling or disabling assertions. In languages like C++ and C# there is a distinction between a release build and a debug build, and assertions are generally only enabled in the debug build. Java has a simpler mechanism: there is only one build, but assertions do not execute unless the -enableassertions (-ea for short) option is specified in the command line which started the virtual machine. Therefore, if someone absolutely cannot stand the idea that assertions may be executing in a production environment, they can simply refrain from supplying the -ea option; problem solved.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#1-assertions-are-optional">1. Assertions are optional.</a></li>
+    <li><a href="#2-assertions-check-things-that-testing-cannot-and-should-not">2. Assertions check things that testing cannot (and should not.)</a></li>
+    <li><a href="#3-assertions-are-an-excellent-documentation-tool">3. Assertions are an excellent documentation tool.</a></li>
+    <li><a href="#4-assertions-can-catch-errors-in-the-testing-code">4. Assertions can catch errors in the testing code.</a></li>
+    <li><a href="#5-assertions-can-be-more-pertinent-than-testing">5. Assertions can be more pertinent than testing.</a></li>
+    <li><a href="#6-assertions-pinpoint-errors-that-testing-only-broadly-hints-at">6. Assertions pinpoint errors that testing only broadly hints at.</a></li>
+    <li><a href="#7-assertions-reduce-program-complexity">7. Assertions reduce program complexity.</a></li>
+    <li><a href="#8-assertions-help-the-compiler-make-better-sense-of-your-code">8. Assertions help the compiler make better sense of your code.</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#addendum-how-to-use-assertions">Addendum: How to use assertions</a></li>
+    <li><a href="#footnote-1">Footnote 1</a></li>
+    <li><a href="#footnote-2">Footnote 2</a></li>
+    <li><a href="#further-reading">Further reading</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2014-09-assertions-and-testing/">Assertions and Testing</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2014-09-19 Fri 15:27:57 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    16 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <p>So, since we do software testing, we should quit placing <code>assert</code> statements in production code, right? Let me count the ways in which this is wrong:</p>
+<p>(TL;DR: skip to the paragraph containing a red sentence and read only that.)</p>
+<h3 id="1-assertions-are-optional">1. Assertions are optional.
+</h3><p>Each programming language has its own mechanism for enabling or disabling assertions. In languages like C++ and C# there is a distinction between a release build and a debug build, and assertions are generally only enabled in the debug build. Java has a simpler mechanism: there is only one build, but assertions do not execute unless the <code>-enableassertions</code> (<code>-ea</code> for short) option is specified in the command line which started the virtual machine. Therefore, if someone absolutely cannot stand the idea that assertions may be executing in a production environment, they can simply refrain from supplying the <code>-ea</code> option; problem solved.</p>
+<p>(Useful pre-reading:  <a 
+   href="/post/2022-11-about-these-papers/"
+   >About these papers</a>)</p>
+<p>The mere fact that assertions are optional and not even enabled by default should be enough to quench any objections to their use. Now, in order to convince people to start actively using assertions instead of merely not minding if others do, I need to explain why assertions are awesome. This is what the rest of this document sets out to do.</p>
+<h3 id="2-assertions-check-things-that-testing-cannot-and-should-not">2. Assertions check things that testing cannot (and should not.)
+</h3><p>Testing treats (or should be treating) the production code as a black box, ensuring that given specific input, it produces expected results. Assertions, on the other hand, have a white box view of the code, (of course, since they live in it,) so they perform internal checks to make sure that everything is working as expected under the hood. Therefore, the domain of assertions is different from the domain of software testing, so there is a clear need for both.</p>
+<p>If there is any uncertainty as to whether software testing should be taking a black box or a white box approach, let me briefly open up a parenthesis to clarify this one:</p>
+<ol>
+<li>When tests are tied to implementation details of the production code, situations arise where the production code gets refactored or bugs are fixed in it, and as a result the tests break and have to be modified in order to continue passing. I would call this <em>The Fragile Test Problem</em>. To avoid this, tests should be written having in mind nothing but the operational requirements of the software system, so that they only need to be revised in the event of a change in the requirements. (Also see footnote 1.)</li>
+<li>Testing against implementation details of the production code renders the tests non-reusable:
+<ol>
+<li>It should be possible to completely rewrite a piece of production code and then reuse the old tests to make sure that the new code works exactly as the old one did.</li>
+<li>It should be possible to write a test once and have it test multiple different implementations of a system, created by independently working development teams taking different approaches to solving the same problem.</li>
+</ol>
+</li>
+<li>Just as users tend to test software in ways that the developer never thought of, (the well known &ldquo;works for me but always breaks in the hands of the user&rdquo; paradox,) software tests written by developers who maintain an agnostic stance about the inner workings of the production code are likely to test for things that were never considered by those who wrote the production code.</li>
+<li>Yes, of course, black box testing cannot claim that it leaves nothing to chance, and that&rsquo;s precisely why you need assertions!</li>
+</ol>
+<p>Close parenthesis.</p>
+<p>So, each assertion can be seen as a little software test embedded within the software.</p>
+<p>Various techniques that are applicable to software testing are also applicable to assertions. An example of such a technique is the &ldquo;do not fix it unless there is a test for it&rdquo; advice.  When a malfunction is observed in production, which has obviously passed all existing tests, instead of theorizing as to what went wrong and implementing a fix according to the theory, we add a theory-agnostic test against that malfunction, and we observe it failing. Then, we fix the malfunction according to our theory, and we observe the test passing. If the test still does not pass, then our theory was wrong.</p>
+<p>The exact same approach is valid with assertions, with the added benefit that the assertion is a one-liner instead of an entire test. The savings here can be huge, both in terms of work to be done by the programmer, and in terms of total tests execution time, because a test may have to do a lot of work to set up the right conditions for the malfunction to be observed.</p>
+<h3 id="3-assertions-are-an-excellent-documentation-tool">3. Assertions are an excellent documentation tool.
+</h3><p>Unfortunately there is a very prevalent bad habit among software engineers worldwide, the habit of documenting assumptions within comments. This is very bad because:</p>
+<ol>
+<li>Every time the code gets revised, amended or refactored, someone must remember to also update the comments, but this does not always happen. As a result, comments tend to become out of date as the code evolves, their accuracy and relevance eventually deteriorating so much that they come in conflict with what the code actually does.</li>
+<li>No comment ever was, or will ever be, as precise and unambiguous as a piece of code stipulating the same thing.</li>
+<li>Even the most precisely and unambiguously expressed comment is, by its very nature of being a comment, not enforceable in any way.</li>
+</ol>
+<p>So, if you require a certain condition to be met, or if you have a certain assumption which you believe to be true, put your code where your mouth is and back up your claim with an assertion statement. Since assertions are optional, there is no performance penalty, and even if the code is not even once run with assertions enabled, the assertion is still better documentation than a comment, because at the very least, it compiles.</p>
+<h3 id="4-assertions-can-catch-errors-in-the-testing-code">4. Assertions can catch errors in the testing code.
+</h3><p>Sometimes the person coding or maintaining the test code and the person coding or maintaining the production code might have a different understanding of what the operational requirements actually mean. Assertions within the production code help catch any such discrepancies at the earliest point possible, and they show that the production code is the way it is on purpose, and not by accident.</p>
+<h3 id="5-assertions-can-be-more-pertinent-than-testing">5. Assertions can be more pertinent than testing.
+</h3><p>Sometimes the operational requirements are vague on issues on which the software design needs to make specific decisions. If the preferred way of solving a certain problem involves a division by something, then obviously, that something must not be zero, but if the operational requirements say nothing about zero, then the tests might not test for zero, and in any case they cannot be expected to test for zero. The implementation, however, knowing its own limitations, should assert against a zero. Ideally, such an issue of vagueness in the specification would be submitted back to the people responsible for it, and it should receive a definitive answer in the operational requirements document, which should then be translated into an additional test, but these things do not always happen in the real world.</p>
+<h3 id="6-assertions-pinpoint-errors-that-testing-only-broadly-hints-at">6. Assertions pinpoint errors that testing only broadly hints at.
+</h3><p>Consider this scenario: you have a TimeTable object which contains WorkShift objects.  The shifts are stored in an array which is sorted by start time, and binary search is used to answer queries such as which employee is working at a certain time. Now, suppose that you have forgotten to sort the array after an insertion, so the binary search fails.</p>
+<p>All that the failed test will tell you is that it scheduled John to work from 10:00 to 11:00, but a query for who works at 10:30 did not yield anyone. This is not very useful; the bug could be anywhere.</p>
+<p>Proper use of assertions mandates that at the very least, immediately prior to performing a binary search on your array, you should ensure that it meets the requirement for it to be searchable via binary search, that is, to be sorted. So, voila! the assertion immediately discovers the nature of the bug.</p>
+<p>Even better, at the end of each operation on your TimeTable object you can assert that the operation is leaving the object in a valid state, which includes the requirement that this array must be at all times sorted. Thus, you will have an assertion failure at the end of the method which inserted an item to the array but forgot to sort it, pinpointing the bug with great accuracy.</p>
+<p>Now imagine the same happening in an immensely more complicated software system, where a maintenance programmer attempts to make a few small changes without comprehending exactly how the entire system works, and as a result the tests of this system start to fail without any indication as to where the problem might be. Sure, those few altered lines of code broke it, but how? What is wrong? Would it not be nice if the system could tell us what is wrong with it?  Well, assertions help you achieve precisely that: software systems that can very often tell what is wrong with themselves.</p>
+<h3 id="7-assertions-reduce-program-complexity">7. Assertions reduce program complexity.
+</h3><p>The <a class="external" 
+   href="https://en.wikipedia.org/wiki/Time_complexity" target="_blank"
+   >time complexity</a> and <a class="external" 
+   href="https://en.wikipedia.org/wiki/Computational_complexity_theory" target="_blank"
+   >computational complexity</a> of algorithms are subjects which have received extensive study, but most of the code being written on a daily basis all over the planet is not algorithms in an academic sense, so these notions are inapplicable to it. What is pertinent to most code that we regularly write is <em>state complexity</em>, which is a subject that has not received much study yet. I hope that an analytical state complexity algebra will be invented one day, allowing us to accurately calculate the state complexity of any given piece of code, but until then, nothing prevents us from theorizing about it in coarse terms. I hold it as self evident that if you add a variable to a system, the total state complexity of the system is compounded by something akin to the number of bits of that variable multiplied by the total number of statements throughout the system that make use of the value of that variable. If you add an <code>if</code> statement, total system state complexity is compounded by the number of bits of state altered by the body of the <code>if</code> statement, times two for the case that the body of the <code>if</code> statement does not get executed, and therefore the bits do not get altered. From this it should be evident that each time we add the tiniest little something to our program, we are exponentially increasing its state complexity.</p>
+<p>There are only two constructs that I know of which actually reduce program state complexity instead of increasing it. One is the <code>final</code> keyword, and the other is the <code>assert</code> statement. The <code>final</code> keyword makes bits unalterable, thus excluding them from program state. The <code>assert</code> keyword limits the ranges of values that variables may have, thus also reducing the number of bits that participate in program state, and it even goes one step further, eliminating <code>if</code> statements and guaranteeing that certain paths of execution will never be followed.</p>
+<p>So, think about it: every time you code an assertion statement you are actually making your program more simple instead of more complicated.  I believe that this realization alone should be enough to convince anyone that <code>assert</code>, along with <code>final</code>, are literally the most useful constructs that any programmer could ever use.</p>
+<h3 id="8-assertions-help-the-compiler-make-better-sense-of-your-code">8. Assertions help the compiler make better sense of your code.
+</h3><p>Please do try this at home:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="kt">void</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">assert</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you have a reasonable number of warnings enabled, (as any decent programmer would,) your compiler should issue a warning telling you that the condition <code>x == null</code> is always false. What this demonstrates is that the preceding assertion gave the compiler knowledge of the fact that <code>x</code> cannot be null, and the compiler is now making use of this knowledge as it compiles the rest of your method, pointing out to you potential flaws in your reasoning. Furthermore, some compilers perform useful optimizations based on knowledge that they gather from assertion statements. (I do not know to what extent java compilers do that, but I know for a fact that the Microsoft Visual C++ compiler does it; see footnote 2.)</p>
+<h3 id="conclusion">Conclusion
+</h3><p>Test code should always be treating production code as a black box, and knowledge of the inner workings of the production code should be used at most as a hint for testing, never as an instrument for testing. Consequently, assertions are necessary for performing white box tests within the production code so as to ensure that absolutely nothing is left to chance.</p>
+<p>Additionally, assertions help document the code, reduce its complexity, strengthen it against assumptions made by the testing code, and help build systems that, in the event of an error, can tell you what is wrong with themselves.</p>
+<p>The fact that assertions are usually disabled on deployed systems means that their use can be thought of as incurring a zero performance penalty, which <strong>allows programmers to develop a maximalistic error-checking culture</strong> of having every single assumption always checked, never leaving anything to chance. By contrast, runtime checks always incur a performance penalty, and for this reason programmers tend to use them on a minimalistic, &ldquo;only if necessary&rdquo; basis. <strong>So, with runtime checks, programmers tend to constantly ask &ldquo;should I check this?&rdquo; while with assertions, they can develop the habit of asking &ldquo;is there anything I forgot to check?&rdquo;</strong> (If there is only one paragraph that you should take home from this paper, that was it.)</p>
+<h3 id="addendum-how-to-use-assertions">Addendum: How to use assertions
+</h3><p>Assertions can be used in every single place where an unexpected exception would otherwise be thrown. This includes all instances of contract violations such as a null pointer exception or an illegal argument exception, and in general, all instances of errors which a) indicate a bug, (should never happen,) and b) cannot be handled in any meaningful way.</p>
+<p>In java the <code>assert</code> keyword cannot throw any exception that you might wish it to throw; it only throws the <code>AssertionError</code> exception. Usually this is not a problem, because no piece of production code should ever try to catch an unexpected exception.  (That is, after all, precisely why it is called unexpected; it is not that the guest may arrive unannounced, it is that he is not supposed to arrive at all.) Therefore, since it is never meant to be caught, <code>AssertionError</code> is, generally speaking, a suitable one-class-fits-all replacement of all unexpected exceptions.</p>
+<p>However, when developing a library, which will be used with assertions presumably enabled at times, you will of course need to have tests which attempt to use your library in various wrong ways, ascertaining that every single one of those attempts gets asserted against, and the problem then with all errors being reported as <code>AssertionError</code>s is that your tests cannot tell whether the error that was caught was the specific error that you were testing for, and not some unrelated coincidental error.  For this reason, when developing libraries, a different approach is needed. One approach is the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="line"><span class="cl"><span class="k">assert</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">0</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">IllegalArgumentException</span><span class="p">(</span><span class="w"> </span><span class="s">&#34;n&#34;</span><span class="w"> </span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>This works nicely because according to the java language specification, the expression at the right hand side of the colon of an assertion statement does not have to be of any particular type, but if it happens to be of an exception type, then it will be treated as the &lsquo;cause&rsquo; of the <code>AssertionError</code> exception. (In all other cases, its <code>toString()</code> will be used as the &lsquo;message&rsquo; of the <code>AssertionError</code> exception.) Thus, your testing code can catch the assertion exception and examine its cause to ensure that it is indeed the expected exception.</p>
+<p>So, your test suite might contain a utility method like the following:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="n">final</span> <span class="p">&lt;</span><span class="n">T</span> <span class="n">extends</span> <span class="n">Throwable</span><span class="p">&gt;</span> <span class="n">T</span> <span class="n">expectException</span><span class="p">(</span> <span class="n">Class</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="n">exceptionClass</span><span class="p">,</span> <span class="n">Runnable</span> <span class="n">runnable</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">runnable</span><span class="p">.</span><span class="n">run</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">catch</span><span class="p">(</span> <span class="n">Throwable</span> <span class="n">throwable</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span> <span class="n">throwable</span> <span class="n">instanceof</span> <span class="n">AssertionError</span> <span class="p">&amp;&amp;</span> <span class="n">throwable</span><span class="p">.</span><span class="n">getCause</span><span class="p">()</span> <span class="p">!=</span> <span class="kc">null</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">throwable</span> <span class="p">=</span> <span class="n">throwable</span><span class="p">.</span><span class="n">getCause</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">        <span class="n">assert</span> <span class="n">exceptionClass</span><span class="p">.</span><span class="n">isInstance</span><span class="p">(</span> <span class="n">throwable</span> <span class="p">)</span> <span class="p">:</span> <span class="n">throwable</span><span class="p">;</span> <span class="c1">//exception of the wrong kind was thrown.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">assert</span> <span class="n">throwable</span><span class="p">.</span><span class="n">getClass</span><span class="p">()</span> <span class="p">==</span> <span class="n">exceptionClass</span> <span class="p">:</span> <span class="n">throwable</span><span class="p">;</span> <span class="c1">//exception thrown was a subclass, but not the exact class, expected.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">@SuppressWarnings</span><span class="p">(</span> <span class="s">&#34;unchecked&#34;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">T</span> <span class="n">result</span> <span class="p">=</span> <span class="p">(</span><span class="n">T</span><span class="p">)</span><span class="n">throwable</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">assert</span> <span class="kc">false</span><span class="p">;</span> <span class="c1">//expected exception was not thrown.</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">//to keep the compiler happy.</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Which might be used as follows:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="n">IllegalArgumentException</span> <span class="n">e</span> <span class="p">=</span> <span class="n">expectException</span><span class="p">(</span> <span class="n">IllegalArgumentException</span><span class="p">.</span><span class="n">class</span><span class="p">,</span> <span class="p">()</span> <span class="p">-&gt;</span> <span class="n">myObject</span><span class="p">.</span><span class="n">foo</span><span class="p">(</span> <span class="m">0</span> <span class="p">)</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">assert</span> <span class="n">e</span><span class="p">.</span><span class="n">getMessage</span><span class="p">().</span><span class="k">equals</span><span class="p">(</span> <span class="s">&#34;n&#34;</span> <span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>There are times when you have the need to check whether assertions are enabled.  For example, in the first thing I always do in my test suites is to make sure that assertions are enabled, because if someone forgot to pass the -ea switch, all tests may pass without checking for a single defect in the code.  Here is how to test whether assertions are enabled in java:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl">    <span class="kd">public</span> <span class="kd">static</span> <span class="n">boolean</span> <span class="n">isAssertEnabled</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//noinspection UnusedAssignment</span>
+</span></span><span class="line"><span class="cl">        <span class="n">boolean</span> <span class="n">assertEnabled</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//noinspection AssertWithSideEffects,NestedAssignment,ConstantConditions</span>
+</span></span><span class="line"><span class="cl">        <span class="n">assert</span> <span class="n">assertEnabled</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//noinspection ConstantConditions</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">assertEnabled</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Note: the <code>//noinspection</code> comments are understood by IntelliJ IDEA; if the misfortune hath befallen thee of having to use some other IDE such as Eclipse, you will have to use some different warning suppression notation.</p>
+<hr>
+<h3 id="footnote-1">Footnote 1
+</h3><p>What makes the Fragile Test Problem especially bad is that the process of fixing tests to make them pass is often carried out under unfavorable conditions, resulting in a sloppy job:</p>
+<ul>
+<li>The programmer needs to switch his frame of mind back and forth between his core work and the somewhat unrelated and usually less exciting context of tests;</li>
+<li>The need for these fixes is usually unforeseen, so time for the fixes is rarely allocated in the schedule, which means that the programmer fixing broken tests is usually in a hurry;</li>
+<li>It is not always clear whether the production code is right and the test is wrong, or whether the test is right and a dormant bug in the production code has been exposed; etc.</li>
+</ul>
+<p>So, what tends to happen is that tests are quite often fixed sloppily, so over time they tend to evolve to &ldquo;test around&rdquo; (specifically pass) long-standing bugs.</p>
+<p>In the preface of Roy Osherove&rsquo;s <em>The Art of Unit Testing</em> (Manning, 2009) the author admits to having participated in a project which failed to a large part due to the tremendous development burden imposed by badly designed unit tests which had to be maintained throughout the duration of the development effort.</p>
+<h3 id="footnote-2">Footnote 2
+</h3><p>In Microsoft Visual C++ the <code>ASSERT(x)</code> macro does not expand to nothing when _DEBUG is undefined; instead, it expands to an <code>assume(x)</code> intrinsic directive which, even though it does not cause any code to be emitted, it allows the asserted expression to survive the preprocessing step and to be considered by the compiler, so that the corresponding optimizations can take place in the release build, too.</p>
+<h3 id="further-reading">Further reading
+</h3><p>Stackoverflow answer by João Manuel Rodrigues
+<a class="external" 
+   href="https://stackoverflow.com/a/49131673/773113" target="_blank"
+   >https://stackoverflow.com/a/49131673/773113</a></p>
+<p>Stackoverflow answer by me
+<a class="external" 
+   href="https://stackoverflow.com/a/27622328/773113" target="_blank"
+   >https://stackoverflow.com/a/27622328/773113</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+            <a href="/tags/papers/">Papers</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-13 Mon 02:58:43 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/post/2025-09-refactoring/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Refactoring: strong vs weak</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2025-06-immutability-assessment/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Immutability Assessment</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2025-06-build-configurations/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Build configurations</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2024-10-testana/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Testana: A better way of running tests</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2024-05-simplification-of-triple-choice-prompts/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Simplification of triple-choice prompts to dual-choice</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

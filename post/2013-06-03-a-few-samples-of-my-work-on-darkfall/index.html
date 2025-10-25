@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="The development of a game like Darkfall Online in a country like Greece was a rather unlikely thing to happen, so I consider myself very lucky that it happened and that I was part of it. Here is the wikipedia page for the game: https://en.wikipedia.org/wiki/Darkfall\nThe funding came from a Greek-Libyan family which has made enough money out of oil-related construction to be able to afford the luxury of investing on something fun, rather than on something with a high ROI, or even a guaranteed ROI. Thus Razorwax, a promising team of Norwegians some of whom were already published in the gaming industry, was brought to Greece to build Darkfall. I was the first Greek programmer hired, and I worked primarily on the GUI of the game. I stayed with the company for about a year after the game was released.\nMe at Aventurine, in 2004. What follows is a rough diagram of the design of the GUI that I built for Darkfall: The graphics engine (written by a colleague in C++) provided me with just two asynchronous primitives, one for drawing textures, and one for drawing text. The layer we called middleware (written by another colleague, also in C++) provided me with the functionality of the &ldquo;GetTextExtents&rdquo; Win32 GDI function, and with an interface to the browser window (encapsulated instances of Microsoft Internet Explorer.)\n">
+<title>A few samples of my work on Darkfall Online</title>
+
+<link rel='canonical' href='//localhost:1313/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="A few samples of my work on Darkfall Online">
+<meta property='og:description' content="The development of a game like Darkfall Online in a country like Greece was a rather unlikely thing to happen, so I consider myself very lucky that it happened and that I was part of it. Here is the wikipedia page for the game: https://en.wikipedia.org/wiki/Darkfall\nThe funding came from a Greek-Libyan family which has made enough money out of oil-related construction to be able to afford the luxury of investing on something fun, rather than on something with a high ROI, or even a guaranteed ROI. Thus Razorwax, a promising team of Norwegians some of whom were already published in the gaming industry, was brought to Greece to build Darkfall. I was the first Greek programmer hired, and I worked primarily on the GUI of the game. I stayed with the company for about a year after the game was released.\nMe at Aventurine, in 2004. What follows is a rough diagram of the design of the GUI that I built for Darkfall: The graphics engine (written by a colleague in C++) provided me with just two asynchronous primitives, one for drawing textures, and one for drawing text. The layer we called middleware (written by another colleague, also in C++) provided me with the functionality of the &ldquo;GetTextExtents&rdquo; Win32 GDI function, and with an interface to the browser window (encapsulated instances of Microsoft Internet Explorer.)\n">
+<meta property='og:url' content='//localhost:1313/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2013-06-03T19:14:11&#43;00:00'/><meta property='article:modified_time' content='2025-10-18T00:42:16&#43;02:00'/>
+<meta name="twitter:title" content="A few samples of my work on Darkfall Online">
+<meta name="twitter:description" content="The development of a game like Darkfall Online in a country like Greece was a rather unlikely thing to happen, so I consider myself very lucky that it happened and that I was part of it. Here is the wikipedia page for the game: https://en.wikipedia.org/wiki/Darkfall\nThe funding came from a Greek-Libyan family which has made enough money out of oil-related construction to be able to afford the luxury of investing on something fun, rather than on something with a high ROI, or even a guaranteed ROI. Thus Razorwax, a promising team of Norwegians some of whom were already published in the gaming industry, was brought to Greece to build Darkfall. I was the first Greek programmer hired, and I worked primarily on the GUI of the game. I stayed with the company for about a year after the game was released.\nMe at Aventurine, in 2004. What follows is a rough diagram of the design of the GUI that I built for Darkfall: The graphics engine (written by a colleague in C++) provided me with just two asynchronous primitives, one for drawing textures, and one for drawing text. The layer we called middleware (written by another colleague, also in C++) provided me with the functionality of the &ldquo;GetTextExtents&rdquo; Win32 GDI function, and with an interface to the browser window (encapsulated instances of Microsoft Internet Explorer.)\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/">A few samples of my work on Darkfall Online</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2013-06-03 Mon 19:14:11 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    14 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <p>The development of a game like <strong>Darkfall Online</strong> in a country like Greece was a rather unlikely thing to happen, so I consider myself very lucky that it happened and that I was part of it.  Here is the wikipedia page for the game: <a class="external" 
+   href="https://en.wikipedia.org/wiki/Darkfall" target="_blank"
+   >https://en.wikipedia.org/wiki/Darkfall</a></p>
+<p>The funding came from a Greek-Libyan family which has made enough money out of oil-related construction to be able to afford the luxury of investing on something fun, rather than on something with a high ROI, or even a guaranteed ROI. Thus <em>Razorwax</em>, a promising team of Norwegians some of whom were already published in the gaming industry, was brought to Greece to build Darkfall.  I was the first Greek programmer hired, and I worked primarily on the GUI of the game. I stayed with the company for about a year after the game was released.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/me-with-darkfall-t-shirt.png"
+	width="500"
+	height="667"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/me-with-darkfall-t-shirt_hu_aad329735c3d052e.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/me-with-darkfall-t-shirt_hu_34798417e23f4af1.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="74"
+		data-flex-basis="179px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Me at Aventurine, in 2004.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>What follows is a rough diagram of the design of the GUI that I built for Darkfall: The graphics engine (written by a colleague in C++) provided me with just two asynchronous primitives, one for drawing textures, and one for drawing text. The layer we called <em>middleware</em> (written by another colleague, also in C++) provided me with the functionality of the &ldquo;GetTextExtents&rdquo; Win32 GDI function, and with an interface to the browser window (encapsulated instances of Microsoft Internet Explorer.)</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/gui_diagram.png"
+	width="699"
+	height="457"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/gui_diagram_hu_d4cf706b22c068e8.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/gui_diagram_hu_9b22a6413b9c6993.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="367px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">A rough diagram of the design of the Darkfall GUI.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>I abstracted these very few and very basic primitives inside a simple <em>Engine Interface Layer</em>, on top of which I built the <em>GUI Framework Layer</em>, which is basically a full-blown general-purpose graphical user interface written in Java, with fixed and resizable windows maintained in a z-order, adorned with borders and captions, supporting both modal and modeless dialogs having controls inside them, offering drag-and-drop functionality, etc.</p>
+<p>I also had to build all the controls that I needed from scratch: push/check/radio buttons, a text edit control, a drop-down list control, a tabbed panel control, a viewport control (adds scrollbars to any other control,) a slider, a progress bar, and even a fully functional tree control, complete with expand/collapse buttons, all of them highly customizable so as to support all of the requirements of Darkfall without actually being Darkfall-specific. The framework layer also interfaced with the input system, which was primarily written by me, partly in Java and partly in C++, interfacing with DirectInput.</p>
+<p>Then, on top of the framework layer I built the Darkfall layer, whose windows and controls extend those of the framework to offer the functionality, the look, and the feel required by Darkfall. This layer is quite extensive, since we are talking about an MMORPG, and it has a massive asynchronous interface with the gamelogic module, written  by colleagues in Java.</p>
+<p>In the following screenshot you can see the most frequently used windows of the Darkfall GUI: starting from the top-right corner and going clockwise: the minimap window, 3 party windows, two chat windows, the backpack, and the hotbar.  The two small windows near the center of the screen are the target info window on the left, and the vital stats window on the right. The crosshair and the free-floating text above the vital stats window are both parts of the transparent HUD component which is child of the desktop.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/full-screen-cluttered-1.png"
+	width="1024"
+	height="768"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/full-screen-cluttered-1_hu_e6510b6b8740a685.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/full-screen-cluttered-1_hu_25835628eefaebcf.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Full-screen view of the game showing a fully <em>cluttered</em> GUI. Click to enlarge.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>When I started working for Darkfall my experience with MMORPGs was very limited, but after a little bit of research I quickly learned one thing: the GUI quite often gets in your way as you are trying to play the game. This was not so much true with <em>Everquest II</em>, but it was quite evident in <em>Horizons</em>. In Darkfall we decided that we should have two modes of play, among which the user should be able to switch by pressing the right mouse button:</p>
+<ul>
+<li><em>Game mode</em>, for interacting with the world, where:
+<ul>
+<li>moving the mouse causes the camera to rotate and the crosshairs to point at things in the world;</li>
+<li>the left mouse button shoots the weapon you are holding;</li>
+</ul>
+</li>
+<li><em>GUI mode</em>, for interacting with the GUI, where:
+<ul>
+<li>moving the mouse causes an arrow pointer to move about the screen;</li>
+<li>the left mouse button performs a standard GUI click.</li>
+</ul>
+</li>
+</ul>
+<p>Therefore, I reasoned, when in Game mode we should automatically get rid of windows that are unnecessary for interacting with the world, and keep on the screen only what&rsquo;s necessary. When the user switches to GUI mode, then the extra GUI windows should automatically appear. When the user switches back to game mode again, those extra windows should automatically disappear.</p>
+<p>Thus, in Darkfall it is possible to play the game like this:</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/full-screen-uncluttered.png"
+	width="1024"
+	height="768"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/full-screen-uncluttered_hu_274a0ecf7357c356.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/full-screen-uncluttered_hu_570e87857db7711.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Full-screen view of the game showing an almost completely <em>uncluttered</em> GUI.  Click to enlarge.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>I called this feature <em>cluttering</em> and <em>uncluttering</em> the GUI, (please excuse my non-native English,) and Claus Grovdal (our lead designer) liked it very much and said that it was a unique feature not quite seen done precisely in this way in any other game.</p>
+<p>I abstracted the mechanism that provides cluttering and uncluttering, and I provided two implementations, one using fading, (the extra windows fade in when going into gui mode and fade out when going to game mode,) and another using animation (the extra windows slide
+from outside the screen
+radially into their positions and out again.) The animating clutterizer was eventually dropped because of frame-rate concerns: it was thought that it would betray a low frame rate much more dramatically than the fading clutterizer would.</p>
+<p>Most windows in the Darkfall GUI have a little button on their border called the <em>sticky</em> button, which selects whether the window will be visible while in game mode or not. There are some exceptions to this, for example the options window never makes sense to show while in game mode, so it does not have a sticky button and it always gets uncluttered.</p>
+<p>What follows is a brief description of just a few of the windows that can be seen in Darkfall.</p>
+<p>The chat window is one of the most frequently used windows of the game, especially if we take into account the fact that MMORPGs are considered by many to be nothing more than <em>&ldquo;chat applications with fancy graphics&rdquo;</em>.  A player can have an arbitrary number of chat windows open, each one of which may have an arbitrary number of chat tabs in it. The buttons on the top-right corner of the window border are, from left to right: a drop-down slider for selecting the transparency of the window, a settings button which opens up a configuration dialog for that chat window, the sticky check-box, and a close button. I built the first version of the chat control, and later a colleague extended it to build the final version which features coloring, droppable item icons, and tooltips.</p>
+<p><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/chat-1.png"
+	width="662"
+	height="312"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/chat-1_hu_5081fc05fde1b322.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/chat-1_hu_ea23363ff2bc3744.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="212"
+		data-flex-basis="509px"
+	
+>
+</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center">Two chat windows.  Click to enlarge.</th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table></div>
+<p>The backpack window contains an instance of the <em>Darkfall Inventory Control</em>. It displays the items that the player is carrying with him. It may contain other containers, (i.e. a bag) which may in turn contain other containers ad infinitum. The percent-bar at the bottom shows how full the backpack is.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/backpack.png"
+	width="382"
+	height="283"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/backpack_hu_e9298c02b1409527.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/backpack_hu_a9f0ec75b87d0d62.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="323px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The backpack window.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Other instances of the inventory control can be found in the bank window, the clan vault window, the vendor trade window, and each one of the two panels of the player trade window. Also, when you double-click on a container like a bag inside your backpack, what opens up is, of course, another inventory window.</p>
+<p>Every item in the Darkfall GUI has an icon, and hovering the mouse over it shows a tooltip window with information about the item. Naturally you can drag-and-drop items between inventory windows, but you can also drop an item into the chat box. When you do that, other players can see the icon of the item, and its corresponding tooltip.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/chat-2.png"
+	width="748"
+	height="267"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/chat-2_hu_1329341c38cf1773.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/chat-2_hu_dd128593676e57b2.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="280"
+		data-flex-basis="672px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">A chat window with an item icon (offered by Corporal Buddy Silvercloud) and its tooltip. Click to enlarge.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>One window which you will <em><strong>not</strong></em> see in Darkfall is the GUI Debug window, because it is only available in the debug build of the game. It contains a tree control which displays the entire window hierarchy of the GUI, from the desktop component (the root)  all the way down to the individual texture components (the leaf nodes) of which everything is comprised. A blinking frame is displayed around the original (unclipped) rectangle of the selected component, (in this case, one of the textures that make up the minimap,) and a tooltip shows extensive information about it. It is very useful for troubleshooting all kinds of issues that may pop up in the GUI during the course of development.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/debug_window.png"
+	width="1030"
+	height="793"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/debug_window_hu_ac114c0122c1c1df.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/debug_window_hu_cf2ca61400a8d51b.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="129"
+		data-flex-basis="311px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The GUI Debug window. Click to enlarge.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>The spells and skills windows also make use of the same tree component, and the fact that they look vastly different is testament to how customizable this component is.</p>
+<p>The following two pictures show the hotbar window. It is a matrix of 10 by 10 placeholders where you can put all your weapons and spells for quick access, and where your currently selected weapon and currently selected spell are displayed. There is a set of key bindings for selecting which one of the 10 columns will be visible, and another set of key bindings for activating one of the 10 items in the currently visible column. In the first picture we can also see a progress overlay which shows that a certain spell is recharging, giving us a visual indication of how long it will take before we can use it again. The second picture shows the fully unfolded view of the hotbar, which is primarily used for dragging and dropping items from other inventory windows and from the spells window.</p>
+<p><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/hotbar.png"
+	width="46"
+	height="448"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/hotbar_hu_3d2c17702b7e8a6c.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/hotbar_hu_ff00321b110c2a33.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="10"
+		data-flex-basis="24px"
+	
+>
+       <img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/hotbar-3.png"
+	width="339"
+	height="445"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/hotbar-3_hu_d576eef7bcf4f840.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/hotbar-3_hu_91a81373d01aba0d.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="76"
+		data-flex-basis="182px"
+	
+>
+</p>
+<p>If you have lots of screen real estate to spare, you can actually play the game with the hotbar unfolded like this, but most people prefer it folded.</p>
+<p>The component shown below is the minimap.  It displays a small fraction of the world around the vicinity of the user, along with points of interest. You can zoom all the way in to 300% or out to 60%.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/minimap_1.png"
+	width="357"
+	height="340"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/minimap_1_hu_586b454e2d7cb1be.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/minimap_1_hu_f17c69497fc06709.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="105"
+		data-flex-basis="252px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The minimap showing a coastline and some points of interest.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>The visible seams between the tiles are caused by imprecision due to scaling, and they are a defect that the game was initially shipped with.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/minimap.png"
+	width="402"
+	height="414"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/minimap_hu_a0705dd79426fee6.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/minimap_hu_47e6108df81c14e6.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="97"
+		data-flex-basis="233px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The minimap with a tooltip showing all items found in the vicinity of the mouse cursor.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Another frequently used window of Darkfall is the so-called <em>Paperdoll Window</em>. It has slots where the player can drop wearable items to wear them.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/paperdoll_1.png"
+	width="326"
+	height="551"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/paperdoll_1_hu_217ffbbd0d24fa1b.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/paperdoll_1_hu_41d20ddcf4716c7e.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="59"
+		data-flex-basis="141px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The Paperdoll window (1 of 2)</td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/paperdoll_2.png"
+	width="330"
+	height="556"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/paperdoll_2_hu_3584a339e27096b3.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/paperdoll_2_hu_471f6ddc3218ee12.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="59"
+		data-flex-basis="142px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The Paperdoll window (2 of 2)</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Another very important component of the Darkfall GUI is the HUD component. It contains the crosshair texture and it shows information about the item or player that is at any given moment pointed at.  Darkfall is unique among MMORPGs in that it takes a first-person-shooter approach, and therefore the crosshair is the player&rsquo;s center of attention most of the time. For this reason, while playing the game I used to keep my targeting component (showing even more information about the targeted item) and my vital stats component (showing my health, my stamina, etc.) very close to the crosshair so as to be able to check their contents without much eye movement.</p>
+<p>In the following picture I have my crosshairs on a rock outcrop; the HUD informs me that the pickaxe can be used on that item, and the target info window gives me more information about it.</p>
+<p><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/targeting_1.png"
+	width="522"
+	height="214"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/targeting_1_hu_bafdcacc931717c5.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/targeting_1_hu_41a2eb1c25e223f9.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="585px"
+	
+>
+</p>
+<p>In the following picture I have my crosshairs on another player, and I can see their rank, the clan they belong to, their name, and their health.  The target info window tells me that the other player is an Alfar Male, in case I had not noticed.</p>
+<p><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/targeting_2.png"
+	width="522"
+	height="214"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/targeting_2_hu_2f11b2484a561ab8.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/targeting_2_hu_2d4b7f949490cd58.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="585px"
+	
+>
+</p>
+<p>This is an underwater view (in a swamp, hence the slimy green color,) where a breath bar is also visible, showing me how much time I have before I must resurface to breathe.  The &ldquo;Description of r_Alfar&rdquo; text in the targeting component shows how unpolished the game was at the time of its release.</p>
+<p><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/breath-bar.png"
+	width="522"
+	height="214"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/breath-bar_hu_4c4b3887cc003b20.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/breath-bar_hu_e86d6cd6b539f52.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="243"
+		data-flex-basis="585px"
+	
+>
+</p>
+<p>The party windows show other members of your party, (if you happen to belong to one,) and their health.</p>
+<p><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/team_windows_1.png"
+	width="688"
+	height="166"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/team_windows_1_hu_98190cca2683c7f0.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/team_windows_1_hu_27040e95a2c405fd.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="414"
+		data-flex-basis="994px"
+	
+>
+</p>
+<p>What is shown above is the first version of the party window, which was kind of wasteful in terms of screen real estate. At some point we sent out a patch which, among other things, made party windows look like this:</p>
+<p><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/team_windows_2.png"
+	width="178"
+	height="47"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/team_windows_2_hu_c3ddd6eda0d80204.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/team_windows_2_hu_16502b2c5a236a75.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="378"
+		data-flex-basis="908px"
+	
+>
+</p>
+<p>Of course this was a description of only a few of the windows found in Darkfall. I also made a multitude of other windows for the game, each with its own unique features and challenges. Those that I can remember right off the top of my head were:</p>
+<ul>
+<li>The Worldmap window</li>
+<li>The Compass window</li>
+<li>The Skills window</li>
+<li>The Spells window</li>
+<li>The Effective Spells window (showing spells that are currently affecting the player)</li>
+<li>Various other inventory windows such as:
+<ul>
+<li>The Bank window</li>
+<li>The Clan Vault window</li>
+<li>The Player Loot window</li>
+<li>The Monster Loot window</li>
+<li>etc</li>
+</ul>
+</li>
+<li>The Vendor Interaction window</li>
+<li>The Crafting window</li>
+<li>The Enchanting window</li>
+<li>The Player Trade window</li>
+<li>The City Building (and Upgrading) window</li>
+<li>The Main Menu window</li>
+<li>The Options window</li>
+<li>The Video Settings window</li>
+<li>The Audio Settings window</li>
+<li>The Key Bindings window</li>
+<li>The Browser window (containing an encapsulated instance of Microsoft Internet Explorer)</li>
+</ul>
+<p>The following is a screenshot of the <em>Character Creator</em>, a module built by a colleague on top of my framework to allow players to customize their characters when first starting the game. This particular screenshot is taken from a development environment where some of the textures happened to be kind of messed up, so it is unique in a special way.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/character_creator.png"
+	width="1032"
+	height="795"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/character_creator_hu_9c812e0d688809ed.png 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/character_creator_hu_507ee50ae6ef141f.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="129"
+		data-flex-basis="311px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The <em>Character Creator</em> with a few textures messed up. Click to enlarge.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>Finally, a picture of (almost) the entire Darkfall crew, taken in Athens on October of 2008, about 5 months before the game was released. I am the guy holding his very surprised baby son in his arms. (By that time I had started trimming my hair very short.) I think only about 4 people are missing from this photo, unfortunately two of them being the only two women in the crew at that time.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/aventurine-team.jpg"
+	width="2677"
+	height="1175"
+	srcset="/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/aventurine-team_hu_9ed0e7a6f0949367.jpg 480w, /post/2013-06-03-a-few-samples-of-my-work-on-darkfall/media/aventurine-team_hu_8d22bb3b1ca38c7b.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="227"
+		data-flex-basis="546px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">The Darkfall crew, Oct 2008. Click to enlarge.</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><strong>Old comments</strong></p>
+<ul>
+<li>
+<p>Anonymous 2014-11-24 02:04:09 UTC</p>
+<p>This GUI rocked&hellip;. DF1 best game ever just needed a skillcap and no grind.. then add onto it.. not 2.0</p>
+</li>
+<li>
+<p>Anonymous 2015-02-17 03:29:44 UTC</p>
+<p>The gui was awesome good job, We dearly miss DF1.</p>
+</li>
+<li>
+<p>Unspecified 2016-12-17 16:45:02 UTC</p>
+<p><a class="external" 
+   href="https://darkfallriseofagon.com/" target="_blank"
+   >https://darkfallriseofagon.com/</a></p>
+<p>It&rsquo;s back and better than ever. BPG is gonna take it to the top!</p>
+</li>
+<li>
+<p>Anonymous 2014-02-23 19:41:43 UTC</p>
+<p>Impressive how much time and effort was put into the game, you guys did a amazing job and i am glad i had the chance to fully support DFO.</p>
+<p>Unfortunately AV killed it.</p>
+<p>Cheers</p>
+</li>
+<li>
+<p>Anonymous 2014-10-18 03:10:26 UTC</p>
+<p>Darkfall Online was the greatest game ever.  It just needed a better economy (i.e. remove npc vendors) and more incentives for the &ldquo;sheep&rdquo; of the game to play so the &ldquo;wolves&rdquo; would have someone else to interact with.</p>
+</li>
+<li>
+<p>Ninogan 2023-07-05 10:11:30 UTC</p>
+<p>Was cleaning through my bookmarks and found this article. Huge nostalgia and very informative. I haven&rsquo;t thought about or played any of the new Darkfall iterations like RoA in years and years but it was a good time back then!</p>
+<p>-Ninogan Swiftstep</p>
+</li>
+<li>
+<p>Unspecified 2021-07-25 00:06:37 UTC</p>
+<p>Do you have anymore Darkfall shirts? I&rsquo;ve been searching all over for one!!!</p>
+</li>
+<li>
+<p>Anonymous 2014-02-24 00:21:11 UTC</p>
+<p>I prefer the the GUI in Darkfall Online over the GUI in Darkfall Unholy Wars!</p>
+</li>
+<li>
+<p>Fnights 2015-05-16 20:30:36 UTC</p>
+<p>Maybe Darkfall 1 is coming back, with your gargeous GUI.
+<a class="external" 
+   href="https://forums.darkfallonline.com/showthread.php?409055-Announcement-regarding-DFO-we-are-still-investigating-technical-issues" target="_blank"
+   >https://forums.darkfallonline.com/showthread.php?409055-Announcement-regarding-DFO-we-are-still-investigating-technical-issues</a>
+Cross fingers.</p>
+</li>
+<li>
+<p>Anonymous 2015-04-02 13:52:35 UTC</p>
+<p>I&rsquo;m a huge fan of the UI you built. It was very hard to play the console-game crap built by your successor in DF:UW after 5 years of DFO.</p>
+<ul>
+<li>Celiah Ailey
+Ps: Lol, so your secret non-dev game character was Mega Hurts? Damn.. You were always running around naked in Tolenque at the time of the Yssam Rebellion. Hahaha. Good times! ^.^</li>
+</ul>
+</li>
+<li>
+<p>Anonymous 2014-08-15 23:16:19 UTC</p>
+<p>AV killed the entie vision of the game with Unholy Wars..I feel sad for that the norweigans who originally came up with the idea of Darkfall now have to witness the trainwreck of a sellout Unholy Wars is.</p>
+<p>The Darkfall vision is dead.</p>
+<p>RIP Darkfall Online.</p>
+<p>RIP Darkfall.</p>
+</li>
+<li>
+<p><a class="external" 
+   href="http://michael.gr" target="_blank"
+   >michael.gr</a> 2015-04-02 17:15:03 UTC</p>
+<p>LOL! - The legendary Celiah Ailey! - Nice to hear from you again!</p>
+<p>Yes, I was that guy. I played Darkfall for several months, my time as the resident pest of Tolenque was just a fraction of that time. But I remember that&rsquo;s where we met.</p>
+<p>We had a blast, didn&rsquo;t we? Ah, the good days. C-:=</p>
+</li>
+</ul>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-18 Sat 00:42:16 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

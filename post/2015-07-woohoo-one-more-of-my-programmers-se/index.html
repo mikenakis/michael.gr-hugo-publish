@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="The question is on a controversial topic, and as usual, I take the controversial stance. So, it is no wonder that people do not agree with me.\nHere is the question:\nprogrammers.stackexchange.com: Does it make sense to use “ys” instead of “ies” in identifiers to ease find-and-replace functionality?\n">
+<title>Woohoo! One more of my &#34;Programmers SE&#34; answers has received a score of -5 !</title>
+
+<link rel='canonical' href='//localhost:1313/post/2015-07-woohoo-one-more-of-my-programmers-se/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Woohoo! One more of my \"Programmers SE\" answers has received a score of -5 !">
+<meta property='og:description' content="The question is on a controversial topic, and as usual, I take the controversial stance. So, it is no wonder that people do not agree with me.\nHere is the question:\nprogrammers.stackexchange.com: Does it make sense to use “ys” instead of “ies” in identifiers to ease find-and-replace functionality?\n">
+<meta property='og:url' content='//localhost:1313/post/2015-07-woohoo-one-more-of-my-programmers-se/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:published_time' content='2015-07-28T13:26:37&#43;00:00'/><meta property='article:modified_time' content='2025-10-13T09:58:11&#43;02:00'/>
+<meta name="twitter:title" content="Woohoo! One more of my \"Programmers SE\" answers has received a score of -5 !">
+<meta name="twitter:description" content="The question is on a controversial topic, and as usual, I take the controversial stance. So, it is no wonder that people do not agree with me.\nHere is the question:\nprogrammers.stackexchange.com: Does it make sense to use “ys” instead of “ies” in identifiers to ease find-and-replace functionality?\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#update">Update:</a></li>
+        <li><a href="#does-it-make-sense-to-use-ys-instead-of-ies-in-identifiers-to-ease-find-and-replace-functionality-closed">Does it make sense to use “ys” instead of “ies” in identifiers to ease find-and-replace functionality? {closed}</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2015-07-woohoo-one-more-of-my-programmers-se/">Woohoo! One more of my &#34;Programmers SE&#34; answers has received a score of -5 !</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2015-07-28 Tue 13:26:37 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <p>The question is on a controversial topic, and as usual, I take the controversial stance.  So, it is no wonder that people do not agree with me.</p>
+<p>Here is the question:</p>
+<p>programmers.stackexchange.com: <a class="external" 
+   href="https://programmers.stackexchange.com/questions/290951/does-it-make-sense-to-use-ys-instead-of-ies-in-identifiers-to-ease-find-and" target="_blank"
+   >Does it make sense to use “ys” instead of “ies” in identifiers to ease find-and-replace functionality?</a></p>
+<h4 id="update">Update:
+</h4><p>It turns out that the question was closed as &ldquo;primarily opinion based&rdquo;,
+so I am saving the question and my answer here for posterity.</p>
+<p>The question:</p>
+<blockquote>
+<h4 id="does-it-make-sense-to-use-ys-instead-of-ies-in-identifiers-to-ease-find-and-replace-functionality-closed">Does it make sense to use “ys” instead of “ies” in identifiers to ease find-and-replace functionality? {closed}
+</h4><p>Although grammatically incorrect, when writing identifiers for functions, variables etc. does it make sense to simply append an &ldquo;s&rdquo; to plurals of words ending in Y? My reason for this would be that if you need to find-and-replace, for example, replacing &ldquo;company&rdquo; with &ldquo;vendor&rdquo;, &ldquo;company&rdquo; would match both singular and plural forms (&ldquo;company and &ldquo;companys&rdquo;), whereas if the plural was spelled correctly, you would have to do two separate searches.</p></blockquote>
+<p>My answer:</p>
+<blockquote>
+<p>Yes! Yes! Yes!  It makes perfect sense to do that.  And I have been doing it for years.</p>
+<p>Disclosure 1: English is not my native language.</p>
+<p>Disclosure 2: My knowledge of English grammar is considerably better than that of the average native speaker.</p>
+<p>Disclosure 3: When it comes to communicating with humans, I am a vehement grammar Nazi.</p>
+<p>And now that these disclosures are out of the way, let me state that English grammar has no place in code.  You see, that&rsquo;s why it is called <strong>code</strong> and not <strong>prose</strong>.  It is supposed to have some resemblance to a language understood by humans, for the purpose of readability, but other than that, what we mostly need from code is not the qualities of prose; it is other, more technical qualities, like <em>precision</em>, <em>unambiguity</em>, and <em>terseness</em>.  That&rsquo;s why the C syntax of <code>if( x != y ) y++;</code> is <em><strong>much</strong></em> preferable to the <code>IF X IS NOT EQUAL TO Y THEN ADD 1 TO Y END-IF.</code> syntax of Cobol.  The alleged desirability of compilers that understand natural language is a fallacy, and don&rsquo;t take my word for it, see what ol&rsquo;Edsger has to say about it: <a class="external" 
+   href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD06xx/EWD667.html" target="_blank"
+   >Edsger W. Dijkstra, <em>On the foolishness of &ldquo;natural language programming&rdquo;</em></a>.</p>
+<p>Another quality which is of importance is <em><strong>computability of identifiers</strong></em>.  The fact that a property called <code>Color</code> can always be read via a method called <code>getColor()</code> and written via a method called <code>setColor()</code> is of paramount importance.  These identifiers are computable from the name of the property, so you do not have to know them by heart. If a programmer was to choose a pair of methods called <code>getColor()</code> on one hand, but <code>colorize()</code> on the other hand, their colleagues would rightfully consider this sabotage.  That&rsquo;s how important identifier computability is.</p>
+<p>Also, programming tools can be written (and plenty of them have in fact been written, for example, *Hibernate*) which can compute these names. Without identifier name computability you would have to use additional syntax (e.g. in Hibernate, extra annotations) to specify to each tool precisely how to create every single identifier name, or precisely which ad hoc name you have given to each entity.</p>
+<p>So, identifier computability is important, while at the same time English grammar is irrelevant, (since we are not doing natural language programming,) so to be able to compute the name of a collection of entities by *always* appending &ldquo;s&rdquo; to the name of a single instance makes perfect sense, never mind the fact that it violates most people&rsquo;s (mine included) English language sensitivities.</p>
+<p>And whether we like it or not, this is the trend of the future.  The native language of the majority of programmers on the planet is not English anymore, and the trend is to continue *very strong* in this direction.  (Also, I would not even be willing to bet money on the suggestion that English is the native language of the majority of programmers working in the USA right now.) These are people who, to a large extent, when trying to calculate the name of a collection from the name of a single instance of &ldquo;company&rdquo;, will simply append an &ldquo;s&rdquo;, and the form &ldquo;companies&rdquo; will not even cross their mind.  To a great and ever increasing percentage of programmers in the world, knowledge of the peculiarities of the English language does not add any value to their work, it only makes it slightly harder.</p></blockquote>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-13 Mon 09:58:11 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

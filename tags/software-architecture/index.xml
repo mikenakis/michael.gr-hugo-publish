@@ -9,14 +9,14 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Fri, 24 Oct 2025 10:19:02 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The perils of whiteboards</title>
-        <link>//localhost:1313/p/the-perils-of-whiteboards/</link>
+        <link>//localhost:1313/post/2025-08-the-perils-of-whiteboards/</link>
         <pubDate>Thu, 28 Aug 2025 08:46:25 +0000</pubDate>
         
-        <guid>//localhost:1313/p/the-perils-of-whiteboards/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/the-perils-of-whiteboards/images/chimera.png&#34;
+        <guid>//localhost:1313/post/2025-08-the-perils-of-whiteboards/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2025-08-the-perils-of-whiteboards/images/chimera.png&#34;
 	width=&#34;1600&#34;
 	height=&#34;952&#34;
-	srcset=&#34;//localhost:1313/p/the-perils-of-whiteboards/images/chimera_hu_6dff92ff1a9c9a17.png 480w, //localhost:1313/p/the-perils-of-whiteboards/images/chimera_hu_7a9d1598158e4bb7.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2025-08-the-perils-of-whiteboards/images/chimera_hu_6dff92ff1a9c9a17.png 480w, //localhost:1313/post/2025-08-the-perils-of-whiteboards/images/chimera_hu_7a9d1598158e4bb7.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -29,10 +29,10 @@
 &lt;h3 id=&#34;summary&#34;&gt;Summary
 &lt;/h3&gt;&lt;p&gt;Building upon the realization that conventional means of software design today amount to nothing more than fancy whiteboards, we examine the pitfalls, disadvantages, and consequences of designing software using such tools.&lt;/p&gt;
 &lt;p&gt;This post is support material for  &lt;a 
-   href=&#34;//localhost:1313/p/towards-authoritative-software-design/&#34;
+   href=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/&#34;
    &gt;Towards Authoritative Software Design&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;the-means&#34;&gt;The means
 &lt;/h3&gt;&lt;p&gt;The conventional means of software design today are:&lt;/p&gt;
@@ -47,11 +47,11 @@
 &lt;/ul&gt;
 &lt;p&gt;Unfortunately, even the box-and-arrow apps have no notion of what the boxes and the arrows stand for; thus, they cannot be used for anything other than modelling, which makes them nothing more than fancy whiteboards.&lt;/p&gt;
 &lt;p&gt;Over the years, various tools and techniques have been proposed to better aid the software design process, including UML, but none of them amounts to anything more than a fancy whiteboard. For details, see &lt;a 
-   href=&#34;//localhost:1313/p/the-state-of-affairs-in-computer-aided-software-design/&#34;
+   href=&#34;//localhost:1313/post/2025-08-the-state-of-affairs-in-computer-aided/&#34;
    &gt;The state of affairs in computer-aided software design&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;the-drawbacks&#34;&gt;The drawbacks
 &lt;/h3&gt;&lt;p&gt;One of the immediately noticeable consequences of having nothing but whiteboards at our disposal is the lack of a standardized notation: every architect is free to express concepts in any way they like, and anyone attempting to make sense out of their design has to undergo initiation rituals. (UML attempted to standardize notation, but it is a failure, see &lt;a 
-   href=&#34;//localhost:1313/p/on-uml-oh-do-not-get-me-started/&#34;
+   href=&#34;//localhost:1313/post/2022-08-uml/&#34;
    &gt;On UML&lt;/a&gt;.) As a result, software design as conventionally practiced is not easy to communicate. This is, however, the least of our problems.&lt;/p&gt;
 &lt;p&gt;Here  is a list of much more serious consequences of using whiteboards for technical software design:&lt;/p&gt;
 &lt;ul&gt;
@@ -110,7 +110,7 @@ designed, and yet the architects are free to proclaim the design as complete.&lt
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For further reading, please see &lt;a 
-   href=&#34;//localhost:1313/p/towards-authoritative-software-design/&#34;
+   href=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/&#34;
    &gt;Towards Authoritative Software Design&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: &lt;a class=&#34;external&#34; 
@@ -121,14 +121,14 @@ designed, and yet the architects are free to proclaim the design as complete.&lt
         </item>
         <item>
         <title>The confusion about the term Unit Testing</title>
-        <link>//localhost:1313/p/the-confusion-about-the-term-unit-testing/</link>
+        <link>//localhost:1313/post/2025-04-the-confusion-about-term-unit-testing/</link>
         <pubDate>Fri, 04 Apr 2025 14:53:02 +0000</pubDate>
         
-        <guid>//localhost:1313/p/the-confusion-about-the-term-unit-testing/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/the-confusion-about-the-term-unit-testing/images/crash-test-dummy-penseur.jpg&#34;
+        <guid>//localhost:1313/post/2025-04-the-confusion-about-term-unit-testing/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2025-04-the-confusion-about-term-unit-testing/images/crash-test-dummy-penseur.jpg&#34;
 	width=&#34;2560&#34;
 	height=&#34;1600&#34;
-	srcset=&#34;//localhost:1313/p/the-confusion-about-the-term-unit-testing/images/crash-test-dummy-penseur_hu_bcad233453122025.jpg 480w, //localhost:1313/p/the-confusion-about-the-term-unit-testing/images/crash-test-dummy-penseur_hu_81009ce0ef2f8adf.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2025-04-the-confusion-about-term-unit-testing/images/crash-test-dummy-penseur_hu_bcad233453122025.jpg 480w, //localhost:1313/post/2025-04-the-confusion-about-term-unit-testing/images/crash-test-dummy-penseur_hu_81009ce0ef2f8adf.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -273,14 +273,14 @@ behavior. Unit testing describes tests that are run at the unit-level to contras
         </item>
         <item>
         <title>Artificial Code Coverage</title>
-        <link>//localhost:1313/p/artificial-code-coverage/</link>
+        <link>//localhost:1313/post/2024-03-codecoverage/</link>
         <pubDate>Tue, 26 Mar 2024 15:01:55 +0000</pubDate>
         
-        <guid>//localhost:1313/p/artificial-code-coverage/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/artificial-code-coverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash.jpg&#34;
+        <guid>//localhost:1313/post/2024-03-codecoverage/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2024-03-codecoverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash.jpg&#34;
 	width=&#34;3258&#34;
 	height=&#34;1890&#34;
-	srcset=&#34;//localhost:1313/p/artificial-code-coverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash_hu_d19487727715a135.jpg 480w, //localhost:1313/p/artificial-code-coverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash_hu_15abe3b3c0c4821e.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2024-03-codecoverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash_hu_d19487727715a135.jpg 480w, //localhost:1313/post/2024-03-codecoverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash_hu_15abe3b3c0c4821e.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -293,7 +293,7 @@ behavior. Unit testing describes tests that are run at the unit-level to contras
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;In this paper I put forth the proposition that contrary to popular belief, 100% code coverage can be a very advantageous thing to have, and I discuss a technique for achieving it without excessive effort.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;the-problem&#34;&gt;The problem
 &lt;/h3&gt;&lt;p&gt;Conventional wisdom says that 100% code coverage is unnecessary, or even undesirable, because achieving it requires an exceedingly large amount of effort &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; for the purpose of asserting correctness, but instead for the sole purpose of achieving coverage. In other words, it is often said that 100% code coverage has no business value.&lt;/p&gt;
@@ -334,11 +334,11 @@ behavior. Unit testing describes tests that are run at the unit-level to contras
 &lt;li&gt;
 &lt;p&gt;Option #1: Write a test for the code.&lt;/p&gt;
 &lt;p&gt;This is of course the highest quality option, but it does not always represent the best value for money, and it is not even always possible. You only need to do it if the code is important enough to warrant testing, and you can only do it if the code is in fact testable. If you write a test, you can still minimize the effort of doing so, by utilizing certain techniques that I talk about in other posts, such as &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt;, &lt;a 
-   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   href=&#34;//localhost:1313/post/2022-10-testing-with-fakes/&#34;
    &gt;Testing with Fakes instead of Mocks&lt;/a&gt;, and &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -346,7 +346,7 @@ behavior. Unit testing describes tests that are run at the unit-level to contras
 &lt;p&gt;Code that is not testable, or not important enough to warrant testing, can be moved into a separate module which does not participate in coverage analysis. Alternatively, if your code coverage analysis tool supports it, you may be able to exclude individual methods without having to move them to another module. In the DotNet world, this can be accomplished by marking a method with &lt;a class=&#34;external&#34; 
    href=&#34;https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute&#34; target=&#34;_blank&#34;
    &gt;the &lt;code&gt;ExcludeFromCodeCoverage&lt;/code&gt; attribute&lt;/a&gt;, found in the &lt;code&gt;System.Diagnostics.CodeAnalysis&lt;/code&gt; namespace. In the Java world, IntelliJ IDEA offers a setting for specifying what annotation we want to use for marking methods to be excluded from code coverage, so you can use any annotation you like. (See &lt;a 
-   href=&#34;//localhost:1313/p/intellij-idea-can-now-exclude-methods-from-code-coverage/&#34;
+   href=&#34;//localhost:1313/post/2022-12-intellij-idea-can-now-exclude-methods/&#34;
    &gt;IntelliJ IDEA can now exclude methods from code coverage&lt;/a&gt;.) Various different code coverage analyzers support additional ways of excluding code from coverage.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -423,14 +423,14 @@ descriptions of our objects while debugging.&lt;/p&gt;
         </item>
         <item>
         <title>Types of dependencies</title>
-        <link>//localhost:1313/p/types-of-dependencies/</link>
+        <link>//localhost:1313/post/2024-01-types-of-dependencies/</link>
         <pubDate>Thu, 11 Jan 2024 17:33:42 +0000</pubDate>
         
-        <guid>//localhost:1313/p/types-of-dependencies/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/types-of-dependencies/images/dependency0.png&#34;
+        <guid>//localhost:1313/post/2024-01-types-of-dependencies/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2024-01-types-of-dependencies/images/dependency0.png&#34;
 	width=&#34;1861&#34;
 	height=&#34;1046&#34;
-	srcset=&#34;//localhost:1313/p/types-of-dependencies/images/dependency0_hu_616f75dcb058bc68.png 480w, //localhost:1313/p/types-of-dependencies/images/dependency0_hu_55cc59d1b7857d37.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2024-01-types-of-dependencies/images/dependency0_hu_616f75dcb058bc68.png 480w, //localhost:1313/post/2024-01-types-of-dependencies/images/dependency0_hu_55cc59d1b7857d37.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -442,7 +442,7 @@ descriptions of our objects while debugging.&lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;The term &amp;ldquo;dependency&amp;rdquo; is used very often in software engineering, but depending on context, it may mean slightly different things. To avoid confusion, here are the different meanings of the term, and their explanations.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Compile-time (static) dependency:&lt;/strong&gt; When module &lt;strong&gt;A&lt;/strong&gt; makes use of a symbol which is defined in module &lt;strong&gt;B&lt;/strong&gt;, we say that &lt;strong&gt;A&lt;/strong&gt; has a compile-time dependency on &lt;strong&gt;B&lt;/strong&gt;. (Or that &lt;strong&gt;B is a compile-time dependency of A.&lt;/strong&gt;) This happens not only when module &lt;strong&gt;A&lt;/strong&gt; contains a hard-coded invocation to module &lt;strong&gt;B&lt;/strong&gt;, but also when &lt;strong&gt;A&lt;/strong&gt; makes use of some definition from &lt;strong&gt;B&lt;/strong&gt;, such as referring to a constant, implementing an interface, or instantiating a type defined in &lt;strong&gt;B&lt;/strong&gt;.&lt;/li&gt;
@@ -461,14 +461,14 @@ descriptions of our objects while debugging.&lt;/p&gt;
         </item>
         <item>
         <title>Call Graph Acyclicity</title>
-        <link>//localhost:1313/p/call-graph-acyclicity/</link>
+        <link>//localhost:1313/post/2023-12-27-call-graph-acyclicity/</link>
         <pubDate>Wed, 27 Dec 2023 12:08:24 +0000</pubDate>
         
-        <guid>//localhost:1313/p/call-graph-acyclicity/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic0.png&#34;
+        <guid>//localhost:1313/post/2023-12-27-call-graph-acyclicity/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic0.png&#34;
 	width=&#34;1860&#34;
 	height=&#34;1122&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic0_hu_5c4a1077d5a1af0.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic0_hu_bc6ab53ae2d39e03.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic0_hu_5c4a1077d5a1af0.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic0_hu_bc6ab53ae2d39e03.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -481,7 +481,7 @@ descriptions of our objects while debugging.&lt;/p&gt;
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;In technical design of software systems as conventionally practiced, call graphs often contain cycles. We show that cyclic call graphs are highly problematic for a number of reasons, the most important being that they require careful handling on a case-by-case basis by custom-written code, thus preventing the standardization, and therefore the automation, of system assembly. We discuss refactoring strategies for systematically eliminating call cycles, including a universally applicable technique for trivially eliminating a certain common type of call cycle. We conclude that since call cycles can be avoided or eliminated, they can be comprehensively disallowed, thus paving the way for the automation of system assembly.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;what-is-a-cycle-in-a-call-graph&#34;&gt;What is a cycle in a call graph
 &lt;/h3&gt;&lt;p&gt;When component &lt;strong&gt;A&lt;/strong&gt; invokes component &lt;strong&gt;B&lt;/strong&gt;, and component &lt;strong&gt;B&lt;/strong&gt; also invokes component &lt;strong&gt;A&lt;/strong&gt;, we say that the call graph contains a &lt;em&gt;direct&lt;/em&gt; cycle. If &lt;strong&gt;A&lt;/strong&gt; invokes &lt;strong&gt;B&lt;/strong&gt;, which invokes &lt;strong&gt;C&lt;/strong&gt;, which in turn invokes &lt;strong&gt;A&lt;/strong&gt;, we say that the call graph contains an &lt;em&gt;indirect&lt;/em&gt; cycle. If &lt;strong&gt;A&lt;/strong&gt; invokes itself, we say that the call graph contains a self-loop, or a buckle, which is a special case of a cycle. In general, if a component diagram contains any path of invocations starting at a certain component and arriving back at the same component, the call graph contains a cycle.&lt;/p&gt;
@@ -492,10 +492,10 @@ descriptions of our objects while debugging.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;A temperature indicator component, whose job is to display a temperature on the screen.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic1.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic1.png&#34;
 	width=&#34;1860&#34;
 	height=&#34;686&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic1_hu_bb41670c7de8d3cb.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic1_hu_2dad1d21c6ed7e3.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic1_hu_bb41670c7de8d3cb.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic1_hu_2dad1d21c6ed7e3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -527,7 +527,7 @@ descriptions of our objects while debugging.&lt;/p&gt;
 &lt;p&gt;In the diagram, the &lt;em&gt;&lt;strong&gt;Reading&lt;/strong&gt;&lt;/em&gt; output of the indicator has been connected to the &lt;em&gt;&lt;strong&gt;Reading&lt;/strong&gt;&lt;/em&gt; input of the sensor, and the &lt;em&gt;&lt;strong&gt;Changed&lt;/strong&gt;&lt;/em&gt; output of the sensor has been connected to the &lt;em&gt;&lt;strong&gt;Refresh&lt;/strong&gt;&lt;/em&gt; input of the indicator. Note that this design has a call cycle in it: The indicator invokes the sensor to obtain the current temperature, but the sensor also invokes the indicator to tell it that the current temperature has changed.&lt;/p&gt;
 &lt;h3 id=&#34;dependencies&#34;&gt;Dependencies
 &lt;/h3&gt;&lt;p&gt;In &lt;a 
-   href=&#34;//localhost:1313/p/types-of-dependencies/&#34;
+   href=&#34;//localhost:1313/post/2024-01-types-of-dependencies/&#34;
    &gt;Types of dependencies&lt;/a&gt; I differentiate between &lt;strong&gt;compile-time (static)&lt;/strong&gt; dependencies, &lt;strong&gt;assembly-time (semi-dynamic)&lt;/strong&gt; dependencies, and &lt;strong&gt;post-assembly-time (fully dynamic)&lt;/strong&gt; dependencies.&lt;/p&gt;
 &lt;p&gt;Compile-time dependencies have already been given a lot of consideration and the general consensus is that they better not be cyclic. Most build systems prohibit static dependency cycles between build modules; for example, in the Java world, Maven artifacts cannot circularly depend on each other; similarly, in the dotnet world, MSBuild projects cannot circularly depend on each other. However, programming languages usually allow compile-time dependency cycles within program code: if classes &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; are defined within the same build module, it is usually possible to have &lt;strong&gt;A&lt;/strong&gt; contain a hard-coded invocation to a method of &lt;strong&gt;B&lt;/strong&gt;, and for &lt;strong&gt;B&lt;/strong&gt; to also contain a hard-coded invocation to a method of &lt;strong&gt;A&lt;/strong&gt;. Nonetheless, software architecture is not concerned with hard-coded invocations; therefore, in this paper the term &amp;ldquo;dependency&amp;rdquo; does &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; refer to compile-time (static) dependencies.&lt;/p&gt;
 &lt;p&gt;Assembly-time dependencies are what software architecture is mostly concerned with, and as such, this is the sense in which the term &amp;ldquo;dependency&amp;rdquo; is used in this paper.&lt;/p&gt;
@@ -543,7 +543,7 @@ descriptions of our objects while debugging.&lt;/p&gt;
    &gt;Kent Beck&lt;/a&gt; and &lt;a class=&#34;external&#34; 
    href=&#34;https://en.wikipedia.org/wiki/Ward_Cunningham&#34; target=&#34;_blank&#34;
    &gt;Ward Cunningham&lt;/a&gt;, the authors acknowledge that many components act as servers &amp;ldquo;with little regard or even awareness of [their] client&amp;rdquo;, but also find it perfectly normal for some components to be &amp;ldquo;near-equals&amp;rdquo; in a &amp;ldquo;symmetric relation&amp;rdquo;. That paper introduced the term &amp;ldquo;collaborator&amp;rdquo;, which became a staple term in the software engineering discipline, specifically in order to allow for bidirectional interaction between components, as opposed to the already-existing term &amp;ldquo;dependency&amp;rdquo;, which implies a one-way interaction. (For more on this, see &lt;a 
-   href=&#34;//localhost:1313/p/definition-collaborator/&#34;
+   href=&#34;//localhost:1313/post/2023-01-16-collaborator/&#34;
    &gt;Definition: Collaborator&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;the-problem-with-cyclic-call-graphs&#34;&gt;The problem with cyclic call graphs
 &lt;/h3&gt;&lt;p&gt;Cyclic call graphs constitute &lt;a class=&#34;external&#34; 
@@ -585,10 +585,10 @@ declared as mutable, even though in principle they ought to be immutable. Simila
 &lt;/h3&gt;&lt;p&gt;If our goal is to eliminate the cycle in the call graph of the earlier example with the temperature sensor and the temperature indicator, we can trivially accomplish it by applying the &lt;a class=&#34;external&#34; 
    href=&#34;https://en.wikipedia.org/wiki/Observer_pattern&#34; target=&#34;_blank&#34;
    &gt;Observer Pattern&lt;/a&gt;, as shown in the following figure:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic2.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic2.png&#34;
 	width=&#34;1861&#34;
 	height=&#34;587&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic2_hu_47aa25ae2d1ea891.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic2_hu_1fd4268ef71dec79.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic2_hu_47aa25ae2d1ea891.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic2_hu_1fd4268ef71dec79.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -609,10 +609,10 @@ declared as mutable, even though in principle they ought to be immutable. Simila
 &lt;li&gt;Save space in the diagram.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The following figure shows an example of what this notation could look like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic3.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic3.png&#34;
 	width=&#34;1860&#34;
 	height=&#34;590&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic3_hu_720b9cdf7430d0df.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic3_hu_3aca30d589c5dd57.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic3_hu_720b9cdf7430d0df.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic3_hu_3aca30d589c5dd57.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -638,10 +638,10 @@ declared as mutable, even though in principle they ought to be immutable. Simila
 &lt;/ul&gt;
 &lt;p&gt;The above may not represent a lot of work, but it is nonetheless a refactoring which must be applied to the code in order to support the needs of the design; however, in a different design, the observer pattern might be unnecessary, so why should the components be hard-coded to support it?&lt;/p&gt;
 &lt;p&gt;To solve this problem, let us revisit our first design, where we had a temperature sensor with a simple &lt;em&gt;&lt;strong&gt;Changed&lt;/strong&gt;&lt;/em&gt; output and a temperature indicator with a simple &lt;em&gt;&lt;strong&gt;Refresh&lt;/strong&gt;&lt;/em&gt; input, and hence a call cycle. Let us us now introduce two new components into the design, where one is a &lt;em&gt;&lt;strong&gt;General-Purpose Observable&lt;/strong&gt;&lt;/em&gt; and the other is a &lt;em&gt;&lt;strong&gt;General-Purpose Observer&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic4.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic4.png&#34;
 	width=&#34;1860&#34;
 	height=&#34;888&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic4_hu_4b6ccb9e601811aa.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic4_hu_3226eae63daffbb9.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic4_hu_4b6ccb9e601811aa.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic4_hu_3226eae63daffbb9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -655,10 +655,10 @@ declared as mutable, even though in principle they ought to be immutable. Simila
 &lt;p&gt;The job of the observable is to receive an observer registration via its &lt;em&gt;&lt;strong&gt;Registration&lt;/strong&gt;&lt;/em&gt; input, and to keep echoing invocations coming into its &lt;em&gt;&lt;strong&gt;Trigger&lt;/strong&gt;&lt;/em&gt; input to the registered observer, if any.&lt;/p&gt;
 &lt;p&gt;Note that with this arrangement, the call cycle is still eliminated, and at the same time we have managed to retain the sensor and indicator components in their original form, with no code refactoring necessary, since the refactoring has now been applied to the design. Also note that the SRP is being nicely upheld.&lt;/p&gt;
 &lt;p&gt;I postulate that the combination of a general-purpose observer and a general-purpose observable will be occurring quite frequently, to the point where it might be worth simplifying their representation using some special notation. For this purpose, I propose an &lt;em&gt;&lt;strong&gt;air-gap pseudo-component&lt;/strong&gt;&lt;/em&gt;. With the use of an air-gap, the previous figure turns into the following:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic5.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic5.png&#34;
 	width=&#34;1860&#34;
 	height=&#34;835&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic5_hu_684347aa7e465dfc.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic5_hu_c30de23a51830a7c.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic5_hu_684347aa7e465dfc.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic5_hu_c30de23a51830a7c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -684,10 +684,10 @@ declared as mutable, even though in principle they ought to be immutable. Simila
 &lt;h3 id=&#34;strategy-fusion&#34;&gt;Strategy: Fusion
 &lt;/h3&gt;&lt;p&gt;The presence of a call cycle between components &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; might indicate that perhaps they should not be separate components, and that we might be better off by fusing &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; into a single component. In doing so, we remove the cycle from the topology of the design by turning it
 into an implementation detail of the new component. The following figure illustrates this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic6.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic6.png&#34;
 	width=&#34;1860&#34;
 	height=&#34;426&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic6_hu_b070ad42c31ba5da.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic6_hu_b38442f141ba6f20.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic6_hu_b070ad42c31ba5da.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic6_hu_b38442f141ba6f20.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -703,10 +703,10 @@ into an implementation detail of the new component. The following figure illustr
 &lt;/h3&gt;&lt;p&gt;The presence of a call cycle between components &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; might indicate that at least one of the two components violates the &lt;a class=&#34;external&#34; 
    href=&#34;https://en.wikipedia.org/wiki/Single_responsibility_principle&#34; target=&#34;_blank&#34;
    &gt;&lt;strong&gt;Single Responsibility Principle&lt;/strong&gt; (&lt;strong&gt;SRP&lt;/strong&gt;)&lt;/a&gt;. In this case, one of the responsibilities can be extracted into a separate component which only exposes inputs, thus breaking the cycle, as the following figure illustrates:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic7.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic7.png&#34;
 	width=&#34;1861&#34;
 	height=&#34;722&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic7_hu_f6ae600ec9ba0180.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic7_hu_f26f68362306158c.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic7_hu_f6ae600ec9ba0180.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic7_hu_f26f68362306158c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -722,10 +722,10 @@ into an implementation detail of the new component. The following figure illustr
 &lt;/h3&gt;&lt;p&gt;The astute reader might notice that in the plain fission example, components &lt;strong&gt;A1&lt;/strong&gt; and &lt;strong&gt;A2&lt;/strong&gt; are not exactly equivalent to component &lt;strong&gt;A&lt;/strong&gt;: In the original diagram &lt;strong&gt;A&lt;/strong&gt; used to be able to take notice of incoming calls from &lt;strong&gt;B&lt;/strong&gt; intended for the data model, and could therefore take action in response to those calls, whereas in the refactored diagram &lt;strong&gt;A1&lt;/strong&gt; is oblivious to any calls that &lt;strong&gt;B&lt;/strong&gt; makes to &lt;strong&gt;A2&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;If &lt;strong&gt;A1&lt;/strong&gt; needs to be aware of such calls, this can be very easily accomplished by having &lt;strong&gt;A2&lt;/strong&gt; issue change notifications, and wiring these notifications back to &lt;strong&gt;A1&lt;/strong&gt;. This new wire does not introduce a call cycle, because as we have already shown when describing the trivial case, notifications can always be air-gapped.&lt;/p&gt;
 &lt;p&gt;The following figure illustrates the application of the observable fission strategy:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic8.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic8.png&#34;
 	width=&#34;1861&#34;
 	height=&#34;722&#34;
-	srcset=&#34;//localhost:1313/p/call-graph-acyclicity/images/acyclic8_hu_c298426430891ac6.png 480w, //localhost:1313/p/call-graph-acyclicity/images/acyclic8_hu_701e420d6dc70bd6.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic8_hu_c298426430891ac6.png 480w, //localhost:1313/post/2023-12-27-call-graph-acyclicity/images/acyclic8_hu_701e420d6dc70bd6.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -767,14 +767,14 @@ into an implementation detail of the new component. The following figure illustr
         </item>
         <item>
         <title>Towards Authoritative Software Design</title>
-        <link>//localhost:1313/p/towards-authoritative-software-design/</link>
+        <link>//localhost:1313/post/2023-12-09-authoritative-technical-design/</link>
         <pubDate>Sat, 09 Dec 2023 19:16:05 +0000</pubDate>
         
-        <guid>//localhost:1313/p/towards-authoritative-software-design/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/towards-authoritative-software-design/media/blueprint.jpg&#34;
+        <guid>//localhost:1313/post/2023-12-09-authoritative-technical-design/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/media/blueprint.jpg&#34;
 	width=&#34;5000&#34;
 	height=&#34;2740&#34;
-	srcset=&#34;//localhost:1313/p/towards-authoritative-software-design/media/blueprint_hu_97e76780ef2663b9.jpg 480w, //localhost:1313/p/towards-authoritative-software-design/media/blueprint_hu_44b86b65f3bab1f7.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/media/blueprint_hu_97e76780ef2663b9.jpg 480w, //localhost:1313/post/2023-12-09-authoritative-technical-design/media/blueprint_hu_44b86b65f3bab1f7.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -787,7 +787,7 @@ into an implementation detail of the new component. The following figure illustr
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;This paper examines the long-standing need within the software engineering discipline for technical design that is &lt;em&gt;&lt;strong&gt;authoritative&lt;/strong&gt;&lt;/em&gt;. A design process is authoritative if there exist technical means of materializing the design document as a working product, thus guaranteeing that the end result is indeed as described by the design. We notice the scarcity and inadequacy of existing solutions for software design, we look at solutions in other engineering disciplines, and we conclude with realizations on what it would take to come up with a solution that works for software.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;prior-art&#34;&gt;Prior art
 &lt;/h3&gt;&lt;p&gt;Through the decades, plenty of tools and methodologies have been developed with the aim of aiding the software design process. A common pattern among them is that they try to make some aspect of development more visual rather than textual. They fall into one of the following categories:&lt;/p&gt;
@@ -819,7 +819,7 @@ into an implementation detail of the new component. The following figure illustr
    &gt;&lt;em&gt;C4 model&lt;/em&gt;&lt;/a&gt;, etc.) - They are restricted to modelling, so they produce designs that bear no necessary relationship to reality. They aim to constrain what is supposed to be included in a design, but these constrains exist only in theory, because they are not enforced by any technical means.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For a more detailed look at prior art, see &lt;a 
-   href=&#34;//localhost:1313/p/the-state-of-affairs-in-computer-aided-software-design/&#34;
+   href=&#34;//localhost:1313/post/2025-08-the-state-of-affairs-in-computer-aided/&#34;
    &gt;The state of affairs in computer-aided software design&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Of all the technologies listed above, only modelling tools can legitimately be said to be of any potential usefulness in the software design process at large.&lt;/p&gt;
 &lt;h3 id=&#34;the-unsuitability-of-modelling&#34;&gt;The unsuitability of modelling
@@ -828,7 +828,7 @@ into an implementation detail of the new component. The following figure illustr
 &lt;p&gt;The source code should ideally constitute a faithful implementation of the model, but there are no technological safeguards  to guarantee that it does, and as a matter of fact it usually cannot, because the model is almost never feasible as designed to begin with.&lt;/p&gt;
 &lt;p&gt;For these reasons, modelling is of severely limited value, and programmers largely regard it as loathsome double book-keeping.&lt;/p&gt;
 &lt;p&gt;For a list of ways in which modelling as a means of design fails the software engineering discipline, please see &lt;a 
-   href=&#34;//localhost:1313/p/the-perils-of-whiteboards/&#34;
+   href=&#34;//localhost:1313/post/2025-08-the-perils-of-whiteboards/&#34;
    &gt;The perils of whiteboards&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;other-engineering-disciplines&#34;&gt;Other engineering disciplines
 &lt;/h3&gt;&lt;p&gt;In long-established engineering disciplines such as mechanical, electrical, civil, etc., for several decades now, design work has been facilitated by &lt;a class=&#34;external&#34; 
@@ -854,10 +854,10 @@ into an implementation detail of the new component. The following figure illustr
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/p/towards-authoritative-software-design/media/the-great-wall-by-hao-wei.jpg&#34;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/media/the-great-wall-by-hao-wei.jpg&#34;
 	width=&#34;4606&#34;
 	height=&#34;3071&#34;
-	srcset=&#34;//localhost:1313/p/towards-authoritative-software-design/media/the-great-wall-by-hao-wei_hu_d1eba4a46b4d1881.jpg 480w, //localhost:1313/p/towards-authoritative-software-design/media/the-great-wall-by-hao-wei_hu_4d46a82415ff1bad.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/media/the-great-wall-by-hao-wei_hu_d1eba4a46b4d1881.jpg 480w, //localhost:1313/post/2023-12-09-authoritative-technical-design/media/the-great-wall-by-hao-wei_hu_4d46a82415ff1bad.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -931,7 +931,7 @@ into an implementation detail of the new component. The following figure illustr
 &lt;/h4&gt;&lt;p&gt;Once a system has been designed, coded, and deployed, it is a fact of life that it will keep evolving. The design toolset must support re-deploying after modifying the code, or the design, or both.&lt;/p&gt;
 &lt;h4 id=&#34;support-automatic-wiring&#34;&gt;Support automatic wiring.
 &lt;/h4&gt;&lt;p&gt;Once an execution environment has been provisioned with software components, the components must be wired together in order to start running. Traditionally, the wiring of freshly instantiated components is done by carefully hand-crafted code, to account for circular dependency issues between components. If we are to have fully automated deployment, the wiring cannot be done by hand-crafted code anymore; it must be automated, therefore it must be standardized. This in turn means that certain connectivity rules are necessary in order to guarantee that software designs do not suffer from circular dependency issues that would require custom handling. For more on this, see &lt;a 
-   href=&#34;//localhost:1313/p/call-graph-acyclicity/&#34;
+   href=&#34;//localhost:1313/post/2023-12-27-call-graph-acyclicity/&#34;
    &gt;Call Graph Acyclicity&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&#34;facilitate-incremental-adoption&#34;&gt;Facilitate incremental adoption.
 &lt;/h4&gt;&lt;p&gt;It should be possible to express, via an authoritative design document, the structure of a small subsystem within a larger system whose structure has not (yet) been expressed authoritatively.&lt;/p&gt;
@@ -1077,11 +1077,11 @@ toolset must facilitate hierarchical system composition by means of container co
         </item>
         <item>
         <title>Definition: Collaborator</title>
-        <link>//localhost:1313/p/definition-collaborator/</link>
+        <link>//localhost:1313/post/2023-01-16-collaborator/</link>
         <pubDate>Mon, 16 Jan 2023 12:58:35 +0000</pubDate>
         
-        <guid>//localhost:1313/p/definition-collaborator/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/definition-collaborator/media/collaboration.svg&#34;
+        <guid>//localhost:1313/post/2023-01-16-collaborator/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-01-16-collaborator/media/collaboration.svg&#34;
 	
 	
 	
@@ -1100,7 +1100,7 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;p&gt;(And since the context is software, these are, of course, software components.)&lt;/p&gt;
 &lt;h3 id=&#34;origin-of-the-term&#34;&gt;Origin of the term
 &lt;/h3&gt;&lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Collaborators were introduced as a concept in a paper by Kent Beck and Ward Cunningham in 1989 (See &lt;a class=&#34;external&#34; 
    href=&#34;https://c2.com/doc/oopsla89/paper.html&#34; target=&#34;_blank&#34;
@@ -1147,11 +1147,11 @@ toolset must facilitate hierarchical system composition by means of container co
         </item>
         <item>
         <title>If you are using mock objects you are doing it wrong</title>
-        <link>//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/</link>
+        <link>//localhost:1313/post/2023-01-14-mocking/</link>
         <pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate>
         
-        <guid>//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/images/mocking.svg&#34;
+        <guid>//localhost:1313/post/2023-01-14-mocking/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-01-14-mocking/images/mocking.svg&#34;
 	
 	
 	
@@ -1163,7 +1163,7 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;h4 id=&#34;abstract&#34;&gt;Abstract:
 &lt;/h4&gt;&lt;p&gt;The practice of using Mock Objects in automated software testing is examined from a critical point of view and found to be highly problematic. Opinions of some well known industry speakers are cited. The supposed benefits of Mock Objects are shown to be either no real benefits, or achievable via alternative means.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;introduction&#34;&gt;Introduction
 &lt;/h3&gt;&lt;p&gt;The automated software testing technique which is predominant in the industry today is Unit Testing. The goal of Unit Testing is to achieve defect localization, and to this effect it requires each component to be tested in strict isolation from its collaborators.&lt;/p&gt;
@@ -1250,17 +1250,17 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;li&gt;Mocking achieves defect localization by eliminating collaborators from the picture and allowing components to be tested in strict isolation from each other.
 &lt;ul&gt;
 &lt;li&gt;Defect localization is useful, but it is not an absolute necessity, and it does not have to be done to absolute perfection as mocking aims to do; we can achieve more than good enough defect localization by testing each component in integration with its collaborators, simply by arranging the order in which tests are executed to ensure that by the time a component gets tested, all of its collaborators have already passed their tests. See &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows a component to be tested without the performance overhead of instantiating and invoking its real collaborators.
 &lt;ul&gt;
 &lt;li&gt;The performance overhead of instantiating and invoking the real collaborators is not always prohibitive, or even noticeable, so in many cases it is perfectly fine to test a component in integration with its real collaborators. See &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;In the limited number of cases where the performance overhead is indeed prohibitive, it can be avoided with the use of Fakes instead of Mocks. See &lt;a 
-   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   href=&#34;//localhost:1313/post/2022-10-testing-with-fakes/&#34;
    &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1269,32 +1269,32 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;li&gt;In most cases, examining the invocations made by the component-under-test to its collaborators is in fact bad practice, because it constitutes white-box testing. The only reason why this is being widely practiced in the industry is because mocking does not work otherwise, so in this regard mocking contains a certain element of a self-serving paradigm.&lt;/li&gt;
 &lt;li&gt;In those rare cases where examining the invocations is in fact necessary, it is still bad practice to do so programmatically, because it results in tests that are over-specified and fragile.&lt;/li&gt;
 &lt;li&gt;What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt; and &lt;a 
-   href=&#34;//localhost:1313/p/collaboration-monitoring/&#34;
+   href=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/&#34;
    &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to fabricate the results returned from a collaborator to the component-under-test, so as to guarantee that they are free from defects that could be caused by bugs in the implementation of the real collaborator.
 &lt;ul&gt;
 &lt;li&gt;Fabricating the results that would have been returned by a real collaborator is in fact bad practice, because it will not magically make any bugs go away, (in this sense it can be likened to ostrich policy,) and because as I have already explained, it is highly presumptuous. The definitive authority on what results are returned by a certain collaborator is the real implementation of that collaborator, or a fake thereof, which in turn necessitates integration testing. See &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to verify the correctness of components that generate their output by means of forwarding results to collaborators rather than by returning results from invocations.
 &lt;ul&gt;
 &lt;li&gt;Even in this case, &lt;em&gt;Collaboration Monitoring&lt;/em&gt; can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt; and &lt;a 
-   href=&#34;//localhost:1313/p/collaboration-monitoring/&#34;
+   href=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/&#34;
    &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to start testing a component while one or more of its collaborators are not ready yet for integration because they are still in development, and no fakes of them are available either.
 &lt;ul&gt;
 &lt;li&gt;This is true, but once the collaborators (or fakes thereof) become available, it is best to integrate them in the tests, and to unceremoniously throw away the mocks. See &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1302,7 +1302,7 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;ul&gt;
 &lt;li&gt;True, but this implies a very bureaucratic way of working, and utter lack of trust towards the developers of the collaborators; it is best if it never comes to that.&lt;/li&gt;
 &lt;li&gt;We can still avoid the use of mocks by creating fakes of the collaborators ourselves. See &lt;a 
-   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   href=&#34;//localhost:1313/post/2022-10-testing-with-fakes/&#34;
    &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1310,15 +1310,15 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;p&gt;To summarize, mocks can always be replaced with one or more of the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Fakes (see &lt;a 
-   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   href=&#34;//localhost:1313/post/2022-10-testing-with-fakes/&#34;
    &gt;Testing with Fakes instead of Mocks&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Incremental Integration Testing (see &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Audit Testing (see &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt;) and Collaboration Monitoring (see &lt;a 
-   href=&#34;//localhost:1313/p/collaboration-monitoring/&#34;
+   href=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/&#34;
    &gt;Collaboration Monitoring&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;conclusion&#34;&gt;Conclusion
@@ -1326,10 +1326,10 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/images/grumpy-cat-mock-objects.jpg&#34;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/post/2023-01-14-mocking/images/grumpy-cat-mock-objects.jpg&#34;
 	width=&#34;797&#34;
 	height=&#34;1024&#34;
-	srcset=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/images/grumpy-cat-mock-objects_hu_8156248a341d61af.jpg 480w, //localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/images/grumpy-cat-mock-objects_hu_5b4ff396469f2342.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_8156248a341d61af.jpg 480w, //localhost:1313/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_5b4ff396469f2342.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1354,14 +1354,14 @@ toolset must facilitate hierarchical system composition by means of container co
         </item>
         <item>
         <title>Collaboration Monitoring</title>
-        <link>//localhost:1313/p/collaboration-monitoring/</link>
+        <link>//localhost:1313/post/2023-01-06-collaboration-monitoring/</link>
         <pubDate>Fri, 06 Jan 2023 13:03:22 +0000</pubDate>
         
-        <guid>//localhost:1313/p/collaboration-monitoring/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/collaboration-monitoring/images/collaboration-monitoring.png&#34;
+        <guid>//localhost:1313/post/2023-01-06-collaboration-monitoring/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitoring.png&#34;
 	width=&#34;1024&#34;
 	height=&#34;512&#34;
-	srcset=&#34;//localhost:1313/p/collaboration-monitoring/images/collaboration-monitoring_hu_3c58b5508de82250.png 480w, //localhost:1313/p/collaboration-monitoring/images/collaboration-monitoring_hu_1f58869c4f30abf2.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitoring_hu_3c58b5508de82250.png 480w, //localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitoring_hu_1f58869c4f30abf2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1374,7 +1374,7 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;An automated software testing technique is presented which solves the fragile test problem of white-box testing by allowing us to ensure that the component-under-test interacts with its collaborators according to our expectations without having to stipulate our expectations as test code, without having the tests fail each time our expectations change, and without having to go fixing test code each time this happens.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;summary&#34;&gt;Summary
 &lt;/h3&gt;&lt;p&gt;In automated software testing it is sometimes necessary to ensure not only that given specific input, the component-under-test produces correct output, (&lt;a class=&#34;external&#34; 
@@ -1400,7 +1400,7 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;li&gt;In reactive programming, the component-under-test does not produce output by returning results from function calls; instead, it produces output by forwarding results to collaborators. Thus, even if all we want to do is to ascertain the correctness of the component&amp;rsquo;s output, we have to examine how it interacts with its collaborators, because that is the only way to observe its output.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The prevalent mechanism by which the Software Industry achieves Collaboration Validation today is Mock Objects. As I argue elsewhere, (see &lt;a 
-   href=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/&#34;
+   href=&#34;//localhost:1313/post/2023-01-14-mocking/&#34;
    &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;) the use of mocks is generally ill-advised due to various reasons, but with respect to Collaboration Validation in specific, the problem with mocks is that their use is extremely laborious:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When we write a test for a certain component, it is counter-productive to have to stipulate in code exactly how we expect it to interact with its collaborators.&lt;/li&gt;
@@ -1421,13 +1421,13 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;/ul&gt;
 &lt;p&gt;To achieve this, I use a technique that I call Collaboration Monitoring.&lt;/p&gt;
 &lt;p&gt;Collaboration Monitoring is based on another testing technique that I call Audit Testing, so it might be a good idea to read the related paper before proceeding: &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let us assume that we have a component that we want to test, which invokes interface T as part of its job. In order to test the component, we have to wire it with a collaborator that implements T. For this, we can use either the real collaborator that would be wired in the production environment, or a Fake thereof. Regardless of what we choose, we have a very simple picture which looks like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/collaboration-monitoring/images/collaboration-monitor-1.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-1.png&#34;
 	width=&#34;422&#34;
 	height=&#34;74&#34;
-	srcset=&#34;//localhost:1313/p/collaboration-monitoring/images/collaboration-monitor-1_hu_8cbeb5070d7d33.png 480w, //localhost:1313/p/collaboration-monitoring/images/collaboration-monitor-1_hu_422fd14dddc93b76.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-1_hu_8cbeb5070d7d33.png 480w, //localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-1_hu_422fd14dddc93b76.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1439,13 +1439,13 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;/p&gt;
 &lt;p&gt;Note that with this setup we can exercise the component-under-test as a black-box, but we cannot yet observe how it interacts with its collaborator.&lt;/p&gt;
 &lt;p&gt;In order to observe how the component-under-test interacts with its collaborator, we interject between the two of them a new component, called a &lt;em&gt;&lt;strong&gt;Collaboration Monitor&lt;/strong&gt;&lt;/em&gt;, which is a decorator of T. The purpose of this Collaboration Monitor is to record into a text file information about each function call that passes through it. The text file is called a &lt;em&gt;&lt;strong&gt;Snoop File&lt;/strong&gt;&lt;/em&gt;, and it is a special form of &lt;em&gt;&lt;strong&gt;Audit File&lt;/strong&gt;&lt;/em&gt;. (See &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Thus, we now have the following picture:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/collaboration-monitoring/images/collaboration-monitor-2.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-2.png&#34;
 	width=&#34;568&#34;
 	height=&#34;193&#34;
-	srcset=&#34;//localhost:1313/p/collaboration-monitoring/images/collaboration-monitor-2_hu_6876382b85ecd6f0.png 480w, //localhost:1313/p/collaboration-monitoring/images/collaboration-monitor-2_hu_88f51d25c12dfe11.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-2_hu_6876382b85ecd6f0.png 480w, //localhost:1313/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-2_hu_88f51d25c12dfe11.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1478,11 +1478,11 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;/h3&gt;&lt;p&gt;As per Audit Testing, the reviewer is able to see both the changes in the code, and the corresponding changes in the Snoop Files, and vouch for them, or not, as the case might be.&lt;/p&gt;
 &lt;h3 id=&#34;requirements&#34;&gt;Requirements
 &lt;/h3&gt;&lt;p&gt;For Collaboration Monitoring to work, snoop files must be free from non-deterministic noise, and it is best if they are also free from deterministic noise. For more information about these types of noise and what you can do about them, see &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;automation&#34;&gt;Automation
 &lt;/h3&gt;&lt;p&gt;When using languages like Java and C# which support reflection and intermediate code generation, we do not have to write Collaboration Monitors by hand; we can instead create a facility which will be automatically generating them for us on demand, at runtime. Such a facility can be very easily written with the help of Intertwine (see &lt;a 
-   href=&#34;//localhost:1313/p/intertwine/&#34;
+   href=&#34;//localhost:1313/post/2022-12-intertwine/&#34;
    &gt;Intertwine&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Using Intertwine, we can create a Collaboration Monitor for any interface T. Such a Collaboration Monitor works as follows:&lt;/p&gt;
 &lt;ul&gt;
@@ -1576,14 +1576,14 @@ wrong:
         </item>
         <item>
         <title>Testing with Fakes instead of Mocks</title>
-        <link>//localhost:1313/p/testing-with-fakes-instead-of-mocks/</link>
+        <link>//localhost:1313/post/2022-10-testing-with-fakes/</link>
         <pubDate>Fri, 30 Dec 2022 14:01:26 +0000</pubDate>
         
-        <guid>//localhost:1313/p/testing-with-fakes-instead-of-mocks/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/media/fake.png&#34;
+        <guid>//localhost:1313/post/2022-10-testing-with-fakes/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-10-testing-with-fakes/media/fake.png&#34;
 	width=&#34;2000&#34;
 	height=&#34;1000&#34;
-	srcset=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/media/fake_hu_94f7aa407fc2e88a.png 480w, //localhost:1313/p/testing-with-fakes-instead-of-mocks/media/fake_hu_fbb249274ecaf5fb.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-10-testing-with-fakes/media/fake_hu_94f7aa407fc2e88a.png 480w, //localhost:1313/post/2022-10-testing-with-fakes/media/fake_hu_fbb249274ecaf5fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1597,7 +1597,7 @@ wrong:
 &lt;/h3&gt;&lt;p&gt;What are &lt;em&gt;fakes&lt;/em&gt;, what are their benefits, and why they are incontestably preferable over &lt;em&gt;mocks&lt;/em&gt;. Also, how to create fakes if needed.&lt;/p&gt;
 &lt;h4 id=&#34;introduction&#34;&gt;Introduction
 &lt;/h4&gt;&lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;When testing a component it is often necessary to refrain from connecting it with the real collaborators that it would be connected with in a production environment, and instead to connect it with special substitutes of its collaborators, also known as &lt;em&gt;test doubles&lt;/em&gt;, which are more suitable for testing than the real ones.&lt;/p&gt;
 &lt;p&gt;One book that names and describes various kinds of test doubles is &lt;em&gt;xUnit Test Patterns: Refactoring Test Code&lt;/em&gt; by Gerard Meszaros, (&lt;a class=&#34;external&#34; 
@@ -1606,7 +1606,7 @@ wrong:
    href=&#34;https://martinfowler.com/bliki/TestDouble.html&#34; target=&#34;_blank&#34;
    &gt;martinfowler.com - TestDouble&lt;/a&gt;, which refers to Meszaros as the original source.&lt;/p&gt;
 &lt;p&gt;There exist a few different kinds of test doubles; by far the most commonly used kind is mocks, which, as I explain elsewhere, are a very bad idea and should be avoided like COVID-19. (See &lt;a 
-   href=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/&#34;
+   href=&#34;//localhost:1313/post/2023-01-14-mocking/&#34;
    &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.) Another kind of test double, which does not suffer from the disadvantages of mocks, is &lt;em&gt;&lt;strong&gt;Fake Objects&lt;/strong&gt;&lt;/em&gt;, or simply &lt;em&gt;&lt;strong&gt;fakes&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;what-are-fakes&#34;&gt;What are fakes
 &lt;/h3&gt;&lt;p&gt;In just one word, a fake is an emulator.&lt;/p&gt;
@@ -1728,7 +1728,7 @@ it,) so:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Furthermore, the use of fakes instead of mocks promotes the creation of black-box tests instead of white-box tests. Once we get into the habit of writing all of our tests as black-box tests, new possibilities open up which greatly ease the development of fakes: we can now write a test for a certain module, and then reuse that test in order to test its fake. The test can be reused because it is a black-box test, so it does not care how the module works internally, therefore it can test the real thing just as well as the fake of the real thing. Once we run the test on the real thing, we run the same test on the fake, and if both pass, then from that moment on we can continue using the fake in place of the real thing in all other tests.&lt;/p&gt;
 &lt;p&gt;The tests that exercise the real thing will be slow, but the real thing does not change very often, (if ever,) so here is where a testing tool like Testana shines: by using Testana we ensure that the tests exercising the real thing will only run in the rare event that the real thing actually changes. For more information about Testana, see &lt;a 
-   href=&#34;//localhost:1313/p/testana-a-better-way-of-running-tests/&#34;
+   href=&#34;//localhost:1313/post/2024-10-testana/&#34;
    &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;creating-fakes-of-external-components&#34;&gt;Creating fakes of external components
 &lt;/h3&gt;&lt;p&gt;If we are using an external component for which no fake is available, we may wish to create a fake for it ourselves. First, we write a test suite which exercises the external component, not really looking for defects in it, but instead using its behavior as reference for writing the tests. Once we have built our test suite to specifically pass the behavior of the external component, we can reuse it against the fake, and if it also passes, then we have sufficient reasons to believe that the behavior of the fake matches the behavior of the external component. A similar technique is described by Martin Fowler in his &lt;a class=&#34;external&#34; 
@@ -1745,14 +1745,14 @@ it,) so:&lt;/li&gt;
         </item>
         <item>
         <title>On messages and message-passing</title>
-        <link>//localhost:1313/p/on-messages-and-message-passing/</link>
+        <link>//localhost:1313/post/2022-12-messages-and-message-passing/</link>
         <pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-messages-and-message-passing/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-messages-and-message-passing/media/message-passing.png&#34;
+        <guid>//localhost:1313/post/2022-12-messages-and-message-passing/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/media/message-passing.png&#34;
 	width=&#34;2673&#34;
 	height=&#34;1494&#34;
-	srcset=&#34;//localhost:1313/p/on-messages-and-message-passing/media/message-passing_hu_cac0be91696add81.png 480w, //localhost:1313/p/on-messages-and-message-passing/media/message-passing_hu_4c50d0e4091ea6ab.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/media/message-passing_hu_cac0be91696add81.png 480w, //localhost:1313/post/2022-12-messages-and-message-passing/media/message-passing_hu_4c50d0e4091ea6ab.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1764,7 +1764,7 @@ it,) so:&lt;/li&gt;
 &lt;/p&gt;
 &lt;p&gt;Over the decades, numerous software system architectures have emerged which require invocations across subsystems to be done via message-passing instead of programmatic interface method calls. Such architectures are so common that many programmers have come to regard message-passing as an end in and of itself, oblivious of the fact that it is nothing but a (poor) technical mechanism for accomplishing a certain architectural goal.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The architectural goal is to be able to perform general-purpose operations on invocations, for example routing the invocations according to configuration, or queuing the invocations for delivery on a different thread. In order to be able to do things like that, the invocations must first be expressed in a general-purpose form.&lt;/p&gt;
 &lt;p&gt;Message-passing is simply the only general-purpose form that could be imagined by the pioneers who built the first asynchronous event-driven systems, or perhaps the only form that could readily be implemented using the programming languages available back then. However, in succeeding decades our thinking and our tools have advanced considerably, to the point where we now have much better ways of achieving things technically, so it might be worth taking a moment to re-examine the concept of message-passing.&lt;/p&gt;
@@ -1786,15 +1786,15 @@ it,) so:&lt;/li&gt;
 &lt;p&gt;Furthermore, if we bother creating such packaging and unpackaging adaptors, the realization quickly starts to sink-in that all the message classes are irrelevant; there is no need to define a special message class containing a separate field for each parameter of each method, because the only code that would ever deal with such a class would be the corresponding pair of packaging and unpackaging adaptors; so, the adaptors might as well use a single universal message class which simply stores all parameters in an array of object, and voila, the entire menagerie of message classes becomes entirely unnecessary.&lt;/p&gt;
 &lt;p&gt;Thus, it becomes evident that what we are really after is not message-passing per se; it is some general-purpose form of expressing invocations, so that general-purpose operations can be performed on them, and some mechanism for converting back and forth between this general-purpose form and the natural form, which is programmatic interface method calls, so that we can write code naturally. Ideally, the conversion mechanism would be automatic and transparent, so that we do not even have to write those adaptors. Messages have only existed due to the historical absence of such an automatic and transparent mechanism.&lt;/p&gt;
 &lt;p&gt;Fortunately, with modern reflecting, intermediate-code-based, just-in-time compiled programming languages, today we have at our disposal all that is necessary  to build such mechanisms. For more information see &lt;a 
-   href=&#34;//localhost:1313/p/intertwine/&#34;
+   href=&#34;//localhost:1313/post/2022-12-intertwine/&#34;
    &gt;Intertwine&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/p/on-messages-and-message-passing/media/grumpy-cat-message-passing.jpg&#34;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing.jpg&#34;
 	width=&#34;493&#34;
 	height=&#34;555&#34;
-	srcset=&#34;//localhost:1313/p/on-messages-and-message-passing/media/grumpy-cat-message-passing_hu_292667b1799fe58a.jpg 480w, //localhost:1313/p/on-messages-and-message-passing/media/grumpy-cat-message-passing_hu_6ad615b796b41427.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_292667b1799fe58a.jpg 480w, //localhost:1313/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_6ad615b796b41427.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1817,11 +1817,11 @@ it,) so:&lt;/li&gt;
         </item>
         <item>
         <title>Intertwine</title>
-        <link>//localhost:1313/p/intertwine/</link>
+        <link>//localhost:1313/post/2022-12-intertwine/</link>
         <pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate>
         
-        <guid>//localhost:1313/p/intertwine/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/intertwine/media/intertwine-logo.svg&#34;
+        <guid>//localhost:1313/post/2022-12-intertwine/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-intertwine/media/intertwine-logo.svg&#34;
 	
 	
 	
@@ -1833,7 +1833,7 @@ it,) so:&lt;/li&gt;
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;the-problem&#34;&gt;The Problem
 &lt;/h3&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
@@ -1851,7 +1851,7 @@ it,) so:&lt;/li&gt;
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a 
-   href=&#34;//localhost:1313/p/on-messages-and-message-passing/&#34;
+   href=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/&#34;
    &gt;On messages and message-passing&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -2237,21 +2237,21 @@ following:
    href=&#34;https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing&#34; target=&#34;_blank&#34;
    &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
 &lt;p&gt;This post supersedes the original post from 2011: &lt;a 
-   href=&#34;//localhost:1313/p/intertwine-normalizing-interface-invocations/&#34;
+   href=&#34;//localhost:1313/post/2011-10-16-intertwine-normalizing-interface/&#34;
    &gt;Intertwine: Normalizing Interface Invocations&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description>
         </item>
         <item>
         <title>On Microsoft &#34;Visual&#34; products</title>
-        <link>//localhost:1313/p/on-microsoft-visual-products/</link>
+        <link>//localhost:1313/post/2022-08-on-microsoft-visual-products/</link>
         <pubDate>Tue, 16 Aug 2022 11:35:17 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-microsoft-visual-products/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-microsoft-visual-products/images/visio-logo.png&#34;
+        <guid>//localhost:1313/post/2022-08-on-microsoft-visual-products/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-logo.png&#34;
 	width=&#34;512&#34;
 	height=&#34;512&#34;
-	srcset=&#34;//localhost:1313/p/on-microsoft-visual-products/images/visio-logo_hu_1ee2c59c93abfae8.png 480w, //localhost:1313/p/on-microsoft-visual-products/images/visio-logo_hu_8a189bfcc0cec774.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-logo_hu_1ee2c59c93abfae8.png 480w, //localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-logo_hu_8a189bfcc0cec774.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2262,16 +2262,16 @@ following:
 &gt;
 &lt;/p&gt;
 &lt;p&gt;This post is intended as support material for another post of mine; see &lt;a 
-   href=&#34;//localhost:1313/p/towards-authoritative-software-design/&#34;
+   href=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/&#34;
    &gt;Towards Authoritative Software Design&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;One day back in the early nineties, when people were using &lt;strong&gt;Windows 3.0&lt;/strong&gt; and the &lt;strong&gt;Microsoft C/C++ Compiler&lt;/strong&gt;, a colleague showed me a software design that for the first time he had done not on whiteboard, nor on paper, but on a computer screen, using a new drawing tool called &lt;strong&gt;Visio&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading:  &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-microsoft-visual-products/images/visio-1.0-screenshot1.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot1.png&#34;
 	width=&#34;640&#34;
 	height=&#34;480&#34;
-	srcset=&#34;//localhost:1313/p/on-microsoft-visual-products/images/visio-1.0-screenshot1_hu_827134514accb683.png 480w, //localhost:1313/p/on-microsoft-visual-products/images/visio-1.0-screenshot1_hu_6568a10c471fe3c3.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot1_hu_827134514accb683.png 480w, //localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot1_hu_6568a10c471fe3c3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2281,10 +2281,10 @@ following:
 	
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-microsoft-visual-products/images/visio-1.0-screenshot2.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot2.png&#34;
 	width=&#34;640&#34;
 	height=&#34;480&#34;
-	srcset=&#34;//localhost:1313/p/on-microsoft-visual-products/images/visio-1.0-screenshot2_hu_4063c9b7f6c3f47c.png 480w, //localhost:1313/p/on-microsoft-visual-products/images/visio-1.0-screenshot2_hu_a3f52817d811c4cc.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot2_hu_4063c9b7f6c3f47c.png 480w, //localhost:1313/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot2_hu_a3f52817d811c4cc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2302,10 +2302,10 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
    href=&#34;https://www.visiocorp.info/early-days.aspx&#34; target=&#34;_blank&#34;
    &gt;The Early Days of Visio Corporation - Recollections by Ted Johnson, Visio Co-founder&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Then, in 1993 Microsoft announced the successor to their &lt;strong&gt;Microsoft C/C++&lt;/strong&gt; compiler, and the name of the new product was going to be &lt;strong&gt;Microsoft Visual C++&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-microsoft-visual-products/images/microsoft-visual-cpp-touched.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-cpp-touched.jpg&#34;
 	width=&#34;1106&#34;
 	height=&#34;1026&#34;
-	srcset=&#34;//localhost:1313/p/on-microsoft-visual-products/images/microsoft-visual-cpp-touched_hu_ae1eb30e1d2d7a23.jpg 480w, //localhost:1313/p/on-microsoft-visual-products/images/microsoft-visual-cpp-touched_hu_3f9f702db12a2ad4.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-cpp-touched_hu_ae1eb30e1d2d7a23.jpg 480w, //localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-cpp-touched_hu_3f9f702db12a2ad4.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2318,10 +2318,10 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
 &lt;p&gt;Even before we could get our hands on the new compiler, we could not help but speculate what Microsoft might mean by &amp;ldquo;visual&amp;rdquo; in the product name, and our hopes were high that they would have made good on the promise of visual tools for software design.&lt;/p&gt;
 &lt;p&gt;Alas, nothing of that sort happened; Microsoft Visual C++ was just another command-line toolset, and the term &amp;ldquo;visual&amp;rdquo; in the title was nothing but marketing deceit.&lt;/p&gt;
 &lt;p&gt;Then a few more years passed, and in 1997 Microsoft announced their first true Integrated Development Environment (IDE), which was going to be called &lt;strong&gt;Microsoft Visual Studio&lt;/strong&gt; starting with version 5.0, a.k.a. &amp;lsquo;97.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-microsoft-visual-products/images/visual-studio-97.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/visual-studio-97.jpg&#34;
 	width=&#34;570&#34;
 	height=&#34;437&#34;
-	srcset=&#34;//localhost:1313/p/on-microsoft-visual-products/images/visual-studio-97_hu_1556da44acd52c59.jpg 480w, //localhost:1313/p/on-microsoft-visual-products/images/visual-studio-97_hu_8f837d95c2f22452.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/visual-studio-97_hu_1556da44acd52c59.jpg 480w, //localhost:1313/post/2022-08-on-microsoft-visual-products/images/visual-studio-97_hu_8f837d95c2f22452.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2335,10 +2335,10 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
 &lt;p&gt;A few more years passed, and in 2000 Visio was acquired by Microsoft and became &lt;em&gt;&lt;strong&gt;Microsoft Visio&lt;/strong&gt;&lt;/em&gt; (&lt;a class=&#34;external&#34; 
    href=&#34;https://en.wikipedia.org/wiki/Microsoft_Visio&#34; target=&#34;_blank&#34;
    &gt;see Wikipedia&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-microsoft-visual-products/images/microsoft-visio-2000.gif&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visio-2000.gif&#34;
 	width=&#34;550&#34;
 	height=&#34;344&#34;
-	srcset=&#34;//localhost:1313/p/on-microsoft-visual-products/images/microsoft-visio-2000_hu_cb57b82d78dfa1b3.gif 480w, //localhost:1313/p/on-microsoft-visual-products/images/microsoft-visio-2000_hu_12b7f4612b1968ea.gif 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visio-2000_hu_cb57b82d78dfa1b3.gif 480w, //localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visio-2000_hu_12b7f4612b1968ea.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2350,10 +2350,10 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
 &lt;/p&gt;
 &lt;p&gt;When we saw that acquisition happening, we thought that perhaps it was the one thing that was missing for that long unfulfilled promise to finally become a reality; surely, the next release of Visual Studio would have Visio built-in, allowing us to create our software designs and then launch them, right?&lt;/p&gt;
 &lt;p&gt;So, a couple of years later, in 2002 another major release of Visual Studio was announced, which was  to be named &lt;strong&gt;Visual Studio Dot Net.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo.png&#34;
 	width=&#34;672&#34;
 	height=&#34;179&#34;
-	srcset=&#34;//localhost:1313/p/on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo_hu_5f4aa20bd28191ac.png 480w, //localhost:1313/p/on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo_hu_bddccdbcfe032a46.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo_hu_5f4aa20bd28191ac.png 480w, //localhost:1313/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo_hu_bddccdbcfe032a46.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2370,14 +2370,14 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
         </item>
         <item>
         <title>On UML (oh, do not get me started)</title>
-        <link>//localhost:1313/p/on-uml-oh-do-not-get-me-started/</link>
+        <link>//localhost:1313/post/2022-08-uml/</link>
         <pubDate>Tue, 16 Aug 2022 09:20:46 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-uml-oh-do-not-get-me-started/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-uml-oh-do-not-get-me-started/media/uml-logo.png&#34;
+        <guid>//localhost:1313/post/2022-08-uml/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-uml/media/uml-logo.png&#34;
 	width=&#34;824&#34;
 	height=&#34;548&#34;
-	srcset=&#34;//localhost:1313/p/on-uml-oh-do-not-get-me-started/media/uml-logo_hu_de0c20afdc618ca9.png 480w, //localhost:1313/p/on-uml-oh-do-not-get-me-started/media/uml-logo_hu_f720d5921c77bad1.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-uml/media/uml-logo_hu_de0c20afdc618ca9.png 480w, //localhost:1313/post/2022-08-uml/media/uml-logo_hu_f720d5921c77bad1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2388,14 +2388,14 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
 &gt;
 &lt;/p&gt;
 &lt;p&gt;This post is intended as support material for another post of mine; see &lt;a 
-   href=&#34;//localhost:1313/p/towards-authoritative-software-design/&#34;
+   href=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/&#34;
    &gt;Towards Authoritative Software Design&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The Universal Modeling Language (UML) (&lt;a class=&#34;external&#34; 
    href=&#34;https://en.wikipedia.org/wiki/Unified_Modeling_Language&#34; target=&#34;_blank&#34;
    &gt;Wikipedia&lt;/a&gt;) was intended to be a standard notation for expressing software designs, and to replace the multitude of ad-hoc notations that software architects have been using on various mediums such as whiteboard, paper, and general-purpose box-and-arrow diagram-drawing software. The idea was that by following a standard notation which prescribes a specific way of expressing each concept, every diagram would be readily and unambiguously understood by everyone.&lt;/p&gt;
 &lt;p&gt;It has miserably failed.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;UML is probably very close to the top of the list of things that everyone mentions, but nobody uses, and this is due to a number of good reasons:&lt;/p&gt;
 &lt;ul&gt;
@@ -2446,10 +2446,10 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
 &lt;p&gt;UML is &lt;em&gt;&lt;strong&gt;insufferably baroque&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;It should have never been, and it should cease to be.&lt;/p&gt;
 &lt;p&gt;It should be let go into the good night.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-uml-oh-do-not-get-me-started/media/grumpy-cat-uml.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-uml/media/grumpy-cat-uml.jpg&#34;
 	width=&#34;1715&#34;
 	height=&#34;1553&#34;
-	srcset=&#34;//localhost:1313/p/on-uml-oh-do-not-get-me-started/media/grumpy-cat-uml_hu_bef019e84b4ea75.jpg 480w, //localhost:1313/p/on-uml-oh-do-not-get-me-started/media/grumpy-cat-uml_hu_1719cd72479ad91e.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-uml/media/grumpy-cat-uml_hu_bef019e84b4ea75.jpg 480w, //localhost:1313/post/2022-08-uml/media/grumpy-cat-uml_hu_1719cd72479ad91e.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2467,11 +2467,11 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
         </item>
         <item>
         <title>Incremental Integration Testing</title>
-        <link>//localhost:1313/p/incremental-integration-testing/</link>
+        <link>//localhost:1313/post/2022-10-incremental-integration-testing/</link>
         <pubDate>Tue, 14 Dec 2021 09:07:09 +0000</pubDate>
         
-        <guid>//localhost:1313/p/incremental-integration-testing/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/incremental-integration-testing/media/incremental_integration_testing.svg&#34;
+        <guid>//localhost:1313/post/2022-10-incremental-integration-testing/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/media/incremental_integration_testing.svg&#34;
 	
 	
 	
@@ -2483,7 +2483,7 @@ Microsoft and Visio, read &lt;a class=&#34;external&#34;
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A new method for &lt;em&gt;&lt;strong&gt;Automated Software Testing&lt;/strong&gt;&lt;/em&gt; is presented as an alternative to &lt;em&gt;&lt;strong&gt;Unit Testing&lt;/strong&gt;&lt;/em&gt;. The new method retains the benefit of Unit Testing, which is &lt;em&gt;&lt;strong&gt;Defect Localization&lt;/strong&gt;&lt;/em&gt;, but eliminates white-box testing and mocking, thus greatly lessening the effort of writing and maintaining tests.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;summary&#34;&gt;Summary
 &lt;/h3&gt;&lt;p&gt;Unit Testing aims to achieve Defect Localization by replacing the collaborators of the Component Under Test with Mocks. As we will show, the use of Mocks is laborious, complicated, over-specified, presumptuous, and constitutes testing against the implementation, not against the interface, thus leading to brittle tests that hinder refactoring rather than facilitating it.&lt;/p&gt;
@@ -2637,7 +2637,7 @@ com.acme.T03_charlie_depends_on_alpha_tests&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;No testing framework that I know of (JUnit, MSTest, etc.) is capable of doing the above; for this reason, I have developed a utility which I call &lt;em&gt;&lt;strong&gt;Testana&lt;/strong&gt;&lt;/em&gt;, that does exactly that.&lt;/p&gt;
 &lt;p&gt;Testana will analyze a system to discover its structure, will analyze modules to discover dependencies and tests, and will run the tests in the right order so as to achieve Incremental Integration Testing. It will also do a few other nice things, like keep track of last successful test runs, and examine timestamps, so as to refrain from running tests whose dependencies have not changed since the last successful test run. For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/testana-a-better-way-of-running-tests/&#34;
+   href=&#34;//localhost:1313/post/2024-10-testana/&#34;
    &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;what-if-my-dependencies-are-not-discoverable&#34;&gt;What if my dependencies are not discoverable?
 &lt;/h3&gt;&lt;p&gt;Some very trendy practices of our modern day and age include:&lt;/p&gt;
@@ -2656,7 +2656,7 @@ com.acme.T03_charlie_depends_on_alpha_tests&lt;/p&gt;
 &lt;li&gt;When actual collaborators are integrated, such as file systems, relational database management systems, messaging queues, and what not, the tests can become very slow.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To address the performance issue I recommend the use of &lt;em&gt;&lt;strong&gt;Fakes&lt;/strong&gt;&lt;/em&gt;, not Mocks. For an explanation of what Fakes are, and why they are incontestably preferable over Mocks, please read &lt;a 
-   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   href=&#34;//localhost:1313/post/2022-10-testing-with-fakes/&#34;
    &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;By supplying a component under test with a Fake instead of a Mock we benefit from great performance, while utilizing a collaborator which has already been tested by its creators and can be reasonably assumed to be free of defects. In doing so, we continue to avoid White-Box Testing and we keep defects localized.&lt;/p&gt;
 &lt;p&gt;Furthermore, nothing prevents us from having our CI/CD server run the test of each component twice:&lt;/p&gt;
@@ -2669,7 +2669,7 @@ com.acme.T03_charlie_depends_on_alpha_tests&lt;/p&gt;
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;It greatly reduces the effort of writing and maintaining tests, by eliminating the need for mocking code in each test.&lt;/li&gt;
 &lt;li&gt;It allows our tests to engage in Black-Box Testing instead of White-Box Testing. For an in-depth discussion of what is wrong with White-Box Testing, see &lt;a 
-   href=&#34;//localhost:1313/p/white-box-vs-black-box-testing/&#34;
+   href=&#34;//localhost:1313/post/2021-12-white-box-vs-black-box-testing/&#34;
    &gt;White-Box vs. Black-Box Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;It makes tests more effective and accurate, by eliminating assumptions about the behavior of the real collaborators.&lt;/li&gt;
 &lt;li&gt;It simplifies our testing operations by eliminating the need for two separate testing phases, one for Unit Testing and one for Integration Testing.&lt;/li&gt;
@@ -2709,7 +2709,7 @@ com.acme.T03_charlie_depends_on_alpha_tests&lt;/p&gt;
 &lt;p&gt;Counter-arguments:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;This is true, and this is why Incremental Integration Testing might be unsuitable for high-criticality software, where White-Box Testing is the explicit intention, since it is necessary to ensure not only that the software produces correct results, but also that its internals are working exactly according to plan. However, Incremental Integration Testing is not being proposed as a perfect solution, it is being proposed as a pragmatic solution: the vast majority of software being developed in the world is regular, commercial-grade, non-high-criticality software, where Black-Box Testing is appropriate and sufficient, since all that matters is that the requirements be met. Essentially, Incremental Integration Testing represents the realization that in the general case, tests which worry not only about the behavior, but also about the inner workings of a component, constitute over-engineering. For a more in-depth discussion about this, please read &lt;a 
-   href=&#34;//localhost:1313/p/white-box-vs-black-box-testing/&#34;
+   href=&#34;//localhost:1313/post/2021-12-white-box-vs-black-box-testing/&#34;
    &gt;White-Box vs. Black-Box Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;In order to make sure that everything is happening as expected under the hood, you do not have to stipulate in excruciating detail what should be happening, you do not have to fail the tests at the slightest sign of deviation from what was expected, and you do not have to go fixing tests each time the expectations change. Another way of ensuring the same thing is to simply:
 &lt;ul&gt;
@@ -2718,7 +2718,7 @@ com.acme.T03_charlie_depends_on_alpha_tests&lt;/p&gt;
 &lt;li&gt;Visually examine what is now different.&lt;/li&gt;
 &lt;li&gt;Vouch for the differences being as expected.
 For more details about this, see &lt;a 
-   href=&#34;//localhost:1313/p/collaboration-monitoring/&#34;
+   href=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/&#34;
    &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -2732,7 +2732,7 @@ For more details about this, see &lt;a
 &lt;li&gt;Picking an individual test and running it is meaningless under all scenarios. It is usually done in the interest of saving time, but it is based on the assumption that we know what tests have been affected by the changes we just made to the source code. This is never a safe assumption to make.&lt;/li&gt;
 &lt;li&gt;Instead of picking an individual test and running it, we need a way to automatically run all tests that have been affected by the changes we just made, which requires knowledge of the dependency graph of the system.&lt;/li&gt;
 &lt;li&gt;If you are unsure as to exactly what you just changed, and exactly what depends on it, then consider using a tool like Testana, which figures all this out for you. See &lt;a 
-   href=&#34;//localhost:1313/p/testana-a-better-way-of-running-tests/&#34;
+   href=&#34;//localhost:1313/post/2024-10-testana/&#34;
    &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -2743,7 +2743,7 @@ For more details about this, see &lt;a
 &lt;ul&gt;
 &lt;li&gt;My intention is to show the way; if people see the way, the tools will come.&lt;/li&gt;
 &lt;li&gt;I have already built such a tool which is compatible with some combinations of programming languages, build systems, and testing frameworks; see &lt;a 
-   href=&#34;//localhost:1313/p/testana-a-better-way-of-running-tests/&#34;
+   href=&#34;//localhost:1313/post/2024-10-testana/&#34;
    &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Even in lack of tools, it is possible to start experimenting with Incremental Integration Testing today by following the poor-man&amp;rsquo;s approach, which consists of simply naming the tests, and the directories in which they reside, in such a way that your existing testing framework will run them in the right order. This is described in the &amp;ldquo;poor man&amp;rsquo;s approach&amp;rdquo; section of this paper.&lt;/li&gt;
 &lt;/ul&gt;
@@ -2756,17 +2756,17 @@ For more details about this, see &lt;a
         </item>
         <item>
         <title>So, what is a Microservice, anyway?</title>
-        <link>//localhost:1313/p/so-what-is-a-microservice-anyway/</link>
+        <link>//localhost:1313/post/2021-10-so-what-is-microservice-anyway/</link>
         <pubDate>Thu, 14 Oct 2021 17:39:23 +0000</pubDate>
         
-        <guid>//localhost:1313/p/so-what-is-a-microservice-anyway/</guid>
+        <guid>//localhost:1313/post/2021-10-so-what-is-microservice-anyway/</guid>
         <description>&lt;p&gt;This article attempts to shed some light on what a microservice really is; it
 is meant as support material for other posts of mine that discuss
 microservices, mainly
 &lt;a 
-   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   href=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/&#34;
    &gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/media/microservices.svg&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-so-what-is-microservice-anyway/media/microservices.svg&#34;
 	
 	
 	
@@ -2788,7 +2788,7 @@ that microservices must communicate with each other via nothing but REST, etc.
 My favorite one is that they must necessarily be stateless. This paper is a
 first step in dispelling the statelessness myth.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;To clear up the confusion a little bit, I would like to propose a purely
 technical definition of a microservice which is brief and to the point:&lt;/p&gt;
@@ -2871,7 +2871,7 @@ resilience concern into our definition, then this is what we are left with:&lt;/
 &lt;p&gt;From a purely technical standpoint, a microservice is a scalable and resilient
 module.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Further reading: &lt;a 
-   href=&#34;//localhost:1313/p/on-stateless-microservices/&#34;
+   href=&#34;//localhost:1313/post/2021-10-on-stateless-microservices/&#34;
    &gt;On Stateless Microservices&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;(1) According to Neal Ford, this started with Pets.com; see &lt;a class=&#34;external&#34; 
@@ -2880,16 +2880,16 @@ module.&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>The Stateful Microservice</title>
-        <link>//localhost:1313/p/the-stateful-microservice/</link>
+        <link>//localhost:1313/post/2021-10-14-the-stateful-microservice/</link>
         <pubDate>Thu, 14 Oct 2021 16:58:10 +0000</pubDate>
         
-        <guid>//localhost:1313/p/the-stateful-microservice/</guid>
+        <guid>//localhost:1313/post/2021-10-14-the-stateful-microservice/</guid>
         <description>&lt;p&gt;I did a quick search for the term and did not find anything concrete, so I
 thought I might as well publicly document my thoughts.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/the-stateful-microservice/media/elephants.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/media/elephants.jpg&#34;
 	width=&#34;2048&#34;
 	height=&#34;1365&#34;
-	srcset=&#34;//localhost:1313/p/the-stateful-microservice/media/elephants_hu_cfac862bf8819bb5.jpg 480w, //localhost:1313/p/the-stateful-microservice/media/elephants_hu_6c0c09c376128914.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/media/elephants_hu_cfac862bf8819bb5.jpg 480w, //localhost:1313/post/2021-10-14-the-stateful-microservice/media/elephants_hu_6c0c09c376128914.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2901,7 +2901,7 @@ thought I might as well publicly document my thoughts.&lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;(Useful pre-reading:
 &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Almost everyone doing microservices today will tell you that microservices
 need to be stateless. In another post of mine I explain that statelessness is
@@ -2910,7 +2910,7 @@ desired technical ends are scalability and resilience, and statelessness is just
 in particular is a very cowardly solution from an engineering standpoint, and
 it performs very badly. For details, please see
 &lt;a 
-   href=&#34;//localhost:1313/p/on-stateless-microservices/&#34;
+   href=&#34;//localhost:1313/post/2021-10-on-stateless-microservices/&#34;
    &gt;On Stateless Microservices&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;What remains to be shown is whether there exists an alternative.&lt;/p&gt;
 &lt;p&gt;Obviously, an alternative to the stateless microservice would be the stateful
@@ -2967,7 +2967,7 @@ microservice.&lt;/p&gt;
 &lt;p&gt;In a previous post of mine I examined what a microservice really is, and I
 came to the conclusion that from a purely technical standpoint, it is simply a scalable and resilient module. (See
 &lt;a 
-   href=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/&#34;
+   href=&#34;//localhost:1313/post/2021-10-so-what-is-microservice-anyway/&#34;
    &gt;So, what is a Microservice, anyway?&lt;/a&gt;) Even if you disagree with this definition, and you regard microservices as
 necessarily more than that, I hope you will at least agree that the purpose of
 statelessness in microservices is precisely to achieve scalability and
@@ -3121,19 +3121,19 @@ resilience.&lt;/p&gt;
         </item>
         <item>
         <title>On Stateless Microservices</title>
-        <link>//localhost:1313/p/on-stateless-microservices/</link>
+        <link>//localhost:1313/post/2021-10-on-stateless-microservices/</link>
         <pubDate>Thu, 14 Oct 2021 10:53:38 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-stateless-microservices/</guid>
+        <guid>//localhost:1313/post/2021-10-on-stateless-microservices/</guid>
         <description>&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as
 support material for other posts of mine that discuss microservices, mainly
 &lt;a 
-   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   href=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/&#34;
    &gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-stateless-microservices/media/8.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-on-stateless-microservices/media/8.png&#34;
 	width=&#34;1378&#34;
 	height=&#34;2048&#34;
-	srcset=&#34;//localhost:1313/p/on-stateless-microservices/media/8_hu_48b7be9e0748ac79.png 480w, //localhost:1313/p/on-stateless-microservices/media/8_hu_56b2bd321fd1677a.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2021-10-on-stateless-microservices/media/8_hu_48b7be9e0748ac79.png 480w, //localhost:1313/post/2021-10-on-stateless-microservices/media/8_hu_56b2bd321fd1677a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3146,7 +3146,7 @@ support material for other posts of mine that discuss microservices, mainly
 &lt;h4 id=&#34;is-statelessness-a-requirement-for-a-microservice&#34;&gt;Is statelessness a requirement for a microservice?
 &lt;/h4&gt;&lt;p&gt;In another post (see
 &lt;a 
-   href=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/&#34;
+   href=&#34;//localhost:1313/post/2021-10-so-what-is-microservice-anyway/&#34;
    &gt;So, what is a Microservice, anyway?&lt;/a&gt;) I examine what a microservice really is, and I come to the conclusion that from a purely technical standpoint, a working definition could be
 as simple as this:&lt;/p&gt;
 &lt;p&gt;A microservice is a scalable and resilient module.&lt;/p&gt;
@@ -3160,7 +3160,7 @@ have almost come to be regarded as synonymous with statelessness. This post
 examines whether this is that in fact so, and what is the cost of doing things
 this way.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;If we take a step back for a moment and examine the issue from a somewhat
 distanced point of view, we notice that there is no such thing as a stateless
@@ -3302,7 +3302,7 @@ short-sighted because from the entire broad topic of server-initiated client
 updates it only considers the narrow case of updates being used for the sole
 purpose of on-screen notifications.&lt;/p&gt;
 &lt;p&gt;Further reading: &lt;a 
-   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   href=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/&#34;
    &gt;The Stateful Microservice&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3312,16 +3312,16 @@ suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pix
         </item>
         <item>
         <title>White-Box vs- Black-Box Testing</title>
-        <link>//localhost:1313/p/white-box-vs-black-box-testing/</link>
+        <link>//localhost:1313/post/2021-12-white-box-vs-black-box-testing/</link>
         <pubDate>Wed, 22 Sep 2021 13:47:17 +0000</pubDate>
         
-        <guid>//localhost:1313/p/white-box-vs-black-box-testing/</guid>
+        <guid>//localhost:1313/post/2021-12-white-box-vs-black-box-testing/</guid>
         <description>&lt;p&gt;&lt;a class=&#34;external&#34; 
    href=&#34;https://blogger.googleusercontent.com/img/a/AVvXsEjW7YbG075F9q253nTW0xSWiTzN9msG1BuZ2TgZO-mztpIBkgk9or5PoE2z-KhAx_WmfsT86Z5y6NFntAxir_gDF9PE3CCPaGQDmtx6ypfaffZirjHodfq1rM5SP8ONNI7AUmT3xHoijMhReRWmeHJZKjyPtZuyhHPAFJ6MrPUuPE7BXsGJ4gFWE36yyg=s1000&#34; target=&#34;_blank&#34;
-   &gt;&lt;img src=&#34;//localhost:1313/p/white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091.jpg&#34;
+   &gt;&lt;img src=&#34;//localhost:1313/post/2021-12-white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091.jpg&#34;
 	width=&#34;640&#34;
 	height=&#34;256&#34;
-	srcset=&#34;//localhost:1313/p/white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091_hu_f50f246ab2524aaf.jpg 480w, //localhost:1313/p/white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091_hu_cde10918de1bcfd0.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2021-12-white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091_hu_f50f246ab2524aaf.jpg 480w, //localhost:1313/post/2021-12-white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091_hu_cde10918de1bcfd0.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3338,7 +3338,7 @@ suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pix
 &lt;p&gt;Sorry, not sorry.&lt;/p&gt;
 &lt;p&gt;I will explain, bear with me.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h4 id=&#34;so-what-is-unit-testing-anyway&#34;&gt;So, what is Unit Testing anyway?
 &lt;/h4&gt;&lt;p&gt;Unit Testing, according to its definition, aims to examine a module in
@@ -3530,19 +3530,19 @@ remains: when we test a module we want to make sure that the observed behavior
 is not affected by potential malfunction in its dependencies. How can we avoid that?&lt;/p&gt;
 &lt;p&gt;The way I have been handling this in recent years is by means of a method that
 I call &lt;em&gt;Incremental Integration Testing&lt;/em&gt;. You can read about it here: &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;</description>
         </item>
         <item>
         <title>The MVVM architectural design pattern</title>
-        <link>//localhost:1313/p/the-mvvm-architectural-design-pattern/</link>
+        <link>//localhost:1313/post/2021-01-the-mvvm-architectural-design-pattern/</link>
         <pubDate>Sat, 16 Jan 2021 14:47:04 +0000</pubDate>
         
-        <guid>//localhost:1313/p/the-mvvm-architectural-design-pattern/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/the-mvvm-architectural-design-pattern/media/mvvm.png&#34;
+        <guid>//localhost:1313/post/2021-01-the-mvvm-architectural-design-pattern/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm.png&#34;
 	width=&#34;800&#34;
 	height=&#34;242&#34;
-	srcset=&#34;//localhost:1313/p/the-mvvm-architectural-design-pattern/media/mvvm_hu_8fa849595e07c30f.png 480w, //localhost:1313/p/the-mvvm-architectural-design-pattern/media/mvvm_hu_400ee7376db477fb.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm_hu_8fa849595e07c30f.png 480w, //localhost:1313/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm_hu_400ee7376db477fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3638,14 +3638,14 @@ I call &lt;em&gt;Incremental Integration Testing&lt;/em&gt;. You can read about 
         </item>
         <item>
         <title>Object Lifetime Awareness</title>
-        <link>//localhost:1313/p/object-lifetime-awareness/</link>
+        <link>//localhost:1313/post/2020-12-27-object-lifetime-awareness/</link>
         <pubDate>Sun, 27 Dec 2020 10:46:17 +0000</pubDate>
         
-        <guid>//localhost:1313/p/object-lifetime-awareness/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/object-lifetime-awareness/images/le-penseur.jpg&#34;
+        <guid>//localhost:1313/post/2020-12-27-object-lifetime-awareness/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2020-12-27-object-lifetime-awareness/images/le-penseur.jpg&#34;
 	width=&#34;3648&#34;
 	height=&#34;5472&#34;
-	srcset=&#34;//localhost:1313/p/object-lifetime-awareness/images/le-penseur_hu_9d5b056aaaccb843.jpg 480w, //localhost:1313/p/object-lifetime-awareness/images/le-penseur_hu_c19a599b08f288b2.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2020-12-27-object-lifetime-awareness/images/le-penseur_hu_9d5b056aaaccb843.jpg 480w, //localhost:1313/post/2020-12-27-object-lifetime-awareness/images/le-penseur_hu_c19a599b08f288b2.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3659,7 +3659,7 @@ I call &lt;em&gt;Incremental Integration Testing&lt;/em&gt;. You can read about 
 &lt;/h4&gt;&lt;p&gt;Garbage collectors have given us a false sense of security with respect to what happens to an object once we stop thinking about it. The assumption is that it will be magically taken care of, but this does not always go as hoped, resulting in memory leaks and bugs due to failure to perform necessary cleanup. Tools for troubleshooting such problems are scarce, and not particularly helpful, so finding and fixing such problems is notoriously difficult.&lt;/p&gt;
 &lt;p&gt;A methodology is presented, which differs from current widespread practices, for maintaining awareness of, and exercising full deterministic control over, the lifetime of certain objects in a garbage-collected environment. We issue hard errors in the event of misuse, and accurate diagnostic messages in the event of omissions, thus improving the robustness of software and lessening the troubleshooting burden.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h4 id=&#34;definition&#34;&gt;Definition
 &lt;/h4&gt;&lt;p&gt;An object can be said to have a concept of lifetime if at some point it must perform some cleanup actions, after which it must never be accessed again.&lt;/p&gt;
@@ -4023,7 +4023,7 @@ Where( f =&amp;gt; f.GetFileName() != null ) //&lt;/p&gt;
 &lt;p&gt;Object lifetime awareness has the theoretic potential of completely eliminating all finalization overhead. Unfortunately, as things stand today, this potential cannot be realized, because existing runtime environments still offer essential classes that make unconditional use of finalization; e.g. classes that represent files, sockets, etc. These environments could benefit from new implementations of such essential classes that make use of the object lifetime awareness pattern so as to also avoid finalization. (While at it, please also note that these same classes could really benefit from not being needlessly multithreading-aware; when we have a use for multithreading awareness, we can add it ourselves, thank you.)&lt;/p&gt;
 &lt;p&gt;Additionally, if it could be definitively established that finalization is to be used only for the purpose of generating diagnostic messages, then the entire machinery implementing finalization in runtime environments could be greatly simplified from the monster of complexity that it is today. Consider, for example, that garbage collectors are currently built to handle such preposterous situations as &amp;ldquo;object resurrection&amp;rdquo;, which is what may happen if a finalizer decides to anchor an object in memory, thus taking an object which had previously become eligible for collection and making it not eligible anymore. If finalization could be made trivial, then object resurrection could become impossible, or it could result in hard error rather than having to be handled.&lt;/p&gt;
 &lt;p&gt;Also see my previous post &lt;a 
-   href=&#34;//localhost:1313/p/mandatory-disposal-vs-the-dispose-disposing-abomination/&#34;
+   href=&#34;//localhost:1313/post/2015-03-on-dispose-bool-disposing-abomination/&#34;
    &gt;Mandatory disposal vs. the &amp;ldquo;Dispose-disposing&amp;rdquo; abomination&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: &lt;em&gt;The Thinker&lt;/em&gt; (French: &lt;em&gt;Le Penseur&lt;/em&gt;) by Auguste Rodin (From &lt;a class=&#34;external&#34; 
@@ -4044,14 +4044,14 @@ Where( f =&amp;gt; f.GetFileName() != null ) //&lt;/p&gt;
         </item>
         <item>
         <title>Coherence: The Assertable Lock</title>
-        <link>//localhost:1313/p/coherence-the-assertable-lock/</link>
+        <link>//localhost:1313/post/2020-12-12-coherence/</link>
         <pubDate>Sat, 12 Dec 2020 13:51:31 +0000</pubDate>
         
-        <guid>//localhost:1313/p/coherence-the-assertable-lock/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/coherence-the-assertable-lock/media/coherence.jpg&#34;
+        <guid>//localhost:1313/post/2020-12-12-coherence/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2020-12-12-coherence/media/coherence.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;853&#34;
-	srcset=&#34;//localhost:1313/p/coherence-the-assertable-lock/media/coherence_hu_774fdb15a774b77.jpg 480w, //localhost:1313/p/coherence-the-assertable-lock/media/coherence_hu_d8603833f9d0eb32.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2020-12-12-coherence/media/coherence_hu_774fdb15a774b77.jpg 480w, //localhost:1313/post/2020-12-12-coherence/media/coherence_hu_d8603833f9d0eb32.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -4066,7 +4066,7 @@ Where( f =&amp;gt; f.GetFileName() != null ) //&lt;/p&gt;
 &lt;h3 id=&#34;a-description-of-the-problem&#34;&gt;A description of the problem
 &lt;/h3&gt;&lt;p&gt;Every Software Engineer who has dealt with concurrency knows that it is hard. The bane of concurrency is race conditions: when a thread accesses data without taking into account the fact that the data is shared with other concurrently running threads which may alter that data at any unforeseeable moment in time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading:  &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;There exist two kinds of race conditions that I can think of, let&amp;rsquo;s call them &lt;em&gt;&lt;strong&gt;physical&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;logical&lt;/strong&gt;&lt;/em&gt;. (I just made up these terms, perhaps they have already been studied and given other names, but I am unaware of that.)&lt;/p&gt;
 &lt;ul&gt;
@@ -4209,14 +4209,14 @@ may exist when a certain instability is detected, so even the original sense ref
         </item>
         <item>
         <title>Domain Oriented Programming</title>
-        <link>//localhost:1313/p/domain-oriented-programming/</link>
+        <link>//localhost:1313/post/2020-06-26-domain-oriented-programming/</link>
         <pubDate>Fri, 26 Jun 2020 18:46:47 +0000</pubDate>
         
-        <guid>//localhost:1313/p/domain-oriented-programming/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/domain-oriented-programming/media/DomainOrientedProgramming.png&#34;
+        <guid>//localhost:1313/post/2020-06-26-domain-oriented-programming/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2020-06-26-domain-oriented-programming/media/DomainOrientedProgramming.png&#34;
 	width=&#34;1253&#34;
 	height=&#34;783&#34;
-	srcset=&#34;//localhost:1313/p/domain-oriented-programming/media/DomainOrientedProgramming_hu_46f0896593c4ea4d.png 480w, //localhost:1313/p/domain-oriented-programming/media/DomainOrientedProgramming_hu_80495cb7faae492e.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2020-06-26-domain-oriented-programming/media/DomainOrientedProgramming_hu_46f0896593c4ea4d.png 480w, //localhost:1313/post/2020-06-26-domain-oriented-programming/media/DomainOrientedProgramming_hu_80495cb7faae492e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -4234,7 +4234,7 @@ may exist when a certain instability is detected, so even the original sense ref
    &gt;&lt;em&gt;&lt;strong&gt;Dependency Inversion&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; says that a class should not contain any direct calls to specific instances of any of its dependencies. Instead, it should receive these instances as parameters during initialization.&lt;/p&gt;
 &lt;p&gt;That&amp;rsquo;s all very nice, but passing dependencies around can become quite a complicated business, and in large systems it can become a nightmare.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Various mechanisms have been devised for solving this problem. Two that I know of are &lt;a class=&#34;external&#34; 
    href=&#34;https://en.wikipedia.org/wiki/Service_locator_pattern&#34; target=&#34;_blank&#34;
@@ -4314,10 +4314,10 @@ may exist when a certain instability is detected, so even the original sense ref
         </item>
         <item>
         <title>On Validation vs- Error Checking</title>
-        <link>//localhost:1313/p/on-validation-vs-error-checking/</link>
+        <link>//localhost:1313/post/2020-05-30-on-validation-vs-error-checking/</link>
         <pubDate>Sat, 30 May 2020 17:33:41 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-validation-vs-error-checking/</guid>
+        <guid>//localhost:1313/post/2020-05-30-on-validation-vs-error-checking/</guid>
         <description>&lt;p&gt;Let me start with a couple of pedantic definitions; stay with me, the beef follows right afterwards.&lt;/p&gt;
 &lt;p&gt;Conventional wisdom says that validation is different from error checking.&lt;/p&gt;
 &lt;ul&gt;
@@ -4326,7 +4326,7 @@ may exist when a certain instability is detected, so even the original sense ref
 &lt;/ul&gt;
 &lt;p&gt;So far so good, right?&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Well, the problem with this conventional view of validation vs error checking is that it heavily relies on the notion of &amp;ldquo;system boundaries&amp;rdquo;, which is not a well-defined notion.  Unless you are an application programmer, whatever you are building will in all likelihood be a subsystem of a larger system, and that system will in turn be a subsystem of an even larger system, and so on. Therefore, what you think of as the boundaries of your system will never be the actual boundaries of the actual system. You cannot have any claim to knowledge of the boundaries of any system that might incorporate your little creation as a component of it.&lt;/p&gt;
 &lt;p&gt;As a reaction to this uncertainty, most programmers maintain a self-centered view of the component they are developing as &lt;em&gt;&lt;strong&gt;the&lt;/strong&gt;&lt;/em&gt; system, and a short-sighted view of the boundaries of their component as &lt;em&gt;&lt;strong&gt;the&lt;/strong&gt;&lt;/em&gt; system boundaries. So, on those boundaries they keep doing validation.&lt;/p&gt;
@@ -4344,17 +4344,17 @@ may exist when a certain instability is detected, so even the original sense ref
         </item>
         <item>
         <title>What is wrong with Full Stack Development</title>
-        <link>//localhost:1313/p/what-is-wrong-with-full-stack-development/</link>
+        <link>//localhost:1313/post/2021-12-full-stack-development/</link>
         <pubDate>Sun, 01 Apr 2018 14:37:37 +0000</pubDate>
         
-        <guid>//localhost:1313/p/what-is-wrong-with-full-stack-development/</guid>
+        <guid>//localhost:1313/post/2021-12-full-stack-development/</guid>
         <description>&lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/p/what-is-wrong-with-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961.jpg&#34;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961.jpg&#34;
 	width=&#34;408&#34;
 	height=&#34;639&#34;
-	srcset=&#34;//localhost:1313/p/what-is-wrong-with-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961_hu_755c7da92bba20ac.jpg 480w, //localhost:1313/p/what-is-wrong-with-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961_hu_ac4b783d13bec49.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961_hu_755c7da92bba20ac.jpg 480w, //localhost:1313/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961_hu_ac4b783d13bec49.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -4389,7 +4389,7 @@ may exist when a certain instability is detected, so even the original sense ref
 &lt;/ul&gt;
 &lt;p&gt;(Useful pre-reading:
 &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h4 id=&#34;what-is-full-stack-development&#34;&gt;What is full-stack development
 &lt;/h4&gt;&lt;p&gt;The predominant web application development model today requires splitting
@@ -4406,7 +4406,7 @@ two ends invariably communicate with each other via REST. The choice of
 JavaScript and REST is not due to any technical merit inherent in these
 technologies, (there is none,) but purely due to historical accident; see
 &lt;a 
-   href=&#34;//localhost:1313/p/the-wild-wild-web/&#34;
+   href=&#34;//localhost:1313/post/2020-10-19-the-wild-wild-web/&#34;
    &gt;The Wild, Wild Web&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;A web application developer can either focus on one part of the stack, or work
 on both parts. Due to reasons that will be explained further down, more often
@@ -4663,14 +4663,14 @@ the industry as a whole.&lt;/p&gt;
         </item>
         <item>
         <title>On Code Craftsmanship</title>
-        <link>//localhost:1313/p/on-code-craftsmanship/</link>
+        <link>//localhost:1313/post/2018-02-code-craftsmanship/</link>
         <pubDate>Mon, 05 Feb 2018 15:55:42 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-code-craftsmanship/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-code-craftsmanship/media/craftsmanship-guitar.jpg&#34;
+        <guid>//localhost:1313/post/2018-02-code-craftsmanship/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2018-02-code-craftsmanship/media/craftsmanship-guitar.jpg&#34;
 	width=&#34;2048&#34;
 	height=&#34;1365&#34;
-	srcset=&#34;//localhost:1313/p/on-code-craftsmanship/media/craftsmanship-guitar_hu_8f8fb8bbba0d0d17.jpg 480w, //localhost:1313/p/on-code-craftsmanship/media/craftsmanship-guitar_hu_14d10496d9352bee.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2018-02-code-craftsmanship/media/craftsmanship-guitar_hu_8f8fb8bbba0d0d17.jpg 480w, //localhost:1313/post/2018-02-code-craftsmanship/media/craftsmanship-guitar_hu_14d10496d9352bee.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -4682,7 +4682,7 @@ the industry as a whole.&lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;I will try to make a list of items here, but I could probably write a book on this.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;assert-everything&#34;&gt;Assert everything
 &lt;/h3&gt;&lt;p&gt;Assertions take care of white-box testing your code, so that automated software testing can be confined to the realm of strictly black-box testing, as it should. Assertions do not execute on release builds / production runs, so they essentially cost nothing. This means that you can go wild with them:&lt;/p&gt;
@@ -4698,35 +4698,35 @@ the industry as a whole.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;When I look at code, I don&amp;rsquo;t ask myself &amp;ldquo;should I assert that?&amp;rdquo; Instead, I ask myself &amp;ldquo;is there anything that I forgot to assert?&amp;rdquo; The idea is to assert everything that could possibly be asserted, leave nothing assertable unasserted. I call this &lt;em&gt;The Maximalistic Approach to Error Checking&lt;/em&gt;, in contrast to the predominant minimalistic approach, where programmers decide on a case by case basis whether to assert something or not, based on completely-oblivious-of-Murphy&amp;rsquo;s-law assumptions about how likely it is to go wrong, inappropriately mixed with misguided performance considerations.&lt;/p&gt;
 &lt;p&gt;For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/assertions-and-testing/&#34;
+   href=&#34;//localhost:1313/post/2014-09-assertions-and-testing/&#34;
    &gt;Assertions and Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Also note that the attention horizon of code is the function, so if function &lt;code&gt;f1()&lt;/code&gt; asserts some condition and then invokes function &lt;code&gt;f2()&lt;/code&gt;, it is perfectly fine for &lt;code&gt;f2()&lt;/code&gt; to also assert the same condition. In other words, whether something has already been asserted or not by some other function is irrelevant: each function must assert every condition that pertains to it.&lt;/p&gt;
 &lt;h3 id=&#34;do-black-box-testing-avoid-white-box-testing&#34;&gt;Do black-box testing, avoid white-box testing
 &lt;/h3&gt;&lt;p&gt;Heed the advice that says &lt;em&gt;test against the interface, not the implementation&lt;/em&gt;. Unit Testing is testing against the implementation, so despite the entire software industry&amp;rsquo;s addiction to it, it should be avoided. Incidentally, this means that mocking, despite being an admirably nifty trick, should never be used: if you are using mocks then you are doing white-box testing, so you are doing it wrong.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;For more on why Unit Testing is white-box testing, and why white-box testing is bad, read this: &lt;a 
-   href=&#34;//localhost:1313/p/white-box-vs-black-box-testing/&#34;
+   href=&#34;//localhost:1313/post/2021-12-white-box-vs-black-box-testing/&#34;
    &gt;White Box vs. Black-Box Testing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;For more on why mocks in particular are especially bad, read this: &lt;a 
-   href=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/&#34;
+   href=&#34;//localhost:1313/post/2023-01-14-mocking/&#34;
    &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;For what to use instead of mocks, read this: &lt;a 
-   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   href=&#34;//localhost:1313/post/2022-10-testing-with-fakes/&#34;
    &gt;Testing with Fakes instead of Mocks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;For what to do instead of unit testing, read this: &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;If for some reason you &lt;em&gt;must&lt;/em&gt; do white-box testing, then you can at least avoid having to do it in code; read this: &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt; and this: &lt;a 
-   href=&#34;//localhost:1313/p/collaboration-monitoring/&#34;
+   href=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/&#34;
    &gt;Collaboration Monitoring&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;avoid-non-determinism-in-tests&#34;&gt;Avoid non-determinism in tests
 &lt;/h3&gt;&lt;p&gt;Testing must be completely free from non-determinism under all circumstances. Since testing code exercises production code, this means that production code must also be free from non-determinism, or at the very least any source of non-determinism in production code must be replaceable during testing with a fake which is completely deterministic. For example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Never rely on the garbage-collector doing anything other than reclaiming memory; specifically, never rely on any cleanup operations being initiated by the garbage-collector. Perform all cleanup explicitly. For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/object-lifetime-awareness/&#34;
+   href=&#34;//localhost:1313/post/2020-12-27-object-lifetime-awareness/&#34;
    &gt;Object Lifetime Awareness&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Never allow any external factors such as file creation times, IP addresses resolved from DNS, etc. to enter into the tests. Fake your file-system; fake The Internet if necessary.&lt;/li&gt;
 &lt;li&gt;Never use wall-clock time; always fake the clock, making it start from some arbitrary fixed origin and incrementing by a fixed amount each time it is queried.&lt;/li&gt;
@@ -4742,7 +4742,7 @@ the industry as a whole.&lt;/p&gt;
 &lt;p&gt;The historical origins of the practice of never overwriting function parameters are actually quite funny: some early versions of Fortran (the first programming language) used to pass everything by reference, including constants. So, if you had function F(X) which was invoked with 3 for X, and within F(X) you assigned 5 to x, then from that moment on the constant 3 would actually have the value 5 in your entire program. As a result, early computer scientists decreed that function parameters should never be reassigned. Fortran was soon fixed to correct this problem, but the advise kept being passed from generation to generation of programmers, who have been accepting it without rethinking it. This is cargo cult programming at its finest.&lt;/p&gt;
 &lt;h3 id=&#34;avoid-hail-mary-local-variable-initialization&#34;&gt;Avoid &lt;em&gt;Hail-Mary Local Variable Initialization&lt;/em&gt;
 &lt;/h3&gt;&lt;p&gt;Contrary to what many people falsely think of as &amp;ldquo;best practice&amp;rdquo; and &amp;ldquo;common knowledge&amp;rdquo;, you should never initialize any variable before you have a meaningful value to assign to it.  For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/hail-mary-local-variable-initialization/&#34;
+   href=&#34;//localhost:1313/post/2012-01-03-hail-mary-initialization/&#34;
    &gt;Hail-Mary Local Variable Initialization&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;avoid-b-to-a-style-conversions-use-a-from-b-style-instead&#34;&gt;Avoid b-to-a style conversions, use a-from-b style instead
 &lt;/h3&gt;&lt;p&gt;When I see &lt;code&gt;A = AfromB( B )&lt;/code&gt; I can immediately tell that it looks correct, since A is on the side of A and B is on the side of B. However, when I see &lt;code&gt;B = AtoB( A )&lt;/code&gt; I have to stare at it for a little while longer before I can tell whether it is correct or not. Of course, this is a trivial example: in real-world situations, the identifiers, as well as the call chain, could be much longer and much more complicated. This is related to Joel Spolsky&amp;rsquo;s notion that &lt;a class=&#34;external&#34; 
@@ -4899,7 +4899,7 @@ the industry as a whole.&lt;/p&gt;
 &lt;h3 id=&#34;always-use-strong-typing&#34;&gt;Always use strong typing
 &lt;/h3&gt;&lt;p&gt;Avoid any kind of weak typing (euphemistically called &lt;em&gt;dynamic&lt;/em&gt; typing) and avoid languages and frameworks that require it or even just sympathize with it. Yes, this includes all scripting languages. Scripting language enthusiasts can cry me a river. (And yes, this includes Typescript too, because it &lt;em&gt;sympathizes&lt;/em&gt; with JavaScript.)&lt;/p&gt;
 &lt;p&gt;Read this: &lt;a 
-   href=&#34;//localhost:1313/p/on-scripting-languages/&#34;
+   href=&#34;//localhost:1313/post/2017-05-on-scripting-languages/&#34;
    &gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;strive-for-debuggability&#34;&gt;Strive for debuggability
 &lt;/h3&gt;&lt;p&gt;For example, do not overdo it with the so-called &amp;ldquo;fluent&amp;rdquo; style of invocations, because they are not particularly debuggable. Do not hurry to adopt this or that cool new programming language before you have made sure that debugger support for it is complete and working properly.&lt;/p&gt;
@@ -4986,7 +4986,7 @@ the industry as a whole.&lt;/p&gt;
 &lt;p&gt;In special cases, dare to use names that you may have never heard anyone using before. For example, if you need a Factory of Factories, why not call it &lt;em&gt;Industry&lt;/em&gt;?&lt;/p&gt;
 &lt;p&gt;Read Chapter 2: &lt;em&gt;Meaningful Names&lt;/em&gt; of the book &lt;em&gt;Clean Code&lt;/em&gt; by Robert C. Martin.&lt;/p&gt;
 &lt;p&gt;Also read this: &lt;a 
-   href=&#34;//localhost:1313/p/confucius-on-naming/&#34;
+   href=&#34;//localhost:1313/post/2018-05-confucius-on-naming/&#34;
    &gt;Confucius on Naming&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Any code written by a programmer whose English language skills are poor should be reviewed by a programmer whose English language skills are good.&lt;/p&gt;
 &lt;p&gt;When words need to be combined to form an identifier, the combination must follow general English grammar rules, except for English grammar special cases.&lt;/p&gt;
@@ -5056,7 +5056,7 @@ the industry as a whole.&lt;/p&gt;
 &lt;li&gt;In scenarios where an add-or-replace operation seems useful to have, (and in my experience, such scenarios are exceedingly rare,) add such a function but give it a name that clearly indicates the weirdness in what it does: call it &lt;code&gt;addOrReplace()&lt;/code&gt;. (Duh!)&lt;/li&gt;
 &lt;li&gt;Avoid things like a &lt;code&gt;close()&lt;/code&gt; method which is allowed to be invoked more than once with no penalty: assert that your &lt;code&gt;close()&lt;/code&gt; methods are invoked exactly once.&lt;/li&gt;
 &lt;li&gt;Never use the garbage collector for cleanup; always perform explicit and deterministic clean-up at the exact moment when it is supposed to happen; the cleanup function invoked by the garbage collector should only be used for producing diagnostic messages in case we forgot to do explicit cleanup. Read this: &lt;a 
-   href=&#34;//localhost:1313/p/object-lifetime-awareness/&#34;
+   href=&#34;//localhost:1313/post/2020-12-27-object-lifetime-awareness/&#34;
    &gt;Object Lifetime Awareness&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;use-inheritance-when-it-is-clearly-the-right-choice&#34;&gt;Use inheritance when it is clearly the right choice
@@ -5118,7 +5118,7 @@ the industry as a whole.&lt;/p&gt;
 &lt;/h3&gt;&lt;p&gt;Security is not something that you can add on top of an insecure foundation, because there exist no automated tests that can detect security hazards and no amount of carefulness on behalf of programmers that is careful enough. So, what is necessary is architectural choices that eliminate entire classes of security hazards. (Do not worry, there will always be other classes of security hazards to have to worry about.)&lt;/p&gt;
 &lt;p&gt;So, if a certain architectural choice is prone to security vulnerabilities, do not make that choice. An example of a vulnerability-prone architectural choice is putting application code on the web browser, otherwise known as full-stack development. Full-stack developers can cry me a river.&lt;/p&gt;
 &lt;p&gt;For more on this, read: &lt;a 
-   href=&#34;//localhost:1313/p/what-is-wrong-with-full-stack-development/&#34;
+   href=&#34;//localhost:1313/post/2021-12-full-stack-development/&#34;
    &gt;What is wrong with Full Stack Development&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;keep-the-log-clean&#34;&gt;Keep the log clean
 &lt;/h3&gt;&lt;p&gt;Do not vex your colleagues, and do not make your own life harder, with torrential info-level or debug-level spam in the log. Keep the info-level messages down to an absolute minimum, and once debugging is done, completely remove all the debug-level log statements. Utilize commit hooks that deliberately fail a commit if it contains debug-level logging statements. Regularly use the &amp;ldquo;blame&amp;rdquo; feature of the version control system to remind developers of info-level logging statements that they should remove. Never use the log for capturing metrics or any other kind of structured information; use some separate, specialized instrumentation facility for that.&lt;/p&gt;
@@ -5302,7 +5302,7 @@ etc.&lt;/li&gt;
 &lt;/h3&gt;&lt;p&gt;All file-system paths must be absolute. It is fine to provide the user with the convenience of entering a relative path, but the relative path must be converted to absolute immediately upon entering the system. Relative paths are based on the notion of a &amp;ldquo;current directory&amp;rdquo;, which is one of the most ill-conceived, misused, and treacherous notions in the history of programming, because it is a global mutable variable. (I hope I do not need to explain why a global mutable variable is evil, right?) Note that the &amp;ldquo;current directory&amp;rdquo; is global not only across all classes of your application, but also across all threads of your application, and, in DotNet, even global across all AppDomains of your application, which were supposed to be completely isolated. Duh!? What were they thinking?&lt;/p&gt;
 &lt;h3 id=&#34;avoid-guids-also-known-as-uuids&#34;&gt;Avoid GUIDs (also known as UUIDs)
 &lt;/h3&gt;&lt;p&gt;Never use GUIDs if you can avoid them. If you must use them, then make sure they are an implementation detail and that they constitute a side-note of your design, not a predominant feature of your design. Read this: &lt;a 
-   href=&#34;//localhost:1313/p/what-is-wrong-with-uuids-and-guids/&#34;
+   href=&#34;//localhost:1313/post/2017-06-on-uuids-and-guids/&#34;
    &gt;What is wrong with UUIDs and GUIDs&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;do-it-right-&#34;&gt;Do It Right ™
 &lt;/h3&gt;&lt;p&gt;Avoid taking shortcuts in the name of immediate savings now but at the expense of headaches later, because the later headaches invariably end-up costing orders of magnitude more than the immediate savings. When some colleague, manager, or decision-maker suggests to &amp;ldquo;make it simple now, and worry about making it right later&amp;rdquo; they are imagining that they are being smart and they are helping optimize things, while in fact they are being a smart-ass, and they are suggesting that a technical crime be committed.&lt;/p&gt;

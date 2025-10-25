@@ -9,11 +9,11 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Fri, 17 Oct 2025 19:58:51 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>How to organize a Visual Studio Solution</title>
-        <link>//localhost:1313/p/how-to-organize-a-visual-studio-solution/</link>
+        <link>//localhost:1313/post/2024-06-visual-studio-solutions/</link>
         <pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate>
         
-        <guid>//localhost:1313/p/how-to-organize-a-visual-studio-solution/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/how-to-organize-a-visual-studio-solution/images/microsoft-visual-studio-2022-logo.svg&#34;
+        <guid>//localhost:1313/post/2024-06-visual-studio-solutions/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2024-06-visual-studio-solutions/images/microsoft-visual-studio-2022-logo.svg&#34;
 	
 	
 	
@@ -25,7 +25,7 @@
 Visual Studio is a capricious product, and its &amp;ldquo;Solution&amp;rdquo; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
 &lt;p&gt;Here is a list of things I have (painfully) found out over the years.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;the-project-directory-structure-must-be-entirely-flat&#34;&gt;The project directory structure must be entirely flat.
 &lt;/h3&gt;&lt;p&gt;All project files must reside in directories that are immediate sub-directories of the solution directory. When adding a project you are given the freedom to put it in a directory anywhere you want, but if you don&amp;rsquo;t put it in a directory exactly under the solution directory, you are going to run into trouble later.&lt;/p&gt;

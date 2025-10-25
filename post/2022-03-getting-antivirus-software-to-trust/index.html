@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" One of our customers tried installing our Windows Application on one of their computers and their antivirus software complained. They in turn complained to us, so we had to find a solution. I am documenting the solution here.\n">
+<title>Getting AntiVirus software to trust a Windows Application</title>
+
+<link rel='canonical' href='//localhost:1313/post/2022-03-getting-antivirus-software-to-trust/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Getting AntiVirus software to trust a Windows Application">
+<meta property='og:description' content=" One of our customers tried installing our Windows Application on one of their computers and their antivirus software complained. They in turn complained to us, so we had to find a solution. I am documenting the solution here.\n">
+<meta property='og:url' content='//localhost:1313/post/2022-03-getting-antivirus-software-to-trust/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2022-03-05T15:32:00&#43;00:00'/><meta property='article:modified_time' content='2025-10-14T19:05:32&#43;02:00'/>
+<meta name="twitter:title" content="Getting AntiVirus software to trust a Windows Application">
+<meta name="twitter:description" content=" One of our customers tried installing our Windows Application on one of their computers and their antivirus software complained. They in turn complained to us, so we had to find a solution. I am documenting the solution here.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#possible-causes">Possible Causes</a></li>
+    <li><a href="#how-to-troubleshoot">How to Troubleshoot</a></li>
+    <li><a href="#strong-name-signing">Strong-name Signing</a></li>
+    <li><a href="#code-signing">Code Signing</a></li>
+    <li><a href="#verifying-the-results">Verifying the results</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2022-03-getting-antivirus-software-to-trust/">Getting AntiVirus software to trust a Windows Application</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2022-03-05 Sat 15:32:00 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    9 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <p><img src="/post/2022-03-getting-antivirus-software-to-trust/media/antivirus.jpg"
+	width="1600"
+	height="1280"
+	srcset="/post/2022-03-getting-antivirus-software-to-trust/media/antivirus_hu_9a037cee53c4455d.jpg 480w, /post/2022-03-getting-antivirus-software-to-trust/media/antivirus_hu_8e18395734ce0b35.jpg 1024w"
+	loading="lazy"
+	
+		alt="anti virus"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="125"
+		data-flex-basis="300px"
+	
+>
+</p>
+<p>One of our customers tried installing our Windows Application on one of their computers and their antivirus software complained. They in turn complained to us, so we had to find a solution. I am documenting the solution here.</p>
+<p>(Useful pre-reading: <a 
+   href="/post/2022-11-about-these-papers/"
+   >About these papers</a>)</p>
+<h3 id="possible-causes">Possible Causes
+</h3><p>Antivirus engines may find a certain file suspicious for many different reasons. The most obvious reason is the file containing a byte pattern which has been encountered in some known malware.  Unfortunately, this does not necessarily mean that the file is infected; it may simply be a coincidence. Furthermore, many other checks performed by antivirus engines tend to fall well within the spectrum of paranoia.  It appears that some particularly paranoid antivirus engines will flag an executable as malware simply because it has not been code-signed or strong-name-signed, or because it has undergone obfuscation. Our application checked both of those boxes.  Your mileage may vary.</p>
+<h3 id="how-to-troubleshoot">How to Troubleshoot
+</h3><p>The first problem that you are likely to run into when troubleshooting issues of this kind is how to tell whether your application is passing antivirus checks or not. Obviously, the antivirus suite at the company that I work for was not finding anything suspicious with our application, or else we would have certainly noticed; however, a couple of antivirus suites that our client was running were taking issue with it. I did not have access to the antivirus suites that our client had, and even of I could somehow get my hands on them, I would not be able to install them on my machine, because the antivirus suite which had already been installed on my machine by our IT department played god and did not allow me to touch it.</p>
+<p>Luckily, there is a website that provides a solution to the problem. It is called virustotal.com, it aggregates a large number of antivirus engines, and it allows you to upload an executable and see what all these engines think of it. It is quite famous in the security community.</p>
+<p>Unfortunately, checking an application with virustotal.com is not an exact science, for many reasons.</p>
+<p>For one thing, virustotal.com said that out of more than 60 antivirus engines that they are aggregating, only four of them took issue with our application. As far as I am concerned, this is a pretty good indication that our application is fine, and these four engines are just being paranoid, but try telling that to the customer.</p>
+<p>Complicating matters even worse was the fact that the same antivirus engine on virustotal.com that was being used by the antivirus suite that we were using at the company I work for was in fact flagging our application as suspicious, whereas the antivirus engines on virustotal.com that belong to the corresponding suites that our customer was using did not take issue with it, so go figure.</p>
+<p>Nonetheless, it stands to reason that if you manage to produce your application in such a way that none of the antivirus engines on virustotal.com take issue with it, then chances are that the antivirus suites of customers will also not take issue with it. Even if this turns out to not be true, you will at the very least be able to tell your customer to go to virustotal.com and see for themselves and then just trust you.</p>
+<p>Another interesting thing about virustotal.com is that it does not seem to care very much about DLLs used by an application. There is of course a chance that I have not quite understood how the whole thing works yet, but for now it seems like I could pretty much run any malicious code I want out there, as long as I package that code in a DLL which is loaded by an otherwise clean and innocent executable which passes the antivirus checks. More about this as I understand more about how things work.</p>
+<h3 id="strong-name-signing">Strong-name Signing
+</h3><p>The first approach that I tried in the direction of solving the problem involved what is known as &ldquo;strong-name signing&rdquo;. The problem with this approach is that it requires that every single DLL that is loaded by the application must also be strong-name signed. From a security stand-point this is of course absolutely correct, but here is the problem: even though we can see to it that all DLLs produced by us are also strong-name signed, we are additionally using many DLLs produced by third parties, over which we have no control, and which are not strong-name signed.</p>
+<p>There appears to be some solution out there that will automatically strong-name sign DLLs used by an application, but it works like magic, and of course, as the case usually is with magic, it miserably fails with certain DLLs that use some loading strategy that is off the beaten path, for example with the MathNet Numerics library, and possibly with others.</p>
+<p>I tried hard to get strong-name signing to work, but eventually I gave up.</p>
+<h3 id="code-signing">Code Signing
+</h3><p>The next approach that I tried was just plain &ldquo;signing&rdquo;, or &ldquo;code signing&rdquo;, as soon as I realized that it is not the same thing as &ldquo;strong-name signing&rdquo;.</p>
+<p>Code signing did not completely solve the problem, but at least it took us halfway there. With code signing we were able to reduce the number of antivirus engines that take issue with our application from four to two. As it turns out, the remaining two would only be appeased if we disabled the code obfuscation step in our build. I would like to take the opportunity to point out that code obfuscation is a perfectly legitimate technique, and that antivirus engines that take issue with it are junk.</p>
+<p>A secure and proper application of code-signing involves obtaining a signing certificate from a certification authority, at a cost of a few hundred Euros per year.  Of course, when you are researching or troubleshooting the matter you are likely to skip that expense, and self-sign your files, until you are sure that this is the way you want to go. This is absolutely not secure, because there is no chain of authority to guarantee the authenticity of your certificate. It is worth pointing out that the two antivirus engines on virustotal.com that were appeased when they saw a code-signed version of our application did not bother checking the authenticity of our certificate!  The self-signed certificate was enough.  So, these two antivirus engines are junk, too.</p>
+<p>What follows is all the voodoo magic that is necessary to get signing, and specifically self-signing, to work:</p>
+<p>The original source of information is this stackoverflow question and accepted answer:
+<a class="external" 
+   href="https://stackoverflow.com/questions/84847/how-do-i-create-a-self-signed-certificate-for-code-signing-on-windows" target="_blank"
+   >https://stackoverflow.com/questions/84847/how-do-i-create-a-self-signed-certificate-for-code-signing-on-windows</a></p>
+<p>(Ignore the claim that makecert is deprecated, and the suggestion to use some Powershell command instead. Makecert works just fine, and if you have VisualStudio then you already have it, which is not the case with the recommended powershell command.)</p>
+<p>First, we need to create what is known as a &ldquo;self-signed certificate authority (CA)&rdquo;, using the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">makecert -r -pe -n &#34;CN=My CA&#34; -ss CA -sr CurrentUser -a sha512 -cy authority -sky signature -sv MyCA.pvk MyCA.cer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This will create MyCA.pvk and MyCA.cer in the current directory.</p>
+<p>Although makecert is a command-line utility, it will pop up a graphical dialog asking us to create a password.</p>
+<p><img src="/post/2022-03-getting-antivirus-software-to-trust/media/password1.jpg"
+	width="320"
+	height="229"
+	srcset="/post/2022-03-getting-antivirus-software-to-trust/media/password1_hu_1768c80ec37b43.jpg 480w, /post/2022-03-getting-antivirus-software-to-trust/media/password1_hu_596999590f764ae1.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="139"
+		data-flex-basis="335px"
+	
+>
+</p>
+<p>You can just hit [Enter] to use no password, or you can create a password of your choice, but be sure to copy it to the clipboard, because you are going to need it a lot in the following steps, when you are going to be seeing dialogs like this:</p>
+<p><img src="/post/2022-03-getting-antivirus-software-to-trust/media/password2.jpg"
+	width="320"
+	height="219"
+	srcset="/post/2022-03-getting-antivirus-software-to-trust/media/password2_hu_6937807db89ebb09.jpg 480w, /post/2022-03-getting-antivirus-software-to-trust/media/password2_hu_aacbfad28eb35624.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="350px"
+	
+>
+</p>
+<p>Then, we need to do what is known as &ldquo;Importing the CA certificate&rdquo;, using the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">certutil -user -addstore Root MyCA.cer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This will pop up a big dialog saying that it does not know where this
+certificate came from, and it cannot verify its authenticity, (of course,
+since we just created the Certification Authority out of thin air,) and asking
+us whether we are sure that we want to proceed installing it.</p>
+<p><img src="/post/2022-03-getting-antivirus-software-to-trust/media/security-warning.jpg"
+	width="400"
+	height="359"
+	srcset="/post/2022-03-getting-antivirus-software-to-trust/media/security-warning_hu_ea89fe98aa2005d9.jpg 480w, /post/2022-03-getting-antivirus-software-to-trust/media/security-warning_hu_73b5e13bcae11de9.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="111"
+		data-flex-basis="267px"
+	
+>
+</p>
+<p>Just answer &ldquo;yes&rdquo;.</p>
+<p>Then, we need to create what is known as a &ldquo;Code-signing Certificate&rdquo; and is
+for some reason referred to by the acronym &ldquo;SPC&rdquo;, using the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">makecert -pe -n &#34;CN=My SPC&#34; -a sha512 -cy end -sky signature -ic MyCA.cer -iv MyCA.pvk -sv MySPC.pvk MySPC.cer
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then, we need to convert the generated certificate and key into a PFX file,
+using the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">pvk2pfx -pvk MySPC.pvk -spc MySPC.cer -pfx MySPC.pfx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The above steps only have to be carried out once. From the moment that we have
+that MySPC.pfx file, we can keep using it to sign any number of files, as
+often as we want, using the following command:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">signtool</span> <span class="nb">sign</span> <span class="o">/</span><span class="n">v</span> <span class="o">/</span><span class="n">t</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">timestamp</span><span class="o">.</span><span class="n">comodoca</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">authenticode</span> <span class="o">/</span><span class="n">f</span> <span class="n">MySPC</span><span class="o">.</span><span class="n">pfx</span> <span class="n">myexecutable</span><span class="o">.</span><span class="n">exe</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The /t parameter followed by a URL allows us to timestamp the signature. A
+timestamped signature is required for performing a full authenticity check,
+but as I have already explained, the antivirus engines at virustotal.com do
+not seem to perform even a rudimentary authenticity check, so the timestamp is
+probably unnecessary in our case. Nonetheless, I have included it for the sake
+of completeness. There are various timestamp services out there that you can
+use, and you can find a list of them in the original stackoverflow article,
+however the available services inevitably change over time. I tried the
+globalsign.com URL but it appeared dead, so then I tried the comodoca.com URL
+and it worked, so comodoca.com it shall be, at least for now.</p>
+<h3 id="verifying-the-results">Verifying the results
+</h3><p>Using the Windows File Explorer to look at the properties of the signed
+executable, we see that there is now a new property tab called &ldquo;Digital
+Signatures&rdquo;:</p>
+<p><img src="/post/2022-03-getting-antivirus-software-to-trust/media/executable-properties.jpg"
+	width="515"
+	height="640"
+	srcset="/post/2022-03-getting-antivirus-software-to-trust/media/executable-properties_hu_1edd198c966dcaed.jpg 480w, /post/2022-03-getting-antivirus-software-to-trust/media/executable-properties_hu_da73e8d0f95c3f62.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="80"
+		data-flex-basis="193px"
+	
+>
+</p>
+<p>Viewing &ldquo;Details&rdquo; on the signature yields this property page:</p>
+<p><img src="/post/2022-03-getting-antivirus-software-to-trust/media/digital-signature-details.jpg"
+	width="474"
+	height="596"
+	srcset="/post/2022-03-getting-antivirus-software-to-trust/media/digital-signature-details_hu_78e783ecca8daffb.jpg 480w, /post/2022-03-getting-antivirus-software-to-trust/media/digital-signature-details_hu_bc375b29db0465e2.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="79"
+		data-flex-basis="190px"
+	
+>
+</p>
+<p>And clicking &ldquo;View Certificate&rdquo; yields this dialog:</p>
+<p><img src="/post/2022-03-getting-antivirus-software-to-trust/media/certificate.jpg"
+	width="474"
+	height="636"
+	srcset="/post/2022-03-getting-antivirus-software-to-trust/media/certificate_hu_ad5a788225bb0073.jpg 480w, /post/2022-03-getting-antivirus-software-to-trust/media/certificate_hu_f359831598de5a1e.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="74"
+		data-flex-basis="178px"
+	
+>
+</p>
+<p>Of course, Windows is finding the digital signature to be &ldquo;OK&rdquo; only because I have installed this self-created and fictitious &ldquo;My CA&rdquo; Certification Authority.  On a customer&rsquo;s computer it will most probably not show &ldquo;OK&rdquo; unless you purchase a certificate from a valid Certification Authority, but for the purpose of passing the silly virus checks on virustotal.com, it is okay.</p>
+<h3 id="conclusion">Conclusion
+</h3><p>After self-signing my executable, (and disabling obfuscation,) I uploaded it to virustotal.com, and it passed the checks of all antivirus engines.</p>
+<p>There is a chance that the antivirus solution on our client will perform a complete authenticity check, which will fail due to self-signing, in which case we will have to purchase a real certificate.</p>
+<p>There is also a chance that individual DLLs used by our application will not pass this test, which will necessitate signing each one of them, using the same command.</p>
+<hr>
+<p>Cover image: <a class="external" 
+   href="https://www.vecteezy.com/vector-art/2421887-glass-shield-anti-virus" target="_blank"
+   >&ldquo;Glass shield anti virus&rdquo; from vecteezy.com</a>.</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-14 Tue 19:05:32 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

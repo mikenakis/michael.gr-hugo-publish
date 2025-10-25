@@ -9,10 +9,10 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Wed, 15 Oct 2025 12:07:53 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>[SOLVED] Maven deploy fails with status 422 unprocessable entity</title>
-        <link>//localhost:1313/p/solved-maven-deploy-fails-with-status-422-unprocessable-entity/</link>
+        <link>//localhost:1313/post/2023-07-06-solved-maven-deploy-fails-with-status/</link>
         <pubDate>Thu, 06 Jul 2023 09:21:20 +0000</pubDate>
         
-        <guid>//localhost:1313/p/solved-maven-deploy-fails-with-status-422-unprocessable-entity/</guid>
+        <guid>//localhost:1313/post/2023-07-06-solved-maven-deploy-fails-with-status/</guid>
         <description>&lt;p&gt;It has been more than a year since I created this question on GitHub Community; a couple of days after that I found the solution by myself, so I answered my own question, and to this date comments keep being added by people who were helped by my post.&lt;/p&gt;
 &lt;p&gt;When I look at it today, I notice that my answer has this particular style, this grumpy indignation which has become so characteristic of me, after a lifetime of battling with lame software, and even worse, with lame error messages.&lt;/p&gt;
 &lt;p&gt;I thought I should share this on my blog for posterity.&lt;/p&gt;
@@ -53,14 +53,14 @@
         </item>
         <item>
         <title>So the &#34;master&#34; branch is not kosher anymore</title>
-        <link>//localhost:1313/p/so-the-master-branch-is-not-kosher-anymore/</link>
+        <link>//localhost:1313/post/2022-12-master-branch-not-kosher/</link>
         <pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate>
         
-        <guid>//localhost:1313/p/so-the-master-branch-is-not-kosher-anymore/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/so-the-master-branch-is-not-kosher-anymore/media/slavery-cropped.jpg&#34;
+        <guid>//localhost:1313/post/2022-12-master-branch-not-kosher/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg&#34;
 	width=&#34;2775&#34;
 	height=&#34;1684&#34;
-	srcset=&#34;//localhost:1313/p/so-the-master-branch-is-not-kosher-anymore/media/slavery-cropped_hu_8ae04781ddc88246.jpg 480w, //localhost:1313/p/so-the-master-branch-is-not-kosher-anymore/media/slavery-cropped_hu_58a6348cfbae9cec.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_8ae04781ddc88246.jpg 480w, //localhost:1313/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_58a6348cfbae9cec.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -78,7 +78,7 @@
    href=&#34;https://en.wikipedia.org/wiki/Murder_of_George_Floyd&#34; target=&#34;_blank&#34;
    &gt;the murder of George Floyd&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Programmers all over the world, the overwhelming majority of whom are white boys, wanted to feel like they are doing something about the whole &lt;a class=&#34;external&#34; 
    href=&#34;https://en.wikipedia.org/wiki/Black_Lives_Matter&#34; target=&#34;_blank&#34;
@@ -111,10 +111,10 @@
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/p/so-the-master-branch-is-not-kosher-anymore/media/grumpy-cat-wokeness.jpg&#34;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness.jpg&#34;
 	width=&#34;843&#34;
 	height=&#34;565&#34;
-	srcset=&#34;//localhost:1313/p/so-the-master-branch-is-not-kosher-anymore/media/grumpy-cat-wokeness_hu_bfd19a0acccbf67b.jpg 480w, //localhost:1313/p/so-the-master-branch-is-not-kosher-anymore/media/grumpy-cat-wokeness_hu_6dd0e5589091004e.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_bfd19a0acccbf67b.jpg 480w, //localhost:1313/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_6dd0e5589091004e.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

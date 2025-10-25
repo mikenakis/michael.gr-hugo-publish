@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Abstract: The practice of using Mock Objects in automated software testing is examined from a critical point of view and found to be highly problematic. Opinions of some well known industry speakers are cited. The supposed benefits of Mock Objects are shown to be either no real benefits, or achievable via alternative means.\n">
+<title>If you are using mock objects you are doing it wrong</title>
+
+<link rel='canonical' href='//localhost:1313/post/2023-01-14-mocking/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="If you are using mock objects you are doing it wrong">
+<meta property='og:description' content=" Abstract: The practice of using Mock Objects in automated software testing is examined from a critical point of view and found to be highly problematic. Opinions of some well known industry speakers are cited. The supposed benefits of Mock Objects are shown to be either no real benefits, or achievable via alternative means.\n">
+<meta property='og:url' content='//localhost:1313/post/2023-01-14-mocking/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-architecture' /><meta property='article:tag' content='testing' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='grumpy' /><meta property='article:tag' content='papers' /><meta property='article:published_time' content='2023-01-14T14:13:37&#43;00:00'/><meta property='article:modified_time' content='2025-10-23T19:32:12&#43;02:00'/>
+<meta name="twitter:title" content="If you are using mock objects you are doing it wrong">
+<meta name="twitter:description" content=" Abstract: The practice of using Mock Objects in automated software testing is examined from a critical point of view and found to be highly problematic. Opinions of some well known industry speakers are cited. The supposed benefits of Mock Objects are shown to be either no real benefits, or achievable via alternative means.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#abstract">Abstract:</a></li>
+      </ol>
+    </li>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#how-do-mocks-work">How do mocks work?</a>
+      <ol>
+        <li><a href="#drawbacks-of-mocks">Drawbacks of Mocks</a></li>
+        <li><a href="#what-do-others-say">What do others say?</a></li>
+        <li><a href="#so-if-not-mocking-then-what">So, if not mocking, then what?</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2023-01-14-mocking/">If you are using mock objects you are doing it wrong</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2023-01-14 Sat 14:13:37 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    14 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <p><img src="/post/2023-01-14-mocking/images/mocking.svg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+</p>
+<h4 id="abstract">Abstract:
+</h4><p>The practice of using Mock Objects in automated software testing is examined from a critical point of view and found to be highly problematic. Opinions of some well known industry speakers are cited. The supposed benefits of Mock Objects are shown to be either no real benefits, or achievable via alternative means.</p>
+<p>(Useful pre-reading: <a 
+   href="/post/2022-11-about-these-papers/"
+   >About these papers</a>)</p>
+<h3 id="introduction">Introduction
+</h3><p>The automated software testing technique which is predominant in the industry today is Unit Testing. The goal of Unit Testing is to achieve defect localization, and to this effect it requires each component to be tested in strict isolation from its collaborators.</p>
+<p>Testing components in isolation from each other poses certain challenges:</p>
+<ul>
+<li>While being tested, the component-under-test makes invocations to collaborator interfaces; since the collaborator components are not present, some kind of substitute must be there to implement the collaborator interfaces and receive those invocations.</li>
+<li>For each invocation that the component-under-test makes to a collaborator, it expects to receive back some result; therefore, the substitute receiving the invocation must be capable of generating a result that matches the result that would be generated by the real collaborator.</li>
+</ul>
+<p>The technique which is predominant in the industry today for providing the component-under-test with substitutes of its collaborators is <em><strong>Mock Objects</strong></em>, or just mocks.</p>
+<h3 id="how-do-mocks-work">How do mocks work?
+</h3><p>Mocks are based on the premise that the real work done by collaborators in a production environment is irrelevant during testing, and all that the component-under-test really needs from them is the results that they return when invoked. A test exercises the component-under-test in a specific way, therefore the component-under-test is expected to invoke its collaborators in ways which are known in advance; thus, regardless of how the real collaborators would work, the mocks which replace them do not need to contain any functionality; all they need to do is to yield the same results that the real collaborators would have returned, which are also known in advance.</p>
+<p>To this effect, each test dynamically creates and configures as many mocks as necessary to substitute each one of the collaborators of the component-under-test, with the help of some mocking framework. These frameworks are so popular that there exists a proliferation of them: JMock, EasyMock, Mockito, NMock, Moq, JustMock, and the list goes on.</p>
+<p>A mock object is configured to expose the same interface as the real collaborator that it substitutes, and to expect specific methods of this interface to be invoked, with specific argument values, sometimes even in a specific order of invocation. If anything goes wrong, such as an unexpected method being invoked, or a parameter having an unexpected value, the mock fails the test. A very common practice is to also fail the test if an expected method is <em>not</em> invoked.</p>
+<p>For each one of the expected methods, the mock is configured to yield a prefabricated result which is intended to match the result that the real collaborator would have produced if it was being used, and if it was working exactly according to its specification.</p>
+<p>Or at least, that is the intention.</p>
+<h4 id="drawbacks-of-mocks">Drawbacks of Mocks
+</h4><ul>
+<li><strong>Complex and laborious</strong>
+<ul>
+<li>In each test it is not enough to invoke the component-under-test to perform a computation and check the results; we also have to configure a mock for each one of the collaborators of the component, to anticipate every single call that the component will be making to them while performing the computation, and for each call to fabricate a result which matches the result that the real collaborator would have returned from that call.</li>
+<li>Luckily, mocking frameworks lessen the amount of code necessary to accomplish this, but no matter how terse the mocking code is, the fact still remains that it constitutes substantial additional functionality which represents considerable additional complexity.</li>
+<li>One of the well-known caveats of software testing is that a test failure does not necessarily indicate a defect in the production code; it always indicates a defect either in the production code or in the test itself, and the only way to know is to troubleshoot. Thus, the more code we put in tests, and the more complex this code is, the more time we end up wasting in chasing and fixing bugs in the tests themselves rather than in the code that they are meant to test.</li>
+</ul>
+</li>
+<li><strong>Over-specified</strong>
+<ul>
+<li>By anticipating every single call that the component-under-test makes to its collaborators, we are claiming to have detailed knowledge of the inner workings of the component-under-test, and we are concerned not only with what it accomplishes, but also with every little detail about how it goes on about accomplishing it. Essentially, we are implementing all of our application logic twice: once with production code expressing the logic in imperative mode, and once more with testing code expressing the same logic in expectational mode. In both cases, we write copious amounts of code describing what should happen in excruciatingly meticulous detail.</li>
+<li>Note that over-specification might not even be a goal in and of itself in some cases, but with mocking it is unavoidable in all cases: Each request that the component-under-test sends to its collaborators could conceivably be ignored, but the component-under-test still needs to receive some meaningful result in response to that request, so as to continue functioning during the remainder of the test; unfortunately, the only way that mocks can fabricate individual responses is by anticipating individual requests, even if the intention of the test is not to verify whether the requests are being made.</li>
+</ul>
+</li>
+<li><strong>Presumptuous</strong>
+<ul>
+<li>When using mocks we are claiming to not only have detailed knowledge of the calls that the component-under-test makes to its collaborators, but also detailed knowledge of the results that would be returned by the real collaborators in a production environment.</li>
+<li>Furthermore, the results returned by a collaborator depend on the state that the collaborator is in, which in turn depends on previous calls made to it, but a mock is by its nature incapable of emulating state, so when using mocks we are also claiming to have knowledge of the state transitions that the real collaborators undergo in a production environment, and of the effect that these state transitions have on the results that they return.</li>
+<li>Such exorbitant presumptuousness might be okay if we are building high-criticality software, where each collaborator is likely to have requirements and specification that are well-defined and unlikely to change; however, in all other software, which is regular, commercial, non-high-criticality software, things are a lot less strict: not only the requirements and specifications change all the time, but also, by established practice, both the requirements, and the specification, and even the documentation, tend to be the code itself, and the code changes every time a new commit is made to the source code repository. Thus, the only way to know exactly how a collaborator behaves tends to be to actually invoke it and see what it does, while the mechanism which ensures that it does what it is supposed to do is the tests of that collaborator itself, which are unrelated to the tests of components that invoke it.</li>
+<li>As a result of all this, the practice of mocking often places us in the all too familiar situation where our Unit Tests all pass with flying colors, but our Integration Tests miserably fail because the behavior of the real collaborators turns out to be different from what the mocks assumed it would be.</li>
+</ul>
+</li>
+<li><strong>Fragile</strong>
+<ul>
+<li>By its nature, a mock object has no option but to fail the test if the interactions between the component under test and its collaborators deviate from what it expects. However, these interactions may legitimately change as software evolves. This may happen due to the application of a bug-fix, due to refactoring, or simply because as we write new code we invariably have to also modify existing code to interact with the new code that we are adding. Thus, when using mocks, every time we change the behavior of production code, we also have to fix tests to expect the new behavior. (Not only do we have to write all of our application logic twice, we also have to perform all of its maintenance twice.)</li>
+<li>The original promise of Automated Software Testing was to enable us to continuously evolve our software without fear of breaking it. The idea is that whenever you modify the production code, you can re-run the tests to ensure that everything still works. When using mocks this does not work, because every time you change the slightest thing in the production code, the tests break. As a result, many programmers are hesitant to make needed changes to production code because of all the changes in testing code that would be required. The understanding is growing within the software engineering community that mock objects actually hinder software development instead of facilitating it.</li>
+</ul>
+</li>
+<li><strong>Non-reusable</strong>
+<ul>
+<li>Mocks exercise the implementation of a component rather than its interface. Thus, when using mocks, it is impossible to reuse the same testing code to validate multiple different components that implement the same public interface but employ different collaborators. For example:
+<ul>
+<li>It is impossible to completely rewrite the component and reuse the old tests to make sure that the new implementation works exactly as the old one did.</li>
+<li>It is impossible to use a single test suite to exercise both a real component and its fake.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Unenlightening</strong>
+<ul>
+<li>Ideally, a set of tests for a certain component should act as sample code demonstrating usage scenarios of that component. A programmer who is not familiar with a particular component should be able to read the tests of that component and gain a fairly good idea of what it can do, what it cannot do, and how to write production code that interacts with it.</li>
+<li>Unfortunately, when using mocks, the tests are full of cryptic mock-related jabber, which obscures the actual usage of the component-under-test, and so the enlightening bits are lost in the noise.</li>
+</ul>
+</li>
+</ul>
+<h4 id="what-do-others-say">What do others say?
+</h4><p>I am certainly not the only one to voice dissatisfaction with mocks. People have been noticing that although automated software testing is intended to facilitate refactoring by ensuring that the code still works after each change that we make, the use of mocks often hinders refactoring, because the tests are so tied to the implementation that you cannot change anything without breaking the tests.</p>
+<ul>
+<li>In the video <em>Thoughtworks - TW Hangouts: Is TDD dead?</em> (<a class="external" 
+   href="https://www.youtube.com/watch?v=z9quxZsLcfo" target="_blank"
+   >youtube</a>, <a class="external" 
+   href="https://martinfowler.com/articles/is-tdd-dead/" target="_blank"
+   >text digest</a>) at 21&rsquo;:10&rsquo;&rsquo; Kent Beck states &ldquo;My personal practice is I mock almost nothing.&rdquo;</li>
+<li>In the same video, at 23&rsquo;:56&rsquo;&rsquo; Martin Fowler adds &ldquo;I&rsquo;m with Kent, I hardly ever use mocks.&rdquo;</li>
+<li>In the <em>Fragile Test</em> section of his book <em>xUnit Test Patterns: Refactoring Test Code</em> (<a class="external" 
+   href="https://xunitpatterns.com/" target="_blank"
+   >xunitpatterns.com</a>) author Gerard Meszaros admits that &ldquo;extensive use of Mock Objects causes overcoupled tests.&rdquo;</li>
+<li>In his presentation <em>TDD, where did it all go wrong?</em> (<a class="external" 
+   href="https://www.infoq.com/presentations/tdd-original/" target="_blank"
+   >InfoQ</a>, <a class="external" 
+   href="https://www.youtube.com/watch?v=EZ05e7EMOLM" target="_blank"
+   >YouTube</a>) at 49&rsquo;:32&rsquo;&rsquo; Ian Cooper states &ldquo;I argue quite heavily against mocks because they are overspecified.&rdquo;</li>
+</ul>
+<p>Note that in an attempt to avoid sounding too blasphemous, these people refrain from suggesting that mocks should be abolished; however, it is evident that 3 out of 4 of them are strongly against mocks, and we do not need to read much between the lines to figure out that they would probably be calling for the complete abolition of mocks if they had a viable and universally applicable alternative to propose.</p>
+<h4 id="so-if-not-mocking-then-what">So, if not mocking, then what?
+</h4><p>Mocking has been such a great hit with the software industry because it achieves multiple different goals at once. Here is a list of the supposed benefits of mocking, and for each one of them an explanation of why it is not really a benefit, or how it can be achieved without mocking:</p>
+<ul>
+<li>Mocking achieves defect localization by eliminating collaborators from the picture and allowing components to be tested in strict isolation from each other.
+<ul>
+<li>Defect localization is useful, but it is not an absolute necessity, and it does not have to be done to absolute perfection as mocking aims to do; we can achieve more than good enough defect localization by testing each component in integration with its collaborators, simply by arranging the order in which tests are executed to ensure that by the time a component gets tested, all of its collaborators have already passed their tests. See <a 
+   href="/post/2022-10-incremental-integration-testing/"
+   >Incremental Integration Testing</a>.</li>
+</ul>
+</li>
+<li>Mocking allows a component to be tested without the performance overhead of instantiating and invoking its real collaborators.
+<ul>
+<li>The performance overhead of instantiating and invoking the real collaborators is not always prohibitive, or even noticeable, so in many cases it is perfectly fine to test a component in integration with its real collaborators. See <a 
+   href="/post/2022-10-incremental-integration-testing/"
+   >Incremental Integration Testing</a>.</li>
+<li>In the limited number of cases where the performance overhead is indeed prohibitive, it can be avoided with the use of Fakes instead of Mocks. See <a 
+   href="/post/2022-10-testing-with-fakes/"
+   >Testing with Fakes instead of Mocks</a>.</li>
+</ul>
+</li>
+<li>Mocking allows us to examine invocations being made by the component-under-test to its collaborators, to ensure that they are issued exactly as expected.
+<ul>
+<li>In most cases, examining the invocations made by the component-under-test to its collaborators is in fact bad practice, because it constitutes white-box testing. The only reason why this is being widely practiced in the industry is because mocking does not work otherwise, so in this regard mocking contains a certain element of a self-serving paradigm.</li>
+<li>In those rare cases where examining the invocations is in fact necessary, it is still bad practice to do so programmatically, because it results in tests that are over-specified and fragile.</li>
+<li>What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See <a 
+   href="/post/2024-04-audit-testing/"
+   >Audit Testing</a> and <a 
+   href="/post/2023-01-06-collaboration-monitoring/"
+   >Collaboration Monitoring</a>.</li>
+</ul>
+</li>
+<li>Mocking allows us to fabricate the results returned from a collaborator to the component-under-test, so as to guarantee that they are free from defects that could be caused by bugs in the implementation of the real collaborator.
+<ul>
+<li>Fabricating the results that would have been returned by a real collaborator is in fact bad practice, because it will not magically make any bugs go away, (in this sense it can be likened to ostrich policy,) and because as I have already explained, it is highly presumptuous. The definitive authority on what results are returned by a certain collaborator is the real implementation of that collaborator, or a fake thereof, which in turn necessitates integration testing. See <a 
+   href="/post/2022-10-incremental-integration-testing/"
+   >Incremental Integration Testing</a>.</li>
+</ul>
+</li>
+<li>Mocking allows us to verify the correctness of components that generate their output by means of forwarding results to collaborators rather than by returning results from invocations.
+<ul>
+<li>Even in this case, <em>Collaboration Monitoring</em> can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See <a 
+   href="/post/2024-04-audit-testing/"
+   >Audit Testing</a> and <a 
+   href="/post/2023-01-06-collaboration-monitoring/"
+   >Collaboration Monitoring</a>.</li>
+</ul>
+</li>
+<li>Mocking allows us to start testing a component while one or more of its collaborators are not ready yet for integration because they are still in development, and no fakes of them are available either.
+<ul>
+<li>This is true, but once the collaborators (or fakes thereof) become available, it is best to integrate them in the tests, and to unceremoniously throw away the mocks. See <a 
+   href="/post/2022-10-incremental-integration-testing/"
+   >Incremental Integration Testing</a>.</li>
+</ul>
+</li>
+<li>Mocking allows us to develop a component without depending on factors that we have no control over, such as the time of delivery of collaborators, the quality of their implementation, and the quality of their testing. With the use of Mocks we can claim that our component is complete and fully tested, based on nothing but the specification of its collaborators, and we can claim that it should work fine in integration with its collaborators when they happen to be delivered, and if they happen to work according to spec.
+<ul>
+<li>True, but this implies a very bureaucratic way of working, and utter lack of trust towards the developers of the collaborators; it is best if it never comes to that.</li>
+<li>We can still avoid the use of mocks by creating fakes of the collaborators ourselves. See <a 
+   href="/post/2022-10-testing-with-fakes/"
+   >Testing with Fakes instead of Mocks</a>.</li>
+</ul>
+</li>
+</ul>
+<p>To summarize, mocks can always be replaced with one or more of the following:</p>
+<ul>
+<li>Fakes (see <a 
+   href="/post/2022-10-testing-with-fakes/"
+   >Testing with Fakes instead of Mocks</a>)</li>
+<li>Incremental Integration Testing (see <a 
+   href="/post/2022-10-incremental-integration-testing/"
+   >Incremental Integration Testing</a>)</li>
+<li>Audit Testing (see <a 
+   href="/post/2024-04-audit-testing/"
+   >Audit Testing</a>) and Collaboration Monitoring (see <a 
+   href="/post/2023-01-06-collaboration-monitoring/"
+   >Collaboration Monitoring</a>)</li>
+</ul>
+<h4 id="conclusion">Conclusion
+</h4><p>As we have shown, the practice of using Mock Objects in automated software testing is laborious, over-specified, presumptuous, and leads to tests that are fragile and non-reusable, while each of the alleged benefits of using mocks is either not a real benefit, or can be realized by other means, which we have named.</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2023-01-14-mocking/images/grumpy-cat-mock-objects.jpg"
+	width="797"
+	height="1024"
+	srcset="/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_8156248a341d61af.jpg 480w, /post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_5b4ff396469f2342.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="77"
+		data-flex-basis="186px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Mandatory grumpy cat meme - &ldquo;Mock objects - they are horrible&rdquo;</td>
+      </tr>
+  </tbody>
+</table></div>
+<hr>
+<p>Cover image: &ldquo;Mocking&rdquo; by michael.gr, based on <a class="external" 
+   href="https://thenounproject.com/icon/mock-2657532/" target="_blank"
+   >&lsquo;mock&rsquo; by &lsquo;Iconbox&rsquo; from the noun project.</a></p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-architecture/">Software-Architecture</a>
+        
+            <a href="/tags/testing/">Testing</a>
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+            <a href="/tags/grumpy/">Grumpy</a>
+        
+            <a href="/tags/papers/">Papers</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-23 Thu 19:32:12 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/post/2024-03-codecoverage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Artificial Code Coverage</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2022-12-messages-and-message-passing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">On messages and message-passing</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2022-10-incremental-integration-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Incremental Integration Testing</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2021-12-white-box-vs-black-box-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">White-Box vs- Black-Box Testing</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2025-04-the-confusion-about-term-unit-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The confusion about the term Unit Testing</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

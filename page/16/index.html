@@ -7,12 +7,12 @@
 
 <link rel='canonical' href='//localhost:1313/'>
 
-<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Michael's Blog">
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Pager 2 - Michael's Blog">
 <meta property='og:description' content="\"If it's worth doing, it's worth doing right.\"">
 <meta property='og:url' content='//localhost:1313/'>
 <meta property='og:site_name' content='Michael&#39;s Blog'>
 <meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-10-24T11:30:09&#43;02:00 '/>
-<meta name="twitter:title" content="Michael's Blog">
+<meta name="twitter:title" content="Pager 2 - Michael's Blog">
 <meta name="twitter:description" content="\"If it's worth doing, it's worth doing right.\""><link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/index.xml">
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -837,7 +837,7 @@ unicode: "ec27"
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/the-mvvm-architectural-design-pattern/">The MVVM architectural design pattern</a>
+            <a href="/post/2021-01-the-mvvm-architectural-design-pattern/">The MVVM architectural design pattern</a>
         </h2>
     
         
@@ -900,10 +900,10 @@ unicode: "f146"
 
 	
 	<section class="article-content" style="margin-top: -1.5em; margin-bottom: 1.5em;">
-		<p><img src="/p/the-mvvm-architectural-design-pattern/media/mvvm.png"
+		<p><img src="/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm.png"
 	width="800"
 	height="242"
-	srcset="/p/the-mvvm-architectural-design-pattern/media/mvvm_hu_8fa849595e07c30f.png 480w, /p/the-mvvm-architectural-design-pattern/media/mvvm_hu_400ee7376db477fb.png 1024w"
+	srcset="/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm_hu_8fa849595e07c30f.png 480w, /post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm_hu_400ee7376db477fb.png 1024w"
 	loading="lazy"
 	
 	
@@ -915,7 +915,7 @@ unicode: "f146"
 </p>
 <p>This is a brief technical explanation of MVVM, with enough detail (borrowed from its WPF implementation) and examples to allow the reader to grasp how it actually works.</p>
 		
-			<a href="/p/the-mvvm-architectural-design-pattern/">Read more &raquo;</a>
+			<a href="/post/2021-01-the-mvvm-architectural-design-pattern/">Read more &raquo;</a>
 		
 	</section>
 </article>
@@ -929,7 +929,7 @@ unicode: "f146"
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/object-lifetime-awareness/">Object Lifetime Awareness</a>
+            <a href="/post/2020-12-27-object-lifetime-awareness/">Object Lifetime Awareness</a>
         </h2>
     
         
@@ -992,10 +992,10 @@ unicode: "f146"
 
 	
 	<section class="article-content" style="margin-top: -1.5em; margin-bottom: 1.5em;">
-		<p><img src="/p/object-lifetime-awareness/images/le-penseur.jpg"
+		<p><img src="/post/2020-12-27-object-lifetime-awareness/images/le-penseur.jpg"
 	width="3648"
 	height="5472"
-	srcset="/p/object-lifetime-awareness/images/le-penseur_hu_9d5b056aaaccb843.jpg 480w, /p/object-lifetime-awareness/images/le-penseur_hu_c19a599b08f288b2.jpg 1024w"
+	srcset="/post/2020-12-27-object-lifetime-awareness/images/le-penseur_hu_9d5b056aaaccb843.jpg 480w, /post/2020-12-27-object-lifetime-awareness/images/le-penseur_hu_c19a599b08f288b2.jpg 1024w"
 	loading="lazy"
 	
 	
@@ -1009,7 +1009,7 @@ unicode: "f146"
 </h4><p>Garbage collectors have given us a false sense of security with respect to what happens to an object once we stop thinking about it. The assumption is that it will be magically taken care of, but this does not always go as hoped, resulting in memory leaks and bugs due to failure to perform necessary cleanup. Tools for troubleshooting such problems are scarce, and not particularly helpful, so finding and fixing such problems is notoriously difficult.</p>
 <p>A methodology is presented, which differs from current widespread practices, for maintaining awareness of, and exercising full deterministic control over, the lifetime of certain objects in a garbage-collected environment. We issue hard errors in the event of misuse, and accurate diagnostic messages in the event of omissions, thus improving the robustness of software and lessening the troubleshooting burden.</p>
 		
-			<a href="/p/object-lifetime-awareness/">Read more &raquo;</a>
+			<a href="/post/2020-12-27-object-lifetime-awareness/">Read more &raquo;</a>
 		
 	</section>
 </article>
@@ -1023,7 +1023,7 @@ unicode: "f146"
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/the-famous-could-not-load-file-or-assembly-or-one-of-its-dependencies-error-message/">The famous &#34;Could not load file or assembly or one of its dependencies&#34; error message</a>
+            <a href="/post/2020-12-16-the-famous-could-not-load-file-or/">The famous &#34;Could not load file or assembly or one of its dependencies&#34; error message</a>
         </h2>
     
         
@@ -1092,7 +1092,7 @@ unicode: "f146"
 <p>Modern software makes heavy use of dynamic link libraries, and the problem with this kind of libraries is that for various reasons they might not be there when you need them, resulting in runtime errors. This is the runtime error you get under Windows when this happens.</p>
 <p>Naturally, when you see this message, the first thing to do is to check whether Acme.dll is there, and what you usually discover is that the file is indeed there. When dealing with computers, most error messages that you come across tend to leave some room for troubleshooting, but when the system is reporting that a certain file does not exist on your very own filesystem, while the file is most certainly there, the situation seems really hopeless. You are stymied.</p>
 		
-			<a href="/p/the-famous-could-not-load-file-or-assembly-or-one-of-its-dependencies-error-message/">Read more &raquo;</a>
+			<a href="/post/2020-12-16-the-famous-could-not-load-file-or/">Read more &raquo;</a>
 		
 	</section>
 </article>
@@ -1106,7 +1106,7 @@ unicode: "f146"
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/coherence-the-assertable-lock/">Coherence: The Assertable Lock</a>
+            <a href="/post/2020-12-12-coherence/">Coherence: The Assertable Lock</a>
         </h2>
     
         
@@ -1169,10 +1169,10 @@ unicode: "f146"
 
 	
 	<section class="article-content" style="margin-top: -1.5em; margin-bottom: 1.5em;">
-		<p><img src="/p/coherence-the-assertable-lock/media/coherence.jpg"
+		<p><img src="/post/2020-12-12-coherence/media/coherence.jpg"
 	width="1280"
 	height="853"
-	srcset="/p/coherence-the-assertable-lock/media/coherence_hu_774fdb15a774b77.jpg 480w, /p/coherence-the-assertable-lock/media/coherence_hu_d8603833f9d0eb32.jpg 1024w"
+	srcset="/post/2020-12-12-coherence/media/coherence_hu_774fdb15a774b77.jpg 480w, /post/2020-12-12-coherence/media/coherence_hu_d8603833f9d0eb32.jpg 1024w"
 	loading="lazy"
 	
 	
@@ -1187,7 +1187,7 @@ unicode: "f146"
 <h3 id="a-description-of-the-problem">A description of the problem
 </h3><p>Every Software Engineer who has dealt with concurrency knows that it is hard. The bane of concurrency is race conditions: when a thread accesses data without taking into account the fact that the data is shared with other concurrently running threads which may alter that data at any unforeseeable moment in time.</p>
 		
-			<a href="/p/coherence-the-assertable-lock/">Read more &raquo;</a>
+			<a href="/post/2020-12-12-coherence/">Read more &raquo;</a>
 		
 	</section>
 </article>
@@ -1201,7 +1201,7 @@ unicode: "f146"
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/ferroli-hr-optifor-ot-v-ventilation-unit-users-manual-in-english/">Ferroli HR OptiFor OT-V Ventilation Unit User&#39;s Manual in English</a>
+            <a href="/post/2020-11-14-ferroli-ventilator-manual/">Ferroli HR OptiFor OT-V Ventilation Unit User&#39;s Manual in English</a>
         </h2>
     
         
@@ -1264,7 +1264,7 @@ unicode: "f146"
 
 	
 	<section class="article-content" style="margin-top: -1.5em; margin-bottom: 1.5em;">
-		<p><img src="/p/ferroli-hr-optifor-ot-v-ventilation-unit-users-manual-in-english/media/ferroli-ventilator-manual-nl-en.svg"
+		<p><img src="/post/2020-11-14-ferroli-ventilator-manual/media/ferroli-ventilator-manual-nl-en.svg"
 	
 	
 	
@@ -1277,13 +1277,13 @@ unicode: "f146"
 <!-- more -->
 <p>Click on the pictures below for the documents.</p>
 <p><a 
-   href="/p/ferroli-hr-optifor-ot-v-ventilation-unit-users-manual-in-english/media/ferroli-ventilator-manual-nl.pdf"
+   href="/post/2020-11-14-ferroli-ventilator-manual/media/ferroli-ventilator-manual-nl.pdf"
    >Ferroli HR OptiFor OT-V Ventilation Unit User&rsquo;s Manual in Dutch</a> (PDF)</p>
 <p><a 
-   href="/p/ferroli-hr-optifor-ot-v-ventilation-unit-users-manual-in-english/media/ferroli-ventilator-manual-en.pdf"
+   href="/post/2020-11-14-ferroli-ventilator-manual/media/ferroli-ventilator-manual-en.pdf"
    >Ferroli HR OptiFor OT-V Ventilation Unit User&rsquo;s Manual in English</a> (PDF)</p>
 <p>In a previous post I published the <a 
-   href="/p/ferroli-bluesense-boiler-users-manual-in-english/"
+   href="/post/2019-01-ferroli-boiler-manual/"
    >Ferroli Boiler User&rsquo;s Manual in English</a>.</p>
 		
 	</section>
@@ -1298,7 +1298,7 @@ unicode: "f146"
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/the-wild-wild-web/">The Wild, Wild Web</a>
+            <a href="/post/2020-10-19-the-wild-wild-web/">The Wild, Wild Web</a>
         </h2>
     
         
@@ -1364,7 +1364,7 @@ unicode: "f146"
 		<p>This is a little history of the early World Wide Web (WWW) for the benefit of the younger generation which may have not experienced the Internet in its infancy and therefore might not be aware of the horrors that it involved, and why certain things have come to be the way they are today.</p>
 <p>As you are reading this, and thinking to yourself that it could not possibly have been as bad as I am describing it, remember, the general public was experiencing it using 2400 baud modems.</p>
 		
-			<a href="/p/the-wild-wild-web/">Read more &raquo;</a>
+			<a href="/post/2020-10-19-the-wild-wild-web/">Read more &raquo;</a>
 		
 	</section>
 </article>

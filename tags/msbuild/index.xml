@@ -9,14 +9,14 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Tue, 21 Oct 2025 19:00:42 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/msbuild/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Build configurations</title>
-        <link>//localhost:1313/p/build-configurations/</link>
+        <link>//localhost:1313/post/2025-06-build-configurations/</link>
         <pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate>
         
-        <guid>//localhost:1313/p/build-configurations/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg&#34;
+        <guid>//localhost:1313/post/2025-06-build-configurations/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg&#34;
 	width=&#34;1536&#34;
 	height=&#34;1024&#34;
-	srcset=&#34;//localhost:1313/p/build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, //localhost:1313/p/build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, //localhost:1313/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -29,7 +29,7 @@
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;The popular practice of having only two different kinds of builds (&lt;em&gt;Debug&lt;/em&gt; and &lt;em&gt;Release&lt;/em&gt;) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;the-issue&#34;&gt;The Issue
 &lt;/h3&gt;&lt;p&gt;In software development we often want our creations to have different characteristics under different circumstances; for example:&lt;/p&gt;

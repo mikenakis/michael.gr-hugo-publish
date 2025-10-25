@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Inntel Hotel at Amsterdam, Zaandam Table of Contents What is full-stack development\nWhy is full-stack development necessary today\nWhat is wrong with full-stack development\nConclusion\n">
+<title>What is wrong with Full Stack Development</title>
+
+<link rel='canonical' href='//localhost:1313/post/2021-12-full-stack-development/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="What is wrong with Full Stack Development">
+<meta property='og:description' content=" Inntel Hotel at Amsterdam, Zaandam Table of Contents What is full-stack development\nWhy is full-stack development necessary today\nWhat is wrong with full-stack development\nConclusion\n">
+<meta property='og:url' content='//localhost:1313/post/2021-12-full-stack-development/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-architecture' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='papers' /><meta property='article:published_time' content='2018-04-01T14:37:37&#43;00:00'/><meta property='article:modified_time' content='2025-10-22T21:32:14&#43;02:00'/>
+<meta name="twitter:title" content="What is wrong with Full Stack Development">
+<meta name="twitter:description" content=" Inntel Hotel at Amsterdam, Zaandam Table of Contents What is full-stack development\nWhy is full-stack development necessary today\nWhat is wrong with full-stack development\nConclusion\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#table-of-contents">Table of Contents</a></li>
+        <li><a href="#what-is-full-stack-development">What is full-stack development</a></li>
+        <li><a href="#why-is-full-stack-development-necessary-today">Why is full-stack development necessary today</a></li>
+        <li><a href="#what-is-wrong-with-full-stack-development">What is wrong with full-stack development</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2021-12-full-stack-development/">What is wrong with Full Stack Development</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2018-04-01 Sun 14:37:37 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    9 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><img src="/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961.jpg"
+	width="408"
+	height="639"
+	srcset="/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961_hu_755c7da92bba20ac.jpg 480w, /post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961_hu_ac4b783d13bec49.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="63"
+		data-flex-basis="153px"
+	
+>
+</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">Inntel Hotel at Amsterdam, Zaandam</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="table-of-contents">Table of Contents
+</h4><ul>
+<li>
+<p>What is full-stack development</p>
+</li>
+<li>
+<p>Why is full-stack development necessary today</p>
+</li>
+<li>
+<p>What is wrong with full-stack development</p>
+</li>
+<li>
+<p>Conclusion</p>
+</li>
+</ul>
+<p>(Useful pre-reading:
+<a 
+   href="/post/2022-11-about-these-papers/"
+   >About these papers</a>)</p>
+<h4 id="what-is-full-stack-development">What is full-stack development
+</h4><p>The predominant web application development model today requires splitting
+application logic in two parts:</p>
+<ul>
+<li>
+<p>The front-end, running on the browser.</p>
+</li>
+<li>
+<p>The back-end, running on the server.</p>
+<p>The front-end is typically written in JavaScript, while the back-end is
+typically written in Java, Scala, C#, or some other programming language. The
+two ends invariably communicate with each other via REST. The choice of
+JavaScript and REST is not due to any technical merit inherent in these
+technologies, (there is none,) but purely due to historical accident; see
+<a 
+   href="/post/2020-10-19-the-wild-wild-web/"
+   >The Wild, Wild Web</a>.</p>
+<p>A web application developer can either focus on one part of the stack, or work
+on both parts. Due to reasons that will be explained further down, more often
+than not, web developers are asked to work on both parts simultaneously. When
+this happens, it is known as full-stack development.</p>
+<p>For the purposes of this paper, we will call full-stack development not just
+this mode of work, but also this architectural style as a whole: full-stack
+development is when application logic must be written both on the server and
+on the client.</p>
+<p>Full-Stack Development is a paradox, since it suggests a way of work which is
+contrary to what common sense dictates. Common sense calls for specialists
+each working on their own area of specialization, so one would expect to see
+different developers focusing on different layers of the stack, and nobody
+ever attempting something as preposterous as working on all layers
+simultaneously. However, there is a technological hurdle which renders this
+necessary today.</p>
+</li>
+</ul>
+<h4 id="why-is-full-stack-development-necessary-today">Why is full-stack development necessary today
+</h4><p>Normally, (outside of web application development,) in a system that consists
+of multiple layers, only one of the layers tends to be application-specific,
+while all other layers tend to be general purpose infrastructure layers that
+are agnostic of any application that might put them to use. Under such an
+arrangement, the functionality offered by each layer is dictated by what makes
+sense for that layer to be doing, so the work to be done at each layer tends
+to be rather self-contained and straightforward. In this scenario, each
+specialist can indeed work on the layer that they specialize in.</p>
+<p>However, in web development we have a server, and we have a client, and so far
+we have been unable to find a solution that would allow us to confine all of
+our application logic to only one of them. (There have been some attempts in
+that direction, but they were only moderately successful, and virtually none
+of them survived the transition from monolithic architectures to microservices
+architectures.) As a result, in modern web applications, both layers are
+application-specific.</p>
+<p>In the early days people did try to apply specialization and division of labor
+to web application development, and they found that when all the layers are
+application-specific, collaboration between teams working on different layers
+suffers, resulting in low productivity. There are too many details that have
+to be agreed upon by people working on different layers; too much waiting for
+the guys working on the layer below to finish their part before the guys
+working on layer above can do their job; too much disagreement as to whose
+fault it is when the system is not working as expected; in general, too much
+back and forth, too much friction.</p>
+<p>For this reason, full-stack development was invented: instead of dividing the
+workforce horizontally, it ends up being less inefficient to divide them
+vertically: when each developer works on a different feature of the product
+from top to bottom, they do not have to interact too intensively with other
+developers, and this represents a gain which seems to offset the loss of not
+having specialists working on their respective areas of specialization.</p>
+<h4 id="what-is-wrong-with-full-stack-development">What is wrong with full-stack development
+</h4><p>In brief, full-stack development has the following disadvantages:</p>
+<ul>
+<li>The front-end:
+<ul>
+<li><strong>Has limited capabilities.</strong>
+<ul>
+<li>Is confined within the sand-boxed execution environment of the browser.</li>
+<li>Admittedly, browsers today are pretty feature-rich, (actually,
+monstrously so,) but still, you are writing code which is running out
+there, on browsers, and is therefore out of your control, instead of
+here, on the server, where you do have control.</li>
+<li>So, there are always things that you would like to accomplish, but you
+cannot on the client, so you have to suffer the additional bureaucracy
+of having the client communicate what you are trying to accomplish to
+the server, having the server do it for you, and receiving the results
+back on the client. That?s an awful lot of work for something as simple
+as, say, obtaining the current date and time regardless of client
+configuration or misconfiguration.</li>
+</ul>
+</li>
+<li><strong>Suffers from incidental complexity.</strong>
+<ul>
+<li>Peculiarities of the browser environment such as URLs, HTML, the DOM,
+HTTP, REST, Ajax, etc.</li>
+<li>Cross-browser incompatibilities and cross-browser-version
+incompatibilities.</li>
+<li>Security hazards.
+<ul>
+<li>Code on the client must not only accomplish application goals, but it
+must do so while avoiding various commonly known and not-so-commonly
+known security pitfalls.</li>
+<li>Each time a new security hazard is discovered by the security
+community, vast amounts of application code must be meticulously
+audited and painstakingly fixed.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Must be re-written on each targeted format (web, mobile, desktop.)</strong>
+<ul>
+<li>When targeting a new format besides the web (e.g. desktop, mobile) we
+have to re-engineer not only the presentation markup, but also all of
+the application logic which is inextricably mangled with it.</li>
+<li>This necessitates the creation and maintenance of multiple separate code
+bases that largely duplicate the functionality of each other.</li>
+<li>These code bases are liable to diverge, thus causing user workflows and
+overall user experience to unwantedly differ across formats.</li>
+</ul>
+</li>
+<li><strong>Is usually written in a scripting language.</strong>
+<ul>
+<li>The code is error-prone due to scripting languages being untyped.</li>
+<li>The code is hard to maintain due to untyped languages being impervious
+to refactoring.</li>
+<li>The code is messy due to scripting languages invariably being inferior
+to real programming languages.</li>
+<li>The code is transmitted in source code form to the browser, thus
+exposing potentially sensitive intellectual property.</li>
+</ul>
+</li>
+<li><strong>Is usually written in JavaScript in particular.</strong>
+<ul>
+<li>JavaScript was originally intended for no more than a few, tiny, and
+isolated snippets of code per HTML page. The haphazardness of the
+language design reflects this intention. However, modern web
+applications tend to contain tens of thousands of lines of
+application-specific JavaScript. That is an awful lot of code in a
+language which is defective by design.</li>
+</ul>
+</li>
+<li><strong>Excludes artists.</strong>
+<ul>
+<li>Artists are prevented from actively participating in the creation and
+maintenance of web pages, because HTML is inextricably mangled with
+JavaScript, so they cannot touch it.</li>
+<li>Thus, artists are resigned to creating mock-ups showing how they want
+web pages to look like, and programmers are then tasked with making the
+web pages look like the mockups. (As if the programmers did not already
+have enough in their hands.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The back-end:
+<ul>
+<li><strong>Is inextricably tied to REST</strong>
+<ul>
+<li>This is because REST is impervious to abstraction.</li>
+<li>REST forces reliance on binding-by-name, which undermines the coherence
+of the entire system and prevents static code analysis, invariably
+resulting in a big unknown chaos.</li>
+</ul>
+</li>
+<li><strong>Duplicates part of the client-side application logic.</strong>
+<ul>
+<li>This is necessary in order to perform validation on the server-side too,
+because from a security standpoint the client must always be considered
+compromised.</li>
+<li>This translates to additional development and maintenance cost.</li>
+<li>Inevitable discrepancies between the validation done on the client and
+the validation done on the server are a continuous source of bugs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The application as a whole:
+<ul>
+<li><strong>Is split in two parts.</strong>
+<ul>
+<li>Usually having each part written in a different programming language.</li>
+<li>Having <em>The Internet</em> interjected between the two parts.</li>
+<li>Having the point of split dictated not by business considerations, but
+by technological limitations instead.</li>
+</ul>
+</li>
+<li><strong>Mixes application with presentation.</strong>
+<ul>
+<li>A fundamental principle of graphical user interface application
+development is that application logic should be kept completely separate
+from presentation logic. This principle warns against inadvertently
+allowing application logic to bleed into the presentation layer;
+however, with full-stack development we have application logic not just
+<em>bleeding</em> to the presentation layer, but actually
+<em>embarking on a massive deliberate large-scale exodus</em> to the
+presentation layer.</li>
+<li>One might naively think that full-stack development accomplishes
+separation by keeping application logic on the server and presentation
+logic on the client, but this is demonstrably not so:
+<ul>
+<li>The server is largely reduced to a bunch of dumb REST endpoints that
+perform not much more than Create, Read, Update, Delete, List (CRUDL)
+operations with validation. That is not application logic; that&rsquo;s
+mostly just querying and updating the data store.</li>
+<li>The client not only decides how things should look, but it also
+decides what options should be available to the user at any moment,
+and what new options will become available to the user as a result of
+user actions. Essentially, all application workflows are implemented
+on the client. That&rsquo;s application logic
+<em>par excellence</em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Is hard to test.</strong>
+<ul>
+<li>The front-end is not functional without the back-end, so the two ends
+usually have to be tested in integration, necessitating such
+monstrosities as Selenium.</li>
+</ul>
+</li>
+<li><strong>Prevents specialization and division of labor.</strong>
+<ul>
+<li>Full-stack development necessitates <em>The Full-stack Developer</em>, who
+is:
+<ul>
+<li>a front-end programmer,</li>
+<li>a back-end programmer,</li>
+<li>a network programmer,</li>
+<li>a security expert,</li>
+<li>a user experience expert,</li>
+<li>an accessibility expert, and</li>
+<li>a graphic artist</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<pre><code>  ? all rolled into one, thus running the risk of being a
+  *jack of all trades, master of none*.
+</code></pre></blockquote>
+<h4 id="conclusion">Conclusion
+</h4><p>By its nature, web application development requires systems that consist of
+multiple layers; the current state of affairs is such that
+application-specific code must be running on each of these layers, and this is
+called full-stack development. However, as I have shown, full-stack
+development has a list of disadvantages which is rather extensive, and each of
+these disadvantages is rather severe.</p>
+<p>Essentially, we are suffering the consequences of a technological limitation:
+we currently have no means of confining all application logic to the server,
+so we have to be placing application logic on the client too, so we have no
+option but to be engaging in full-stack development.</p>
+<p>Technological limitations require technological solutions, but companies with
+commercial goals do not usually take it upon themselves to solve the world&rsquo;s
+technological problems. Instead, they tend to make do with the existing
+problems, providing non-technological workarounds to them, such as throwing
+more manpower into the development effort. This might make sense for each
+individual company, but from a global perspective, we have collectively been
+<em>too busy mopping the floor to turn off the faucet.</em></p>
+<p>A solution that would confine all application logic to the server and thus
+eliminate full-stack development has the potential of being very beneficial to
+the industry as a whole.</p>
+<p><img src="/images/images/blog.michael.gr/content/post/generated/2021/2021-12-full-stack-development/images/grumpy-cat-full-stack-development-i-hate-it.jpg"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-architecture/">Software-Architecture</a>
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+            <a href="/tags/papers/">Papers</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-22 Wed 21:32:14 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/post/2024-03-codecoverage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Artificial Code Coverage</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2024-01-types-of-dependencies/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Types of dependencies</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2023-12-27-call-graph-acyclicity/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Call Graph Acyclicity</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2023-12-09-authoritative-technical-design/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Towards Authoritative Software Design</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2023-01-14-mocking/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">If you are using mock objects you are doing it wrong</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

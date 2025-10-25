@@ -9,11 +9,11 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Thu, 23 Oct 2025 19:23:41 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/wisdom/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Theory vs- Practice</title>
-        <link>//localhost:1313/p/theory-vs-practice/</link>
+        <link>//localhost:1313/post/2025-05-theory-vs-practice/</link>
         <pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate>
         
-        <guid>//localhost:1313/p/theory-vs-practice/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/theory-vs-practice/images/theory-vs-practice.svg&#34;
+        <guid>//localhost:1313/post/2025-05-theory-vs-practice/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2025-05-theory-vs-practice/images/theory-vs-practice.svg&#34;
 	
 	
 	
@@ -35,14 +35,14 @@
         </item>
         <item>
         <title>Confucius on naming</title>
-        <link>//localhost:1313/p/confucius-on-naming/</link>
+        <link>//localhost:1313/post/2018-05-confucius-on-naming/</link>
         <pubDate>Mon, 21 May 2018 23:50:55 +0000</pubDate>
         
-        <guid>//localhost:1313/p/confucius-on-naming/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/confucius-on-naming/media/confucius.jpg&#34;
+        <guid>//localhost:1313/post/2018-05-confucius-on-naming/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2018-05-confucius-on-naming/media/confucius.jpg&#34;
 	width=&#34;1125&#34;
 	height=&#34;1076&#34;
-	srcset=&#34;//localhost:1313/p/confucius-on-naming/media/confucius_hu_b8fa3a1fdb011bb1.jpg 480w, //localhost:1313/p/confucius-on-naming/media/confucius_hu_36a7b39601e40826.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2018-05-confucius-on-naming/media/confucius_hu_b8fa3a1fdb011bb1.jpg 480w, //localhost:1313/post/2018-05-confucius-on-naming/media/confucius_hu_36a7b39601e40826.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -74,14 +74,14 @@
         </item>
         <item>
         <title>On Code Craftsmanship</title>
-        <link>//localhost:1313/p/on-code-craftsmanship/</link>
+        <link>//localhost:1313/post/2018-02-code-craftsmanship/</link>
         <pubDate>Mon, 05 Feb 2018 15:55:42 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-code-craftsmanship/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-code-craftsmanship/media/craftsmanship-guitar.jpg&#34;
+        <guid>//localhost:1313/post/2018-02-code-craftsmanship/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2018-02-code-craftsmanship/media/craftsmanship-guitar.jpg&#34;
 	width=&#34;2048&#34;
 	height=&#34;1365&#34;
-	srcset=&#34;//localhost:1313/p/on-code-craftsmanship/media/craftsmanship-guitar_hu_8f8fb8bbba0d0d17.jpg 480w, //localhost:1313/p/on-code-craftsmanship/media/craftsmanship-guitar_hu_14d10496d9352bee.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2018-02-code-craftsmanship/media/craftsmanship-guitar_hu_8f8fb8bbba0d0d17.jpg 480w, //localhost:1313/post/2018-02-code-craftsmanship/media/craftsmanship-guitar_hu_14d10496d9352bee.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -93,7 +93,7 @@
 &lt;/p&gt;
 &lt;p&gt;I will try to make a list of items here, but I could probably write a book on this.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;assert-everything&#34;&gt;Assert everything
 &lt;/h3&gt;&lt;p&gt;Assertions take care of white-box testing your code, so that automated software testing can be confined to the realm of strictly black-box testing, as it should. Assertions do not execute on release builds / production runs, so they essentially cost nothing. This means that you can go wild with them:&lt;/p&gt;
@@ -109,35 +109,35 @@
 &lt;/ul&gt;
 &lt;p&gt;When I look at code, I don&amp;rsquo;t ask myself &amp;ldquo;should I assert that?&amp;rdquo; Instead, I ask myself &amp;ldquo;is there anything that I forgot to assert?&amp;rdquo; The idea is to assert everything that could possibly be asserted, leave nothing assertable unasserted. I call this &lt;em&gt;The Maximalistic Approach to Error Checking&lt;/em&gt;, in contrast to the predominant minimalistic approach, where programmers decide on a case by case basis whether to assert something or not, based on completely-oblivious-of-Murphy&amp;rsquo;s-law assumptions about how likely it is to go wrong, inappropriately mixed with misguided performance considerations.&lt;/p&gt;
 &lt;p&gt;For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/assertions-and-testing/&#34;
+   href=&#34;//localhost:1313/post/2014-09-assertions-and-testing/&#34;
    &gt;Assertions and Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Also note that the attention horizon of code is the function, so if function &lt;code&gt;f1()&lt;/code&gt; asserts some condition and then invokes function &lt;code&gt;f2()&lt;/code&gt;, it is perfectly fine for &lt;code&gt;f2()&lt;/code&gt; to also assert the same condition. In other words, whether something has already been asserted or not by some other function is irrelevant: each function must assert every condition that pertains to it.&lt;/p&gt;
 &lt;h3 id=&#34;do-black-box-testing-avoid-white-box-testing&#34;&gt;Do black-box testing, avoid white-box testing
 &lt;/h3&gt;&lt;p&gt;Heed the advice that says &lt;em&gt;test against the interface, not the implementation&lt;/em&gt;. Unit Testing is testing against the implementation, so despite the entire software industry&amp;rsquo;s addiction to it, it should be avoided. Incidentally, this means that mocking, despite being an admirably nifty trick, should never be used: if you are using mocks then you are doing white-box testing, so you are doing it wrong.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;For more on why Unit Testing is white-box testing, and why white-box testing is bad, read this: &lt;a 
-   href=&#34;//localhost:1313/p/white-box-vs-black-box-testing/&#34;
+   href=&#34;//localhost:1313/post/2021-12-white-box-vs-black-box-testing/&#34;
    &gt;White Box vs. Black-Box Testing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;For more on why mocks in particular are especially bad, read this: &lt;a 
-   href=&#34;//localhost:1313/p/if-you-are-using-mock-objects-you-are-doing-it-wrong/&#34;
+   href=&#34;//localhost:1313/post/2023-01-14-mocking/&#34;
    &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;For what to use instead of mocks, read this: &lt;a 
-   href=&#34;//localhost:1313/p/testing-with-fakes-instead-of-mocks/&#34;
+   href=&#34;//localhost:1313/post/2022-10-testing-with-fakes/&#34;
    &gt;Testing with Fakes instead of Mocks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;For what to do instead of unit testing, read this: &lt;a 
-   href=&#34;//localhost:1313/p/incremental-integration-testing/&#34;
+   href=&#34;//localhost:1313/post/2022-10-incremental-integration-testing/&#34;
    &gt;Incremental Integration Testing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;If for some reason you &lt;em&gt;must&lt;/em&gt; do white-box testing, then you can at least avoid having to do it in code; read this: &lt;a 
-   href=&#34;//localhost:1313/p/audit-testing/&#34;
+   href=&#34;//localhost:1313/post/2024-04-audit-testing/&#34;
    &gt;Audit Testing&lt;/a&gt; and this: &lt;a 
-   href=&#34;//localhost:1313/p/collaboration-monitoring/&#34;
+   href=&#34;//localhost:1313/post/2023-01-06-collaboration-monitoring/&#34;
    &gt;Collaboration Monitoring&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;avoid-non-determinism-in-tests&#34;&gt;Avoid non-determinism in tests
 &lt;/h3&gt;&lt;p&gt;Testing must be completely free from non-determinism under all circumstances. Since testing code exercises production code, this means that production code must also be free from non-determinism, or at the very least any source of non-determinism in production code must be replaceable during testing with a fake which is completely deterministic. For example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Never rely on the garbage-collector doing anything other than reclaiming memory; specifically, never rely on any cleanup operations being initiated by the garbage-collector. Perform all cleanup explicitly. For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/object-lifetime-awareness/&#34;
+   href=&#34;//localhost:1313/post/2020-12-27-object-lifetime-awareness/&#34;
    &gt;Object Lifetime Awareness&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Never allow any external factors such as file creation times, IP addresses resolved from DNS, etc. to enter into the tests. Fake your file-system; fake The Internet if necessary.&lt;/li&gt;
 &lt;li&gt;Never use wall-clock time; always fake the clock, making it start from some arbitrary fixed origin and incrementing by a fixed amount each time it is queried.&lt;/li&gt;
@@ -153,7 +153,7 @@
 &lt;p&gt;The historical origins of the practice of never overwriting function parameters are actually quite funny: some early versions of Fortran (the first programming language) used to pass everything by reference, including constants. So, if you had function F(X) which was invoked with 3 for X, and within F(X) you assigned 5 to x, then from that moment on the constant 3 would actually have the value 5 in your entire program. As a result, early computer scientists decreed that function parameters should never be reassigned. Fortran was soon fixed to correct this problem, but the advise kept being passed from generation to generation of programmers, who have been accepting it without rethinking it. This is cargo cult programming at its finest.&lt;/p&gt;
 &lt;h3 id=&#34;avoid-hail-mary-local-variable-initialization&#34;&gt;Avoid &lt;em&gt;Hail-Mary Local Variable Initialization&lt;/em&gt;
 &lt;/h3&gt;&lt;p&gt;Contrary to what many people falsely think of as &amp;ldquo;best practice&amp;rdquo; and &amp;ldquo;common knowledge&amp;rdquo;, you should never initialize any variable before you have a meaningful value to assign to it.  For more information, see &lt;a 
-   href=&#34;//localhost:1313/p/hail-mary-local-variable-initialization/&#34;
+   href=&#34;//localhost:1313/post/2012-01-03-hail-mary-initialization/&#34;
    &gt;Hail-Mary Local Variable Initialization&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;avoid-b-to-a-style-conversions-use-a-from-b-style-instead&#34;&gt;Avoid b-to-a style conversions, use a-from-b style instead
 &lt;/h3&gt;&lt;p&gt;When I see &lt;code&gt;A = AfromB( B )&lt;/code&gt; I can immediately tell that it looks correct, since A is on the side of A and B is on the side of B. However, when I see &lt;code&gt;B = AtoB( A )&lt;/code&gt; I have to stare at it for a little while longer before I can tell whether it is correct or not. Of course, this is a trivial example: in real-world situations, the identifiers, as well as the call chain, could be much longer and much more complicated. This is related to Joel Spolsky&amp;rsquo;s notion that &lt;a class=&#34;external&#34; 
@@ -310,7 +310,7 @@
 &lt;h3 id=&#34;always-use-strong-typing&#34;&gt;Always use strong typing
 &lt;/h3&gt;&lt;p&gt;Avoid any kind of weak typing (euphemistically called &lt;em&gt;dynamic&lt;/em&gt; typing) and avoid languages and frameworks that require it or even just sympathize with it. Yes, this includes all scripting languages. Scripting language enthusiasts can cry me a river. (And yes, this includes Typescript too, because it &lt;em&gt;sympathizes&lt;/em&gt; with JavaScript.)&lt;/p&gt;
 &lt;p&gt;Read this: &lt;a 
-   href=&#34;//localhost:1313/p/on-scripting-languages/&#34;
+   href=&#34;//localhost:1313/post/2017-05-on-scripting-languages/&#34;
    &gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;strive-for-debuggability&#34;&gt;Strive for debuggability
 &lt;/h3&gt;&lt;p&gt;For example, do not overdo it with the so-called &amp;ldquo;fluent&amp;rdquo; style of invocations, because they are not particularly debuggable. Do not hurry to adopt this or that cool new programming language before you have made sure that debugger support for it is complete and working properly.&lt;/p&gt;
@@ -397,7 +397,7 @@
 &lt;p&gt;In special cases, dare to use names that you may have never heard anyone using before. For example, if you need a Factory of Factories, why not call it &lt;em&gt;Industry&lt;/em&gt;?&lt;/p&gt;
 &lt;p&gt;Read Chapter 2: &lt;em&gt;Meaningful Names&lt;/em&gt; of the book &lt;em&gt;Clean Code&lt;/em&gt; by Robert C. Martin.&lt;/p&gt;
 &lt;p&gt;Also read this: &lt;a 
-   href=&#34;//localhost:1313/p/confucius-on-naming/&#34;
+   href=&#34;//localhost:1313/post/2018-05-confucius-on-naming/&#34;
    &gt;Confucius on Naming&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Any code written by a programmer whose English language skills are poor should be reviewed by a programmer whose English language skills are good.&lt;/p&gt;
 &lt;p&gt;When words need to be combined to form an identifier, the combination must follow general English grammar rules, except for English grammar special cases.&lt;/p&gt;
@@ -467,7 +467,7 @@
 &lt;li&gt;In scenarios where an add-or-replace operation seems useful to have, (and in my experience, such scenarios are exceedingly rare,) add such a function but give it a name that clearly indicates the weirdness in what it does: call it &lt;code&gt;addOrReplace()&lt;/code&gt;. (Duh!)&lt;/li&gt;
 &lt;li&gt;Avoid things like a &lt;code&gt;close()&lt;/code&gt; method which is allowed to be invoked more than once with no penalty: assert that your &lt;code&gt;close()&lt;/code&gt; methods are invoked exactly once.&lt;/li&gt;
 &lt;li&gt;Never use the garbage collector for cleanup; always perform explicit and deterministic clean-up at the exact moment when it is supposed to happen; the cleanup function invoked by the garbage collector should only be used for producing diagnostic messages in case we forgot to do explicit cleanup. Read this: &lt;a 
-   href=&#34;//localhost:1313/p/object-lifetime-awareness/&#34;
+   href=&#34;//localhost:1313/post/2020-12-27-object-lifetime-awareness/&#34;
    &gt;Object Lifetime Awareness&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;use-inheritance-when-it-is-clearly-the-right-choice&#34;&gt;Use inheritance when it is clearly the right choice
@@ -529,7 +529,7 @@
 &lt;/h3&gt;&lt;p&gt;Security is not something that you can add on top of an insecure foundation, because there exist no automated tests that can detect security hazards and no amount of carefulness on behalf of programmers that is careful enough. So, what is necessary is architectural choices that eliminate entire classes of security hazards. (Do not worry, there will always be other classes of security hazards to have to worry about.)&lt;/p&gt;
 &lt;p&gt;So, if a certain architectural choice is prone to security vulnerabilities, do not make that choice. An example of a vulnerability-prone architectural choice is putting application code on the web browser, otherwise known as full-stack development. Full-stack developers can cry me a river.&lt;/p&gt;
 &lt;p&gt;For more on this, read: &lt;a 
-   href=&#34;//localhost:1313/p/what-is-wrong-with-full-stack-development/&#34;
+   href=&#34;//localhost:1313/post/2021-12-full-stack-development/&#34;
    &gt;What is wrong with Full Stack Development&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;keep-the-log-clean&#34;&gt;Keep the log clean
 &lt;/h3&gt;&lt;p&gt;Do not vex your colleagues, and do not make your own life harder, with torrential info-level or debug-level spam in the log. Keep the info-level messages down to an absolute minimum, and once debugging is done, completely remove all the debug-level log statements. Utilize commit hooks that deliberately fail a commit if it contains debug-level logging statements. Regularly use the &amp;ldquo;blame&amp;rdquo; feature of the version control system to remind developers of info-level logging statements that they should remove. Never use the log for capturing metrics or any other kind of structured information; use some separate, specialized instrumentation facility for that.&lt;/p&gt;
@@ -713,7 +713,7 @@ etc.&lt;/li&gt;
 &lt;/h3&gt;&lt;p&gt;All file-system paths must be absolute. It is fine to provide the user with the convenience of entering a relative path, but the relative path must be converted to absolute immediately upon entering the system. Relative paths are based on the notion of a &amp;ldquo;current directory&amp;rdquo;, which is one of the most ill-conceived, misused, and treacherous notions in the history of programming, because it is a global mutable variable. (I hope I do not need to explain why a global mutable variable is evil, right?) Note that the &amp;ldquo;current directory&amp;rdquo; is global not only across all classes of your application, but also across all threads of your application, and, in DotNet, even global across all AppDomains of your application, which were supposed to be completely isolated. Duh!? What were they thinking?&lt;/p&gt;
 &lt;h3 id=&#34;avoid-guids-also-known-as-uuids&#34;&gt;Avoid GUIDs (also known as UUIDs)
 &lt;/h3&gt;&lt;p&gt;Never use GUIDs if you can avoid them. If you must use them, then make sure they are an implementation detail and that they constitute a side-note of your design, not a predominant feature of your design. Read this: &lt;a 
-   href=&#34;//localhost:1313/p/what-is-wrong-with-uuids-and-guids/&#34;
+   href=&#34;//localhost:1313/post/2017-06-on-uuids-and-guids/&#34;
    &gt;What is wrong with UUIDs and GUIDs&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;do-it-right-&#34;&gt;Do It Right ™
 &lt;/h3&gt;&lt;p&gt;Avoid taking shortcuts in the name of immediate savings now but at the expense of headaches later, because the later headaches invariably end-up costing orders of magnitude more than the immediate savings. When some colleague, manager, or decision-maker suggests to &amp;ldquo;make it simple now, and worry about making it right later&amp;rdquo; they are imagining that they are being smart and they are helping optimize things, while in fact they are being a smart-ass, and they are suggesting that a technical crime be committed.&lt;/p&gt;

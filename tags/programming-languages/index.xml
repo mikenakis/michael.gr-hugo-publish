@@ -9,14 +9,14 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Thu, 23 Oct 2025 19:26:45 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>On messages and message-passing</title>
-        <link>//localhost:1313/p/on-messages-and-message-passing/</link>
+        <link>//localhost:1313/post/2022-12-messages-and-message-passing/</link>
         <pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-messages-and-message-passing/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-messages-and-message-passing/media/message-passing.png&#34;
+        <guid>//localhost:1313/post/2022-12-messages-and-message-passing/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/media/message-passing.png&#34;
 	width=&#34;2673&#34;
 	height=&#34;1494&#34;
-	srcset=&#34;//localhost:1313/p/on-messages-and-message-passing/media/message-passing_hu_cac0be91696add81.png 480w, //localhost:1313/p/on-messages-and-message-passing/media/message-passing_hu_4c50d0e4091ea6ab.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/media/message-passing_hu_cac0be91696add81.png 480w, //localhost:1313/post/2022-12-messages-and-message-passing/media/message-passing_hu_4c50d0e4091ea6ab.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -28,7 +28,7 @@
 &lt;/p&gt;
 &lt;p&gt;Over the decades, numerous software system architectures have emerged which require invocations across subsystems to be done via message-passing instead of programmatic interface method calls. Such architectures are so common that many programmers have come to regard message-passing as an end in and of itself, oblivious of the fact that it is nothing but a (poor) technical mechanism for accomplishing a certain architectural goal.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The architectural goal is to be able to perform general-purpose operations on invocations, for example routing the invocations according to configuration, or queuing the invocations for delivery on a different thread. In order to be able to do things like that, the invocations must first be expressed in a general-purpose form.&lt;/p&gt;
 &lt;p&gt;Message-passing is simply the only general-purpose form that could be imagined by the pioneers who built the first asynchronous event-driven systems, or perhaps the only form that could readily be implemented using the programming languages available back then. However, in succeeding decades our thinking and our tools have advanced considerably, to the point where we now have much better ways of achieving things technically, so it might be worth taking a moment to re-examine the concept of message-passing.&lt;/p&gt;
@@ -50,15 +50,15 @@
 &lt;p&gt;Furthermore, if we bother creating such packaging and unpackaging adaptors, the realization quickly starts to sink-in that all the message classes are irrelevant; there is no need to define a special message class containing a separate field for each parameter of each method, because the only code that would ever deal with such a class would be the corresponding pair of packaging and unpackaging adaptors; so, the adaptors might as well use a single universal message class which simply stores all parameters in an array of object, and voila, the entire menagerie of message classes becomes entirely unnecessary.&lt;/p&gt;
 &lt;p&gt;Thus, it becomes evident that what we are really after is not message-passing per se; it is some general-purpose form of expressing invocations, so that general-purpose operations can be performed on them, and some mechanism for converting back and forth between this general-purpose form and the natural form, which is programmatic interface method calls, so that we can write code naturally. Ideally, the conversion mechanism would be automatic and transparent, so that we do not even have to write those adaptors. Messages have only existed due to the historical absence of such an automatic and transparent mechanism.&lt;/p&gt;
 &lt;p&gt;Fortunately, with modern reflecting, intermediate-code-based, just-in-time compiled programming languages, today we have at our disposal all that is necessary  to build such mechanisms. For more information see &lt;a 
-   href=&#34;//localhost:1313/p/intertwine/&#34;
+   href=&#34;//localhost:1313/post/2022-12-intertwine/&#34;
    &gt;Intertwine&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/p/on-messages-and-message-passing/media/grumpy-cat-message-passing.jpg&#34;
+          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing.jpg&#34;
 	width=&#34;493&#34;
 	height=&#34;555&#34;
-	srcset=&#34;//localhost:1313/p/on-messages-and-message-passing/media/grumpy-cat-message-passing_hu_292667b1799fe58a.jpg 480w, //localhost:1313/p/on-messages-and-message-passing/media/grumpy-cat-message-passing_hu_6ad615b796b41427.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_292667b1799fe58a.jpg 480w, //localhost:1313/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_6ad615b796b41427.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -81,11 +81,11 @@
         </item>
         <item>
         <title>Intertwine</title>
-        <link>//localhost:1313/p/intertwine/</link>
+        <link>//localhost:1313/post/2022-12-intertwine/</link>
         <pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate>
         
-        <guid>//localhost:1313/p/intertwine/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/intertwine/media/intertwine-logo.svg&#34;
+        <guid>//localhost:1313/post/2022-12-intertwine/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-intertwine/media/intertwine-logo.svg&#34;
 	
 	
 	
@@ -97,7 +97,7 @@
 &lt;h3 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id=&#34;the-problem&#34;&gt;The Problem
 &lt;/h3&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
@@ -115,7 +115,7 @@
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a 
-   href=&#34;//localhost:1313/p/on-messages-and-message-passing/&#34;
+   href=&#34;//localhost:1313/post/2022-12-messages-and-message-passing/&#34;
    &gt;On messages and message-passing&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -501,21 +501,21 @@ following:
    href=&#34;https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing&#34; target=&#34;_blank&#34;
    &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
 &lt;p&gt;This post supersedes the original post from 2011: &lt;a 
-   href=&#34;//localhost:1313/p/intertwine-normalizing-interface-invocations/&#34;
+   href=&#34;//localhost:1313/post/2011-10-16-intertwine-normalizing-interface/&#34;
    &gt;Intertwine: Normalizing Interface Invocations&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description>
         </item>
         <item>
         <title>On Visual Programming Languages</title>
-        <link>//localhost:1313/p/on-visual-programming-languages/</link>
+        <link>//localhost:1313/post/2022-08-on-visual-programming-languages/</link>
         <pubDate>Tue, 16 Aug 2022 10:48:21 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-visual-programming-languages/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-visual-programming-languages/media/visual-programming-language-logos.png&#34;
+        <guid>//localhost:1313/post/2022-08-on-visual-programming-languages/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-visual-programming-languages/media/visual-programming-language-logos.png&#34;
 	width=&#34;1930&#34;
 	height=&#34;851&#34;
-	srcset=&#34;//localhost:1313/p/on-visual-programming-languages/media/visual-programming-language-logos_hu_6f5c07acbb8eefc7.png 480w, //localhost:1313/p/on-visual-programming-languages/media/visual-programming-language-logos_hu_a5cadf1cf0abeb9.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-visual-programming-languages/media/visual-programming-language-logos_hu_6f5c07acbb8eefc7.png 480w, //localhost:1313/post/2022-08-on-visual-programming-languages/media/visual-programming-language-logos_hu_a5cadf1cf0abeb9.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -526,21 +526,21 @@ following:
 &gt;
 &lt;/p&gt;
 &lt;p&gt;This post is intended as support material for another post of mine; see &lt;a 
-   href=&#34;//localhost:1313/p/towards-authoritative-software-design/&#34;
+   href=&#34;//localhost:1313/post/2023-12-09-authoritative-technical-design/&#34;
    &gt;Towards Authoritative Software Design&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The idea of creating software using visual tools has existed ever since the first aspiring programmer was bitterly disillusioned by discovering that programming almost exclusively entails writing lots of little text files containing nothing but boring and cryptic text.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Given the relative abundance of people who engage in programming, and the relative scarcity of people who engage in software design, it should come as no surprise that visual software development has largely been regarded as an issue of visual programming rather than an issue of visual software design.&lt;/p&gt;
 &lt;p&gt;Thus, there has been a multitude of attempts to create so-called &lt;em&gt;Visual Programming Languages&lt;/em&gt; (&lt;a class=&#34;external&#34; 
    href=&#34;https://en.wikipedia.org/wiki/Visual_programming_language&#34; target=&#34;_blank&#34;
    &gt;see Wikipedia&lt;/a&gt;) such as Snap!, Scratch, EduBlocks, Blockly, etc. where code is expressed not as boring text, but instead as colorful blocks on a canvas.&lt;/p&gt;
 &lt;p&gt;The following example is borrowed from &lt;em&gt;Computer Science with Snap!&lt;/em&gt; by Eckart Modrow from University of Goettingen, 2018.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-visual-programming-languages/media/snap.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-08-on-visual-programming-languages/media/snap.png&#34;
 	width=&#34;482&#34;
 	height=&#34;476&#34;
-	srcset=&#34;//localhost:1313/p/on-visual-programming-languages/media/snap_hu_84af3caed02486.png 480w, //localhost:1313/p/on-visual-programming-languages/media/snap_hu_90a46c1f922f2411.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-08-on-visual-programming-languages/media/snap_hu_84af3caed02486.png 480w, //localhost:1313/post/2022-08-on-visual-programming-languages/media/snap_hu_90a46c1f922f2411.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -558,11 +558,11 @@ following:
         </item>
         <item>
         <title>What is wrong with Scala</title>
-        <link>//localhost:1313/p/what-is-wrong-with-scala/</link>
+        <link>//localhost:1313/post/2021-10-what-is-wrong-with-scala/</link>
         <pubDate>Mon, 04 Oct 2021 15:39:46 +0000</pubDate>
         
-        <guid>//localhost:1313/p/what-is-wrong-with-scala/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/what-is-wrong-with-scala/media/scala.svg&#34;
+        <guid>//localhost:1313/post/2021-10-what-is-wrong-with-scala/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-what-is-wrong-with-scala/media/scala.svg&#34;
 	
 	
 	
@@ -574,7 +574,7 @@ following:
 This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with.  The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
 &lt;p&gt;I will be amending and revising these texts over time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;what-is-wrong-with-scala&#34;&gt;What is wrong with Scala:
 &lt;/h2&gt;&lt;ul&gt;
@@ -621,11 +621,11 @@ This is part of a series of posts in which I am documenting what is wrong with c
         </item>
         <item>
         <title>What is wrong with C#</title>
-        <link>//localhost:1313/p/what-is-wrong-with-c/</link>
+        <link>//localhost:1313/post/2021-10-what-is-wrong-with-csharp/</link>
         <pubDate>Mon, 04 Oct 2021 15:25:56 +0000</pubDate>
         
-        <guid>//localhost:1313/p/what-is-wrong-with-c/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/what-is-wrong-with-c/media/csharp.svg&#34;
+        <guid>//localhost:1313/post/2021-10-what-is-wrong-with-csharp/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-what-is-wrong-with-csharp/media/csharp.svg&#34;
 	
 	
 	
@@ -637,7 +637,7 @@ This is part of a series of posts in which I am documenting what is wrong with c
 &lt;p&gt;This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with.  The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
 &lt;p&gt;I will be amending and revising these texts over time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;what-is-wrong-with-c&#34;&gt;What is wrong with C#:
 &lt;/h2&gt;&lt;ul&gt;
@@ -750,11 +750,11 @@ This is part of a series of posts in which I am documenting what is wrong with c
         </item>
         <item>
         <title>What is wrong with Java</title>
-        <link>//localhost:1313/p/what-is-wrong-with-java/</link>
+        <link>//localhost:1313/post/2021-10-what-is-wrong-with-java/</link>
         <pubDate>Mon, 04 Oct 2021 15:22:38 +0000</pubDate>
         
-        <guid>//localhost:1313/p/what-is-wrong-with-java/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/what-is-wrong-with-java/media/java.svg&#34;
+        <guid>//localhost:1313/post/2021-10-what-is-wrong-with-java/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-what-is-wrong-with-java/media/java.svg&#34;
 	
 	
 	
@@ -766,7 +766,7 @@ This is part of a series of posts in which I am documenting what is wrong with c
 This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with.  The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
 &lt;p&gt;I will be amending and revising these texts over time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;what-is-wrong-with-java&#34;&gt;What is wrong with Java:
 &lt;/h2&gt;&lt;ul&gt;
@@ -999,11 +999,11 @@ This is part of a series of posts in which I am documenting what is wrong with c
         </item>
         <item>
         <title>What is wrong with C&#43;&#43;</title>
-        <link>//localhost:1313/p/what-is-wrong-with-c-/</link>
+        <link>//localhost:1313/post/2021-10-what-is-wrong-with-cplusplus/</link>
         <pubDate>Mon, 04 Oct 2021 14:23:59 +0000</pubDate>
         
-        <guid>//localhost:1313/p/what-is-wrong-with-c-/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/what-is-wrong-with-c-/media/cplusplus.svg&#34;
+        <guid>//localhost:1313/post/2021-10-what-is-wrong-with-cplusplus/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-what-is-wrong-with-cplusplus/media/cplusplus.svg&#34;
 	
 	
 	
@@ -1015,7 +1015,7 @@ This is part of a series of posts in which I am documenting what is wrong with c
 This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with.  The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
 &lt;p&gt;I will be amending and revising these texts over time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading:  &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;what-is-wrong-with-c&#34;&gt;What is wrong with C++:
 &lt;/h2&gt;&lt;ul&gt;
@@ -1083,14 +1083,14 @@ This is part of a series of posts in which I am documenting what is wrong with c
         </item>
         <item>
         <title>A Programming Language</title>
-        <link>//localhost:1313/p/a-programming-language/</link>
+        <link>//localhost:1313/post/2022-07-a-programming-language/</link>
         <pubDate>Wed, 01 Sep 2021 04:47:26 +0000</pubDate>
         
-        <guid>//localhost:1313/p/a-programming-language/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/a-programming-language/media/a-programming-language-cover.jpg&#34;
+        <guid>//localhost:1313/post/2022-07-a-programming-language/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-07-a-programming-language/media/a-programming-language-cover.jpg&#34;
 	width=&#34;1000&#34;
 	height=&#34;667&#34;
-	srcset=&#34;//localhost:1313/p/a-programming-language/media/a-programming-language-cover_hu_d2c3b265207d8a27.jpg 480w, //localhost:1313/p/a-programming-language/media/a-programming-language-cover_hu_dc5e32d91246236f.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2022-07-a-programming-language/media/a-programming-language-cover_hu_d2c3b265207d8a27.jpg 480w, //localhost:1313/post/2022-07-a-programming-language/media/a-programming-language-cover_hu_dc5e32d91246236f.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1116,7 +1116,7 @@ This is part of a series of posts in which I am documenting what is wrong with c
 &lt;p&gt;This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust.&lt;/p&gt;
 &lt;h3 id=&#34;summary-of-language-characteristics&#34;&gt;Summary of language characteristics
 &lt;/h3&gt;&lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The main goals of the language are achieved via the following characteristics:&lt;/p&gt;
 &lt;ul&gt;
@@ -1170,16 +1170,16 @@ This is part of a series of posts in which I am documenting what is wrong with c
 &lt;p&gt;For a list of shortcomings of other languages, which this language intends to fix, see:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a 
-   href=&#34;//localhost:1313/p/what-is-wrong-with-c-/&#34;
+   href=&#34;//localhost:1313/post/2021-10-what-is-wrong-with-cplusplus/&#34;
    &gt;What is wrong with C++&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a 
-   href=&#34;//localhost:1313/p/what-is-wrong-with-java/&#34;
+   href=&#34;//localhost:1313/post/2021-10-what-is-wrong-with-java/&#34;
    &gt;What is wrong with Java&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a 
-   href=&#34;//localhost:1313/p/what-is-wrong-with-c/&#34;
+   href=&#34;//localhost:1313/post/2021-10-what-is-wrong-with-csharp/&#34;
    &gt;What is wrong with C#&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a 
-   href=&#34;//localhost:1313/p/what-is-wrong-with-scala/&#34;
+   href=&#34;//localhost:1313/post/2021-10-what-is-wrong-with-scala/&#34;
    &gt;What is wrong with Scala&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -2222,7 +2222,7 @@ static, public, protected, and private methods.&lt;/li&gt;
 &lt;p&gt;Built-in support for testing.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Bundled Testana, see &lt;a 
-   href=&#34;//localhost:1313/p/testana-a-better-way-of-running-tests/&#34;
+   href=&#34;//localhost:1313/post/2024-10-testana/&#34;
    &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Somewhat different testing semantics than JUnit:
 &lt;ul&gt;
@@ -2340,11 +2340,11 @@ will never change it.)&lt;/li&gt;
         </item>
         <item>
         <title>C# Bloopers</title>
-        <link>//localhost:1313/p/csharp-bloopers/</link>
+        <link>//localhost:1313/post/2012-01-05-csharp-bloopers/</link>
         <pubDate>Thu, 05 Jan 2012 12:21:02 +0000</pubDate>
         
-        <guid>//localhost:1313/p/csharp-bloopers/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/csharp-bloopers/media/csharp-logo-2023.svg&#34;
+        <guid>//localhost:1313/post/2012-01-05-csharp-bloopers/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2012-01-05-csharp-bloopers/media/csharp-logo-2023.svg&#34;
 	
 	
 	
@@ -2356,46 +2356,46 @@ will never change it.)&lt;/li&gt;
 &lt;p&gt;Please do not get me wrong; C# is awesome. It is the language of my choice, even though I am pretty well versed in C++ and Java. That having been said, it cannot be denied that C# has its share of flaws, too. In this series of posts I am documenting some of them, in no particular order.&lt;/p&gt;
 &lt;p&gt;Also please note that some of the issues described here are Visual Studio bloopers, or DotNet bloopers, and not C#-in-general bloopers.&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-1-no-warnings-about-uninitialized-readonly-members/&#34;
+   href=&#34;//localhost:1313/post/2011-12-31-csharp-blooper-1-no-warnings-about/&#34;
    &gt;C# Blooper №1: No warnings about uninitialized readonly members&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-2-no-warnings-about-accessing-uninitialized-members/&#34;
+   href=&#34;//localhost:1313/post/2012-01-06-csharp-blooper-2-no-warnings-about/&#34;
    &gt;C# Blooper №2: No warnings about accessing uninitialized members&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-3-no-warnings-about-fields-having-already-been-initialized/&#34;
+   href=&#34;//localhost:1313/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/&#34;
    &gt;C# Blooper №3: No warnings about fields having already been initialized&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-4-lame/annoying-variable-scoping-rules-part-1/&#34;
+   href=&#34;//localhost:1313/post/2012-11-09-csharp-blooper-4-lameannoying-variable/&#34;
    &gt;C# Blooper №4: Lame/annoying variable scoping rules, Part 1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-5-lame/annoying-variable-scoping-rules-part-2/&#34;
+   href=&#34;//localhost:1313/post/2012-11-09-csharp-blooper-5-lameannoying-variable/&#34;
    &gt;C# Blooper №5: Lame/annoying variable scoping rules, Part 2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-6-no-warnings-about-unused-parameters/&#34;
+   href=&#34;//localhost:1313/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/&#34;
    &gt;C# Blooper №6: No warnings about unused parameters&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-7-no-warnings-about-unused-private-methods/&#34;
+   href=&#34;//localhost:1313/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/&#34;
    &gt;C# Blooper №7: No warnings about unused private methods&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-8-no-warnings-for-conditions-that-are-always-true/false/&#34;
+   href=&#34;//localhost:1313/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/&#34;
    &gt;C# Blooper №8: No warnings for conditions that are always true/false&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-9-annoying-case-statement-fall-through-rules/&#34;
+   href=&#34;//localhost:1313/post/2013-01-04-csharp-blooper-9-annoying-case-statement/&#34;
    &gt;C# Blooper №9: Annoying case statement fall-through rules&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-10-switch-statements-are-not-properly-formatted/&#34;
+   href=&#34;//localhost:1313/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/&#34;
    &gt;C# Blooper №10: Switch statements are not properly formatted&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-11-zero-to-enum-conversion-weirdness/&#34;
+   href=&#34;//localhost:1313/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/&#34;
    &gt;C# Blooper №11: Zero to Enum conversion weirdness&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-12-where-constraints-not-included-in-method-signatures/&#34;
+   href=&#34;//localhost:1313/post/2013-01-04-csharp-blooper-12-where-constraints-not/&#34;
    &gt;C# Blooper №12: &amp;lsquo;Where&amp;rsquo; constraints not included in method signatures&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-13-stackt-and-queuet-do-not-implement-icollectiont/&#34;
+   href=&#34;//localhost:1313/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/&#34;
    &gt;C# Blooper №13: Stack and Queue do not implement ICollection&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a 
-   href=&#34;//localhost:1313/p/c%23-blooper-14-weird-/-annoying-interface-method-visibility-rules/&#34;
+   href=&#34;//localhost:1313/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/&#34;
    &gt;C# Blooper №14: Weird / annoying interface method visibility rules&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Stay tuned, there is more to come.&lt;/p&gt;
 </description>

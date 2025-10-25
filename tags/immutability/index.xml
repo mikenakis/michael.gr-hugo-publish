@@ -9,11 +9,11 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Sat, 18 Oct 2025 02:51:16 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/immutability/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Immutability Assessment</title>
-        <link>//localhost:1313/p/immutability-assessment/</link>
+        <link>//localhost:1313/post/2025-06-immutability-assessment/</link>
         <pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate>
         
-        <guid>//localhost:1313/p/immutability-assessment/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/immutability-assessment/images/diamond.svg&#34;
+        <guid>//localhost:1313/post/2025-06-immutability-assessment/</guid>
+        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2025-06-immutability-assessment/images/diamond.svg&#34;
 	
 	
 	
@@ -25,7 +25,7 @@
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;The need is identified for programmatically ascertaining, in languages like C# and Java, the immutability of certain objects used in situations where they are expected to be immutable. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id=&#34;the-problem&#34;&gt;The Problem
 &lt;/h2&gt;&lt;p&gt;Raise your hand if you have ever had to troubleshoot a bug that manifested itself in mysterious ways, defied rational explanation, tenaciously evaded detection, made you rage at the absurdity of the observed behavior, and after much weeping and wailing and gnashing of teeth, turned out to be due to one of the following reasons:&lt;/p&gt;

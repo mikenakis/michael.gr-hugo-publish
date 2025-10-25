@@ -9,17 +9,17 @@
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Thu, 23 Oct 2025 22:45:18 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/microservices/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>So, what is a Microservice, anyway?</title>
-        <link>//localhost:1313/p/so-what-is-a-microservice-anyway/</link>
+        <link>//localhost:1313/post/2021-10-so-what-is-microservice-anyway/</link>
         <pubDate>Thu, 14 Oct 2021 17:39:23 +0000</pubDate>
         
-        <guid>//localhost:1313/p/so-what-is-a-microservice-anyway/</guid>
+        <guid>//localhost:1313/post/2021-10-so-what-is-microservice-anyway/</guid>
         <description>&lt;p&gt;This article attempts to shed some light on what a microservice really is; it
 is meant as support material for other posts of mine that discuss
 microservices, mainly
 &lt;a 
-   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   href=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/&#34;
    &gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/media/microservices.svg&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-so-what-is-microservice-anyway/media/microservices.svg&#34;
 	
 	
 	
@@ -41,7 +41,7 @@ that microservices must communicate with each other via nothing but REST, etc.
 My favorite one is that they must necessarily be stateless. This paper is a
 first step in dispelling the statelessness myth.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;To clear up the confusion a little bit, I would like to propose a purely
 technical definition of a microservice which is brief and to the point:&lt;/p&gt;
@@ -124,7 +124,7 @@ resilience concern into our definition, then this is what we are left with:&lt;/
 &lt;p&gt;From a purely technical standpoint, a microservice is a scalable and resilient
 module.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Further reading: &lt;a 
-   href=&#34;//localhost:1313/p/on-stateless-microservices/&#34;
+   href=&#34;//localhost:1313/post/2021-10-on-stateless-microservices/&#34;
    &gt;On Stateless Microservices&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;(1) According to Neal Ford, this started with Pets.com; see &lt;a class=&#34;external&#34; 
@@ -133,16 +133,16 @@ module.&lt;/p&gt;&lt;/blockquote&gt;
         </item>
         <item>
         <title>The Stateful Microservice</title>
-        <link>//localhost:1313/p/the-stateful-microservice/</link>
+        <link>//localhost:1313/post/2021-10-14-the-stateful-microservice/</link>
         <pubDate>Thu, 14 Oct 2021 16:58:10 +0000</pubDate>
         
-        <guid>//localhost:1313/p/the-stateful-microservice/</guid>
+        <guid>//localhost:1313/post/2021-10-14-the-stateful-microservice/</guid>
         <description>&lt;p&gt;I did a quick search for the term and did not find anything concrete, so I
 thought I might as well publicly document my thoughts.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/the-stateful-microservice/media/elephants.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/media/elephants.jpg&#34;
 	width=&#34;2048&#34;
 	height=&#34;1365&#34;
-	srcset=&#34;//localhost:1313/p/the-stateful-microservice/media/elephants_hu_cfac862bf8819bb5.jpg 480w, //localhost:1313/p/the-stateful-microservice/media/elephants_hu_6c0c09c376128914.jpg 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/media/elephants_hu_cfac862bf8819bb5.jpg 480w, //localhost:1313/post/2021-10-14-the-stateful-microservice/media/elephants_hu_6c0c09c376128914.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -154,7 +154,7 @@ thought I might as well publicly document my thoughts.&lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;(Useful pre-reading:
 &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Almost everyone doing microservices today will tell you that microservices
 need to be stateless. In another post of mine I explain that statelessness is
@@ -163,7 +163,7 @@ desired technical ends are scalability and resilience, and statelessness is just
 in particular is a very cowardly solution from an engineering standpoint, and
 it performs very badly. For details, please see
 &lt;a 
-   href=&#34;//localhost:1313/p/on-stateless-microservices/&#34;
+   href=&#34;//localhost:1313/post/2021-10-on-stateless-microservices/&#34;
    &gt;On Stateless Microservices&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;What remains to be shown is whether there exists an alternative.&lt;/p&gt;
 &lt;p&gt;Obviously, an alternative to the stateless microservice would be the stateful
@@ -220,7 +220,7 @@ microservice.&lt;/p&gt;
 &lt;p&gt;In a previous post of mine I examined what a microservice really is, and I
 came to the conclusion that from a purely technical standpoint, it is simply a scalable and resilient module. (See
 &lt;a 
-   href=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/&#34;
+   href=&#34;//localhost:1313/post/2021-10-so-what-is-microservice-anyway/&#34;
    &gt;So, what is a Microservice, anyway?&lt;/a&gt;) Even if you disagree with this definition, and you regard microservices as
 necessarily more than that, I hope you will at least agree that the purpose of
 statelessness in microservices is precisely to achieve scalability and
@@ -374,19 +374,19 @@ resilience.&lt;/p&gt;
         </item>
         <item>
         <title>On Stateless Microservices</title>
-        <link>//localhost:1313/p/on-stateless-microservices/</link>
+        <link>//localhost:1313/post/2021-10-on-stateless-microservices/</link>
         <pubDate>Thu, 14 Oct 2021 10:53:38 +0000</pubDate>
         
-        <guid>//localhost:1313/p/on-stateless-microservices/</guid>
+        <guid>//localhost:1313/post/2021-10-on-stateless-microservices/</guid>
         <description>&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as
 support material for other posts of mine that discuss microservices, mainly
 &lt;a 
-   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   href=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/&#34;
    &gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;//localhost:1313/p/on-stateless-microservices/media/8.png&#34;
+&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2021-10-on-stateless-microservices/media/8.png&#34;
 	width=&#34;1378&#34;
 	height=&#34;2048&#34;
-	srcset=&#34;//localhost:1313/p/on-stateless-microservices/media/8_hu_48b7be9e0748ac79.png 480w, //localhost:1313/p/on-stateless-microservices/media/8_hu_56b2bd321fd1677a.png 1024w&#34;
+	srcset=&#34;//localhost:1313/post/2021-10-on-stateless-microservices/media/8_hu_48b7be9e0748ac79.png 480w, //localhost:1313/post/2021-10-on-stateless-microservices/media/8_hu_56b2bd321fd1677a.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -399,7 +399,7 @@ support material for other posts of mine that discuss microservices, mainly
 &lt;h4 id=&#34;is-statelessness-a-requirement-for-a-microservice&#34;&gt;Is statelessness a requirement for a microservice?
 &lt;/h4&gt;&lt;p&gt;In another post (see
 &lt;a 
-   href=&#34;//localhost:1313/p/so-what-is-a-microservice-anyway/&#34;
+   href=&#34;//localhost:1313/post/2021-10-so-what-is-microservice-anyway/&#34;
    &gt;So, what is a Microservice, anyway?&lt;/a&gt;) I examine what a microservice really is, and I come to the conclusion that from a purely technical standpoint, a working definition could be
 as simple as this:&lt;/p&gt;
 &lt;p&gt;A microservice is a scalable and resilient module.&lt;/p&gt;
@@ -413,7 +413,7 @@ have almost come to be regarded as synonymous with statelessness. This post
 examines whether this is that in fact so, and what is the cost of doing things
 this way.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/p/about-these-papers/&#34;
+   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
    &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;If we take a step back for a moment and examine the issue from a somewhat
 distanced point of view, we notice that there is no such thing as a stateless
@@ -555,7 +555,7 @@ short-sighted because from the entire broad topic of server-initiated client
 updates it only considers the narrow case of updates being used for the sole
 purpose of on-screen notifications.&lt;/p&gt;
 &lt;p&gt;Further reading: &lt;a 
-   href=&#34;//localhost:1313/p/the-stateful-microservice/&#34;
+   href=&#34;//localhost:1313/post/2021-10-14-the-stateful-microservice/&#34;
    &gt;The Stateful Microservice&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -565,10 +565,10 @@ suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pix
         </item>
         <item>
         <title>My notes on &#34;Greg Young - The Long Sad History of Microservices&#34;</title>
-        <link>//localhost:1313/p/my-notes-on-greg-young-the-long-sad-history-of-microservices/</link>
+        <link>//localhost:1313/post/2017-10-my-notes-on-greg-young-long-sad-history/</link>
         <pubDate>Fri, 27 Oct 2017 08:32:53 +0000</pubDate>
         
-        <guid>//localhost:1313/p/my-notes-on-greg-young-the-long-sad-history-of-microservices/</guid>
+        <guid>//localhost:1313/post/2017-10-my-notes-on-greg-young-long-sad-history/</guid>
         <description>&lt;iframe allowfullscreen=&#34;&#34; class=&#34;YOUTUBE-iframe-video&#34; data-thumbnail-src=&#34;https://i.ytimg.com/vi/MjIfWe6bn40/0.jpg&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/MjIfWe6bn40?feature=player_embedded&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
 &lt;p&gt;Greg Young - The Long Sad History of Microservices&lt;/p&gt;
 &lt;p&gt;From the &amp;ldquo;Build Stuff&amp;rdquo; event of April 2017.&lt;/p&gt;
@@ -603,10 +603,10 @@ suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pix
         </item>
         <item>
         <title>Devoxx 2016 Belgium - Microservices Evolution: How to break your monolithic database by Edson Yanaga </title>
-        <link>//localhost:1313/p/devoxx-2016-belgium-microservices-evolution-how-to-break-your-monolithic-database-by-edson-yanaga/</link>
+        <link>//localhost:1313/post/2017-05-devoxx-2016-belgium-microservices/</link>
         <pubDate>Thu, 18 May 2017 19:08:00 +0000</pubDate>
         
-        <guid>//localhost:1313/p/devoxx-2016-belgium-microservices-evolution-how-to-break-your-monolithic-database-by-edson-yanaga/</guid>
+        <guid>//localhost:1313/post/2017-05-devoxx-2016-belgium-microservices/</guid>
         <description>&lt;p&gt;My notes on Devoxx 2016 Belgium - Microservices Evolution: How to break your monolithic database by Edson Yanaga (I attended this conference)&lt;/p&gt;
 &lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/6dfBd-2Oq1M&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
 &lt;p&gt;Reduce maintenance window&lt;/p&gt;
@@ -650,10 +650,10 @@ Next version: Delete the column&lt;/p&gt;
         </item>
         <item>
         <title>GOTO 2016 - Microservices at Netflix Scale: Principles, Tradeoffs &amp; Lessons Learned - R- Meshenberg </title>
-        <link>//localhost:1313/p/goto-2016-microservices-at-netflix-scale-principles-tradeoffs-lessons-learned-r-meshenberg/</link>
+        <link>//localhost:1313/post/2017-05-goto-2016-microservices-at-netflix/</link>
         <pubDate>Thu, 18 May 2017 18:20:46 +0000</pubDate>
         
-        <guid>//localhost:1313/p/goto-2016-microservices-at-netflix-scale-principles-tradeoffs-lessons-learned-r-meshenberg/</guid>
+        <guid>//localhost:1313/post/2017-05-goto-2016-microservices-at-netflix/</guid>
         <description>&lt;p&gt;My notes on GOTO 2016 - Microservices at Netflix Scale: Principles, Tradeoffs &amp;amp; Lessons Learned - R. Meshenberg&lt;/p&gt;
 &lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/57UK46qfBLY&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
 &lt;p&gt;They have a division making a layer of tools for other teams to build their stuff on top of it.&lt;/p&gt;
@@ -665,10 +665,10 @@ Next version: Delete the column&lt;/p&gt;
         </item>
         <item>
         <title>GOTO 2015 - DDD &amp; Microservices: At Last, Some Boundaries! - Eric Evans</title>
-        <link>//localhost:1313/p/goto-2015-ddd-microservices-at-last-some-boundaries-eric-evans/</link>
+        <link>//localhost:1313/post/2017-05-goto-2015-ddd-microservices-at-last/</link>
         <pubDate>Thu, 18 May 2017 18:19:17 +0000</pubDate>
         
-        <guid>//localhost:1313/p/goto-2015-ddd-microservices-at-last-some-boundaries-eric-evans/</guid>
+        <guid>//localhost:1313/post/2017-05-goto-2015-ddd-microservices-at-last/</guid>
         <description>&lt;p&gt;My notes on GOTO 2015 - DDD &amp;amp; Microservices: At Last, Some Boundaries! - Eric Evans&lt;/p&gt;
 &lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/yPvef9R3k-M&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
 &lt;p&gt;Microservices and Netflix - what is the connection?&lt;/p&gt;
@@ -678,10 +678,10 @@ Next version: Delete the column&lt;/p&gt;
         </item>
         <item>
         <title>GΟΤΟ 2014 - Microservices - Martin Fowler</title>
-        <link>//localhost:1313/p/g%CE%BF%CF%84%CE%BF-2014-microservices-martin-fowler/</link>
+        <link>//localhost:1313/post/2017-05-g-2014-microservices-martin-fowler/</link>
         <pubDate>Thu, 18 May 2017 18:14:12 +0000</pubDate>
         
-        <guid>//localhost:1313/p/g%CE%BF%CF%84%CE%BF-2014-microservices-martin-fowler/</guid>
+        <guid>//localhost:1313/post/2017-05-g-2014-microservices-martin-fowler/</guid>
         <description>&lt;p&gt;My notes on GΟΤΟ 2014 - Microservices - Martin Fowler&lt;/p&gt;
 &lt;iframe allowfullscreen=&#34;&#34; frameborder=&#34;0&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/wgdBVIX9ifA&#34; width=&#34;560&#34;&gt;&lt;/iframe&gt;
 &lt;p&gt;Characteristics of Microservices&lt;/p&gt;

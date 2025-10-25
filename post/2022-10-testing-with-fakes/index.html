@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Abstract What are fakes, what are their benefits, and why they are incontestably preferable over mocks. Also, how to create fakes if needed.\nIntroduction ">
+<title>Testing with Fakes instead of Mocks</title>
+
+<link rel='canonical' href='//localhost:1313/post/2022-10-testing-with-fakes/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Testing with Fakes instead of Mocks">
+<meta property='og:description' content=" Abstract What are fakes, what are their benefits, and why they are incontestably preferable over mocks. Also, how to create fakes if needed.\nIntroduction ">
+<meta property='og:url' content='//localhost:1313/post/2022-10-testing-with-fakes/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-architecture' /><meta property='article:tag' content='testing' /><meta property='article:tag' content='software-engineering' /><meta property='article:published_time' content='2022-12-30T14:01:26&#43;00:00'/><meta property='article:modified_time' content='2025-10-23T17:43:20&#43;02:00'/>
+<meta name="twitter:title" content="Testing with Fakes instead of Mocks">
+<meta name="twitter:description" content=" Abstract What are fakes, what are their benefits, and why they are incontestably preferable over mocks. Also, how to create fakes if needed.\nIntroduction ">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#abstract">Abstract</a>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+      </ol>
+    </li>
+    <li><a href="#what-are-fakes">What are fakes</a></li>
+    <li><a href="#benefits-of-fakes">Benefits of fakes</a></li>
+    <li><a href="#creating-fakes-of-our-own-components">Creating fakes of our own components</a></li>
+    <li><a href="#creating-fakes-of-external-components">Creating fakes of external components</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2022-10-testing-with-fakes/">Testing with Fakes instead of Mocks</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2022-12-30 Fri 14:01:26 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    10 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <p><img src="/post/2022-10-testing-with-fakes/media/fake.png"
+	width="2000"
+	height="1000"
+	srcset="/post/2022-10-testing-with-fakes/media/fake_hu_94f7aa407fc2e88a.png 480w, /post/2022-10-testing-with-fakes/media/fake_hu_fbb249274ecaf5fb.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+>
+</p>
+<h3 id="abstract">Abstract
+</h3><p>What are <em>fakes</em>, what are their benefits, and why they are incontestably preferable over <em>mocks</em>. Also, how to create fakes if needed.</p>
+<h4 id="introduction">Introduction
+</h4><p>(Useful pre-reading: <a 
+   href="/post/2022-11-about-these-papers/"
+   >About these papers</a>)</p>
+<p>When testing a component it is often necessary to refrain from connecting it with the real collaborators that it would be connected with in a production environment, and instead to connect it with special substitutes of its collaborators, also known as <em>test doubles</em>, which are more suitable for testing than the real ones.</p>
+<p>One book that names and describes various kinds of test doubles is <em>xUnit Test Patterns: Refactoring Test Code</em> by Gerard Meszaros, (<a class="external" 
+   href="https://xunitpatterns.com/" target="_blank"
+   >xunitpatterns.com</a>) though I first read about them from <a class="external" 
+   href="https://martinfowler.com/bliki/TestDouble.html" target="_blank"
+   >martinfowler.com - TestDouble</a>, which refers to Meszaros as the original source.</p>
+<p>There exist a few different kinds of test doubles; by far the most commonly used kind is mocks, which, as I explain elsewhere, are a very bad idea and should be avoided like COVID-19. (See <a 
+   href="/post/2023-01-14-mocking/"
+   >If you are using mock objects you are doing it wrong</a>.) Another kind of test double, which does not suffer from the disadvantages of mocks, is <em><strong>Fake Objects</strong></em>, or simply <em><strong>fakes</strong></em>.</p>
+<h3 id="what-are-fakes">What are fakes
+</h3><p>In just one word, a fake is an emulator.</p>
+<p>In a bit more detail, a fake is a component that fully implements the interface of the real component that it substitutes, or at any rate the subset of that interface that we have a use for; it maintains state which is equivalent to the state of the real component, and based on this state it provides the full functionality of the real component, or a very convincing illusion thereof; to achieve this, it makes some compromises which either do not matter during testing, or are actually desirable during testing. Examples of such compromises are:</p>
+<ul>
+<li>
+<p>Having limited capacity.</p>
+</li>
+<li>
+<p>Not being scalable.</p>
+</li>
+<li>
+<p>Not being distributed.</p>
+</li>
+<li>
+<p>Not remembering any state from run to run.</p>
+</li>
+<li>
+<p>Pretending to interact, but not actually interacting, with the physical world.</p>
+</li>
+<li>
+<p>Generating fake data that would be unusable in a real production scenario.</p>
+<p>A fake can be more suitable for testing than the real thing in the following ways:</p>
+</li>
+<li>
+<p>By performing much better than the real thing; for example:</p>
+<ul>
+<li>by keeping state in-memory instead of persisting to the file-system.</li>
+<li>by working locally instead of over the network.</li>
+<li>by pretending that the time has come for the next timer to fire instead of having to wait for that timer to fire.</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>
+<p>By being deterministic; for example:</p>
+<ul>
+<li>by fabricating time-stamps instead of querying the system clock.</li>
+<li>by fabricating entities such as GUIDs, that would otherwise introduce randomness.</li>
+<li>by utilizing a single thread, or forcing threads to work in a lock-step fashion.</li>
+<li>etc.</li>
+</ul>
+</li>
+<li>
+<p>By avoiding undesirable interactions with the real world; for example:</p>
+<ul>
+<li>by pretending that a mass e-mail was sent instead of actually sending it.</li>
+<li>by pretending that an application-modal message box popped up, and that the user picked one of the available choices, instead of allowing an actual modal message box to block the running of tests on the developer&rsquo;s computer, or, worse yet, on some continuous build server in some data center out there.</li>
+<li>by pretending that an industrial robot made a certain movement, instead of causing an actual robot to move on a factory floor.</li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+<p>A few examples of frequently used fakes:</p>
+<ul>
+<li>Various in-memory file-system libraries exist for various platforms, which can be used in place of the actual file-systems on those platforms.</li>
+<li>HSQLDB and H2 for Java, in-memory DbContext for DotNet EntityFramework, etc. are in-memory database systems that can be used in place of actual Relational Database Management Systems when testing.</li>
+<li>EmbeddedKafka can be used in place of an actual pair of Kafka + Zookeeper instances.</li>
+<li>A pseudo-random number generator seeded with a known constant value acts as a fake of the same pseudo-random number generator seeded with a practically random value such as the current time coordinate.</li>
+</ul>
+<p>To recap:</p>
+<ul>
+<li>Fakes refrain from performing the actual operations that the real thing would perform, (e.g. when a file is created while using an in-memory file-system, no file gets created on disk,) but:</li>
+<li>They do go through all the motions, (e.g. attempting to create a file using an invalid filename will cause an error just as in a real file-system,) and:</li>
+<li>They do maintain the same state, (e.g. reading a file from an in-memory file-system will yield the exact same data that were previously written to
+it,) so:</li>
+<li>They do fully behave as if the operations were actually performed as far as the component-under-test is concerned, while:</li>
+<li>The compromises that they make in order to achieve this are inconsequential or even desirable when testing. (e.g. during a test run it does not matter if files created during a previous test run do not exist anymore, and as a matter of fact it is better if they do not exist.)</li>
+</ul>
+<p>Note that the terminology is a bit unfortunate: fakes are not nearly as fake as mocks.</p>
+<ul>
+<li>Mocks are the ultimate in fakery because:
+<ul>
+<li>They only respond to invocations that we prescribe in each test, based on our assumptions as to how the component-under-test would invoke the real thing.</li>
+<li>They maintain no state.</li>
+<li>They contain no functionality.</li>
+<li>They only return results that we prefabricate in each test, based on our assumptions as to how the real thing would respond.</li>
+</ul>
+</li>
+<li>Fakes are not quite as fake as their name suggests, because:
+<ul>
+<li>They expose the same interface as the real thing.</li>
+<li>They maintain an equivalent state as the real thing.</li>
+<li>They implement equivalent functionality as the real thing.</li>
+<li>They return the exact same results as the real thing.</li>
+</ul>
+</li>
+</ul>
+<h3 id="benefits-of-fakes">Benefits of fakes
+</h3><ul>
+<li><strong>By using a fake instead of the real thing:</strong>
+<ul>
+<li>We achieve better performance, so that our tests run quickly.</li>
+<li>We avoid non-determinism during testing, so our tests are repeatable.</li>
+<li>We avoid undesirable interactions with the real world, so nobody gets hurt.</li>
+<li>We have less code to write, since a fake is usually simpler to set up than the real thing.</li>
+</ul>
+</li>
+<li><strong>By using a fake instead of a mock:</strong>
+<ul>
+<li>We save ourselves from having to write complicated mocking code in each test.</li>
+<li>We do not need to claim any knowledge as to how the component under test invokes its collaborators.</li>
+<li>We do not have to make assumptions about the state in which the collaborators are at any given moment.</li>
+<li>We do not have to make assumptions as to what results would be returned by each collaborator in each invocation.</li>
+</ul>
+</li>
+<li><strong>In both cases:</strong>
+<ul>
+<li>We are incorporating in our tests a collaborator which has already been tested and can be reasonably assumed to be free of defects. Thus, in the event of a test failure we can be fairly confident that the defect lies in the component-under-test, (or in the test itself,) but not in one of the collaborators, so we achieve defect localization, which is the aim of Unit Testing.</li>
+</ul>
+</li>
+</ul>
+<h3 id="creating-fakes-of-our-own-components">Creating fakes of our own components
+</h3><p>In some cases we may want to create a fake ourselves, as a substitute of one of our own components. Not only will this allow other components to start their testing as early as possible without the need for mocks, but also, a non-negligible part of the effort invested in the creation of the fake will be reusable in the creation of the real thing, while the process of creating the fake is likely to yield valuable lessons which can guide the creation of the real thing. Thus, any effort that goes into creating a fake of a certain component represents a much better investment than the effort of creating a multitude of throw-away mocks for various isolated operations on that component.</p>
+<p>One might argue that keeping a fake side-by-side with the real thing may represent a considerable additional maintenance overhead, but in my experience the overhead of doing so is nowhere near the overhead of maintaining a proliferation of mocks for the real thing.</p>
+<ul>
+<li>Each time the implementation of the real thing changes without any change to its specification, (such as, for example, when applying some refactoring, or a bug fix,) some mocks must be modified, some must even be rewritten, while the fake usually does not have to be touched at all.</li>
+<li>When the specification of the real thing changes, the mocks have to be rewritten, and the fake has to be modified, but the beauty of the fake is that it is a self-contained module which implements a known abstraction, so it is easy to maintain, whereas every single snippet of mocking code is nothing but incidental complexity, and thus hard to maintain.</li>
+<li>In either case, a single change in the real thing will generally require a single corresponding change in the fake, whereas if we are using mocks we invariably have to go changing an arbitrary number of mocking snippets scattered throughout the tests.</li>
+</ul>
+<p>Furthermore, the use of fakes instead of mocks promotes the creation of black-box tests instead of white-box tests. Once we get into the habit of writing all of our tests as black-box tests, new possibilities open up which greatly ease the development of fakes: we can now write a test for a certain module, and then reuse that test in order to test its fake. The test can be reused because it is a black-box test, so it does not care how the module works internally, therefore it can test the real thing just as well as the fake of the real thing. Once we run the test on the real thing, we run the same test on the fake, and if both pass, then from that moment on we can continue using the fake in place of the real thing in all other tests.</p>
+<p>The tests that exercise the real thing will be slow, but the real thing does not change very often, (if ever,) so here is where a testing tool like Testana shines: by using Testana we ensure that the tests exercising the real thing will only run in the rare event that the real thing actually changes. For more information about Testana, see <a 
+   href="/post/2024-10-testana/"
+   >Testana: A better way of running tests</a>.</p>
+<h3 id="creating-fakes-of-external-components">Creating fakes of external components
+</h3><p>If we are using an external component for which no fake is available, we may wish to create a fake for it ourselves. First, we write a test suite which exercises the external component, not really looking for defects in it, but instead using its behavior as reference for writing the tests. Once we have built our test suite to specifically pass the behavior of the external component, we can reuse it against the fake, and if it also passes, then we have sufficient reasons to believe that the behavior of the fake matches the behavior of the external component. A similar technique is described by Martin Fowler in his <a class="external" 
+   href="https://martinfowler.com/bliki/ContractTest.html" target="_blank"
+   >Contract Test</a> post.</p>
+<p>In an ideal world where everyone would be practicing Black-Box testing, we should even be able to obtain from the creators of the external component the test suite that they have already built for testing their creation, and use it to test our fake.</p>
+<p>In an even more ideal world, anyone who develops a component for others to use would be shipping it together with its fake, so that nobody needs to get dirty with its test suite.</p>
+<h3 id="conclusion">Conclusion
+</h3><p>Despite widespread practices in the industry, fakes are the preferred alternative to mocks. Even though they might at first seem laborious, they are actually very convenient to use, and on the long run far less expensive than mocks.</p>
+<hr>
+<p>Cover image: fake moustache by michael.gr based on <a class="external" 
+   href="https://thenounproject.com/icon/fake-mustache-31744/" target="_blank"
+   >art by Claire Jones from the Noun Project</a>.</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-architecture/">Software-Architecture</a>
+        
+            <a href="/tags/testing/">Testing</a>
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-23 Thu 17:43:20 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/post/2025-04-the-confusion-about-term-unit-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The confusion about the term Unit Testing</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2024-03-codecoverage/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Artificial Code Coverage</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2023-01-14-mocking/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">If you are using mock objects you are doing it wrong</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2023-01-06-collaboration-monitoring/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Collaboration Monitoring</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2022-10-incremental-integration-testing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Incremental Integration Testing</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

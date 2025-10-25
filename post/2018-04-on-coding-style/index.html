@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Foreword In my career I have experimented a lot with coding styles, mostly on pet projects at home, but also in workplaces where each developer was free to code in whatever way they pleased, or in workplaces where I was the only developer.\nMy experimentation has been in the direction of achieving maximum objective clarity and readability, disregarding convention, custom, precedent, and the shock factor: the fact that a particular style element might be alien to others plays very little role in my evaluation of the objective merits of the element.\n">
+<title>My Very Own™ Coding Style</title>
+
+<link rel='canonical' href='//localhost:1313/post/2018-04-on-coding-style/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="My Very Own™ Coding Style">
+<meta property='og:description' content="Foreword In my career I have experimented a lot with coding styles, mostly on pet projects at home, but also in workplaces where each developer was free to code in whatever way they pleased, or in workplaces where I was the only developer.\nMy experimentation has been in the direction of achieving maximum objective clarity and readability, disregarding convention, custom, precedent, and the shock factor: the fact that a particular style element might be alien to others plays very little role in my evaluation of the objective merits of the element.\n">
+<meta property='og:url' content='//localhost:1313/post/2018-04-on-coding-style/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:published_time' content='2018-04-05T17:29:00&#43;00:00'/><meta property='article:modified_time' content='2025-10-13T22:04:50&#43;02:00'/>
+<meta name="twitter:title" content="My Very Own™ Coding Style">
+<meta name="twitter:description" content="Foreword In my career I have experimented a lot with coding styles, mostly on pet projects at home, but also in workplaces where each developer was free to code in whatever way they pleased, or in workplaces where I was the only developer.\nMy experimentation has been in the direction of achieving maximum objective clarity and readability, disregarding convention, custom, precedent, and the shock factor: the fact that a particular style element might be alien to others plays very little role in my evaluation of the objective merits of the element.\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#foreword">Foreword</a></li>
+    <li><a href="#my-very-own-coding-style">My Very Own™ Coding Style</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2018-04-on-coding-style/">My Very Own™ Coding Style</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2018-04-05 Thu 17:29:00 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    12 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <h3 id="foreword">Foreword
+</h3><p>In my career I have experimented a lot with coding styles, mostly on pet projects at home, but also in workplaces where each developer was free to code in whatever way they pleased, or in workplaces where I was the only developer.</p>
+<p>My experimentation has been in the direction of achieving maximum objective clarity and readability, disregarding convention, custom, precedent, and the shock factor: the fact that a particular style element might be alien to others plays very little role in my evaluation of the objective merits of the element.</p>
+<p>The counter-argument (the argument in favor of following convention) says that whatever benefits might be offered by a coding style cannot possibly outweigh the benefit of presenting others with a familiar coding style. This is of course true, and that&rsquo;s why it makes sense for an organization to choose a traditional coding style. However, I am not a company; I am an individual, and my own projects are mine. Furthermore, my counter-counter-argument is that I firmly believe that tradition is a synonym for <em><strong>progress stopper</strong></em>.</p>
+<p>So, over the years I have tried many things, once even radically changing my coding style in the middle of a project. (Modern IDEs make it very easy to do so.)  Some of the things I tried I later abandoned, others I permanently adopted.</p>
+<p>So, my coding style today is the result of all this experimentation. If it looks strange to you, keep in mind that every single aspect of it has been deliberately chosen to be this way by someone who was not always coding like that, and who one day decided to start coding like that in the firm belief that this way is objectively better.</p>
+<p>In moving on with each of these changes over the years, I had to overcome my own subjective distaste of the unfamiliar, for the benefit of what I considered to be objectively better. So, if you decide to judge my coding style, please first ask yourself to what extent you are willing to overcome the same.</p>
+<h3 id="my-very-own-coding-style">My Very Own™ Coding Style
+</h3><p>I use this coding style for languages that belong to the C syntax family, for example C, C++, Java, and C#. These are languages with curly braces, a reduced set of keywords, and a moderate amount of parentheses. I hardly ever program in any other language, but when I do, I apply whatever parts of this coding style are applicable.</p>
+<ul>
+<li>Tabs vs. Spaces: <strong>Tabs</strong>
+<ul>
+<li>I use tabs for indentation, because this allows different developers to view the code with the amount of indentation that they are accustomed to, without having to reformat the code.
+<ul>
+<li>Spaces should never be used for indentation.</li>
+<li>Tabs should never be used for anything other than indentation.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Tabular formatting: <strong>No</strong>
+<ul>
+<li>Tabular formatting refers to inserting spaces within statements in consecutive lines of code to align parts of the statements into columns across those lines of code.  So, for example, in statements that are of the form <code>variable-type variable-name = initializer-expression;</code> spaces would be inserted after the variable-types to align all the variable-names in a column, and more spaces would be inserted after the variable-names to align all the equals-signs in a column.</li>
+<li>I used to be a big fan of this; however:
+<ul>
+<li>Generics make this less appealing, because most type definitions might be short, but one generic type definition might be very long, resulting in lots of seemingly unnecessary whitespace.</li>
+<li>A change in one line of code may result in re-alignment of many lines around it, and diff tools are not smart enough to account for this, so the possibility of merge conflicts skyrockets.</li>
+</ul>
+</li>
+<li>Thus, at some point my verdict became to drop tabular formatting.</li>
+</ul>
+</li>
+<li>Spaces:
+<ul>
+<li>Before or after unary operators: <strong>Never</strong></li>
+<li>Around binary operators: <strong>Always</strong></li>
+<li>Around ternary operators: <strong>Always</strong></li>
+<li>Before a comma: <strong>Never</strong></li>
+<li>After a comma: <strong>Always</strong></li>
+<li>Before opening parenthesis of function argument list: <strong>Never</strong></li>
+<li>Before opening parenthesis of flow-control keyword: <strong>Never</strong></li>
+<li>Inside parenthesized expressions: <strong>Never</strong></li>
+<li>Around parameter lists: <strong>Always</strong>
+<ul>
+<li>This means that a function call must look like this: <code>foo( a, b );</code> Note that there is a space after <code>(</code> and a space before <code>)</code>.</li>
+<li>This applies not only to function calls, but also to function declarations and to keywords that accept parameters.</li>
+<li>Parameterless functions can still be coded like this: <code>foo();</code> because the rule is carefully worded to call for spaces around parameter lists, not spaces inside parentheses. When you are invoking a parameterless function there is no parameter list, therefore no spaces.</li>
+<li>Note that although parameter lists require spaces, parenthesized expressions require no spaces, and therein lies the advantage of this pair of rules: it suddenly becomes clear which parenthesis belongs to a function call, and which parenthesis belongs to an expression. For example, passing an expression as a parameter to a function looks like this: <code>foo( a, (b + c) );</code></li>
+<li>Note that certain C# constructs like <code>typeof()</code> and <code>nameof()</code> are expressions, not functions, therefore their arguments must not be padded with spaces.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Right Margin Column: <strong>120</strong>
+<ul>
+<li>In May of 2020 Linus Torvalds declared that the number of characters per line in the Code Style of the Linux Kernel was to be increased from 80 characters to 100 characters. That&rsquo;s laughable. We have had widescreen monitors since the beginning of the century. We can easily do 120 characters. I sometimes do 160 characters.</li>
+</ul>
+</li>
+<li>Hard right margin: <strong>No</strong>
+<ul>
+<li>The right margin is not meant to be a hard limit: if a line needs to be longer, make it longer. It is fine to push uninteresting stuff off the screen horizontally in order to fit more interesting stuff inside the screen vertically.</li>
+</ul>
+</li>
+<li>New line after attributes (C#) / annotations (Java): <strong>Never</strong>
+<ul>
+<li>This may push the function definition quite a bit far to the right, and that&rsquo;s fine.</li>
+<li>If a function has lots and lots of attributes/annotations, it might look very ugly, but that&rsquo;s okay, because it happens very rarely, and when it does happen, maybe that is exactly how it should be: beautiful things should look beautiful, and ugly things should look ugly.</li>
+</ul>
+</li>
+<li>Empty lines before a block-style comment: <strong>One</strong>
+<ul>
+<li>If a block-style comment appears in code, there must always be a blank line before it.</li>
+<li>This way, we are clearly indicating that the comment refers to the following line.</li>
+</ul>
+</li>
+<li>Empty lines within functions: <strong>Zero</strong>
+<ul>
+<li>Quite often programmers like to use blank lines to visually separate pieces of code that are conceptually different. The problem is, the blank line gives no hint about the concepts involved, so it is entirely useless to anyone but the person who inserted it. If it is worth leaving a blank line, then it is worth adding a block-style comment explaining why, in which case a blank line before the comment is also necessary due to a previous rule. Better yet, move the conceptually different code into a different function, and give that function a descriptive name, so that you need neither comment nor blank line.</li>
+</ul>
+</li>
+<li>Empty lines before a function: <strong>One</strong>
+<ul>
+<li>The rule which requires a blank line before a block comment covers all the cases where a function is preceded by a block comment that describes the function. However, quite often functions have descriptive names, rendering explanatory comments unnecessary. For these cases, we mandate separating functions with a blank line.</li>
+</ul>
+</li>
+<li>Empty lines between fields: <strong>Zero</strong>
+<ul>
+<li>If you really need a blank line between two fields, you must insert a block comment.</li>
+</ul>
+</li>
+<li>Empty lines anywhere else: <strong>Zero</strong>
+<ul>
+<li>Some people have the habit of leaving one or more blank lines in various odd places according to some ad-hoc rules that exist only in their head. The problem is, it is impossible to teach such rules to an automatic reformatting tool. Therefore, there shall be no such rules. There should never be any spurious blank lines anywhere.</li>
+</ul>
+</li>
+<li>Curly braces: <strong>Allman</strong>
+<ul>
+<li>See <a class="external" 
+   href="https://en.wikipedia.org/wiki/Indent_style#Allman_style" target="_blank"
+   >http://en.wikipedia.org/wiki/Indent_style#Allman_style</a></li>
+<li>Each opening brace and each closing brace is on a separate line, the braces are at the same indentation level as the controlling statement, and the code in the block is one indentation level deeper.
+<ul>
+<li>Luckily, this is the curly brace style of C#.</li>
+<li>Unluckily, this is <em><strong>not</strong></em> the curly brace style of Java.
+<ul>
+<li>I do not care; this is my coding style even when I code in Java. The Egyptian curly brace style which is so popular in the Java world is <em><strong>absolutely retarded</strong></em>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Braces on single statement blocks: <strong>Never</strong> (unless the language requires them)
+<ul>
+<li>The &ldquo;always&rdquo; choice seems to be very popular; that&rsquo;s retarded.</li>
+<li>The &ldquo;sometimes&rdquo; choice also seems to be popular, but I strive for consistency.</li>
+<li>Note that in some languages some keywords have been introduced that require curly braces even if the controlled block consists of a single statement, for example the try-catch-finally clause in C++, Java, and C#. I greatly resent this.</li>
+</ul>
+</li>
+<li>Nesting: <strong>Always consistent*</strong>
+<ul>
+<li>Some people like writing quick one liners, for example <code>if( x ) return 0;</code> all in one line. That&rsquo;s unacceptable.</li>
+<li>Some people refrain from nesting the <code>case</code> labels in a <code>switch</code> statement, or if they do, then they refrain from nesting the code under the <code>case</code> labels. That&rsquo;s unacceptable.</li>
+<li>In C#, people quite often refrain from nesting the classes within their namespaces. That&rsquo;s unacceptable.</li>
+<li>In C#, people quite often do not nest cascaded <code>using</code> statements. That&rsquo;s unacceptable.</li>
+<li>The only case where I sometimes violate this rule, and I am not yet completely decided on how to go about it, is with single statement functions in Java, which I sometimes code in one line, not because I believe this is correct, but because I am expressing a wish that Java would offer a functional style of declaring functions the way C# does.</li>
+</ul>
+</li>
+<li>Type identifier casing: <strong>SentenceCase</strong>
+<ul>
+<li>Even if the type is private.</li>
+</ul>
+</li>
+<li>Constant identifier casing: <strong>SentenceCase</strong>
+<ul>
+<li>Even if the constant is private.</li>
+</ul>
+</li>
+<li>Private member identifier casing: <strong>camelCase</strong>
+<ul>
+<li>A very popular choice is prefixing the identifier with <code>_</code> or <code>m_</code>; that&rsquo;s unacceptable.</li>
+</ul>
+</li>
+<li>Public member identifier casing:
+<ul>
+<li>C#: <strong>SentenceCase</strong></li>
+<li>Java: <strong>camelCase</strong>
+<ul>
+<li>The camelCase choice of Java is <em><strong>retarded</strong></em>, but it would be too heretic even for me to go against it, mainly because there exist tools that use reflection to guess what methods are getters and setters, and everything goes haywire if the capitalization is not what these tools expect.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Static fields: <strong>Same as other fields</strong>
+<ul>
+<li>Note: this explicitly means that static fields must not be named differently from other fields. Some people like doing weird things like prefixing static fields with <code>s_</code>. That&rsquo;s not only mighty ugly, but also entirely unnecessary, because any half-decent IDE will color-code static fields for you.</li>
+</ul>
+</li>
+<li>Acronyms: <strong>SentenceCase</strong>
+<ul>
+<li>In other words, never use &ldquo;GUID&rdquo;; always use &ldquo;Guid&rdquo;. The acronym becomes a word, so that it can be added to the spell-checker.</li>
+<li>Speaking of spell checkers:
+<ul>
+<li>The spell-checker must always be on</li>
+<li>Every commit must pass inspection by the spell-checker</li>
+<li>The spell-checker wordlist must be committed like any other file</li>
+<li>The spell-checker wordlist must pass code review like anything else.</li>
+</ul>
+</li>
+<li>That&rsquo;s how the quality of the codebase can be protected despite contributions from people with poor command of the English language.</li>
+</ul>
+</li>
+<li>Explicit <code>this</code>: <strong>Never</strong>
+<ul>
+<li>Unless a field is receiving its value from a method or constructor parameter, in which case the parameter <em><strong>must</strong></em> have the exact same name as the field, and subsequently <code>this</code> is necessary in order to refer to the field.</li>
+</ul>
+</li>
+<li>Use of <code>var</code>: <strong>Rarely</strong>
+<ul>
+<li>Only for non-trivial types, and only when the type is obvious.</li>
+<li>Of course, you might ask, when is the type obvious? The answer is simple: the type is obvious only when the name of the type is present on the right side of the assignment.</li>
+</ul>
+</li>
+<li>Naming of files and classes: <strong>One class per file, exact same name</strong>
+<ul>
+<li>In Java this is standard, but there is one exception:
+<ul>
+<li>Java makes it impossible to access constructor parameters from field initializers. The solution to this is to pass the constructor parameter to the superclass, so that it can be stored in a protected member, so that it can be accessed by the field initializers of descendants. Quite often, we invent superclasses for no reason other than to be able to do just that. In these cases, it is okay (preferable even) if the superclass is package-private, and declared in the same file as the descendant.</li>
+</ul>
+</li>
+<li>In C# one class per file with exact same name is not standard, so it is worth stating. Again, there are a few exceptions:
+<ul>
+<li>It is okay to declare all the classes that make up a small class hierarchy in a single file, as long as the file is named after the base class of the hierarchy.</li>
+<li>It is also okay to declare trivial types like enums and delegates in the same file as the class that they conceptually belong to.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Namespace imports (C# only): <strong>Inside namespace declarations</strong>
+<ul>
+<li>Most people import their namespaces outside of their namespace declarations. This style guide mandates the opposite: namespaces <em><strong>must</strong></em> be imported <em><strong>inside</strong></em> namespace declarations. In other words, first we open our namespace, then we declare our imports, then we declare our class.</li>
+<li>This is in accordance with the <em>Principle of Smallest Scope</em>, i.e. any given thing must have the smallest scope that it can possibly have.</li>
+</ul>
+</li>
+<li>Namespace Aliases (C# only)
+<ul>
+<li>For namespaces defined in the solution: <strong>Never</strong>
+<ul>
+<li>If you have defined a namespace in your solution, then you should never need to alias it. If it conflicts with a namespace defined outside your solution, then you should alias the external namespace.</li>
+</ul>
+</li>
+<li>For namespaces defined outside of the solution: <strong>Almost always</strong>
+<ul>
+<li>I have the habit of aliasing all external namespaces so as to make it evident exactly where each type is coming from. So for example, I never do <code>using System.Text</code> and reference <code>Encoding.UTF8</code>; I always do <code>using SysText = System.Text</code> and then I reference <code>SysText.Encoding.UTF8</code>. I make an exception for namespaces <code>System</code> and <code>System.Collections.Generic</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Non-ANSI characters: <strong>Via Unicode Escape Sequences</strong>
+<ul>
+<li>That&rsquo;s because every once in a while some tool will garble non-ANSI characters by accident, and a) that&rsquo;s the kind of error that you will usually have no tests for, while b) even if there is a test, the non-ANSI character in the test might be also garbled, causing the test to pass, while it should fail.</li>
+</ul>
+</li>
+<li>Miscellaneous
+<ul>
+<li>If something <em><strong>can</strong></em> be private, it <em><strong>must</strong></em> be private.</li>
+<li>If something <em><strong>can</strong></em> be final/readonly, it <em><strong>must</strong></em> be final/readonly.</li>
+<li>If something <em><strong>can</strong></em> be final/sealed, it <em><strong>must</strong></em> be final/sealed.</li>
+<li>If something <em><strong>can</strong></em> be of a less-derived type, it <em><strong>must</strong></em> be of a less-derived type
+<ul>
+<li>Unless you want to document something important; for example, you may want to use a <code>List</code> instead of a <code>Collection</code> to indicate that order matters.</li>
+</ul>
+</li>
+<li>If a string literal <em><strong>can</strong></em> be replaced with <code>nameof</code>, it <em><strong>must</strong></em> be replaced with <code>nameof</code>.</li>
+<li>If a pair of parentheses <em><strong>can</strong></em> be omitted, it <em><strong>must</strong></em> be omitted.
+<ul>
+<li>Unless operator precedence is unclear and requires clarification.</li>
+<li>Note that this means that the expression after the <code>return</code> keyword must never be parenthesized.</li>
+</ul>
+</li>
+<li>Overriding methods must not have documentation comments. The documentation comment of an override is the documentation comment of the method it overrides.</li>
+</ul>
+</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-13 Mon 22:04:50 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

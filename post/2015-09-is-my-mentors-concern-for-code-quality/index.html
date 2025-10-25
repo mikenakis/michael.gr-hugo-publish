@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This question was asked on Programmers SE on Jun 12, 2015. I answered it, but after a few days the question was closed as primarily opinion-based and then deleted, along with all answers. Since I now have sufficient reputation to view deleted questions, I was able to find it, so I am posting the question and my answer here for posterity.\nThe Question Original link: https://programmers.stackexchange.com/questions/286508/is-my-mentors-concern-for-code-quality-excessive\nIs my mentor&rsquo;s concern for code quality excessive? \\[closed\\] Score: 75 (79 upvotes, 4 downvotes) Favorites: 28\nTo tell you a little about myself: I&rsquo;m a newbie programmer working internships and learning a lot from experienced programmers. I can&rsquo;t believe I used to think I was good in college.\nThe one I&rsquo;m doing right now is pretty great due to the amount of time and resources that the company is putting into helping and mentoring me and another intern. I&rsquo;m learning a whole lot and for the first time, I feel like I get close to being competent.\nThe only &ldquo;problem&rdquo; are the massive code quality concerns of one of my mentors. It&rsquo;s to the point that anything takes a whole lot of time because I have to find the best way to do it or else it&rsquo;s a waste of time. It also feels like my creativity doesn&rsquo;t matter because there is only one right way to do everything. I don&rsquo;t mind any of this at all but I wonder, and this is mainly what I&rsquo;m asking, if it&rsquo;s normal in the industry.\nAlso, when I get assigned a little feature and this guy reviews my code, he actually reviews the whole codebase I&rsquo;m working on, pointing out loads of mistakes, most of them from before I was even hired. I have spent this whole week fixing code (that worked) written by their full-time programmers, even some things that are best practice according to other mentors.\nTags: [javascript] [web-development] [programming-practices] [object-oriented-design]\nasked Jun 11 2015 at 18:51 by CyborgFish\nMy Answer: ">
+<title>Is my mentor&#39;s concern for code quality excessive?</title>
+
+<link rel='canonical' href='//localhost:1313/post/2015-09-is-my-mentors-concern-for-code-quality/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="Is my mentor's concern for code quality excessive?">
+<meta property='og:description' content="This question was asked on Programmers SE on Jun 12, 2015. I answered it, but after a few days the question was closed as primarily opinion-based and then deleted, along with all answers. Since I now have sufficient reputation to view deleted questions, I was able to find it, so I am posting the question and my answer here for posterity.\nThe Question Original link: https://programmers.stackexchange.com/questions/286508/is-my-mentors-concern-for-code-quality-excessive\nIs my mentor&rsquo;s concern for code quality excessive? \\[closed\\] Score: 75 (79 upvotes, 4 downvotes) Favorites: 28\nTo tell you a little about myself: I&rsquo;m a newbie programmer working internships and learning a lot from experienced programmers. I can&rsquo;t believe I used to think I was good in college.\nThe one I&rsquo;m doing right now is pretty great due to the amount of time and resources that the company is putting into helping and mentoring me and another intern. I&rsquo;m learning a whole lot and for the first time, I feel like I get close to being competent.\nThe only &ldquo;problem&rdquo; are the massive code quality concerns of one of my mentors. It&rsquo;s to the point that anything takes a whole lot of time because I have to find the best way to do it or else it&rsquo;s a waste of time. It also feels like my creativity doesn&rsquo;t matter because there is only one right way to do everything. I don&rsquo;t mind any of this at all but I wonder, and this is mainly what I&rsquo;m asking, if it&rsquo;s normal in the industry.\nAlso, when I get assigned a little feature and this guy reviews my code, he actually reviews the whole codebase I&rsquo;m working on, pointing out loads of mistakes, most of them from before I was even hired. I have spent this whole week fixing code (that worked) written by their full-time programmers, even some things that are best practice according to other mentors.\nTags: [javascript] [web-development] [programming-practices] [object-oriented-design]\nasked Jun 11 2015 at 18:51 by CyborgFish\nMy Answer: ">
+<meta property='og:url' content='//localhost:1313/post/2015-09-is-my-mentors-concern-for-code-quality/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:published_time' content='2015-09-25T21:07:12&#43;00:00'/><meta property='article:modified_time' content='2025-10-18T00:12:34&#43;02:00'/>
+<meta name="twitter:title" content="Is my mentor's concern for code quality excessive?">
+<meta name="twitter:description" content="This question was asked on Programmers SE on Jun 12, 2015. I answered it, but after a few days the question was closed as primarily opinion-based and then deleted, along with all answers. Since I now have sufficient reputation to view deleted questions, I was able to find it, so I am posting the question and my answer here for posterity.\nThe Question Original link: https://programmers.stackexchange.com/questions/286508/is-my-mentors-concern-for-code-quality-excessive\nIs my mentor&rsquo;s concern for code quality excessive? \\[closed\\] Score: 75 (79 upvotes, 4 downvotes) Favorites: 28\nTo tell you a little about myself: I&rsquo;m a newbie programmer working internships and learning a lot from experienced programmers. I can&rsquo;t believe I used to think I was good in college.\nThe one I&rsquo;m doing right now is pretty great due to the amount of time and resources that the company is putting into helping and mentoring me and another intern. I&rsquo;m learning a whole lot and for the first time, I feel like I get close to being competent.\nThe only &ldquo;problem&rdquo; are the massive code quality concerns of one of my mentors. It&rsquo;s to the point that anything takes a whole lot of time because I have to find the best way to do it or else it&rsquo;s a waste of time. It also feels like my creativity doesn&rsquo;t matter because there is only one right way to do everything. I don&rsquo;t mind any of this at all but I wonder, and this is mainly what I&rsquo;m asking, if it&rsquo;s normal in the industry.\nAlso, when I get assigned a little feature and this guy reviews my code, he actually reviews the whole codebase I&rsquo;m working on, pointing out loads of mistakes, most of them from before I was even hired. I have spent this whole week fixing code (that worked) written by their full-time programmers, even some things that are best practice according to other mentors.\nTags: [javascript] [web-development] [programming-practices] [object-oriented-design]\nasked Jun 11 2015 at 18:51 by CyborgFish\nMy Answer: ">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#the-question">The Question</a></li>
+        <li><a href="#is-my-mentors-concern-for-code-quality-excessive">Is my mentor&rsquo;s concern for code quality excessive? </a></li>
+        <li><a href="#my-answer">My Answer:</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2015-09-is-my-mentors-concern-for-code-quality/">Is my mentor&#39;s concern for code quality excessive?</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2015-09-25 Fri 21:07:12 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <p>This question was asked on Programmers SE on Jun 12, 2015. I answered it, but after a few days the question was closed as primarily opinion-based and then deleted, along with all answers. Since I now have sufficient reputation to view deleted questions, I was able to find it, so I am posting the question and my answer here for posterity.</p>
+<h4 id="the-question">The Question
+</h4><p>Original link: <a class="external" 
+   href="https://programmers.stackexchange.com/questions/286508/is-my-mentors-concern-for-code-quality-excessive" target="_blank"
+   >https://programmers.stackexchange.com/questions/286508/is-my-mentors-concern-for-code-quality-excessive</a></p>
+<blockquote>
+<h4 id="is-my-mentors-concern-for-code-quality-excessive">Is my mentor&rsquo;s concern for code quality excessive? \[closed\]
+</h4><p>Score: 75 (79 upvotes, 4 downvotes) Favorites: 28</p>
+<p>To tell you a little about myself: I&rsquo;m a newbie programmer working internships and learning a lot from experienced programmers. I can&rsquo;t believe I used to think I was good in college.</p>
+<p>The one I&rsquo;m doing right now is pretty great due to the amount of time and resources that the company is putting into helping and mentoring me and another intern. I&rsquo;m learning a whole lot and for the first time, I feel like I get close to being competent.</p>
+<p>The only &ldquo;problem&rdquo; are the massive code quality concerns of one of my mentors. It&rsquo;s to the point that anything takes a whole lot of time because I have to find the best way to do it or else it&rsquo;s a waste of time. It also feels like my creativity doesn&rsquo;t matter because there is only one right way to do everything. I don&rsquo;t mind any of this at all but I wonder, and this is mainly what I&rsquo;m asking, if it&rsquo;s normal in the industry.</p>
+<p>Also, when I get assigned a little feature and this guy reviews my code, he actually reviews the whole codebase I&rsquo;m working on, pointing out loads of mistakes, most of them from before I was even hired. I have spent this whole week fixing code (that worked) written by their full-time programmers, even some things that are best practice according to other mentors.</p>
+<p>Tags: <code>[javascript]</code> <code>[web-development]</code> <code>[programming-practices]</code> <code>[object-oriented-design]</code></p>
+<p>asked Jun 11 2015 at 18:51 by <a class="external" 
+   href="https://programmers.stackexchange.com/users/183300/cyborgfish" target="_blank"
+   >CyborgFish</a></p></blockquote>
+<h4 id="my-answer">My Answer:
+</h4><blockquote>
+<p>Let me quote from Page xxii (Foreword) of &ldquo;Clean Code&rdquo; by Robert C. Martin from Prentice Hall.</p>
+<blockquote>
+<p>Back in my days working in the Bell Labs Software Production Research organization (Production, indeed!) we had some back-of-the-envelope findings that suggested that consistent indentation style was one of the most statistically significant indicators of low bug density. We want it to be that architecture or programming language or some other high notion should be the cause of quality; as people whose supposed professionalism owes to the mastery of tools and lofty design methods, we feel insulted by the value that those factory floor machines, the coders, add through the simple consistent application of an indentation style. To quote my own book of 17 years ago, such style distinguishes excellence from mere competence.</p></blockquote>
+<p>I would like to suggest that what the author observed as &ldquo;consistent indentation style&rdquo; was most probably in fact a &ldquo;consistent coding style&rdquo;, which in turn shows <em>discipline</em>. So, is discipline important? You bet!</p>
+<p>Yes, you may be grunting now; yes this is probably a drag; but it is short-term, within less than a year you will have learned to do things correctly, and this will stay with you for decades, so it&rsquo;s actually very good.</p>
+<p>The author says it is what <strong>distinguishes <em>excellence</em> from mere <em>competence</em></strong>. So, none of this means that you are incompetent; but your mentor actually wants <em>excellence</em> from you; and that&rsquo;s something you should be glad about.</p>
+<p>Early in my career, (actually, precisely when I was fresh out of college,) I also had to work for some people who were hell bent on telling me how to do things down to the comma, and I am glad now that I went through that process back then.</p>
+<p>Also please keep in mind that your creativity will best manifest itself in building <em>designs</em>, not in formulating code. Creativity in formulating code is a synonym for disorder; creativity in designs is what all the good stuff are made of.</p></blockquote>
+<p>It is worth also including some of the comments to my answer, which were quite insightful.  Most importantly, dodgethesteamroller&rsquo;s comment is about an issue which I should have addressed: correlation vs. causality.</p>
+<blockquote>
+<p><strong>26^</strong> &ldquo;consistent indentation style was one of the most statistically significant indicators of low bug density.&rdquo; Totally true for python (: – <strong>ecoologic Jun 11 at 23:49</strong></p></blockquote>
+<blockquote>
+<p><strong>23</strong>^ However, beware Goodhart&rsquo;s law (en.wikipedia.org/wiki/Goodhart%27s_law). Once you notice that indentation is strongly correlated with good code, and argue on that basis that the code should be indented consistently in order to pass review, then typically you should expect the correlation to weaken and eventually disappear, because ill-disciplined people now learn to fix their indentation without becoming more disciplined in any other respect. –  <strong>Steve Jessop Jun 12 at 9:35</strong></p></blockquote>
+<blockquote>
+<p><strong>8</strong>^ &ldquo;Also please keep in mind that your creativity will best manifest itself in building designs, not in formulating code. Creativity in formulating code is a synonym for disorder; creativity in designs is what all the good stuff are made of.&rdquo; This :) –  <strong>TheCatWhisperer Jun 12 at 12:45</strong></p></blockquote>
+<blockquote>
+<p><strong>4</strong>^ Programming is actually quite tolerant in that respect. Creativity in chess is all at the strategic level; inventing new moves for your chess pieces is frowned upon ;) –  <strong>MSalters Jun 12 at 15:16</strong></p></blockquote>
+<blockquote>
+<p><strong>1</strong>^ @SteveJessop: Right on. Very perceptive. That quotation does nothing to improve my already low opinion of Uncle Bob and his ilk. Sounds like a classic case of correlation mistaken for causation. –  <strong>dodgethesteamroller Jun 13 at 0:33</strong></p></blockquote>
+<blockquote>
+<p>@dodgethesteamroller: in particular, you can get consistent indents just by running a linter over whatever junk some cowboy throws out. Clearly this will not reduce bug density, although I suppose it might help future maintainers avoid introducing more bugs. –  <strong>Steve Jessop Jun 13 at 0:59</strong></p></blockquote>
+<blockquote>
+<p>@SteveJessop Good, then we will move to the next offender and teach them one good practice at the time. –  <strong>Davidmh Jun 14 at 14:24</strong></p></blockquote>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-18 Sat 00:12:34 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

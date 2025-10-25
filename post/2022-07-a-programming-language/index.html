@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Abstract My thoughts and notes on how I would like a new programming language to look like.\nThe unique selling point of the language is:\nAutomatic memory reclamation without garbage collection.\nOther selling points of the language are:\nSimple and elegant. (So that it is suitable for the academia.) Expressive. (So that it is suitable for experienced programmers.) Consistent. (So that it is attractive to developer teams.) Guiding. (So that it promotes best practices.) Fast. (So that it is suitable for high performance computing.) Lean. (So that it is suitable for resource-constrained computing.) This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust.\nSummary of language characteristics ">
+<title>A Programming Language</title>
+
+<link rel='canonical' href='//localhost:1313/post/2022-07-a-programming-language/'>
+
+<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="A Programming Language">
+<meta property='og:description' content=" Abstract My thoughts and notes on how I would like a new programming language to look like.\nThe unique selling point of the language is:\nAutomatic memory reclamation without garbage collection.\nOther selling points of the language are:\nSimple and elegant. (So that it is suitable for the academia.) Expressive. (So that it is suitable for experienced programmers.) Consistent. (So that it is attractive to developer teams.) Guiding. (So that it promotes best practices.) Fast. (So that it is suitable for high performance computing.) Lean. (So that it is suitable for resource-constrained computing.) This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust.\nSummary of language characteristics ">
+<meta property='og:url' content='//localhost:1313/post/2022-07-a-programming-language/'>
+<meta property='og:site_name' content='Michael&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='programming-languages' /><meta property='article:published_time' content='2021-09-01T04:47:26&#43;00:00'/><meta property='article:modified_time' content='2025-10-23T18:09:02&#43;02:00'/>
+<meta name="twitter:title" content="A Programming Language">
+<meta name="twitter:description" content=" Abstract My thoughts and notes on how I would like a new programming language to look like.\nThe unique selling point of the language is:\nAutomatic memory reclamation without garbage collection.\nOther selling points of the language are:\nSimple and elegant. (So that it is suitable for the academia.) Expressive. (So that it is suitable for experienced programmers.) Consistent. (So that it is attractive to developer teams.) Guiding. (So that it promotes best practices.) Fast. (So that it is suitable for high performance computing.) Lean. (So that it is suitable for resource-constrained computing.) This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust.\nSummary of language characteristics ">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'TODO');
+        }
+      </script>
+    </head>
+    <body class="
+    article-page
+     article-page">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+	
+		
+			<ol class="menu" id="main-menu">
+				<li class="menu-bottom-section">
+					<ol class="menu">
+						
+							<li id="dark-mode-toggle">
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+								<span>Dark Mode</span>
+							</li>
+						
+					</ol>
+				</li>
+			</ol>
+			
+
+		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
+
+		
+		
+			
+				<figure class="site-avatar">
+					 <a href="/">
+						
+							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+						
+					</a>
+					
+				</figure>
+			
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
+            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
+        </div>
+    </header><ul class="menu-social">
+            
+                <li>
+                    <a 
+                        href='/contact-via-e-mail/'
+                        
+                        title="e-Mail"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+category: Communication
+tags: [inbox, gmail, email, envelope, message]
+version: "1.0"
+unicode: "eae5"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
+  <path d="M3 7l9 6l9 -6" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='/contact-via-whatsapp/'
+                        
+                        title="WhatsApp"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
+category: Brand
+version: "1.13"
+unicode: "ec74"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/mikenakis'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, hosting, project, programming, software, development]
+category: Brand
+version: "1.18"
+unicode: "ec1c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/mikenakis'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, website, corporation, work, business, internet]
+category: Brand
+version: "1.15"
+unicode: "ec8c"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M8 11v5" />
+  <path d="M8 8v.01" />
+  <path d="M12 16v-5" />
+  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
+  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://stackoverflow.com/users/773113/mike-nakis'
+                        target="_blank"
+                        title="Stack Overflow"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [social, media, programming, website]
+category: Brand
+version: "1.43"
+unicode: "ef58"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
+  <path d="M8 16h8" />
+  <path d="M8.322 12.582l7.956 .836" />
+  <path d="M8.787 9.168l7.826 1.664" />
+  <path d="M10.096 5.764l7.608 2.472" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/mikenakis'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <!--
+tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
+category: Brand
+version: "1.18"
+unicode: "ec27"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ul><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#abstract">Abstract</a></li>
+    <li><a href="#summary-of-language-characteristics">Summary of language characteristics</a></li>
+    <li><a href="#language-characteristics-in-detail">Language characteristics in detail</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+</header><div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/post/2022-07-a-programming-language/">A Programming Language</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2021-09-01 Wed 04:47:26 UTC</time>
+            </div>
+        
+
+        
+            <div>
+                <!--
+tags: [material, measure, time, timer, clock, sand]
+version: "1.66"
+category: System
+unicode: "f146"
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
+  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
+</svg>
+
+                <time class="article-time--reading">
+                    45 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+
+    <section class="article-content">
+    
+    
+    <p><img src="/post/2022-07-a-programming-language/media/a-programming-language-cover.jpg"
+	width="1000"
+	height="667"
+	srcset="/post/2022-07-a-programming-language/media/a-programming-language-cover_hu_d2c3b265207d8a27.jpg 480w, /post/2022-07-a-programming-language/media/a-programming-language-cover_hu_dc5e32d91246236f.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+>
+</p>
+<h3 id="abstract">Abstract
+</h3><p>My thoughts and notes on how I would like a new programming language to look like.</p>
+<p>The unique selling point of the language is:</p>
+<p>Automatic memory reclamation without garbage collection.</p>
+<p>Other selling points of the language are:</p>
+<ul>
+<li>Simple and elegant. (So that it is suitable for the academia.)</li>
+<li>Expressive. (So that it is suitable for experienced programmers.)</li>
+<li>Consistent. (So that it is attractive to developer teams.)</li>
+<li>Guiding. (So that it promotes best practices.)</li>
+<li>Fast. (So that it is suitable for high performance computing.)</li>
+<li>Lean. (So that it is suitable for resource-constrained computing.)</li>
+</ul>
+<p>This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust.</p>
+<h3 id="summary-of-language-characteristics">Summary of language characteristics
+</h3><p>(Useful pre-reading: <a 
+   href="/post/2022-11-about-these-papers/"
+   >About these papers</a>)</p>
+<p>The main goals of the language are achieved via the following characteristics:</p>
+<ul>
+<li>
+<p>For simplicity and elegance:</p>
+<ul>
+<li>Scoping by indentation instead of curly braces. (Similar to python.)</li>
+<li>Keyword-rich syntax which avoids cryptic abbreviations and symbols.</li>
+<li>Clear distinction between what is a statement and what is an expression.</li>
+<li>Automatic memory management.</li>
+</ul>
+</li>
+<li>
+<p>For expressiveness:</p>
+<ul>
+<li>Lightweight properties, user-defined operators, generics, etc.</li>
+<li>Type inference whenever possible.</li>
+<li>Explicit nullability of reference types.</li>
+<li>Full support for functional programming.</li>
+<li>Full support for imperative programming without functional Nazism.</li>
+<li>Async-transparency.</li>
+</ul>
+</li>
+<li>
+<p>For consistency:</p>
+<ul>
+<li>Extensive, mandatory, and in many cases non-suppressible, code inspections.</li>
+<li>Whenever possible, only one way of expressing any given thing.</li>
+<li>Extensive and strict formatting rules ensure all code looks the same.</li>
+<li>Reformatability spares developers from having to type code in a particular way.</li>
+</ul>
+</li>
+<li>
+<p>For performance:</p>
+<ul>
+<li>Strongly typed.</li>
+<li>Primitive value types correspond to machine words.</li>
+<li>Intermediate-code-based, Just-In-Time compiled.</li>
+<li>Fibers. (By means of async-transparency.)</li>
+</ul>
+</li>
+<li>
+<p>For leanness:</p>
+<ul>
+<li>Reference counting instead of garbage collection.</li>
+<li>Minimalistic mandatory runtime library.</li>
+<li>Separate and optional standard library.</li>
+</ul>
+</li>
+<li>
+<p>For a list of shortcomings of other languages, which this language intends to fix, see:</p>
+<ul>
+<li><a 
+   href="/post/2021-10-what-is-wrong-with-cplusplus/"
+   >What is wrong with C++</a></li>
+<li><a 
+   href="/post/2021-10-what-is-wrong-with-java/"
+   >What is wrong with Java</a></li>
+<li><a 
+   href="/post/2021-10-what-is-wrong-with-csharp/"
+   >What is wrong with C#</a></li>
+<li><a 
+   href="/post/2021-10-what-is-wrong-with-scala/"
+   >What is wrong with Scala</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="language-characteristics-in-detail">Language characteristics in detail
+</h3><ul>
+<li>
+<p>Supports reference types and value types, as C# does.</p>
+</li>
+<li>
+<p>The <code>null</code> value is valid only with explicitly nullable reference types.</p>
+<ul>
+<li>As in C# 8.0 with <code>#nullable enable</code>:
+<ul>
+<li>A non-nullable reference can be used when a nullable reference is expected.</li>
+<li>A nullable reference cannot be used when a non-nullable reference is expected,  unless:
+<ul>
+<li>the compiler knows, via data-flow analysis, that the value is not null.
+<ul>
+<li>For example, by means of an if-statement which precludes null.</li>
+</ul>
+</li>
+<li>the value is explicitly cast to non-null. (As with the &ldquo;null-forgiving&rdquo; or &ldquo;damnit&rdquo; operator in C#.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>However, unlike C#:
+<ul>
+<li>The non-null cast is also an assertion against null, so it does not just circumvent the nullability checks of the compiler, it acts as an if-statement which precludes null.</li>
+<li>Thus, a non-nullable reference can never accidentally hold null.</li>
+<li>It is illegal to apply the non-null cast on a reference that is already non-nullable.</li>
+<li>It is illegal to assign the result of the non-null-cast to a nullable reference.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Compiles into an intermediate code format. There are two possibilities:</p>
+<ol>
+<li>LLVM.</li>
+<li>A new intermediate code format called ObjectCode, which is either interpreted or further compiled into machine code by a Just-In-Time (JIT) compiler.
+<ul>
+<li>Functionally, ObjectCode is a stack machine language, just as JVM ByteCode is.</li>
+<li>ObjectCode is expressed as a hierarchical data structure.
+<ul>
+<li>A binary ObjectCode file is the result of the serializing that data structure into a binary stream. Serialization into a text stream should also be possible.</li>
+</ul>
+</li>
+<li>ObjectCode is not trying hard to look like machine language, the way JVM ByteCode does. For example:
+<ul>
+<li>Instructions have no alternative short-form versions that accomplish the same thing but with fewer bytes.</li>
+<li>There are no instructions for operations between <code>Integer</code>, <code>Real</code>, <code>Boolean</code>, etc; instead, these operations are available as methods exposed by those value types.</li>
+</ul>
+</li>
+<li>Very few instructions have knowledge of any particular data type:
+<ul>
+<li>Boolean operations have knowledge of the <code>boolean</code> type. (So that the compiler can apply short-circuit evaluation and branching.)</li>
+<li>The <code>throw</code> instruction has knowledge of the <code>Exception</code> type.</li>
+<li>The <code>switch</code> instruction has knowledge of the <code>integer</code> type.</li>
+</ul>
+</li>
+<li>No unnecessary JVM gimmicks like bytecode verification, stack verification, etc.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>Executable code is packaged into modules which correspond to C# assemblies.</p>
+<ul>
+<li>So, no myriads of class files floating around.</li>
+<li>Each class in a module has its own timestamp.</li>
+<li>When a module is being made, unchanged classes are copied verbatim from the old module instead of being recompiled, thus retaining their timestamps.</li>
+</ul>
+</li>
+<li>
+<p>For the benefit of benchmarking, the runtime environment can be <em><strong>programmatically</strong></em> instructed to JIT everything at once so that nothing gets interpreted from that moment on.</p>
+</li>
+<li>
+<p>Async-transparency and fibers.</p>
+<ul>
+<li>Looks and feels synchronous, but works asynchronously under the hood.</li>
+<li>A function can be declared as <code>async</code>; this signifies that the function works asynchronously, but nothing else changes:
+<ul>
+<li>When invoking: you call it and obtain its result just as with any other function.,</li>
+<li>When implementing: you just return a result, just like any other function.</li>
+</ul>
+</li>
+<li>When an async function is invoked, the compiler does not emit a direct invocation to the function; instead, it invokes a special InvokeAsync function of the runtime, which accepts the function to be invoked as a parameter, and returns the result returned by the function. So, it looks as if the runtime will invoke the target function, block-waiting for it to complete, and return the result. However, the runtime does the following instead:
+<ul>
+<li>starts the asynchronous operation,</li>
+<li>obtains a promise under the hood,</li>
+<li>sets aside the promise and the current stack,</li>
+<li>proceeds to do other stuff.</li>
+</ul>
+</li>
+<li>When the promise is satisfied, the runtime:
+<ul>
+<li>gets the return value from the promise,</li>
+<li>switches back to that stack,</li>
+<li>continues execution from there.</li>
+</ul>
+</li>
+<li>Note: something called &ldquo;_hyperscript&rdquo; already purports to support async-transparency; I do not know whether they switch stacks or pass promises/futures under the hood all over the place. See <a class="external" 
+   href="https://hyperscript.org/docs/#async" target="_blank"
+   >https://hyperscript.org/docs/#async</a></li>
+<li>Note: this is related to OpenJDK JEP 425: Virtual Threads. See <a class="external" 
+   href="https://openjdk.org/jeps/425" target="_blank"
+   >https://openjdk.org/jeps/425</a></li>
+<li>An abstraction of an <code>EventDriver</code> is provided, which encapsulates an event driven system. A <code>ConcreteEventDriver</code> is provided, which is a default (&ldquo;reference&rdquo;) implementation of an event-driven system.</li>
+<li>The <code>EventDriver</code> does not contain a <code>post</code> method; instead, it exposes an <code>Injector</code> interface, which does. So, code that only needs to <code>post</code> only needs to have access to an <code>Injector</code>, not to the whole <code>EventDriver</code>.</li>
+<li>Threads and thread-pools exist for interfacing with legacy systems; the preferred way of working is with fibers and fiber-pools.
+<ul>
+<li>Each fiber-pool has its own event-driver.</li>
+<li>TODO: describe exactly what a fiber is.</li>
+<li>TODO: describe how a fiber exposes a proxy for invocation from other fibers and how the proxy asserts that everything passed back and forth is either thread-safe or immutable.</li>
+</ul>
+</li>
+<li>Note that in multi-threaded execution models purity is of very limited usefulness because it does not prevent reading mutable state, so it does not avoid race conditions. However, this language makes use of fibers instead of threads, so there can be no race conditions, so purity becomes useful.</li>
+</ul>
+</li>
+<li>
+<p>Support for functional programming.</p>
+<ul>
+<li>For example:
+<ul>
+<li>Lambdas.</li>
+<li>Tuples.</li>
+<li>Everything is read-only by default.
+<ul>
+<li>The keyword <code>mutable</code> must be used to denote something which may vary. (Scala&rsquo;s <code>var</code> and <code>val</code> are too cryptic and too similar; mutability must stand out like a sore thumb.)</li>
+<li>So, the syntax for declaring a mutable local integer is:
+<ul>
+<li><code>mutable local x: integer</code></li>
+</ul>
+</li>
+<li>It is an error to declare something as <code>mutable</code> and forget to ever mutate it.</li>
+</ul>
+</li>
+<li>All interfaces are pure by default.
+<ul>
+<li>A special keyword <code>impure</code> must be used to denote an interface which is allowed to contain impure methods.</li>
+<li>It is an error to declare an interface as <code>impure</code> and forget to include any impure methods in it.</li>
+</ul>
+</li>
+<li>Methods can be either pure or impure, and this has severe implications on what they may and may not do.</li>
+<li>Most language constructs like <code>if</code>, <code>for</code>, <code>while</code>, <code>switch</code> etc. have both functional and imperative forms.
+<ul>
+<li>The functional forms must be pure; the imperative forms can be impure.</li>
+<li>The functional forms may not use flow-control keywords that would affect enclosing scopes; in other words,
+<ul>
+<li>A functional construct may not use the <code>return</code> keyword to exit the current function</li>
+<li>A functional construct may not use the <code>break</code> or <code>continue</code> keywords to exit or repeat an enclosing loop.</li>
+</ul>
+</li>
+<li>The functional forms make use of the <code>yield</code> keyword to produce values. So, the functional <code>if</code> statement is <code>if( x ) yield 5; else yield 6;</code></li>
+<li>Functional loops evaluate to <code>Enumerable</code> and each execution of <code>yield</code> produces a new element.</li>
+</ul>
+</li>
+<li>The standard library offers various monads like <code>Optional</code>, <code>Try</code>, and other common functional goodies.</li>
+<li>The standard collections support fluent constructs.
+<ul>
+<li>The functional constructs are like Scala&rsquo;s collections, which means that they are somewhat like C#&rsquo;s linq and not like Java&rsquo;s collection streams.</li>
+<li>There is no support in the standard collections for parallelization.</li>
+</ul>
+</li>
+<li>No such thing as the <code>ref</code> or <code>out</code> parameters of C#.</li>
+</ul>
+</li>
+<li>However:
+<ul>
+<li>No functional Nazism.
+<ul>
+<li>No obstacles to having mutable state, other than having to use an extra keyword here and there.</li>
+<li>A proper <code>for</code> loop.
+<ul>
+<li>Even the functional version of the <code>for</code> loop is a first-class language construct, not yet another higher order function.</li>
+<li>Thus, when single-stepping through code, you do not have to remember to use step-into instead of step-over in order to skip the header of the loop and reach the body of the loop.</li>
+</ul>
+</li>
+<li>Proper <code>break</code> and <code>continue</code> keywords.</li>
+<li>Freedom to re-assign parameters.
+<ul>
+<li>Thus making the original value inaccessible.</li>
+<li>To allow this, the <code>mutable</code> keyword must be added to the parameter.</li>
+<li>The <code>mutable</code> keyword on a parameter has no meaning for the caller of the method, and therefore does not become part of the method prototype.</li>
+</ul>
+</li>
+<li>Everything that can be accomplished functionally can also be accomplished imperatively.</li>
+</ul>
+</li>
+<li>No functional gimmicks.
+<ul>
+<li>The expression evaluated last within a function does not magically become the return value of the function without a <code>return</code> statement; <code>return</code> statements cannot simply be omitted.  Same for <code>yield</code> statements.</li>
+<li>No copy-on-mutation collections.</li>
+<li>No such thing as Scala&rsquo;s <code>Unit</code>. Two approaches are possible:
+<ul>
+<li>We maintain a clear distinction between functions and procedures, in which case <code>Unit</code> is unnecessary just as <code>void</code> is unnecessary.</li>
+<li>Everything is a function, but instead of <code>Unit</code> we stick to good old familiar <code>void</code>, which now becomes an actual data type of which there exists only one instance.
+<ul>
+<li>Normally, the instance of void should never need to be accessed, (and therefore might not even be accessible,) because it is implied when necessary. For example, the statement <code>return</code> is equivalent to <code>return void.instance</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The compiler makes a very clear distinction between statements and expressions.
+<ul>
+<li>A block scope consists of statements.</li>
+<li>Statements and expressions are not interchangeable:
+<ul>
+<li>A statement may contain expressions, but an expression may not contain statements.</li>
+<li>An expression cannot appear in place of a statement.</li>
+<li>A statement cannot appear in place of an expression. (With the possible exception of throwing an exception.)</li>
+</ul>
+</li>
+<li>Most languages allow invoking a function and ignoring its return value; we put an end to that abhorrent malpractice.</li>
+<li>When a statement is expected, and we use something which yields a value, that value must be dealt with, in order to be left with a statement and not an expression.</li>
+<li>The language might provide a mechanism for ignoring a value, (perhaps a cast to void?) but this can also be accomplished by invoking a void-returning method which accepts one parameter and just ignores it.</li>
+<li>Assignment is a statement, and it requires the use of the <code>let</code> keyword, as in <code>let a = 5;</code> unless a field or local is being declared and initialized at once, in which case the <code>let</code> keyword is omitted, as in <code>local a = 5;</code> This has some drawbacks and some benefits:
+<ul>
+<li>Drawback: We cannot initialize multiple variables in one go, as in <code>let a = b = c = 5;</code> because everything after the first <code>=</code> must be an expression. That&rsquo;s inconsequential, perhaps even arguably a benefit.</li>
+<li>Drawback: We cannot assign and compare in one go, as in <code>if( ( let a = f() ) &gt; 5 )...</code> because assignment is a statement, so it cannot be used inside an expression. That&rsquo;s inconsequential, perhaps even arguably a benefit.</li>
+<li>Benefit: since the compiler can always tell whether it is compiling a statement or an expression, it can treat certain things differently depending on whether they appear in a statement or an expression. Namely, the equals sign can now be used either in a statement, as the assignment operator, or in an expression, as the equality check operator.</li>
+<li>Thus, after so many decades, we can finally say good-bye to the inelegant double-equals (<code>==</code>) legacy of C, and start using the single equals sign for equality comparison, as it was always meant to be.</li>
+<li>The inequality operator can either stay as <code>!=</code> or become <code>&lt;&gt;</code>.</li>
+</ul>
+</li>
+<li>The prefix and postfix increment operators are problematic because they are expressions with side-effects, (they both mutate an existing value and yield a new value,) so we might disallow them, and require the use of the long form instead: <code>let x = x + 1;</code>
+<ul>
+<li>If we keep them, then they will certainly only be allowed in expressions.</li>
+<li>(You could make it a statement with <code>(void) x++;</code> but why would you?)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>We keep <code>static</code> as in Java and avoid Scala&rsquo;s inelegant companion objects.</li>
+<li>There is no support in the standard collections for parallelization.</li>
+<li>When declaring a lambda, the keyword <code>function</code> must be used.</li>
+<li>When declaring a tuple, the keyword <code>tuple</code> must be used.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Everything is private by default, unless explicitly given a higher visibility.</p>
+<ul>
+<li>Therefore, the language does not have a keyword to indicate that something is private.</li>
+<li>Note that this also applies to interface methods: if you want an interface method to be public, you have to declare it as public, otherwise it stays private and may only be invoked from other methods of the same interface.</li>
+</ul>
+</li>
+<li>
+<p>Everything is non-inheritable by default, unless explicitly declared as inheritable.</p>
+<ul>
+<li>(Except for interfaces, which are by definition inheritable.)</li>
+<li>Therefore, the language does not have a keyword to indicate that something
+is non-inheritable (sealed in C#, final in Java.)</li>
+<li>Note that this also applies to interface methods: if you want an interface
+method to be overridable, you have to declare it as overridable.</li>
+<li>This makes certain other rules unnecessary, for example we do not have to stipulate that it is an error to explicitly declare a method as non-overridable in a class which has already been declared as non-inheritable.</li>
+<li>It is an error to declare something as inheritable and fail to ever inherit from it.
+<ul>
+<li>This is enforceable because inheritance is confined within a module, so all members of an inheritance hierarchy are known during the compilation of the module.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Emphasis on purity.</p>
+<ul>
+<li>There are two ways we can go about this, and which way we will go is yet to be decided.
+<ul>
+<li>Procedures and functions
+<ul>
+<li>A method can be either a procedure or a function.</li>
+<li>A procedure:
+<ul>
+<li>Does not return anything.</li>
+<li>Is impure. (Must have at least one side-effect.)</li>
+<li>Can indicate failure only by means of throwing an exception.</li>
+</ul>
+</li>
+<li>A function:
+<ul>
+<li>Returns something.</li>
+<li>Can indicate failure either by throwing an exception or by returning
+a <code>Try</code> monad.</li>
+<li>Is pure. (Must have no side-effects.)</li>
+</ul>
+</li>
+<li>Experimental idea: the keyword <code>method</code> can be used to denote a higher order method which is either a procedure or a function depending on whether its parameter is a procedure or a function.
+<ul>
+<li>It must have a parameter declared as <code>method</code> instead of the more specific <code>procedure</code> or <code>function</code>.</li>
+<li>It may have additional parameters that are explicitly <code>function</code> or <code>procedure</code>.</li>
+<li>It must treat its parameter method as a function, meaning that when it invokes that method, it must obtain a return value from it.</li>
+<li>It can be coded as a function, meaning that it can return that value.</li>
+<li>From the point of view of the caller, it behaves either as a procedure or as a function depending on whether the caller passes a procedure or a function to its method parameter.</li>
+<li>The caller may actually pass yet another a method to it, in which case the caller is in turn a method instead of a procedure or function.</li>
+<li>Such a construct would eliminate the need to declare both a function and a procedure for each higher order operation, and at the same time avoid the inelegance of <code>Unit</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pure and impure methods
+<ul>
+<li>All methods are functions.</li>
+<li>Methods that have nothing to return must be declared to return <code>void</code>, which is equivalent to Scala&rsquo;s <code>Unit</code> in the sense that it is an actual data type of which there exists only one instance.
+<ul>
+<li>Thus, void-returning and non-void-returning functions can be treated in exactly the same way in all situations. For example:
+<ul>
+<li>From within a <code>void</code> function we can use the <code>return</code> keyword to return the result of invoking another <code>void</code> function.</li>
+</ul>
+</li>
+<li>This in turn means that a single higher order function can operate both on void-returning and non-void-returning functions.</li>
+</ul>
+</li>
+<li>Impure methods must be explicitly marked with the <code>impure</code> keyword.</li>
+<li>An impure method may return either void or non-void.</li>
+<li>A pure method must return non-void. (It would not make sense to return void, because it cannot perform any side-effects, so its sole reason of existence is to return something.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In all cases:
+<ul>
+<li>A pure method / function:
+<ul>
+<li>May not assign to any field of <code>this</code>.</li>
+<li>May not invoke any impure methods / procedures on any of its parameters, including <code>this</code>.</li>
+<li>May not escape an impure interface of any of its parameters, including <code>this</code>.
+<ul>
+<li>It is okay to escape pure interfaces, since there will be no side-effects.</li>
+</ul>
+</li>
+<li>May still declare and manipulate mutable locals, including the ability to escape mutable locals or impure interfaces thereof.</li>
+<li>It would be nice to be able to say that a pure method / function can never throw an exception; however, we cannot do that, because even a pure method / function can, for example, accidentally divide by zero.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mechanisms are provided whereby purity checks can be suppressed when necessary, in order to allow for functions which, although formally pure, may under the hood modify caches, update statistics, perform diagnostic I/O, etc.</li>
+</ul>
+</li>
+<li>
+<p>Emphasis on readability, at the expense of terseness when necessary.</p>
+<ul>
+<li>Typing is <em><strong>not</strong></em> one of the major problems faced by our profession; unreadable code is.</li>
+<li>The language should be suitable for universities to teach, so unlike Scala, it needs to have a low entry barrier.</li>
+<li>All language keywords are fully spelled out and avoid unnecessary technicalities .
+<ul>
+<li>No inelegant abbreviations like <code>fun</code>, <code>def</code>, <code>mut</code>, etc.</li>
+<li>A function is denoted by <code>function</code>. (Duh!)</li>
+<li>A field is denoted by <code>field</code>. (Duh!)</li>
+<li>A mutable field is denoted by <code>mutable field</code>. (Duh!)</li>
+<li>A local is denoted by <code>local</code>. (Duh!)</li>
+<li>A mutable local is denoted by <code>mutable local</code>. (Duh!)</li>
+<li>The Boolean type is <code>boolean</code>, not <code>bool</code>.</li>
+<li>The Integer type is <code>integer</code>, not <code>int</code>.
+<ul>
+<li>Nobody will ever have to type <code>i</code>, <code>n</code>, <code>t</code>, <code>e</code>, <code>g</code>, <code>e</code>, <code>r</code>,
+because any halfway decent code editor will give you <code>integer</code> if
+you just type <code>i</code>, hit <code>Ctrl+Space</code> to open up auto-completion,
+and then <code>Enter</code> to pick the first suggestion.</li>
+</ul>
+</li>
+<li>The Long Integer type is <code>long integer</code>, not <code>long</code>.</li>
+<li>The 64-bit IEEE floating point type is <code>real</code>, not <code>double</code>.</li>
+<li>The 32-bit IEEE floating point type is <code>short real</code>, not <code>float</code>.</li>
+</ul>
+</li>
+<li>In general, the language aims to reduce the amount of parentheses.
+<ul>
+<li>Expressions may not be parenthesized, only sub-expressions may.
+<ul>
+<li>So, the popular construct <code>return (result)</code> is not just redundant; it is actually a compiler error.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In general, the language favors words over punctuation, so:
+<ul>
+<li>Inheritance by means of <code>extends</code> and <code>implements</code> keywords as in Java instead of the <code>:</code> character of C#.</li>
+<li>Fully spelled out <code>for each a in b do</code> like C# instead of the <code>for( a : b )</code> of Java.</li>
+<li>Boolean operators are words, like Pascal and Python and unlike the
+C family.
+<ul>
+<li>i.e. the operators are <code>and</code>, <code>or</code>, and <code>not</code> instead of <code>&amp;&amp;</code>, <code>||</code>, and <code>!</code>.</li>
+</ul>
+</li>
+<li>The compiler handles boolean operators, applying operator precedence and short-circuit evaluation.</li>
+<li>The compiler maps all other operators to method calls, (observing operator precedence rules,) as follows:
+<ul>
+<li><code>a + b</code> maps to <code>a.Plus( b )</code>.</li>
+<li><code>a - b</code> maps to <code>a.Minus( b )</code>.</li>
+<li><code>a * b</code> maps to <code>a.Times( b )</code>.</li>
+<li><code>a / b</code> maps to <code>a.Per( b )</code>.</li>
+<li><code>a % b</code> maps to <code>a.Modulo( b )</code>.</li>
+<li><code>a ^ b</code> maps to <code>a.Power( b )</code>.</li>
+<li><code>a = b</code> maps to <code>a.Equals( b )</code>.</li>
+<li><code>a &amp;lt; b</code> maps to <code>a.Below( b )</code>.</li>
+<li><code>a &amp;gt; b</code> maps to <code>a.Above( b )</code>.</li>
+<li><code>a != b</code> maps to <code>not a.Equals( b )</code>. (*)</li>
+<li><code>a &amp;lt;= b</code> maps to <code>not a.Above( b )</code>. (*)</li>
+<li><code>a =&amp;gt; b</code> maps to <code>not a.Below( b )</code>. (*)</li>
+<li><code>-a</code> maps to <code>a.Negative</code>.</li>
+<li><code>~a</code> maps to <code>a.TwosComplement</code>.</li>
+<li><code>++a</code> maps to <code>a.PreIncrement()</code>.</li>
+<li><code>a++</code> maps to <code>a.PostIncrement()</code>.</li>
+</ul>
+</li>
+<li>So, when we code <code>a + b</code>, this will only compile if the type of <code>a</code> has a function called <code>Plus</code> with a parameter of the type of <code>b</code>.</li>
+<li>(*) These negations are meant to save us from having to have negative forms of the functions; I think they are okay; it remains to be seen if there are situations where this will not work. NaN comes to mind as a possible pitfall, but then again  a comparison against NaN should perhaps throw an exception.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Preference towards having only one way for any given thing.</p>
+<ul>
+<li>When multiple ways of accomplishing the same thing are conceivable, the language design tries, when possible, and when it makes sense, to make a specific choice and prohibit all other ways. For example:
+<ul>
+<li>When it is unnecessary to qualify an instance member with <code>this</code>, it is an error to qualify it.</li>
+<li>When it is unnecessary to qualify a static member with the class name, it is an error to qualify it.</li>
+<li>When the body of the &ldquo;then&rdquo; part of an <code>if</code> statement never falls through (because it ends with either a <code>return</code> or a <code>throw</code> statement) it is an error to use the <code>else</code> keyword.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Encapsulation:</p>
+<ul>
+<li>A nested scope has access to private members of the enclosing scope.</li>
+<li>The enclosing scope never has access to private members of nested scopes.
+<ul>
+<li>Note that this corrects the insanity of Java which allows an enclosing class to have access to private members of nested classes. (Duh!?)</li>
+</ul>
+</li>
+<li>When a source file declares a namespace as public, only the classes in that source file are exported.
+<ul>
+<li>This stipulation is necessary since multiple source files may declare a namespace, but only some of those source files might declare the namespace as public.</li>
+</ul>
+</li>
+<li>A module may expose interfaces, enums, records (value types), and classes. However, when a module exposes a class, what actually gets exposed is only the interface of that class, not a class itself. In other words, the language will never expose across modules the constructor of a class, nor its protected methods. This has some very interesting implications:
+<ul>
+<li>All classes participating in an inheritance hierarchy must be defined within a single module: One cannot extend a class defined in another module.</li>
+<li>All classes participating in an inheritance hierarchy are known during the compilation of the module that contains the hierarchy.
+<ul>
+<li>This allows for certain useful optimizations.</li>
+</ul>
+</li>
+<li>The creation of a new instance of a class defined in another module cannot be accomplished by invoking a constructor; it can only be accomplished via a factory method.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Memory management: Reference counting instead of garbage-collection.</p>
+<ul>
+<li>The memory model looks a lot like the memory model of Java and C#:
+<ul>
+<li>The heap consists of big chunks of memory that are allocated from the operating system at once. The runtime does its own memory management within these chunks, for efficiency.</li>
+<li>Objects are actually pointers to objects that live on the heap.</li>
+<li>Pointers cannot be manipulated as they can in C++.</li>
+<li>Value types live either in local storage or as members of other types.</li>
+<li>When necessary, value types can be treated as reference types by means of boxing.</li>
+</ul>
+</li>
+<li>Pointers are implemented as smart (shared) pointers, so that:
+<ul>
+<li>There is no need for garbage collection.</li>
+<li>There is no need for each object to have its own lock.</li>
+<li>There is no need for finalization.</li>
+<li>There are no preposterous situations like object resurrection.</li>
+<li>There are fewer sources of randomness and non-determinism in the memory layout and in the responsiveness of the code.</li>
+<li>Destruction is assured and immediate the moment an object ceases to be referenced.</li>
+<li>Destruction involves real destructors as in C++.</li>
+<li>While a destructor executes, all objects referenced by the object being destructed are guaranteed to still be present and alive. (Unlike garbage-collected languages, where finalizers have to cope with the fact that some of the referenced objects may have already been collected.)</li>
+</ul>
+</li>
+<li>The reference count is accommodated in the object itself, so smart pointers can be appreciably more lightweight than in C++.</li>
+<li>The runtime may choose to implement smart pointers using double indirection, so as to be able to perform memory defragmentation.</li>
+<li>Addressing the pitfalls of reference counting:
+<ul>
+<li>Reference counting suffers from two pitfalls:
+<ul>
+<li>Long reference chains:
+<ul>
+<li>May result in stack overflow when disposed.</li>
+</ul>
+</li>
+<li>Circular references:
+<ul>
+<li>Result in memory leaks.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>We address these pitfalls as follows:
+<ul>
+<li>Long reference chains:
+<ul>
+<li>We solve this by making destructors deliberately fail if they are ever re-entered, so that we can detect the deallocation of even the smallest chain that consists of only two nodes. The programmer can then modify their code to do one of the following:
+<ul>
+<li>Manually perform the destruction of the chain in a way that avoids recursion.</li>
+<li>Refactor things so that the objects are kept in a collection instead of forming an ad-hoc chain.</li>
+<li>Explicitly unlink and destroy the chain using the <code>delete chain</code> keyword, which works in a non-recursive way.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Circular references:
+<ul>
+<li>A debug-time-only mark-sweep checker that runs on its own thread detects leaked cyclic object graphs and warns the programmer about them. (It does not attempt to fix anything.) The programmer can then modify their code to do one of the following:
+<ul>
+<li>Break any cycles in the graph before unlinking it.</li>
+<li>Explicitly unlink and destroy the cyclic graph using the <code>delete cyclic</code> keyword, which gracefully handles cyclic object graphs.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>These means of addressing the pitfalls of reference counting are not perfect, so some extra maintenance will sometimes be required. For example, we might think that we are properly handling all cyclic object graphs, but as a result of a change somewhere, we may now discover that we have a new cyclic object graph, which we must deal with; Still, the extra trouble is expected to be rare, and it is expected to be very well worth all the trouble we save by not having to have a garbage collector.</li>
+</ul>
+</li>
+<li>Of interest: <a class="external" 
+   href="https://verdagon.dev/blog/hybrid-generational-memory" target="_blank"
+   >https://verdagon.dev/blog/hybrid-generational-memory</a></li>
+</ul>
+</li>
+<li>
+<p>Constructor syntax like Scala.</p>
+<ul>
+<li>Constructor parameters in the class header.</li>
+<li>Constructor code in the class body. (With the additional restriction that it must all appear up-front.)</li>
+<li>Additional constructors by means of static factory methods.</li>
+<li>Any constructor parameters that are referenced by methods automatically become fields so that we do not have to declare extra fields and initialize them from the parameters.</li>
+</ul>
+</li>
+<li>
+<p>Strong distinction between release runs and debug runs.</p>
+<ul>
+<li>(But not necessarily different builds; Optimization is a JIT concern.)</li>
+</ul>
+</li>
+<li>
+<p>Externally supplied constant values.</p>
+<ul>
+<li>A special type of constant can be defined, whose value is not specified in the source code, and must instead be supplied later:
+<ul>
+<li>During compilation, by means of a special parameter to the compiler, or</li>
+<li>At runtime, by means of a special parameter to the launcher.</li>
+</ul>
+</li>
+<li>These constants are better than C-style &ldquo;manifest constants&rdquo; and C#-style &ldquo;defined symbols&rdquo; because they are well defined, strongly typed, mandatory, and obey normal static immutable field rules. This means that:
+<ul>
+<li>It is possible to know the set of all external constants that must be defined in order to compile and run something.</li>
+<li>An attempt to compile or run something without supplying all external constant values will always result in an error.</li>
+<li>An attempt to supply an external constant value for a non-existent external constant will always result in an error.</li>
+<li>Each externally supplied constant value must be of the correct type expected by the constant declared in the code.</li>
+<li>When using external constants for conditional compilation, the code paths that are not selected will result in no code being generated, but must still pass compilation, so there is no danger of code rot.</li>
+<li>With some help from the loader we can write tests that exercise code under different values for runtime-supplied external constants.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Integer types:</p>
+<ul>
+<li>Fixed Integer types with explicitly defined sizes, as per C#.</li>
+<li>Flex integer types whose size is determined by the runtime according to what is most efficient for the underlying hardware architecture.
+<ul>
+<li>Each flex integer has a &ldquo;Guaranteed Width&rdquo;, which is the minimum width that this integer is guaranteed to have on any hardware architecture.
+These widths are:
+<ul>
+<li>8 bits for <code>tiny integer</code></li>
+<li>16 bits for <code>short integer</code></li>
+<li>32 bits for <code>integer</code></li>
+<li>64 bits for <code>long integer</code></li>
+</ul>
+</li>
+<li>On debug runs, the runtime checks all operations on flex integers, and if there is an overflow past the guaranteed width, a runtime exception is thrown. Thus, we ensure consistent flex integer behavior on any architecture.</li>
+<li>This corrects the narrow-mindedness of C# where <code>int</code> has been defined to be exactly 32 bits long, even on architectures with a larger machine word size. (Which is pretty much all major architectures today that 64-bit is the norm.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Full set of signed and unsigned integers as per C#, both for the fixed and flex flavors.</p>
+</li>
+<li>
+<p>Exceptions</p>
+<ul>
+<li>Lightweight exceptions that are inexpensive to throw and to catch.</li>
+<li>No such thing as the &ldquo;checked&rdquo; exceptions of Java.</li>
+<li>No extra baggage:
+<ul>
+<li>The base <code>Exception</code> class does not even have a &ldquo;message&rdquo;, let alone a
+&ldquo;localized message&rdquo;.</li>
+</ul>
+</li>
+<li>The <code>ToString()</code> method of the base <code>Exception</code> class:
+<ul>
+<li>Is not overridable.</li>
+<li>Yields a string consisting of the class name of the exception followed by the name and the string representation of the value of each one of its fields, obtained using reflection.</li>
+<li>If you want an exception to result in a human-readable error message that you can actually show to an end user, you have to accomplish this entirely by yourself. (Please make sure to do this in the end-user&rsquo;s native language, which, statistically speaking, is unlikely to be English.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Standard Collections Model</p>
+<ul>
+<li>The standard language runtime provides the following:
+<ul>
+<li>An assortment of unmodifiable collection interfaces: <code>Enumerable</code>, <code>Collection</code>, <code>List</code>, <code>Map</code>, etc.</li>
+<li><code>Enumerable</code> exposes a property for accessing the current element, and separate methods for checking whether there exist more elements and for advancing to the next element, as in C#.</li>
+<li>A <code>Collection</code> is an <code>Enumerable</code> with a length and the ability to check whether it contains a certain element, as in Java.</li>
+<li><code>Map</code> is also a collection of <code>Map.Entry</code>.
+<ul>
+<li>This is as in C#, where a <code>Dictionary</code> is a collection of <code>KeyValuePair</code>.</li>
+<li>This is unlike Java, where <code>Map</code> is not a collection, and in order to obtain the collection of entries you must invoke <code>Map.entrySet()</code>.</li>
+</ul>
+</li>
+<li>Factory methods create immutable collection classes implementing the unmodifiable collection interfaces.</li>
+<li>An assortment of &ldquo;rigid&rdquo; (i.e. mutable, but structurally immutable) interfaces which extend the unmodifiable interfaces adding methods to replace existing items but no methods to add or remove items: <code>RigidEnumerable</code>, <code>RigidCollection</code>, <code>RigidList</code>, <code>RigidMap</code>, etc.</li>
+<li>An assortment of mutable collection interfaces which extend the rigid interfaces adding add/remove/clear methods: <code>MutableEnumerable</code>, <code>MutableCollection</code>, <code>MutableList</code>, <code>MutableMap</code>, <code>Queue</code>, <code>Stack</code>, etc.</li>
+<li>A <code>MutableCollections</code> factory exposing methods that create mutable collection classes implementing the mutable collection interfaces.</li>
+<li>The <code>Values</code> collection of a mutable map returns a <code>RigidCollection</code> of map values, so that:
+<ul>
+<li>You can replace an element in this collection, which will have the side-effect of associating an existing key with a new value.</li>
+<li>You cannot add an element to this collection, which makes sense because you have no means of specifying the key that should map to the newly inserted value.</li>
+</ul>
+</li>
+<li>The method for adding an item to a collection is called &lsquo;Add&rsquo;, not &lsquo;Push&rsquo;.
+<ul>
+<li>For consistency, even the <code>Stack</code> collection exposes an <code>Add</code> method, not a <code>Push</code> method.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Collaboration between the language runtime and collections:
+<ul>
+<li>The for-each loop operates on <code>Enumerable</code>.
+<ul>
+<li>The loop variable can be reassigned, causing the current element of the Enumerable to be replaced with a new value.  In this case, the for-each loop requires a <code>RigidEnumerable</code>.</li>
+<li>A special keyword allows removing the current item, in which case the for-each loop requires a <code>MutableEnumerable</code>.</li>
+<li>Since we have proper destructors, there is no need for special handling of disposable enumerators. (Something which C# provides, but Java lacks.)</li>
+</ul>
+</li>
+<li>An array literal evaluates to an instance of <code>RigidList</code>, so the language is free from arrays, like Scala.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Heavy promotion of assertions and plenty of built-in extra error-checking on debug runs, such as:</p>
+<ul>
+<li>Arithmetic checking
+<ul>
+<li>An exception is thrown when any of the following occurs:
+<ul>
+<li>Division by zero.</li>
+<li>Fixed integral type overflow. (This can be selectively suppressed on  an individual expression basis as with the &ldquo;unchecked&rdquo; keyword of C#.)</li>
+<li>Flex integer guaranteed width overflow.</li>
+<li>(Possibly) Operations on NaNs.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Throwing Switches
+<ul>
+<li>If the switch data type is exhaustively switchable (e.g. boolean):
+<ul>
+<li>It is an error if not all cases are covered and no default case is provided.</li>
+<li>It is an error if all cases are covered and a default case is provided.</li>
+</ul>
+</li>
+<li>If the switch data type is not exhaustively switchable (e.g. integer):
+<ul>
+<li>If no default case is provided, an implicit default case is supplied by the compiler which throws an exception.</li>
+<li>This plays nicely with code coverage: no more uncoverable assertions in unreachable default clauses.</li>
+<li>If you want a switch statement with default case fall-through on a non-exhaustively switchable type, add an empty <code>default</code> case. (Duh!)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Big on warnings and errors.</p>
+<ul>
+<li>Most things traditionally thought of as warnings are errors.</li>
+<li>Most checks of the kind that IntelliJ IDEA calls &ldquo;inspections&rdquo; are built-into the language as warnings, many of them even as errors.</li>
+<li>Selective warning suppression only; no bulk suppression.
+<ul>
+<li>Warning suppression is possible only on the individual statement where the problem occurs, never on a larger scope.</li>
+</ul>
+</li>
+<li>Warnings always cause compilation to fail.
+<ul>
+<li>It is as if a &ldquo;treat warnings as errors&rdquo; option is always on and cannot be turned off.</li>
+<li>The difference between warnings and errors is <em><strong>not</strong></em> that you can ignore warnings and proceed to run; the difference is that a warning can be suppressed, whereas an error cannot.</li>
+<li>Furthermore, the language designates a message as a warning or an error based <em><strong>not</strong></em> on its severity, but instead on whether the programmer can reasonably be required to fix it or not.
+<ul>
+<li>If it is reasonable to require the programmer to fix it, then the programmer better fix it, so there is no need to be able to suppress it, so it is an error.</li>
+<li>If it is unreasonable to require the programmer to fix it, then the programmer should be able to suppress it, so it is a warning.</li>
+</ul>
+</li>
+<li>For example:
+<ul>
+<li>If you have an unused import statement, you can very easily remove that import statement, so it is reasonable to require you to fix it. Therefore, the &ldquo;unused import&rdquo; message is an error.</li>
+<li>If you have marked something as deprecated, and yet you must still make use of it in a couple of places until the day that it gets completely removed, then you have no way of fixing this problem, therefore you must be allowed to suppress it, therefore the &ldquo;use of deprecated symbol&rdquo; message is a warning.  You will, however, have to explicitly suppress that warning on each and every usage of that symbol.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A warning suppression on a statement that does not actually produce a warning is an error.</li>
+</ul>
+</li>
+<li>
+<p>Syntax:</p>
+<ul>
+<li>Line-oriented, with scoping dictated by indentation (roughly as in Python) instead of curly braces.
+<ul>
+<li>Since it is very difficult (if not impossible) to express indentation rules in a formal grammar, this is handled by the tokenizer:
+<ul>
+<li>When the indentation increases, the tokenizer emits a hidden scope-start token.</li>
+<li>When the indentation decreases, the tokenizer emits a hidden scope-end token.</li>
+<li>The tokenizer also handles line breaking and line joining, so that the parser ends up parsing a C-style language.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>There are two types of statements: simple and compound.
+<ul>
+<li>A simple statement occupies a single line; it may contain expressions, but it may not contain any nested scopes.</li>
+<li>A compound statement begins with a simple statement as a header, and is followed by a dependent  scope.</li>
+<li>A scope contains statements, which may in turn be either simple or compound.</li>
+<li>Some constructs that normally correspond to compound statements (e.g. the <code>if</code> statement) also come in &ldquo;expression form&rdquo;.
+<ul>
+<li>The <code>for</code> loop does not have an expression form, due to the extra complexity of the multiple statements that it contains; however, the <code>for-each</code> loop does come in expression form.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Normally, each simple statement must be on a separate line.</li>
+<li>To allow joining multiple simple statements in one line, a special line-joining punctuation is used, which is the semicolon.</li>
+<li>Therefore, the semicolon is illegal at the end of a line.</li>
+<li>Normally, an entire simple statement must be contained within a single line; in other words, a simple statement may not span multiple lines.</li>
+<li>To allow splitting a simple statement into multiple lines, a special line-splitting construct is used. This construct is to be determined:
+<ul>
+<li>It may be a backslash at the end of the line that is being split into the next</li>
+<li>It may be double the amount of indentation on the next line, signifying that it belongs to the previous one.</li>
+<li>It may be both of the above.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Formatting:</p>
+<ul>
+<li>The code formatting style of the language is thoroughly and unambiguously defined by an extensive set of  rules.</li>
+<li>Some degree of freedom is allowed, but even that is unambiguously controlled by special punctuation that exists specifically for that purpose.</li>
+<li>This means that the formatting of a source file is thoroughly, accurately, and deterministically predictable from the language formatting rules and the punctuation present within the file.</li>
+<li>This in turn allows code editors that can:
+<ul>
+<li>at any moment reflow an entire source file to its proper format, or even:</li>
+<li>continuously reflow code, as it is being typed, to its proper format.</li>
+</ul>
+</li>
+<li>This in turn allows a compiler which imposes strict enforcement of the formatting rules, so that the slightest deviation, even by a single space, is a compiler error.</li>
+<li>This brings us to the following paradox:
+<ul>
+<li>Even though the formatting rules are extremely detailed,</li>
+<li>And even though the enforcement of the formatting rules is draconian,</li>
+<li>The programmer never has to worry about code formatting, because it is being taken care of automatically.</li>
+</ul>
+</li>
+<li>The benefit of all this is that all code by all programmers will always have the exact same formatting, and yet no programmer will ever have to be  bothered with having to type code in a specific way.</li>
+<li>(It will also make the language parser slightly faster.)</li>
+<li>Some indicative highlights of the formatting rules:
+<ul>
+<li>Tabs for indentation
+<ul>
+<li>The <code>tab</code> character denotes indentation, and may only appear at the beginning of a line; it is prohibited anywhere else.</li>
+<li>Only the <code>tab</code> character may be used to denote indentation; the use of anything else to denote indentation, including the space character, is an error.</li>
+<li>It is an error to have indentation in a line which is otherwise blank.</li>
+</ul>
+</li>
+<li>The language defines where a space may and may not appear.
+<ul>
+<li>When a space is expected, exactly one space must be given. (For example, right after a comma.)</li>
+<li>When zero spaces are expected, exactly zero spaces must be given. (For example, right before a comma.)</li>
+<li>Note that this prevents tabular code formatting, which is the practice of inserting spaces to column-align similar parts of consecutive statements.
+<ul>
+<li>That is okay, because tabular code formatting is a bad idea anyway, since it is a source of needless git merge conflicts.</li>
+<li>In any case, if some folks really need tabular code formatting, they can achieve it via spacing comments ( /* */ ).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The language strictly defines when and how blank lines may be used. For example:
+<ul>
+<li>There must never be two consecutive blank lines anywhere, at all, under any circumstances, for any reason, ever.</li>
+<li>There must always be exactly one blank line before a block comment. (Even a single-line block comment.)
+<ul>
+<li>If you want a comment without a blank line, then use a line comment instead of a block comment.</li>
+</ul>
+</li>
+<li>There must never be a blank line anywhere else, including:
+<ul>
+<li>Between method definitions.
+<ul>
+<li>This allows us to define whole groups of single-line methods without wasting a lot of screen real estate.</li>
+<li>If you want blank lines between method definitions, add a block comment before each method definition; thus, a blank line will be mandatory before the block comment.</li>
+</ul>
+</li>
+<li>Between lines of code.
+<ul>
+<li>Most programmers have the habit of using blank lines within method bodies, to separate logical groups of lines of code. This is bad practice, because only the programmer who wrote the code knows why those lines form a separate group and why that group should stand out from the rest.</li>
+<li>If you have multiple conceptually distinct groups of lines of code within a single method, then either:
+<ul>
+<li>Add block comments explaining what each group does, (in which case a blank line before the block comment is mandatory,)
+or</li>
+<li>Move each group into a separate function, and give the function a descriptive name.
+<ul>
+<li>The language supports functions nested within functions, so you can do this without polluting the namespace of the class.</li>
+<li>The language uses no curly braces, so you will not be wasting a lot of screen real estate in doing so.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Between class definitions.
+<ul>
+<li>This allows us to define whole groups of single-line classes without wasting a lot of screen real estate. Admittedly, single-line classes are rare, so let&rsquo;s just say that this rule exists just for consistency.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Special formatting punctuation allows overriding language default formatting rules on a case per case basis. For example:
+<ul>
+<li>A &ldquo;line splitter&rdquo; is a special punctuation character which allows  splitting a construct into multiple lines when the language formatting rules would have normally required that construct to be all in one line.
+<ul>
+<li>For example: the language formatting rule for expressions is that an expression must fit in one line; so, if an expression needs to span multiple lines, a line splitter must be used to indicate precisely at which point the expression is to break into the next line.</li>
+<li>The use of a line splitter in a place where it is not required is an error.</li>
+</ul>
+</li>
+<li>The &ldquo;line joiner&rdquo; is a special punctuation character which allows a construct to appear all in one line when the language formatting rules would have normally required that construct to be split into multiple lines.
+<ul>
+<li>For example: the language formatting rule for methods is that the body of the method must be on a separate line from the prototype. So, if a very short method needs to fit entirely in one line, a line joiner can be used to allow this.</li>
+<li>The use of a line joiner in a place where it is not required is an error.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Capitalization
+<ul>
+<li>The language is case sensitive, and capitalization matters a lot more than in other languages.</li>
+<li>Identifier casing must be one of the following:
+<ul>
+<li>lowercase</li>
+<li>SentenceCase</li>
+<li>kebab-case</li>
+<li>SentenceKebab-case</li>
+</ul>
+</li>
+<li>Note that kebab-case is possible because the language mandates spacing around operators, so there is no possibility to confuse an identifier containing a dash with the dash operator between two identifiers.</li>
+<li>The following are expressly disallowed:
+<ul>
+<li>The dash as first or last character of an identifier.</li>
+<li>camelCase.</li>
+<li>UPPERCASE and SCREAMING-KEBAB-CASE.</li>
+<li>Two or more consecutive capital letters.
+<ul>
+<li>For an explanation why, see the following section about spell-checking.</li>
+<li>Separate capital letters with dashes; for example, <code>XSpacing</code> is not allowed, but <code>X-Spacing</code> is fine.</li>
+<li>Do not use acronyms; use either:
+<ul>
+<li>fully spelled out words, i.e.. &ldquo;GraphicalUserInterfaceStyle&rdquo;, or</li>
+<li>words that replace acronyms, i.e. &ldquo;GuiStyle&rdquo;.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Underscores and all forms of snake_case. (Though an underscore alone might act as a special identifier, or special punctuation, to be determined.)
+<ul>
+<li>This is because we support kebab-case, and snake_case does not look sufficiently different from kebab-case.</li>
+<li>Kebab-case is preferable to snake_case because on most keyboards the dash is slightly easier to produce than the underscore, since it does not require Shift.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Some capitalization rules apply to language constructs and are enforced by the compiler:
+<ul>
+<li>All names of types and namespaces must start with an uppercase letter.</li>
+<li>All public and protected member names must start with an uppercase letter.</li>
+<li>All private members must start with a lowercase letter.</li>
+<li>All local and parameter names must start with a lowercase letter.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Spell Checking
+<ul>
+<li>The language comes together with a spell-checking dictionary, the contents of which are part of the language specification.</li>
+<li>A module can have a supplemental user-defined spell-checking dictionary file which:
+<ul>
+<li>Is meant to be committed to source control</li>
+<li>Is meant to undergo code review just as any other source file.</li>
+</ul>
+</li>
+<li>The compiler spell-checks source code and issues a warning if it encounters any unrecognized words.
+<ul>
+<li>Specifically, the compiler will issue a warning when any of the following fails to pass spell-check:
+<ul>
+<li>Any part of an identifier.</li>
+<li>A word inside a string literal.</li>
+<li>A word in a comment, unless it is markup referring to an identifier.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For the purpose of spell-checking, identifiers are broken into parts based on SentenceCase and kebab-case boundaries, as well as boundaries between letters and digits. This means that:
+<ul>
+<li>&ldquo;CryptoGraphy&rdquo; will not pass spell-check unless &ldquo;graphy&rdquo; has been added to the spell-checker. (It shouldn&rsquo;t; it is not an English word; use &ldquo;Cryptography&rdquo; instead.)</li>
+<li>&ldquo;Mousepointer&rdquo; will not pass spell-check unless <code>mousepointer</code> has been added to the spell-checker.  (It shouldn&rsquo;t; it is not an English word; use &ldquo;MousePointer&rdquo; instead.)</li>
+</ul>
+</li>
+<li>A warning for a misspelled identifier is issued only at the point of definition and not on each occurrence of the identifier, so that:
+<ul>
+<li>You only see the warning once, not five hundred times.</li>
+<li>There is no warning at all for identifiers that you have no control over, due to them being defined in external modules. In other words, a module does not have to duplicate the spelling dictionaries of external modules, nor does a module have to ship with its spelling dictionary.</li>
+</ul>
+</li>
+<li>Two or more consecutive capital letters are disallowed because:
+<ul>
+<li>Each individual capital letter acts as a word delimiter, so it constitutes a word by itself.</li>
+<li>To allow for single-letter variables, every individual letter passse spell-check.</li>
+<li>So, a word made of capital letters circumvents the spell-checker.</li>
+<li>The language does not allow circumventing the spell-checker.
+<ul>
+<li>(One day someone will inevitably submit a feature request for some means of disabling the spell checker; the answer they will receive is that if they do not have to use this language; there are so many other languages to choose from.)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Comments</p>
+<ul>
+<li>Special formatting within comments is achievable with the use of <code>Markdown</code> as opposed to HTML or any ad-hoc syntax.</li>
+<li>This special formatting is available in all comments, not just doc-comments.</li>
+<li>Some extensions to markdown are necessary in order to specify relationships between code.
+<ul>
+<li>For example, when defining a link, one can omit the part within the parentheses, in which case the part within the square brackets is expected to be a resolvable symbol, and the resulting link points to that symbol.</li>
+<li>The syntax for specifying the symbol requires no gimmicks like the hash-sign which is needed in Java&rsquo;s doc-comments to separate the type name from the member name.</li>
+<li>If the symbol is not fully qualified then there must be an import statement for that symbol somewhere within the source file.</li>
+<li>The use of a symbol in a comment is enough to prevent the corresponding import statement from being flagged by the compiler as unused.</li>
+</ul>
+</li>
+<li>Possibly: allow the comment that describes a parameter to be placed with the parameter itself.</li>
+</ul>
+</li>
+<li>
+<p>Inheritance</p>
+<ul>
+<li>A class may extend only one other class but implement any number of interfaces.</li>
+<li>The only difference between a class and an interface is that an interface cannot have fields, a constructor, or a destructor; in all other respects, classes and interfaces are equivalent, meaning that an interface can have
+static, public, protected, and private methods.</li>
+<li>By default, a class cannot be extended unless it is marked as <code>extensible</code>.</li>
+<li>By default, a method of a class cannot be overridden/extended unless it is marked as follows:
+<ul>
+<li>If it is abstract, it must be marked as <code>abstract</code>.</li>
+<li>If it is overridable, must be marked as <code>overridable</code>. (Duh!)
+<ul>
+<li>This corrects Java&rsquo;s exuberance of allowing any method to be overridden unless declared &ldquo;final&rdquo;, and  C#&rsquo;s unwarranted technicalism of calling such methods &ldquo;virtual&rdquo;.</li>
+</ul>
+</li>
+<li>If it is overridable with the provision that overriding methods must invoke the base method, it must be marked as <code>extensible</code>.</li>
+</ul>
+</li>
+<li>Methods that override other methods must be marked as follows:
+<ul>
+<li>A class method which implements an abstract method must be marked with <code>implements base</code>.</li>
+<li>A class method which overrides an overridable method must be marked with <code>overrides base</code>.</li>
+<li>A class method which extends an extensible method must be marked with <code>extends base</code>. Within the extending method:
+<ul>
+<li>The base method must be invoked exactly once.
+<ul>
+<li>(This can become a bit complicated with alternative execution paths, so we might want to mandate that there must be only one possible execution path at the point where the base method is invoked.)</li>
+</ul>
+</li>
+<li>The invocation of the base method can be simplified:
+<ul>
+<li>The name of the method can be replaced with <code>base</code>.</li>
+<li>The parameters can be omitted.
+<ul>
+<li>In this case the base method is invoked with the values that the parameters have at the moment of the invocation, allowing the extending method to alter the values of the parameters before invoking base.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>A class method which implements a method of an interface must be marked with <code>implements X</code>.
+<ul>
+<li>X is the interface-qualified-method-name of the method being implemented. The implementing method name may differ from the implemented method name (as long as the parameter list matches) and it will be accessible via both names.</li>
+<li>X can also be a comma-separated list of interface-qualified-function-names, if the method implements multiple interface methods of different interfaces. In this case, the method will be accessible via any of the names.</li>
+<li>Note that this corrects the stupidity of C# where no special marking is necessary for a class method that implements an interface method.</li>
+<li>Note that C# provides a syntax for optionally specifying that a class method implements a method of a particular interface, but makes the implementing methods inaccessible, which renders the feature unusable.</li>
+</ul>
+</li>
+<li>Note that a class method may both override a superclass method and implement interface methods by adding both <code>overrides</code> and <code>implements</code>.</li>
+<li>A class method does not automatically become overridable or extensible by virtue of implementing, overriding, or extending another method; it must in turn be marked as overridable or extensible if that is the intention.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Built-in Intertwine.</p>
+</li>
+<li>
+<p>Built-in Domain-Oriented Programming features.</p>
+<ul>
+<li>Alternatively, look into Scala&rsquo;s implicit parameter lists.</li>
+</ul>
+</li>
+<li>
+<p>Built-in support for testing.</p>
+<ul>
+<li>Bundled Testana, see <a 
+   href="/post/2024-10-testana/"
+   >Testana: A better way of running tests</a>.</li>
+<li>Somewhat different testing semantics than JUnit:
+<ul>
+<li>The test class does not get re-instantiated prior to invoking each test method.</li>
+<li>No &lsquo;before&rsquo; method: use the test class constructor for this.</li>
+<li>No &lsquo;after&rsquo; method: use the test class destructor for this.</li>
+<li>Use of the exact same assertion facility for test code as for production code.</li>
+<li>No other test facility gimmicks like &ldquo;expect&rdquo;, &ldquo;assume&rdquo;, etc.: write the darn thing in code.</li>
+<li>Test methods are always executed in the order in which they appear in the source file.</li>
+<li>When a test class is derived from another test class, the test methods of the base class are always executed before the test methods of the derived class.</li>
+</ul>
+</li>
+<li>To enable separate testing of debug runs and release runs, assertions are always enabled for the testing code, but for the code-under-test they can be either enabled or disabled.</li>
+<li>Even though all source files that constitute a module are compiled into a single binary file,  (as per C# assemblies,) each class within that binary file comes with its own timestamp, to accommodate tools like
+Testana.</li>
+</ul>
+</li>
+<li>
+<p>(Possibly) Explicit distinction between logic classes and data classes.</p>
+<ul>
+<li>(Possibly) Built-in versioned externalization of data classes.</li>
+<li>(Possibly) Built-in data-modelling framework for the data classes.</li>
+</ul>
+</li>
+<li>
+<p>Built-in internationalization features (i.e. Unicode strings and culture-aware operations) but also full support for ANSI strings and culture-neutral operations.</p>
+</li>
+<li>
+<p>Lightweight properties, exactly like in C#, with additional compiler support for obtaining a property as a separate entity and manipulating it independently of the object that it belongs to. (Probably a value type containing a reference to the object that owns the property and a reference to the reflection object that represents the property.)</p>
+</li>
+<li>
+<p>NO compiler support for events.</p>
+</li>
+<li>
+<p>Time Coordinate Data Type</p>
+<ul>
+<li>Internally represented as a 64-bit IEEE floating point number of days since some epoch, allowing for:
+<ul>
+<li>low-precision coordinates billions of years away from the epoch</li>
+<li>femtosecond precision coordinates near the epoch.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>A special static &ldquo;this&rdquo; keyword (<code>this class</code>?) that you can use to refer to the current type in a static context without having to code the name of the type as you have to do in Java and in C#.</p>
+</li>
+<li>
+<p>Proper method literals and field literals</p>
+<ul>
+<li>No compromise like the <code>nameof()</code> of C#.</li>
+<li>For example:
+<ul>
+<li><code>Method m = method someMethod;</code> assigns to <code>m</code> the reflection method object of someMethod but causes a compiler error if someMethod has overloads.</li>
+<li><code>Method m = method someMethod(int);</code> assigns to <code>m</code> the reflection method object of a specific overload of someMethod.</li>
+<li><code>Method m = this method;</code> assigns to <code>m</code> the reflection method object of the method that is currently being compiled.</li>
+<li><code>Field f = field someField;</code> assigns to <code>f</code> the reflection field object of someField.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Source intrinsics</p>
+<ul>
+<li>A source-line intrinsic similar to the <code>__LINE__</code> macro of C and C++ or the <code>[CallerLineNumber]</code> attribute of C#.</li>
+<li>A source-file intrinsic similar to the <code>__FILE__</code> macro of C and C++ or the <code>[CallerFileName]</code> attribute of C#. Note that the source filename yielded by this intrinsic is relative to the root of the source tree, <em><strong>not</strong></em> absolute.</li>
+<li>A source-root intrinsic which yields the absolute path to the root of the source tree.</li>
+</ul>
+</li>
+<li>
+<p>Namespaces, mostly as seen in C#, but with some differences.</p>
+<ul>
+<li>You cannot just import a namespace and make everything in it accessible; instead, you have to do one of the following:
+<ul>
+<li>Import a specific name from a namespace; (like a java import statement without a wildcard;) then, you can use that one name without qualification.</li>
+<li>Import an entire namespace, but with a namespace alias, like in XML; then, you can use any name from that namespace, but each name will have to be qualified with the chosen alias.</li>
+</ul>
+</li>
+<li>Compiler-enforced conformity between directory names and namespace names, as in java, and unlike C#. (Or, as in C# with ReSharper.)</li>
+<li>Compiler-enforced conformity between source file names and class names, as in Java and unlike C#, with a couple of differences:
+<ul>
+<li>The file name of a source file may match a namespace defined in that file.</li>
+<li>The file name of a source file may match the base-most class defined in the file, but the file may also contain additional classes derived from it.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>System functionality injection</p>
+<ul>
+<li>System functionality is available strictly via interfaces.</li>
+<li>The main entry point function of a program declares in its argument list each system interface that it intends to use. Yes, this can become unwieldly; and yet that&rsquo;s how it is going to be.</li>
+<li>When about to run an application, the runtime uses reflection to discover which interfaces are needed by the entry point, and passes each one of them to it.</li>
+<li>From that moment on, user code makes sure to propagate system interfaces to all application code that needs them.</li>
+<li>This means that no system functionality is provided statically. For example:
+<ul>
+<li>The data type for expressing time coordinates does not include a static method for obtaining the current time, as in most other languages. Instead, there is a <code>SystemClock</code> interface which provides this functionality, and this interface must be obtained via <code>main()</code> and propagated to all places that need to use it.</li>
+<li>Similarly, if you want to open a file, you cannot just instantiate a file class; you have to obtain the <code>FileSystem</code> interface, and ask it to open a <code>File</code> for you.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Runtime environment:</p>
+<ul>
+<li><code>DirectoryPath</code> and <code>FilePath</code> interfaces that encapsulate file-system pathnames and filenames, so that one rarely needs to engage in string manipulation with paths.</li>
+<li>No such thing as a &ldquo;current directory&rdquo;;  All paths are absolute. When a path is constructed from a string, the absolute path is immediately computed, and the computation may take into account whatever the host
+system considers to be the &ldquo;current directory&rdquo; of the process. (So, by obtaining the <code>DirectoryPath</code> of &ldquo;.&rdquo; one can discover the current directory, but one has no way of changing it, and the runtime environment
+will never change it.)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Cover image: &ldquo;Coding Software Running On A Computer Monitor&rdquo; by Scopio from NounProject.com</p>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/software-engineering/">Software-Engineering</a>
+        
+            <a href="/tags/programming-languages/">Programming-Languages</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on 2025-10-23 Thu 18:09:02 CEST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/post/2022-12-messages-and-message-passing/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">On messages and message-passing</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2022-12-intertwine/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Intertwine</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2022-08-on-visual-programming-languages/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">On Visual Programming Languages</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2021-10-what-is-wrong-with-scala/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is wrong with Scala</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/post/2021-10-what-is-wrong-with-csharp/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What is wrong with C#</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
+    </section>
+    
+    <section class="powerby">
+        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
+        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
