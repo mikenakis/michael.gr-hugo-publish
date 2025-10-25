@@ -96,11 +96,11 @@
         <description></description>
         </item>
         <item>
-        <title>C#</title>
-        <link>//localhost:1313/tags/c%23/</link>
+        <title>Csharp</title>
+        <link>//localhost:1313/tags/csharp/</link>
         <pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate>
         
-        <guid>//localhost:1313/tags/c%23/</guid>
+        <guid>//localhost:1313/tags/csharp/</guid>
         <description></description>
         </item>
         <item>
@@ -120,7 +120,7 @@
         <description></description>
         </item>
         <item>
-        <title>DotNet</title>
+        <title>Dotnet</title>
         <link>//localhost:1313/tags/dotnet/</link>
         <pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate>
         
@@ -128,7 +128,7 @@
         <description></description>
         </item>
         <item>
-        <title>MSBuild</title>
+        <title>Msbuild</title>
         <link>//localhost:1313/tags/msbuild/</link>
         <pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate>
         
@@ -365,14 +365,6 @@
         <pubDate>Mon, 29 Dec 2014 23:32:57 +0000</pubDate>
         
         <guid>//localhost:1313/tags/movies/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>C#-Bloopers</title>
-        <link>//localhost:1313/tags/c%23-bloopers/</link>
-        <pubDate>Fri, 04 Jan 2013 11:51:30 +0000</pubDate>
-        
-        <guid>//localhost:1313/tags/c%23-bloopers/</guid>
         <description></description>
         </item>
         <item>

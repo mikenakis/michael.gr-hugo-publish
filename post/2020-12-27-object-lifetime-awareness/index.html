@@ -771,116 +771,247 @@ unicode: "f146"
 <li>The lifeguard is designed in such a way that on release runs it contains no state and performs no action; therefore, it need not be instantiated once per lifetime-aware object; instead, it can be a singleton, and all lifetime-aware objects can receive the same reference to its one and only dummy instance. Thus, the performance cost of using the lifeguard on release runs is near zero.</li>
 </ul>
 <p>An implementation of lifeguard in C# is as follows:</p>
-<p>#nullable enable</p>
-<p>using Sys = System;</p>
-<p>using Collections = System.Collections.Generic;</p>
-<p>using System.Linq;</p>
-<p>using SysDiag = System.Diagnostics;</p>
-<p>using SysComp = System.Runtime.CompilerServices;</p>
-<p>public abstract class LifeGuard : Sys.IDisposable</p>
-<p>{</p>
-<p>public static LifeGuard Create( bool collectStackTrace = false, //</p>
-<p>[SysComp.CallerFilePath] string? callerFilePath = null, //</p>
-<p>[SysComp.CallerLineNumber] int callerLineNumber = 0 )</p>
-<p>{</p>
-<p>if( !DebugMode )</p>
-<p>return ProductionLifeGuard.Instance;</p>
-<p>Assert( callerFilePath != null );</p>
-<p>if( collectStackTrace )</p>
-<p>return new VerboseDebugLifeGuard( 1 );</p>
-<p>return new TerseDebugLifeGuard( callerFilePath!, callerLineNumber );</p>
-<p>}</p>
-<p>public abstract void Dispose();</p>
-<p>public abstract bool IsAliveAssertion();</p>
-<p>private sealed class ProductionLifeGuard : LifeGuard</p>
-<p>{</p>
-<p>public static readonly ProductionLifeGuard Instance = new ProductionLifeGuard();</p>
-<p>private ProductionLifeGuard() { } //nothing to do</p>
-<p>public override void Dispose() { } //nothing to do</p>
-<p>public override bool IsAliveAssertion()</p>
-<p>=&gt; throw new Sys.Exception(); //never invoke on a release build</p>
-<p>}</p>
-<p>private class DebugLifeGuard : LifeGuard</p>
-<p>{</p>
-<p>private bool alive = true;</p>
-<p>private readonly string message;</p>
-<p>protected DebugLifeGuard( string message )</p>
-<p>{</p>
-<p>this.message = message;</p>
-<p>}</p>
-<p>public sealed override void Dispose()</p>
-<p>{</p>
-<p>Assert( alive );</p>
-<p>alive = false;</p>
-<p>System.GC.SuppressFinalize( this );</p>
-<p>}</p>
-<p>public sealed override bool IsAliveAssertion()</p>
-<p>{</p>
-<p>Assert( alive );</p>
-<p>return true;</p>
-<p>}</p>
-<p>protected static string GetSourceInfo( string? filename, int lineNumber )</p>
-<p>=&gt; $&quot;{filename}({lineNumber})&quot;;</p>
-<p>~DebugLifeGuard()</p>
-<p>{</p>
-<p>SysDiag.Debug.WriteLine( &ldquo;Object still alive!&rdquo; );</p>
-<p>SysDiag.Debug.WriteLine( message );</p>
-<p>}</p>
-<p>public override string ToString() =&gt; alive ? &quot;&quot; : &ldquo;END-OF-LIFE&rdquo;;</p>
-<p>}</p>
-<p>private sealed class TerseDebugLifeGuard : DebugLifeGuard</p>
-<p>{</p>
-<dl>
-<dt>public TerseDebugLifeGuard( string callerFilePath, int callerLineNumber )</dt>
-<dd>
-<p>base( $&quot;    {GetSourceInfo( callerFilePath, callerLineNumber )}&quot; )</p>
-</dd>
-</dl>
-<p>{ }</p>
-<p>}</p>
-<p>private sealed class VerboseDebugLifeGuard : DebugLifeGuard</p>
-<p>{</p>
-<dl>
-<dt>public VerboseDebugLifeGuard( int framesToSkip )</dt>
-<dd>
-<p>base( buildMessage( framesToSkip + 1 ) )</p>
-</dd>
-</dl>
-<p>{ }</p>
-<p>private static string buildMessage( int framesToSkip )</p>
-<p>=&gt; string.Join( &ldquo;\r\n&rdquo;, getStackFrames( framesToSkip + 1 ) //</p>
-<p>.Select( getSourceInfoFromStackFrame ) );</p>
-<p>private static SysDiag.StackFrame[] getStackFrames( int framesToSkip )</p>
-<p>{</p>
-<p>var                  stackTrace = new SysDiag.StackTrace( framesToSkip + 1, true );</p>
-<p>SysDiag.StackFrame[] frames     = stackTrace.GetFrames()!;</p>
-<p>Sys.Type             type       = frames[0].GetMethod().DeclaringType;</p>
-<p>Assert( typeof(Sys.IDisposable).IsAssignableFrom( type ) );</p>
-<p>return frames.
-Where( f =&gt; f.GetFileName() != null ) //</p>
-<p>.ToArray();</p>
-<p>}</p>
-<p>private static string getSourceInfoFromStackFrame( SysDiag.StackFrame frame )</p>
-<p>{</p>
-<p>string sourceInfo = GetSourceInfo( frame.GetFileName(), frame.GetFileLineNumber() );</p>
-<p>return $&quot;    {sourceInfo}: {frame.GetMethod().DeclaringType}.{frame.GetMethod().Name}()&quot;;</p>
-<p>}</p>
-<p>}</p>
-<p>}</p>
-<p>Note that in theory, <code>private readonly string message</code> may have already been finalized by the time the destructor attempts to use it. In reality, I have never encountered this happening. If it becomes a problem, a simple <code>string.Intern()</code> could be used to permanently anchor these strings in memory, and that is okay despite the fact that it essentially introduces a memory leak, because it is only applicable to debug runs.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="k">namespace</span> <span class="nn">SomeNamespace</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Sys</span> <span class="p">=</span> <span class="n">System</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">Collections</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Collections</span><span class="p">.</span><span class="n">Generic</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">System.Linq</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">SysDiag</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Diagnostics</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="nn">SysComp</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Runtime</span><span class="p">.</span><span class="n">CompilerServices</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">abstract</span> <span class="k">class</span> <span class="nc">LifeGuard</span> <span class="p">:</span> <span class="n">Sys</span><span class="p">.</span><span class="n">IDisposable</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="kd">static</span> <span class="n">LifeGuard</span> <span class="n">Create</span><span class="p">(</span> <span class="kt">bool</span> <span class="n">collectStackTrace</span> <span class="p">=</span> <span class="kc">false</span><span class="p">,</span> <span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="na">		[SysComp.CallerFilePath]</span> <span class="kt">string?</span> <span class="n">callerFilePath</span> <span class="p">=</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">//</span>
+</span></span><span class="line"><span class="cl"><span class="na">		[SysComp.CallerLineNumber]</span> <span class="kt">int</span> <span class="n">callerLineNumber</span> <span class="p">=</span> <span class="m">0</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span> <span class="p">!</span><span class="n">DebugMode</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="n">ProductionLifeGuard</span><span class="p">.</span><span class="n">Instance</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">Assert</span><span class="p">(</span> <span class="n">callerFilePath</span> <span class="p">!=</span> <span class="kc">null</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">if</span><span class="p">(</span> <span class="n">collectStackTrace</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="k">new</span> <span class="n">VerboseDebugLifeGuard</span><span class="p">(</span> <span class="m">1</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="k">new</span> <span class="n">TerseDebugLifeGuard</span><span class="p">(</span> <span class="n">callerFilePath</span><span class="p">!,</span> <span class="n">callerLineNumber</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="kd">abstract</span> <span class="k">void</span> <span class="n">Dispose</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">bool</span> <span class="n">IsAliveAssertion</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kd">private</span> <span class="kd">sealed</span> <span class="k">class</span> <span class="nc">ProductionLifeGuard</span> <span class="p">:</span> <span class="n">LifeGuard</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">public</span> <span class="kd">static</span> <span class="k">readonly</span> <span class="n">ProductionLifeGuard</span> <span class="n">Instance</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ProductionLifeGuard</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">private</span> <span class="n">ProductionLifeGuard</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span> <span class="c1">//nothing to do</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">public</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Dispose</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span> <span class="c1">//nothing to do</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">public</span> <span class="kd">override</span> <span class="kt">bool</span> <span class="n">IsAliveAssertion</span><span class="p">()</span> <span class="p">=&gt;</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">Sys</span><span class="p">.</span><span class="n">Exception</span><span class="p">();</span> <span class="c1">//never invoke on a release build</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kd">private</span> <span class="k">class</span> <span class="nc">DebugLifeGuard</span> <span class="p">:</span> <span class="n">LifeGuard</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">private</span> <span class="kt">bool</span> <span class="n">alive</span> <span class="p">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">private</span> <span class="k">readonly</span> <span class="kt">string</span> <span class="n">message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kd">protected</span> <span class="n">DebugLifeGuard</span><span class="p">(</span> <span class="kt">string</span> <span class="n">message</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="k">this</span><span class="p">.</span><span class="n">message</span> <span class="p">=</span> <span class="n">message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kd">public</span> <span class="kd">sealed</span> <span class="kd">override</span> <span class="k">void</span> <span class="n">Dispose</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">Assert</span><span class="p">(</span> <span class="n">alive</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">alive</span> <span class="p">=</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">System</span><span class="p">.</span><span class="n">GC</span><span class="p">.</span><span class="n">SuppressFinalize</span><span class="p">(</span> <span class="k">this</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kd">public</span> <span class="kd">sealed</span> <span class="kd">override</span> <span class="kt">bool</span> <span class="n">IsAliveAssertion</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">Assert</span><span class="p">(</span> <span class="n">alive</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kd">protected</span> <span class="kd">static</span> <span class="kt">string</span> <span class="n">GetSourceInfo</span><span class="p">(</span> <span class="kt">string?</span> <span class="n">filename</span><span class="p">,</span> <span class="kt">int</span> <span class="n">lineNumber</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="p">=&gt;</span> <span class="s">$&#34;{filename}({lineNumber})&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="p">~</span><span class="n">DebugLifeGuard</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="n">SysDiag</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="s">&#34;Object still alive!&#34;</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">SysDiag</span><span class="p">.</span><span class="n">Debug</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span> <span class="n">message</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kd">public</span> <span class="kd">override</span> <span class="kt">string</span> <span class="n">ToString</span><span class="p">()</span> <span class="p">=&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="n">alive</span> <span class="p">?</span> <span class="s">&#34;&#34;</span> <span class="p">:</span> <span class="s">&#34;END-OF-LIFE&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kd">private</span> <span class="kd">sealed</span> <span class="k">class</span> <span class="nc">TerseDebugLifeGuard</span> <span class="p">:</span> <span class="n">DebugLifeGuard</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">public</span> <span class="n">TerseDebugLifeGuard</span><span class="p">(</span> <span class="kt">string</span> <span class="n">callerFilePath</span><span class="p">,</span> <span class="kt">int</span> <span class="n">callerLineNumber</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="p">:</span> <span class="k">base</span><span class="p">(</span> <span class="s">$&#34;    {GetSourceInfo( callerFilePath, callerLineNumber )}&#34;</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="kd">private</span> <span class="kd">sealed</span> <span class="k">class</span> <span class="nc">VerboseDebugLifeGuard</span> <span class="p">:</span> <span class="n">DebugLifeGuard</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="kd">public</span> <span class="n">VerboseDebugLifeGuard</span><span class="p">(</span> <span class="kt">int</span> <span class="n">framesToSkip</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="p">:</span> <span class="k">base</span><span class="p">(</span> <span class="n">buildMessage</span><span class="p">(</span> <span class="n">framesToSkip</span> <span class="p">+</span> <span class="m">1</span> <span class="p">)</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kd">private</span> <span class="kd">static</span> <span class="kt">string</span> <span class="n">buildMessage</span><span class="p">(</span> <span class="kt">int</span> <span class="n">framesToSkip</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">				<span class="p">=&gt;</span> <span class="kt">string</span><span class="p">.</span><span class="n">Join</span><span class="p">(</span> <span class="s">&#34;\r\n&#34;</span><span class="p">,</span> <span class="n">getStackFrames</span><span class="p">(</span> <span class="n">framesToSkip</span> <span class="p">+</span> <span class="m">1</span> <span class="p">)</span> <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">						<span class="p">.</span><span class="n">Select</span><span class="p">(</span> <span class="n">getSourceInfoFromStackFrame</span> <span class="p">)</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kd">private</span> <span class="kd">static</span> <span class="n">SysDiag</span><span class="p">.</span><span class="n">StackFrame</span><span class="p">[]</span> <span class="n">getStackFrames</span><span class="p">(</span> <span class="kt">int</span> <span class="n">framesToSkip</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="kt">var</span>                  <span class="n">stackTrace</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SysDiag</span><span class="p">.</span><span class="n">StackTrace</span><span class="p">(</span> <span class="n">framesToSkip</span> <span class="p">+</span> <span class="m">1</span><span class="p">,</span> <span class="kc">true</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="n">SysDiag</span><span class="p">.</span><span class="n">StackFrame</span><span class="p">[]</span> <span class="n">frames</span>     <span class="p">=</span> <span class="n">stackTrace</span><span class="p">.</span><span class="n">GetFrames</span><span class="p">()!;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">Sys</span><span class="p">.</span><span class="n">Type</span>             <span class="n">type</span>       <span class="p">=</span> <span class="n">frames</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">GetMethod</span><span class="p">().</span><span class="n">DeclaringType</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">			<span class="n">Assert</span><span class="p">(</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Sys</span><span class="p">.</span><span class="n">IDisposable</span><span class="p">).</span><span class="n">IsAssignableFrom</span><span class="p">(</span> <span class="n">type</span> <span class="p">)</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="n">frames</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span> <span class="n">f</span> <span class="p">=&gt;</span> <span class="n">f</span><span class="p">.</span><span class="n">GetFileName</span><span class="p">()</span> <span class="p">!=</span> <span class="kc">null</span> <span class="p">)</span> <span class="c1">//</span>
+</span></span><span class="line"><span class="cl">					<span class="p">.</span><span class="n">ToArray</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">		<span class="kd">private</span> <span class="kd">static</span> <span class="kt">string</span> <span class="n">getSourceInfoFromStackFrame</span><span class="p">(</span> <span class="n">SysDiag</span><span class="p">.</span><span class="n">StackFrame</span> <span class="n">frame</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="kt">string</span> <span class="n">sourceInfo</span> <span class="p">=</span> <span class="n">GetSourceInfo</span><span class="p">(</span> <span class="n">frame</span><span class="p">.</span><span class="n">GetFileName</span><span class="p">(),</span> <span class="n">frame</span><span class="p">.</span><span class="n">GetFileLineNumber</span><span class="p">()</span> <span class="p">);</span>
+</span></span><span class="line"><span class="cl">			<span class="k">return</span> <span class="s">$&#34;    {sourceInfo}: {frame.GetMethod().DeclaringType}.{frame.GetMethod().Name}()&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Note that in theory, <code>private readonly string message</code> may have already been finalized by the time the destructor attempts to use it. In reality, I have never encountered this happening. If it becomes a problem, a simple <code>string.Intern()</code> could be used to permanently anchor these strings in memory, and that is okay despite the fact that it essentially introduces a memory leak, because it is only applicable to debug runs.</p>
 <p><code>DebugMode</code> is defined as follows:</p>
-<p>public static bool DebugMode</p>
-<p>{</p>
-<p>get</p>
-<p>{</p>
-<p>#if DEBUG</p>
-<p>return true;</p>
-<p>#else</p>
-<p>return false;</p>
-<p>#endif</p>
-<p>}</p>
-<p>}</p>
-<p>This allows us to minimize the use of <code>#if DEBUG</code>, which is ugly and cumbersome, and often results in code rot in the <code>#endif</code> part, which is only discoverable when trying to compile the release build.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-CSharp" data-lang="CSharp"><span class="line"><span class="cl"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">bool</span> <span class="n">DebugMode</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">get</span>
+</span></span><span class="line"><span class="cl">	<span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#if</span> <span class="n">DEBUG</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#else</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="cp">#endif</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>This allows us to minimize the use of <code>#if DEBUG</code>, which is ugly and cumbersome, and often results in code rot in the <code>#endif</code> part, which is only discoverable when trying to compile the release build.</p>
 <h4 id="addendum-ad-hoc-alive-states">Addendum: Ad-hoc alive states
 </h4><p>Object lifetime awareness comes with a piece of advice:</p>
 <blockquote>
