@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
-        <lastBuildDate>Thu, 23 Oct 2025 22:45:18 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Oct 2025 10:19:02 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/software-architecture/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The perils of whiteboards</title>
         <link>//localhost:1313/p/the-perils-of-whiteboards/</link>
         <pubDate>Thu, 28 Aug 2025 08:46:25 +0000</pubDate>
@@ -4300,13 +4300,13 @@ may exist when a certain instability is detected, so even the original sense ref
 &lt;p&gt;Things become even more interesting when we consider Domains that are in turn Subjects of other Domains, forming a hierarchy of Domains, where at each level we have &lt;em&gt;&lt;strong&gt;SuperDomains&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;SubDomains&lt;/strong&gt;&lt;/em&gt;. In this scenario, we do not exactly have Dependency Injection going on anymore, because at each level dependencies are obtained from the level above; however, we still have Dependency Inversion, because dependencies are still not hard-coded in any way, and each Domain has control over each service that it makes available to its subjects, and may, if needed, decide which particular implementation will offer it.&lt;/p&gt;
 &lt;p&gt;The lesson to learn from this is that Dependency Injection was never a goal in and of itself; the goal has been Dependency Inversion, (avoiding hard-coded dependencies, &lt;em&gt;Dependency Independence&lt;/em&gt; if you will permit the pun,) and Dependency Injection has been a mechanism for achieving it, but the same goal can be achieved by other means, such as &lt;em&gt;&lt;strong&gt;Dependency Propagation&lt;/strong&gt;&lt;/em&gt;, which is what Domain Oriented Programming offers.&lt;/p&gt;
 &lt;h3 id=&#34;part-2-object-orientation-at-the-subsystem-level&#34;&gt;Part 2: Object Orientation at the Subsystem Level
-&lt;/h3&gt;&lt;p&gt;Domain Oriented Programming is not only about Dependency Propagation. It reflects the realization that Software being created today is immensely more complex than what it used to be almost half a century ago, when Object Oriented Programming was invented and the first Object Oriented languages were laid down.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Domain Oriented Programming is not only about Dependency Propagation. It reflects the realization that Software being created today is immensely more complex than what it used to be back when Object Oriented Programming was invented and the first Object Oriented languages were laid down, about half a century ago.&lt;/p&gt;
 &lt;p&gt;It used to be that all we needed was a means of coupling groups of functions with the data that they operate on, and that Inheritance, Encapsulation and Polymorphism were only necessary at the class-and-method level; however, as we build more elaborate software, we find ourselves more and more thinking not so much in terms of classes and methods, but in terms of subsystems and classes, or systems and subsystems. Therefore, there appears to be a need for terminology which brings Inheritance, Encapsulation and Polymorphism one level up, to the subsystem level, and by recursive application, to the entire system.&lt;/p&gt;
 &lt;p&gt;Domain Oriented Programming offers the Domain as the unit upon which to apply the principles of Object Oriented Programming.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In DOP the Domain is the principal polymorphic unit, providing an implementation for a complex interface, and instantiating subjects to polymorphically implement smaller scope interfaces.&lt;/li&gt;
-&lt;li&gt;In DOP the Domain encapsulates its subjects, hiding from the outside world their nature and lifetime.&lt;/li&gt;
-&lt;li&gt;In DOP inheritance is only utilized (if needed) among Subjects, while the Domain hides this fact from the outside world, thus perfectly realizing Josh Bloch&amp;rsquo;s maxim &amp;ldquo;Design for inheritance or else prohibit it&amp;rdquo;.&lt;/li&gt;
+&lt;li&gt;In DOP the Domain encapsulates its subjects, hiding their nature and lifetime from the outside world.&lt;/li&gt;
+&lt;li&gt;In DOP inheritance is only utilized among Subjects, while the Domain hides from the outside world the fact that it is being utilized.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;My first public mention of this concept was in &lt;a class=&#34;external&#34; 
    href=&#34;https://softwareengineering.stackexchange.com/a/304041/41811&#34; target=&#34;_blank&#34;
