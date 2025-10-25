@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Tags on Michael&#39;s Blog</title>
+        <title>tags on Michael&#39;s Blog</title>
         <link>//localhost:1313/tags/</link>
-        <description>Recent content in Tags on Michael&#39;s Blog</description>
+        <description>Recent content in tags on Michael&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
         <lastBuildDate>Fri, 24 Oct 2025 11:30:09 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Software-Engineering</title>
+        <title>software-engineering</title>
         <link>//localhost:1313/tags/software-engineering/</link>
         <pubDate>Wed, 17 Sep 2025 07:28:57 +0000</pubDate>
         
@@ -16,7 +16,7 @@
         <description></description>
         </item>
         <item>
-        <title>Papers</title>
+        <title>papers</title>
         <link>//localhost:1313/tags/papers/</link>
         <pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate>
         
@@ -24,7 +24,7 @@
         <description></description>
         </item>
         <item>
-        <title>Software-Architecture</title>
+        <title>software-architecture</title>
         <link>//localhost:1313/tags/software-architecture/</link>
         <pubDate>Thu, 28 Aug 2025 08:46:25 +0000</pubDate>
         
@@ -32,7 +32,7 @@
         <description></description>
         </item>
         <item>
-        <title>Astrophysics</title>
+        <title>astrophysics</title>
         <link>//localhost:1313/tags/astrophysics/</link>
         <pubDate>Sun, 06 Jul 2025 12:50:13 +0000</pubDate>
         
@@ -40,7 +40,7 @@
         <description></description>
         </item>
         <item>
-        <title>Cosmology</title>
+        <title>cosmology</title>
         <link>//localhost:1313/tags/cosmology/</link>
         <pubDate>Sun, 06 Jul 2025 12:50:13 +0000</pubDate>
         
@@ -48,7 +48,7 @@
         <description></description>
         </item>
         <item>
-        <title>Fringe-Theories</title>
+        <title>fringe-theories</title>
         <link>//localhost:1313/tags/fringe-theories/</link>
         <pubDate>Sun, 06 Jul 2025 12:50:13 +0000</pubDate>
         
@@ -56,7 +56,7 @@
         <description></description>
         </item>
         <item>
-        <title>Hypotheses</title>
+        <title>hypotheses</title>
         <link>//localhost:1313/tags/hypotheses/</link>
         <pubDate>Sun, 06 Jul 2025 12:50:13 +0000</pubDate>
         
@@ -64,7 +64,7 @@
         <description></description>
         </item>
         <item>
-        <title>Physics</title>
+        <title>physics</title>
         <link>//localhost:1313/tags/physics/</link>
         <pubDate>Sun, 06 Jul 2025 12:50:13 +0000</pubDate>
         
@@ -72,7 +72,7 @@
         <description></description>
         </item>
         <item>
-        <title>Science</title>
+        <title>science</title>
         <link>//localhost:1313/tags/science/</link>
         <pubDate>Sun, 06 Jul 2025 12:50:13 +0000</pubDate>
         
@@ -80,7 +80,7 @@
         <description></description>
         </item>
         <item>
-        <title>Code-Review</title>
+        <title>code-review</title>
         <link>//localhost:1313/tags/code-review/</link>
         <pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate>
         
@@ -88,7 +88,7 @@
         <description></description>
         </item>
         <item>
-        <title>Humor</title>
+        <title>humor</title>
         <link>//localhost:1313/tags/humor/</link>
         <pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate>
         
@@ -96,7 +96,7 @@
         <description></description>
         </item>
         <item>
-        <title>Csharp</title>
+        <title>csharp</title>
         <link>//localhost:1313/tags/csharp/</link>
         <pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate>
         
@@ -104,7 +104,7 @@
         <description></description>
         </item>
         <item>
-        <title>Immutability</title>
+        <title>immutability</title>
         <link>//localhost:1313/tags/immutability/</link>
         <pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate>
         
@@ -112,7 +112,7 @@
         <description></description>
         </item>
         <item>
-        <title>Java</title>
+        <title>java</title>
         <link>//localhost:1313/tags/java/</link>
         <pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate>
         
@@ -120,7 +120,7 @@
         <description></description>
         </item>
         <item>
-        <title>Dotnet</title>
+        <title>dotnet</title>
         <link>//localhost:1313/tags/dotnet/</link>
         <pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate>
         
@@ -128,7 +128,7 @@
         <description></description>
         </item>
         <item>
-        <title>Msbuild</title>
+        <title>msbuild</title>
         <link>//localhost:1313/tags/msbuild/</link>
         <pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate>
         
@@ -136,7 +136,7 @@
         <description></description>
         </item>
         <item>
-        <title>Engineering</title>
+        <title>engineering</title>
         <link>//localhost:1313/tags/engineering/</link>
         <pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate>
         
@@ -144,7 +144,7 @@
         <description></description>
         </item>
         <item>
-        <title>Philosophy</title>
+        <title>philosophy</title>
         <link>//localhost:1313/tags/philosophy/</link>
         <pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate>
         
@@ -152,7 +152,7 @@
         <description></description>
         </item>
         <item>
-        <title>Quotes</title>
+        <title>quotes</title>
         <link>//localhost:1313/tags/quotes/</link>
         <pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate>
         
@@ -160,7 +160,7 @@
         <description></description>
         </item>
         <item>
-        <title>Wisdom</title>
+        <title>wisdom</title>
         <link>//localhost:1313/tags/wisdom/</link>
         <pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate>
         
@@ -168,7 +168,7 @@
         <description></description>
         </item>
         <item>
-        <title>Artificial-Intelligence</title>
+        <title>artificial-intelligence</title>
         <link>//localhost:1313/tags/artificial-intelligence/</link>
         <pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate>
         
@@ -176,7 +176,7 @@
         <description></description>
         </item>
         <item>
-        <title>Technology</title>
+        <title>technology</title>
         <link>//localhost:1313/tags/technology/</link>
         <pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate>
         
@@ -184,7 +184,7 @@
         <description></description>
         </item>
         <item>
-        <title>Testing</title>
+        <title>testing</title>
         <link>//localhost:1313/tags/testing/</link>
         <pubDate>Fri, 04 Apr 2025 14:53:02 +0000</pubDate>
         
@@ -192,7 +192,7 @@
         <description></description>
         </item>
         <item>
-        <title>Essays</title>
+        <title>essays</title>
         <link>//localhost:1313/tags/essays/</link>
         <pubDate>Tue, 25 Feb 2025 07:25:13 +0000</pubDate>
         
@@ -200,7 +200,7 @@
         <description></description>
         </item>
         <item>
-        <title>Hardware</title>
+        <title>hardware</title>
         <link>//localhost:1313/tags/hardware/</link>
         <pubDate>Tue, 25 Feb 2025 07:25:13 +0000</pubDate>
         
@@ -208,7 +208,7 @@
         <description></description>
         </item>
         <item>
-        <title>Github-Projects</title>
+        <title>github-projects</title>
         <link>//localhost:1313/tags/github-projects/</link>
         <pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate>
         
@@ -216,7 +216,7 @@
         <description></description>
         </item>
         <item>
-        <title>How-To</title>
+        <title>how-to</title>
         <link>//localhost:1313/tags/how-to/</link>
         <pubDate>Fri, 12 Jul 2024 20:58:28 +0000</pubDate>
         
@@ -224,7 +224,7 @@
         <description></description>
         </item>
         <item>
-        <title>Grumpy</title>
+        <title>grumpy</title>
         <link>//localhost:1313/tags/grumpy/</link>
         <pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate>
         
@@ -232,7 +232,7 @@
         <description></description>
         </item>
         <item>
-        <title>Settings</title>
+        <title>settings</title>
         <link>//localhost:1313/tags/settings/</link>
         <pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate>
         
@@ -240,7 +240,7 @@
         <description></description>
         </item>
         <item>
-        <title>Visual-Studio</title>
+        <title>visual-studio</title>
         <link>//localhost:1313/tags/visual-studio/</link>
         <pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate>
         
@@ -248,7 +248,7 @@
         <description></description>
         </item>
         <item>
-        <title>Ux</title>
+        <title>ux</title>
         <link>//localhost:1313/tags/ux/</link>
         <pubDate>Fri, 31 May 2024 09:53:03 +0000</pubDate>
         
@@ -256,7 +256,7 @@
         <description></description>
         </item>
         <item>
-        <title>Netherlands</title>
+        <title>netherlands</title>
         <link>//localhost:1313/tags/netherlands/</link>
         <pubDate>Thu, 16 May 2024 14:00:09 +0000</pubDate>
         
@@ -264,7 +264,7 @@
         <description></description>
         </item>
         <item>
-        <title>Biological-Anthropology</title>
+        <title>biological-anthropology</title>
         <link>//localhost:1313/tags/biological-anthropology/</link>
         <pubDate>Sun, 10 Mar 2024 11:24:24 +0000</pubDate>
         
@@ -272,7 +272,7 @@
         <description></description>
         </item>
         <item>
-        <title>Biology</title>
+        <title>biology</title>
         <link>//localhost:1313/tags/biology/</link>
         <pubDate>Sun, 10 Mar 2024 11:24:24 +0000</pubDate>
         
@@ -280,7 +280,7 @@
         <description></description>
         </item>
         <item>
-        <title>Evolution</title>
+        <title>evolution</title>
         <link>//localhost:1313/tags/evolution/</link>
         <pubDate>Sun, 10 Mar 2024 11:24:24 +0000</pubDate>
         
@@ -288,7 +288,7 @@
         <description></description>
         </item>
         <item>
-        <title>Evolutionary-Anthropology</title>
+        <title>evolutionary-anthropology</title>
         <link>//localhost:1313/tags/evolutionary-anthropology/</link>
         <pubDate>Sun, 10 Mar 2024 11:24:24 +0000</pubDate>
         
@@ -296,7 +296,7 @@
         <description></description>
         </item>
         <item>
-        <title>Evolutionary-Biology</title>
+        <title>evolutionary-biology</title>
         <link>//localhost:1313/tags/evolutionary-biology/</link>
         <pubDate>Sun, 10 Mar 2024 11:24:24 +0000</pubDate>
         
@@ -304,7 +304,7 @@
         <description></description>
         </item>
         <item>
-        <title>Myself</title>
+        <title>myself</title>
         <link>//localhost:1313/tags/myself/</link>
         <pubDate>Sun, 06 Aug 2023 11:47:52 +0000</pubDate>
         
@@ -312,7 +312,7 @@
         <description></description>
         </item>
         <item>
-        <title>Git</title>
+        <title>git</title>
         <link>//localhost:1313/tags/git/</link>
         <pubDate>Thu, 06 Jul 2023 09:21:20 +0000</pubDate>
         
@@ -320,7 +320,7 @@
         <description></description>
         </item>
         <item>
-        <title>Language</title>
+        <title>language</title>
         <link>//localhost:1313/tags/language/</link>
         <pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate>
         
@@ -328,7 +328,7 @@
         <description></description>
         </item>
         <item>
-        <title>Music</title>
+        <title>music</title>
         <link>//localhost:1313/tags/music/</link>
         <pubDate>Tue, 21 Mar 2023 15:55:13 +0000</pubDate>
         
@@ -336,7 +336,7 @@
         <description></description>
         </item>
         <item>
-        <title>Programming-Languages</title>
+        <title>programming-languages</title>
         <link>//localhost:1313/tags/programming-languages/</link>
         <pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate>
         
@@ -344,7 +344,7 @@
         <description></description>
         </item>
         <item>
-        <title>Windows</title>
+        <title>windows</title>
         <link>//localhost:1313/tags/windows/</link>
         <pubDate>Wed, 16 Mar 2022 09:55:12 +0000</pubDate>
         
@@ -352,7 +352,7 @@
         <description></description>
         </item>
         <item>
-        <title>Microservices</title>
+        <title>microservices</title>
         <link>//localhost:1313/tags/microservices/</link>
         <pubDate>Thu, 14 Oct 2021 17:39:23 +0000</pubDate>
         
@@ -360,7 +360,7 @@
         <description></description>
         </item>
         <item>
-        <title>Movies</title>
+        <title>movies</title>
         <link>//localhost:1313/tags/movies/</link>
         <pubDate>Mon, 29 Dec 2014 23:32:57 +0000</pubDate>
         
@@ -368,7 +368,7 @@
         <description></description>
         </item>
         <item>
-        <title>Autobiographic</title>
+        <title>autobiographic</title>
         <link>//localhost:1313/tags/autobiographic/</link>
         <pubDate>Fri, 09 Nov 2012 16:19:29 +0000</pubDate>
         
