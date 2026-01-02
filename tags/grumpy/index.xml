@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grumpy on Michael's Blog</title><link>http://blog2.michael.gr/tags/grumpy/</link><description>Recent content in Grumpy on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 19:32:12 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/grumpy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>http://blog2.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>http://blog2.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2024-06-visual-studio-solutions/images/microsoft-visual-studio-2022-logo.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grumpy on Michael's Blog</title><link>https://blog2.michael.gr/tags/grumpy/</link><description>Recent content in Grumpy on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 19:32:12 +0200</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/grumpy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>https://blog2.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-06-visual-studio-solutions/images/microsoft-visual-studio-2022-logo.svg"
 loading="lazy"
 &gt;
 Visual Studio is a capricious product, and its &amp;quot;Solution&amp;quot; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
 &lt;p&gt;Here is a list of things I have (painfully) found out over the years.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="the-project-directory-structure-must-be-entirely-flat"&gt;The project directory structure must be entirely flat.
 &lt;/h3&gt;&lt;p&gt;All project files must reside in directories that are immediate sub-directories of the solution directory. When adding a project you are given the freedom to put it in a directory anywhere you want, but if you don't put it in a directory exactly under the solution directory, you are going to run into trouble later.&lt;/p&gt;
@@ -33,10 +33,10 @@ plenty of options to call your test project: &amp;quot;CovfefeTest&amp;quot;, &a
 &lt;p&gt;Thank you for sharing your experiences and all the useful info.
 Visual Studio is increasingly becoming such a bloatware, while still missing quite a lot of basic fundamental functionality.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Incident Impact Calculation Formula</title><link>http://blog2.michael.gr/post/2024-05-incident-impact-calculation/</link><pubDate>Fri, 31 May 2024 12:53:30 +0000</pubDate><guid>http://blog2.michael.gr/post/2024-05-incident-impact-calculation/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic.jpg"
+&lt;/ul&gt;</description></item><item><title>Incident Impact Calculation Formula</title><link>https://blog2.michael.gr/post/2024-05-incident-impact-calculation/</link><pubDate>Fri, 31 May 2024 12:53:30 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-05-incident-impact-calculation/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic.jpg"
 width="2000"
 height="1324"
-srcset="http://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic_hu_a174135a2296b398.jpg 480w, http://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic_hu_d680cbb4b8484329.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic_hu_a174135a2296b398.jpg 480w, https://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic_hu_d680cbb4b8484329.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="151"
@@ -62,10 +62,10 @@ data-flex-basis="362px"
 &lt;p&gt;For example:&lt;/p&gt;
 &lt;p&gt;The sinking of the Titanic was certainly a disaster, but it was largely an isolated incident: it happened only once, on the 15th of April 1912, and only in one place, at 41°43'32''N 49°56'49''W; we have not had anything quite like that happening before, and we have been doing a decent job at avoiding similar incidents ever since, so in the big picture, it is not of particularly high impact.&lt;/p&gt;
 &lt;p&gt;On the other hand:&lt;/p&gt;
-&lt;p&gt;A modern computer taking several long seconds to reboot, despite having a multi-core, multi-gigahertz, hyper-threaded and pipelined CPU with multi-level cache and solid-state storage, is something that affects &lt;em&gt;&lt;strong&gt;everyone&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;everywhere, every day&lt;/strong&gt;&lt;/em&gt;, so it does in fact have &lt;em&gt;quite a high impact.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>On Dotfuscator by PreEmptive Solutions</title><link>http://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</link><pubDate>Tue, 15 Aug 2023 12:29:37 +0000</pubDate><guid>http://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator.png"
+&lt;p&gt;A modern computer taking several long seconds to reboot, despite having a multi-core, multi-gigahertz, hyper-threaded and pipelined CPU with multi-level cache and solid-state storage, is something that affects &lt;em&gt;&lt;strong&gt;everyone&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;everywhere, every day&lt;/strong&gt;&lt;/em&gt;, so it does in fact have &lt;em&gt;quite a high impact.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>On Dotfuscator by PreEmptive Solutions</title><link>https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</link><pubDate>Tue, 15 Aug 2023 12:29:37 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator.png"
 width="598"
 height="253"
-srcset="http://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator_hu_11bee5a46dfe251e.png 480w, http://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator_hu_d63b329b1fdab07c.png 1024w"
+srcset="https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator_hu_11bee5a46dfe251e.png 480w, https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator_hu_d63b329b1fdab07c.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="236"
@@ -240,7 +240,7 @@ otherwise known as flow control obfuscation? Well, as it turns out, that is beyo
 &lt;p&gt;Retrying connection...&lt;/p&gt;
 &lt;p&gt;Retry failed.&lt;/p&gt;
 &lt;p&gt;Error: Could not contact the activation server. An error occurred while sending the request. The remote name could not be resolved: 'licensing.preemptive.com'&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>[SOLVED] Maven deploy fails with status 422 unprocessable entity</title><link>http://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</link><pubDate>Thu, 06 Jul 2023 09:21:20 +0000</pubDate><guid>http://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</guid><description>&lt;p&gt;It has been more than a year since I created this question on GitHub Community; a couple of days after that I found the solution by myself, so I answered my own question, and to this date comments keep being added by people who were helped by my post.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item><item><title>[SOLVED] Maven deploy fails with status 422 unprocessable entity</title><link>https://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</link><pubDate>Thu, 06 Jul 2023 09:21:20 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</guid><description>&lt;p&gt;It has been more than a year since I created this question on GitHub Community; a couple of days after that I found the solution by myself, so I answered my own question, and to this date comments keep being added by people who were helped by my post.&lt;/p&gt;
 &lt;p&gt;When I look at it today, I notice that my answer has this particular style, this grumpy indignation which has become so characteristic of me, after a lifetime of battling with lame software, and even worse, with lame error messages.&lt;/p&gt;
 &lt;p&gt;I thought I should share this on my blog for posterity.&lt;/p&gt;
 &lt;p&gt;Here is the link:&lt;/p&gt;
@@ -276,10 +276,10 @@ href="https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-
 &lt;p&gt;What happened is that GitHub apparently has some monstrous bug which causes artifact deployment to fail if some other repository (only by the same owner, I hope!) has already deployed an artifact with the exact same name.&lt;/p&gt;
 &lt;p&gt;In this case, one repository was called Bathyscaphe, the other was called BathyscapheClaims, but each repository was trying to deploy an artifact called bathyscaphe-claims.&lt;/p&gt;
 &lt;p&gt;I changed the name of the artifact in the second repository from bathyscaphe-claims to bathyscaphe-claims2 and it worked.&lt;/p&gt;
-&lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>Program Code is Uncountable</title><link>http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/</link><pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate><guid>http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code.jpg"
+&lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>Program Code is Uncountable</title><link>https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/</link><pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code.jpg"
 width="800"
 height="331"
-srcset="http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code_hu_f0a5e6162c5554.jpg 480w, http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code_hu_34c59bcd7cb70c1f.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code_hu_f0a5e6162c5554.jpg 480w, https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code_hu_34c59bcd7cb70c1f.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="241"
@@ -295,10 +295,10 @@ href="https://www.oxfordlearnersdictionaries.com/definition/english/code" target
 &gt;Oxford Learner's Dictionaries - English - Code&lt;/a&gt; (Scroll down to meaning 3, &amp;quot;programming&amp;quot;.)&lt;/p&gt;
 &lt;p&gt;Now, we live in free societies where everyone enjoys freedom of speech, and more generally, freedom of expression. You can choose to say whatever you like, just as you can choose to dress in whatever way you like.&lt;/p&gt;
 &lt;p&gt;But when you say &amp;quot;codes&amp;quot; referring to program code, please do keep in mind that you come across like this complete idiot:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy.jpg"
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy.jpg"
 width="600"
 height="900"
-srcset="http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy_hu_9b0ece5b469d5054.jpg 480w, http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy_hu_a55983757e3a6195.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy_hu_9b0ece5b469d5054.jpg 480w, https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy_hu_a55983757e3a6195.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="66"
@@ -306,10 +306,10 @@ data-flex-basis="160px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Or like this complete idiot:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail.jpg"
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail.jpg"
 width="600"
 height="768"
-srcset="http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail_hu_c5d3462460a7d4f4.jpg 480w, http://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail_hu_b1bbf3addb44a36e.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail_hu_c5d3462460a7d4f4.jpg 480w, https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail_hu_b1bbf3addb44a36e.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="78"
@@ -318,14 +318,14 @@ data-flex-basis="187px"
 &lt;/p&gt;
 &lt;p&gt;Do you want to come across like a complete idiot?&lt;/p&gt;
 &lt;p&gt;The choice is yours.&lt;/p&gt;
-&lt;p&gt;(Grumpy cat meme unnecessary; this was grumpy enough by itself.)&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>http://blog2.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>http://blog2.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2023-01-14-mocking/images/mocking.svg"
+&lt;p&gt;(Grumpy cat meme unnecessary; this was grumpy enough by itself.)&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog2.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-01-14-mocking/images/mocking.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h4 id="abstract"&gt;Abstract:
 &lt;/h4&gt;&lt;p&gt;The practice of using Mock Objects in automated software testing is examined from a critical point of view and found to be highly problematic. Opinions of some well known industry speakers are cited. The supposed benefits of Mock Objects are shown to be either no real benefits, or achievable via alternative means.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="introduction"&gt;Introduction
 &lt;/h3&gt;&lt;p&gt;The automated software testing technique which is predominant in the industry today is Unit Testing. The goal of Unit Testing is to achieve defect localization, and to this effect it requires each component to be tested in strict isolation from its collaborators.&lt;/p&gt;
@@ -412,17 +412,17 @@ href="https://www.youtube.com/watch?v=EZ05e7EMOLM" target="_blank"
 &lt;li&gt;Mocking achieves defect localization by eliminating collaborators from the picture and allowing components to be tested in strict isolation from each other.
 &lt;ul&gt;
 &lt;li&gt;Defect localization is useful, but it is not an absolute necessity, and it does not have to be done to absolute perfection as mocking aims to do; we can achieve more than good enough defect localization by testing each component in integration with its collaborators, simply by arranging the order in which tests are executed to ensure that by the time a component gets tested, all of its collaborators have already passed their tests. See &lt;a
-href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
+href="https://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows a component to be tested without the performance overhead of instantiating and invoking its real collaborators.
 &lt;ul&gt;
 &lt;li&gt;The performance overhead of instantiating and invoking the real collaborators is not always prohibitive, or even noticeable, so in many cases it is perfectly fine to test a component in integration with its real collaborators. See &lt;a
-href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
+href="https://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;In the limited number of cases where the performance overhead is indeed prohibitive, it can be avoided with the use of Fakes instead of Mocks. See &lt;a
-href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
+href="https://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -431,32 +431,32 @@ href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;In most cases, examining the invocations made by the component-under-test to its collaborators is in fact bad practice, because it constitutes white-box testing. The only reason why this is being widely practiced in the industry is because mocking does not work otherwise, so in this regard mocking contains a certain element of a self-serving paradigm.&lt;/li&gt;
 &lt;li&gt;In those rare cases where examining the invocations is in fact necessary, it is still bad practice to do so programmatically, because it results in tests that are over-specified and fragile.&lt;/li&gt;
 &lt;li&gt;What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See &lt;a
-href="http://blog2.michael.gr/post/2024-04-audit-testing/"
+href="https://blog2.michael.gr/post/2024-04-audit-testing/"
 &gt;Audit Testing&lt;/a&gt; and &lt;a
-href="http://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/"
+href="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to fabricate the results returned from a collaborator to the component-under-test, so as to guarantee that they are free from defects that could be caused by bugs in the implementation of the real collaborator.
 &lt;ul&gt;
 &lt;li&gt;Fabricating the results that would have been returned by a real collaborator is in fact bad practice, because it will not magically make any bugs go away, (in this sense it can be likened to ostrich policy,) and because as I have already explained, it is highly presumptuous. The definitive authority on what results are returned by a certain collaborator is the real implementation of that collaborator, or a fake thereof, which in turn necessitates integration testing. See &lt;a
-href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
+href="https://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to verify the correctness of components that generate their output by means of forwarding results to collaborators rather than by returning results from invocations.
 &lt;ul&gt;
 &lt;li&gt;Even in this case, &lt;em&gt;Collaboration Monitoring&lt;/em&gt; can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See &lt;a
-href="http://blog2.michael.gr/post/2024-04-audit-testing/"
+href="https://blog2.michael.gr/post/2024-04-audit-testing/"
 &gt;Audit Testing&lt;/a&gt; and &lt;a
-href="http://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/"
+href="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to start testing a component while one or more of its collaborators are not ready yet for integration because they are still in development, and no fakes of them are available either.
 &lt;ul&gt;
 &lt;li&gt;This is true, but once the collaborators (or fakes thereof) become available, it is best to integrate them in the tests, and to unceremoniously throw away the mocks. See &lt;a
-href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
+href="https://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -464,7 +464,7 @@ href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;ul&gt;
 &lt;li&gt;True, but this implies a very bureaucratic way of working, and utter lack of trust towards the developers of the collaborators; it is best if it never comes to that.&lt;/li&gt;
 &lt;li&gt;We can still avoid the use of mocks by creating fakes of the collaborators ourselves. See &lt;a
-href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
+href="https://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -472,15 +472,15 @@ href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;p&gt;To summarize, mocks can always be replaced with one or more of the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Fakes (see &lt;a
-href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
+href="https://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Incremental Integration Testing (see &lt;a
-href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
+href="https://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Audit Testing (see &lt;a
-href="http://blog2.michael.gr/post/2024-04-audit-testing/"
+href="https://blog2.michael.gr/post/2024-04-audit-testing/"
 &gt;Audit Testing&lt;/a&gt;) and Collaboration Monitoring (see &lt;a
-href="http://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/"
+href="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="conclusion"&gt;Conclusion
@@ -488,10 +488,10 @@ href="http://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="http://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects.jpg"
 width="797"
 height="1024"
-srcset="http://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_8156248a341d61af.jpg 480w, http://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_5b4ff396469f2342.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_8156248a341d61af.jpg 480w, https://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_5b4ff396469f2342.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="77"
@@ -509,10 +509,10 @@ data-flex-basis="186px"
 &lt;hr&gt;
 &lt;p&gt;Cover image: &amp;quot;Mocking&amp;quot; by michael.gr, based on &lt;a class="external"
 href="https://thenounproject.com/icon/mock-2657532/" target="_blank"
-&gt;'mock' by 'Iconbox' from the noun project.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On messages and message-passing</title><link>http://blog2.michael.gr/post/2022-12-messages-and-message-passing/</link><pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate><guid>http://blog2.michael.gr/post/2022-12-messages-and-message-passing/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing.png"
+&gt;'mock' by 'Iconbox' from the noun project.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On messages and message-passing</title><link>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</link><pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing.png"
 width="2673"
 height="1494"
-srcset="http://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing_hu_cac0be91696add81.png 480w, http://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing_hu_4c50d0e4091ea6ab.png 1024w"
+srcset="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing_hu_cac0be91696add81.png 480w, https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing_hu_4c50d0e4091ea6ab.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="178"
@@ -521,7 +521,7 @@ data-flex-basis="429px"
 &lt;/p&gt;
 &lt;p&gt;Over the decades, numerous software system architectures have emerged which require invocations across subsystems to be done via message-passing instead of programmatic interface method calls. Such architectures are so common that many programmers have come to regard message-passing as an end in and of itself, oblivious of the fact that it is nothing but a (poor) technical mechanism for accomplishing a certain architectural goal.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The architectural goal is to be able to perform general-purpose operations on invocations, for example routing the invocations according to configuration, or queuing the invocations for delivery on a different thread. In order to be able to do things like that, the invocations must first be expressed in a general-purpose form.&lt;/p&gt;
 &lt;p&gt;Message-passing is simply the only general-purpose form that could be imagined by the pioneers who built the first asynchronous event-driven systems, or perhaps the only form that could readily be implemented using the programming languages available back then. However, in succeeding decades our thinking and our tools have advanced considerably, to the point where we now have much better ways of achieving things technically, so it might be worth taking a moment to re-examine the concept of message-passing.&lt;/p&gt;
@@ -543,15 +543,15 @@ href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;Furthermore, if we bother creating such packaging and unpackaging adaptors, the realization quickly starts to sink-in that all the message classes are irrelevant; there is no need to define a special message class containing a separate field for each parameter of each method, because the only code that would ever deal with such a class would be the corresponding pair of packaging and unpackaging adaptors; so, the adaptors might as well use a single universal message class which simply stores all parameters in an array of object, and voila, the entire menagerie of message classes becomes entirely unnecessary.&lt;/p&gt;
 &lt;p&gt;Thus, it becomes evident that what we are really after is not message-passing per se; it is some general-purpose form of expressing invocations, so that general-purpose operations can be performed on them, and some mechanism for converting back and forth between this general-purpose form and the natural form, which is programmatic interface method calls, so that we can write code naturally. Ideally, the conversion mechanism would be automatic and transparent, so that we do not even have to write those adaptors. Messages have only existed due to the historical absence of such an automatic and transparent mechanism.&lt;/p&gt;
 &lt;p&gt;Fortunately, with modern reflecting, intermediate-code-based, just-in-time compiled programming languages, today we have at our disposal all that is necessary to build such mechanisms. For more information see &lt;a
-href="http://blog2.michael.gr/post/2022-12-intertwine/"
+href="https://blog2.michael.gr/post/2022-12-intertwine/"
 &gt;Intertwine&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="http://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing.jpg"
 width="493"
 height="555"
-srcset="http://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_292667b1799fe58a.jpg 480w, http://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_6ad615b796b41427.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_292667b1799fe58a.jpg 480w, https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_6ad615b796b41427.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="88"
@@ -567,10 +567,10 @@ data-flex-basis="213px"
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: Conceptual illustration of message-passing, by michael.gr, based on original art by Youmena and Made from the Noun Project.&lt;/p&gt;</description></item><item><title>On UML</title><link>http://blog2.michael.gr/post/2022-08-uml/</link><pubDate>Tue, 16 Aug 2022 09:20:46 +0000</pubDate><guid>http://blog2.michael.gr/post/2022-08-uml/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2022-08-uml/media/uml-logo.png"
+&lt;p&gt;Cover image: Conceptual illustration of message-passing, by michael.gr, based on original art by Youmena and Made from the Noun Project.&lt;/p&gt;</description></item><item><title>On UML</title><link>https://blog2.michael.gr/post/2022-08-uml/</link><pubDate>Tue, 16 Aug 2022 09:20:46 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-08-uml/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-uml/media/uml-logo.png"
 width="824"
 height="548"
-srcset="http://blog2.michael.gr/post/2022-08-uml/media/uml-logo_hu_de0c20afdc618ca9.png 480w, http://blog2.michael.gr/post/2022-08-uml/media/uml-logo_hu_f720d5921c77bad1.png 1024w"
+srcset="https://blog2.michael.gr/post/2022-08-uml/media/uml-logo_hu_de0c20afdc618ca9.png 480w, https://blog2.michael.gr/post/2022-08-uml/media/uml-logo_hu_f720d5921c77bad1.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -578,14 +578,14 @@ data-flex-basis="360px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;This post is intended as support material for another post of mine; see &lt;a
-href="http://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/"
+href="https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/"
 &gt;Towards Authoritative Software Design&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The Universal Modeling Language (UML) (&lt;a class="external"
 href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" target="_blank"
 &gt;Wikipedia&lt;/a&gt;) was intended to be a standard notation for expressing software designs, and to replace the multitude of ad-hoc notations that software architects have been using on various mediums such as whiteboard, paper, and general-purpose box-and-arrow diagram-drawing software. The idea was that by following a standard notation which prescribes a specific way of expressing each concept, every diagram would be readily and unambiguously understood by everyone.&lt;/p&gt;
 &lt;p&gt;It has miserably failed.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;UML is probably very close to the top of the list of things that everyone mentions, but nobody uses, and this is due to a number of good reasons:&lt;/p&gt;
 &lt;ul&gt;
@@ -638,10 +638,10 @@ href="https://www.ibm.com/docs/en/idsa?topic=diagrams-collaborations" target="_b
 &lt;p&gt;UML is &lt;em&gt;&lt;strong&gt;insufferably baroque&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;It should have never been, and it should cease to be.&lt;/p&gt;
 &lt;p&gt;It should be let go into the good night.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml.jpg"
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml.jpg"
 width="1715"
 height="1553"
-srcset="http://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml_hu_bef019e84b4ea75.jpg 480w, http://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml_hu_1719cd72479ad91e.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml_hu_bef019e84b4ea75.jpg 480w, https://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml_hu_1719cd72479ad91e.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="110"
@@ -652,10 +652,10 @@ data-flex-basis="265px"
 &lt;hr&gt;
 &lt;p&gt;Cover image: The UML logo, by Object Management Group®, Inc. from &lt;a class="external"
 href="https://www.uml.org/" target="_blank"
-&gt;uml.org&lt;/a&gt;; Public Domain.&lt;/p&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
+&gt;uml.org&lt;/a&gt;; Public Domain.&lt;/p&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
 width="2775"
 height="1684"
-srcset="http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_8ae04781ddc88246.jpg 480w, http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_58a6348cfbae9cec.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_8ae04781ddc88246.jpg 480w, https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_58a6348cfbae9cec.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="164"
@@ -670,7 +670,7 @@ href="https://www.urbandictionary.com/define.php?term=woke" target="_blank"
 href="https://en.wikipedia.org/wiki/Murder_of_George_Floyd" target="_blank"
 &gt;the murder of George Floyd&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Programmers all over the world, the overwhelming majority of whom are white boys, wanted to feel like they are doing something about the whole &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Black_Lives_Matter" target="_blank"
@@ -703,10 +703,10 @@ href="https://www.urbandictionary.com/define.php?term=wokeness" target="_blank"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness.jpg"
 width="843"
 height="565"
-srcset="http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_bfd19a0acccbf67b.jpg 480w, http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_6dd0e5589091004e.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_bfd19a0acccbf67b.jpg 480w, https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_6dd0e5589091004e.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="149"
@@ -720,24 +720,24 @@ data-flex-basis="358px"
 &lt;td style="text-align: center"&gt;Mandatory grumpy cat meme: Wokeness? How About NO.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description></item><item><title>The famous "Could not load file or assembly or one of its dependencies" error message</title><link>http://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/</link><pubDate>Wed, 16 Dec 2020 12:15:11 +0000</pubDate><guid>http://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/</guid><description>&lt;p&gt;If you have ever done any software development under Microsoft Windows you have probably come across this famous error message:&lt;/p&gt;
+&lt;/table&gt;</description></item><item><title>The famous "Could not load file or assembly or one of its dependencies" error message</title><link>https://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/</link><pubDate>Wed, 16 Dec 2020 12:15:11 +0000</pubDate><guid>https://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/</guid><description>&lt;p&gt;If you have ever done any software development under Microsoft Windows you have probably come across this famous error message:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;System.IO.FileNotFoundException : Could not load file or assembly 'Acme.dll' or one of its dependencies. The specified module could not be found.&amp;quot;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Modern software makes heavy use of dynamic link libraries, and the problem with this kind of libraries is that for various reasons they might not be there when you need them, resulting in runtime errors. This is the runtime error you get under Windows when this happens.&lt;/p&gt;
 &lt;p&gt;Naturally, when you see this message, the first thing to do is to check whether Acme.dll is there, and what you usually discover is that the file is indeed there. When dealing with computers, most error messages that you come across tend to leave some room for troubleshooting, but when the system is reporting that a certain file does not exist on your very own filesystem, while the file is most certainly there, the situation seems really hopeless. You are stymied.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;At this point you are likely to start shot-gunning the problem by trying various random tricks in the hope that one of them will magically make the problem go away: you try running the application again just in case it was a glitch, you try obtaining a fresh copy of the library in case this one somehow got corrupted, you restart Windows because we always try that, right? -- and none of these attempts yields any results.&lt;/p&gt;
 &lt;p&gt;Finally, when you have exhausted all other possibilities, you decide to take a closer look at the error message again. You notice that it says that it could not load Acme.dll &amp;quot;or one of its dependencies&amp;quot;, so you start with a new hypothesis: what cannot be found is not Acme.dll itself, it is one of the libraries that Acme.dll in turn tries to load. But which one? The next sentence says &amp;quot;the specified module could not be found&amp;quot;, but which module is the specified module? There is only one module being named in the error message, and that is Acme.dll, so this must be the specified module, right?&lt;/p&gt;
 &lt;p&gt;What is happening here is that this error message is a notorious instance of trolling with which Microsoft has been torturing software professionals for decades now by telling them lies instead of reporting the actual problem. The problem is indeed that one of the dependencies of the library in question could not be found, but Windows will not tell you which one. Instead, it will give you this insidiously worded message which will send you looking for the problem in wrong directions.&lt;/p&gt;
 &lt;p&gt;There is probably some programmer who worked at Microsoft some 30 years ago and is probably a pensioner by now, who has a permanent evil grin on his face knowing that he has personally caused millions of work hours wasted all over the planet over the course of several decades simply by creating this particular error message in this particular way. (Or, perhaps, he told his manager that the task he was working on would need to take a little longer because he had to collect all necessary information to produce a useful error message, and his manager told him to not do that because deadlines.)&lt;/p&gt;
 &lt;p&gt;To fix this problem you have to use some special software called a &amp;quot;Dependency Analyzer&amp;quot; to trace all the dependencies of your application and locate the one that fails to load.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages.jpg"
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages.jpg"
 width="324"
 height="400"
-srcset="http://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages_hu_ec275663cd84d572.jpg 480w, http://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages_hu_a00e6a61b605d2db.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages_hu_ec275663cd84d572.jpg 480w, https://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages_hu_a00e6a61b605d2db.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="81"
@@ -752,10 +752,10 @@ data-flex-basis="194px"
 &lt;li&gt;Not only you are oblivious about the msvcr100.dll problem, but also, the developers of libraries that you use might also be oblivious to it. For example, HDF5DotNet.dll is a popular library used by DotNet applications for reading and writing HDF5 files. This library depends on msvcr100.dll but does not include it in its installable package, nor is there any mention in their documentation about the fact that msvcr100.dll must be present in order for their library to successfully load.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note that an msvcr100.dll with a size of 773968 bytes may exist under C:\Windows\SysWOW64, but it may not necessarily be the one you need. Your application might instead depend on another msvcr100.dll with a size of 829264 bytes under C:\Windows\System32.&lt;/p&gt;
-&lt;p&gt;The approach recommended by Microsoft for solving this kind of problem is to include the &amp;quot;Microsoft Visual C++ Redistributable&amp;quot; installable package, and install it as part of the application's installation process. An easier way is to simply include a copy of msvcr100.dll in the directory from which your application launches.&lt;/p&gt;</description></item><item><title>The Wild, Wild Web</title><link>http://blog2.michael.gr/post/2020-10-19-the-wild-wild-web/</link><pubDate>Mon, 19 Oct 2020 15:05:21 +0000</pubDate><guid>http://blog2.michael.gr/post/2020-10-19-the-wild-wild-web/</guid><description>&lt;p&gt;This is a little history of the early World Wide Web (WWW) for the benefit of the younger generation which may have not experienced the Internet in its infancy and therefore might not be aware of the horrors that it involved, and why certain things have come to be the way they are today.&lt;/p&gt;
+&lt;p&gt;The approach recommended by Microsoft for solving this kind of problem is to include the &amp;quot;Microsoft Visual C++ Redistributable&amp;quot; installable package, and install it as part of the application's installation process. An easier way is to simply include a copy of msvcr100.dll in the directory from which your application launches.&lt;/p&gt;</description></item><item><title>The Wild, Wild Web</title><link>https://blog2.michael.gr/post/2020-10-19-the-wild-wild-web/</link><pubDate>Mon, 19 Oct 2020 15:05:21 +0000</pubDate><guid>https://blog2.michael.gr/post/2020-10-19-the-wild-wild-web/</guid><description>&lt;p&gt;This is a little history of the early World Wide Web (WWW) for the benefit of the younger generation which may have not experienced the Internet in its infancy and therefore might not be aware of the horrors that it involved, and why certain things have come to be the way they are today.&lt;/p&gt;
 &lt;p&gt;As you are reading this, and thinking to yourself that it could not possibly have been as bad as I am describing it, remember, the general public was experiencing it using 2400 baud modems.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The World Wide Web was created in 1989 at &lt;a class="external"
 href="https://en.wikipedia.org/wiki/CERN" target="_blank"
@@ -791,13 +791,13 @@ href="https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" target="_bl
 &lt;p&gt;References:&lt;/p&gt;
 &lt;p&gt;w3c.org - &lt;a class="external"
 href="https://www.w3.org/People/Raggett/book4/ch02.html" target="_blank"
-&gt;&lt;em&gt;Raggett on HTML 4&lt;/em&gt; - chapter 2 - &lt;em&gt;A history of HTML&lt;/em&gt;&lt;/a&gt; by Dave Raggett&lt;/p&gt;</description></item><item><title>On JUnit's random order of test method execution</title><link>http://blog2.michael.gr/post/2018-04-random-order-of-tests/</link><pubDate>Sun, 08 Apr 2018 20:15:05 +0000</pubDate><guid>http://blog2.michael.gr/post/2018-04-random-order-of-tests/</guid><description>&lt;p&gt;This is a rant about JUnit, or more precisely, a rant about JUnit's inability to execute test methods in natural method order.&lt;/p&gt;
+&gt;&lt;em&gt;Raggett on HTML 4&lt;/em&gt; - chapter 2 - &lt;em&gt;A history of HTML&lt;/em&gt;&lt;/a&gt; by Dave Raggett&lt;/p&gt;</description></item><item><title>On JUnit's random order of test method execution</title><link>https://blog2.michael.gr/post/2018-04-random-order-of-tests/</link><pubDate>Sun, 08 Apr 2018 20:15:05 +0000</pubDate><guid>https://blog2.michael.gr/post/2018-04-random-order-of-tests/</guid><description>&lt;p&gt;This is a rant about JUnit, or more precisely, a rant about JUnit's inability to execute test methods in natural method order.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Definition: Natural method order is the order in which methods appear in the source file.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id="what-is-the-problem"&gt;What is the problem?
 &lt;/h3&gt;&lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Up until and including Java 6, when enumerating the methods of a java class, the JVM would yield them in natural order. However, when Java 7 came out, Oracle changed something in the internals of the JVM, and this operation started yielding methods in random order.&lt;/p&gt;
 &lt;p&gt;Apparently, JUnit was executing methods in the order in which the JVM was yielding them, so as a result of upgrading to Java 7, everybody's tests started running in random order. This caused considerable ruffling of feathers all over the world.&lt;/p&gt;
@@ -813,16 +813,16 @@ href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;The test of a feature that relies upon a more fundamental feature whose test has already failed might as well be skipped, because it can be expected to fail, but if it does run, reporting that failure before the failure of the more fundamental feature is an act of sabotage against the developer: it is sending us looking for problems in places where there are no problems to be found, and it is making it more difficult to locate the real problem, which usually lies in the test that failed first &lt;strong&gt;in the source file&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;To give an example, if I am writing a test for my awesome collection class, I will presumably first write a test for the insertion function, and further down I will write a test for the removal function. If the insertion test fails, the removal test does not even need to run, but if it does run, it is completely counter-productive to be shown the results of the removal test before I am shown the results of the insertion test. If the insertion test fails, it is game over. As they say in the far west, there is no point beating a dead horse. How hard is this to understand?&lt;/p&gt;
 &lt;p&gt;Another very simple, very straightforward, and very important reason for wanting the test methods to be executed in natural order is because seeing the test method names listed in any other order is &lt;strong&gt;brainfuck&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order.jpg"
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order.jpg"
 width="512"
 height="512"
-srcset="http://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order_hu_1cbcf661f6886545.jpg 480w, http://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order_hu_37da57f9abdefd51.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order_hu_1cbcf661f6886545.jpg 480w, https://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order_hu_37da57f9abdefd51.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
 &gt;
-&lt;/p&gt;</description></item><item><title>What is wrong with UUIDs and GUIDs</title><link>http://blog2.michael.gr/post/2017-06-on-uuids-and-guids/</link><pubDate>Mon, 12 Jun 2017 17:47:55 +0000</pubDate><guid>http://blog2.michael.gr/post/2017-06-on-uuids-and-guids/</guid><description>&lt;h4 id="introduction"&gt;Introduction
+&lt;/p&gt;</description></item><item><title>What is wrong with UUIDs and GUIDs</title><link>https://blog2.michael.gr/post/2017-06-on-uuids-and-guids/</link><pubDate>Mon, 12 Jun 2017 17:47:55 +0000</pubDate><guid>https://blog2.michael.gr/post/2017-06-on-uuids-and-guids/</guid><description>&lt;h4 id="introduction"&gt;Introduction
 &lt;/h4&gt;&lt;p&gt;Universally Unique Identifiers (UUIDs) otherwise known as Globally Unique Identifiers (GUIDs) are 128-bit numbers that are often used to identify information. In its canonical representation, a UUID looks like this: 2205cf3e-139c-4abc-be2d-e29b692934b0.&lt;/p&gt;
 &lt;p&gt;The Wikipedia entry for Universally Unique Identifier (&lt;a class="external"
 href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank"
@@ -833,7 +833,7 @@ href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blan
 &lt;/blockquote&gt;
 &lt;p&gt;Great. Now, let me tell you why I hate UUIDs.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h4 id="known-disadvantages"&gt;Known disadvantages
 &lt;/h4&gt;&lt;p&gt;Disadvantages of UUIDs that are unanimously recognized are the following:&lt;/p&gt;
@@ -897,10 +897,10 @@ href="https://stackoverflow.com/questions/44198702/writing-a-custom-threadpool" 
 &lt;h4 id="epilogue"&gt;Epilogue
 &lt;/h4&gt;&lt;p&gt;I do believe that there will be a time, maybe in a couple of thousand years from now, maybe sooner, when we will be colonizing the galaxy, our population will be in the trillions, the individual devices embedded everywhere will number in the quadrillions, and every single one of those devices will be generating UUIDs at rates that are unthinkable today. When that time comes, we will inevitably start running into trouble with duplicate UUIDs popping up every once in a while in distant areas of the galaxy, and then it will be like 640k of memory all over again, two-digit-year millennium bug all over again, DLL hell all over again, all of them combined.&lt;/p&gt;
 &lt;p&gt;When that time comes, I hope that we as a species still have some sufficiently low-level understanding of how our computers work, so as to be able to fix them. I fear we might not.&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids.jpg"
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids.jpg"
 width="600"
 height="400"
-srcset="http://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids_hu_113e75b0e444c92f.jpg 480w, http://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids_hu_6da3ebde98bc76da.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids_hu_113e75b0e444c92f.jpg 480w, https://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids_hu_6da3ebde98bc76da.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -910,10 +910,10 @@ data-flex-basis="360px"
 &lt;p&gt;This post was inspired by a Stack Overflow answer that I wrote, here:
 &lt;a class="external"
 href="https://stackoverflow.com/a/8642874/773113" target="_blank"
-&gt;https://stackoverflow.com/a/8642874/773113&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Scripting Languages</title><link>http://blog2.michael.gr/post/2017-05-on-scripting-languages/</link><pubDate>Fri, 19 May 2017 19:46:34 +0000</pubDate><guid>http://blog2.michael.gr/post/2017-05-on-scripting-languages/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers.jpg"
+&gt;https://stackoverflow.com/a/8642874/773113&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Scripting Languages</title><link>https://blog2.michael.gr/post/2017-05-on-scripting-languages/</link><pubDate>Fri, 19 May 2017 19:46:34 +0000</pubDate><guid>https://blog2.michael.gr/post/2017-05-on-scripting-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers.jpg"
 width="1023"
 height="575"
-srcset="http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers_hu_6f30f1f417e0fba0.jpg 480w, http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers_hu_ac31a6389070d9d4.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers_hu_6f30f1f417e0fba0.jpg 480w, https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers_hu_ac31a6389070d9d4.jpg 1024w"
 loading="lazy"
 alt="Teething rings (pacifiers) found on the great interwebz."
 class="gallery-image"
@@ -933,7 +933,7 @@ rarely converted to machine code.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;So, compiled vs. interpreted does not seem to be the real differentiating factor; nonetheless, we can usually tell a scripting language when we see one. So, what is it that we see?&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;First, let us identify the three different kinds of error that can potentially occur in program code:&lt;/p&gt;
 &lt;ul&gt;
@@ -1050,7 +1050,7 @@ href="https://danluu.com/empirical-pl/" target="_blank"
 &lt;/h4&gt;&lt;p&gt;I don't need to say much here, just watch the legendary &amp;quot;Wat&amp;quot; video by Gary Bernhardt from CodeMash 2012, it is only 4 minutes long:&lt;/p&gt;
 &lt;video width="97%" poster="https://www.destroyallsoftware.com/assets/posters/talks/wat.poster-4f5425901c10ffeaceb61f82e25dc40b9212aadf078cead0dc6ffe40696e2bec.png" preload="none"&gt;
 &lt;source src="https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20241128%2Fus-east-1%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20241128T124514Z&amp;amp;X-Amz-Expires=14400&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=866f87a9e2a988029db034ad51f846818c5a2e4415da80559bb334e602fd6bad" /&gt;
-&lt;track label="English" kind="captions" srclang="en" src="http://blog2.michael.gr/captions/talks/wat.vtt"&gt;&lt;/track&gt;
+&lt;track label="English" kind="captions" srclang="en" src="https://blog2.michael.gr/captions/talks/wat.vtt"&gt;&lt;/track&gt;
 &lt;/video&gt;
 &lt;p&gt;Source: &lt;a class="external"
 href="https://www.destroyallsoftware.com/talks/wat" target="_blank"
@@ -1094,10 +1094,10 @@ href="https://www.catb.org/jargon/html/S/search-and-destroy-mode.html" target="_
 &lt;/ul&gt;
 &lt;p&gt;Scripting languages that have their priorities wrong are, for example, all the shell scripting languages. These languages aim to make strings (filenames) look and feel as if they are identifiers, so that you can type commands without having to enclose them in quotes, as if the convenience of not having to use quotes was the most important thing ever. If all we want to do in a shell script is to list a sequence of commands to execute, then this convenience is perhaps all we care for, but the moment we try to use any actual programming construct, like variables and flow control statements, what we have in our hands is a string-escaping nightmare of epic proportions.&lt;/p&gt;
 &lt;p&gt;Obligatory XKCD comic:&lt;/p&gt;
-&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash.png"
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash.png"
 width="571"
 height="207"
-srcset="http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash_hu_a3b55ba8a827aa03.png 480w, http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash_hu_1eec207eb5351c55.png 1024w"
+srcset="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash_hu_a3b55ba8a827aa03.png 480w, https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash_hu_1eec207eb5351c55.png 1024w"
 loading="lazy"
 alt="Backslashes"
 class="gallery-image"
@@ -1149,10 +1149,10 @@ href="https://en.wikipedia.org/wiki/PHP#Early_history" target="_blank"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages.jpg"
 width="600"
 height="400"
-srcset="http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages_hu_5be306c65a008b9c.jpg 480w, http://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages_hu_8081d0eb266ea027.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages_hu_5be306c65a008b9c.jpg 480w, https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages_hu_8081d0eb266ea027.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -1168,7 +1168,7 @@ data-flex-basis="360px"
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Also read: &lt;a
-href="http://blog2.michael.gr/post/2018-01-tablecloth/"
+href="https://blog2.michael.gr/post/2018-01-tablecloth/"
 &gt;Tablecloth&lt;/a&gt; (A high-tech, sci-fi horror short-story)&lt;/p&gt;
 &lt;p&gt;Note: This is a draft. It may contain inaccuracies or mistakes. There are bound to be corrections after I receive some feedback.&lt;/p&gt;
 &lt;hr&gt;
@@ -1191,7 +1191,7 @@ href="https://danluu.com/empirical-pl/" target="_blank"
 &lt;p&gt;Misinformation people want to believe spreads faster than information people don't want to believe.&lt;/p&gt;
 &lt;p&gt;&lt;a class="external"
 href="https://stackoverflow.blog/2023/01/19/adding-structure-to-dynamic-languages" target="_blank"
-&gt;The Stack Overflow Blog: Minimizing the downsides of dynamic programming languages&lt;/a&gt;&lt;/p&gt;</description></item><item><title>New Mobile Phone</title><link>http://blog2.michael.gr/post/2016-03-17-new-mobile-phone/</link><pubDate>Thu, 17 Mar 2016 17:05:01 +0000</pubDate><guid>http://blog2.michael.gr/post/2016-03-17-new-mobile-phone/</guid><description>&lt;p&gt;So, I just bought a new phone, a Samsung Note 4, (Android,) and boy, was it a lousy experience!&lt;/p&gt;
+&gt;The Stack Overflow Blog: Minimizing the downsides of dynamic programming languages&lt;/a&gt;&lt;/p&gt;</description></item><item><title>New Mobile Phone</title><link>https://blog2.michael.gr/post/2016-03-17-new-mobile-phone/</link><pubDate>Thu, 17 Mar 2016 17:05:01 +0000</pubDate><guid>https://blog2.michael.gr/post/2016-03-17-new-mobile-phone/</guid><description>&lt;p&gt;So, I just bought a new phone, a Samsung Note 4, (Android,) and boy, was it a lousy experience!&lt;/p&gt;
 &lt;h3 id="too-complicated-bundling-options"&gt;Too complicated bundling options
 &lt;/h3&gt;&lt;p&gt;To start off, the experience was becoming a bit lousy even before the purchase, with all the incredibly complicated options on offer, which make selecting a plan quite an ordeal. Frankly, I think bundling services (mobile connectivity) with products (the phone) should be prohibited.&lt;/p&gt;
 &lt;h3 id="unwanted-applications"&gt;Unwanted applications
@@ -1264,7 +1264,7 @@ href="https://stackoverflow.blog/2023/01/19/adding-structure-to-dynamic-language
 &lt;h3 id="the-fucking-samsung-quick-connect"&gt;The fucking &amp;quot;samsung quick connect&amp;quot;.
 &lt;/h3&gt;&lt;p&gt;So, on the notification menu there are two new options, which are probably samsung-only. One says &amp;quot;S.Finder&amp;quot; and the other one says &amp;quot;Quick connect&amp;quot;. If you click on &amp;quot;Quick connect&amp;quot;, you are taken to a &amp;quot;Quick connect&amp;quot; screen which gives a few hints about the magic it supposedly does, has a &amp;quot;Turn on quick connect&amp;quot; button, and gives two rather confusing options: to turn it on as always visible, or to turn it on only when quick connect is turned on. Of course this makes no sense, so you read the text more carefully, and now it appears that it is asking whether the device should be visible to other devices at all times, or only when quick connect is turned on. Which, in light of the fact that you are about to turn on quick connect, does not make much more sense either. If you hit &amp;quot;Back&amp;quot; from that screen, the pestering little fuckers hit you with an annoying popup saying &amp;quot;Update Quick Connect&amp;quot;, and &amp;quot;A new version is available. Update now?&amp;quot; &lt;/p&gt;
 \[Cancel\]&lt;p&gt; &lt;/p&gt;
-\[Update now\]&lt;p&gt;. A screenshot that was captured earlier is now adorned in the notification menu with some crap which I believe was not there before, about sharing it or editing it and stuff. So, going back to the &amp;quot;Quick connect&amp;quot; and &amp;quot;Turn on quick connect&amp;quot; screen, I select &amp;quot;Only when quick connect turned on&amp;quot; and click on &amp;quot;Turn on quick connect&amp;quot;, and I see the &amp;quot;Update Quick connect&amp;quot; popup again. I cancel it, and nothing else happens. So I go back to the notification menu, select &amp;quot;Quick connect&amp;quot; again, and some previously unseen screen opens up, but it is immediately covered by the &amp;quot;Update Quick connect&amp;quot; popup so I cannot use it. I cancel the popup, and everything disappears. So, it is impossible to go back to the &amp;quot;Quick connect&amp;quot; screen again. The fucker secured my consent to turn itself on, and now it won't run unless I consent to also updating it. Also, I cannot find any way of disabling it, since there is no &amp;quot;Quick connect&amp;quot; app in the apps. This is a serious time waster and seriously driving me nuts.&lt;/p&gt;</description></item><item><title>Why Oracle Sucks</title><link>http://blog2.michael.gr/post/2015-09-why-oracle-sucks/</link><pubDate>Mon, 14 Sep 2015 11:40:29 +0000</pubDate><guid>http://blog2.michael.gr/post/2015-09-why-oracle-sucks/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2015-09-why-oracle-sucks/media/oracle-logo.svg"
+\[Update now\]&lt;p&gt;. A screenshot that was captured earlier is now adorned in the notification menu with some crap which I believe was not there before, about sharing it or editing it and stuff. So, going back to the &amp;quot;Quick connect&amp;quot; and &amp;quot;Turn on quick connect&amp;quot; screen, I select &amp;quot;Only when quick connect turned on&amp;quot; and click on &amp;quot;Turn on quick connect&amp;quot;, and I see the &amp;quot;Update Quick connect&amp;quot; popup again. I cancel it, and nothing else happens. So I go back to the notification menu, select &amp;quot;Quick connect&amp;quot; again, and some previously unseen screen opens up, but it is immediately covered by the &amp;quot;Update Quick connect&amp;quot; popup so I cannot use it. I cancel the popup, and everything disappears. So, it is impossible to go back to the &amp;quot;Quick connect&amp;quot; screen again. The fucker secured my consent to turn itself on, and now it won't run unless I consent to also updating it. Also, I cannot find any way of disabling it, since there is no &amp;quot;Quick connect&amp;quot; app in the apps. This is a serious time waster and seriously driving me nuts.&lt;/p&gt;</description></item><item><title>Why Oracle Sucks</title><link>https://blog2.michael.gr/post/2015-09-why-oracle-sucks/</link><pubDate>Mon, 14 Sep 2015 11:40:29 +0000</pubDate><guid>https://blog2.michael.gr/post/2015-09-why-oracle-sucks/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2015-09-why-oracle-sucks/media/oracle-logo.svg"
 loading="lazy"
 &gt;
 Oracle talks a lot about 11g Express Edition, and how it differs from the full (paid) versions of their database, but it does not say a word about the most important thing:&lt;/p&gt;
@@ -1273,7 +1273,7 @@ Oracle talks a lot about 11g Express Edition, and how it differs from the full (
 &lt;/blockquote&gt;
 &lt;p&gt;No way to find out other than to try it. So, let's try it.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The downloaded installation zip file contains a folder called DISK1. Now, Oracle Database Express Edition 11g Release 2 bears the date June 4, 2014, so 14 years into the 3rd millennium Oracle is still masturbating with the concept of &amp;quot;disks&amp;quot;.&lt;/p&gt;
 &lt;p&gt;The downloaded installation zip file is 316MB, it contains a setup.exe which is 317MB, and when you run it, it extracts a contained &lt;code&gt;.msi&lt;/code&gt; file, which in turn extracts its contents.&lt;/p&gt;
@@ -1350,10 +1350,10 @@ SQL Error: ORA-00905: missing keyword
 &lt;p&gt;Unspecified 2018-11-19 10:22:05 UTC&lt;/p&gt;
 &lt;p&gt;Oracle never pleases users. All that company is good at is bureaucracy.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>The GWX (Get Windows 10) KB3035583 trojan horse</title><link>http://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/</link><pubDate>Sun, 12 Jul 2015 23:43:43 +0000</pubDate><guid>http://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/media/gwx.webp"
+&lt;/ul&gt;</description></item><item><title>The GWX (Get Windows 10) KB3035583 trojan horse</title><link>https://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/</link><pubDate>Sun, 12 Jul 2015 23:43:43 +0000</pubDate><guid>https://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/media/gwx.webp"
 width="640"
 height="341"
-srcset="http://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/media/gwx_hu_1d006ee313620c5c.webp 480w, http://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/media/gwx_hu_c5b085568a8b4769.webp 1024w"
+srcset="https://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/media/gwx_hu_1d006ee313620c5c.webp 480w, https://blog2.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/media/gwx_hu_c5b085568a8b4769.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="187"
@@ -1400,7 +1400,7 @@ href="https://betanews.com/2017/08/23/no-more-forced-windows-upgrade-downloads/"
 &lt;p&gt;Anonymous 2015-09-27 05:24:14 UTC&lt;/p&gt;
 &lt;p&gt;Yea but it still lists and keeps the check mark in it.So why hide it with the check mark in it.It won't go away.Keeps always reloading with the check mark in it.So next time you do check for updates or have it set for auto then it will sneak in.Now I have to keep an eye on this every time now.I already deleted the patch.Someone should tell them to do a delete it off the list patch.Oh since I did delete the patch it now came up as an important one to install now.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>"By using this site, you agree to the use of cookies"</title><link>http://blog2.michael.gr/post/2014-05-by-using-this-site-you-agree-to-use-of/</link><pubDate>Fri, 02 May 2014 00:19:21 +0000</pubDate><guid>http://blog2.michael.gr/post/2014-05-by-using-this-site-you-agree-to-use-of/</guid><description>&lt;p&gt;If you live outside of Europe you might be lucky enough to have no idea what this is all about, but if you live in Europe you are probably sick and tired by now of this message popping up every time you first visit a site:&lt;/p&gt;
+&lt;/ul&gt;</description></item><item><title>"By using this site, you agree to the use of cookies"</title><link>https://blog2.michael.gr/post/2014-05-by-using-this-site-you-agree-to-use-of/</link><pubDate>Fri, 02 May 2014 00:19:21 +0000</pubDate><guid>https://blog2.michael.gr/post/2014-05-by-using-this-site-you-agree-to-use-of/</guid><description>&lt;p&gt;If you live outside of Europe you might be lucky enough to have no idea what this is all about, but if you live in Europe you are probably sick and tired by now of this message popping up every time you first visit a site:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This site uses cookies to help deliver services. By using this site, you agree to the use of cookies. {Learn more} {Got it}&lt;/p&gt;
 &lt;/blockquote&gt;

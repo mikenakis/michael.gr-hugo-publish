@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Michael's Blog</title><link>http://blog2.michael.gr/tags/java/</link><description>Recent content in Java on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 23:01:53 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>http://blog2.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>http://blog2.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2025-06-immutability-assessment/images/diamond.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Michael's Blog</title><link>https://blog2.michael.gr/tags/java/</link><description>Recent content in Java on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 23:01:53 +0200</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog2.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-immutability-assessment/images/diamond.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;The need is identified for programmatically ascertaining, in languages like C# and Java, the immutability of certain objects used in situations where they are expected to be immutable. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;The Problem
 &lt;/h2&gt;&lt;p&gt;Raise your hand if you have ever had to troubleshoot a bug that manifested itself in mysterious ways, defied rational explanation, tenaciously evaded detection, made you rage at the absurdity of the observed behavior, and after much weeping and wailing and gnashing of teeth, turned out to be due to one of the following reasons:&lt;/p&gt;
@@ -152,14 +152,14 @@ href="https://thenounproject.com/icon/diamond-4452869/" target="_blank"
 &lt;/ul&gt;
 &lt;p&gt;&lt;a class="external"
 href="http://mustoverride.com/tuples%5C_structs/" target="_blank"
-&gt;Vladimir Sadov: &amp;quot;C# Tuples. Why mutable structs?&amp;quot;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Testana: A better way of running tests</title><link>http://blog2.michael.gr/post/2024-10-testana/</link><pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate><guid>http://blog2.michael.gr/post/2024-10-testana/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2024-10-testana/media/testana-logo.svg"
+&gt;Vladimir Sadov: &amp;quot;C# Tuples. Why mutable structs?&amp;quot;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Testana: A better way of running tests</title><link>https://blog2.michael.gr/post/2024-10-testana/</link><pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-10-testana/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-10-testana/media/testana-logo.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A software testing tool is presented, which uses &lt;em&gt;&lt;strong&gt;dependency analysis&lt;/strong&gt;&lt;/em&gt; to greatly optimize the process of running tests.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="what-is-testana"&gt;What is Testana?
 &lt;/h3&gt;&lt;p&gt;Testana is a console application that you launch when you want to run your tests. So far, I have created two implementations of Testana:&lt;/p&gt;
@@ -210,7 +210,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;p&gt;For example, it is very common for a code base to contain a module called &amp;quot;Utilities&amp;quot;, which most other modules depend on; Since it is a highly dependent-upon module, it should be tested first, but since its name begins with a &amp;quot;U&amp;quot;, it tends to be tested last.&lt;/p&gt;
 &lt;p&gt;Testana executes test modules in order of dependency. This means that modules with no dependencies are tested first, modules that depend upon them are tested next, and so on until everything has been tested. Thus, the first test failure is guaranteed to point at the most fundamental problem; there is no need to look further down in case some other test failure indicates a more fundamental problem. Subsequently, Testana stops executing tests after the first failure, so it saves even more time.&lt;/p&gt;
 &lt;p&gt;For more information about this way of testing, see &lt;a
-href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
+href="https://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="why-should-i-care-about-running-test-methods-in-natural-order"&gt;Why should I care about running test methods in natural order?
 &lt;/h3&gt;&lt;p&gt;Test frameworks in the C# world tend to run test methods in natural order, which is great, but in the Java world, the JUnit framework runs test methods in random order, which is at best useless, and arguably treacherous.&lt;/p&gt;
@@ -219,7 +219,7 @@ href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;p&gt;To give an example, suppose I am developing some kind of data store with insert and find functionality, and I am writing tests to make sure this functionality works. The find-item-in-store test necessarily involves insertion before finding, so I am likely to precede it with an insert-item-to-store test. In such a scenario, it is counter-productive to be told that my find-item-in-store test failed, sending me to troubleshoot the find function, and only later to be told that my insert-item-to-store test failed, which obviously means that it was in fact the insert function that needed troubleshooting; if insert-item-to-store fails, it is game over; no other operation on this store can possibly succeed, so there is no point in running any other tests on it, just as there is no point in beating a dead horse.&lt;/p&gt;
 &lt;p&gt;Finally, another very simple, very straightforward, and very important reason for wanting the test methods to be executed in natural order is because seeing the test methods listed in any other order is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;A related rant can be found here: &lt;a
-href="http://blog2.michael.gr/post/2018-04-random-order-of-tests/"
+href="https://blog2.michael.gr/post/2018-04-random-order-of-tests/"
 &gt;On JUnit's random order of test method execution&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="why-should-i-care-for-running-test-methods-in-ascending-order-of-inheritance"&gt;Why should I care for running test methods in ascending order of inheritance?
 &lt;/h3&gt;&lt;p&gt;This feature of Testana might be irrelevant to you if you never use inheritance in test classes, but I do, and I consider it very important. I also consider the typical behavior of existing test frameworks on this matter very annoying, because they tend to do the exact opposite of what is useful.&lt;/p&gt;
@@ -235,7 +235,7 @@ href="http://blog2.michael.gr/post/2018-04-random-order-of-tests/"
 &lt;/h3&gt;&lt;p&gt;No. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, the test of A still has to instantiate both A and B in order to supply A with the I interface of B, so the test depends on both A and B, which means that Testana will run the test if there is a change in either A or B.&lt;/p&gt;
 &lt;h3 id="can-testana-be-fooled-by-the-use-of-mocks"&gt;Can Testana be fooled by the use of mocks?
 &lt;/h3&gt;&lt;p&gt;Yes, Testana can be fooled by mocks, because that is what mocks do: they make a mockery out of the software testing process. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, and the test of A also refrains from depending on B by just mocking I, Testana will of course not run the test of A when there is a change in B. This, however, should not be a problem, because you should not be using mocks anyway; for more information, see &lt;a
-href="http://blog2.michael.gr/post/2023-01-14-mocking/"
+href="https://blog2.michael.gr/post/2023-01-14-mocking/"
 &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="can-testana-be-fooled-by-the-use-of-fakes"&gt;Can Testana be fooled by the use of fakes?
 &lt;/h3&gt;&lt;p&gt;No, as long as you do your testing properly. A test that utilizes a fake will be run by Testana only when there is a change in the fake, not when there is a change in the real thing; however, you should have a separate test which ensures that the behavior of the fake is identical to the behavior of the real thing in all aspects that matter. This test will be run by Testana when you modify either the fake, or the real thing, or both. Thus:&lt;/p&gt;
@@ -244,7 +244,7 @@ href="http://blog2.michael.gr/post/2023-01-14-mocking/"
 &lt;li&gt;If you make a non-breaking change to the real thing, then the fake will remain unchanged, and this is what gives you the luxury of not having to re-run tests utilizing the fake when you make a change that only affects the real thing.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For more information, see &lt;a
-href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
+href="https://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="what-about-undiscoverable-dependencies-due-to-weak-typing-the-use-of-rest-etc"&gt;What about undiscoverable dependencies due to weak typing, the use of REST, etc?
 &lt;/h3&gt;&lt;p&gt;The following &amp;quot;hip&amp;quot; and &amp;quot;trendy&amp;quot; practices of the modern day are not supported by Testana, and there is no plan to ever support them:&lt;/p&gt;
@@ -257,7 +257,7 @@ href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;Fragmenting dependencies via &lt;em&gt;&lt;strong&gt;cross-language invocations&lt;/strong&gt;&lt;/em&gt; (following the &lt;em&gt;&lt;strong&gt;polyglot craze&lt;/strong&gt;&lt;/em&gt;.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Seriously, stop all this fuckery and use a single, &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt; programming language, (that is, a programming language with &lt;em&gt;&lt;strong&gt;strong typing&lt;/strong&gt;&lt;/em&gt;,) encode your dependencies via the type system, and everything will be fine. For more information, see &lt;a
-href="http://blog2.michael.gr/post/2017-05-on-scripting-languages/"
+href="https://blog2.michael.gr/post/2017-05-on-scripting-languages/"
 &gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="how-compatible-is-testana-with-what-i-already-have"&gt;How compatible is Testana with what I already have?
 &lt;/h3&gt;&lt;ul&gt;
@@ -307,7 +307,7 @@ href="https://thenounproject.com/term/crash-test-dummy/401583/" target="_blank"
 href="https://thenounproject.com/term/woman/129498/" target="_blank"
 &gt;Alexander Skowalsky&lt;/a&gt;. Used under &lt;a class="external"
 href="https://creativecommons.org/licenses/by/3.0/us/" target="_blank"
-&gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>[SOLVED] Maven deploy fails with status 422 unprocessable entity</title><link>http://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</link><pubDate>Thu, 06 Jul 2023 09:21:20 +0000</pubDate><guid>http://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</guid><description>&lt;p&gt;It has been more than a year since I created this question on GitHub Community; a couple of days after that I found the solution by myself, so I answered my own question, and to this date comments keep being added by people who were helped by my post.&lt;/p&gt;
+&gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>[SOLVED] Maven deploy fails with status 422 unprocessable entity</title><link>https://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</link><pubDate>Thu, 06 Jul 2023 09:21:20 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</guid><description>&lt;p&gt;It has been more than a year since I created this question on GitHub Community; a couple of days after that I found the solution by myself, so I answered my own question, and to this date comments keep being added by people who were helped by my post.&lt;/p&gt;
 &lt;p&gt;When I look at it today, I notice that my answer has this particular style, this grumpy indignation which has become so characteristic of me, after a lifetime of battling with lame software, and even worse, with lame error messages.&lt;/p&gt;
 &lt;p&gt;I thought I should share this on my blog for posterity.&lt;/p&gt;
 &lt;p&gt;Here is the link:&lt;/p&gt;
@@ -343,14 +343,14 @@ href="https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-
 &lt;p&gt;What happened is that GitHub apparently has some monstrous bug which causes artifact deployment to fail if some other repository (only by the same owner, I hope!) has already deployed an artifact with the exact same name.&lt;/p&gt;
 &lt;p&gt;In this case, one repository was called Bathyscaphe, the other was called BathyscapheClaims, but each repository was trying to deploy an artifact called bathyscaphe-claims.&lt;/p&gt;
 &lt;p&gt;I changed the name of the artifact in the second repository from bathyscaphe-claims to bathyscaphe-claims2 and it worked.&lt;/p&gt;
-&lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>Intertwine</title><link>http://blog2.michael.gr/post/2022-12-intertwine/</link><pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate><guid>http://blog2.michael.gr/post/2022-12-intertwine/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2022-12-intertwine/media/intertwine-logo.svg"
+&lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>Intertwine</title><link>https://blog2.michael.gr/post/2022-12-intertwine/</link><pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-intertwine/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-intertwine/media/intertwine-logo.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="the-problem"&gt;The Problem
 &lt;/h3&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
@@ -368,7 +368,7 @@ href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a
-href="http://blog2.michael.gr/post/2022-12-messages-and-message-passing/"
+href="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/"
 &gt;On messages and message-passing&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -754,10 +754,10 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 href="https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing" target="_blank"
 &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
 &lt;p&gt;This post supersedes the original post from 2011: &lt;a
-href="http://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/"
+href="https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/"
 &gt;Intertwine: Normalizing Interface Invocations&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description></item><item><title>Bathyscaphe</title><link>http://blog2.michael.gr/post/2022-05-bathyscaphe/</link><pubDate>Tue, 19 Apr 2022 10:54:08 +0000</pubDate><guid>http://blog2.michael.gr/post/2022-05-bathyscaphe/</guid><description>&lt;p&gt;![[media/bathyscaphe-logo.svg]]&lt;/p&gt;
+&lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description></item><item><title>Bathyscaphe</title><link>https://blog2.michael.gr/post/2022-05-bathyscaphe/</link><pubDate>Tue, 19 Apr 2022 10:54:08 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-05-bathyscaphe/</guid><description>&lt;p&gt;![[media/bathyscaphe-logo.svg]]&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;This article introduces Bathyscaphe, an open-source java library that you can use to assert that your objects are immutable and/or thread-safe.&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;The problem
@@ -938,7 +938,7 @@ of &lt;strong&gt;my&lt;/strong&gt; collection, which is still &lt;em&gt;&lt;stro
 &lt;hr&gt;
 &lt;p&gt;Cover image: the Bathyscaphe logo, a line drawing of &lt;em&gt;&lt;strong&gt;bathyscaphe Trieste&lt;/strong&gt;&lt;/em&gt; by michael.gr, based on art found at &lt;a class="external"
 href="https://bertrandpiccard.com/3-generations/jacques-piccard" target="_blank"
-&gt;bertrandpiccard.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Java with Maven: Giving CI/CD a try</title><link>http://blog2.michael.gr/post/2021-02-java-with-maven-giving-cicd-try/</link><pubDate>Wed, 10 Feb 2021 10:34:45 +0000</pubDate><guid>http://blog2.michael.gr/post/2021-02-java-with-maven-giving-cicd-try/</guid><description>&lt;p&gt;Please note that this is work in progress. I am still working on it and refining it, as my understanding of it improves.&lt;/p&gt;
+&gt;bertrandpiccard.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Java with Maven: Giving CI/CD a try</title><link>https://blog2.michael.gr/post/2021-02-java-with-maven-giving-cicd-try/</link><pubDate>Wed, 10 Feb 2021 10:34:45 +0000</pubDate><guid>https://blog2.michael.gr/post/2021-02-java-with-maven-giving-cicd-try/</guid><description>&lt;p&gt;Please note that this is work in progress. I am still working on it and refining it, as my understanding of it improves.&lt;/p&gt;
 &lt;p&gt;I have a set of public repositories on GitHub showcasing my work, (&lt;a class="external"
 href="https://github.com/mikenakis" target="_blank"
 &gt;⬀&lt;/a&gt;) which is in java with maven. These projects are interdependent, so when you check out one of them, in order to compile and run it you need the binaries of some of the others. You could manually check out all of them and put them in an IDE project, but that's too much work. Solving this problem requires having Continuous Integration &amp;amp; Continuous Deployment (CI/CD) in place, so I decided to try my luck in setting one up using free services only.&lt;/p&gt;
@@ -1195,10 +1195,10 @@ So, for now caching will need to wait.&lt;/li&gt;
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Commit and push to GitHub.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Once these files have been committed to GitHub, CircleCI will take notice, and it will run our CI/CD pipeline. Do not expect it to run successfully on the first try; there will be errors, and there will be trouble. But once you get it to work successfully, it will be worth the trouble.&lt;/p&gt;</description></item><item><title>GitHub project: mikenakis-classdump</title><link>http://blog2.michael.gr/post/2018-04-github-project-classdump/</link><pubDate>Sat, 07 Apr 2018 21:28:50 +0000</pubDate><guid>http://blog2.michael.gr/post/2018-04-github-project-classdump/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512.png"
+&lt;p&gt;Once these files have been committed to GitHub, CircleCI will take notice, and it will run our CI/CD pipeline. Do not expect it to run successfully on the first try; there will be errors, and there will be trouble. But once you get it to work successfully, it will be worth the trouble.&lt;/p&gt;</description></item><item><title>GitHub project: mikenakis-classdump</title><link>https://blog2.michael.gr/post/2018-04-github-project-classdump/</link><pubDate>Sat, 07 Apr 2018 21:28:50 +0000</pubDate><guid>https://blog2.michael.gr/post/2018-04-github-project-classdump/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512.png"
 width="512"
 height="512"
-srcset="http://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512_hu_27662c5971d41324.png 480w, http://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512_hu_2a44735ad5001a27.png 1024w"
+srcset="https://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512_hu_27662c5971d41324.png 480w, https://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512_hu_2a44735ad5001a27.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
@@ -1209,10 +1209,10 @@ data-flex-basis="240px"
 &lt;p&gt;Read the README.md file at &lt;a class="external"
 href="https://github.com/mikenakis/Public/tree/master/classdump" target="_blank"
 &gt;https://github.com/mikenakis/Public/tree/master/classdump&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Cover image: The &lt;code&gt;mikenakis-classdump&lt;/code&gt; logo. Based on an image found on the interwebz.&lt;/p&gt;</description></item><item><title>Migrating a project from java 8 to java 9</title><link>http://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/</link><pubDate>Sat, 30 Sep 2017 20:27:45 +0000</pubDate><guid>http://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration.png"
+&lt;p&gt;Cover image: The &lt;code&gt;mikenakis-classdump&lt;/code&gt; logo. Based on an image found on the interwebz.&lt;/p&gt;</description></item><item><title>Migrating a project from java 8 to java 9</title><link>https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/</link><pubDate>Sat, 30 Sep 2017 20:27:45 +0000</pubDate><guid>https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration.png"
 width="700"
 height="400"
-srcset="http://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration_hu_6a31957c51b3aca6.png 480w, http://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration_hu_6f2dd076c17d35bf.png 1024w"
+srcset="https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration_hu_6a31957c51b3aca6.png 480w, https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration_hu_6f2dd076c17d35bf.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="175"

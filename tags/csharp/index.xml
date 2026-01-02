@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# on Michael's Blog</title><link>http://blog2.michael.gr/tags/csharp/</link><description>Recent content in C# on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:43:29 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/csharp/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>http://blog2.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>http://blog2.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2025-06-immutability-assessment/images/diamond.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# on Michael's Blog</title><link>https://blog2.michael.gr/tags/csharp/</link><description>Recent content in C# on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:43:29 +0200</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/csharp/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog2.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-immutability-assessment/images/diamond.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;The need is identified for programmatically ascertaining, in languages like C# and Java, the immutability of certain objects used in situations where they are expected to be immutable. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;The Problem
 &lt;/h2&gt;&lt;p&gt;Raise your hand if you have ever had to troubleshoot a bug that manifested itself in mysterious ways, defied rational explanation, tenaciously evaded detection, made you rage at the absurdity of the observed behavior, and after much weeping and wailing and gnashing of teeth, turned out to be due to one of the following reasons:&lt;/p&gt;
@@ -152,12 +152,12 @@ href="https://thenounproject.com/icon/diamond-4452869/" target="_blank"
 &lt;/ul&gt;
 &lt;p&gt;&lt;a class="external"
 href="http://mustoverride.com/tuples%5C_structs/" target="_blank"
-&gt;Vladimir Sadov: &amp;quot;C# Tuples. Why mutable structs?&amp;quot;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Human-readable names of dotnet types in C# notation</title><link>http://blog2.michael.gr/post/2025-05-human-readable-names-of-dotnet-types-in/</link><pubDate>Sun, 25 May 2025 09:18:08 +0000</pubDate><guid>http://blog2.michael.gr/post/2025-05-human-readable-names-of-dotnet-types-in/</guid><description>&lt;h3 id="summary"&gt;Summary
+&gt;Vladimir Sadov: &amp;quot;C# Tuples. Why mutable structs?&amp;quot;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Human-readable names of dotnet types in C# notation</title><link>https://blog2.michael.gr/post/2025-05-human-readable-names-of-dotnet-types-in/</link><pubDate>Sun, 25 May 2025 09:18:08 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-05-human-readable-names-of-dotnet-types-in/</guid><description>&lt;h3 id="summary"&gt;Summary
 &lt;/h3&gt;&lt;p&gt;Type names as reported by the dotnet runtime are in a cryptic, non-human-readable format. Attempts by many to solve this problem have generally been naive, incomplete, and clunky. A library that gets the job done right is presented.&lt;/p&gt;
 &lt;h3 id="the-problem"&gt;The problem
 &lt;/h3&gt;&lt;p&gt;PEARL: In dotnet, the &lt;code&gt;System.Type.Name&lt;/code&gt; and &lt;code&gt;System.Type.FullName&lt;/code&gt; properties return type names in a cryptic format which is not human-readable and bears very little resemblance to the names of the same types as they appear in C# source code.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Try this:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Console.WriteLine( typeof( int ).Name );&lt;/code&gt;&lt;/p&gt;
@@ -247,10 +247,10 @@ href="https://github.com/mikenakis/MikeNakis.CSharpTypeNames" target="_blank"
 &lt;p&gt;It is a tiny library that generates human-readable dotnet type names in C# notation, and it does it right.&lt;/p&gt;
 &lt;p&gt;More information in &lt;a class="external"
 href="https://github.com/mikenakis/MikeNakis.CSharpTypeNames/blob/master/MikeNakis.CSharpTypeNames.README.md" target="_blank"
-&gt;the README file on GitHub&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Build configurations</title><link>http://blog2.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>http://blog2.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
+&gt;the README file on GitHub&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Build configurations</title><link>https://blog2.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
 width="1536"
 height="1024"
-srcset="http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -260,7 +260,7 @@ data-flex-basis="360px"
 &lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;The popular practice of having only two different kinds of builds (&lt;em&gt;Debug&lt;/em&gt; and &lt;em&gt;Release&lt;/em&gt;) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="the-issue"&gt;The Issue
 &lt;/h3&gt;&lt;p&gt;In software development we often want our creations to have different characteristics under different circumstances; for example:&lt;/p&gt;
@@ -573,14 +573,14 @@ href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;In C# most optimizations are performed by the Just-In-Time compiler (JITter), and people say that the optimizations performed by the language compiler do not make much of a difference. However, my experiments have shown otherwise: computation-intensive code tends to run twice as fast when optimizations are enabled than when not, and this difference can be observed on a build server, so it is unaffected by any optimization choices that the JITter might make due to a debugger being attached or not. I suspect that this is happening because the language compiler saves the &amp;quot;optimize&amp;quot; flag in the binary, and the JITter subsequently observes this flag.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>Testana: A better way of running tests</title><link>http://blog2.michael.gr/post/2024-10-testana/</link><pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate><guid>http://blog2.michael.gr/post/2024-10-testana/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2024-10-testana/media/testana-logo.svg"
+&lt;/div&gt;</description></item><item><title>Testana: A better way of running tests</title><link>https://blog2.michael.gr/post/2024-10-testana/</link><pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-10-testana/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-10-testana/media/testana-logo.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A software testing tool is presented, which uses &lt;em&gt;&lt;strong&gt;dependency analysis&lt;/strong&gt;&lt;/em&gt; to greatly optimize the process of running tests.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="what-is-testana"&gt;What is Testana?
 &lt;/h3&gt;&lt;p&gt;Testana is a console application that you launch when you want to run your tests. So far, I have created two implementations of Testana:&lt;/p&gt;
@@ -631,7 +631,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;p&gt;For example, it is very common for a code base to contain a module called &amp;quot;Utilities&amp;quot;, which most other modules depend on; Since it is a highly dependent-upon module, it should be tested first, but since its name begins with a &amp;quot;U&amp;quot;, it tends to be tested last.&lt;/p&gt;
 &lt;p&gt;Testana executes test modules in order of dependency. This means that modules with no dependencies are tested first, modules that depend upon them are tested next, and so on until everything has been tested. Thus, the first test failure is guaranteed to point at the most fundamental problem; there is no need to look further down in case some other test failure indicates a more fundamental problem. Subsequently, Testana stops executing tests after the first failure, so it saves even more time.&lt;/p&gt;
 &lt;p&gt;For more information about this way of testing, see &lt;a
-href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
+href="https://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="why-should-i-care-about-running-test-methods-in-natural-order"&gt;Why should I care about running test methods in natural order?
 &lt;/h3&gt;&lt;p&gt;Test frameworks in the C# world tend to run test methods in natural order, which is great, but in the Java world, the JUnit framework runs test methods in random order, which is at best useless, and arguably treacherous.&lt;/p&gt;
@@ -640,7 +640,7 @@ href="http://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;p&gt;To give an example, suppose I am developing some kind of data store with insert and find functionality, and I am writing tests to make sure this functionality works. The find-item-in-store test necessarily involves insertion before finding, so I am likely to precede it with an insert-item-to-store test. In such a scenario, it is counter-productive to be told that my find-item-in-store test failed, sending me to troubleshoot the find function, and only later to be told that my insert-item-to-store test failed, which obviously means that it was in fact the insert function that needed troubleshooting; if insert-item-to-store fails, it is game over; no other operation on this store can possibly succeed, so there is no point in running any other tests on it, just as there is no point in beating a dead horse.&lt;/p&gt;
 &lt;p&gt;Finally, another very simple, very straightforward, and very important reason for wanting the test methods to be executed in natural order is because seeing the test methods listed in any other order is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;A related rant can be found here: &lt;a
-href="http://blog2.michael.gr/post/2018-04-random-order-of-tests/"
+href="https://blog2.michael.gr/post/2018-04-random-order-of-tests/"
 &gt;On JUnit's random order of test method execution&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="why-should-i-care-for-running-test-methods-in-ascending-order-of-inheritance"&gt;Why should I care for running test methods in ascending order of inheritance?
 &lt;/h3&gt;&lt;p&gt;This feature of Testana might be irrelevant to you if you never use inheritance in test classes, but I do, and I consider it very important. I also consider the typical behavior of existing test frameworks on this matter very annoying, because they tend to do the exact opposite of what is useful.&lt;/p&gt;
@@ -656,7 +656,7 @@ href="http://blog2.michael.gr/post/2018-04-random-order-of-tests/"
 &lt;/h3&gt;&lt;p&gt;No. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, the test of A still has to instantiate both A and B in order to supply A with the I interface of B, so the test depends on both A and B, which means that Testana will run the test if there is a change in either A or B.&lt;/p&gt;
 &lt;h3 id="can-testana-be-fooled-by-the-use-of-mocks"&gt;Can Testana be fooled by the use of mocks?
 &lt;/h3&gt;&lt;p&gt;Yes, Testana can be fooled by mocks, because that is what mocks do: they make a mockery out of the software testing process. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, and the test of A also refrains from depending on B by just mocking I, Testana will of course not run the test of A when there is a change in B. This, however, should not be a problem, because you should not be using mocks anyway; for more information, see &lt;a
-href="http://blog2.michael.gr/post/2023-01-14-mocking/"
+href="https://blog2.michael.gr/post/2023-01-14-mocking/"
 &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="can-testana-be-fooled-by-the-use-of-fakes"&gt;Can Testana be fooled by the use of fakes?
 &lt;/h3&gt;&lt;p&gt;No, as long as you do your testing properly. A test that utilizes a fake will be run by Testana only when there is a change in the fake, not when there is a change in the real thing; however, you should have a separate test which ensures that the behavior of the fake is identical to the behavior of the real thing in all aspects that matter. This test will be run by Testana when you modify either the fake, or the real thing, or both. Thus:&lt;/p&gt;
@@ -665,7 +665,7 @@ href="http://blog2.michael.gr/post/2023-01-14-mocking/"
 &lt;li&gt;If you make a non-breaking change to the real thing, then the fake will remain unchanged, and this is what gives you the luxury of not having to re-run tests utilizing the fake when you make a change that only affects the real thing.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;For more information, see &lt;a
-href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
+href="https://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="what-about-undiscoverable-dependencies-due-to-weak-typing-the-use-of-rest-etc"&gt;What about undiscoverable dependencies due to weak typing, the use of REST, etc?
 &lt;/h3&gt;&lt;p&gt;The following &amp;quot;hip&amp;quot; and &amp;quot;trendy&amp;quot; practices of the modern day are not supported by Testana, and there is no plan to ever support them:&lt;/p&gt;
@@ -678,7 +678,7 @@ href="http://blog2.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;Fragmenting dependencies via &lt;em&gt;&lt;strong&gt;cross-language invocations&lt;/strong&gt;&lt;/em&gt; (following the &lt;em&gt;&lt;strong&gt;polyglot craze&lt;/strong&gt;&lt;/em&gt;.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Seriously, stop all this fuckery and use a single, &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt; programming language, (that is, a programming language with &lt;em&gt;&lt;strong&gt;strong typing&lt;/strong&gt;&lt;/em&gt;,) encode your dependencies via the type system, and everything will be fine. For more information, see &lt;a
-href="http://blog2.michael.gr/post/2017-05-on-scripting-languages/"
+href="https://blog2.michael.gr/post/2017-05-on-scripting-languages/"
 &gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="how-compatible-is-testana-with-what-i-already-have"&gt;How compatible is Testana with what I already have?
 &lt;/h3&gt;&lt;ul&gt;
@@ -728,21 +728,21 @@ href="https://thenounproject.com/term/crash-test-dummy/401583/" target="_blank"
 href="https://thenounproject.com/term/woman/129498/" target="_blank"
 &gt;Alexander Skowalsky&lt;/a&gt;. Used under &lt;a class="external"
 href="https://creativecommons.org/licenses/by/3.0/us/" target="_blank"
-&gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>New GitHub project: VsDebugLogger</title><link>http://blog2.michael.gr/post/2023-02-09-vs-debug-logger/</link><pubDate>Thu, 09 Feb 2023 10:41:59 +0000</pubDate><guid>http://blog2.michael.gr/post/2023-02-09-vs-debug-logger/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2023-02-09-vs-debug-logger/media/vs-debug-logger-logo.svg"
+&gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>New GitHub project: VsDebugLogger</title><link>https://blog2.michael.gr/post/2023-02-09-vs-debug-logger/</link><pubDate>Thu, 09 Feb 2023 10:41:59 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-02-09-vs-debug-logger/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-02-09-vs-debug-logger/media/vs-debug-logger-logo.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Speeds up Visual Studio debug output by orders of magnitude.&lt;/p&gt;
 &lt;p&gt;On GitHub: &lt;a class="external"
 href="https://github.com/mikenakis/VsDebugLogger" target="_blank"
-&gt;https://github.com/mikenakis/VsDebugLogger&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Intertwine</title><link>http://blog2.michael.gr/post/2022-12-intertwine/</link><pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate><guid>http://blog2.michael.gr/post/2022-12-intertwine/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2022-12-intertwine/media/intertwine-logo.svg"
+&gt;https://github.com/mikenakis/VsDebugLogger&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Intertwine</title><link>https://blog2.michael.gr/post/2022-12-intertwine/</link><pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-intertwine/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-intertwine/media/intertwine-logo.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="the-problem"&gt;The Problem
 &lt;/h3&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
@@ -760,7 +760,7 @@ href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a
-href="http://blog2.michael.gr/post/2022-12-messages-and-message-passing/"
+href="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/"
 &gt;On messages and message-passing&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1146,10 +1146,10 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 href="https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing" target="_blank"
 &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
 &lt;p&gt;This post supersedes the original post from 2011: &lt;a
-href="http://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/"
+href="https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/"
 &gt;Intertwine: Normalizing Interface Invocations&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description></item><item><title>SVG in WPF</title><link>http://blog2.michael.gr/post/2021-02-svg-in-wpf/</link><pubDate>Fri, 12 Feb 2021 08:02:35 +0000</pubDate><guid>http://blog2.michael.gr/post/2021-02-svg-in-wpf/</guid><description>&lt;p&gt;My notes on how to use SVG graphics in a WPF application&lt;/p&gt;
+&lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description></item><item><title>SVG in WPF</title><link>https://blog2.michael.gr/post/2021-02-svg-in-wpf/</link><pubDate>Fri, 12 Feb 2021 08:02:35 +0000</pubDate><guid>https://blog2.michael.gr/post/2021-02-svg-in-wpf/</guid><description>&lt;p&gt;My notes on how to use SVG graphics in a WPF application&lt;/p&gt;
 &lt;h3 id="the-goal"&gt;The Goal
 &lt;/h3&gt;&lt;p&gt;The goal is to be able do do things like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1398,8 +1398,8 @@ href="https://t.me/ldp2er5" target="_blank"
 &gt;LDP2Go&lt;/a&gt; 2024-12-05 10:04:26 UTC&lt;/p&gt;
 &lt;p&gt;Спасибо!&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>C# Blooper №14: Weird / annoying interface method visibility rules</title><link>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/</link><pubDate>Fri, 04 Jan 2013 11:51:30 +0000</pubDate><guid>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;/ul&gt;</description></item><item><title>C# Blooper №14: Weird / annoying interface method visibility rules</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/</link><pubDate>Fri, 04 Jan 2013 11:51:30 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;As it turns out, an explicit interface method implementation in C# must be tied to the base-most interface to which it belongs; it cannot be tied to a descendant interface.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1458,11 +1458,11 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Well, sorry, but... it is.&lt;/p&gt;</description></item><item><title>C# Blooper №13: 'Stack' and 'Queue' do not implement 'ICollection'</title><link>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/</link><pubDate>Fri, 04 Jan 2013 11:44:32 +0000</pubDate><guid>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;/div&gt;&lt;p&gt;Well, sorry, but... it is.&lt;/p&gt;</description></item><item><title>C# Blooper №13: 'Stack' and 'Queue' do not implement 'ICollection'</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/</link><pubDate>Fri, 04 Jan 2013 11:44:32 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
-&lt;p&gt;This is a blooper of the Common Language Runtime (CLR), not of the language itself: &lt;code&gt;Stack&amp;lt;T&amp;gt;&lt;/code&gt; and &lt;code&gt;Queue&amp;lt;T&amp;gt;&lt;/code&gt; derive from &lt;code&gt;ICollection&lt;/code&gt;, but not from &lt;code&gt;ICollection&amp;lt;T&amp;gt;&lt;/code&gt;, so they do not support the &lt;code&gt;Remove( T )&lt;/code&gt; method! Why, oh why?&lt;/p&gt;</description></item><item><title>C# Blooper №12: 'Where' constraints not included in method signatures</title><link>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/</link><pubDate>Fri, 04 Jan 2013 11:31:10 +0000</pubDate><guid>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;p&gt;This is a blooper of the Common Language Runtime (CLR), not of the language itself: &lt;code&gt;Stack&amp;lt;T&amp;gt;&lt;/code&gt; and &lt;code&gt;Queue&amp;lt;T&amp;gt;&lt;/code&gt; derive from &lt;code&gt;ICollection&lt;/code&gt;, but not from &lt;code&gt;ICollection&amp;lt;T&amp;gt;&lt;/code&gt;, so they do not support the &lt;code&gt;Remove( T )&lt;/code&gt; method! Why, oh why?&lt;/p&gt;</description></item><item><title>C# Blooper №12: 'Where' constraints not included in method signatures</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/</link><pubDate>Fri, 04 Jan 2013 11:31:10 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;When writing generic methods in C#, it is possible to use the 'where' keyword to specify constraints to the types that the generic parameters can take. Unfortunately, these constraints cannot be used for resolving overloaded methods. Case in point:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1501,8 +1501,8 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>C# Blooper №11: Zero to Enum conversion weirdness</title><link>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/</link><pubDate>Fri, 04 Jan 2013 11:27:27 +0000</pubDate><guid>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;/div&gt;</description></item><item><title>C# Blooper №11: Zero to Enum conversion weirdness</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/</link><pubDate>Fri, 04 Jan 2013 11:27:27 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;When you assign an enum to int, you have to cast it. That's good. When you assign an int to enum, you also have to cast it. That's also good. But if you assign zero to an enum, you don't have to cast it! Go figure.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1545,8 +1545,8 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>C# Blooper №9: Annoying case statement fall-through rules</title><link>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/</link><pubDate>Fri, 04 Jan 2013 11:16:41 +0000</pubDate><guid>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;/div&gt;</description></item><item><title>C# Blooper №9: Annoying case statement fall-through rules</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/</link><pubDate>Fri, 04 Jan 2013 11:16:41 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;Overall, C# takes an approach which is far more friendly to novice programmers than its predecessors, C and C++ were. For example, in the case of switch statements, C# does not allow the old, error-prone style of C and C++ where you could simply fall through from one case statement to the following one; instead, at the end of each case statement C# requires either a break statement, or a goto statement to explicitly jump to another label. That's all very nice and dandy, except for one thing: C# requires a break or goto even at the last case statement of a switch statement!&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1595,8 +1595,8 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;I mean, seriously, WTF?&lt;/p&gt;</description></item><item><title>C# Blooper №10: Switch statements are not properly formatted</title><link>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/</link><pubDate>Fri, 04 Jan 2013 11:06:17 +0000</pubDate><guid>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;/div&gt;&lt;p&gt;I mean, seriously, WTF?&lt;/p&gt;</description></item><item><title>C# Blooper №10: Switch statements are not properly formatted</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/</link><pubDate>Fri, 04 Jan 2013 11:06:17 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;This is rather a Microsoft Visual Studio blooper than a Microsoft C# blooper: When formatting source code, Visual Studio offers an &amp;quot;indent case contents&amp;quot; option, but you will only find it useful if you happen to have a crooked notion as to how switch statements should be formatted. The one and only normal form of formatting switch statements is not supported.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1711,8 +1711,8 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;I know, you might disagree that my way of formatting switch statements is in any way 'normal'. So, in your case, let us agree on this: my way of formatting switch statements, whether you like it or not, is in perfect accordance to the way I format the rest of my code; and since Visual Studio allows me to precisely describe my coding style, it should also allow for a switch statement style that matches the rest of my code.&lt;/p&gt;</description></item><item><title>C# Blooper №8: No warnings for conditions that are always true/false</title><link>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/</link><pubDate>Fri, 04 Jan 2013 10:51:13 +0000</pubDate><guid>http://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;/div&gt;&lt;p&gt;I know, you might disagree that my way of formatting switch statements is in any way 'normal'. So, in your case, let us agree on this: my way of formatting switch statements, whether you like it or not, is in perfect accordance to the way I format the rest of my code; and since Visual Studio allows me to precisely describe my coding style, it should also allow for a switch statement style that matches the rest of my code.&lt;/p&gt;</description></item><item><title>C# Blooper №8: No warnings for conditions that are always true/false</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/</link><pubDate>Fri, 04 Jan 2013 10:51:13 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;The Microsoft C# compiler does not issue 'condition is always true' and 'condition is always false' warnings. Perhaps these warnings are not particularly meaningful in Java, which lacks conditional compilation directives, and therefore &lt;strong&gt;if( true )&lt;/strong&gt; and &lt;strong&gt;if( false )&lt;/strong&gt; are the only means of achieving conditional compilation; but in C#, which has special conditional compilation directives, conditions which are always true or always false are invariably so by mistake; therefore, these warnings would indeed be meaningful, and useful.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1754,16 +1754,16 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;For more information see &lt;a
-href="http://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
-&gt;Why the Microsoft C# compiler lacks many useful warnings&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Why the Microsoft C# compiler lacks many useful warnings</title><link>http://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/</link><pubDate>Tue, 13 Nov 2012 10:46:49 +0000</pubDate><guid>http://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/</guid><description>&lt;p&gt;As my &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+href="https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
+&gt;Why the Microsoft C# compiler lacks many useful warnings&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Why the Microsoft C# compiler lacks many useful warnings</title><link>https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/</link><pubDate>Tue, 13 Nov 2012 10:46:49 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/</guid><description>&lt;p&gt;As my &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; series of articles shows, the Microsoft C# compiler fails to issue many useful warnings which one would reasonably expect from a decent compiler of any language, and which are in fact readily and lavishly issued by Java compilers.&lt;/p&gt;
 &lt;p&gt;After all these years that the Microsoft C# compiler has been maturing, one cannot help but postulate that there are ulterior motives behind this continued state of misery with respect to warnings. For lo and behold, it just so happens that the &amp;quot;Ultimate&amp;quot; (most feature-packed and most outrageously expensive) edition of Microsoft Visual Studio contains a &amp;quot;Code Analysis&amp;quot; feature, which is capable of issuing hundreds of different types of warnings, ranging from the pedantic to the arcane, and including most, if not all, of the missing warnings that I am discussing here.&lt;/p&gt;
 &lt;p&gt;Now, besides the fact that the Code Analysis feature comes at a considerable additional cost, it is also very cumbersome to use on a frequent basis, since it has been built as a separate product feature, instead of having been integrated into the compiler. For one thing, it is very slow. Another thing is that it is very spammy: we are talking about multiple warnings for every single line of code here, most of which are useless, and the first thing you need to do about them is to turn them off. And there are several dozen warnings to turn off.&lt;/p&gt;
 &lt;p&gt;This cumbersomeness makes the Code Analysis feature unsuitable for use in the instant builds which developers tend to perform every few minutes or so, and more suitable to use as a separate code-quality-assurance step to be performed once or twice during the entire development process of a product, or at best on nightly builds. Unfortunately, it is precisely on instant builds that the warnings I am talking about in these articles are most useful. Better yet, most of these warnings are useful in real-time, while typing the code, in the form of yellow curly underlines. For example, as a developer, I want to know that a parameter to a method I have just written goes unused before I even proceed to start coding the next method, because it most probably means that I forgot something or I did something wrong. This information is useful not tomorrow, not in a couple of months, but right now.&lt;/p&gt;
 &lt;p&gt;So, what has probably happened here is that the Microsoft C# compiler team was told by Microsoft's marketing department to intentionally cripple the C# compiler and make it less useful to all of us, by moving some of the functionality which rightfully belongs to it into some other module, so that their premium &amp;quot;Ultimate&amp;quot; product can have a raison d'être.&lt;/p&gt;
-&lt;p&gt;I bet you that Balmer is behind this.&lt;/p&gt;</description></item><item><title>C# Blooper №7: No warnings about unused private methods</title><link>http://blog2.michael.gr/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/</link><pubDate>Sat, 10 Nov 2012 07:29:56 +0000</pubDate><guid>http://blog2.michael.gr/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;p&gt;I bet you that Balmer is behind this.&lt;/p&gt;</description></item><item><title>C# Blooper №7: No warnings about unused private methods</title><link>https://blog2.michael.gr/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/</link><pubDate>Sat, 10 Nov 2012 07:29:56 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;If you have a private method which is never used, you will not be given a warning about it by the Microsoft C# compiler. This means that your app will likely get shipped with unnecessary chunks of code in it, some of them possibly containing string literals that were never meant to make it out of the development environment, or even requiring libraries to be linked which were never meant to be required on the field.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1791,9 +1791,9 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;For more information see &lt;a
-href="http://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
-&gt;Why the Microsoft C# compiler lacks many useful warnings&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>C# Blooper №4: Lame/annoying variable scoping rules, Part 1</title><link>http://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/</link><pubDate>Fri, 09 Nov 2012 15:04:33 +0000</pubDate><guid>http://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+href="https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
+&gt;Why the Microsoft C# compiler lacks many useful warnings&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>C# Blooper №4: Lame/annoying variable scoping rules, Part 1</title><link>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/</link><pubDate>Fri, 09 Nov 2012 15:04:33 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;A variable identifier is, of course, only visible within the scope in which it is declared. This includes nested (child) scopes, but it does not include enclosing (parent) scopes. In C# however, once a variable identifier has been used in a scope, its name is &amp;quot;poisoned&amp;quot;, so it cannot be used in enclosing scopes. Take this example:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -1838,9 +1838,9 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Well, I am sorry, but in the above case the new variable named 'o' would most definitely *not* give a different meaning to the 'o' which was used in the child scope. It would, if it had been declared before the 'if' statement, but it wasn't. Luckily, if this &amp;quot;feature&amp;quot; was to be removed from the language, it would not break any existing code. So, can we please have this fixed? Pretty please?&lt;/p&gt;
 &lt;p&gt;See also: &lt;a
-href="http://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/"
-&gt;C# Blooper №5: Lame/annoying variable scoping rules, Part 2&lt;/a&gt;&lt;/p&gt;</description></item><item><title>C# Blooper №6: No warnings about unused parameters</title><link>http://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/</link><pubDate>Fri, 09 Nov 2012 14:29:46 +0000</pubDate><guid>http://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/"
+&gt;C# Blooper №5: Lame/annoying variable scoping rules, Part 2&lt;/a&gt;&lt;/p&gt;</description></item><item><title>C# Blooper №6: No warnings about unused parameters</title><link>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/</link><pubDate>Fri, 09 Nov 2012 14:29:46 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;One common mistake that programmers make is to forget to make use of a parameter to a method. This can lead to quite subtle bugs that are hard to track down and correct.&lt;/p&gt;
 &lt;p&gt;Now, other language compilers are kind enough to warn the programmer that a parameter is unused, and they also allow temporary suppression of the warning for the rare case when such lack of use is legitimate. But not so in Visual C#. If you forget to use a parameter in Visual C#, you will not know unless you run the &amp;quot;Code Analysis&amp;quot; tool on it.&lt;/p&gt;
@@ -1869,7 +1869,7 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;For more information see &lt;a
-href="http://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
+href="https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
 &gt;Why the Microsoft C# compiler lacks many useful warnings&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1891,11 +1891,11 @@ href="http://ganeshkamath89.blogspot.com/" target="_blank"
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>C# Blooper №5: Lame/annoying variable scoping rules, Part 2</title><link>http://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/</link><pubDate>Fri, 09 Nov 2012 14:16:36 +0000</pubDate><guid>http://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+&lt;/ul&gt;</description></item><item><title>C# Blooper №5: Lame/annoying variable scoping rules, Part 2</title><link>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/</link><pubDate>Fri, 09 Nov 2012 14:16:36 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;In light of &lt;a
-href="http://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
+href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
 &gt;C# Blooper №4: Lame/annoying variable scoping rules, Part 1&lt;/a&gt;, this one is more of a confusing error message than an actual new blooper. What I am doing below is that I am declaring a field within a class, I am accessing that field from within a method, and further down within the same method I am declaring a new local variable with the same name as the field. Now, C# will not allow me to declare that local variable because it has the same name as the field, but that's not where I am receiving the error. Instead, the error is given when accessing the field. If you only read the first sentence of the error message, it does not make any sense at all. If you bother also reading the second sentence, it gives you a hint as to the real problem. Now, that's not very cool.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -1938,9 +1938,9 @@ href="http://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-vari
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;See also: &lt;a
-href="http://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
-&gt;C# Blooper №4: Lame/annoying variable scoping rules, Part 1&lt;/a&gt;&lt;/p&gt;</description></item><item><title>C# Blooper №3: No warnings about fields having already been initialized</title><link>http://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/</link><pubDate>Fri, 06 Jan 2012 13:51:54 +0000</pubDate><guid>http://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
+&gt;C# Blooper №4: Lame/annoying variable scoping rules, Part 1&lt;/a&gt;&lt;/p&gt;</description></item><item><title>C# Blooper №3: No warnings about fields having already been initialized</title><link>https://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/</link><pubDate>Fri, 06 Jan 2012 13:51:54 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;When you declare a member variable and you pre-initialize it at the same time, and then you try to re-initialize it within the constructor without ever making use of its original pre-initialized value, you receive no warning about the field having already been initialized.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -2000,9 +2000,9 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/div&gt;&lt;p&gt;This means that you may accidentally invoke complex initialization logic twice, unnecessarily wasting memory and clock cycles, and it may also lead to logic errors, if by any chance that initialization logic has side effects which are only meant to occur once. It may also confuse someone reading your code, (or even yourself looking at your code months later,) trying to figure out what's the purpose behind the seemingly repeated initialization, before the realization sinks in that it is simply redundant. Furthermore, if the re-initialization happens to differ from the pre-initialization, a good question arises, asking which one of the two was meant to be the correct one.&lt;/p&gt;
 &lt;p&gt;It is a pity, because the compiler could warn the programmer against this pitfall.&lt;/p&gt;
 &lt;p&gt;Also see related post: &lt;a
-href="http://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/"
-&gt;C# Blooper №2: No warnings about accessing uninitialized members&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>C# Blooper №2: No warnings about accessing uninitialized members</title><link>http://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/</link><pubDate>Fri, 06 Jan 2012 12:33:53 +0000</pubDate><guid>http://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+href="https://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/"
+&gt;C# Blooper №2: No warnings about accessing uninitialized members&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>C# Blooper №2: No warnings about accessing uninitialized members</title><link>https://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/</link><pubDate>Fri, 06 Jan 2012 12:33:53 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;When you declare a member variable, and then you try to read it from within the constructor without having first initialized it, you receive no warning about accessing an uninitialized member. This happens even if the member is declared as readonly.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -2060,63 +2060,63 @@ href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Someone might argue that this is behavior is fine because the member in question is guaranteed to contain its default value. First of all, a readonly member containing its default value is completely useless. (See &lt;a
-href="http://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/"
+href="https://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/"
 &gt;C# Blooper №1: No warnings about uninitialized readonly members&lt;/a&gt;) Secondly, if the compiler is to help the developer catch potential errors and write better code, this is not a valid excuse: a different strategy is necessary.&lt;/p&gt;
 &lt;p&gt;If the programmer intends the member to contain its default value, then the programmer ought to explicitly state so. Failing to do so ought to imply intention to initialize the member later on, and certainly before any attempt is made to read the member. This way, the programmer can have it both ways: they can have members pre-initialized to their default values, and they can receive warnings when they fail to initialize members.&lt;/p&gt;
 &lt;p&gt;Also please note that the compiler is capable of detecting that the value with which a member is being explicitly initialized is the default value for the type of the member, and so it can refrain from emitting any additional code for the assignment; thus, there is no performance issue.&lt;/p&gt;
 &lt;p&gt;Also see related post: &lt;a
-href="http://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/"
-&gt;C# Blooper №3: No warnings about fields having already been initialized&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>C# Bloopers</title><link>http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/</link><pubDate>Thu, 05 Jan 2012 12:21:02 +0000</pubDate><guid>http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/media/csharp-logo-2023.svg"
+href="https://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/"
+&gt;C# Blooper №3: No warnings about fields having already been initialized&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>C# Bloopers</title><link>https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/</link><pubDate>Thu, 05 Jan 2012 12:21:02 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/media/csharp-logo-2023.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Please do not get me wrong; C# is awesome. It is the language of my choice, even though I am pretty well versed in C++ and Java. That having been said, it cannot be denied that C# has its share of flaws, too. In this series of posts I am documenting some of them, in no particular order.&lt;/p&gt;
 &lt;p&gt;Also please note that some of the issues described here are Visual Studio bloopers, or DotNet bloopers, and not C#-in-general bloopers.&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/"
+href="https://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/"
 &gt;C# Blooper №1: No warnings about uninitialized readonly members&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/"
+href="https://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/"
 &gt;C# Blooper №2: No warnings about accessing uninitialized members&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/"
+href="https://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/"
 &gt;C# Blooper №3: No warnings about fields having already been initialized&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
+href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
 &gt;C# Blooper №4: Lame/annoying variable scoping rules, Part 1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/"
+href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/"
 &gt;C# Blooper №5: Lame/annoying variable scoping rules, Part 2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/"
+href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/"
 &gt;C# Blooper №6: No warnings about unused parameters&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/"
+href="https://blog2.michael.gr/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/"
 &gt;C# Blooper №7: No warnings about unused private methods&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/"
+href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/"
 &gt;C# Blooper №8: No warnings for conditions that are always true/false&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/"
+href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/"
 &gt;C# Blooper №9: Annoying case statement fall-through rules&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/"
+href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/"
 &gt;C# Blooper №10: Switch statements are not properly formatted&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/"
+href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/"
 &gt;C# Blooper №11: Zero to Enum conversion weirdness&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/"
+href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/"
 &gt;C# Blooper №12: 'Where' constraints not included in method signatures&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/"
+href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/"
 &gt;C# Blooper №13: 'Stack' and 'Queue' do not implement 'ICollection'&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="http://blog2.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/"
+href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/"
 &gt;C# Blooper №14: Weird / annoying interface method visibility rules&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Stay tuned, there is more to come.&lt;/p&gt;</description></item><item><title>C# Blooper №1: No warnings about uninitialized readonly members</title><link>http://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/</link><pubDate>Sat, 31 Dec 2011 09:26:01 +0000</pubDate><guid>http://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/</guid><description>&lt;p&gt;(When the class is public and the member is public, protected or protected internal.)&lt;/p&gt;
+&lt;p&gt;Stay tuned, there is more to come.&lt;/p&gt;</description></item><item><title>C# Blooper №1: No warnings about uninitialized readonly members</title><link>https://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/</link><pubDate>Sat, 31 Dec 2011 09:26:01 +0000</pubDate><guid>https://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/</guid><description>&lt;p&gt;(When the class is public and the member is public, protected or protected internal.)&lt;/p&gt;
 &lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
-href="http://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
+href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;The C# compiler is kind enough to give you a &amp;quot;field is never assigned to&amp;quot; warning if you forget to initialize a readonly member which is private or internal, or if the class in which it is being declared is internal. But if the class is public, and the readonly member is public, protected or protected internal, then no warning for you! Why, oh why?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -2226,8 +2226,8 @@ The compiler detected an uninitialized private or internal field declaration tha
 &lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I posted this question on StackOverflow, and Eric Lippert himself answered it. The short answer is that it is an oversight of the compiler, but &lt;a class="external"
 href="https://stackoverflow.com/questions/8688204/why-do-i-not-get-warnings-about-uninitialized-readonly-fields" target="_blank"
-&gt;the long answer is also quite interesting and worth reading&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Intertwine: Normalizing Interface Invocations</title><link>http://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/</link><pubDate>Sun, 16 Oct 2011 18:42:25 +0000</pubDate><guid>http://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/</guid><description>&lt;p&gt;Note: This post has been superseded by a new post in 2022. See &lt;a
-href="http://blog2.michael.gr/post/2022-12-intertwine/"
+&gt;the long answer is also quite interesting and worth reading&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Intertwine: Normalizing Interface Invocations</title><link>https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/</link><pubDate>Sun, 16 Oct 2011 18:42:25 +0000</pubDate><guid>https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/</guid><description>&lt;p&gt;Note: This post has been superseded by a new post in 2022. See &lt;a
+href="https://blog2.michael.gr/post/2022-12-intertwine/"
 &gt;Intertwine&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This is a C# project that I did back in 2011. It consists of a (rather informal) white paper which describes the project, and a zip file containing the source code in the form of a Microsoft Visual Studio solution.&lt;/p&gt;
 &lt;p&gt;Here is the abstract:&lt;/p&gt;

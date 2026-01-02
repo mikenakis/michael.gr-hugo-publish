@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotnet on Michael's Blog</title><link>http://blog2.michael.gr/tags/dotnet/</link><description>Recent content in Dotnet on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:43:29 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/dotnet/index.xml" rel="self" type="application/rss+xml"/><item><title>Build configurations</title><link>http://blog2.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>http://blog2.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotnet on Michael's Blog</title><link>https://blog2.michael.gr/tags/dotnet/</link><description>Recent content in Dotnet on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:43:29 +0200</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/dotnet/index.xml" rel="self" type="application/rss+xml"/><item><title>Build configurations</title><link>https://blog2.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
 width="1536"
 height="1024"
-srcset="http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w"
+srcset="https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -11,7 +11,7 @@ data-flex-basis="360px"
 &lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;The popular practice of having only two different kinds of builds (&lt;em&gt;Debug&lt;/em&gt; and &lt;em&gt;Release&lt;/em&gt;) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="the-issue"&gt;The Issue
 &lt;/h3&gt;&lt;p&gt;In software development we often want our creations to have different characteristics under different circumstances; for example:&lt;/p&gt;
@@ -324,7 +324,7 @@ href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;In C# most optimizations are performed by the Just-In-Time compiler (JITter), and people say that the optimizations performed by the language compiler do not make much of a difference. However, my experiments have shown otherwise: computation-intensive code tends to run twice as fast when optimizations are enabled than when not, and this difference can be observed on a build server, so it is unaffected by any optimization choices that the JITter might make due to a debugger being attached or not. I suspect that this is happening because the language compiler saves the &amp;quot;optimize&amp;quot; flag in the binary, and the JITter subsequently observes this flag.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>New GitHub project: VsDebugLogger</title><link>http://blog2.michael.gr/post/2023-02-09-vs-debug-logger/</link><pubDate>Thu, 09 Feb 2023 10:41:59 +0000</pubDate><guid>http://blog2.michael.gr/post/2023-02-09-vs-debug-logger/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2023-02-09-vs-debug-logger/media/vs-debug-logger-logo.svg"
+&lt;/div&gt;</description></item><item><title>New GitHub project: VsDebugLogger</title><link>https://blog2.michael.gr/post/2023-02-09-vs-debug-logger/</link><pubDate>Thu, 09 Feb 2023 10:41:59 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-02-09-vs-debug-logger/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-02-09-vs-debug-logger/media/vs-debug-logger-logo.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
