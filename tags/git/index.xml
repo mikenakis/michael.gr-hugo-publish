@@ -1,45 +1,30 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>git on Michael&#39;s Blog</title>
-        <link>//localhost:1313/tags/git/</link>
-        <description>Recent content in git on Michael&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
-        <lastBuildDate>Wed, 15 Oct 2025 12:07:53 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>[SOLVED] Maven deploy fails with status 422 unprocessable entity</title>
-        <link>//localhost:1313/post/2023-07-06-solved-maven-deploy-fails-with-status/</link>
-        <pubDate>Thu, 06 Jul 2023 09:21:20 +0000</pubDate>
-        
-        <guid>//localhost:1313/post/2023-07-06-solved-maven-deploy-fails-with-status/</guid>
-        <description>&lt;p&gt;It has been more than a year since I created this question on GitHub Community; a couple of days after that I found the solution by myself, so I answered my own question, and to this date comments keep being added by people who were helped by my post.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>git on Michael's Blog</title><link>http://blog2.michael.gr/tags/git/</link><description>Recent content in git on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 15 Oct 2025 12:07:53 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/git/index.xml" rel="self" type="application/rss+xml"/><item><title>[SOLVED] Maven deploy fails with status 422 unprocessable entity</title><link>http://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</link><pubDate>Thu, 06 Jul 2023 09:21:20 +0000</pubDate><guid>http://blog2.michael.gr/post/2023-07-06-solved-maven-deploy-fails-with-status/</guid><description>&lt;p&gt;It has been more than a year since I created this question on GitHub Community; a couple of days after that I found the solution by myself, so I answered my own question, and to this date comments keep being added by people who were helped by my post.&lt;/p&gt;
 &lt;p&gt;When I look at it today, I notice that my answer has this particular style, this grumpy indignation which has become so characteristic of me, after a lifetime of battling with lame software, and even worse, with lame error messages.&lt;/p&gt;
 &lt;p&gt;I thought I should share this on my blog for posterity.&lt;/p&gt;
 &lt;p&gt;Here is the link:&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;external&#34; 
-   href=&#34;https://github.com/orgs/community/discussions/23474&#34; target=&#34;_blank&#34;
-   &gt;https://github.com/orgs/community/discussions/23474&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://github.com/orgs/community/discussions/23474" target="_blank"
+&gt;https://github.com/orgs/community/discussions/23474&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;And here is the question:&lt;/p&gt;
 &lt;p&gt;GitHub Community&lt;/p&gt;
 &lt;p&gt;Maven deploy fails with status 422 unprocessable entity #23474&lt;/p&gt;
 &lt;p&gt;Asked by Mikenakis on May 27, 2022&lt;/p&gt;
-&lt;p&gt;I have this repository: &lt;a class=&#34;external&#34; 
-   href=&#34;https://github.com/mikenakis/Bathyscaphe&#34; target=&#34;_blank&#34;
-   &gt;GitHub - mikenakis/Bathyscaphe: Deep immutability and thread-safety assessment for Java objects&lt;/a&gt; in which both my CI-Workflow and my Release-Workflow work fine.&lt;/p&gt;
+&lt;p&gt;I have this repository: &lt;a class="external"
+href="https://github.com/mikenakis/Bathyscaphe" target="_blank"
+&gt;GitHub - mikenakis/Bathyscaphe: Deep immutability and thread-safety assessment for Java objects&lt;/a&gt; in which both my CI-Workflow and my Release-Workflow work fine.&lt;/p&gt;
 &lt;p&gt;Now I am trying to extract a sub-module from that repository into a new repository.&lt;/p&gt;
-&lt;p&gt;So, I created this repository: &lt;a class=&#34;external&#34; 
-   href=&#34;https://github.com/mikenakis/BathyscapheClaims&#34; target=&#34;_blank&#34;
-   &gt;GitHub - mikenakis/BathyscapheClaims&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So, I created this repository: &lt;a class="external"
+href="https://github.com/mikenakis/BathyscapheClaims" target="_blank"
+&gt;GitHub - mikenakis/BathyscapheClaims&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The CI-Workflow works, but when I try to launch the Relase-Workflow, I get the following error:&lt;/p&gt;
-&lt;p&gt;Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy (default-deploy) on project bathyscaphe-claims: ArtifactDeployerException: Failed to deploy artifacts: Could not transfer artifact io.github.mikenakis:bathyscaphe-claims:jar:1.3 from/to github (&lt;a class=&#34;external&#34; 
-   href=&#34;https://maven.pkg.github.com/mikenakis/BathyscapheClaims%29&#34; target=&#34;_blank&#34;
-   &gt;https://maven.pkg.github.com/mikenakis/BathyscapheClaims)&lt;/a&gt;: transfer failed for &lt;a class=&#34;external&#34; 
-   href=&#34;https://maven.pkg.github.com/mikenakis/BathyscapheClaims/io/github/mikenakis/bathyscaphe-claims/1.3/bathyscaphe-claims-1.3.jar&#34; target=&#34;_blank&#34;
-   &gt;https://maven.pkg.github.com/mikenakis/BathyscapheClaims/io/github/mikenakis/bathyscaphe-claims/1.3/bathyscaphe-claims-1.3.jar&lt;/a&gt;, status: 422 Unprocessable Entity → [Help 1]&lt;/p&gt;
-&lt;p&gt;I have already seen the issues that appear to be similar; most of them have no answer, one of them (&lt;a class=&#34;external&#34; 
-   href=&#34;https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-entity/119670&#34; target=&#34;_blank&#34;
-   &gt;Maven deploy fails with HTTP 422 Unprocessable Entity&lt;/a&gt;) has an extensive discussion, but it does not seem to apply in my case.&lt;/p&gt;
+&lt;p&gt;Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:3.0.0-M2:deploy (default-deploy) on project bathyscaphe-claims: ArtifactDeployerException: Failed to deploy artifacts: Could not transfer artifact io.github.mikenakis:bathyscaphe-claims:jar:1.3 from/to github (&lt;a class="external"
+href="https://maven.pkg.github.com/mikenakis/BathyscapheClaims%29" target="_blank"
+&gt;https://maven.pkg.github.com/mikenakis/BathyscapheClaims)&lt;/a&gt;: transfer failed for &lt;a class="external"
+href="https://maven.pkg.github.com/mikenakis/BathyscapheClaims/io/github/mikenakis/bathyscaphe-claims/1.3/bathyscaphe-claims-1.3.jar" target="_blank"
+&gt;https://maven.pkg.github.com/mikenakis/BathyscapheClaims/io/github/mikenakis/bathyscaphe-claims/1.3/bathyscaphe-claims-1.3.jar&lt;/a&gt;, status: 422 Unprocessable Entity → [Help 1]&lt;/p&gt;
+&lt;p&gt;I have already seen the issues that appear to be similar; most of them have no answer, one of them (&lt;a class="external"
+href="https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-entity/119670" target="_blank"
+&gt;Maven deploy fails with HTTP 422 Unprocessable Entity&lt;/a&gt;) has an extensive discussion, but it does not seem to apply in my case.&lt;/p&gt;
 &lt;p&gt;Can someone please help me? It is probably something silly, but I only have one pair of eyes, while this obviously needs two! (-:=&lt;/p&gt;
 &lt;p&gt;Cheers!&lt;/p&gt;
 &lt;p&gt;And here is the answer:&lt;/p&gt;
@@ -49,90 +34,72 @@
 &lt;p&gt;What happened is that GitHub apparently has some monstrous bug which causes artifact deployment to fail if some other repository (only by the same owner, I hope!) has already deployed an artifact with the exact same name.&lt;/p&gt;
 &lt;p&gt;In this case, one repository was called Bathyscaphe, the other was called BathyscapheClaims, but each repository was trying to deploy an artifact called bathyscaphe-claims.&lt;/p&gt;
 &lt;p&gt;I changed the name of the artifact in the second repository from bathyscaphe-claims to bathyscaphe-claims2 and it worked.&lt;/p&gt;
-&lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description>
-        </item>
-        <item>
-        <title>So the &#34;master&#34; branch is not kosher anymore</title>
-        <link>//localhost:1313/post/2022-12-master-branch-not-kosher/</link>
-        <pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate>
-        
-        <guid>//localhost:1313/post/2022-12-master-branch-not-kosher/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg&#34;
-	width=&#34;2775&#34;
-	height=&#34;1684&#34;
-	srcset=&#34;//localhost:1313/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_8ae04781ddc88246.jpg 480w, //localhost:1313/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_58a6348cfbae9cec.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;164&#34;
-		data-flex-basis=&#34;395px&#34;
-	
+&lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
+width="2775"
+height="1684"
+srcset="http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_8ae04781ddc88246.jpg 480w, http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_58a6348cfbae9cec.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="164"
+data-flex-basis="395px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;The origins of the debate go so far back that they are lost in the mists of time, but a good starting point (which contains references to prior debate) is an Internet Draft from 2018 titled &lt;em&gt;&lt;a class=&#34;external&#34; 
-   href=&#34;https://datatracker.ietf.org/doc/draft-knodel-terminology/&#34; target=&#34;_blank&#34;
-   &gt;Terminology, Power, and Inclusive Language in Internet-Drafts and RFCs&lt;/a&gt;&lt;/em&gt;. Some especially &lt;a class=&#34;external&#34; 
-   href=&#34;https://www.urbandictionary.com/define.php?term=woke&#34; target=&#34;_blank&#34;
-   &gt;woke&lt;/a&gt; communities like the Python community had already started applying some of the recommendations in this draft as early as 2019, but things really picked up steam in 2020, with &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Murder_of_George_Floyd&#34; target=&#34;_blank&#34;
-   &gt;the murder of George Floyd&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
-   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Programmers all over the world, the overwhelming majority of whom are white boys, wanted to feel like they are doing something about the whole &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Black_Lives_Matter&#34; target=&#34;_blank&#34;
-   &gt;Black Lives Matter&lt;/a&gt; thing, but killing cops is a bit difficult, let alone messy, not to mention risky, and what if there is one good cop in the USA and we kill him? &amp;ndash; so they resorted to the next best thing: &lt;em&gt;using more sensitive language&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Naturally, every company that caters to &lt;a class=&#34;external&#34; 
-   href=&#34;https://www.urbandictionary.com/define.php?term=Wokey&#34; target=&#34;_blank&#34;
-   &gt;wokeys&lt;/a&gt; needed to show that they are more woke than the next one, and changing terminology is such a cheap and easy thing to do compared to the amount of good publicity it generates that it is actually a bargain; thus, all mega-corporations were suddenly competing on who will revise more politically incorrect terms faster. This involved the identification of politically incorrect terms that we were previously unaware of, and in some cases even the invention of some.&lt;/p&gt;
-&lt;p&gt;The 2018 Internet Draft about inclusive language says nothing about the master branch; it suggests, among other things, to rename the term master/slave to something else, e.g. primary/secondary. This change is arguably worth making; not so much because of its inherent merit, (it has very little of that,) but because we have to acknowledge the possibility that we are unable to put ourselves in the shoes of people who might be hurt by the use of the term. Rumor has it that if you ask actual black people about this issue, they are likely to tell you that they don&amp;rsquo;t give a damn, but this is destined to slide by. Making this change also presupposes that we feel compelled to go out of our way to ease the pain of people who for whatever reasons feel hurt by various things, but that can also arguably be regarded as a reasonable thing to do.&lt;/p&gt;
+&lt;p&gt;The origins of the debate go so far back that they are lost in the mists of time, but a good starting point (which contains references to prior debate) is an Internet Draft from 2018 titled &lt;em&gt;&lt;a class="external"
+href="https://datatracker.ietf.org/doc/draft-knodel-terminology/" target="_blank"
+&gt;Terminology, Power, and Inclusive Language in Internet-Drafts and RFCs&lt;/a&gt;&lt;/em&gt;. Some especially &lt;a class="external"
+href="https://www.urbandictionary.com/define.php?term=woke" target="_blank"
+&gt;woke&lt;/a&gt; communities like the Python community had already started applying some of the recommendations in this draft as early as 2019, but things really picked up steam in 2020, with &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Murder_of_George_Floyd" target="_blank"
+&gt;the murder of George Floyd&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a
+href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+&gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Programmers all over the world, the overwhelming majority of whom are white boys, wanted to feel like they are doing something about the whole &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Black_Lives_Matter" target="_blank"
+&gt;Black Lives Matter&lt;/a&gt; thing, but killing cops is a bit difficult, let alone messy, not to mention risky, and what if there is one good cop in the USA and we kill him? -- so they resorted to the next best thing: &lt;em&gt;using more sensitive language&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Naturally, every company that caters to &lt;a class="external"
+href="https://www.urbandictionary.com/define.php?term=Wokey" target="_blank"
+&gt;wokeys&lt;/a&gt; needed to show that they are more woke than the next one, and changing terminology is such a cheap and easy thing to do compared to the amount of good publicity it generates that it is actually a bargain; thus, all mega-corporations were suddenly competing on who will revise more politically incorrect terms faster. This involved the identification of politically incorrect terms that we were previously unaware of, and in some cases even the invention of some.&lt;/p&gt;
+&lt;p&gt;The 2018 Internet Draft about inclusive language says nothing about the master branch; it suggests, among other things, to rename the term master/slave to something else, e.g. primary/secondary. This change is arguably worth making; not so much because of its inherent merit, (it has very little of that,) but because we have to acknowledge the possibility that we are unable to put ourselves in the shoes of people who might be hurt by the use of the term. Rumor has it that if you ask actual black people about this issue, they are likely to tell you that they don't give a damn, but this is destined to slide by. Making this change also presupposes that we feel compelled to go out of our way to ease the pain of people who for whatever reasons feel hurt by various things, but that can also arguably be regarded as a reasonable thing to do.&lt;/p&gt;
 &lt;p&gt;I am worried that one day people might start feeling hurt by the fact that I am sporting a beard, due to the unbearably toxic masculinity that it exudes and what not, but I guess I will deal with that when the day comes.&lt;/p&gt;
-&lt;p&gt;Now, if the abolition of master/slave hardly had any real grounds to stand on, the abolition of the master branch is absolutely groundless, because in this case the word &amp;ldquo;master&amp;rdquo; is used in the sense of &amp;ldquo;original&amp;rdquo;, as in &amp;ldquo;master recording&amp;rdquo;. (See&lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wiktionary.org/wiki/master&#34; target=&#34;_blank&#34;
-   &gt;&amp;ldquo;master&amp;rdquo; in wiktionary.org&lt;/a&gt;.) However, if we acknowledge someone the right to be offended by master/slave, then who are we to take away their right to also be offended by master branch? After all, don&amp;rsquo;t forget that we have already established that we are incapable of putting ourselves in their shoes, right?&lt;/p&gt;
-&lt;p&gt;So, once the abolition of &amp;ldquo;master/slave&amp;rdquo; was unanimously agreed upon, the master branch was naturally next. It was just a matter of &lt;em&gt;the innocent paying along with the guilty&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;After some debate, (see &lt;a class=&#34;external&#34; 
-   href=&#34;https://git.github.io/rev_news/2020/07/29/edition-65/&#34; target=&#34;_blank&#34;
-   &gt;Git Rev News: Edition 65&lt;/a&gt;) both git and GitHub announced in 2020 that they were moving in the direction of renaming the default branch from &amp;ldquo;master&amp;rdquo; to main. In October of that year, GitHub &lt;a class=&#34;external&#34; 
-   href=&#34;https://github.com/github/renaming&#34; target=&#34;_blank&#34;
-   &gt;proceeded with the change&lt;/a&gt;. Lots of other mega-corporations followed suit. One article which skips the whys and the why-nots and just talks about the technical aspects of this transition is &lt;a class=&#34;external&#34; 
-   href=&#34;https://www.biteinteractive.com/of-git-and-github-master-and-main/&#34; target=&#34;_blank&#34;
-   &gt;&lt;em&gt;Of Git and GitHub, Master and Main&lt;/em&gt; by Matt Neuburg, 2021&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;So, we shall all rename our &amp;ldquo;master&amp;rdquo; branches to &amp;ldquo;main&amp;rdquo;. You might &lt;em&gt;think&lt;/em&gt; that you can get away with using &amp;ldquo;main&amp;rdquo; only for new projects and leaving old projects alone, but that will not quite cut it, because then you will be left with eternal confusion since you will have different projects with different default branch names and you will have to always remember which is which. Trying to remember things is the stuff mistakes are made of, and mistakes with branches tend to have very severe consequences. So, all master branches will have to be renamed to main everywhere.&lt;/p&gt;
-&lt;p&gt;Is it silly? Yes. Is it a waste of time? Yes. Is it giving in to &lt;a class=&#34;external&#34; 
-   href=&#34;https://www.urbandictionary.com/define.php?term=Wokeism&#34; target=&#34;_blank&#34;
-   &gt;wokeism&lt;/a&gt;? Yes. But you have to pick your battles. You have to question whether you want to engage in an argument with a broader cause that you are already in alignment with anyway. As a manager, it is easier to suffer the small technical pain of transitioning from &amp;ldquo;master&amp;rdquo; to main&amp;quot; than to spend valuable time debating the whole silly thing, and running the risk of appearing as a bigot in the process.&lt;/p&gt;
-&lt;p&gt;Having said all that, let me state that on the broad picture, I am completely with Bill Maher on this: the liberal world is going mad with political correctness, sense of entitlement, &lt;a class=&#34;external&#34; 
-   href=&#34;https://www.urbandictionary.com/define.php?term=snowflakeism&#34; target=&#34;_blank&#34;
-   &gt;snowflakeism&lt;/a&gt;, and &lt;a class=&#34;external&#34; 
-   href=&#34;https://www.urbandictionary.com/define.php?term=wokeness&#34; target=&#34;_blank&#34;
-   &gt;wokeness&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now, if the abolition of master/slave hardly had any real grounds to stand on, the abolition of the master branch is absolutely groundless, because in this case the word &amp;quot;master&amp;quot; is used in the sense of &amp;quot;original&amp;quot;, as in &amp;quot;master recording&amp;quot;. (See&lt;a class="external"
+href="https://en.wiktionary.org/wiki/master" target="_blank"
+&gt;&amp;quot;master&amp;quot; in wiktionary.org&lt;/a&gt;.) However, if we acknowledge someone the right to be offended by master/slave, then who are we to take away their right to also be offended by master branch? After all, don't forget that we have already established that we are incapable of putting ourselves in their shoes, right?&lt;/p&gt;
+&lt;p&gt;So, once the abolition of &amp;quot;master/slave&amp;quot; was unanimously agreed upon, the master branch was naturally next. It was just a matter of &lt;em&gt;the innocent paying along with the guilty&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;After some debate, (see &lt;a class="external"
+href="https://git.github.io/rev_news/2020/07/29/edition-65/" target="_blank"
+&gt;Git Rev News: Edition 65&lt;/a&gt;) both git and GitHub announced in 2020 that they were moving in the direction of renaming the default branch from &amp;quot;master&amp;quot; to main. In October of that year, GitHub &lt;a class="external"
+href="https://github.com/github/renaming" target="_blank"
+&gt;proceeded with the change&lt;/a&gt;. Lots of other mega-corporations followed suit. One article which skips the whys and the why-nots and just talks about the technical aspects of this transition is &lt;a class="external"
+href="https://www.biteinteractive.com/of-git-and-github-master-and-main/" target="_blank"
+&gt;&lt;em&gt;Of Git and GitHub, Master and Main&lt;/em&gt; by Matt Neuburg, 2021&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, we shall all rename our &amp;quot;master&amp;quot; branches to &amp;quot;main&amp;quot;. You might &lt;em&gt;think&lt;/em&gt; that you can get away with using &amp;quot;main&amp;quot; only for new projects and leaving old projects alone, but that will not quite cut it, because then you will be left with eternal confusion since you will have different projects with different default branch names and you will have to always remember which is which. Trying to remember things is the stuff mistakes are made of, and mistakes with branches tend to have very severe consequences. So, all master branches will have to be renamed to main everywhere.&lt;/p&gt;
+&lt;p&gt;Is it silly? Yes. Is it a waste of time? Yes. Is it giving in to &lt;a class="external"
+href="https://www.urbandictionary.com/define.php?term=Wokeism" target="_blank"
+&gt;wokeism&lt;/a&gt;? Yes. But you have to pick your battles. You have to question whether you want to engage in an argument with a broader cause that you are already in alignment with anyway. As a manager, it is easier to suffer the small technical pain of transitioning from &amp;quot;master&amp;quot; to main&amp;quot; than to spend valuable time debating the whole silly thing, and running the risk of appearing as a bigot in the process.&lt;/p&gt;
+&lt;p&gt;Having said all that, let me state that on the broad picture, I am completely with Bill Maher on this: the liberal world is going mad with political correctness, sense of entitlement, &lt;a class="external"
+href="https://www.urbandictionary.com/define.php?term=snowflakeism" target="_blank"
+&gt;snowflakeism&lt;/a&gt;, and &lt;a class="external"
+href="https://www.urbandictionary.com/define.php?term=wokeness" target="_blank"
+&gt;wokeness&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;&lt;img src=&#34;//localhost:1313/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness.jpg&#34;
-	width=&#34;843&#34;
-	height=&#34;565&#34;
-	srcset=&#34;//localhost:1313/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_bfd19a0acccbf67b.jpg 480w, //localhost:1313/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_6dd0e5589091004e.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;149&#34;
-		data-flex-basis=&#34;358px&#34;
-	
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: center"&gt;&lt;img src="http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness.jpg"
+width="843"
+height="565"
+srcset="http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_bfd19a0acccbf67b.jpg 480w, http://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_6dd0e5589091004e.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="149"
+data-flex-basis="358px"
 &gt;
 &lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;Mandatory grumpy cat meme: Wokeness? How About NO.&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;Mandatory grumpy cat meme: Wokeness? How About NO.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description></item></channel></rss>

@@ -1,41 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>physics on Michael&#39;s Blog</title>
-        <link>//localhost:1313/tags/physics/</link>
-        <description>Recent content in physics on Michael&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
-        <lastBuildDate>Tue, 21 Oct 2025 18:59:55 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/physics/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>On the Tired Light Hypothesis</title>
-        <link>//localhost:1313/post/2025-07-tired-light-hypothesis/</link>
-        <pubDate>Sun, 06 Jul 2025 12:50:13 +0000</pubDate>
-        
-        <guid>//localhost:1313/post/2025-07-tired-light-hypothesis/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2025-07-tired-light-hypothesis/images/tired-light.svg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Physics on Michael's Blog</title><link>http://blog2.michael.gr/tags/physics/</link><description>Recent content in Physics on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 21 Oct 2025 18:59:55 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/physics/index.xml" rel="self" type="application/rss+xml"/><item><title>On the Tired Light Hypothesis</title><link>http://blog2.michael.gr/post/2025-07-tired-light-hypothesis/</link><pubDate>Sun, 06 Jul 2025 12:50:13 +0000</pubDate><guid>http://blog2.michael.gr/post/2025-07-tired-light-hypothesis/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2025-07-tired-light-hypothesis/images/tired-light.svg"
+loading="lazy"
 &gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;the-static-universe&#34;&gt;The Static Universe
-&lt;/h3&gt;&lt;p&gt;The first model of cosmology that I was exposed to, as a small child, was that of the static universe, because that&amp;rsquo;s all my father knew. According to that model, the universe is infinite in all directions, it is eternal, and it is not going anywhere. Of course I accepted it, because that is what kids do: accept everything presented to them as fact.&lt;/p&gt;
-&lt;h3 id=&#34;the-expanding-universe&#34;&gt;The Expanding Universe
-&lt;/h3&gt;&lt;p&gt;Then, during elementary school, I heard of the Big Bang and the expansion of the universe; this new model of cosmology made me feel a bit uncomfortable, but again I accepted it, because a) that&amp;rsquo;s what the scientists said, and b) I could go to my father and tell him that he is wrong.&lt;/p&gt;
-&lt;h3 id=&#34;the-cosmological-red-shift&#34;&gt;The Cosmological Red-Shift
+&lt;h3 id="the-static-universe"&gt;The Static Universe
+&lt;/h3&gt;&lt;p&gt;The first model of cosmology that I was exposed to, as a small child, was that of the static universe, because that's all my father knew. According to that model, the universe is infinite in all directions, it is eternal, and it is not going anywhere. Of course I accepted it, because that is what kids do: accept everything presented to them as fact.&lt;/p&gt;
+&lt;h3 id="the-expanding-universe"&gt;The Expanding Universe
+&lt;/h3&gt;&lt;p&gt;Then, during elementary school, I heard of the Big Bang and the expansion of the universe; this new model of cosmology made me feel a bit uncomfortable, but again I accepted it, because a) that's what the scientists said, and b) I could go to my father and tell him that he is wrong.&lt;/p&gt;
+&lt;h3 id="the-cosmological-red-shift"&gt;The Cosmological Red-Shift
 &lt;/h3&gt;&lt;p&gt;Later, during my junior high-school years, I heard of the red-shift of galaxies, as simply the Doppler effect applied to light, and it sounded reasonable, but then I heard of &lt;em&gt;cosmological&lt;/em&gt; red-shift, as the stretching of photon wavelengths due to expansion of space itself. That sounded very exotic to me. I was again willing to accept it, because scientists had said so, but I was now starting to feel uncomfortable, because I am not into pretending to understand things that I do not truly understand. (Furthermore, my father had no concept of such things, so I could not even start a discussion with him with the goal of showing him that he is wrong.)&lt;/p&gt;
-&lt;h3 id=&#34;the-accelerating-expansion&#34;&gt;The Accelerating Expansion
-&lt;/h3&gt;&lt;p&gt;Then I started hearing of truly bizarre observations, such as that galaxies in all directions around us are red-shifted, meaning that they are all moving away from us. When I want to comically express my bewilderment at this, I raise my arms, smell my armpits, and say &amp;ldquo;why, what&amp;rsquo;s wrong with us?&amp;rdquo;&lt;/p&gt;
+&lt;h3 id="the-accelerating-expansion"&gt;The Accelerating Expansion
+&lt;/h3&gt;&lt;p&gt;Then I started hearing of truly bizarre observations, such as that galaxies in all directions around us are red-shifted, meaning that they are all moving away from us. When I want to comically express my bewilderment at this, I raise my arms, smell my armpits, and say &amp;quot;why, what's wrong with us?&amp;quot;&lt;/p&gt;
 &lt;p&gt;I learned that according to red-shift observations, the farther away a galaxy is, the faster it is moving away from us, and that not only the galaxies are moving away from each other, but the rate at which they are moving is increasing, meaning that galaxies are accelerating away from each other. Again I accepted all that because scientists had said so, but by that time it was already clear to me that I was accepting these things only because I had no other option. A little something in me was finding all this uncomfortable to the point of being disturbing.&lt;/p&gt;
-&lt;h3 id=&#34;dark-matter-and-dark-energy&#34;&gt;Dark Matter and Dark Energy
+&lt;h3 id="dark-matter-and-dark-energy"&gt;Dark Matter and Dark Energy
 &lt;/h3&gt;&lt;p&gt;The apex of my discomfort came during my last year of senior high-school, when I started hearing of dark matter and dark energy; popular media portrayed them as discoveries, but a closer examination of what the scientists were actually saying revealed that they were nothing but fictitious notions that scientists had dreamt up in order to explain the observations, otherwise the numbers did not add up. In other words, the scientists had given names to their ignorance. And it was not just some small discrepancies that these novelties were called to correct for; dark matter and dark energy were supposed to account for about 95% of the universe. On the surface I was okay with this, because again, scientists had said so, but that little something in me had now started finding all this quite preposterous and becoming genuinely disturbed.&lt;/p&gt;
-&lt;p&gt;Stop for a moment and think how arrogant this is on our behalf: we are saying &amp;ldquo;here are our observations of the universe,&amp;rdquo; and &amp;ldquo;here are our theories to explain those observations,&amp;rdquo; and &amp;ldquo;by the way, our theories only explain 5% of the observations, the remaining 95% is inexplicable.&amp;rdquo; And instead of admitting that our theories are worthless, we take it for granted that they are correct, and we assume that there must be some other, as of yet completely unknown, and completely unobserved mechanisms at play, which account for the missing 95%, so that our theories end up being correct. To top it all off, we come up with a couple of cool names for those mechanisms, to make the public think that we actually have a clue as to what we are talking about.&lt;/p&gt;
-&lt;p&gt;And wait, that&amp;rsquo;s not all; we are even saying that other than exerting gravitational pull, dark matter does not seem to interact with regular matter, not even with itself, so it is virtually unobservable. This inevitably brings to mind the skeptic argument about the invisible, untouchable, and odorless realm of the supernatural as being virtually indistinguishable from the non-existent. To put it in more scientific terms, &lt;em&gt;is this shit even falsifiable?&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;my-idea&#34;&gt;My Idea
+&lt;p&gt;Stop for a moment and think how arrogant this is on our behalf: we are saying &amp;quot;here are our observations of the universe,&amp;quot; and &amp;quot;here are our theories to explain those observations,&amp;quot; and &amp;quot;by the way, our theories only explain 5% of the observations, the remaining 95% is inexplicable.&amp;quot; And instead of admitting that our theories are worthless, we take it for granted that they are correct, and we assume that there must be some other, as of yet completely unknown, and completely unobserved mechanisms at play, which account for the missing 95%, so that our theories end up being correct. To top it all off, we come up with a couple of cool names for those mechanisms, to make the public think that we actually have a clue as to what we are talking about.&lt;/p&gt;
+&lt;p&gt;And wait, that's not all; we are even saying that other than exerting gravitational pull, dark matter does not seem to interact with regular matter, not even with itself, so it is virtually unobservable. This inevitably brings to mind the skeptic argument about the invisible, untouchable, and odorless realm of the supernatural as being virtually indistinguishable from the non-existent. To put it in more scientific terms, &lt;em&gt;is this shit even falsifiable?&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="my-idea"&gt;My Idea
 &lt;/h3&gt;&lt;p&gt;All this was so disturbing to me, that in order to retain my sanity I was forced to invest some thinking into it, despite the hopelessness of the endeavor, given that I have no formal background in physics, let alone astrophysics; my field is, and has always been, software engineering.&lt;/p&gt;
 &lt;p&gt;My thinking was, necessarily, simple:&lt;/p&gt;
 &lt;p&gt;There is no doubt that relative movement of galaxies in space is at least partially responsible for the observed red-shift, just as it is responsible for the few cases of observed blue-shift. For example the Andromeda galaxy is blue-shifted, because it is on a collision course with the Milky Way. However, this does not mean that relative movement is necessarily responsible for all of the observed red-shift. Can we find some additional means of explaining red-shift so that we might account for those manifestations of it that are truly bizarre?&lt;/p&gt;
@@ -45,7 +25,7 @@
 &lt;li&gt;Light reaching us from any galaxy has to travel a long distance, therefore all galaxies should appear red-shifted, as they indeed do, even though they might be more or less stationary with respect to us. This is a much simpler explanation than to say that all galaxies are running away from us as if we have smelly armpits.&lt;/li&gt;
 &lt;li&gt;Light reaching us from distant galaxies has to travel a longer distance than from nearby galaxies, therefore more distant galaxies should appear more red-shifted, as they indeed do. This is a much simpler explanation than to say that galaxies are not only moving away from us, but actually accelerating away from us.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I knew that my idea had at least a tiny bit of merit due to Occam&amp;rsquo;s razor: sure, I was postulating the existence of some hypothetical property of light that causes its frequency to decrease as it travels through space, but:&lt;/p&gt;
+&lt;p&gt;I knew that my idea had at least a tiny bit of merit due to Occam's razor: sure, I was postulating the existence of some hypothetical property of light that causes its frequency to decrease as it travels through space, but:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;This is not a terribly implausible thing to suppose, and&lt;/p&gt;
@@ -54,40 +34,36 @@
 &lt;p&gt;It seems far less implausible than proposing an expanding universe, an expanding fabric of space, plus dark matter and dark energy to make the numbers add up.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Simply put, Occam&amp;rsquo;s razor says that if two hypotheses have equal explaining power, the simpler one wins. What remained to be seen was whether my hypothesis did actually have equal explaining power as the established scientific theories. I suspected it did not, due to reasons beyond my level of comprehension of the universe, but I had no one to ask, and therefore no way of knowing.&lt;/p&gt;
+&lt;p&gt;Simply put, Occam's razor says that if two hypotheses have equal explaining power, the simpler one wins. What remained to be seen was whether my hypothesis did actually have equal explaining power as the established scientific theories. I suspected it did not, due to reasons beyond my level of comprehension of the universe, but I had no one to ask, and therefore no way of knowing.&lt;/p&gt;
 &lt;p&gt;I had this idea in my late teens, and not knowing what to do with it, I stored it in the back of my mind and went on with my life.&lt;/p&gt;
-&lt;h3 id=&#34;asking-around&#34;&gt;Asking around
+&lt;h3 id="asking-around"&gt;Asking around
 &lt;/h3&gt;&lt;p&gt;When I was at California State University, San Bernardino I had a cool professor who came to the classroom one day with an inflatable balloon that had galaxies printed on it. By inflating the balloon, she showed how the expansion of the fabric of space can explain the observation that all galaxies are seemingly moving away from us, as well as from each other; I could accept this, but it only took care of the smelly armpits problem; the highly exotic notion of an expanding fabric of space was still there, the troublesome acceleration of the expansion was also still there, and the preposterous notions of dark matter and dark energy were still there. So, I felt that my hypothesis had lost virtually none of its explanatory merit.&lt;/p&gt;
 &lt;p&gt;During the mid 2000s, in the golden era of internet blogs, and before facebook destroyed everything, I happened to have access to an audience of a few thousand people with higher than average education. A sizable portion of them were necessarily scientists, so a few of them were bound to be astrophysicists. This prompted me to describe my idea on my blog and ask if anyone had heard of anything similar to it. Sure enough, a couple of folks stepped up to inform me that my idea had already been considered by scientists, and that although not completely devoid of scientific merit, it was regarded as false, and it had pretty much been proven wrong by experimental observations. It even had a name: The &lt;em&gt;&lt;strong&gt;Tired Light Hypothesis&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;That was an elating moment for me; there I was, a lay-person with respect to astrophysics, who had, at a relatively young age, independently arrived at a hypothesis that had also been considered by actual astrophysicists. I figured that was a substantial accomplishment, even if the hypothesis did not turn out to be correct.&lt;/p&gt;
-&lt;p&gt;Of course it would have been even more elating if they had said &amp;ldquo;hey, wow, guess what, we never thought of this, and you know what? you might actually be right!&amp;rdquo; but let us be serious, what are the chances of that happening?&lt;/p&gt;
-&lt;h3 id=&#34;fringe-theories&#34;&gt;Fringe Theories
-&lt;/h3&gt;&lt;p&gt;I am weary of the phenomenon of fringe theories, where certain ideas seem to exert an irresistible appeal to non-scientists, causing misinformation to spread. I also happen to be somewhat partial to another fringe theory, which is the Aquatic Ape Hypothesis, and while delving into it back in the early &amp;rsquo;90s I witnessed the controversy that it stirred: large numbers of non-biologists loving it, virtually every biologist wishing that it would just die so that people would stop pestering them with it. When David Attenborough endorsed the hypothesis, the scientific community very nearly cancelled him. Even I, despite the fact that I liked the hypothesis, thought that it had been kind of risky on his behalf to endorse it. So, I am fully aware of the fact that these are fringe theories, and I am not insisting on anything, I am just amused at how much explanatory power they have. I regard them as very interesting curiosities.&lt;/p&gt;
-&lt;p&gt;In conclusion I cannot help but mention that it gives me a warm, fuzzy feeling to keep note, somewhere in the back of my mind, of the fact that &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Continental_drift&#34; target=&#34;_blank&#34;
-   &gt;&lt;strong&gt;Continental Drift&lt;/strong&gt;&lt;/a&gt; was also, for a long time, regarded by the scientific community as nothing but a fringe theory.&lt;/p&gt;
-&lt;p&gt;See &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Static_universe&#34; target=&#34;_blank&#34;
-   &gt;Wikipedia: Static Universe&lt;/a&gt;&lt;br&gt;
-See &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Big_Bang&#34; target=&#34;_blank&#34;
-   &gt;Wikipedia: Big Bang&lt;/a&gt;&lt;br&gt;
-See &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Expansion_of_the_universe&#34; target=&#34;_blank&#34;
-   &gt;Wikipedia: Expansion of the universe&lt;/a&gt;&lt;br&gt;
-See &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Tired_light&#34; target=&#34;_blank&#34;
-   &gt;Wikipedia: Tired Light&lt;/a&gt;&lt;br&gt;
-See &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Fringe_theory&#34; target=&#34;_blank&#34;
-   &gt;Wikipedia: Fringe Theory&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Of course it would have been even more elating if they had said &amp;quot;hey, wow, guess what, we never thought of this, and you know what? you might actually be right!&amp;quot; but let us be serious, what are the chances of that happening?&lt;/p&gt;
+&lt;h3 id="fringe-theories"&gt;Fringe Theories
+&lt;/h3&gt;&lt;p&gt;I am weary of the phenomenon of fringe theories, where certain ideas seem to exert an irresistible appeal to non-scientists, causing misinformation to spread. I also happen to be somewhat partial to another fringe theory, which is the Aquatic Ape Hypothesis, and while delving into it back in the early '90s I witnessed the controversy that it stirred: large numbers of non-biologists loving it, virtually every biologist wishing that it would just die so that people would stop pestering them with it. When David Attenborough endorsed the hypothesis, the scientific community very nearly cancelled him. Even I, despite the fact that I liked the hypothesis, thought that it had been kind of risky on his behalf to endorse it. So, I am fully aware of the fact that these are fringe theories, and I am not insisting on anything, I am just amused at how much explanatory power they have. I regard them as very interesting curiosities.&lt;/p&gt;
+&lt;p&gt;In conclusion I cannot help but mention that it gives me a warm, fuzzy feeling to keep note, somewhere in the back of my mind, of the fact that &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Continental_drift" target="_blank"
+&gt;&lt;strong&gt;Continental Drift&lt;/strong&gt;&lt;/a&gt; was also, for a long time, regarded by the scientific community as nothing but a fringe theory.&lt;/p&gt;
+&lt;p&gt;See &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Static_universe" target="_blank"
+&gt;Wikipedia: Static Universe&lt;/a&gt;&lt;br&gt;
+See &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Big_Bang" target="_blank"
+&gt;Wikipedia: Big Bang&lt;/a&gt;&lt;br&gt;
+See &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Expansion_of_the_universe" target="_blank"
+&gt;Wikipedia: Expansion of the universe&lt;/a&gt;&lt;br&gt;
+See &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Tired_light" target="_blank"
+&gt;Wikipedia: Tired Light&lt;/a&gt;&lt;br&gt;
+See &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Fringe_theory" target="_blank"
+&gt;Wikipedia: Fringe Theory&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &amp;ldquo;Tired Light&amp;rdquo; vector graphic by michael.gr created with InkScape using parts of &lt;a class=&#34;external&#34; 
-   href=&#34;https://thenounproject.com/icon/sinusoid-37912/&#34; target=&#34;_blank&#34;
-   &gt;&amp;ldquo;Sinusoid&amp;rdquo; by Yohann Berger from the Noun Project&lt;/a&gt; and &lt;a class=&#34;external&#34; 
-   href=&#34;https://thenounproject.com/icon/stars-602908/&#34; target=&#34;_blank&#34;
-   &gt;&amp;ldquo;Stars&amp;rdquo; by Ken Murray from the Noun Project&lt;/a&gt;&lt;/p&gt;</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;p&gt;Cover image: &amp;quot;Tired Light&amp;quot; vector graphic by michael.gr created with InkScape using parts of &lt;a class="external"
+href="https://thenounproject.com/icon/sinusoid-37912/" target="_blank"
+&gt;&amp;quot;Sinusoid&amp;quot; by Yohann Berger from the Noun Project&lt;/a&gt; and &lt;a class="external"
+href="https://thenounproject.com/icon/stars-602908/" target="_blank"
+&gt;&amp;quot;Stars&amp;quot; by Ken Murray from the Noun Project&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

@@ -1,37 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>msbuild on Michael&#39;s Blog</title>
-        <link>//localhost:1313/tags/msbuild/</link>
-        <description>Recent content in msbuild on Michael&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
-        <lastBuildDate>Tue, 21 Oct 2025 19:00:42 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/msbuild/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Build configurations</title>
-        <link>//localhost:1313/post/2025-06-build-configurations/</link>
-        <pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate>
-        
-        <guid>//localhost:1313/post/2025-06-build-configurations/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg&#34;
-	width=&#34;1536&#34;
-	height=&#34;1024&#34;
-	srcset=&#34;//localhost:1313/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, //localhost:1313/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;150&#34;
-		data-flex-basis=&#34;360px&#34;
-	
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Immutability on Michael's Blog</title><link>http://blog2.michael.gr/tags/msbuild/</link><description>Recent content in Immutability on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 21 Oct 2025 19:00:42 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/msbuild/index.xml" rel="self" type="application/rss+xml"/><item><title>Build configurations</title><link>http://blog2.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>http://blog2.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
+width="1536"
+height="1024"
+srcset="http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, http://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="360px"
 &gt;
 &lt;/p&gt;
-&lt;h3 id=&#34;abstract&#34;&gt;Abstract
+&lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;The popular practice of having only two different kinds of builds (&lt;em&gt;Debug&lt;/em&gt; and &lt;em&gt;Release&lt;/em&gt;) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
-   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id=&#34;the-issue&#34;&gt;The Issue
+&lt;p&gt;(Useful pre-reading: &lt;a
+href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+&gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id="the-issue"&gt;The Issue
 &lt;/h3&gt;&lt;p&gt;In software development we often want our creations to have different characteristics under different circumstances; for example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Optimizations:
@@ -47,27 +29,27 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;the-history&#34;&gt;The History
+&lt;h3 id="the-history"&gt;The History
 &lt;/h3&gt;&lt;p&gt;In C and C++, different behavior has historically been achieved by means of compiler options controlling optimization, and preprocessor macros controlling conditional compilation. The standard stipulates an NDEBUG macro which, if defined, causes assertions to compile to nothing. This means that software systems written in C and C++ generally have two builds: a &lt;em&gt;Debug&lt;/em&gt; build, for use while debugging, and a &lt;em&gt;Release&lt;/em&gt; build, for shipping or deploying to production.&lt;/p&gt;
-&lt;p&gt;When Java came along, it was decided that a single build should be good for everyone: conditional compilation was abolished&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, all optimization-related choices were delegated to the Just-In-Time compiler (JITter,) assertions were made to always compile into the binaries, and the &lt;code&gt;enableassertions&lt;/code&gt; switch was added to the virtual machine for controlling during runtime, rather than during compilation, whether assertions should be executing or not. This essentially gives Java developers the ability to choose between a &lt;em&gt;debug &lt;strong&gt;run&lt;/strong&gt;&lt;/em&gt; or a &lt;em&gt;release &lt;strong&gt;run&lt;/strong&gt;&lt;/em&gt;, as opposed to a debug build or a release build.&lt;/p&gt;
-&lt;p&gt;C# has brought back a compiler option for controlling optimization, and conditional compilation by means of a simplified version of the preprocessor macros (called &amp;ldquo;define constants&amp;rdquo; in C#) and the &lt;code&gt;Conditional&lt;/code&gt; attribute. Two different kinds of builds (called &lt;em&gt;&lt;strong&gt;Build Configurations&lt;/strong&gt;&lt;/em&gt;) are predefined: &lt;code&gt;Debug&lt;/code&gt; and &lt;code&gt;Release&lt;/code&gt;. The build system offers great flexibility in defining additional build configurations, but C# developers rarely bother with that.&lt;/p&gt;
-&lt;h3 id=&#34;the-problem&#34;&gt;The Problem
-&lt;/h3&gt;&lt;p&gt;Since developers rarely bother with defining any build configurations besides the predefined ones, the vast majority of dotnet projects use only the two predefined ones: &amp;lsquo;Debug&amp;rsquo; and &amp;lsquo;Release&amp;rsquo;. (Many projects actually use only &amp;lsquo;Debug&amp;rsquo;, but let us pretend we never heard of them.) Thus all different needs and usage scenarios are being shoe-horned to fit into one of those two options. For example:&lt;/p&gt;
+&lt;p&gt;When Java came along, it was decided that a single build should be good for everyone: conditional compilation was abolished&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;, all optimization-related choices were delegated to the Just-In-Time compiler (JITter,) assertions were made to always compile into the binaries, and the &lt;code&gt;enableassertions&lt;/code&gt; switch was added to the virtual machine for controlling during runtime, rather than during compilation, whether assertions should be executing or not. This essentially gives Java developers the ability to choose between a &lt;em&gt;debug &lt;strong&gt;run&lt;/strong&gt;&lt;/em&gt; or a &lt;em&gt;release &lt;strong&gt;run&lt;/strong&gt;&lt;/em&gt;, as opposed to a debug build or a release build.&lt;/p&gt;
+&lt;p&gt;C# has brought back a compiler option for controlling optimization, and conditional compilation by means of a simplified version of the preprocessor macros (called &amp;quot;define constants&amp;quot; in C#) and the &lt;code&gt;Conditional&lt;/code&gt; attribute. Two different kinds of builds (called &lt;em&gt;&lt;strong&gt;Build Configurations&lt;/strong&gt;&lt;/em&gt;) are predefined: &lt;code&gt;Debug&lt;/code&gt; and &lt;code&gt;Release&lt;/code&gt;. The build system offers great flexibility in defining additional build configurations, but C# developers rarely bother with that.&lt;/p&gt;
+&lt;h3 id="the-problem"&gt;The Problem
+&lt;/h3&gt;&lt;p&gt;Since developers rarely bother with defining any build configurations besides the predefined ones, the vast majority of dotnet projects use only the two predefined ones: 'Debug' and 'Release'. (Many projects actually use only 'Debug', but let us pretend we never heard of them.) Thus all different needs and usage scenarios are being shoe-horned to fit into one of those two options. For example:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;There is only one configuration that can be tested, namely the &lt;code&gt;Debug&lt;/code&gt; configuration, which means that this configuration is used not only for running tests on a developer&amp;rsquo;s computer, but also for running tests on the build server.&lt;/li&gt;
-&lt;li&gt;There is only one configuration of a library that can be published, namely the &amp;lsquo;Release&amp;rsquo; configuration, which means that this configuration is used not only in production scenarios, but also in development scenarios, where software is being developed that is making use of a published library.&lt;/li&gt;
+&lt;li&gt;There is only one configuration that can be tested, namely the &lt;code&gt;Debug&lt;/code&gt; configuration, which means that this configuration is used not only for running tests on a developer's computer, but also for running tests on the build server.&lt;/li&gt;
+&lt;li&gt;There is only one configuration of a library that can be published, namely the 'Release' configuration, which means that this configuration is used not only in production scenarios, but also in development scenarios, where software is being developed that is making use of a published library.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This is problematic because:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;It slows down test runs on build servers.&lt;/p&gt;
-&lt;p&gt;The &amp;lsquo;Debug&amp;rsquo; configuration is unoptimized, to avoid interference with debugging; however, by common practice, the same &amp;lsquo;Debug&amp;rsquo; configuration is used for running tests on the build server, because that is the only configuration that can be tested; thus, the world is full of build servers executing unoptimized tests, exercising unoptimized code.&lt;/p&gt;
+&lt;p&gt;The 'Debug' configuration is unoptimized, to avoid interference with debugging; however, by common practice, the same 'Debug' configuration is used for running tests on the build server, because that is the only configuration that can be tested; thus, the world is full of build servers executing unoptimized tests, exercising unoptimized code.&lt;/p&gt;
 &lt;p&gt;If the tests and the code they are exercising are long-running and computationally expensive, lack of optimization will make them run even slower.&lt;/p&gt;
 &lt;p&gt;However, virtually nothing ever gets debugged on a build server, so there is virtually never a need to have it running unoptimized code.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;It slows down the software on production.&lt;/p&gt;
-&lt;p&gt;When a library is published as a package, the configuration that gets packaged is, by common practice, the &amp;lsquo;Release&amp;rsquo; configuration. This configuration executes preconditions, since it may be referenced by a project under development; however, at some point, that project together with the library are released to production, where the library is still executing preconditions.&lt;/p&gt;
+&lt;p&gt;When a library is published as a package, the configuration that gets packaged is, by common practice, the 'Release' configuration. This configuration executes preconditions, since it may be referenced by a project under development; however, at some point, that project together with the library are released to production, where the library is still executing preconditions.&lt;/p&gt;
 &lt;p&gt;This amounts to nothing but a waste of clock cycles, because:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -84,266 +66,262 @@
 &lt;p&gt;An extreme example to illustrate this scenario is the binary search function, which should, in principle, be enforcing the precondition that the array to search must be sorted. Yes, this means guarding a &lt;strong&gt;O(log&lt;sub&gt;2&lt;/sub&gt;(N))&lt;/strong&gt; operation with a &lt;strong&gt;O(N)&lt;/strong&gt; operation. This is fine during development, because we test with small amounts of data anyway, but is a terrible thing to be doing on production; thus, there is virtually no library in existence with such a precondition in it, despite the fact that it is necessary.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;the-solution&#34;&gt;The Solution
+&lt;h3 id="the-solution"&gt;The Solution
 &lt;/h3&gt;&lt;p&gt;From the description of the problem it becomes evident that preconditions must be controlled separately from assertions, and both of those must be controlled separately from optimizations. Therefore, four different build configurations can be thought of:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;A &amp;lsquo;Debug&amp;rsquo; configuration&lt;/p&gt;
+&lt;p&gt;A 'Debug' configuration&lt;/p&gt;
 &lt;p&gt;Everyone is more or less already familiar with this. It is meant for use by a developer when testing and debugging software on their local computer. Assertions are enabled, preconditions are enabled, and optimizations are disabled, because they interfere with debugging.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;An &amp;lsquo;Optimized&amp;rsquo; configuration&lt;/p&gt;
-&lt;p&gt;This is the same as Debug except that optimizations are enabled. It is meant to run on the build server, where we do not usually debug, so there is no reason to be running unoptimized software. Note that this configuration is only useful for projects that suffer from long-running, computationally expensive tests; projects that do testing right, with very short and lightweight tests, are likely to see a performance degradation from this configuration, due to the additional JITting overhead &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;An 'Optimized' configuration&lt;/p&gt;
+&lt;p&gt;This is the same as Debug except that optimizations are enabled. It is meant to run on the build server, where we do not usually debug, so there is no reason to be running unoptimized software. Note that this configuration is only useful for projects that suffer from long-running, computationally expensive tests; projects that do testing right, with very short and lightweight tests, are likely to see a performance degradation from this configuration, due to the additional JITting overhead &lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;A &amp;lsquo;Develop&amp;rsquo; configuration&lt;/p&gt;
+&lt;p&gt;A 'Develop' configuration&lt;/p&gt;
 &lt;p&gt;This configuration is only applicable to libraries, not to applications. It is identical to what was previously understood as the Release configuration, where optimizations are enabled, assertions are disabled, and preconditions are enabled; however, it is only meant to be used when developing software that makes use of the library, not for shipping to production, because we do not want to be executing preconditions on production.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;A &amp;lsquo;Release&amp;rsquo; configuration&lt;/p&gt;
+&lt;p&gt;A 'Release' configuration&lt;/p&gt;
 &lt;p&gt;This is similar to the Develop configuration, except that preconditions are also disabled. It is the configuration which is meant for shipping to production. Note that the benefit of using this configuration is not just maximum performance on production; it is also the freedom to add as many preconditions as necessary to the library, knowing that they cost nothing on production.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Here is the feature matrix:&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: right&#34;&gt;&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;Debug&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;Optimized&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;Develop&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;Release&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;Optimizations disabled&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;Assertions enabled&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;Overflow checking&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;Preconditions enabled&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: right&#34;&gt;Code analysis&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;✅&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;⬜&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: right"&gt;&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Debug&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Optimized&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Develop&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Release&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;Optimizations disabled&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;Assertions enabled&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;Overflow checking&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;Preconditions enabled&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: right"&gt;Code analysis&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;✅&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;td style="text-align: center"&gt;⬜&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Here is an excerpt from a &lt;code&gt;.csproj&lt;/code&gt; file implementing the above matrix, assuming that we have defined our own set of assertion functions, dependent upon an &lt;code&gt;ASSERTIONS&lt;/code&gt; define-constant, and our own set of precondition functions, dependent upon a &lt;code&gt;PRECONDITIONS&lt;/code&gt; define-constant.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
+&lt;/span&gt;&lt;span class="lnt"&gt; 2
+&lt;/span&gt;&lt;span class="lnt"&gt; 3
+&lt;/span&gt;&lt;span class="lnt"&gt; 4
+&lt;/span&gt;&lt;span class="lnt"&gt; 5
+&lt;/span&gt;&lt;span class="lnt"&gt; 6
+&lt;/span&gt;&lt;span class="lnt"&gt; 7
+&lt;/span&gt;&lt;span class="lnt"&gt; 8
+&lt;/span&gt;&lt;span class="lnt"&gt; 9
+&lt;/span&gt;&lt;span class="lnt"&gt;10
+&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;/span&gt;&lt;span class="lnt"&gt;12
+&lt;/span&gt;&lt;span class="lnt"&gt;13
+&lt;/span&gt;&lt;span class="lnt"&gt;14
+&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;/span&gt;&lt;span class="lnt"&gt;16
+&lt;/span&gt;&lt;span class="lnt"&gt;17
+&lt;/span&gt;&lt;span class="lnt"&gt;18
+&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;/span&gt;&lt;span class="lnt"&gt;20
+&lt;/span&gt;&lt;span class="lnt"&gt;21
+&lt;/span&gt;&lt;span class="lnt"&gt;22
+&lt;/span&gt;&lt;span class="lnt"&gt;23
+&lt;/span&gt;&lt;span class="lnt"&gt;24
+&lt;/span&gt;&lt;span class="lnt"&gt;25
+&lt;/span&gt;&lt;span class="lnt"&gt;26
+&lt;/span&gt;&lt;span class="lnt"&gt;27
+&lt;/span&gt;&lt;span class="lnt"&gt;28
+&lt;/span&gt;&lt;span class="lnt"&gt;29
+&lt;/span&gt;&lt;span class="lnt"&gt;30
+&lt;/span&gt;&lt;span class="lnt"&gt;31
+&lt;/span&gt;&lt;span class="lnt"&gt;32
+&lt;/span&gt;&lt;span class="lnt"&gt;33
+&lt;/span&gt;&lt;span class="lnt"&gt;34
+&lt;/span&gt;&lt;span class="lnt"&gt;35
+&lt;/span&gt;&lt;span class="lnt"&gt;36
+&lt;/span&gt;&lt;span class="lnt"&gt;37
+&lt;/span&gt;&lt;span class="lnt"&gt;38
+&lt;/span&gt;&lt;span class="lnt"&gt;39
+&lt;/span&gt;&lt;span class="lnt"&gt;40
+&lt;/span&gt;&lt;span class="lnt"&gt;41
+&lt;/span&gt;&lt;span class="lnt"&gt;42
+&lt;/span&gt;&lt;span class="lnt"&gt;43
+&lt;/span&gt;&lt;span class="lnt"&gt;44
+&lt;/span&gt;&lt;span class="lnt"&gt;45
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;Choose&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;When&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Condition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;False&lt;span class=&#34;nt&#34;&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DefineConstants&amp;gt;&lt;/span&gt;$(DefineConstants);PRECONDITIONS;ASSERTIONS&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DefineConstants&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;EnableNETAnalyzers&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/EnableNETAnalyzers&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DebugType&amp;gt;&lt;/span&gt;Full&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DebugType&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/When&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;When&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Condition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Optimized&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DefineConstants&amp;gt;&lt;/span&gt;$(DefineConstants);PRECONDITIONS;ASSERTIONS&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DefineConstants&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;EnableNETAnalyzers&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/EnableNETAnalyzers&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DebugType&amp;gt;&lt;/span&gt;Full&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DebugType&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;OutputPath&amp;gt;&lt;/span&gt;bin\$(Configuration)\&lt;span class=&#34;nt&#34;&gt;&amp;lt;/OutputPath&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/When&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;When&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Condition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Develop&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DefineConstants&amp;gt;&lt;/span&gt;$(DefineConstants);PRECONDITIONS&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DefineConstants&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;False&lt;span class=&#34;nt&#34;&gt;&amp;lt;/CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;EnableNETAnalyzers&amp;gt;&lt;/span&gt;False&lt;span class=&#34;nt&#34;&gt;&amp;lt;/EnableNETAnalyzers&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DebugType&amp;gt;&lt;/span&gt;Portable&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DebugType&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;OutputPath&amp;gt;&lt;/span&gt;bin\$(Configuration)\&lt;span class=&#34;nt&#34;&gt;&amp;lt;/OutputPath&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/When&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;When&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Condition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Release&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DefineConstants&amp;gt;&lt;/span&gt;$(DefineConstants)&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DefineConstants&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;False&lt;span class=&#34;nt&#34;&gt;&amp;lt;/CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;EnableNETAnalyzers&amp;gt;&lt;/span&gt;False&lt;span class=&#34;nt&#34;&gt;&amp;lt;/EnableNETAnalyzers&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DebugType&amp;gt;&lt;/span&gt;Portable&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DebugType&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;Deterministic&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/Deterministic&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;nt&#34;&gt;&amp;lt;DeterministicSourcePaths&amp;gt;&lt;/span&gt;True&lt;span class=&#34;nt&#34;&gt;&amp;lt;/DeterministicSourcePaths&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/When&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;Otherwise&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  ...
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;/Otherwise&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/Choose&amp;gt;&lt;/span&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Choose&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;When&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;False&lt;span class="nt"&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DefineConstants&amp;gt;&lt;/span&gt;$(DefineConstants);PRECONDITIONS;ASSERTIONS&lt;span class="nt"&gt;&amp;lt;/DefineConstants&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;EnableNETAnalyzers&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/EnableNETAnalyzers&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DebugType&amp;gt;&lt;/span&gt;Full&lt;span class="nt"&gt;&amp;lt;/DebugType&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/When&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;When&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Optimized&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DefineConstants&amp;gt;&lt;/span&gt;$(DefineConstants);PRECONDITIONS;ASSERTIONS&lt;span class="nt"&gt;&amp;lt;/DefineConstants&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;EnableNETAnalyzers&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/EnableNETAnalyzers&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DebugType&amp;gt;&lt;/span&gt;Full&lt;span class="nt"&gt;&amp;lt;/DebugType&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;OutputPath&amp;gt;&lt;/span&gt;bin\$(Configuration)\&lt;span class="nt"&gt;&amp;lt;/OutputPath&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/When&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;When&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Develop&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DefineConstants&amp;gt;&lt;/span&gt;$(DefineConstants);PRECONDITIONS&lt;span class="nt"&gt;&amp;lt;/DefineConstants&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;False&lt;span class="nt"&gt;&amp;lt;/CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;EnableNETAnalyzers&amp;gt;&lt;/span&gt;False&lt;span class="nt"&gt;&amp;lt;/EnableNETAnalyzers&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DebugType&amp;gt;&lt;/span&gt;Portable&lt;span class="nt"&gt;&amp;lt;/DebugType&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;OutputPath&amp;gt;&lt;/span&gt;bin\$(Configuration)\&lt;span class="nt"&gt;&amp;lt;/OutputPath&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/When&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;When&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Release&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DefineConstants&amp;gt;&lt;/span&gt;$(DefineConstants)&lt;span class="nt"&gt;&amp;lt;/DefineConstants&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;False&lt;span class="nt"&gt;&amp;lt;/CheckForOverflowUnderflow&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;EnableNETAnalyzers&amp;gt;&lt;/span&gt;False&lt;span class="nt"&gt;&amp;lt;/EnableNETAnalyzers&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DebugType&amp;gt;&lt;/span&gt;Portable&lt;span class="nt"&gt;&amp;lt;/DebugType&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Deterministic&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/Deterministic&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;DeterministicSourcePaths&amp;gt;&lt;/span&gt;True&lt;span class="nt"&gt;&amp;lt;/DeterministicSourcePaths&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/When&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Otherwise&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ...
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Otherwise&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/Choose&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the &amp;lsquo;Develop&amp;rsquo; package, and the &amp;lsquo;Release&amp;rsquo; package.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the 'Develop' package, and the 'Release' package.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The &amp;lsquo;Develop&amp;rsquo; package is to be referenced by software under development.&lt;/li&gt;
-&lt;li&gt;The &amp;lsquo;Release&amp;rsquo; package is to be referenced by software that is being shipped to production.&lt;/li&gt;
+&lt;li&gt;The 'Develop' package is to be referenced by software under development.&lt;/li&gt;
+&lt;li&gt;The 'Release' package is to be referenced by software that is being shipped to production.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The generation of two different packages for a single library can be accomplished by building twice, once for each configuration, and constructing the assembly name as follows:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;AssemblyName&amp;gt;&lt;/span&gt;$(MSBuildProjectName)-$(Configuration)&lt;span class=&#34;nt&#34;&gt;&amp;lt;/AssemblyName&amp;gt;&lt;/span&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;AssemblyName&amp;gt;&lt;/span&gt;$(MSBuildProjectName)-$(Configuration)&lt;span class="nt"&gt;&amp;lt;/AssemblyName&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;This way, instead of a single package called &lt;code&gt;MyPackage&lt;/code&gt; we create two packages: &lt;code&gt;MyPackage-Develop&lt;/code&gt; and &lt;code&gt;MyPackage-Release&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;There may be a better way to build a library, so that only one package gets generated, containing both the develop and release builds, and the right binaries somehow end up in the right output directory; however, I have not been able to figure that out yet. If you know how to do it, please let me know.&lt;/p&gt;
 &lt;p&gt;For any build configuration of a certain module, (either an application or a library,) the build configuration of the libraries it uses can be determined using the following table:&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;Build configuration of&lt;br&gt;module using library&lt;/th&gt;
-          &lt;th style=&#34;text-align: center&#34;&gt;Build configuration of&lt;br&gt;library&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&amp;lsquo;Debug&amp;rsquo;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&amp;lsquo;Develop&amp;rsquo;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&amp;lsquo;Optimized&amp;rsquo;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&amp;lsquo;Develop&amp;rsquo;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&amp;lsquo;Develop&amp;rsquo;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&amp;lsquo;Develop&amp;rsquo;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&amp;lsquo;Release&amp;rsquo;&lt;/td&gt;
-          &lt;td style=&#34;text-align: center&#34;&gt;&amp;lsquo;Release&amp;rsquo;&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: center"&gt;Build configuration of&lt;br&gt;module using library&lt;/th&gt;
+&lt;th style="text-align: center"&gt;Build configuration of&lt;br&gt;library&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;'Debug'&lt;/td&gt;
+&lt;td style="text-align: center"&gt;'Develop'&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;'Optimized'&lt;/td&gt;
+&lt;td style="text-align: center"&gt;'Develop'&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;'Develop'&lt;/td&gt;
+&lt;td style="text-align: center"&gt;'Develop'&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: center"&gt;'Release'&lt;/td&gt;
+&lt;td style="text-align: center"&gt;'Release'&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Note that the &amp;lsquo;Develop&amp;rsquo; configuration of a module could, in theory, make use of the better-performing &amp;lsquo;Release&amp;rsquo; configuration of a library, instead of the &amp;lsquo;Develop&amp;rsquo; configuration; however, that can only work if the module does not expose the library, or if there is no other module in the solution that uses the &amp;lsquo;Develop&amp;rsquo; configuration of the library. Otherwise, there are going to be type mismatch errors, where code built to make use of the &amp;lsquo;Develop&amp;rsquo; configuration of a library is given to work with the &amp;lsquo;Release&amp;rsquo; configuration, and vice versa.&lt;/p&gt;
+&lt;p&gt;Note that the 'Develop' configuration of a module could, in theory, make use of the better-performing 'Release' configuration of a library, instead of the 'Develop' configuration; however, that can only work if the module does not expose the library, or if there is no other module in the solution that uses the 'Develop' configuration of the library. Otherwise, there are going to be build errors saying that a certain type exists in both the develop and release configuration of a certain library.&lt;/p&gt;
 &lt;p&gt;Here is an excerpt of a .csproj file implementing the above table:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;span class="lnt"&gt;6
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Condition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt;    &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class=&#34;nt&#34;&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Condition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Optimized&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class=&#34;nt&#34;&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Condition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Develop&amp;#39;&amp;#34;&lt;/span&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class=&#34;nt&#34;&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Condition=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Release&amp;#39;&amp;#34;&lt;/span&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;gt;&lt;/span&gt;Release&lt;span class=&#34;nt&#34;&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Optimized&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Develop&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Release&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Release&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Then, packages can be referenced as follows:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nt&#34;&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Include=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;Version=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class="na"&gt;Include=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Version=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;h3 id=&#34;conclusions&#34;&gt;Conclusions
+&lt;/div&gt;&lt;h3 id="conclusions"&gt;Conclusions
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;An &amp;lsquo;Optimized&amp;rsquo; build configuration has been proposed, for cutting in half the time it takes to run slow, computationally expensive tests on build servers. (Not needed by projects with small, fast tests.)&lt;/li&gt;
-&lt;li&gt;A &amp;lsquo;Develop&amp;rsquo; build configuration for libraries has been proposed, intended for use during development of software using the libraries, but not for shipping to production. It has preconditions enabled, in order to catch bugs in the software using the libraries.&lt;/li&gt;
-&lt;li&gt;A &amp;lsquo;Release&amp;rsquo; build configuration for libraries has been proposed, intended for shipping to production. It improves performance by not executing preconditions.&lt;/li&gt;
+&lt;li&gt;An 'Optimized' build configuration has been proposed, for cutting in half the time it takes to run slow, computationally expensive tests on build servers. (Not needed by projects with small, fast tests.)&lt;/li&gt;
+&lt;li&gt;A 'Develop' build configuration for libraries has been proposed, intended for use during development of software using the libraries, but not for shipping to production. It has preconditions enabled, in order to catch bugs in the software using the libraries.&lt;/li&gt;
+&lt;li&gt;A 'Release' build configuration for libraries has been proposed, intended for shipping to production. It improves performance by not executing preconditions.&lt;/li&gt;
 &lt;li&gt;Under the proposed schema, preconditions in libraries do not incur a performance penalty on production anymore, so programmers can apply them more liberally, leading to more robust software.&lt;/li&gt;
-&lt;li&gt;Under the proposed schema, when a library is published, two packages should be generated: the &amp;lsquo;Develop&amp;rsquo; package, for developing software that uses the library, and the &amp;lsquo;Release&amp;rsquo; package, for shipping to production.&lt;/li&gt;
+&lt;li&gt;Under the proposed schema, when a library is published, two packages should be generated: the 'Develop' package, for developing software that uses the library, and the 'Release' package, for shipping to production.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image generated by ChatGPT, and then retouched by michael.gr. The prompt used was: &amp;ldquo;Please give me an image conveying the concept of highly complex and highly technical software development. Make it in landscape format, of photographic quality, with warm colors&amp;rdquo; and then &amp;ldquo;Please make the programmer look more senior&amp;rdquo;.&lt;/p&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;p&gt;Cover image generated by ChatGPT, and then retouched by michael.gr. The prompt used was: &amp;quot;Please give me an image conveying the concept of highly complex and highly technical software development. Make it in landscape format, of photographic quality, with warm colors&amp;quot; and then &amp;quot;Please make the programmer look more senior&amp;quot;.&lt;/p&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;The creators of Java made it so that the generation of code within an &lt;code&gt;if()&lt;/code&gt; statement controlled by a compile-time constant is suppressed if that constant evaluates to &lt;code&gt;false&lt;/code&gt;, but they intentionally deprived developers from the ability to specify the value of a compile-time constant via external means, such as the command-line of the compiler. They defended this choice by saying that there is inherent merit in being able to guarantee that in Java every compilation unit has one and only one set of semantics. The usefulness of this merit is debatable. It can be argued that this is simply Java treating developers the same way that Apple has been treating users: as idiots.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;The creators of Java made it so that the generation of code within an &lt;code&gt;if()&lt;/code&gt; statement controlled by a compile-time constant is suppressed if that constant evaluates to &lt;code&gt;false&lt;/code&gt;, but they intentionally deprived developers from the ability to specify the value of a compile-time constant via external means, such as the command-line of the compiler. They defended this choice by saying that there is inherent merit in being able to guarantee that in Java every compilation unit has one and only one set of semantics. The usefulness of this merit is debatable. It can be argued that this is simply Java treating developers the same way that Apple has been treating users: as idiots.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;In C# most optimizations are performed by the Just-In-Time compiler (JITter), and people say that the optimizations performed by the language compiler do not make much of a difference. However, my experiments have shown otherwise: computation-intensive code tends to run twice as fast when optimizations are enabled than when not, and this difference can be observed on a build server, so it is unaffected by any optimization choices that the JITter might make due to a debugger being attached or not. I suspect that this is happening because the language compiler saves the &amp;ldquo;optimize&amp;rdquo; flag in the binary, and the JITter subsequently observes this flag.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;In C# most optimizations are performed by the Just-In-Time compiler (JITter), and people say that the optimizations performed by the language compiler do not make much of a difference. However, my experiments have shown otherwise: computation-intensive code tends to run twice as fast when optimizations are enabled than when not, and this difference can be observed on a build server, so it is unaffected by any optimization choices that the JITter might make due to a debugger being attached or not. I suspect that this is happening because the language compiler saves the &amp;quot;optimize&amp;quot; flag in the binary, and the JITter subsequently observes this flag.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;/div&gt;</description></item></channel></rss>

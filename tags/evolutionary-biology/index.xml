@@ -1,67 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>evolutionary-biology on Michael&#39;s Blog</title>
-        <link>//localhost:1313/tags/evolutionary-biology/</link>
-        <description>Recent content in evolutionary-biology on Michael&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
-        <lastBuildDate>Wed, 15 Oct 2025 15:51:27 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/evolutionary-biology/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>On the evolutionary origin of reasoning</title>
-        <link>//localhost:1313/post/2024-10-reasoning/</link>
-        <pubDate>Sun, 10 Mar 2024 11:24:24 +0000</pubDate>
-        
-        <guid>//localhost:1313/post/2024-10-reasoning/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2024-10-reasoning/images/caveman-thinking-1.jpg&#34;
-	width=&#34;1080&#34;
-	height=&#34;1080&#34;
-	srcset=&#34;//localhost:1313/post/2024-10-reasoning/images/caveman-thinking-1_hu_a680d3065694d80.jpg 480w, //localhost:1313/post/2024-10-reasoning/images/caveman-thinking-1_hu_b7767b2efb905834.jpg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;100&#34;
-		data-flex-basis=&#34;240px&#34;
-	
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Evolutionary Biology on Michael's Blog</title><link>http://blog2.michael.gr/tags/evolutionary-biology/</link><description>Recent content in Evolutionary Biology on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 15 Oct 2025 15:51:27 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/evolutionary-biology/index.xml" rel="self" type="application/rss+xml"/><item><title>On the evolutionary origin of reasoning</title><link>http://blog2.michael.gr/post/2024-10-reasoning/</link><pubDate>Sun, 10 Mar 2024 11:24:24 +0000</pubDate><guid>http://blog2.michael.gr/post/2024-10-reasoning/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2024-10-reasoning/images/caveman-thinking-1.jpg"
+width="1080"
+height="1080"
+srcset="http://blog2.michael.gr/post/2024-10-reasoning/images/caveman-thinking-1_hu_a680d3065694d80.jpg 480w, http://blog2.michael.gr/post/2024-10-reasoning/images/caveman-thinking-1_hu_b7767b2efb905834.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Biological anthropologists generally agree that humans evolved reasoning to facilitate hunting together as a group; however, there are many other species that hunt in packs, and yet reasoning is unique to humans. Therefore, in order to explain reasoning, it is not enough to consider how it was beneficial to us; we also need to consider what enabled reasoning to emerge specifically in humans as opposed to any other species.&lt;/p&gt;
 &lt;p&gt;I have a hypothesis which attempts to explain how this happened.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
-   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id=&#34;exaptation-of-neural-circuitry-for-arboreal-navigation&#34;&gt;Exaptation of Neural Circuitry for Arboreal Navigation
+&lt;p&gt;(Useful pre-reading: &lt;a
+href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+&gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id="exaptation-of-neural-circuitry-for-arboreal-navigation"&gt;Exaptation of Neural Circuitry for Arboreal Navigation
 &lt;/h3&gt;&lt;p&gt;&lt;sup&gt;&lt;sub&gt;A hypothesis for the emergence of reasoning in early humans&lt;/sub&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;When our &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Simian&#34; target=&#34;_blank&#34;
-   &gt;simian&lt;/a&gt; ancestors first stepped down from the canopy of the forest to the ground of the savanna, they were still pretty well adapted to arboreal life, so they still had with them all the machinery necessary for &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Arboreal_locomotion&#34; target=&#34;_blank&#34;
-   &gt;arboreal locomotion&lt;/a&gt; by means of &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Brachiation&#34; target=&#34;_blank&#34;
-   &gt;brachiation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;When our &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Simian" target="_blank"
+&gt;simian&lt;/a&gt; ancestors first stepped down from the canopy of the forest to the ground of the savanna, they were still pretty well adapted to arboreal life, so they still had with them all the machinery necessary for &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Arboreal_locomotion" target="_blank"
+&gt;arboreal locomotion&lt;/a&gt; by means of &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Brachiation" target="_blank"
+&gt;brachiation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Most of that machinery was evident in their anatomy:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Stereopsis&#34; target=&#34;_blank&#34;
-   &gt;Stereoscopic vision&lt;/a&gt; for determining distances to branches.&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Thumb&#34; target=&#34;_blank&#34;
-   &gt;Opposable thumbs&lt;/a&gt; for grabbing and holding on to branches.&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Upper_limb&#34; target=&#34;_blank&#34;
-   &gt;Strong upper limbs&lt;/a&gt; for suspending the entire body weight from a branch.&lt;/li&gt;
+&lt;li&gt;&lt;a class="external"
+href="https://en.wikipedia.org/wiki/Stereopsis" target="_blank"
+&gt;Stereoscopic vision&lt;/a&gt; for determining distances to branches.&lt;/li&gt;
+&lt;li&gt;&lt;a class="external"
+href="https://en.wikipedia.org/wiki/Thumb" target="_blank"
+&gt;Opposable thumbs&lt;/a&gt; for grabbing and holding on to branches.&lt;/li&gt;
+&lt;li&gt;&lt;a class="external"
+href="https://en.wikipedia.org/wiki/Upper_limb" target="_blank"
+&gt;Strong upper limbs&lt;/a&gt; for suspending the entire body weight from a branch.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The machinery also included a very important element in the brain:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Neural_circuit&#34; target=&#34;_blank&#34;
-   &gt;Neural circuits&lt;/a&gt; dedicated to the planning and execution of arboreal navigation.&lt;/li&gt;
+&lt;li&gt;&lt;a class="external"
+href="https://en.wikipedia.org/wiki/Neural_circuit" target="_blank"
+&gt;Neural circuits&lt;/a&gt; dedicated to the planning and execution of arboreal navigation.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Just as brachiation is a formidable feat of the simian anatomy, so is arboreal navigation a formidable feat of the simian brain.&lt;/p&gt;
-&lt;p&gt;Getting from branch A to branch Z in the forest canopy involves examination of multiple alternative routes, each consisting of several successive leaps from branch to branch, where at each branch multiple choices are open, but some choices lead to dead-ends. Leaps often have to be evaluated in advance (planning) not only in order to determine the feasibility of the route as a whole, but also to find the most optimal route. The process involves some techniques which we have only started to grasp in the era of information processing, through the study of &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Pathfinding&#34; target=&#34;_blank&#34;
-   &gt;pathfinding&lt;/a&gt; algorithms:&lt;/p&gt;
+&lt;p&gt;Getting from branch A to branch Z in the forest canopy involves examination of multiple alternative routes, each consisting of several successive leaps from branch to branch, where at each branch multiple choices are open, but some choices lead to dead-ends. Leaps often have to be evaluated in advance (planning) not only in order to determine the feasibility of the route as a whole, but also to find the most optimal route. The process involves some techniques which we have only started to grasp in the era of information processing, through the study of &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Pathfinding" target="_blank"
+&gt;pathfinding&lt;/a&gt; algorithms:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Back-tracking: when the next leap in the path is deemed as not feasible, an alternative route can be sought from an earlier branch in the same path instead of starting from the beginning.&lt;/li&gt;
 &lt;li&gt;Information reuse: when it has been determined that from a certain branch X there is a path to reach branch Y, this information can be reused when an alternative way is found for arriving at branch X.&lt;/li&gt;
@@ -70,25 +52,21 @@
 &lt;p&gt;Brachiation is an activity that simians carry out effortlessly, at incredibly high speeds, and flawlessly, because a single mistake can easily result in a
 broken bone, which equates to certain death in the wild. Furthermore, (and I do not know this for sure, but I think it is a pretty safe guess,) simian
 babies do not have to learn how to brachiate, they are pretty much born with the ability. Therefore, the simian brain must have built-in neural circuits specifically dedicated to the task of arboreal navigation and the planning thereof.&lt;/p&gt;
-&lt;p&gt;Once our simian ancestors settled on the ground of the savanna, the neural circuits for arboreal navigation fell into disuse, essentially becoming &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Vestigiality&#34; target=&#34;_blank&#34;
-   &gt;vestigial&lt;/a&gt;. At the same time, new challenges and opportunities arose: food on the savanna was scarce, so humans had to hunt. The hunt was generally big, and humans did not have claws and teeth, so they had to coordinate in order to be successful.&lt;/p&gt;
-&lt;p&gt;My hypothesis is that via mechanisms that I cannot claim to know, (since I am not a bioanthropologist, nor a neurobiologist,) the neural circuitry for arboreal navigation was repurposed in the human brain for the task of reasoning. Repurposing of traits is known by evolutionary biology to be common, not only in anatomy but also in behavior; it is called &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Exaptation&#34; target=&#34;_blank&#34;
-   &gt;&lt;em&gt;&lt;strong&gt;exaptation&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Once our simian ancestors settled on the ground of the savanna, the neural circuits for arboreal navigation fell into disuse, essentially becoming &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Vestigiality" target="_blank"
+&gt;vestigial&lt;/a&gt;. At the same time, new challenges and opportunities arose: food on the savanna was scarce, so humans had to hunt. The hunt was generally big, and humans did not have claws and teeth, so they had to coordinate in order to be successful.&lt;/p&gt;
+&lt;p&gt;My hypothesis is that via mechanisms that I cannot claim to know, (since I am not a bioanthropologist, nor a neurobiologist,) the neural circuitry for arboreal navigation was repurposed in the human brain for the task of reasoning. Repurposing of traits is known by evolutionary biology to be common, not only in anatomy but also in behavior; it is called &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Exaptation" target="_blank"
+&gt;&lt;em&gt;&lt;strong&gt;exaptation&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The anatomical machinery that enabled simians to brachiate is still present in us today, so it is not a stretch to imagine that the neural machinery is also present. Human babies have a lot to learn until they can function autonomously in the world, but reasoning comes rather naturally to them, and education seems to build upon a preexisting foundation which innately supports reasoning. Therefore, reasoning seems to also be largely based on dedicated neural circuitry in the human brain.&lt;/p&gt;
 &lt;p&gt;The fundamental workflows of reasoning and arboreal navigation bear a striking resemblance to each other: from a certain set of premises, a number of potential inferences can be examined; some of those can be ignored due to being irrelevant to the desired conclusion; they correspond to leaps in directions away from the desired destination. Other potential inferences can be disregarded due to being false; these correspond to leaps that are impossible to make. Each of the remaining inferences represents a new set of premises, from which further potential inferences can be examined, thus bringing us closer and closer to the desired conclusion. Some chains of inferences lead to dead-ends, at which point we go back one or more steps to examine a different path; these correspond to back-tracking in path-finding. In all these cases, the neural circuitry we use for reasoning may be that very same neural circuitry that we used to use for arboreal navigation but fell into disuse when we came down from the trees.&lt;/p&gt;
 &lt;p&gt;The necessity to coordinate for hunting may have acted as a catalyst for the repurposing of neural circuitry from the task of arboreal navigation to the task of reasoning. The Gorilla is another great ape that descended from the trees to the ground, but they have remained vegetarian, so their food was free for the grabbing in the trees, and continued to be free for the grabbing on the ground. Therefore, Gorillas had no need to form packs and go hunting for food, and thus no evolutionary pressure to do any repurposing of neural circuitry.&lt;/p&gt;
-&lt;p&gt;More light might be shed on this hypothesis from research on the anatomical connectivity between the &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Cerebellum&#34; target=&#34;_blank&#34;
-   &gt;cerebellum&lt;/a&gt;, which is associated with motor control, and the &lt;a class=&#34;external&#34; 
-   href=&#34;https://en.wikipedia.org/wiki/Frontal_lobe&#34; target=&#34;_blank&#34;
-   &gt;frontal lobe&lt;/a&gt;, which is associated with problem solving.&lt;/p&gt;
+&lt;p&gt;More light might be shed on this hypothesis from research on the anatomical connectivity between the &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Cerebellum" target="_blank"
+&gt;cerebellum&lt;/a&gt;, which is associated with motor control, and the &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Frontal_lobe" target="_blank"
+&gt;frontal lobe&lt;/a&gt;, which is associated with problem solving.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &amp;ldquo;Thinking Caveman&amp;rdquo;, AI-generated at &lt;a class=&#34;external&#34; 
-   href=&#34;https://canva.com&#34; target=&#34;_blank&#34;
-   &gt;canva.com&lt;/a&gt; from a prompt by michael.gr&lt;/p&gt;</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;p&gt;Cover image: &amp;quot;Thinking Caveman&amp;quot;, AI-generated at &lt;a class="external"
+href="https://canva.com" target="_blank"
+&gt;canva.com&lt;/a&gt; from a prompt by michael.gr&lt;/p&gt;</description></item></channel></rss>

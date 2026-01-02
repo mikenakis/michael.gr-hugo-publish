@@ -1,52 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>visual-studio on Michael&#39;s Blog</title>
-        <link>//localhost:1313/tags/visual-studio/</link>
-        <description>Recent content in visual-studio on Michael&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright>
-        <lastBuildDate>Fri, 17 Oct 2025 19:58:51 +0200</lastBuildDate><atom:link href="//localhost:1313/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>How to organize a Visual Studio Solution</title>
-        <link>//localhost:1313/post/2024-06-visual-studio-solutions/</link>
-        <pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate>
-        
-        <guid>//localhost:1313/post/2024-06-visual-studio-solutions/</guid>
-        <description>&lt;p&gt;&lt;img src=&#34;//localhost:1313/post/2024-06-visual-studio-solutions/images/microsoft-visual-studio-2022-logo.svg&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microsoft Visual Studio on Michael's Blog</title><link>http://blog2.michael.gr/tags/visual-studio/</link><description>Recent content in Microsoft Visual Studio on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 17 Oct 2025 19:58:51 +0200</lastBuildDate><atom:link href="http://blog2.michael.gr/tags/visual-studio/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>http://blog2.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>http://blog2.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="http://blog2.michael.gr/post/2024-06-visual-studio-solutions/images/microsoft-visual-studio-2022-logo.svg"
+loading="lazy"
 &gt;
-
-Visual Studio is a capricious product, and its &amp;ldquo;Solution&amp;rdquo; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
+Visual Studio is a capricious product, and its &amp;quot;Solution&amp;quot; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
 &lt;p&gt;Here is a list of things I have (painfully) found out over the years.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a 
-   href=&#34;//localhost:1313/post/2022-11-about-these-papers/&#34;
-   &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id=&#34;the-project-directory-structure-must-be-entirely-flat&#34;&gt;The project directory structure must be entirely flat.
-&lt;/h3&gt;&lt;p&gt;All project files must reside in directories that are immediate sub-directories of the solution directory. When adding a project you are given the freedom to put it in a directory anywhere you want, but if you don&amp;rsquo;t put it in a directory exactly under the solution directory, you are going to run into trouble later.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a
+href="http://blog2.michael.gr/post/2022-11-about-these-papers/"
+&gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id="the-project-directory-structure-must-be-entirely-flat"&gt;The project directory structure must be entirely flat.
+&lt;/h3&gt;&lt;p&gt;All project files must reside in directories that are immediate sub-directories of the solution directory. When adding a project you are given the freedom to put it in a directory anywhere you want, but if you don't put it in a directory exactly under the solution directory, you are going to run into trouble later.&lt;/p&gt;
 &lt;p&gt;If you have hundreds of projects, and you are thinking that putting them all in one directory is insane, welcome to the Microsoft world, where insane is the order of the day.&lt;/p&gt;
-&lt;p&gt;From within Visual Studio, you can create what Microsoft calls &amp;ldquo;Solution Folders&amp;rdquo; to arrange your projects in a hierarchy at least within Visual
-Studio&amp;rsquo;s &amp;ldquo;Solution Explorer&amp;rdquo; panel, but even this has a caveat, keep reading.&lt;/p&gt;
-&lt;h3 id=&#34;the-startup-project-must-be-listed-first-in-the-solution-file&#34;&gt;The startup project must be listed first in the solution file.
-&lt;/h3&gt;&lt;p&gt;Solution files are, luckily, text files. Solution files with the .sln extension are in a ridiculous ad-hoc format consisting of, among other things, entries delimited with &amp;ldquo;Project&amp;rdquo; and &amp;ldquo;EndProject&amp;rdquo; and making use of GUIDs to discourage anyone from touching it or even looking at it. Luckily they have now introduced .slnx files, which are a bit more lean, but they are now in XML, (Microsoft seems to be stuck in the 1980&amp;rsquo;s,) so they are still far more verbose than necessary, and they still contain GUIDs here and there. Regardless of the file format, you are free to edit the solution file and re-order these entries in any way you like, and it seems to have absolutely no effect because the Visual Studio Solution Explorer will sort them alphabetically anyway, but there is one kind of re-ordering that you can do which actually matters: The entry which stands for your startup project must be the first entry.&lt;/p&gt;
+&lt;p&gt;From within Visual Studio, you can create what Microsoft calls &amp;quot;Solution Folders&amp;quot; to arrange your projects in a hierarchy at least within Visual
+Studio's &amp;quot;Solution Explorer&amp;quot; panel, but even this has a caveat, keep reading.&lt;/p&gt;
+&lt;h3 id="the-startup-project-must-be-listed-first-in-the-solution-file"&gt;The startup project must be listed first in the solution file.
+&lt;/h3&gt;&lt;p&gt;Solution files are, luckily, text files. Solution files with the .sln extension are in a ridiculous ad-hoc format consisting of, among other things, entries delimited with &amp;quot;Project&amp;quot; and &amp;quot;EndProject&amp;quot; and making use of GUIDs to discourage anyone from touching it or even looking at it. Luckily they have now introduced .slnx files, which are a bit more lean, but they are now in XML, (Microsoft seems to be stuck in the 1980's,) so they are still far more verbose than necessary, and they still contain GUIDs here and there. Regardless of the file format, you are free to edit the solution file and re-order these entries in any way you like, and it seems to have absolutely no effect because the Visual Studio Solution Explorer will sort them alphabetically anyway, but there is one kind of re-ordering that you can do which actually matters: The entry which stands for your startup project must be the first entry.&lt;/p&gt;
 &lt;p&gt;If you do not do this, then each time you delete the .vs directory, restart Visual Studio, and try to launch your solution, you will be greeted with the all too familiar, extremely annoying, and extremely stupid message which says that you cannot launch a project which builds a library instead of an executable. This is happening because when the .vs directory is deleted, Visual Studio forgets the startup project, and when Visual Studio is launched with no startup project configured it absolutely has to establish a startup project, and it absolutely has to do this automatically, without asking you. In doing so, it picks the first project that it finds in the solution file, and it is not smart enough to skip projects that build libraries instead of executables.&lt;/p&gt;
-&lt;h3 id=&#34;the-startup-project-must-not-be-nested-in-a-solution-folder&#34;&gt;The startup project must not be nested in a solution folder.
-&lt;/h3&gt;&lt;p&gt;As mentioned earlier, you can use &amp;ldquo;Solution Folders&amp;rdquo; to arrange your projects in a hierarchy; however, the project that you usually want to have as the startup project must not be nested in a solution folder, it must be placed right under the root node of the solution.&lt;/p&gt;
+&lt;h3 id="the-startup-project-must-not-be-nested-in-a-solution-folder"&gt;The startup project must not be nested in a solution folder.
+&lt;/h3&gt;&lt;p&gt;As mentioned earlier, you can use &amp;quot;Solution Folders&amp;quot; to arrange your projects in a hierarchy; however, the project that you usually want to have as the startup project must not be nested in a solution folder, it must be placed right under the root node of the solution.&lt;/p&gt;
 &lt;p&gt;If you nest your startup project in a solution folder, then Visual Studio will again, entirely capriciously, ignore it when automatically selecting a project as the startup project each time you delete the .vs directory.&lt;/p&gt;
-&lt;h3 id=&#34;test-projects-must-be-given-names-that-end-in--test-yes-that-is-a-space&#34;&gt;Test projects must be given names that end in &amp;quot; Test&amp;quot;. (Yes, that is a space.)
+&lt;h3 id="test-projects-must-be-given-names-that-end-in--test-yes-that-is-a-space"&gt;Test projects must be given names that end in &amp;quot; Test&amp;quot;. (Yes, that is a space.)
 &lt;/h3&gt;&lt;p&gt;Usually, projects come in pairs: there is a production project, and a test project. Usually, we give the test project the same name as the production
-project, with a suitable suffix to indicate that this is a test project. If your production project is called &amp;ldquo;Covfefe&amp;rdquo;, you might think that you have
-plenty of options to call your test project: &amp;ldquo;CovfefeTest&amp;rdquo;, &amp;ldquo;Covfefe.Test&amp;rdquo;, &amp;ldquo;Covfefe-Test&amp;rdquo;, &amp;ldquo;Covfefe_Test&amp;rdquo;, etc. Actually, none of these will work. You have to call it &amp;ldquo;Covfefe Test&amp;rdquo;, with a space before &amp;ldquo;Test&amp;rdquo;.&lt;/p&gt;
+project, with a suitable suffix to indicate that this is a test project. If your production project is called &amp;quot;Covfefe&amp;quot;, you might think that you have
+plenty of options to call your test project: &amp;quot;CovfefeTest&amp;quot;, &amp;quot;Covfefe.Test&amp;quot;, &amp;quot;Covfefe-Test&amp;quot;, &amp;quot;Covfefe_Test&amp;quot;, etc. Actually, none of these will work. You have to call it &amp;quot;Covfefe Test&amp;quot;, with a space before &amp;quot;Test&amp;quot;.&lt;/p&gt;
 &lt;p&gt;This is because the Visual Studio Solution Explorer uses different sorting rules from Windows File Explorer, so if you use anything but &amp;quot; Test&amp;quot; as a suffix for test projects you will find your projects listed in a different order between the Solution Explorer and the File Explorer. Depending on what you choose, your test projects will appear either before or after your production projects, either in Solution Explorer or in File Explorer, but not in both. The only trick I have been able to find which causes the test projects to always be listed after the production projects both in Solution Explorer and in File Explorer is to make each test project name consist of the production project name suffixed with &amp;quot; Test&amp;quot; (with a space.)&lt;/p&gt;
 &lt;p&gt;Aaaand, of course, even with this, there is a catch: if you name your projects as I suggested, they will appear in the wrong order when viewing your solution directory on GitHub. Because GitHub uses yet different sorting rules. So, there is no way to achieve a consistent look both in Windows File Explorer, and Visual Studio Solution Explorer, and GitHub.&lt;/p&gt;
-&lt;h4 id=&#34;solution-items-must-be-placed-in-a-custom-_solution-items-folder&#34;&gt;Solution items must be placed in a custom &amp;ldquo;_Solution Items&amp;rdquo; folder.
-&lt;/h4&gt;&lt;p&gt;Solution-level items are a fiasco to begin with; they only exist because the Visual Studio Solution Explorer capriciously hides solution-level files from the user. Instead, Visual Studio offers the &amp;ldquo;Solution Items&amp;rdquo; workaround, which is a solution folder under the solution node where you can manually place links to solution-level files that you want to be able to access. (Because having to manually create links to your own files so that you can access them is always fun.)&lt;/p&gt;
-&lt;p&gt;The default name that Visual Studio gives to this folder is &amp;ldquo;Solution Items&amp;rdquo;. The first thing you must do with it is to rename it to &amp;ldquo;_Solution Items&amp;rdquo;, so that it will be sorted first in the list, otherwise it will be hidden among other solution folders.&lt;/p&gt;
+&lt;h4 id="solution-items-must-be-placed-in-a-custom-_solution-items-folder"&gt;Solution items must be placed in a custom &amp;quot;_Solution Items&amp;quot; folder.
+&lt;/h4&gt;&lt;p&gt;Solution-level items are a fiasco to begin with; they only exist because the Visual Studio Solution Explorer capriciously hides solution-level files from the user. Instead, Visual Studio offers the &amp;quot;Solution Items&amp;quot; workaround, which is a solution folder under the solution node where you can manually place links to solution-level files that you want to be able to access. (Because having to manually create links to your own files so that you can access them is always fun.)&lt;/p&gt;
+&lt;p&gt;The default name that Visual Studio gives to this folder is &amp;quot;Solution Items&amp;quot;. The first thing you must do with it is to rename it to &amp;quot;_Solution Items&amp;quot;, so that it will be sorted first in the list, otherwise it will be hidden among other solution folders.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -54,8 +33,4 @@ plenty of options to call your test project: &amp;ldquo;CovfefeTest&amp;rdquo;, 
 &lt;p&gt;Thank you for sharing your experiences and all the useful info.
 Visual Studio is increasingly becoming such a bloatware, while still missing quite a lot of basic fundamental functionality.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description>
-        </item>
-        
-    </channel>
-</rss>
+&lt;/ul&gt;</description></item></channel></rss>

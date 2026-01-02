@@ -1,585 +1,64 @@
-<!DOCTYPE html>
-<html lang="en-us" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly The Stateful Microservice.\nWhat is a microservice? If you go looking for information on what a microservice is, you will find many different descriptions, exhibiting considerable difference of opinion. Most claims about microservices are non-technical rather than technical, for example the allegedly &ldquo;independent&rdquo; software development style around microservices, or some alleged organization of microservices &ldquo;around business capabilities&rdquo;. Even when the claims do stick within the technical realm, they are often unwarranted; for example, I have seen statements to the effect that a microservice is supposed to live in its very own source code repository, that microservices must communicate with each other via nothing but REST, etc. My favorite one is that they must necessarily be stateless. This paper is a first step in dispelling the statelessness myth.\n">
-<title>So, what is a Microservice, anyway?</title>
-
-<link rel='canonical' href='//localhost:1313/post/2021-10-so-what-is-microservice-anyway/'>
-
-<link rel="stylesheet" href="/scss/style.min.21ef8ebc918342b23127db7e1cef326889b262bc982b25546ec94e1a9c73073b.css"><meta property='og:title' content="So, what is a Microservice, anyway?">
-<meta property='og:description' content="This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly The Stateful Microservice.\nWhat is a microservice? If you go looking for information on what a microservice is, you will find many different descriptions, exhibiting considerable difference of opinion. Most claims about microservices are non-technical rather than technical, for example the allegedly &ldquo;independent&rdquo; software development style around microservices, or some alleged organization of microservices &ldquo;around business capabilities&rdquo;. Even when the claims do stick within the technical realm, they are often unwarranted; for example, I have seen statements to the effect that a microservice is supposed to live in its very own source code repository, that microservices must communicate with each other via nothing but REST, etc. My favorite one is that they must necessarily be stateless. This paper is a first step in dispelling the statelessness myth.\n">
-<meta property='og:url' content='//localhost:1313/post/2021-10-so-what-is-microservice-anyway/'>
-<meta property='og:site_name' content='Michael&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='software-architecture' /><meta property='article:tag' content='software-engineering' /><meta property='article:tag' content='papers' /><meta property='article:tag' content='microservices' /><meta property='article:published_time' content='2021-10-14T17:39:23&#43;00:00'/><meta property='article:modified_time' content='2025-10-23T22:32:55&#43;02:00'/>
-<meta name="twitter:title" content="So, what is a Microservice, anyway?">
-<meta name="twitter:description" content="This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly The Stateful Microservice.\nWhat is a microservice? If you go looking for information on what a microservice is, you will find many different descriptions, exhibiting considerable difference of opinion. Most claims about microservices are non-technical rather than technical, for example the allegedly &ldquo;independent&rdquo; software development style around microservices, or some alleged organization of microservices &ldquo;around business capabilities&rdquo;. Even when the claims do stick within the technical realm, they are often unwarranted; for example, I have seen statements to the effect that a microservice is supposed to live in its very own source code repository, that microservices must communicate with each other via nothing but REST, etc. My favorite one is that they must necessarily be stateless. This paper is a first step in dispelling the statelessness myth.\n">
-    <link rel="shortcut icon" href="/favicon.ico" />
-
-      <script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'TODO');
-        }
-      </script>
-    </head>
-    <body class="
-    article-page
-     article-page">
-    <script>
-        (function() {
-            const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
-        })();
-    </script><script>
-    (function() {
-        const colorSchemeKey = 'StackColorScheme';
-        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
-        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-
-        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
-            
-
-            document.documentElement.dataset.scheme = 'dark';
-        } else {
-            document.documentElement.dataset.scheme = 'light';
-        }
-    })();
-</script>
-<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
-    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
-        <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-        </span>
-    </button>
-
-    <header>
-	
-		
-			<ol class="menu" id="main-menu">
-				<li class="menu-bottom-section">
-					<ol class="menu">
-						
-							<li id="dark-mode-toggle">
-								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-								<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-								<span>Dark Mode</span>
-							</li>
-						
-					</ol>
-				</li>
-			</ol>
-			
-
-		<a href="/"><img src="/logo.svg" width="210" loading="lazy" alt="Logo"></a>
-
-		
-		
-			
-				<figure class="site-avatar">
-					 <a href="/">
-						
-							<img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
-						
-					</a>
-					
-				</figure>
-			
-        
-        
-        <div class="site-meta">
-            <h1 class="site-name"><a href="//localhost:1313/">Michael&#39;s Blog</a></h1>
-            <h2 class="site-description">&#34;If it&#39;s worth doing, it&#39;s worth doing right.&#34;</h2>
-        </div>
-    </header><ul class="menu-social">
-            
-                <li>
-                    <a 
-                        href='/contact-via-e-mail/'
-                        
-                        title="e-Mail"
-                        rel="me"
-                    >
-                        
-                        
-                            <!--
-category: Communication
-tags: [inbox, gmail, email, envelope, message]
-version: "1.0"
-unicode: "eae5"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" />
-  <path d="M3 7l9 6l9 -6" />
-</svg>
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='/contact-via-whatsapp/'
-                        
-                        title="WhatsApp"
-                        rel="me"
-                    >
-                        
-                        
-                            <!--
-tags: [logo, app, application, communication, text, messages, communicator, photos, images, videos, giphy]
-category: Brand
-version: "1.13"
-unicode: "ec74"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
-  <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
-</svg>
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://github.com/mikenakis'
-                        target="_blank"
-                        title="GitHub"
-                        rel="me"
-                    >
-                        
-                        
-                            <!--
-tags: [logo, website, hosting, project, programming, software, development]
-category: Brand
-version: "1.18"
-unicode: "ec1c"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
-</svg>
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://www.linkedin.com/in/mikenakis'
-                        target="_blank"
-                        title="LinkedIn"
-                        rel="me"
-                    >
-                        
-                        
-                            <!--
-tags: [logo, website, corporation, work, business, internet]
-category: Brand
-version: "1.15"
-unicode: "ec8c"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M8 11v5" />
-  <path d="M8 8v.01" />
-  <path d="M12 16v-5" />
-  <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-  <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
-</svg>
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://stackoverflow.com/users/773113/mike-nakis'
-                        target="_blank"
-                        title="Stack Overflow"
-                        rel="me"
-                    >
-                        
-                        
-                            <!--
-tags: [social, media, programming, website]
-category: Brand
-version: "1.43"
-unicode: "ef58"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M4 17v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-1" />
-  <path d="M8 16h8" />
-  <path d="M8.322 12.582l7.956 .836" />
-  <path d="M8.787 9.168l7.826 1.664" />
-  <path d="M10.096 5.764l7.608 2.472" />
-</svg>
-
-                        
-                    </a>
-                </li>
-            
-                <li>
-                    <a 
-                        href='https://twitter.com/mikenakis'
-                        target="_blank"
-                        title="Twitter"
-                        rel="me"
-                    >
-                        
-                        
-                            <!--
-tags: [logo, app, application, community, social, communication, website, user, post, images, photos, comment, feedback]
-category: Brand
-version: "1.18"
-unicode: "ec27"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
-</svg>
-
-                        
-                    </a>
-                </li>
-            
-        </ul><ol class="menu" id="main-menu">
-        
-        
-        
-        <li >
-            <a href='/' >
-                
-                
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <polyline points="5 12 3 12 12 3 21 12 19 12" />
-  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
-  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
-</svg>
-
-
-
-                
-                <span>Home</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/archives/' >
-                
-                
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <rect x="3" y="4" width="18" height="4" rx="2" />
-  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
-  <line x1="10" y1="12" x2="14" y2="12" />
-</svg>
-
-
-
-                
-                <span>Archives</span>
-            </a>
-        </li>
-        
-        
-        <li >
-            <a href='/search/' >
-                
-                
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="10" cy="10" r="7" />
-  <line x1="21" y1="21" x2="15" y2="15" />
-</svg>
-
-
-
-                
-                <span>Search</span>
-            </a>
-        </li>
-        
-        <li class="menu-bottom-section">
-            <ol class="menu">
-
-                
-            </ol>
-        </li>
-    </ol>
-</aside>
-
-
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#what-is-a-microservice">What is a microservice?</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
-
-            <main class="main full-width">
-    <article class="main-article">
-    <header class="article-header">
-</header><div class="article-details">
-    
-
-    <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="/post/2021-10-so-what-is-microservice-anyway/">So, what is a Microservice, anyway?</a>
-        </h2>
-    
-        
-    </div>
-
-    
-    
-    
-    
-    <footer class="article-time">
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
-  <circle cx="18" cy="18" r="4" />
-  <path d="M15 3v4" />
-  <path d="M7 3v4" />
-  <path d="M3 11h16" />
-  <path d="M18 16.496v1.504l1 1" />
-</svg>
-                <time class="article-time--published">2021-10-14 Thu 17:39:23 UTC</time>
-            </div>
-        
-
-        
-            <div>
-                <!--
-tags: [material, measure, time, timer, clock, sand]
-version: "1.66"
-category: System
-unicode: "f146"
--->
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1z" />
-  <path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1z" />
-</svg>
-
-                <time class="article-time--reading">
-                    6 minute read
-                </time>
-            </div>
-        
-    </footer>
-    
-
-    
-</div>
-
-
-    <section class="article-content">
-    
-    
-    <p>This article attempts to shed some light on what a microservice really is; it
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content='This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly The Stateful Microservice.\nWhat is a microservice? If you go looking for information on what a microservice is, you will find many different descriptions, exhibiting considerable difference of opinion. Most claims about microservices are non-technical rather than technical, for example the allegedly "independent" software development style around microservices, or some alleged organization of microservices "around business capabilities". Even when the claims do stick within the technical realm, they are often unwarranted; for example, I have seen statements to the effect that a microservice is supposed to live in its very own source code repository, that microservices must communicate with each other via nothing but REST, etc. My favorite one is that they must necessarily be stateless. This paper is a first step in dispelling the statelessness myth.\n'><title>So, what is a Microservice, anyway?</title><link rel=canonical href=http://blog2.michael.gr/post/2021-10-so-what-is-microservice-anyway/><link rel=stylesheet href=/scss/style.min.3994e2c47c62da77b2a9fe33e39ea957c2a998fa0dd8b3970a61493bb07dac2c.css><meta property='og:title' content="So, what is a Microservice, anyway?"><meta property='og:description' content='This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly The Stateful Microservice.\nWhat is a microservice? If you go looking for information on what a microservice is, you will find many different descriptions, exhibiting considerable difference of opinion. Most claims about microservices are non-technical rather than technical, for example the allegedly "independent" software development style around microservices, or some alleged organization of microservices "around business capabilities". Even when the claims do stick within the technical realm, they are often unwarranted; for example, I have seen statements to the effect that a microservice is supposed to live in its very own source code repository, that microservices must communicate with each other via nothing but REST, etc. My favorite one is that they must necessarily be stateless. This paper is a first step in dispelling the statelessness myth.\n'><meta property='og:url' content='http://blog2.michael.gr/post/2021-10-so-what-is-microservice-anyway/'><meta property='og:site_name' content="Michael's Blog"><meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='software-architecture'><meta property='article:tag' content='software-engineering'><meta property='article:tag' content='papers'><meta property='article:tag' content='microservices'><meta property='article:published_time' content='2021-10-14T17:39:23+00:00'><meta property='article:modified_time' content='2025-10-23T22:32:55+02:00'><meta name=twitter:title content="So, what is a Microservice, anyway?"><meta name=twitter:description content='This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly The Stateful Microservice.\nWhat is a microservice? If you go looking for information on what a microservice is, you will find many different descriptions, exhibiting considerable difference of opinion. Most claims about microservices are non-technical rather than technical, for example the allegedly "independent" software development style around microservices, or some alleged organization of microservices "around business capabilities". Even when the claims do stick within the technical realm, they are often unwarranted; for example, I have seen statements to the effect that a microservice is supposed to live in its very own source code repository, that microservices must communicate with each other via nothing but REST, etc. My favorite one is that they must necessarily be stateless. This paper is a first step in dispelling the statelessness myth.\n'><link rel="shortcut icon" href=/favicon.svg><script async src="https://www.googletagmanager.com/gtag/js?id=TODO"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","TODO")}</script></head><body class="article-page
+article-page"><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label="Toggle Menu">
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><ol class=menu id=main-menu><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span>Dark Mode</span></li></ol></li></ol><a href=/><img src=/logo.svg width=210 loading=lazy alt=Logo></a><figure class=site-avatar><a href=/><img src="https://gravatar.com/avatar/8d1c5b5578843f958430afe30e0cbb2fb5092b1712d1933ea37d7bf5cb4305ed?size=400" width=300 height=300 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>Michael's Blog</a></h1><h2 class=site-description>If it's worth doing, it's worth doing right.</h2></div></header><ul class=menu-social><li><a href=/contact-via-e-mail/ title=e-Mail rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M3 7l9 6 9-6"/></svg></a></li><li><a href=/contact-via-whatsapp/ title=WhatsApp rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 113.4 2.9L3 21"/><path d="M9 10a.5.5.0 001 0V9A.5.5.0 009 9v1a5 5 0 005 5h1a.5.5.0 000-1h-1a.5.5.0 000 1"/></svg></a></li><li><a href=https://github.com/mikenakis target=_blank title=GitHub rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=https://www.linkedin.com/in/mikenakis target=_blank title=LinkedIn rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11v5"/><path d="M8 8v.01"/><path d="M12 16v-5"/><path d="M16 16v-3a2 2 0 10-4 0"/><path d="M3 7a4 4 0 014-4h10a4 4 0 014 4v10a4 4 0 01-4 4H7a4 4 0 01-4-4z"/></svg></a></li><li><a href=https://stackoverflow.com/users/773113/mike-nakis target=_blank title="Stack Overflow" rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17v1a2 2 0 002 2h12a2 2 0 002-2v-1"/><path d="M8 16h8"/><path d="M8.322 12.582l7.956.836"/><path d="M8.787 9.168l7.826 1.664"/><path d="M10.096 5.764l7.608 2.472"/></svg></a></li><li><a href=https://twitter.com/mikenakis target=_blank title=Twitter rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4.01c-1 .49-1.98.689-3 .99-1.121-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84.0 00.497-3.753c0-.249 1.51-2.772 1.818-4.013z"/></svg></a></li></ul><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>Home</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>Archives</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>Search</span></a></li><li class=menu-bottom-section><ol class=menu></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title">Table of contents</h2><div class=widget--toc><nav id=TableOfContents><ol><li><a href=#what-is-a-microservice>What is a microservice?</a></li></ol></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header></header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/post/2021-10-so-what-is-microservice-anyway/>So, what is a Microservice, anyway?</a></h2></div><footer class=article-time><div><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published>2021-10-14 Thu 17:39:23 UTC</time></div><div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20v-2a6 6 0 1112 0v2a1 1 0 01-1 1H7a1 1 0 01-1-1z"/><path d="M6 4v2a6 6 0 1012 0V4a1 1 0 00-1-1H7A1 1 0 006 4z"/></svg>
+<time class=article-time--reading>6 minute read</time></div></footer></div><section class=article-content><p>This article attempts to shed some light on what a microservice really is; it
 is meant as support material for other posts of mine that discuss
 microservices, mainly
-<a 
-   href="/post/2021-10-14-the-stateful-microservice/"
-   >The Stateful Microservice</a>.</p>
-<p><img src="/post/2021-10-so-what-is-microservice-anyway/media/microservices.svg"
-	
-	
-	
-	loading="lazy"
-	
-	
->
-</p>
-<h3 id="what-is-a-microservice">What is a microservice?
-</h3><p>If you go looking for information on what a microservice is, you will find
+<a href=/post/2021-10-14-the-stateful-microservice/>The Stateful Microservice</a>.</p><p><img src=/post/2021-10-so-what-is-microservice-anyway/media/microservices.svg loading=lazy></p><h3 id=what-is-a-microservice>What is a microservice?</h3><p>If you go looking for information on what a microservice is, you will find
 many different descriptions, exhibiting considerable difference of opinion.
 Most claims about microservices are non-technical rather than technical, for
-example the allegedly &ldquo;independent&rdquo; software development style around
-microservices, or some alleged organization of microservices &ldquo;around business
-capabilities&rdquo;. Even when the claims do stick within the technical realm, they
+example the allegedly "independent" software development style around
+microservices, or some alleged organization of microservices "around business
+capabilities". Even when the claims do stick within the technical realm, they
 are often unwarranted; for example, I have seen statements to the effect that
 a microservice is supposed to live in its very own source code repository,
 that microservices must communicate with each other via nothing but REST, etc.
 My favorite one is that they must necessarily be stateless. This paper is a
-first step in dispelling the statelessness myth.</p>
-<p>(Useful pre-reading: <a 
-   href="/post/2022-11-about-these-papers/"
-   >About these papers</a>)</p>
-<p>To clear up the confusion a little bit, I would like to propose a purely
-technical definition of a microservice which is brief and to the point:</p>
-<blockquote>
-<p>From a purely technical standpoint, a microservice is a scalable module.</p></blockquote>
-<p>So, what I am proposing here is that the only fundamental technical
+first step in dispelling the statelessness myth.</p><p>(Useful pre-reading: <a href=/post/2022-11-about-these-papers/>About these papers</a>)</p><p>To clear up the confusion a little bit, I would like to propose a purely
+technical definition of a microservice which is brief and to the point:</p><blockquote><p>From a purely technical standpoint, a microservice is a scalable module.</p></blockquote><p>So, what I am proposing here is that the only fundamental technical
 requirement for a microservice is scalability, and that all other purported
 characteristics mentioned in the literature are either non-technical, or they
-are byproducts of this fundamental technical requirement.</p>
-<p>You see, there was a time back in the late 1990s to early 2000s when users
+are byproducts of this fundamental technical requirement.</p><p>You see, there was a time back in the late 1990s to early 2000s when users
 were joining websites at exponential rates, and servers running monolithic web
 apps were reaching capacity and could not deliver service anymore; the
 business people were asking the technologists to fix this, because they were
 losing money, and the technologists were saying that they could not do
 anything, because they already had the biggest, most expensive server that
-money could buy. The business people would na?vely say &ldquo;well, add more
-servers!&rdquo; to which the technologists would (equally na?vely) reply &ldquo;you don&rsquo;t
-understand, that&rsquo;s impossible!&rdquo; Later on the technologists started realizing
+money could buy. The business people would na?vely say "well, add more
+servers!" to which the technologists would (equally na?vely) reply "you don't
+understand, that's impossible!" Later on the technologists started realizing
 that it is in fact possible, it just requires a radical change in their way of
 thinking, and a radical redesign of all their systems. When the sums of money
 at stake were high enough to justify redoing everything from scratch, scalable
-systems started appearing, and are commonplace today.</p>
-<p>The new software development paradigm that was allowing web sites to achieve
+systems started appearing, and are commonplace today.</p><p>The new software development paradigm that was allowing web sites to achieve
 scalability received a name quite some time after it first started being put
 to use; the naming happened some time in the mid 2000s, and it was
-<em>microservices</em>.</p>
-<p>Then of course came the evangelists. Unfortunately, when people become
+<em>microservices</em>.</p><p>Then of course came the evangelists. Unfortunately, when people become
 salespersons of a cause, for some reason they never seem to be satisfied with
 simply mentioning the one real, game-changing advantage that their product has
 over the alternatives; instead, they feel compelled to throw as much as
-possible at the customer, inventing advantages if possible. That&rsquo;s how all the
+possible at the customer, inventing advantages if possible. That's how all the
 fictitious characteristics of microservices came to be. However, the truth
 remains that there was one and only one thing that business needed which could
 not be achieved otherwise, and therefore business was willing to pay for it
-limitlessly, and that one thing was scalability, nothing else. (1)</p>
-<p>Business could not care less whether the software gets deployed in pieces or
+limitlessly, and that one thing was scalability, nothing else. (1)</p><p>Business could not care less whether the software gets deployed in pieces or
 in a big bang; business could not care less whether development is done by
 autonomous teams or by all the programmers shouting at each other in one big
 room; business could not care less whether the software communicates via REST
 or via pheromone secretion. Things were getting done before, and things would
-continue getting done, regardless of those alleged &ldquo;advantages&rdquo; of
+continue getting done, regardless of those alleged "advantages" of
 microservices. Scalability was the only thing that was impossible before
-microservices and was made possible by microservices.</p>
-<p>Of course, you might not agree with this definition; if not, then please take
+microservices and was made possible by microservices.</p><p>Of course, you might not agree with this definition; if not, then please take
 it as nothing but a working definition, and only for the purpose of these
-papers about statelessness.</p>
-<p>There is one more characteristic of microservices which is not really fundamental, because it is a direct
+papers about statelessness.</p><p>There is one more characteristic of microservices which is not really fundamental, because it is a direct
 consequence of the first, but it is so
-important that it deserves mentioning as a requirement, and this is resilience.</p>
-<p>You see, scalable architectures are not magically capable of performing better
+important that it deserves mentioning as a requirement, and this is resilience.</p><p>You see, scalable architectures are not magically capable of performing better
 than monolithic ones; in fact, quite the opposite is true: in terms of raw
 throughput per unit of hardware, scalable architectures perform much worse
 than monolithic ones. In order to accommodate the same workload that you used
@@ -589,10 +68,9 @@ that you can in fact now throw more hardware at the problem, instead of being
 stuck with a single piece of hardware. So, given enough money to buy enough
 hardware you can end up with a higher sum of throughput despite the worse
 throughput per unit of hardware. Thus, when we are talking about scalability, we
-are usually talking about a lot of hardware. And by this I mean <em>an awful lot</em> of hardware.</p>
-<p>Now, it just so happens that hardware, being necessarily bound to the
+are usually talking about a lot of hardware. And by this I mean <em>an awful lot</em> of hardware.</p><p>Now, it just so happens that hardware, being necessarily bound to the
 constraints of the <em>physical world?</em>, has this inconvenient
-characteristic called &ldquo;Mean Time Before Failure&rdquo; (MTBF) which is of a somewhat
+characteristic called "Mean Time Before Failure" (MTBF) which is of a somewhat
 statistical nature: the more pieces of hardware you have, the higher the
 chances are that any one of them will fail at any given moment. Furthermore,
 as these pieces age, their individual chances of failure at any given moment
@@ -604,247 +82,16 @@ basis via crisis management responses; it must be addressed systematically, as
 a normal part of the operation of the system. This means that the software
 that runs on that hardware must be capable of continuing to function as if
 nothing happened despite pieces of the hardware randomly failing and being
-replaced all the time.</p>
-<p>A software system that manages to continue functioning despite parts of it
+replaced all the time.</p><p>A software system that manages to continue functioning despite parts of it
 ceasing to work is called a resilient software system. If we want to add the
-resilience concern into our definition, then this is what we are left with:</p>
-<blockquote>
-<p>From a purely technical standpoint, a microservice is a scalable and resilient
-module.</p></blockquote>
-<p>Further reading: <a 
-   href="/post/2021-10-on-stateless-microservices/"
-   >On Stateless Microservices</a></p>
-<hr>
-<p>(1) According to Neal Ford, this started with Pets.com; see <a class="external" 
-   href="https://youtu.be/fYWvTYFmVYs?t=2156" target="_blank"
-   >Neal Ford: &ldquo;Stories Every Developer Should Know&rdquo; at YOW! 2018, starting at 35:56</a></p>
-</section>
-
-
-    <footer class="article-footer">
-    
-    <section class="article-tags">
-        
-            <a href="/tags/software-architecture/">software-architecture</a>
-        
-            <a href="/tags/software-engineering/">software-engineering</a>
-        
-            <a href="/tags/papers/">papers</a>
-        
-            <a href="/tags/microservices/">microservices</a>
-        
-    </section>
-
-
-    <section class="article-lastmod">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-        <span>
-            Last updated on 2025-10-23 Thu 22:32:55 CEST
-        </span>
-    </section></footer>
-
-
-    
-</article>
-
-    
-
-    
-
-<aside class="related-content--wrapper">
-    <h2 class="section-title">Related content</h2>
-    <div class="related-content">
-        <div class="flex article-list--tile">
-            
-                
-<article class="">
-    <a href="/post/2021-10-14-the-stateful-microservice/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">The Stateful Microservice</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/post/2021-10-on-stateless-microservices/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">On Stateless Microservices</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/post/2024-03-codecoverage/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Artificial Code Coverage</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/post/2024-01-types-of-dependencies/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Types of dependencies</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/post/2023-12-27-call-graph-acyclicity/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Call Graph Acyclicity</h2>
-        </div>
-    </a>
-</article>
-
-            
-        </div>
-    </div>
-</aside>
-
-     
-    
-        
-    
-
-    <footer class="site-footer">
-    <section class="copyright">
-        &copy; 2001 - 2025 Michael Belivanakis (a.k.a. Mike Nakis)
-    </section>
-    
-    <section class="powerby">
-        Made using <b><a href="https://obsidian.md" target="_blank">Obsidian</a></b> and <b><a href="https://gohugo.io/" target="_blank">Hugo</a></b><br />
-        Theme based on <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" data-version="%s">hugo-theme-stack</a></b> by <a href="https://jimmycai.com" target="_blank">Jimmy Cai</a><br />
-    </section>
-</footer>
-
-
-    
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    
-    <div class="pswp__bg"></div>
-
-    
-    <div class="pswp__scroll-wrap">
-
-        
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                
-                
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                        <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div>
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
-                defer
-                >
-            </script><script 
-                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
-                defer
-                >
-            </script><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
-            ><link 
-                rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
-            >
-
-            </main>
-        </div>
-        <script 
-                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
-                
-                >
-            </script><script type="text/javascript" src="/ts/main.f2c01864f0b68886d640021e561a9182ddc2c60846b5b64ea7a6069cbe8a17ed.js" defer></script>
-<script>
-    (function () {
-        const customFont = document.createElement('link');
-        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
-
-        customFont.type = "text/css";
-        customFont.rel = "stylesheet";
-
-        document.head.appendChild(customFont);
-    }());
-</script>
-
-    </body>
-</html>
+resilience concern into our definition, then this is what we are left with:</p><blockquote><p>From a purely technical standpoint, a microservice is a scalable and resilient
+module.</p></blockquote><p>Further reading: <a href=/post/2021-10-on-stateless-microservices/>On Stateless Microservices</a></p><hr><p>(1) According to Neal Ford, this started with Pets.com; see <a class=external href="https://youtu.be/fYWvTYFmVYs?t=2156" target=_blank>Neal Ford: "Stories Every Developer Should Know" at YOW! 2018, starting at 35:56</a></p></section><footer class=article-footer><section class=article-tags><a href=/tags/software-architecture/>Software Architecture</a>
+<a href=/tags/software-engineering/>Software Engineering</a>
+<a href=/tags/papers/>Papers</a>
+<a href=/tags/microservices/>Microservices</a></section><section class=article-lastmod><svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>Last updated on 2025-10-23 Thu 22:32:55 CEST</span></section></footer></article><aside class=related-content--wrapper><h2 class=section-title>Related content</h2><div class=related-content><div class="flex article-list--tile"><article><a href=/post/2021-10-14-the-stateful-microservice/><div class=article-details><h2 class=article-title>The Stateful Microservice</h2></div></a></article><article><a href=/post/2021-10-on-stateless-microservices/><div class=article-details><h2 class=article-title>On Stateless Microservices</h2></div></a></article><article><a href=/post/2024-03-codecoverage/><div class=article-details><h2 class=article-title>Artificial Code Coverage</h2></div></a></article><article><a href=/post/2024-01-types-of-dependencies/><div class=article-details><h2 class=article-title>Types of dependencies</h2></div></a></article><article><a href=/post/2023-12-27-call-graph-acyclicity/><div class=article-details><h2 class=article-title>Call Graph Acyclicity</h2></div></a></article></div></div></aside><footer class=site-footer><section class=copyright>&copy; 2001 - 2026 Michael Belivanakis (a.k.a. Mike Nakis)</section><section class=powerby>Made using <b><a href=https://obsidian.md target=_blank>Obsidian</a></b> and <b><a href=https://gohugo.io/ target=_blank>Hugo</a></b><br>Theme based on <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank data-version=%s>hugo-theme-stack</a></b> by <a href=https://jimmycai.com target=_blank>Jimmy Cai</a><br></section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css crossorigin=anonymous></main></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z+KMkF24hUW8WePSA9HM=" crossorigin=anonymous></script><script type=text/javascript src=/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js defer></script><script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script></body></html>
