@@ -11437,12 +11437,21 @@ href="https://www.xkcd.com/1638/" target="_blank"
 href="https://langdev.stackexchange.com/questions/1123/what-design-trade-offs-led-to-the-norway-problem-in-yaml-and-when-are-they-wo" target="_blank"
 &gt;Norway Problem&lt;/a&gt;, where the two-letter country code for Norway is interpreted as the Boolean value &lt;code&gt;false&lt;/code&gt;.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;A scripting language that owes its bad syntax to being hastily hacked together is JavaScript. Brendan Eich, its creator, has admitted that JavaScript was developed within a couple of weeks, and that the language was not meant for anything but short isolated snippets of code. He is honest enough to speak of his own creation in derogatory terms, and to accept blame. (See &lt;a class="external"
+&lt;p&gt;A scripting language that owes its bad syntax to being hastily hacked together is &lt;em&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;&lt;/em&gt;. Its creator, &lt;em&gt;&lt;strong&gt;Brendan Eich&lt;/strong&gt;&lt;/em&gt;, has admitted that the language was developed within a couple of weeks, and that it was not meant for anything but short isolated snippets of code. He is honest enough to speak of his own creation in derogatory terms, and to accept blame. (See &lt;a class="external"
 href="https://www.youtube.com/watch?v=zlcnOr81lPc" target="_blank"
 &gt;TEDxVienna 2016&lt;/a&gt;, opening statement, &amp;quot;Hello, I am to blame for JavaScript&amp;quot;.) Also, pretty much anyone deeply involved with JavaScript will admit that it has serious problems. One of the most highly acclaimed books on the language is &lt;em&gt;&lt;strong&gt;JavaScript: The Good Parts&lt;/strong&gt;&lt;/em&gt;, authored by Douglas Crockford and published by O'Reilly; you can take the title of the book as a hint.&lt;/p&gt;
-&lt;p&gt;As a matter of fact, here is a photo that has become a meme in and of itself, comparing the size of &lt;em&gt;&lt;strong&gt;Javascript: The Definitive Guide&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Javascript: The Good Parts&lt;/strong&gt;&lt;/em&gt;, both published by O'Reilly:&lt;/p&gt;
-&lt;p&gt;![[images/javascript.webp]]&lt;/p&gt;
-&lt;p&gt;A scripting language that owes its horrific syntax to lack of competence is PHP. Its creator, Rasmus Lerdorf, is quoted &lt;a class="external"
+&lt;p&gt;As a matter of fact, here is a photo that has become a meme in and of itself, showing the relative sizes of two of the most popular books about JavaScript: &lt;em&gt;&lt;strong&gt;The Definitive Guide&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;The Good Parts&lt;/strong&gt;&lt;/em&gt;, both published by O'Reilly:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/javascript.webp"
+width="1080"
+height="607"
+srcset="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/javascript_hu_c8bac3d249154888.webp 480w, https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/javascript_hu_efbc8ae1590e2ebb.webp 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="427px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;A scripting language that owes its horrific syntax to lack of competence is &lt;em&gt;&lt;strong&gt;PHP&lt;/strong&gt;&lt;/em&gt;. Its creator, &lt;em&gt;&lt;strong&gt;Rasmus Lerdorf&lt;/strong&gt;&lt;/em&gt;, is quoted &lt;a class="external"
 href="https://en.wikipedia.org/wiki/PHP#Early_history" target="_blank"
 &gt;on the Wikipedia article about PHP&lt;/a&gt; as saying &amp;quot;I don't know how to stop it, there was never any intent to write a programming language {...} I have absolutely no idea how to write a programming language, I just kept adding the next logical step on the way.&amp;quot;&lt;/p&gt;
 &lt;p&gt;So, from the above it should be obvious that most scripting languages are little toy projects that were created by individuals who simply wanted to prove that they could build something like that, without actually intending it to be used outside of their own workbench.&lt;/p&gt;
