@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogging on Michael's Blog</title><link>https://blog2.michael.gr/tags/blogging/</link><description>Recent content in Blogging on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 10 Jan 2026 17:39:55 +0100</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>Goodbye blogger!</title><link>https://blog2.michael.gr/post/2026-01-07-goodbye-blogger/</link><pubDate>Thu, 08 Jan 2026 08:33:59 +0100</pubDate><guid>https://blog2.michael.gr/post/2026-01-07-goodbye-blogger/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2026-01-07-goodbye-blogger/media/blogger-logo.svg"
+loading="lazy"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;My first attempt at blogging started in 2001, with a web-site entirely hand-made in html. It was crude, it had no commenting, and it was very difficult to create new posts and maintain it, so it was necessarily tiny. It was hosted in some questionable free hosting place called &lt;strong&gt;united.net.kg&lt;/strong&gt;, where &lt;strong&gt;kg&lt;/strong&gt; is the top-level-domain of &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Kyrgyzstan" target="_blank"
+&gt;Kyrgyzstan&lt;/a&gt;. I have no idea, today, why I chose that host back then. Predictably, it disappeared a few years later.&lt;/p&gt;
+&lt;p&gt;Starting from 2007 and lasting until yesterday, I had been hosting my blog on &lt;a class="external"
+href="https://blogger.com" target="_blank"
+&gt;blogger.com&lt;/a&gt; (formerly blogspot.com.)&lt;/p&gt;
+&lt;p&gt;Blogger had several advantages:&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;ol&gt;
+&lt;li&gt;Being backed by google, it was unlikely to disappear suddenly and without a warning.&lt;/li&gt;
+&lt;li&gt;It was free.&lt;/li&gt;
+&lt;li&gt;It would make use of my own domain-name for free.&lt;/li&gt;
+&lt;li&gt;It made posting, editing, creating drafts, etc. reasonably easy.&lt;/li&gt;
+&lt;li&gt;It provided a rudimentary commenting facility.&lt;/li&gt;
+&lt;li&gt;It had a built-in search facility.&lt;/li&gt;
+&lt;li&gt;It used a responsive theme so my blog looked decent on mobile too.&lt;/li&gt;
+&lt;li&gt;It needed very little setup.&lt;/li&gt;
+&lt;li&gt;It was reasonably customizable.&lt;/li&gt;
+&lt;li&gt;It even allowed editing the actual HTML body of each post.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Specifically, the ability to use my own domain name for free is why I chose Blogger over WordPress, which checks all the same boxes and more, but wants to charge me a few dollars per year to provide me with the luxury of having my own domain name point to my own blog. I get it that they somehow need to make money, I am not complaining, it is just that if I can have something for free, I would rather have it for free.&lt;/p&gt;
+&lt;p&gt;Unfortunately, blogger has a number of shortcomings which have been bugging me for years:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The looks of my blog were kind of dated even right from the start, and that was almost twenty years ago.&lt;/li&gt;
+&lt;li&gt;The (supposedly, but not really) WYSIWYG editor would foul up the HTML as part of its normal operation.&lt;/li&gt;
+&lt;li&gt;Editing posts from a mobile phone was not possible.&lt;/li&gt;
+&lt;li&gt;The post editing page wasted an awful lot of screen real estate, providing a very small scrollable viewport for editing the post.&lt;/li&gt;
+&lt;li&gt;Certain blog management tasks were very difficult, for example curating tags, finding out which images are unused so as to delete them, etc.&lt;/li&gt;
+&lt;li&gt;Only a handful of file types were supported, and this did not include ZIP files. Not supporting zip files might be kind of understandable, but still, a great limitation.&lt;/li&gt;
+&lt;li&gt;The commenting facility was very crude, resulting in a very poor user experience, which in turn resulted in many people never bothering to leave a comment. One user once told me that they tried to leave a comment but it was lost.&lt;/li&gt;
+&lt;li&gt;Spam filters were either very poor or completely non-existent, because spam comments were a very frequent phenomenon.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Most importantly, blogger had certain shortcomings that were outright unacceptable:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It did not support images in SVG format.&lt;/li&gt;
+&lt;li&gt;It did not support markdown.&lt;/li&gt;
+&lt;li&gt;It did absolutely nothing to maintain link integrity in posts containing links to other posts.&lt;/li&gt;
+&lt;li&gt;It did not maintain any kind of edit history of posts and drafts &lt;em&gt;&lt;strong&gt;and&lt;/strong&gt;&lt;/em&gt; it did not support fetching them from GitHub.&lt;/li&gt;
+&lt;li&gt;It had been abandoned by google; they did not seem to be putting any work into it, so the shortcomings were never going to be addressed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Essentially, these shortcomings classified blogger as a platform to use only until a better alternative is found.&lt;/p&gt;
+&lt;p&gt;So, over the years, every once in a while I would look around for alternatives to blogger. However, I was not finding anything that did not suffer from even worse shortcomings. For example, at some point I tried medium.com, but I got very quickly annoyed by their delusional aspiration to charge people money for reading blog content, their preposterous passwordless sign-in mechanism, and their ridiculous restriction on how much content you are allowed to read before you have to sign-in, at which point you are forced to use their preposterous passwordless sign-in mechanism.&lt;/p&gt;
+&lt;p&gt;The breakthrough happened recently, when I discovered that nowadays there is a whole world out there, of people creating blogs as markdown files hosted on GitHub, which are then converted into static HTML websites using various tools, and then published on regular web hosting providers. So, I decided to give it a try.&lt;/p&gt;
+&lt;p&gt;To do this, I first had to convert my blog from blogger HTML to markdown. Blogger did in fact generate an export of my blog when I asked it to, but it was a very complicated set of data without a shred of documentation as to how to make sense out of it. I had to do some reverse engineering to figure things out, and then I had to write an application in C# which read the export, parsed the html, converted it to markdown, fixed links between posts, fixed links to media, processed and added visitor comments, etc. It was a huge amount of work. For any brave souls that might want to try their luck and follow my steps, the DotNet/C# project is here: &lt;a class="external"
+href="https://github.com/mikenakis/MarkdownFromBlogger" target="_blank"
+&gt;https://github.com/mikenakis/MarkdownFromBlogger&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Once I converted my blogger content to markdown and media files, the next step was to create my new blog from those. How I created it, and how I maintain it, is described in &lt;a
+href="https://blog2.michael.gr/post/2026-01-08-new-blog/"
+&gt;New year, new blog!&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: the blogger logo from &lt;a class="external"
+href="https://commons.wikimedia.org/wiki/File:Blogger_logo.svg" target="_blank"
+&gt;wikimedia.org&lt;/a&gt;&lt;/p&gt;</description></item><item><title>New year, new blog!</title><link>https://blog2.michael.gr/post/2026-01-08-new-blog/</link><pubDate>Wed, 07 Jan 2026 12:05:54 +0100</pubDate><guid>https://blog2.michael.gr/post/2026-01-08-new-blog/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2026-01-08-new-blog/media/new-blog.svg"
+loading="lazy"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Starting from today, I have a brand new blog. The old posts are still here, but the look and feel is different.&lt;/p&gt;
+&lt;p&gt;Essentially, everything about the blog has changed. This post explains how I did it.&lt;/p&gt;
+&lt;p&gt;To read about my previous blogging experiences and how I arrived at this today, see &lt;a
+href="https://blog2.michael.gr/post/2026-01-07-goodbye-blogger/"
+&gt;Goodbye blogger!&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;All of the blog content is markdown files and image files. These files live in a private repository on GitHub, which I have cloned on my local machine.&lt;/p&gt;
+&lt;p&gt;For editing the markdown files I use Obsidian, (&lt;a class="external"
+href="https://obsidian.md/" target="_blank"
+&gt;Site&lt;/a&gt;, &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Obsidian_%28software%29" target="_blank"
+&gt;Wikipedia&lt;/a&gt;,) a cross-platform desktop application which is proprietary but free. Obsidian gives me a very nice markdown editor, which, although not perfect, is probably the best in existence. Most importantly, Obsidian keeps all my links in sync, so I can freely rename markdown files and move them around without fearing that the links between them might be broken. The important thing here is that I could be using any other editor, and nothing else would need to change.&lt;/p&gt;
+&lt;p&gt;For converting the markdown files into HTML I use Hugo, (&lt;a class="external"
+href="https://gohugo.io/" target="_blank"
+&gt;Site&lt;/a&gt;, &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Hugo_%28software%29" target="_blank"
+&gt;Wikipedia&lt;/a&gt;,) a free, open-source, cross-platform, command-line tool. Hugo reads the entire directory containing my markdown files, plus another entire directory containing an HTML+CSS+JavaScript template, and produces a new directory containing a static website. Hugo then remains running, acting as a local web-server, making my website available on http://localhost, so that I can view it using my web-browser. As an added bonus, each time I modify any of the markdown files or template files, Hugo causes the browser to refresh the tab, thus showing me the change almost instantaneously, without me having to click &amp;quot;refresh&amp;quot;. Hugo is replaceable, but not easily; if I wanted to replace it I would have to also throw away the HTML+CSS+JavaScript template, which is Hugo-specific.&lt;/p&gt;
+&lt;p&gt;The HTML+CSS+JavaScript template that I currently use is based on &amp;quot;Stack&amp;quot;, (&lt;a class="external"
+href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank"
+&gt;Site&lt;/a&gt;,) which is a free, open-source theme for Hugo. I have customized the original theme to suit my needs, and my custom template files also live on GitHub, alongside the markdown files. When the original theme gets updated by its authors, I use a git merge tool to combine the new changes with mine, resolving conflicts if necessary, just as I would do if I was merging program code. This template could, in principle, be replaced with a new template based on a different Hugo theme, but that would involve redoing the customization work.&lt;/p&gt;
+&lt;p&gt;For commenting I use IntenseDebate, (&lt;a class="external"
+href="https://intensedebate.com/" target="_blank"
+&gt;Site&lt;/a&gt;,) which is a free service provided by Automattic, the makers of Wordpress. Blog commenting is all about spam control, which is a fairly complicated topic, and Automattic have a lot of experience with spam control, so I trust that they do it right. If it turns out that IntenseDebate does not suit my needs, I can easily replace it with something else.&lt;/p&gt;
+&lt;p&gt;For serving my static web-site to the world, I currently use a free hosting plan with Netlify, (&lt;a class="external"
+href="https://www.netlify.com/" target="_blank"
+&gt;Site&lt;/a&gt;, &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Netlify" target="_blank"
+&gt;Wikipedia&lt;/a&gt;,) which is a relatively big and reasonably popular web hosting company headquartered in San Francisco, USA. This free plan seems to offer enough to suit my needs, and can certainly be upgraded in the future if my personal blog grows into a blogging empire or something. Once the static website has been generated by Hugo, and I decide that it is ready for publishing, I push it to yet another private GitHub repository, and from there Netlify automatically clones it, processes it, and makes it available to the world within less than a minute. If it turns out that Netlify does not suit my needs, I can move my blog elsewhere. (I am planning to give CloudFlare a try.)&lt;/p&gt;
+&lt;p&gt;Finally, since I am now in full possession and full control of my own content, I have replaced many of the PNG and JPG images in my blog with SVG images. For that, I use InkScape, (&lt;a class="external"
+href="https://inkscape.org/" target="_blank"
+&gt;Site&lt;/a&gt;,) a free and open-source SVG editor. I like SVG so much that on some occasions I have even gone through the trouble of having InkScape trace raster images to generate SVG images from them, a process which requires a lot of subsequent manual editing to make the SVG image look right and be of a reasonably small size. I do not know of any other powerful and free SVG editor, so if InkScape ever ceases to exist, that would be a problem.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: the logos of the technologies that I am currently using for blogging. From left to right and from top to bottom: GitHub, Hugo, Netlify, Obsidian, Stack Theme for Hugo, and IntenseDebate.&lt;/p&gt;</description></item></channel></rss>

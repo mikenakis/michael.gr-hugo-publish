@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog2.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 24 Oct 2025 11:30:09 +0200</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Technical debt</title><link>https://blog2.michael.gr/post/2025-09-technical-debt/</link><pubDate>Wed, 17 Sep 2025 07:28:57 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-09-technical-debt/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-09-technical-debt/media/sisyphus.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog2.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 10 Jan 2026 23:41:16 +0100</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Technical debt</title><link>https://blog2.michael.gr/post/2025-09-technical-debt/</link><pubDate>Wed, 17 Sep 2025 07:28:57 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-09-technical-debt/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-09-technical-debt/media/sisyphus.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -92,7 +92,6 @@ href="https://martinfowler.com/bliki/EtymologyOfRefactoring.html" target="_blank
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/xi8cf.jpg"
 width="700"
 height="474"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/xi8cf_hu_83198d77afe5a180.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/xi8cf_hu_2d204830de650aa5.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="147"
@@ -102,7 +101,6 @@ data-flex-basis="354px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgwzh.jpg"
 width="505"
 height="494"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgwzh_hu_fe087c1ed5cc807e.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgwzh_hu_a705937959023e8e.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="102"
@@ -112,7 +110,6 @@ data-flex-basis="245px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/e040f790ce334dbf7c59b317639c8b17.jpg"
 width="640"
 height="640"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/e040f790ce334dbf7c59b317639c8b17_hu_1783e935ee205db7.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/e040f790ce334dbf7c59b317639c8b17_hu_df4aee738074b345.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
@@ -122,7 +119,6 @@ data-flex-basis="240px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25.jpg"
 width="1000"
 height="720"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25_hu_dea43428b171f8d4.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25_hu_2c65ab078ab6b103.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="138"
@@ -132,7 +128,6 @@ data-flex-basis="333px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/Darth_Vader_Noooo_Banner.jpg"
 width="1200"
 height="675"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/Darth_Vader_Noooo_Banner_hu_9fd7d021300af31a.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/Darth_Vader_Noooo_Banner_hu_7a09a2f35f6835cb.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -142,7 +137,6 @@ data-flex-basis="426px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/oh-no-no-dd7f7d8f8e.jpg"
 width="600"
 height="389"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/oh-no-no-dd7f7d8f8e_hu_4ad46eea13d7002b.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/oh-no-no-dd7f7d8f8e_hu_930f6a09c16b02c7.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="154"
@@ -152,7 +146,6 @@ data-flex-basis="370px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wguxc.jpg"
 width="645"
 height="387"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wguxc_hu_99fe9e66afdd147e.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/9wguxc_hu_338da9ef351055a2.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
@@ -162,7 +155,6 @@ data-flex-basis="400px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u.jpg"
 width="750"
 height="1000"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u_hu_6854864273654432.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u_hu_9a2d85618981b68.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="75"
@@ -172,7 +164,6 @@ data-flex-basis="180px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wh26z.jpg"
 width="673"
 height="371"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wh26z_hu_f5aa6c4e2d8ed651.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/9wh26z_hu_b71a5884f01ef031.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="181"
@@ -182,7 +173,6 @@ data-flex-basis="435px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wh0pu.jpg"
 width="500"
 height="515"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wh0pu_hu_bde49d5e3dabbf5b.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/9wh0pu_hu_3ed645cdef73e00a.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="97"
@@ -192,7 +182,6 @@ data-flex-basis="233px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgzsg.jpg"
 width="706"
 height="353"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgzsg_hu_914972273403c1bf.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgzsg_hu_941da15b4173e133.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
@@ -202,7 +191,6 @@ data-flex-basis="480px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgyqm.jpg"
 width="668"
 height="374"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgyqm_hu_6a2ad906ecaca1ab.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/9wgyqm_hu_c5a7fca663f3d881.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="178"
@@ -212,7 +200,6 @@ data-flex-basis="428px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/1bq1b7.jpg"
 width="250"
 height="298"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/1bq1b7_hu_235471bf726297b4.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/1bq1b7_hu_1bba7ea8f3fe2199.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="83"
@@ -222,7 +209,6 @@ data-flex-basis="201px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/0a1247a0c9dc93afebfa57647e1149a39093c540.jpeg"
 width="474"
 height="307"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/0a1247a0c9dc93afebfa57647e1149a39093c540_hu_6955ae97cd1b5b7a.jpeg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/0a1247a0c9dc93afebfa57647e1149a39093c540_hu_b242d1a38374488.jpeg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="154"
@@ -232,7 +218,6 @@ data-flex-basis="370px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-code-review-images/images/you-shall-not-pass.jpg"
 width="1213"
 height="682"
-srcset="https://blog2.michael.gr/post/2025-06-code-review-images/images/you-shall-not-pass_hu_ec4ed8fe70f7e998.jpg 480w, https://blog2.michael.gr/post/2025-06-code-review-images/images/you-shall-not-pass_hu_8fa80164e133400b.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -490,7 +475,6 @@ href="https://github.com/mikenakis/MikeNakis.CSharpTypeNames/blob/master/MikeNak
 &gt;the README file on GitHub&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Build configurations</title><link>https://blog2.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
 width="1536"
 height="1024"
-srcset="https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_2251c0dc0f1c3d7e.jpg 480w, https://blog2.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed_hu_91d84ae5696b1498.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -816,7 +800,6 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/div&gt;</description></item><item><title>The confusion about the term Unit Testing</title><link>https://blog2.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</link><pubDate>Fri, 04 Apr 2025 14:53:02 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/images/crash-test-dummy-penseur.jpg"
 width="2560"
 height="1600"
-srcset="https://blog2.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/images/crash-test-dummy-penseur_hu_bcad233453122025.jpg 480w, https://blog2.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/images/crash-test-dummy-penseur_hu_81009ce0ef2f8adf.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="160"
@@ -970,7 +953,6 @@ href="https://www.infoq.com/presentations/tdd-original/" target="_blank"
 &lt;p&gt;Cover image: Created by michael.gr using ChatGPT, and then retouched to remove imperfections. The prompt used was: &amp;quot;Please give me an image of a crash test dummy in the style of The Thinker, by Auguste Rodin.&amp;quot;&lt;/p&gt;</description></item><item><title>The best code review comment ever</title><link>https://blog2.michael.gr/post/2025-02-the-best-code-review-comment-ever/</link><pubDate>Mon, 10 Feb 2025 11:30:14 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-02-the-best-code-review-comment-ever/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-02-the-best-code-review-comment-ever/images/code-review.jpg"
 width="1536"
 height="1024"
-srcset="https://blog2.michael.gr/post/2025-02-the-best-code-review-comment-ever/images/code-review_hu_c2532b58c6236aa3.jpg 480w, https://blog2.michael.gr/post/2025-02-the-best-code-review-comment-ever/images/code-review_hu_6bffad9881622c28.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -1198,7 +1180,6 @@ Visual Studio is increasingly becoming such a bloatware, while still missing qui
 &lt;/ul&gt;</description></item><item><title>Incident Impact Calculation Formula</title><link>https://blog2.michael.gr/post/2024-05-incident-impact-calculation/</link><pubDate>Fri, 31 May 2024 12:53:30 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-05-incident-impact-calculation/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic.jpg"
 width="2000"
 height="1324"
-srcset="https://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic_hu_a174135a2296b398.jpg 480w, https://blog2.michael.gr/post/2024-05-incident-impact-calculation/images/titanic_hu_d680cbb4b8484329.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="151"
@@ -1227,7 +1208,6 @@ data-flex-basis="362px"
 &lt;p&gt;A modern computer taking several long seconds to reboot, despite having a multi-core, multi-gigahertz, hyper-threaded and pipelined CPU with multi-level cache and solid-state storage, is something that affects &lt;em&gt;&lt;strong&gt;everyone&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;everywhere, every day&lt;/strong&gt;&lt;/em&gt;, so it does in fact have &lt;em&gt;quite a high impact.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Simplification of triple-choice prompts to dual-choice</title><link>https://blog2.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/</link><pubDate>Fri, 31 May 2024 09:53:03 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/images/image.png"
 width="400"
 height="132"
-srcset="https://blog2.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/images/image_hu_f5edf689a035ac41.png 480w, https://blog2.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/images/image_hu_c6205dafb643c637.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="303"
@@ -1386,7 +1366,6 @@ href="https://thenounproject.com" target="_blank"
 &gt;the Noun Project&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Artificial Code Coverage</title><link>https://blog2.michael.gr/post/2024-03-codecoverage/</link><pubDate>Tue, 26 Mar 2024 15:01:55 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-03-codecoverage/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-03-codecoverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash.jpg"
 width="3258"
 height="1890"
-srcset="https://blog2.michael.gr/post/2024-03-codecoverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash_hu_d19487727715a135.jpg 480w, https://blog2.michael.gr/post/2024-03-codecoverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash_hu_15abe3b3c0c4821e.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="172"
@@ -1525,7 +1504,6 @@ href="https://unsplash.com/@teapowered" target="_blank"
 &gt;Patrick Robert Doyle from Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>The most important quality of software</title><link>https://blog2.michael.gr/post/2024-03-the-most-important-quality-of-software/</link><pubDate>Thu, 07 Mar 2024 18:12:01 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-03-the-most-important-quality-of-software/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-03-the-most-important-quality-of-software/images/fotis-fotopoulos-DuHKoV44prg-unsplash.jpg"
 width="2400"
 height="1600"
-srcset="https://blog2.michael.gr/post/2024-03-the-most-important-quality-of-software/images/fotis-fotopoulos-DuHKoV44prg-unsplash_hu_bf7a818b9e6917f1.jpg 480w, https://blog2.michael.gr/post/2024-03-the-most-important-quality-of-software/images/fotis-fotopoulos-DuHKoV44prg-unsplash_hu_af5e12a30b2a9655.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -1673,7 +1651,6 @@ threshold to be exceeded. Exactly when and how this happens depends on the imple
 &lt;p&gt;Cover image: &amp;quot;Audit Testing&amp;quot; by michael.gr.&lt;/p&gt;</description></item><item><title>Types of dependencies</title><link>https://blog2.michael.gr/post/2024-01-types-of-dependencies/</link><pubDate>Thu, 11 Jan 2024 17:33:42 +0000</pubDate><guid>https://blog2.michael.gr/post/2024-01-types-of-dependencies/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2024-01-types-of-dependencies/images/dependency0.png"
 width="1861"
 height="1046"
-srcset="https://blog2.michael.gr/post/2024-01-types-of-dependencies/images/dependency0_hu_616f75dcb058bc68.png 480w, https://blog2.michael.gr/post/2024-01-types-of-dependencies/images/dependency0_hu_55cc59d1b7857d37.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -1700,7 +1677,6 @@ href="https://en.wikipedia.org/wiki/Dependency_inversion_principle" target="_bla
 &lt;p&gt;Post-assembly-time dependencies do not affect the topology of a design, because every post-assembly time dependency requires an existing assembly-time dependency through which the callback can be communicated. Thus, post-assembly-time dependencies constitute implementation details of the modules that supply and invoke callbacks. As such, they are of only limited interest in software architecture.&lt;/p&gt;</description></item><item><title>Call Graph Acyclicity</title><link>https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/</link><pubDate>Wed, 27 Dec 2023 12:08:24 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic0.png"
 width="1860"
 height="1122"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic0_hu_5c4a1077d5a1af0.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic0_hu_bc6ab53ae2d39e03.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="165"
@@ -1724,7 +1700,6 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic1.png"
 width="1860"
 height="686"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic1_hu_bb41670c7de8d3cb.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic1_hu_2dad1d21c6ed7e3.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="271"
@@ -1814,7 +1789,6 @@ href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic2.png"
 width="1861"
 height="587"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic2_hu_47aa25ae2d1ea891.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic2_hu_1fd4268ef71dec79.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="317"
@@ -1835,7 +1809,6 @@ data-flex-basis="760px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic3.png"
 width="1860"
 height="590"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic3_hu_720b9cdf7430d0df.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic3_hu_3aca30d589c5dd57.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="315"
@@ -1861,7 +1834,6 @@ href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_bl
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic4.png"
 width="1860"
 height="888"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic4_hu_4b6ccb9e601811aa.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic4_hu_3226eae63daffbb9.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="209"
@@ -1875,7 +1847,6 @@ data-flex-basis="502px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic5.png"
 width="1860"
 height="835"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic5_hu_684347aa7e465dfc.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic5_hu_c30de23a51830a7c.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="222"
@@ -1901,7 +1872,6 @@ into an implementation detail of the new component. The following figure illustr
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic6.png"
 width="1860"
 height="426"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic6_hu_b070ad42c31ba5da.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic6_hu_b38442f141ba6f20.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="436"
@@ -1917,7 +1887,6 @@ href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_bl
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic7.png"
 width="1861"
 height="722"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic7_hu_f6ae600ec9ba0180.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic7_hu_f26f68362306158c.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="257"
@@ -1933,7 +1902,6 @@ data-flex-basis="618px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic8.png"
 width="1861"
 height="722"
-srcset="https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic8_hu_c298426430891ac6.png 480w, https://blog2.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic8_hu_701e420d6dc70bd6.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="257"
@@ -1971,7 +1939,6 @@ data-flex-basis="618px"
 &lt;/ul&gt;</description></item><item><title>Towards Authoritative Software Design</title><link>https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/</link><pubDate>Sat, 09 Dec 2023 19:16:05 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/media/blueprint.jpg"
 width="5000"
 height="2740"
-srcset="https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/media/blueprint_hu_97e76780ef2663b9.jpg 480w, https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/media/blueprint_hu_44b86b65f3bab1f7.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="182"
@@ -2051,7 +2018,6 @@ href="https://en.wikipedia.org/wiki/Electronic_design_automation" target="_blank
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/media/the-great-wall-by-hao-wei.jpg"
 width="4606"
 height="3071"
-srcset="https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/media/the-great-wall-by-hao-wei_hu_d1eba4a46b4d1881.jpg 480w, https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/media/the-great-wall-by-hao-wei_hu_4d46a82415ff1bad.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="149"
@@ -2269,7 +2235,6 @@ href="https://youtu.be/BNTt2aLB1tg?t=464" target="_blank"
 &lt;/div&gt;</description></item><item><title>Converting MSBuild project files from legacy-style to SDK-style</title><link>https://blog2.michael.gr/post/2023-09-05-sdk-style-msbuild-projects/</link><pubDate>Tue, 05 Sep 2023 10:45:31 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-09-05-sdk-style-msbuild-projects/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-09-05-sdk-style-msbuild-projects/images/legacy-style-csproj-to-sdk-style-csproj.png"
 width="1173"
 height="437"
-srcset="https://blog2.michael.gr/post/2023-09-05-sdk-style-msbuild-projects/images/legacy-style-csproj-to-sdk-style-csproj_hu_fe261eca00e97a56.png 480w, https://blog2.michael.gr/post/2023-09-05-sdk-style-msbuild-projects/images/legacy-style-csproj-to-sdk-style-csproj_hu_9994cb08165f7ca6.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="268"
@@ -2400,7 +2365,6 @@ href="https://stackoverflow.com/a/62141464/773113" target="_blank"
 &lt;hr&gt;</description></item><item><title>On Dotfuscator by PreEmptive Solutions</title><link>https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</link><pubDate>Tue, 15 Aug 2023 12:29:37 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator.png"
 width="598"
 height="253"
-srcset="https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator_hu_11bee5a46dfe251e.png 480w, https://blog2.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator_hu_d63b329b1fdab07c.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="236"
@@ -2578,7 +2542,6 @@ otherwise known as flow control obfuscation? Well, as it turns out, that is beyo
 &lt;/blockquote&gt;</description></item><item><title>Migrating a project from DotNet Framework 4-7-2 to DotNet 7</title><link>https://blog2.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/</link><pubDate>Fri, 21 Jul 2023 11:33:13 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/images/dotnet-framework-4.7.2-to-dotnet-7.jpg"
 width="1173"
 height="437"
-srcset="https://blog2.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/images/dotnet-framework-4.7.2-to-dotnet-7_hu_2d9a765c8b8aca.jpg 480w, https://blog2.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/images/dotnet-framework-4.7.2-to-dotnet-7_hu_cb08111c7a27c98f.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="268"
@@ -2748,7 +2711,6 @@ href="https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-
 &lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>The Trouble with XAML Hot Reload in WPF</title><link>https://blog2.michael.gr/post/2023-06-12-the-trouble-with-xaml-hot-reload-in-wpf/</link><pubDate>Mon, 12 Jun 2023 06:11:58 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-06-12-the-trouble-with-xaml-hot-reload-in-wpf/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-06-12-the-trouble-with-xaml-hot-reload-in-wpf/images/wpf-xaml-3.png"
 width="1000"
 height="557"
-srcset="https://blog2.michael.gr/post/2023-06-12-the-trouble-with-xaml-hot-reload-in-wpf/images/wpf-xaml-3_hu_efeded7c868b7b8.png 480w, https://blog2.michael.gr/post/2023-06-12-the-trouble-with-xaml-hot-reload-in-wpf/images/wpf-xaml-3_hu_19f7cd65cd18e904.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="179"
@@ -2820,7 +2782,6 @@ but if it gives no hint, then you can't fix it.&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>Program Code is Uncountable</title><link>https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/</link><pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code.jpg"
 width="800"
 height="331"
-srcset="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code_hu_f0a5e6162c5554.jpg 480w, https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/code_hu_34c59bcd7cb70c1f.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="241"
@@ -2839,7 +2800,6 @@ href="https://www.oxfordlearnersdictionaries.com/definition/english/code" target
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy.jpg"
 width="600"
 height="900"
-srcset="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy_hu_9b0ece5b469d5054.jpg 480w, https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy_hu_a55983757e3a6195.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="66"
@@ -2850,7 +2810,6 @@ data-flex-basis="160px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail.jpg"
 width="600"
 height="768"
-srcset="https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail_hu_c5d3462460a7d4f4.jpg 480w, https://blog2.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail_hu_b1bbf3addb44a36e.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="78"
@@ -2888,7 +2847,6 @@ href="https://github.com/mikenakis/VsDebugLogger" target="_blank"
 &gt;https://github.com/mikenakis/VsDebugLogger&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Debating with other Software Engineers</title><link>https://blog2.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</link><pubDate>Tue, 17 Jan 2023 20:03:20 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-01-17-debating-with-other-software-engineers/images/debating.png"
 width="2000"
 height="1000"
-srcset="https://blog2.michael.gr/post/2023-01-17-debating-with-other-software-engineers/images/debating_hu_2f936899d83d943b.png 480w, https://blog2.michael.gr/post/2023-01-17-debating-with-other-software-engineers/images/debating_hu_1526e62b2fc9b299.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
@@ -3244,7 +3202,6 @@ href="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects.jpg"
 width="797"
 height="1024"
-srcset="https://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_8156248a341d61af.jpg 480w, https://blog2.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects_hu_5b4ff396469f2342.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="77"
@@ -3265,7 +3222,6 @@ href="https://thenounproject.com/icon/mock-2657532/" target="_blank"
 &gt;'mock' by 'Iconbox' from the noun project.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Collaboration Monitoring</title><link>https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/</link><pubDate>Fri, 06 Jan 2023 13:03:22 +0000</pubDate><guid>https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitoring.png"
 width="1024"
 height="512"
-srcset="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitoring_hu_3c58b5508de82250.png 480w, https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitoring_hu_1f58869c4f30abf2.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
@@ -3328,7 +3284,6 @@ href="https://blog2.michael.gr/post/2024-04-audit-testing/"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-1.png"
 width="422"
 height="74"
-srcset="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-1_hu_8cbeb5070d7d33.png 480w, https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-1_hu_422fd14dddc93b76.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="570"
@@ -3343,7 +3298,6 @@ href="https://blog2.michael.gr/post/2024-04-audit-testing/"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-2.png"
 width="568"
 height="193"
-srcset="https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-2_hu_6876382b85ecd6f0.png 480w, https://blog2.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-2_hu_88f51d25c12dfe11.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="294"
@@ -3470,7 +3424,6 @@ href="https://thenounproject.com/icon/gears-1705750/" target="_blank"
 &gt;'Gears' by Free Fair &amp;amp; Healthy&lt;/a&gt; from the Noun Project.&lt;/p&gt;</description></item><item><title>Testing with Fakes instead of Mocks</title><link>https://blog2.michael.gr/post/2022-10-testing-with-fakes/</link><pubDate>Fri, 30 Dec 2022 14:01:26 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-10-testing-with-fakes/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-10-testing-with-fakes/media/fake.png"
 width="2000"
 height="1000"
-srcset="https://blog2.michael.gr/post/2022-10-testing-with-fakes/media/fake_hu_94f7aa407fc2e88a.png 480w, https://blog2.michael.gr/post/2022-10-testing-with-fakes/media/fake_hu_fbb249274ecaf5fb.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
@@ -3628,7 +3581,6 @@ href="https://thenounproject.com/icon/fake-mustache-31744/" target="_blank"
 &gt;art by Claire Jones from the Noun Project&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>On messages and message-passing</title><link>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</link><pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing.png"
 width="2673"
 height="1494"
-srcset="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing_hu_cac0be91696add81.png 480w, https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing_hu_4c50d0e4091ea6ab.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="178"
@@ -3667,7 +3619,6 @@ href="https://blog2.michael.gr/post/2022-12-intertwine/"
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing.jpg"
 width="493"
 height="555"
-srcset="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_292667b1799fe58a.jpg 480w, https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing_hu_6ad615b796b41427.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="88"
@@ -4180,7 +4131,6 @@ href="https://blog2.michael.gr/post/2012-01-03-hail-mary-initialization/"
 &gt;Hail-Mary Initialization&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>50 things expected of developers</title><link>https://blog2.michael.gr/post/2022-10-fifty-things-expected-of-developers/</link><pubDate>Wed, 12 Oct 2022 05:54:06 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-10-fifty-things-expected-of-developers/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-10-fifty-things-expected-of-developers/images/mike_acton.png"
 width="437"
 height="894"
-srcset="https://blog2.michael.gr/post/2022-10-fifty-things-expected-of-developers/images/mike_acton_hu_1910536a8ea9f857.png 480w, https://blog2.michael.gr/post/2022-10-fifty-things-expected-of-developers/images/mike_acton_hu_c5c412b73d2c9005.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="48"
@@ -4461,7 +4411,6 @@ href="https://adamj.eu/tech/2022/06/17/mike-actons-expectations-of-professional-
 &lt;/ul&gt;</description></item><item><title>On Microsoft 'Visual' products</title><link>https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/</link><pubDate>Tue, 16 Aug 2022 11:35:17 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-logo.png"
 width="512"
 height="512"
-srcset="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-logo_hu_1ee2c59c93abfae8.png 480w, https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-logo_hu_8a189bfcc0cec774.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
@@ -4478,7 +4427,6 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot1.png"
 width="640"
 height="480"
-srcset="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot1_hu_827134514accb683.png 480w, https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot1_hu_6568a10c471fe3c3.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
@@ -4488,7 +4436,6 @@ data-flex-basis="320px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot2.png"
 width="640"
 height="480"
-srcset="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot2_hu_4063c9b7f6c3f47c.png 480w, https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visio-1.0-screenshot2_hu_a3f52817d811c4cc.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
@@ -4506,7 +4453,6 @@ href="https://www.visiocorp.info/early-days.aspx" target="_blank"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-cpp-touched.jpg"
 width="1106"
 height="1026"
-srcset="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-cpp-touched_hu_ae1eb30e1d2d7a23.jpg 480w, https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-cpp-touched_hu_3f9f702db12a2ad4.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="107"
@@ -4519,7 +4465,6 @@ data-flex-basis="258px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visual-studio-97.jpg"
 width="570"
 height="437"
-srcset="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visual-studio-97_hu_1556da44acd52c59.jpg 480w, https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/visual-studio-97_hu_8f837d95c2f22452.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="130"
@@ -4533,7 +4478,6 @@ href="https://en.wikipedia.org/wiki/Microsoft_Visio" target="_blank"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visio-2000.gif"
 width="550"
 height="344"
-srcset="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visio-2000_hu_cb57b82d78dfa1b3.gif 480w, https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visio-2000_hu_12b7f4612b1968ea.gif 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="159"
@@ -4545,7 +4489,6 @@ data-flex-basis="383px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo.png"
 width="672"
 height="179"
-srcset="https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo_hu_5f4aa20bd28191ac.png 480w, https://blog2.michael.gr/post/2022-08-on-microsoft-visual-products/images/microsoft-visual-studio-net-professional-logo_hu_bddccdbcfe032a46.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="375"
@@ -4558,7 +4501,6 @@ data-flex-basis="901px"
 &lt;p&gt;Cover image: The logo from Visio version 1.0.&lt;/p&gt;</description></item><item><title>On Visual Programming Languages</title><link>https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/</link><pubDate>Tue, 16 Aug 2022 10:48:21 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/media/visual-programming-language-logos.png"
 width="1930"
 height="851"
-srcset="https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/media/visual-programming-language-logos_hu_6f5c07acbb8eefc7.png 480w, https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/media/visual-programming-language-logos_hu_a5cadf1cf0abeb9.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="226"
@@ -4580,7 +4522,6 @@ href="https://en.wikipedia.org/wiki/Visual_programming_language" target="_blank"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/media/snap.png"
 width="482"
 height="476"
-srcset="https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/media/snap_hu_84af3caed02486.png 480w, https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/media/snap_hu_90a46c1f922f2411.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="101"
@@ -4594,7 +4535,6 @@ data-flex-basis="243px"
 &lt;p&gt;Cover image: Logos of various visual programming languages.&lt;/p&gt;</description></item><item><title>On UML</title><link>https://blog2.michael.gr/post/2022-08-uml/</link><pubDate>Tue, 16 Aug 2022 09:20:46 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-08-uml/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-uml/media/uml-logo.png"
 width="824"
 height="548"
-srcset="https://blog2.michael.gr/post/2022-08-uml/media/uml-logo_hu_de0c20afdc618ca9.png 480w, https://blog2.michael.gr/post/2022-08-uml/media/uml-logo_hu_f720d5921c77bad1.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -4665,7 +4605,6 @@ href="https://www.ibm.com/docs/en/idsa?topic=diagrams-collaborations" target="_b
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml.jpg"
 width="1715"
 height="1553"
-srcset="https://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml_hu_bef019e84b4ea75.jpg 480w, https://blog2.michael.gr/post/2022-08-uml/media/grumpy-cat-uml_hu_1719cd72479ad91e.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="110"
@@ -4679,8 +4618,7 @@ href="https://www.uml.org/" target="_blank"
 &gt;uml.org&lt;/a&gt;; Public Domain.&lt;/p&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
 width="2775"
 height="1684"
-srcset="https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_8ae04781ddc88246.jpg 480w, https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped_hu_58a6348cfbae9cec.jpg 1024w"
-loading="lazy"
+loading="lazy" title="Illustration from &amp;#39;The history of slavery and the slave trade, ancient and modern&amp;#39; by Blake, William O (1860) from wikimedia.org"
 class="gallery-image"
 data-flex-grow="164"
 data-flex-basis="395px"
@@ -4730,7 +4668,6 @@ href="https://www.urbandictionary.com/define.php?term=wokeness" target="_blank"
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness.jpg"
 width="843"
 height="565"
-srcset="https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_bfd19a0acccbf67b.jpg 480w, https://blog2.michael.gr/post/2022-12-master-branch-not-kosher/media/grumpy-cat-wokeness_hu_6dd0e5589091004e.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="149"
@@ -5322,7 +5259,6 @@ thought I might as well publicly document my thoughts.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2021-10-14-the-stateful-microservice/media/elephants.jpg"
 width="2048"
 height="1365"
-srcset="https://blog2.michael.gr/post/2021-10-14-the-stateful-microservice/media/elephants_hu_cfac862bf8819bb5.jpg 480w, https://blog2.michael.gr/post/2021-10-14-the-stateful-microservice/media/elephants_hu_6c0c09c376128914.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -5556,7 +5492,6 @@ href="https://blog2.michael.gr/post/2021-10-14-the-stateful-microservice/"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2021-10-on-stateless-microservices/media/8.png"
 width="1378"
 height="2048"
-srcset="https://blog2.michael.gr/post/2021-10-on-stateless-microservices/media/8_hu_48b7be9e0748ac79.png 480w, https://blog2.michael.gr/post/2021-10-on-stateless-microservices/media/8_hu_56b2bd321fd1677a.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="67"
@@ -6206,7 +6141,6 @@ href="https://blogger.googleusercontent.com/img/a/AVvXsEjW7YbG075F9q253nTW0xSWiT
 &gt;&lt;img src="https://blog2.michael.gr/post/2021-12-white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091.jpg"
 width="640"
 height="256"
-srcset="https://blog2.michael.gr/post/2021-12-white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091_hu_f50f246ab2524aaf.jpg 480w, https://blog2.michael.gr/post/2021-12-white-box-vs-black-box-testing/media/tag-blogger.com,1999-blog-3494795920779884230.post-69667484864678488091_hu_cde10918de1bcfd0.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="250"
@@ -6418,7 +6352,6 @@ href="https://blog2.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>A Programming Language</title><link>https://blog2.michael.gr/post/2022-07-a-programming-language/</link><pubDate>Wed, 01 Sep 2021 04:47:26 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-07-a-programming-language/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-07-a-programming-language/media/a-programming-language-cover.jpg"
 width="1000"
 height="667"
-srcset="https://blog2.michael.gr/post/2022-07-a-programming-language/media/a-programming-language-cover_hu_d2c3b265207d8a27.jpg 480w, https://blog2.michael.gr/post/2022-07-a-programming-language/media/a-programming-language-cover_hu_dc5e32d91246236f.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="149"
@@ -7667,7 +7600,6 @@ will never change it.)&lt;/li&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2021-07-malicious-inaction/media/dennis_nedry.jpg"
 width="700"
 height="668"
-srcset="https://blog2.michael.gr/post/2021-07-malicious-inaction/media/dennis_nedry_hu_7757347a874e24ab.jpg 480w, https://blog2.michael.gr/post/2021-07-malicious-inaction/media/dennis_nedry_hu_d638becee4f3575f.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="104"
@@ -8199,7 +8131,6 @@ So, for now caching will need to wait.&lt;/li&gt;
 &lt;p&gt;Once these files have been committed to GitHub, CircleCI will take notice, and it will run our CI/CD pipeline. Do not expect it to run successfully on the first try; there will be errors, and there will be trouble. But once you get it to work successfully, it will be worth the trouble.&lt;/p&gt;</description></item><item><title>The MVVM architectural design pattern</title><link>https://blog2.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/</link><pubDate>Sat, 16 Jan 2021 14:47:04 +0000</pubDate><guid>https://blog2.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm.png"
 width="800"
 height="242"
-srcset="https://blog2.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm_hu_8fa849595e07c30f.png 480w, https://blog2.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm_hu_400ee7376db477fb.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="330"
@@ -8291,7 +8222,6 @@ href="https://en.wikipedia.org/wiki/VisualWorks" target="_blank"
 &lt;/ul&gt;</description></item><item><title>Object Lifetime Awareness</title><link>https://blog2.michael.gr/post/2020-12-27-object-lifetime-awareness/</link><pubDate>Sun, 27 Dec 2020 10:46:17 +0000</pubDate><guid>https://blog2.michael.gr/post/2020-12-27-object-lifetime-awareness/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2020-12-27-object-lifetime-awareness/images/le-penseur.jpg"
 width="3648"
 height="5472"
-srcset="https://blog2.michael.gr/post/2020-12-27-object-lifetime-awareness/images/le-penseur_hu_9d5b056aaaccb843.jpg 480w, https://blog2.michael.gr/post/2020-12-27-object-lifetime-awareness/images/le-penseur_hu_c19a599b08f288b2.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="66"
@@ -8832,7 +8762,6 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages.jpg"
 width="324"
 height="400"
-srcset="https://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages_hu_ec275663cd84d572.jpg 480w, https://blog2.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages_hu_a00e6a61b605d2db.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="81"
@@ -8850,7 +8779,6 @@ data-flex-basis="194px"
 &lt;p&gt;The approach recommended by Microsoft for solving this kind of problem is to include the &amp;quot;Microsoft Visual C++ Redistributable&amp;quot; installable package, and install it as part of the application's installation process. An easier way is to simply include a copy of msvcr100.dll in the directory from which your application launches.&lt;/p&gt;</description></item><item><title>Coherence: The Assertable Lock</title><link>https://blog2.michael.gr/post/2020-12-12-coherence/</link><pubDate>Sat, 12 Dec 2020 13:51:31 +0000</pubDate><guid>https://blog2.michael.gr/post/2020-12-12-coherence/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2020-12-12-coherence/media/coherence.jpg"
 width="1280"
 height="853"
-srcset="https://blog2.michael.gr/post/2020-12-12-coherence/media/coherence_hu_774fdb15a774b77.jpg 480w, https://blog2.michael.gr/post/2020-12-12-coherence/media/coherence_hu_d8603833f9d0eb32.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -9005,7 +8933,6 @@ may exist when a certain instability is detected, so even the original sense ref
 &lt;p&gt;Cover image by reginasphotos from pixabay.com&lt;/p&gt;</description></item><item><title>Domain Oriented Programming</title><link>https://blog2.michael.gr/post/2020-06-26-domain-oriented-programming/</link><pubDate>Fri, 26 Jun 2020 18:46:47 +0000</pubDate><guid>https://blog2.michael.gr/post/2020-06-26-domain-oriented-programming/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2020-06-26-domain-oriented-programming/media/DomainOrientedProgramming.png"
 width="1253"
 height="783"
-srcset="https://blog2.michael.gr/post/2020-06-26-domain-oriented-programming/media/DomainOrientedProgramming_hu_46f0896593c4ea4d.png 480w, https://blog2.michael.gr/post/2020-06-26-domain-oriented-programming/media/DomainOrientedProgramming_hu_80495cb7faae492e.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="160"
@@ -9121,7 +9048,6 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;That's because only the component which is dealing with the form knows that the information that it receives is coming from the user and therefore needs validation. Once this information has passed validation and accepted into the system, it should never be re-validated. Any inconsistency after that point is an internal error of the system, and therefore a hard error.&lt;/p&gt;</description></item><item><title>The case for software testing</title><link>https://blog2.michael.gr/post/2019-12-on-software-testing/</link><pubDate>Sun, 01 Dec 2019 20:48:53 +0000</pubDate><guid>https://blog2.michael.gr/post/2019-12-on-software-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2019-12-on-software-testing/media/test-pattern.webp"
 width="960"
 height="600"
-srcset="https://blog2.michael.gr/post/2019-12-on-software-testing/media/test-pattern_hu_381d45a688135199.webp 480w, https://blog2.michael.gr/post/2019-12-on-software-testing/media/test-pattern_hu_d0ce67d078ac478f.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="160"
@@ -9265,7 +9191,6 @@ href="https://www.se-radio.net/2016/12/se-radio-episode-278-peter-hilton-on-nami
 &lt;/ul&gt;</description></item><item><title>Confucius On Naming Things</title><link>https://blog2.michael.gr/post/2018-05-confucius-on-naming/</link><pubDate>Mon, 21 May 2018 23:50:55 +0000</pubDate><guid>https://blog2.michael.gr/post/2018-05-confucius-on-naming/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2018-05-confucius-on-naming/media/confucius.jpg"
 width="1125"
 height="1076"
-srcset="https://blog2.michael.gr/post/2018-05-confucius-on-naming/media/confucius_hu_b8fa3a1fdb011bb1.jpg 480w, https://blog2.michael.gr/post/2018-05-confucius-on-naming/media/confucius_hu_36a7b39601e40826.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="104"
@@ -9380,7 +9305,6 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order.jpg"
 width="512"
 height="512"
-srcset="https://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order_hu_1cbcf661f6886545.jpg 480w, https://blog2.michael.gr/post/2018-04-random-order-of-tests/media/grumpy-cat-random-order_hu_37da57f9abdefd51.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
@@ -9389,7 +9313,6 @@ data-flex-basis="240px"
 &lt;/p&gt;</description></item><item><title>GitHub project: mikenakis-classdump</title><link>https://blog2.michael.gr/post/2018-04-github-project-classdump/</link><pubDate>Sat, 07 Apr 2018 21:28:50 +0000</pubDate><guid>https://blog2.michael.gr/post/2018-04-github-project-classdump/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512.png"
 width="512"
 height="512"
-srcset="https://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512_hu_27662c5971d41324.png 480w, https://blog2.michael.gr/post/2018-04-github-project-classdump/media/mikenakis-classdump-512_hu_2a44735ad5001a27.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
@@ -9731,7 +9654,6 @@ href="https://opensource.stackexchange.com/q/1154/10201" target="_blank"
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961.jpg"
 width="408"
 height="639"
-srcset="https://blog2.michael.gr/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961_hu_755c7da92bba20ac.jpg 480w, https://blog2.michael.gr/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961_hu_ac4b783d13bec49.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="63"
@@ -10037,7 +9959,6 @@ loading="lazy"
 &lt;p&gt;Enjoy responsibly.&lt;/p&gt;</description></item><item><title>On Code Craftsmanship</title><link>https://blog2.michael.gr/post/2018-02-code-craftsmanship/</link><pubDate>Mon, 05 Feb 2018 15:55:42 +0000</pubDate><guid>https://blog2.michael.gr/post/2018-02-code-craftsmanship/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2018-02-code-craftsmanship/media/craftsmanship-guitar.jpg"
 width="2048"
 height="1365"
-srcset="https://blog2.michael.gr/post/2018-02-code-craftsmanship/media/craftsmanship-guitar_hu_8f8fb8bbba0d0d17.jpg 480w, https://blog2.michael.gr/post/2018-02-code-craftsmanship/media/craftsmanship-guitar_hu_14d10496d9352bee.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -10682,36 +10603,22 @@ href="https://martinjeeblog.com/2015/03/11/cv-driven-development-cdd/" target="_
 &gt;Martin Jee's blog - CV Driven Development (CDD)&lt;/a&gt;&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>Tablecloth</title><link>https://blog2.michael.gr/post/2018-01-tablecloth/</link><pubDate>Thu, 25 Jan 2018 18:47:57 +0000</pubDate><guid>https://blog2.michael.gr/post/2018-01-tablecloth/</guid><description>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2018-01-tablecloth/media/tablecloth.jpg"
+&lt;/div&gt;</description></item><item><title>Tablecloth</title><link>https://blog2.michael.gr/post/2018-01-tablecloth/</link><pubDate>Thu, 25 Jan 2018 18:47:57 +0000</pubDate><guid>https://blog2.michael.gr/post/2018-01-tablecloth/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2018-01-tablecloth/media/tablecloth.jpg"
 width="1410"
 height="1410"
-srcset="https://blog2.michael.gr/post/2018-01-tablecloth/media/tablecloth_hu_ab9e56837434f991.jpg 480w, https://blog2.michael.gr/post/2018-01-tablecloth/media/tablecloth_hu_ce1cf1d77ff06e54.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
 &gt;
-&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align: center"&gt;Deerlux 100% Pure Linen Washable Tablecloth Solid Color from&lt;br&gt; &lt;a class="external"
-href="https://www.target.com/p/deerlux-100-pure-linen-washable-tablecloth-solid-color/-/A-83872558" target="_blank"
-&gt;target.com&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;/p&gt;
 &lt;p&gt;A high-tech, sci-fi horror short-story written on the evening of January 25, 2018.&lt;/p&gt;
 &lt;p&gt;There was a guy who got in a quarrel with his girlfriend, and she kicked him out of her apartment without even throwing his clothes out the window for him. So there he was, naked on the street, not knowing what to do. Out of necessity, he grabbed a tablecloth from a restaurant, draped himself with it, and started to go home, trying to look as if everything was normal and under control.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;People saw him walking down the street draped with a tablecloth, and thought that he must be making some sort of fashion statement. Some of them decided to imitate him by also wearing tablecloth, and lo and behold, before you knew it there was a tablecloth-wearing movement that was gaining ground like wildfire.&lt;/p&gt;
-&lt;p&gt;Now, imagine that all this happened a long time ago, and you are now living in a society in which a large part of the population is regularly wearing tablecloth. This form of attire is considered perfectly normal, even by people who do not wear it. A multitude of explanations have been invented after the fact to try and explain why tablecloth is better than conventional clothing, as if wearing tablecloth was invented on purpose, to improve upon specific aspects of clothing that required improvement. They will try to convince you to also wear tablecloth with truly disarming statements like the following:&lt;/p&gt;
+&lt;p&gt;Now, imagine that all this happened a long time ago, and you are now living in a society in which a large part of the population is regularly wearing tablecloth. This form of attire is considered perfectly normal, even by people who do not wear it. A multitude of explanations have been invented after the fact to try and explain why tablecloth is better than conventional clothing, as if wearing tablecloth was invented on purpose. They will try to convince you to also wear tablecloth with truly disarming statements like the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Tablecloth is easy: you don't have to learn how to use complicated buttons and zippers and belts and buckles and what not; just hold it in place with your hand.&lt;/p&gt;
@@ -10731,7 +10638,11 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;Tablecloth is a source of innovation. Every six months or so, someone comes up with a new pattern for printing on tablecloth, which invariably becomes an instant fashion hit, thus revolutionizing the way we dress.&lt;/p&gt;
 &lt;p&gt;Also see: &lt;a
 href="https://blog2.michael.gr/post/2017-05-on-scripting-languages/"
-&gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Simplicity</title><link>https://blog2.michael.gr/post/2017-12-simplicity/</link><pubDate>Thu, 07 Dec 2017 12:44:13 +0000</pubDate><guid>https://blog2.michael.gr/post/2017-12-simplicity/</guid><description>&lt;blockquote&gt;
+&gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image: Deerlux 100% Pure Linen Washable Tablecloth Solid Color from &lt;a class="external"
+href="https://www.target.com/p/deerlux-100-pure-linen-washable-tablecloth-solid-color/-/A-83872558" target="_blank"
+&gt;target.com&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Simplicity</title><link>https://blog2.michael.gr/post/2017-12-simplicity/</link><pubDate>Thu, 07 Dec 2017 12:44:13 +0000</pubDate><guid>https://blog2.michael.gr/post/2017-12-simplicity/</guid><description>&lt;blockquote&gt;
 &lt;p&gt;Simplicity is the art of hiding complexity&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Rob Pike, &amp;quot;Simplicity is Complicated&amp;quot;, dotGo 2015&lt;/p&gt;
@@ -10773,7 +10684,6 @@ href="https://en.wikipedia.org/wiki/Actor_model" target="_blank"
 &lt;p&gt;(available on the interwebz)&lt;/p&gt;</description></item><item><title>Migrating a project from java 8 to java 9</title><link>https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/</link><pubDate>Sat, 30 Sep 2017 20:27:45 +0000</pubDate><guid>https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration.png"
 width="700"
 height="400"
-srcset="https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration_hu_6a31957c51b3aca6.png 480w, https://blog2.michael.gr/post/2017-10-migrating-project-from-java-8-to-java-9/media/Java9-migration_hu_6f2dd076c17d35bf.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="175"
@@ -11154,7 +11064,6 @@ href="https://stackoverflow.com/questions/44198702/writing-a-custom-threadpool" 
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids.jpg"
 width="600"
 height="400"
-srcset="https://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids_hu_113e75b0e444c92f.jpg 480w, https://blog2.michael.gr/post/2017-06-on-uuids-and-guids/media/grumpy-cat-guids_hu_6da3ebde98bc76da.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
@@ -11234,9 +11143,7 @@ href="https://blog2.michael.gr/post/2017-06-my-notes-on-fielding-dissertation-re
 &gt;My notes on the Fielding Dissertation (REST)&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Scripting Languages</title><link>https://blog2.michael.gr/post/2017-05-on-scripting-languages/</link><pubDate>Fri, 19 May 2017 19:46:34 +0000</pubDate><guid>https://blog2.michael.gr/post/2017-05-on-scripting-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers.jpg"
 width="1023"
 height="575"
-srcset="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers_hu_6f30f1f417e0fba0.jpg 480w, https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers_hu_ac31a6389070d9d4.jpg 1024w"
 loading="lazy"
-alt="Teething rings (pacifiers) found on the great interwebz."
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
@@ -11247,7 +11154,7 @@ data-flex-basis="426px"
 &lt;ul&gt;
 &lt;li&gt;Interpreters for languages that were originally meant to be compiled.&lt;/li&gt;
 &lt;li&gt;Compilers for languages that were originally meant to be interpreted.&lt;/li&gt;
-&lt;li&gt;Scripting engines internally converting source code to bytecode before
+&lt;li&gt;Scripting engines internally compiling source code to bytecode before
 interpreting it.&lt;/li&gt;
 &lt;li&gt;Real languages compiling to bytecode which is then mostly interpreted and
 rarely converted to machine code.&lt;/li&gt;
@@ -11276,15 +11183,15 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;The validity of the statement &lt;code&gt;a.increment()&lt;/code&gt; depends upon the type of &lt;code&gt;a&lt;/code&gt;, and whether that type defines an &lt;code&gt;increment()&lt;/code&gt; method or not.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If the programming language is strongly typed, then semantic error will always be detected during compilation, so there is never any danger of attempting to run (or ship to the customer) a program containing this kind of error; however, if the programming language is weakly typed, then all semantic error will go undetected until an attempt is made to execute code containing such error, at which point the software will severely malfunction.&lt;/p&gt;
-&lt;p&gt;In light of the above, I would suggest that the actual differentiating factor between real programming and scripting languages is nothing but the presence or absence of semantic checking, in other words the use of strong vs. weak typing.&lt;/p&gt;
+&lt;p&gt;If the programming language is strongly typed, then semantic error will always be detected during compilation, so there is never any danger of attempting to run (or ship to the customer) a program containing this kind of error; however, if the programming language is weakly typed, then all semantic error will go undetected until an attempt is made to execute code containing such error.&lt;/p&gt;
+&lt;p&gt;In light of the above, it turns out that the actual differentiating factor between real programming and scripting languages is nothing but the presence or absence of semantic checking, in other words the use of strong vs. weak typing.&lt;/p&gt;
 &lt;p&gt;TypeScript is the odd exception to the rule, and this is to be expected, because the impetus for the creation of TypeScript was vastly different from that of other scripting languages, which tend to be one-man efforts, and usually come into existence as nothing more than toy projects. In contrast, TypeScript was the result of a deliberate group effort backed by a big company (Microsoft) starting with the realization that JavaScript is unfortunately here to stay, and setting out specifically to correct one of its major deficiencies, namely the lack of strong typing.&lt;/p&gt;
 &lt;p&gt;The trend of real programming languages to be compiled and of scripting languages to be interpreted can be explained &lt;em&gt;in full&lt;/em&gt; as a consequence of the primary choice of strong vs. weak typing:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;If a language is strongly typed, then a compilation step is very useful to
 have, because it will unfailingly locate all errors that are detectable via
-static semantic analysis before attempting to run.&lt;/p&gt;
+semantic analysis before attempting to run.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;If a language is weakly typed, then semantic errors are undetectable, so
@@ -11294,12 +11201,14 @@ IDE.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;So, allowing for the exception of TypeScript, this leaves us with the following soft rule:&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
 &lt;p&gt;Real languages are strongly typed, employ semantic checking, and are therefore usually compiled.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;Scripting languages are weakly typed, lack semantic checking, and are therefore usually interpreted.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;And yet, many people like scripting languages, and write lots of code in them, supposedly because they are &amp;quot;easier&amp;quot;. This brings to mind the famous quote by Edsger W. Dijkstra:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;{...} some people found error messages they couldn't ignore more annoying than wrong results, and, when judging the relative merits of programming languages, some still seem to equate &amp;quot;the ease of programming&amp;quot; with the ease of making undetected mistakes.&lt;/p&gt;
@@ -11320,39 +11229,39 @@ href="https://www.cs.utexas.edu/users/EWD/transcriptions/EWD06xx/EWD667.html" ta
 &lt;p&gt;&lt;strong&gt;Rebuttal:&lt;/strong&gt; Seriously? There are more libraries for your scripting language than there are for Java?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Argument:&lt;/strong&gt; I don't have to compile it; I just write my code and run it.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Rebuttal:&lt;/strong&gt; I also just write my code and run it. When I hit the &amp;quot;launch&amp;quot; button, my IDE compiles my code in the blink of an eye and runs it. The difference between you and me is that if I have made any semantic mistakes in my code, I will be told so before wasting my time trying to run it. But what am I saying, being told that there are semantic mistakes in your code probably counts as a disadvantage for you, right?&lt;/p&gt;
-&lt;p&gt;The ability to just write your code and run it without any semantic checking is causing real harm in scripting languages because it prevents them from evolving. This is, for example, a reason why Python version 2.x is still enjoying widespread use despite the language having moved on to version 3.x by now: people are afraid to make the transition to version 3.x in existing projects, even though it is mostly backwards compatible with version 2.x, because it is not 100% compatible, and lack of semantic checking means that there is no way of knowing which lines of code will break unless these lines get executed.&lt;/p&gt;
+&lt;p&gt;The ability to just write your code and run it without any semantic checking is causing real harm in scripting languages because it prevents them from evolving.&lt;/p&gt;
+&lt;p&gt;&lt;a name="python3"&gt;&lt;/a&gt;This is, for example, the major reason why Python version 2.x is still enjoying widespread use despite the language having moved on to version 3.x by now: people are afraid to make the transition to version 3.x in existing projects, even though it is mostly backwards compatible with version 2.x, because it is not 100% compatible, and lack of semantic checking means that there is no way of knowing which lines of code will break unless those lines happen to get executed.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Argument:&lt;/strong&gt; I can modify my program as it runs.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Rebuttal:&lt;/strong&gt; I can also modify my program as it runs; the ability to do this is available in most real programming languages, and it is called &amp;quot;edit and continue&amp;quot; or &amp;quot;hot reload&amp;quot; depending on the language; look it up.&lt;/p&gt;
 &lt;p&gt;Modification of running code is not always applicable in real programming languages, and it does not always work, but then again nor does it always work when you modify running code in a scripting language, because usually, you already have data structures in memory that were created by the code before it was modified. In real programming languages, you are prevented from making edits to running code that would seriously foul things up; in scripting languages, you are allowed to do whatever you please, and the catastrophic consequences of doing so are your own problem.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Argument:&lt;/strong&gt; I do not like to have to declare the type of every single variable because it is a pain.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Rebuttal:&lt;/strong&gt; This is akin to arguing against seat belts because putting them on and taking them off is a pain. Do you have any idea of what kind of pain you are looking at if you get in a traffic accident without a seat belt?&lt;/p&gt;
-&lt;p&gt;Furthermore, the ability to not have to declare the type of every single variable is not the exclusive privilege of scripting languages, because in recent years type inference has been gaining ground in real programming languages, allowing us to omit declaring the type of many of the variables that we use. The difference is that in real programming languages this is done right, by means of type inference instead of type ostrichism:&lt;/p&gt;
+&lt;p&gt;Furthermore, the ability to not have to declare the type of every single variable is not the exclusive privilege of scripting languages, because in recent years type inference has been gaining ground in real programming languages, allowing us to omit declaring the type of many of the variables that we use. The difference is that in real programming languages this is done right, by means of &lt;strong&gt;type inference&lt;/strong&gt; instead of &lt;strong&gt;type ostrichism&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Type inference is deterministic extra work that the compiler does for us,
-and it relies on having already assigned specific types to other variables,
-so that we do not have to repeat things that are already known to, or can be
-inferred by, the compiler.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Type inference&lt;/strong&gt;&lt;/em&gt; is deterministic extra work that the compiler does for us, and it relies on having already assigned specific types to other variables, so that we do not have to repeat things that the compiler already knows or can easily figure out.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Type ostrichism is scripting language programmers preferring to not see
-types and to not deal with types, as if that will make the types go away.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Type ostrichism&lt;/strong&gt;&lt;/em&gt; is scripting language programmers preferring to not see types and to not deal with types, as if that will make the types go away.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;It might be worth taking a look at PEP 483 (&lt;a class="external"
+&lt;p&gt;It might be worth taking a look at &lt;a class="external"
 href="https://peps.python.org/pep-0483/" target="_blank"
-&gt;https://peps.python.org/pep-0483/&lt;/a&gt;) where the people responsible for the advancement of Python are acknowledging that behind the scenes every variable is of course of a specific type, and discussing the potential benefits of adding a type annotation system to the language which will allow programmers to make their intentions about types explicit, so as to be able to at least partially, and at least as an afterthought, enjoy some of the benefits of strong typing. I quote:&lt;/p&gt;
+&gt;Python Enhancement Proposal (PEP) 483&lt;/a&gt; which acknowledges that behind the scenes every variable is of course of a specific type, and discusses the potential benefits of adding a type annotation system to the language which will allow programmers to make their intentions about types explicit, so as to be able to at least partially, and at least as an afterthought, enjoy some of the benefits of strong typing. I quote:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;These annotations can be used to avoid many kind of bugs, for documentation purposes, or maybe even to increase speed of program execution.&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;Well, guess what: the main difference between scripting languages and real programming languages is that real programming languages have such &amp;quot;type annotations&amp;quot; and all of their advantages already built-in: it is called &lt;strong&gt;The Type System&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Argument:&lt;/strong&gt; I am not worried about errors, because I use testing.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Rebuttal:&lt;/strong&gt; Oh really? Are your tests achieving even a mere 60% code coverage as we speak? And supposing that they do, how do you feel about the fact that in the remaining 40%, every single line is liable to break due to reasons as trivial and yet as common as a typo?&lt;/p&gt;
 &lt;p&gt;Testing is an indispensable quality assurance mechanism for software, but it does not, in and by itself, guarantee correctness. You can easily forget to test something, and you can easily test &amp;quot;around&amp;quot; a bug, essentially creating tests that pretty much require the bug to be in place in order to pass. Despite these deficiencies, testing is still very important, but it is nothing more than a weapon in our arsenal against bugs. This arsenal also happens to include another weapon, which is closer to the forefront in the battle against bugs, and it is 100% objective, and &lt;em&gt;definitive&lt;/em&gt;. This weapon is called &lt;em&gt;strong typing&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Argument:&lt;/strong&gt; It has lots and lots of built-in features.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Argument:&lt;/strong&gt; My scripting language has lots and lots of built-in features.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Rebuttal:&lt;/strong&gt; Sure, and that's why scripting languages are not entirely useless. If the only thing that matters is to accomplish a certain highly self-contained goal of severely limited scope in as little time as possible, then please, by all means, do go ahead and use your favorite scripting language with its awesome built-in features. However, if the project is bound to take a life of its own, you are far better off investing a couple of minutes to create a project in a real programming language, and to include the external libraries that will give you any extra features that you might need.&lt;/p&gt;
-&lt;p&gt;Built-in features do not only come with benefits; in contrast to libraries, they are much more difficult to evolve, because even a minute change in them may break existing code, resulting in people being reluctant to migrate to the latest version of the language. (Take the Python 2.x vs. 3.x conundrum for example.)&lt;/p&gt;
+&lt;p&gt;Built-in features do not only come with benefits; in contrast to libraries, they are much more difficult to evolve, because even a minute change in them may break existing code, resulting in people being reluctant to migrate to the latest version of the language. (Take the &lt;a
+href="https://blog2.michael.gr/post/2017-05-on-scripting-languages/#python3"
+&gt;Python 2 vs. 3&lt;/a&gt; conundrum for example.)&lt;/p&gt;
 &lt;p&gt;Furthermore, built-in features usually have to be supported forever, even after better alternatives have been invented, or after they simply go out of style and fall out of grace, so over time scripting languages tend to gather lots of unnecessary baggage. We have tried feature-bloated programming languages before, (with ADA for example,) and the consensus is that they are not the way to go.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Argument:&lt;/strong&gt; But really, it is so much easier! Look here, in one statement I obtain a list and assign its elements to individual variables!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Argument:&lt;/strong&gt; But really, my scripting language is so much easier! Look here, in one statement I obtain a list and assign its elements to individual variables!&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Rebuttal:&lt;/strong&gt; That's great, I bet this has slashed your time-to-market by half. What happens if the number of elements in the list differs from the number of variables that you decompose it into? I bet there is no error, because you do not like being bothered with errors, right?&lt;/p&gt;
 &lt;p&gt;In any case, my compiled language of choice has its own unique, arcane syntax quirks that I could, if I wanted to, claim that they make things so much easier for me.&lt;/p&gt;
 &lt;p&gt;Some of them are not even that arcane; for example, instead of using clunky annotations to hint to the IDE the types of my variables, so that it can then provide me with some rudimentary type checking, I get to simply declare the type of each variable as part of the actual syntax of the language! Imagine that!&lt;/p&gt;
@@ -11368,14 +11277,13 @@ href="https://danluu.com/empirical-pl/" target="_blank"
 &lt;p&gt;No contest here. I can't argue with hipsters.&lt;/p&gt;
 &lt;h3 id="the-problems-with-scripting-languages"&gt;The problems with scripting languages
 &lt;/h3&gt;&lt;h4 id="the-nonsense"&gt;The nonsense
-&lt;/h4&gt;&lt;p&gt;I don't need to say much here, just watch the legendary &amp;quot;Wat&amp;quot; video by Gary Bernhardt from CodeMash 2012, it is only 4 minutes long:&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;I don't need to say much here, just watch the legendary &lt;a class="external"
+href="https://www.destroyallsoftware.com/talks/wat" target="_blank"
+&gt;&amp;quot;Wat&amp;quot; video by Gary Bernhardt from CodeMash 2012&lt;/a&gt;, it is only 4 minutes long:&lt;/p&gt;
 &lt;video width="97%" poster="https://www.destroyallsoftware.com/assets/posters/talks/wat.poster-4f5425901c10ffeaceb61f82e25dc40b9212aadf078cead0dc6ffe40696e2bec.png" preload="none"&gt;
 &lt;source src="https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20241128%2Fus-east-1%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20241128T124514Z&amp;amp;X-Amz-Expires=14400&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=866f87a9e2a988029db034ad51f846818c5a2e4415da80559bb334e602fd6bad" /&gt;
 &lt;track label="English" kind="captions" srclang="en" src="https://blog2.michael.gr/captions/talks/wat.vtt"&gt;&lt;/track&gt;
 &lt;/video&gt;
-&lt;p&gt;Source: &lt;a class="external"
-href="https://www.destroyallsoftware.com/talks/wat" target="_blank"
-&gt;https://www.destroyallsoftware.com/talks/wat&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The reason for all this nonsense is that all these languages are hacks.&lt;/p&gt;
 &lt;p&gt;When the foundation that you are working on is a hack, then either anything you will build on top of it will in turn be a hack, or you are going to be putting an enormous effort to circumvent the hackiness of the foundation and build something reasonable over it. Why handicap yourself?&lt;/p&gt;
 &lt;h4 id="the-errors"&gt;The errors
@@ -11414,29 +11322,18 @@ href="https://www.catb.org/jargon/html/S/search-and-destroy-mode.html" target="_
 &lt;li&gt;Plain incompetence on behalf of their creators.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Scripting languages that have their priorities wrong are, for example, all the shell scripting languages. These languages aim to make strings (filenames) look and feel as if they are identifiers, so that you can type commands without having to enclose them in quotes, as if the convenience of not having to use quotes was the most important thing ever. If all we want to do in a shell script is to list a sequence of commands to execute, then this convenience is perhaps all we care for, but the moment we try to use any actual programming construct, like variables and flow control statements, what we have in our hands is a string-escaping nightmare of epic proportions.&lt;/p&gt;
-&lt;p&gt;Obligatory XKCD comic:&lt;/p&gt;
+&lt;p&gt;Obligatory &lt;a class="external"
+href="https://www.xkcd.com/1638/" target="_blank"
+&gt;XKCD comic: &amp;quot;Backslashes&amp;quot;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash.png"
 width="571"
 height="207"
-srcset="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash_hu_a3b55ba8a827aa03.png 480w, https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash_hu_1eec207eb5351c55.png 1024w"
-loading="lazy"
-alt="Backslashes"
+loading="lazy" alt="Backslashes" title="I searched my .bash_history for the line with the highest ratio of special characters to regular alphanumeric characters, and the winner was: cat out.txt | grep -o &amp;amp;quot;[[(].*[])][^]]*$&amp;amp;quot; ... I have no memory of this and no idea what I was trying to do, but I sure hope it worked."
 class="gallery-image"
 data-flex-grow="275"
 data-flex-basis="662px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;(Source: &amp;quot;Backslashes&amp;quot; &lt;a class="external"
-href="https://www.xkcd.com/1638/" target="_blank"
-&gt;https://www.xkcd.com/1638/&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;This totally ill-conceived prioritization extends to other scripting languages that try to pull similar tricks, for example YAML, where:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;For the sake of convenience, tokens like &lt;code&gt;yes&lt;/code&gt; and &lt;code&gt;no&lt;/code&gt; are (case-insensitively) recognized as Boolean literals besides &lt;code&gt;true&lt;/code&gt; and &lt;code&gt;false&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Also for the sake of convenience, strings &lt;em&gt;do not have to&lt;/em&gt; be enclosed in quotes
-...which famously leads to the infamous &lt;a class="external"
-href="https://langdev.stackexchange.com/questions/1123/what-design-trade-offs-led-to-the-norway-problem-in-yaml-and-when-are-they-wo" target="_blank"
-&gt;Norway Problem&lt;/a&gt;, where the two-letter country code for Norway is interpreted as the Boolean value &lt;code&gt;false&lt;/code&gt;.&lt;/li&gt;
-&lt;/ol&gt;
 &lt;p&gt;A scripting language that owes its bad syntax to being hastily hacked together is &lt;em&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;&lt;/em&gt;. Its creator, &lt;em&gt;&lt;strong&gt;Brendan Eich&lt;/strong&gt;&lt;/em&gt;, has admitted that the language was developed within a couple of weeks, and that it was not meant for anything but short isolated snippets of code. He is honest enough to speak of his own creation in derogatory terms, and to accept blame. (See &lt;a class="external"
 href="https://www.youtube.com/watch?v=zlcnOr81lPc" target="_blank"
 &gt;TEDxVienna 2016&lt;/a&gt;, opening statement, &amp;quot;Hello, I am to blame for JavaScript&amp;quot;.) Also, pretty much anyone deeply involved with JavaScript will admit that it has serious problems. One of the most highly acclaimed books on the language is &lt;em&gt;&lt;strong&gt;JavaScript: The Good Parts&lt;/strong&gt;&lt;/em&gt;, authored by Douglas Crockford and published by O'Reilly; you can take the title of the book as a hint.&lt;/p&gt;
@@ -11444,26 +11341,25 @@ href="https://www.youtube.com/watch?v=zlcnOr81lPc" target="_blank"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/javascript.webp"
 width="1080"
 height="607"
-srcset="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/javascript_hu_c8bac3d249154888.webp 480w, https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/javascript_hu_efbc8ae1590e2ebb.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="427px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;A scripting language that owes its horrific syntax to lack of competence is &lt;em&gt;&lt;strong&gt;PHP&lt;/strong&gt;&lt;/em&gt;. Its creator, &lt;em&gt;&lt;strong&gt;Rasmus Lerdorf&lt;/strong&gt;&lt;/em&gt;, is quoted &lt;a class="external"
+&lt;p&gt;A scripting language that owes its horrific syntax to lack of competence is &lt;em&gt;&lt;strong&gt;PHP&lt;/strong&gt;&lt;/em&gt;. Its creator, &lt;em&gt;&lt;strong&gt;Rasmus Lerdorf&lt;/strong&gt;&lt;/em&gt;, is quoted on &lt;a class="external"
 href="https://en.wikipedia.org/wiki/PHP#Early_history" target="_blank"
-&gt;on the Wikipedia article about PHP&lt;/a&gt; as saying &amp;quot;I don't know how to stop it, there was never any intent to write a programming language {...} I have absolutely no idea how to write a programming language, I just kept adding the next logical step on the way.&amp;quot;&lt;/p&gt;
+&gt;the Wikipedia article about PHP&lt;/a&gt; as saying &amp;quot;I don't know how to stop it, there was never any intent to write a programming language {...} I have absolutely no idea how to write a programming language, I just kept adding the next logical step on the way.&amp;quot;&lt;/p&gt;
 &lt;p&gt;So, from the above it should be obvious that most scripting languages are little toy projects that were created by individuals who simply wanted to prove that they could build something like that, without actually intending it to be used outside of their own workbench.&lt;/p&gt;
 &lt;h4 id="the-cheapness"&gt;The cheapness
-&lt;/h4&gt;&lt;p&gt;The lack of semantic checking in scripting languages is usually not a deliberate design choice, but instead a consequence of the very limited effort that has gone into creating them. In many cases the creators of scripting languages would not know how to add semantic checking to the language even if they wanted to. In all cases, the amount of work required to add semantic checking would have been several orders of magnitude greater than the total amount of work that went into the creation of the language in the first place.&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;The lack of semantic checking in scripting languages is usually not a deliberate design choice, but instead a consequence of the very limited effort that has gone into creating them. In many cases the creators of scripting languages would not know how to add semantic checking to the language even if they wanted to. In all cases, the amount of work required to add semantic checking would have been orders of magnitude greater than the total amount of work that went into the creation of the language in the first place.&lt;/p&gt;
 &lt;p&gt;In this sense, the comparison between scripting languages and real programming languages is a lot like comparing children's tinker toy tools with tools for professionals: sure, a plastic screwdriver is inexpensive, lightweight and easy to use, but try screwing anything but plastic screws with it.&lt;/p&gt;
 &lt;p&gt;(I was going to also add &amp;quot;you cannot hurt yourself with it&amp;quot;, but this analogy does not transfer to programming: you can very easily hurt yourself with a scripting language.)&lt;/p&gt;
 &lt;h3 id="what-scripting-languages-are-good-for"&gt;What scripting languages are good for
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Scripting languages used to be an easy way to write cross-platform software. This does not hold true anymore, since most major real programming languages are pretty much cross-platform nowadays.&lt;/li&gt;
 &lt;li&gt;Scripting languages are useful when embedded within applications, (applications written in &lt;em&gt;real&lt;/em&gt; programming languages,) as evaluators of user-supplied expressions. (E.g. spreadsheet cell formulas.)&lt;/li&gt;
-&lt;li&gt;Scripting languages are useful when shortening the time from the moment you fire up the code editor to the moment you first run your program is more important than everything else. By &amp;quot;everything else&amp;quot; we really mean everything: understandability, maintainability, performance, even correctness.&lt;/li&gt;
+&lt;li&gt;Scripting languages are useful when shortening the time from the moment you fire up the code editor to the moment you first run your program is more important than everything else. By &amp;quot;everything else&amp;quot; we really mean everything: readability, understandability, maintainability, performance, even correctness.&lt;/li&gt;
 &lt;li&gt;Scripting languages are useful when the program to be written is so trivial, and its expected lifetime is so short, that it is hardly worth the effort of creating a new folder with a new project file in it. The corollary to this is that if it is worth creating a project for it, then it is worth using a real programming language.&lt;/li&gt;
 &lt;li&gt;Scripting languages are useful when the code to be written is so small and simple that bugs can be detected by simply skimming through the code. The corollary to this is that if the program is to be even slightly complex, it should be written in a real programming language. (Adding insult to injury, many scripting languages tend to have such a cryptic write-only syntax that it is very hard to grasp what any piece of code does, let alone skim through it and vouch for it being bug-free.)&lt;/li&gt;
 &lt;li&gt;The most important thing about scripting languages (and the main reason why they have become so wildly popular in recent years) is that they are useful in getting non-programmers into programming as quickly as possible.&lt;/li&gt;
@@ -11474,37 +11370,27 @@ href="https://en.wikipedia.org/wiki/PHP#Early_history" target="_blank"
 &lt;p&gt;It is okay to start with one; you must get rid of it as soon as you grow some teeth.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id="conclusion"&gt;Conclusion
-&lt;/h3&gt;&lt;p&gt;The fact that some scripting languages catch on and spread like wildfire simply shows how eager the industry is to adopt any contemptible piece of nonsense without any critical thinking whatsoever, as long as it helps optimize some short-sighted concern, such as how to get non-programmers into programming as quickly as possible. It is a truly deplorable situation that kids nowadays learn JavaScript as their first programming language due to it being so accessible to them: all you need is a web browser, and one day instead of F11 for full-screen you accidentally hit F12 which opens up the developer tools, and you realize that you have an entire integrated development environment for JavaScript sitting right there, ready to use. The availability of JavaScript to small children is frightening.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;The fact that some scripting languages catch on and spread like wildfire simply shows how eager the industry is to adopt any contemptible piece of nonsense without any critical thinking whatsoever, as long as it helps optimize some short-sighted concern, such as how to get non-programmers into programming as quickly as possible. It is a truly deplorable situation that kids nowadays learn JavaScript as their first programming language due to it being so accessible: all you need is a web browser, and one day instead of F11 for full-screen you accidentally hit F12 which opens up the developer tools, and you realize that you have an entire integrated development environment for JavaScript sitting right there, ready to use. The availability of JavaScript to small children is frightening.&lt;/p&gt;
 &lt;p&gt;Usually, once a language becomes extremely popular, tools are created to lessen the impact of its deficiencies. Thanks to the herculean efforts of teams that develop scripting engines, and through all kinds of sorcery being done under the hood in these engines, the most popular scripting languages are considerably faster today than they used to be. However, the sorcery is not always applicable, even when it is applicable it is imperfect, and besides, it incurs a penalty of its own, so scripting languages will never match the performance of real programming languages. Also, modern IDEs have evolved to provide some resemblance of semantic checking in some scripting languages, but since this checking has been added as an afterthought, it is always partial, unreliable, hacky, and generally an uphill battle.&lt;/p&gt;
 &lt;p&gt;So, you might ask, what about the hundreds of thousands of successful projects written in scripting languages? Are they all junk? And what about the hundreds of thousands of programmers all over the world who are making extensive use of scripting languages every day and are happy with them? Are they all misguided? Can't they see all these problems? Are they all ensnared in a monstrous collective delusion?&lt;/p&gt;
 &lt;p&gt;Yep, that's exactly it. You took the words from my mouth.&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages.jpg"
+&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages.jpg"
 width="600"
 height="400"
-srcset="https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages_hu_5be306c65a008b9c.jpg 480w, https://blog2.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages_hu_8081d0eb266ea027.jpg 1024w"
-loading="lazy"
+loading="lazy" alt="Mandatory grumpy cat meme" title="Scripting Languages - I Hate Them"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
 &gt;
-&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align: center"&gt;mandatory grumpy cat meme: &amp;quot;Scripting Languages - I Hate Them.&amp;quot;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;/p&gt;
 &lt;p&gt;Also read: &lt;a
 href="https://blog2.michael.gr/post/2018-01-tablecloth/"
 &gt;Tablecloth&lt;/a&gt; (A high-tech, sci-fi horror short-story)&lt;/p&gt;
 &lt;p&gt;Note: This is a draft. It may contain inaccuracies or mistakes. There are bound to be corrections after I receive some feedback.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Scratch&lt;/p&gt;
+&lt;p&gt;Cover image: Teething rings (pacifiers) found on the great interwebz.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Scratch (please ignore)&lt;/p&gt;
 &lt;p&gt;See:&lt;/p&gt;
 &lt;p&gt;&lt;a class="external"
 href="http://stackoverflow.com/questions/397418/when-to-use-a-scripting-language" target="_blank"
@@ -11677,7 +11563,6 @@ href="http://tools.ietf.org/html/draft-nottingham-json-home-03" target="_blank"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2015-10-the-mother-of-all-bugs/media/mother-of-all-bugs-diagram.png"
 width="640"
 height="335"
-srcset="https://blog2.michael.gr/post/2015-10-the-mother-of-all-bugs/media/mother-of-all-bugs-diagram_hu_b2e0d5640544bafb.png 480w, https://blog2.michael.gr/post/2015-10-the-mother-of-all-bugs/media/mother-of-all-bugs-diagram_hu_95f9a01854c21024.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="191"
@@ -11721,7 +11606,6 @@ loading="lazy"
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor1.gif"
 width="1024"
 height="768"
-srcset="https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor1_hu_a0637dee97c77539.gif 480w, https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor1_hu_93fe3720a4ec5dc8.gif 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
@@ -11744,7 +11628,6 @@ those?) which opened one MDI client window per phone line made available by the 
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor2.gif"
 width="1024"
 height="768"
-srcset="https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor2_hu_5f5f4ff3899ae9db.gif 480w, https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor2_hu_5cfe56faa3285a76.gif 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
@@ -11768,7 +11651,6 @@ simple API to display its status and log messages. I also wrote an emulated impl
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor3.gif"
 width="1024"
 height="768"
-srcset="https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor3_hu_4ab38ceb4803c6a0.gif 480w, https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor3_hu_566fa864dbbb1cc6.gif 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
@@ -11787,7 +11669,6 @@ data-flex-basis="320px"
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor4.gif"
 width="1024"
 height="768"
-srcset="https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor4_hu_1db6f1481ef837fd.gif 480w, https://blog2.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/images/monitor4_hu_dd81b1c8b8f76876.gif 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
@@ -13041,7 +12922,6 @@ This is not an argument.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2013-03-20-my-notes-on-clean-code/media/robert-martin-clean-code.jpg"
 width="488"
 height="648"
-srcset="https://blog2.michael.gr/post/2013-03-20-my-notes-on-clean-code/media/robert-martin-clean-code_hu_7e6a5abbd055cca0.jpg 480w, https://blog2.michael.gr/post/2013-03-20-my-notes-on-clean-code/media/robert-martin-clean-code_hu_724ffbc460339ee5.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="75"
@@ -13875,7 +13755,7 @@ loading="lazy"
 &lt;h3 id="introduction"&gt;Introduction
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Hail Mary Initialization&lt;/strong&gt;&lt;/em&gt; is the &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Cargo_cult_programming" target="_blank"
-&gt;cargo cult programming&lt;/a&gt; practice of pre-initializing a local variable with some default value, &amp;quot;just in case&amp;quot;, even though that value will be overwritten in all code paths before it will be read. It is commonly done under the impression that it reduces the chances of error, but in reality it achieves the exact opposite: it increases the chances of error.&lt;/p&gt;
+&gt;cargo cult programming&lt;/a&gt; practice of pre-initializing a local variable with some default value, &amp;quot;just in case&amp;quot;, even though that value will subsequently be overwritten in all code paths before it will ever be read. It is commonly done under the impression that it reduces the chances of error, but in reality it achieves the exact opposite: it increases the chances of error.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
@@ -13899,10 +13779,10 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;In this example, variable &lt;code&gt;a&lt;/code&gt; is declared and initialized at line 1, but then it receives another value either at line 3 or line 5, before it is read for the first time at line 6. So, the initialization at line 1 was superfluous.&lt;/p&gt;
-&lt;p&gt;A surprisingly large number of programmers are under the impression that a plain local variable declaration like &lt;code&gt;int a;&lt;/code&gt; is somehow incomplete. They have trained themselves to see such declarations as missing something important, without which bad things might happen. As a result, they believe that when a local is declared it must always be pre-initialized with some value, even when a meaningful value is not yet available.&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;In this example, variable &lt;code&gt;a&lt;/code&gt; is declared and initialized at line 1, but then it receives another value either at line 3 or line 5, before it is read for the first time at line 6. So, the initialization at line 1 was entirely superfluous.&lt;/p&gt;
+&lt;p&gt;A surprisingly large number of programmers are under the impression that a plain local variable declaration like &lt;code&gt;int a;&lt;/code&gt; is somehow incomplete. They have trained themselves to see such declarations as somehow missing something, without which bad things are bound to happen. As a result, they believe that when a local is declared it must always be pre-initialized with some value, even when a meaningful value is not yet available.&lt;/p&gt;
 &lt;p&gt;The belief is so popular, that it enjoys alleged &amp;quot;best practice&amp;quot; status, even &amp;quot;common knowledge&amp;quot; status, despite it being &lt;em&gt;&lt;strong&gt;dead wrong&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;h3 id="why-people-do-it"&gt;Why people do it
+&lt;h3 id="how-did-it-start"&gt;How did it start
 &lt;/h3&gt;&lt;p&gt;The practice of indiscriminately pre-initializing all variables was not always wrong. It started back in the dark ages of the first Fortran and C compilers, when it was kind of necessary. Compilers back then had a combination of unfortunate characteristics:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;They required all local variables within a function to be declared up-front.&lt;/li&gt;
@@ -13923,11 +13803,11 @@ href="https://blog2.michael.gr/post/2015-10-the-mother-of-all-bugs/"
 &lt;/h4&gt;&lt;p&gt;When a variable receives a value only once, it is an effectively immutable variable. However, when a variable receives a value twice, then it is by definition mutable. If you have any self-esteem whatsoever, you are using a modern Integrated Development Environment (IDE) and you have configured it to syntax-color mutable variables differently from immutable ones. Unfortunately, Hail-Mary initialization will cause many of your local variables to be colored as mutable, even though they were never meant to be mutable. This is a misleading signal, and coping with it causes cognitive overhead.&lt;/p&gt;
 &lt;p&gt;However, that's just an annoyance too. Stay with me, there is worse.&lt;/p&gt;
 &lt;h4 id="it-leads-to-misuse-of-the-type-system"&gt;It leads to misuse of the type system
-&lt;/h4&gt;&lt;p&gt;Some data types do not have default values that you can pre-initialize a variable with, so the desire to always pre-initialize everything sometimes leads programmers to use slightly different types instead, which essentially constitutes a misuse of the type system. For example, some languages (e.g. C#) support explicit nullability of reference types. This means that you cannot pre-initialize a non-nullable reference variable with null. If, in your desire to pre-initialize everything, you decide to turn a non-nullable reference into a nullable reference, then you have just committed an act of sabotage against yourself, and anyone else who will ever look at that code, by making the code considerably more complicated than it needed to be. The same applies to enums: people often add special &amp;quot;invalid&amp;quot; or &amp;quot;unknown&amp;quot; values to their enums, for no good reason other than to accommodate their craving for Hail-Mary Initialization. Such counterfeit values add needless complexity to everything.&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;Some data types do not have default values that you can pre-initialize a variable with, so the desire to always pre-initialize everything sometimes leads programmers to use slightly different types instead, which essentially constitutes a misuse of the type system. For example, some languages (e.g. C#) support explicit nullability of reference types. This means that you cannot pre-initialize a non-nullable reference variable with null. If, in your desire to pre-initialize everything, you decide to turn a non-nullable reference into a nullable reference, then you have just committed an act of sabotage against yourself, and anyone else who will ever look at that code, by making the code considerably more complicated than it needed to be. The same applies to enums: people often add special &amp;quot;invalid&amp;quot; or &amp;quot;unknown&amp;quot; values to their enums, for no reason other than to accommodate their craving for Hail-Mary Initialization. Such counterfeit values add needless complexity to everything.&lt;/p&gt;
 &lt;h4 id="it-prevents-the-compiler-from-issuing-useful-warnings"&gt;It prevents the compiler from issuing useful warnings.
 &lt;/h4&gt;&lt;p&gt;Modern compilers of most mainstream programming languages do extensive data flow analysis and are fully capable of pointing out any situation where a variable is used without first having been initialized. Thus, accidental use of uninitialized variables is never a problem today.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;If you say &amp;quot;but I do not see any such warnings&amp;quot; then you are trying to write code without first having figured out how to enable all warnings that your compiler can issue. Do not do that. Stop whatever it is that you are doing, figure out how to enable all warnings, enable them, and only then continue coding.&lt;/li&gt;
+&lt;li&gt;If you say &amp;quot;but I do not see any such warnings&amp;quot; then you are trying to write code without first having figured out how to enable all warnings that your compiler can issue. Stop whatever it is that you are doing, figure out how to enable all warnings, enable them, and only then continue coding.&lt;/li&gt;
 &lt;li&gt;If you say &amp;quot;but my compiler does not support issuing such warnings&amp;quot; then you are using the wrong compiler. Stop using that compiler, and start using a different one.&lt;/li&gt;
 &lt;li&gt;If you say &amp;quot;but there is no such compiler for the language I use&amp;quot; then throw away everything and start from scratch with a different language. I do not care what it takes; in the 3rd millennium you cannot be programming without flow analysis warnings.&lt;/li&gt;
 &lt;/ul&gt;
