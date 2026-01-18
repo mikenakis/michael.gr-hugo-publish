@@ -9228,7 +9228,6 @@ loading="lazy"
 &lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;This project has been retired. The github link does not even work anymore.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;This page only serves historical documentation purposes.&lt;/strong&gt;&lt;/p&gt;
-&lt;!-- more --&gt;
 &lt;h3 id="what-is-mikenakis-rumination"&gt;What is mikenakis-rumination?
 &lt;/h3&gt;&lt;p&gt;&lt;code&gt;mikenakis-rumination&lt;/code&gt; is a java agent and associated class library for making plain old java objects aware of their own mutations.&lt;/p&gt;
 &lt;p&gt;Rumination is a term that I have coined to refer to the ability of an object to be aware of mutations on itself.&lt;/p&gt;
@@ -10653,7 +10652,6 @@ href="https://www.youtube.com/watch?v=rFejpH_tAHM" target="_blank"
 &lt;p&gt;From the &amp;quot;Build Stuff&amp;quot; event of April 2017.&lt;/p&gt;
 &lt;p&gt;Talk begins at 9:45.&lt;/p&gt;
 &lt;p&gt;Highlights of the talk:&lt;/p&gt;
-&lt;!-- more --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;27:00 Placing a network between modules simply to enforce programmer discipline&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -14117,7 +14115,6 @@ href="http://michael.gr" target="_blank"
 &lt;p&gt;So, I took a drastic measure: I deleted the &lt;code&gt;obj&lt;/code&gt; folder and I created an empty text file called &lt;code&gt;obj&lt;/code&gt; in its place, which I marked as read-only and hidden, and I added it in the ignored files in SVN.&lt;/p&gt;
 &lt;p&gt;Strangely enough, this awful hack worked. Or at least it appeared to work. Just today I realized that it worked for the regular build, but it has been the reason why my batch-build does not work.&lt;/p&gt;
 &lt;p&gt;So, it appears that the only way to have batch-build functionality in Visual Studio is to resign to having a stupid &lt;code&gt;obj&lt;/code&gt; folder under your project folder. Oh, well!&lt;/p&gt;</description></item><item><title>Fixing the AutoCloseable interface of Java</title><link>https://blog2.michael.gr/post/2007-11-fixing-autocloseable-interface-of-java/</link><pubDate>Sat, 17 Nov 2007 09:30:50 +0000</pubDate><guid>https://blog2.michael.gr/post/2007-11-fixing-autocloseable-interface-of-java/</guid><description>&lt;p&gt;Java 7 introduced the &lt;code&gt;AutoCloseable&lt;/code&gt; interface, which is roughly equivalent to the &lt;code&gt;IDisposable&lt;/code&gt; interface of C#, to be used in synergy with the new try-with-resources statement, which is equivalent to the using-disposable construct of C#.&lt;/p&gt;
-&lt;!-- more --&gt;
 &lt;p&gt;The problem with Java's &lt;code&gt;AutoCloseable&lt;/code&gt; interface is that its &lt;code&gt;close()&lt;/code&gt; method is declared to throw a checked exception:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
