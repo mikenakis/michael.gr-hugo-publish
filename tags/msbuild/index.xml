@@ -135,56 +135,7 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Here is an excerpt from a &lt;code&gt;.csproj&lt;/code&gt; file implementing the above matrix, assuming that we have defined our own set of assertion functions, dependent upon an &lt;code&gt;ASSERTIONS&lt;/code&gt; define-constant, and our own set of precondition functions, dependent upon a &lt;code&gt;PRECONDITIONS&lt;/code&gt; define-constant.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;span class="lnt"&gt;42
-&lt;/span&gt;&lt;span class="lnt"&gt;43
-&lt;/span&gt;&lt;span class="lnt"&gt;44
-&lt;/span&gt;&lt;span class="lnt"&gt;45
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Choose&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Choose&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;When&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;False&lt;span class="nt"&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
@@ -229,23 +180,14 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ...
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Otherwise&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/Choose&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the 'Develop' package, and the 'Release' package.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the 'Develop' package, and the 'Release' package.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The 'Develop' package is to be referenced by software under development.&lt;/li&gt;
 &lt;li&gt;The 'Release' package is to be referenced by software that is being shipped to production.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The generation of two different packages for a single library can be accomplished by building twice, once for each configuration, and constructing the assembly name as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;AssemblyName&amp;gt;&lt;/span&gt;$(MSBuildProjectName)-$(Configuration)&lt;span class="nt"&gt;&amp;lt;/AssemblyName&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This way, instead of a single package called &lt;code&gt;MyPackage&lt;/code&gt; we create two packages: &lt;code&gt;MyPackage-Develop&lt;/code&gt; and &lt;code&gt;MyPackage-Release&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;AssemblyName&amp;gt;&lt;/span&gt;$(MSBuildProjectName)-$(Configuration)&lt;span class="nt"&gt;&amp;lt;/AssemblyName&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This way, instead of a single package called &lt;code&gt;MyPackage&lt;/code&gt; we create two packages: &lt;code&gt;MyPackage-Develop&lt;/code&gt; and &lt;code&gt;MyPackage-Release&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;There may be a better way to build a library, so that only one package gets generated, containing both the develop and release builds, and the right binaries somehow end up in the right output directory; however, I have not been able to figure that out yet. If you know how to do it, please let me know.&lt;/p&gt;
 &lt;p&gt;For any build configuration of a certain module, (either an application or a library,) the build configuration of the libraries it uses can be determined using the following table:&lt;/p&gt;
 &lt;table&gt;
@@ -276,34 +218,15 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/table&gt;
 &lt;p&gt;Note that the 'Develop' configuration of a module could, in theory, make use of the better-performing 'Release' configuration of a library, instead of the 'Develop' configuration; however, that can only work if the module does not expose the library, or if there is no other module in the solution that uses the 'Develop' configuration of the library. Otherwise, there are going to be build errors saying that a certain type exists in both the develop and release configuration of a certain library.&lt;/p&gt;
 &lt;p&gt;Here is an excerpt of a .csproj file implementing the above table:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Optimized&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Develop&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Release&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Release&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Then, packages can be referenced as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class="na"&gt;Include=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Version=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id="conclusions"&gt;Conclusions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, packages can be referenced as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class="na"&gt;Include=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Version=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="conclusions"&gt;Conclusions
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;An 'Optimized' build configuration has been proposed, for cutting in half the time it takes to run slow, computationally expensive tests on build servers. (Not needed by projects with small, fast tests.)&lt;/li&gt;
 &lt;li&gt;A 'Develop' build configuration for libraries has been proposed, intended for use during development of software using the libraries, but not for shipping to production. It has preconditions enabled, in order to catch bugs in the software using the libraries.&lt;/li&gt;

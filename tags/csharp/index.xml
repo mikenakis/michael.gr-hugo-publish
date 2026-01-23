@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# on Michael's Blog</title><link>https://blog2.michael.gr/tags/csharp/</link><description>Recent content in C# on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:43:29 +0200</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/csharp/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog2.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-immutability-assessment/images/diamond.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# on Michael's Blog</title><link>https://blog2.michael.gr/tags/csharp/</link><description>Recent content in C# on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 21 Jan 2026 11:12:20 +0100</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/csharp/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog2.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-06-immutability-assessment/images/diamond.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -154,29 +154,44 @@ href="https://thenounproject.com/icon/diamond-4452869/" target="_blank"
 href="http://mustoverride.com/tuples%5C_structs/" target="_blank"
 &gt;Vladimir Sadov: &amp;quot;C# Tuples. Why mutable structs?&amp;quot;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Human-readable names of dotnet types in C# notation</title><link>https://blog2.michael.gr/post/2025-05-human-readable-names-of-dotnet-types-in/</link><pubDate>Sun, 25 May 2025 09:18:08 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-05-human-readable-names-of-dotnet-types-in/</guid><description>&lt;h3 id="summary"&gt;Summary
 &lt;/h3&gt;&lt;p&gt;Type names as reported by the dotnet runtime are in a cryptic, non-human-readable format. Attempts by many to solve this problem have generally been naive, incomplete, and clunky. A library that gets the job done right is presented.&lt;/p&gt;
-&lt;h3 id="the-problem"&gt;The problem
-&lt;/h3&gt;&lt;p&gt;PEARL: In dotnet, the &lt;code&gt;System.Type.Name&lt;/code&gt; and &lt;code&gt;System.Type.FullName&lt;/code&gt; properties return type names in a cryptic format which is not human-readable and bears very little resemblance to the names of the same types as they appear in C# source code.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id="the-problem"&gt;The problem
+&lt;/h3&gt;&lt;p&gt;PEARL: In dotnet, the &lt;code&gt;System.Type.Name&lt;/code&gt; and &lt;code&gt;System.Type.FullName&lt;/code&gt; properties return type names in a cryptic format which is not human-readable and bears very little resemblance to the names of the same types as they appear in C# source code.&lt;/p&gt;
 &lt;p&gt;Try this:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Console.WriteLine( typeof( int ).Name );&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Instead of &lt;code&gt;int&lt;/code&gt;, you get &lt;code&gt;Int32&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Try this:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;class Outer{ public class Inner; }&lt;/code&gt;&lt;br&gt;
-&lt;code&gt;Console.WriteLine( typeof( Outer.Inner ).FullName );&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Instead of &lt;code&gt;Outer.Inner&lt;/code&gt; you get &lt;code&gt;Outer+Inner&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Try this:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Console.WriteLine( typeof( Dictionary&amp;lt;,&amp;gt; ).Name );&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Instead of &lt;code&gt;Dictionary&amp;lt;,&amp;gt;&lt;/code&gt; you get &lt;code&gt;Dictionary`2&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Try this:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Console.WriteLine( new Dictionary&amp;lt;int,System.DateTime&amp;gt;().GetType().FullName );&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Instead of &lt;code&gt;System.Collections.Generic.Dictionary&amp;lt;int, System.DateTime&amp;gt;&lt;/code&gt; you get &lt;code&gt;System.Collections.Generic.Dictionary`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Try this:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;class C { public int? Field; }&lt;/code&gt;
-&lt;code&gt;Console.WriteLine( typeof( C ).GetField( &amp;quot;Field&amp;quot; )!.FieldType.FullName );&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Instead of &lt;code&gt;int?&lt;/code&gt; you get &lt;code&gt;System.Nullable1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;The examples above demonstrate the following problems:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Instead of this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;you get this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Int32&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Try this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Outer&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Inner&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;Outer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Inner&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;FullName&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Instead of this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Outer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Inner&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;you get this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Outer&lt;/span&gt;&lt;span class="p"&gt;+&lt;/span&gt;&lt;span class="n"&gt;Inner&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Try this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;Dictionary&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;,&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Name&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Instead of this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Dictionary&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;,&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;you get this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Dictionary&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Try this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Dictionary&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTime&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;().&lt;/span&gt;&lt;span class="n"&gt;GetType&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="n"&gt;FullName&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Instead of this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Collections&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Generic&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Dictionary&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTime&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;you get this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Collections&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Generic&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Dictionary&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Int32&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Private&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CoreLib&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Version&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Culture&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;neutral&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;PublicKeyToken&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="n"&gt;cec85d7bea7798e&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DateTime&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Private&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CoreLib&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Version&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Culture&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;neutral&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;PublicKeyToken&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="n"&gt;cec85d7bea7798e&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Try this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;C&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int?&lt;/span&gt; &lt;span class="n"&gt;Field&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;Console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WriteLine&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;GetField&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Field&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;)!.&lt;/span&gt;&lt;span class="n"&gt;FieldType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;FullName&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Instead of this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int?&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;you get this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Nullable1&lt;/span&gt;&lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Int32&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Private&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CoreLib&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Version&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;8.0&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="m"&gt;0.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Culture&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="n"&gt;neutral&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;PublicKeyToken&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;&lt;span class="n"&gt;cec85d7bea7798e&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The examples above demonstrate the following problems:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The language keywords for built-in types are not used; instead, the raw CLR type names are used.&lt;/li&gt;
 &lt;li&gt;Names of nested classes are delimited with a plus-sign instead of a period.&lt;/li&gt;
@@ -190,11 +205,10 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;Well, unfortunately, &lt;em&gt;&lt;strong&gt;no.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;There is no such thing built into dotnet.&lt;/p&gt;
 &lt;p&gt;The closest there is to it involves referencing the &lt;code&gt;System.CodeDom&lt;/code&gt; assembly (by Microsoft) and writing the following code:&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;var cSharpCompiler = new Microsoft.CSharp.CSharpCodeProvider();&lt;/code&gt;
-&lt;code&gt;var typeRef = new System.CodeDom.CodeTypeReference( type );&lt;/code&gt;
-&lt;code&gt;string typeName = cSharpCompiler.GetTypeOutput( typeRef );&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;This will give you namespace-qualified human-readable type names in C# notation, and it will even replace names of built-in types with their corresponding language keywords, so it will give you &lt;code&gt;int&lt;/code&gt; instead of &lt;code&gt;System.Int32&lt;/code&gt;, which is nice.&lt;/p&gt;
-&lt;p&gt;However, even then, the generated type names suffer in the following ways:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;cSharpCompiler&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Microsoft&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CSharp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CSharpCodeProvider&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;typeRef&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CodeDom&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CodeTypeReference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;string&lt;/span&gt; &lt;span class="n"&gt;typeName&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cSharpCompiler&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetTypeOutput&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;typeRef&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will give you namespace-qualified human-readable type names in C# notation, and it will even replace names of built-in types with their corresponding language keywords, so it will give you &lt;code&gt;int&lt;/code&gt; instead of &lt;code&gt;System.Int32&lt;/code&gt;, which is nice. However, even then, the generated type names suffer in the following ways:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;If you wanted the underlying CLR type names instead of the language keywords, you can't have them.&lt;/li&gt;
 &lt;li&gt;If you wanted type names without namespaces, you can't have them.&lt;/li&gt;
@@ -384,56 +398,7 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Here is an excerpt from a &lt;code&gt;.csproj&lt;/code&gt; file implementing the above matrix, assuming that we have defined our own set of assertion functions, dependent upon an &lt;code&gt;ASSERTIONS&lt;/code&gt; define-constant, and our own set of precondition functions, dependent upon a &lt;code&gt;PRECONDITIONS&lt;/code&gt; define-constant.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;span class="lnt"&gt;42
-&lt;/span&gt;&lt;span class="lnt"&gt;43
-&lt;/span&gt;&lt;span class="lnt"&gt;44
-&lt;/span&gt;&lt;span class="lnt"&gt;45
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Choose&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Choose&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;When&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;False&lt;span class="nt"&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
@@ -478,23 +443,14 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ...
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Otherwise&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/Choose&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the 'Develop' package, and the 'Release' package.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the 'Develop' package, and the 'Release' package.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The 'Develop' package is to be referenced by software under development.&lt;/li&gt;
 &lt;li&gt;The 'Release' package is to be referenced by software that is being shipped to production.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The generation of two different packages for a single library can be accomplished by building twice, once for each configuration, and constructing the assembly name as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;AssemblyName&amp;gt;&lt;/span&gt;$(MSBuildProjectName)-$(Configuration)&lt;span class="nt"&gt;&amp;lt;/AssemblyName&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This way, instead of a single package called &lt;code&gt;MyPackage&lt;/code&gt; we create two packages: &lt;code&gt;MyPackage-Develop&lt;/code&gt; and &lt;code&gt;MyPackage-Release&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;AssemblyName&amp;gt;&lt;/span&gt;$(MSBuildProjectName)-$(Configuration)&lt;span class="nt"&gt;&amp;lt;/AssemblyName&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This way, instead of a single package called &lt;code&gt;MyPackage&lt;/code&gt; we create two packages: &lt;code&gt;MyPackage-Develop&lt;/code&gt; and &lt;code&gt;MyPackage-Release&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;There may be a better way to build a library, so that only one package gets generated, containing both the develop and release builds, and the right binaries somehow end up in the right output directory; however, I have not been able to figure that out yet. If you know how to do it, please let me know.&lt;/p&gt;
 &lt;p&gt;For any build configuration of a certain module, (either an application or a library,) the build configuration of the libraries it uses can be determined using the following table:&lt;/p&gt;
 &lt;table&gt;
@@ -525,34 +481,15 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/table&gt;
 &lt;p&gt;Note that the 'Develop' configuration of a module could, in theory, make use of the better-performing 'Release' configuration of a library, instead of the 'Develop' configuration; however, that can only work if the module does not expose the library, or if there is no other module in the solution that uses the 'Develop' configuration of the library. Otherwise, there are going to be build errors saying that a certain type exists in both the develop and release configuration of a certain library.&lt;/p&gt;
 &lt;p&gt;Here is an excerpt of a .csproj file implementing the above table:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Optimized&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Develop&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Release&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Release&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Then, packages can be referenced as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class="na"&gt;Include=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Version=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id="conclusions"&gt;Conclusions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, packages can be referenced as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class="na"&gt;Include=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Version=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="conclusions"&gt;Conclusions
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;An 'Optimized' build configuration has been proposed, for cutting in half the time it takes to run slow, computationally expensive tests on build servers. (Not needed by projects with small, fast tests.)&lt;/li&gt;
 &lt;li&gt;A 'Develop' build configuration for libraries has been proposed, intended for use during development of software using the libraries, but not for shipping to production. It has preconditions enabled, in order to catch bugs in the software using the libraries.&lt;/li&gt;
@@ -778,15 +715,8 @@ Unfortunately:&lt;/p&gt;
 &lt;h3 id="the-solution"&gt;The Solution
 &lt;/h3&gt;&lt;p&gt;In order to be able to perform general-purpose operations on application-specific invocations we need a mechanism for converting application-specific invocations into a general-purpose form and back, so that the operators can act upon the general-purpose form. What follows is a description of such a mechanism, which I call &lt;em&gt;&lt;strong&gt;Intertwine&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Intertwine introduces a general-purpose form for expressing invocations, which is called &lt;em&gt;&lt;strong&gt;the normal form of invocations&lt;/strong&gt;&lt;/em&gt;, and is represented by a single method of the following signature:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;MethodKey&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;MethodKey&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;In C#, &lt;code&gt;AnyCall&lt;/code&gt; would be a &lt;em&gt;delegate.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;In Java, &lt;code&gt;AnyCall&lt;/code&gt; would be a &lt;em&gt;single-method interface&lt;/em&gt;, otherwise known as a &lt;em&gt;functional interface&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -853,11 +783,11 @@ following:
 &lt;p&gt;Let us consider the following interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IFooable&lt;/span&gt;
@@ -870,11 +800,11 @@ following:
 &lt;/div&gt;&lt;p&gt;And let us consider the following class implementing that interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-2-1"&gt;&lt;a class="lnlinks" href="#hl-2-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-2"&gt;&lt;a class="lnlinks" href="#hl-2-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-3"&gt;&lt;a class="lnlinks" href="#hl-2-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-4"&gt;&lt;a class="lnlinks" href="#hl-2-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-5"&gt;&lt;a class="lnlinks" href="#hl-2-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;FooImplementation&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt;
@@ -887,11 +817,11 @@ following:
 &lt;/div&gt;&lt;p&gt;And then let us consider the following method which invokes the interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-3-1"&gt;&lt;a class="lnlinks" href="#hl-3-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-2"&gt;&lt;a class="lnlinks" href="#hl-3-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-3"&gt;&lt;a class="lnlinks" href="#hl-3-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-4"&gt;&lt;a class="lnlinks" href="#hl-3-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-5"&gt;&lt;a class="lnlinks" href="#hl-3-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;InvokeFoo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt; &lt;span class="n"&gt;fooable&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
@@ -904,11 +834,11 @@ following:
 &lt;/div&gt;&lt;p&gt;The InvokeFoo method can be directly hooked up to an instance of the implementing class in a completely conventional way as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-4-1"&gt;&lt;a class="lnlinks" href="#hl-4-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-2"&gt;&lt;a class="lnlinks" href="#hl-4-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-3"&gt;&lt;a class="lnlinks" href="#hl-4-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-4"&gt;&lt;a class="lnlinks" href="#hl-4-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-5"&gt;&lt;a class="lnlinks" href="#hl-4-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run1&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -921,13 +851,13 @@ following:
 &lt;/div&gt;&lt;p&gt;Now, an entwiner for our IFooable interface could be hand-crafted as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-5-1"&gt;&lt;a class="lnlinks" href="#hl-5-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-2"&gt;&lt;a class="lnlinks" href="#hl-5-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-3"&gt;&lt;a class="lnlinks" href="#hl-5-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-4"&gt;&lt;a class="lnlinks" href="#hl-5-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-5"&gt;&lt;a class="lnlinks" href="#hl-5-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-6"&gt;&lt;a class="lnlinks" href="#hl-5-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-7"&gt;&lt;a class="lnlinks" href="#hl-5-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;EntwinerForFooable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt;
@@ -942,21 +872,21 @@ following:
 &lt;/div&gt;&lt;p&gt;Whereas an untwiner for IFooable could be hand-crafted as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-6-1"&gt;&lt;a class="lnlinks" href="#hl-6-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-2"&gt;&lt;a class="lnlinks" href="#hl-6-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-3"&gt;&lt;a class="lnlinks" href="#hl-6-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-4"&gt;&lt;a class="lnlinks" href="#hl-6-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-5"&gt;&lt;a class="lnlinks" href="#hl-6-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-6"&gt;&lt;a class="lnlinks" href="#hl-6-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-7"&gt;&lt;a class="lnlinks" href="#hl-6-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-8"&gt;&lt;a class="lnlinks" href="#hl-6-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-9"&gt;&lt;a class="lnlinks" href="#hl-6-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-10"&gt;&lt;a class="lnlinks" href="#hl-6-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-11"&gt;&lt;a class="lnlinks" href="#hl-6-11"&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-12"&gt;&lt;a class="lnlinks" href="#hl-6-12"&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-13"&gt;&lt;a class="lnlinks" href="#hl-6-13"&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-14"&gt;&lt;a class="lnlinks" href="#hl-6-14"&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-15"&gt;&lt;a class="lnlinks" href="#hl-6-15"&gt;15&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UntwinerForFooable&lt;/span&gt;
@@ -979,13 +909,13 @@ following:
 &lt;/div&gt;&lt;p&gt;With the above classes, we can now write the following piece of awesomeness:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-7-1"&gt;&lt;a class="lnlinks" href="#hl-7-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-2"&gt;&lt;a class="lnlinks" href="#hl-7-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-3"&gt;&lt;a class="lnlinks" href="#hl-7-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-4"&gt;&lt;a class="lnlinks" href="#hl-7-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-5"&gt;&lt;a class="lnlinks" href="#hl-7-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-6"&gt;&lt;a class="lnlinks" href="#hl-7-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-7"&gt;&lt;a class="lnlinks" href="#hl-7-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run2&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1003,21 +933,21 @@ following:
 &lt;/h3&gt;&lt;p&gt;It is possible to write a general-purpose untwiner that does its job using reflection, but reflection is slow, so the result is going to suffer performance-wise. For the sake of completeness, here is a possible implementation for a general-purpose reflecting untwiner using reflection:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-8-1"&gt;&lt;a class="lnlinks" href="#hl-8-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-2"&gt;&lt;a class="lnlinks" href="#hl-8-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-3"&gt;&lt;a class="lnlinks" href="#hl-8-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-4"&gt;&lt;a class="lnlinks" href="#hl-8-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-5"&gt;&lt;a class="lnlinks" href="#hl-8-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-6"&gt;&lt;a class="lnlinks" href="#hl-8-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-7"&gt;&lt;a class="lnlinks" href="#hl-8-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-8"&gt;&lt;a class="lnlinks" href="#hl-8-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-9"&gt;&lt;a class="lnlinks" href="#hl-8-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-10"&gt;&lt;a class="lnlinks" href="#hl-8-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-11"&gt;&lt;a class="lnlinks" href="#hl-8-11"&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-12"&gt;&lt;a class="lnlinks" href="#hl-8-12"&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-13"&gt;&lt;a class="lnlinks" href="#hl-8-13"&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-14"&gt;&lt;a class="lnlinks" href="#hl-8-14"&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-15"&gt;&lt;a class="lnlinks" href="#hl-8-15"&gt;15&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ReflectingUntwiner&lt;/span&gt; &lt;span class="c1"&gt;//WARNING: SLOW AS MOLASSES&lt;/span&gt;
@@ -1042,35 +972,21 @@ following:
 &lt;h3 id="automating-it-with-intertwine"&gt;Automating it with Intertwine
 &lt;/h3&gt;&lt;p&gt;The Intertwine library will automatically generate for us a pair of optimally-performing entwiner and untwiner classes for any interface. These classes are generated at runtime, so no extra build step is needed. To accomplish this, the C# implementation of Intertwine generates MSIL and creates assemblies from it; the Java Implementation generates bytecode and creates classes from it.&lt;/p&gt;
 &lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an entwiner:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;NewEntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;anycall&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For &lt;code&gt;T&lt;/code&gt; we give the type of our interface, and for &lt;code&gt;anycall&lt;/code&gt; we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given &lt;code&gt;AnyCall&lt;/code&gt; instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our &lt;code&gt;AnyCall&lt;/code&gt; delegate.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;NewEntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;anycall&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;T&lt;/code&gt; we give the type of our interface, and for &lt;code&gt;anycall&lt;/code&gt; we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given &lt;code&gt;AnyCall&lt;/code&gt; instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our &lt;code&gt;AnyCall&lt;/code&gt; delegate.&lt;/p&gt;
 &lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an untwiner:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;NewUntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For target we give an implementation of our interface, and what we get is a reference to an &lt;code&gt;AnyCall&lt;/code&gt; delegate implemented by an Untwiner-derived class that was dynamically generated specifically for our interface, and instantiated to work with the given target instance. For every call received through the &lt;code&gt;AnyCall&lt;/code&gt; delegate, this special untwiner will be unmarshalling the arguments and forwarding the call to the appropriate method of our target interface.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;NewUntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For target we give an implementation of our interface, and what we get is a reference to an &lt;code&gt;AnyCall&lt;/code&gt; delegate implemented by an Untwiner-derived class that was dynamically generated specifically for our interface, and instantiated to work with the given target instance. For every call received through the &lt;code&gt;AnyCall&lt;/code&gt; delegate, this special untwiner will be unmarshalling the arguments and forwarding the call to the appropriate method of our target interface.&lt;/p&gt;
 &lt;p&gt;So, with the dynamically generated entwiners and untwiners we can now do the following epicness:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-11-1"&gt;&lt;a class="lnlinks" href="#hl-11-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-2"&gt;&lt;a class="lnlinks" href="#hl-11-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-3"&gt;&lt;a class="lnlinks" href="#hl-11-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-4"&gt;&lt;a class="lnlinks" href="#hl-11-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-5"&gt;&lt;a class="lnlinks" href="#hl-11-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-6"&gt;&lt;a class="lnlinks" href="#hl-11-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-7"&gt;&lt;a class="lnlinks" href="#hl-11-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run3&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -1097,12 +1013,12 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;p&gt;Consider the following interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-12-1"&gt;&lt;a class="lnlinks" href="#hl-12-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-2"&gt;&lt;a class="lnlinks" href="#hl-12-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-3"&gt;&lt;a class="lnlinks" href="#hl-12-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-4"&gt;&lt;a class="lnlinks" href="#hl-12-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-5"&gt;&lt;a class="lnlinks" href="#hl-12-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-6"&gt;&lt;a class="lnlinks" href="#hl-12-6"&gt;6&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;ITableNotification&lt;/span&gt;
@@ -1116,9 +1032,9 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;/div&gt;&lt;p&gt;And consider the following hypothetical (not actually possible) way of using it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-13-1"&gt;&lt;a class="lnlinks" href="#hl-13-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-13-2"&gt;&lt;a class="lnlinks" href="#hl-13-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-13-3"&gt;&lt;a class="lnlinks" href="#hl-13-3"&gt;3&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;event&lt;/span&gt; &lt;span class="n"&gt;ITableNotification&lt;/span&gt; &lt;span class="n"&gt;tableNotificationEvent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -1129,9 +1045,9 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;/div&gt;&lt;p&gt;The above does not work because events in C# work only with delegates, not with interfaces. However, with Intertwine, the next best thing is actually possible:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-14-1"&gt;&lt;a class="lnlinks" href="#hl-14-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-14-2"&gt;&lt;a class="lnlinks" href="#hl-14-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-14-3"&gt;&lt;a class="lnlinks" href="#hl-14-3"&gt;3&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;tableNotificationEventManager&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;InterfaceEventManager&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ITableNotifcation&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;();&lt;/span&gt;
@@ -1151,15 +1067,8 @@ href="https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/
 &lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description></item><item><title>SVG in WPF</title><link>https://blog2.michael.gr/post/2021-02-svg-in-wpf/</link><pubDate>Fri, 12 Feb 2021 08:02:35 +0000</pubDate><guid>https://blog2.michael.gr/post/2021-02-svg-in-wpf/</guid><description>&lt;p&gt;My notes on how to use SVG graphics in a WPF application&lt;/p&gt;
 &lt;h3 id="the-goal"&gt;The Goal
 &lt;/h3&gt;&lt;p&gt;The goal is to be able do do things like this:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;Button Content=&amp;#34;{StaticResource mySvgImage}&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;... where mySvgImage somehow stands for a vector image that has somehow been obtained from an SVG file.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Button&lt;/span&gt; &lt;span class="na"&gt;Content=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;{StaticResource mySvgImage}&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;... where mySvgImage somehow stands for a vector image that has somehow been obtained from an SVG file.&lt;/p&gt;
 &lt;p&gt;The solution must not involve any proprietary, closed-source libraries.&lt;/p&gt;
 &lt;p&gt;Naturally, we want one of the following:&lt;/p&gt;
 &lt;ul&gt;
@@ -1170,115 +1079,118 @@ href="https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/
 &lt;/h3&gt;&lt;p&gt;WPF likes to do everything in its own idiomatic way, so vector graphics in WPF are specified using the following construct:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-6"&gt;&lt;a class="lnlinks" href="#hl-1-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-7"&gt;&lt;a class="lnlinks" href="#hl-1-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-8"&gt;&lt;a class="lnlinks" href="#hl-1-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-9"&gt;&lt;a class="lnlinks" href="#hl-1-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-10"&gt;&lt;a class="lnlinks" href="#hl-1-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-11"&gt;&lt;a class="lnlinks" href="#hl-1-11"&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-12"&gt;&lt;a class="lnlinks" href="#hl-1-12"&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-13"&gt;&lt;a class="lnlinks" href="#hl-1-13"&gt;13&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;Canvas&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Path Fill=&amp;#34;#FFE68619&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Path.Data&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;PathGeometry Figures=&amp;#34;M8.564 1.289.2 16.256A.5.5 0 0 0 .636 17H17.364a.5.5 0 0 0 .5-.5.494.494 0 0 0-.064-.244L9.436 1.289a.5.5 0 0 0-.872 0ZM10 14.75a.25.25 0 0 1-.25.25H8.25A.25.25 0 0 1 8 14.75v-1.5A.25.25 0 0 1 8.25 13h1.5a.25.25 0 0 1 .25.25Zm0-3a.25.25 0 0 1-.25.25H8.25A.25.25 0 0 1 8 11.75v-6a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25Z&amp;#34; FillRule=&amp;#34;NonZero&amp;#34;/&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Path.Data&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Path&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Canvas&amp;gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Canvas&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Path&lt;/span&gt; &lt;span class="na"&gt;Fill=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;#FFE68619&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Path.Data&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PathGeometry&lt;/span&gt; &lt;span class="na"&gt;Figures=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;M8.564 1.289.2 16.256A.5.5 0 0 0 .636
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s"&gt; 17H17.364a.5.5 0 0 0 .5-.5.494.494 0 0 0-.064-.244L9.436
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s"&gt; 1.289a.5.5 0 0 0-.872 0ZM10 14.75a.25.25 0 0 1-.25.25H8.25A.25.25
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s"&gt; 0 0 1 8 14.75v-1.5A.25.25 0 0 1 8.25 13h1.5a.25.25 0 0 1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s"&gt; .25.25Zm0-3a.25.25 0 0 1-.25.25H8.25A.25.25 0 0 1 8
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="s"&gt; 11.75v-6a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25Z&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="na"&gt;FillRule=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;NonZero&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Path.Data&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Path&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/Canvas&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Even though this notation is very similar to SVG path notation, WPF has no built-in support for SVG. They do not list SVG in their list of supported image file formats. (&lt;a class="external"
+&lt;/div&gt;&lt;p&gt;Even though this notation is very similar to SVG path notation, WPF has no built-in support for SVG. They do not list SVG in their &lt;a class="external"
 href="https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh868203%28v=win.10%29?#image-file-formats" target="_blank"
-&gt;⬀&lt;/a&gt;) This is preposterous, but that's what it is.&lt;/p&gt;
-&lt;p&gt;Microsoft has added SVG support to UWP via the SvgImageSource class, (&lt;a class="external"
+&gt;list of supported image file formats&lt;/a&gt;. This is preposterous, but that's what it is.&lt;/p&gt;
+&lt;p&gt;Microsoft has added SVG support to UWP via &lt;a class="external"
 href="https://docs.microsoft.com/en-us/uwp/api/windows.ui.xaml.media.imaging.svgimagesource" target="_blank"
-&gt;⬀&lt;/a&gt;) but they have not bothered doing the same for WPF, probably as part of their greater strategy to let WPF go gently into that good night, since UWP is their new big thing that everyone must now start using whether they like it or not.&lt;/p&gt;
-&lt;p&gt;Allegedly, there exists something called &amp;quot;XAML Islands&amp;quot; which offers means of including UWP controls within WPF applications, (&lt;a class="external"
+&gt;the &lt;code&gt;SvgImageSource&lt;/code&gt; class&lt;/a&gt;, but they have not bothered doing the same for WPF, probably as part of their greater strategy to let WPF go gently into that good night, since UWP is, supposedly, their new big thing that everyone must now start using whether they like it or not.&lt;/p&gt;
+&lt;p&gt;Allegedly, there exists something called &amp;quot;XAML Islands&amp;quot; which offers means of including UWP controls within WPF applications, (mentioned on &lt;a class="external"
 href="https://blogs.windows.com/windowsdeveloper/2018/11/02/xaml-islands-a-deep-dive-part-1/" target="_blank"
-&gt;⬀&lt;/a&gt;) (&lt;a class="external"
+&gt;Microsoft blogs&lt;/a&gt; and on &lt;a class="external"
 href="https://stackoverflow.com/a/44936073/773113" target="_blank"
-&gt;⬀&lt;/a&gt;) but it looks very convoluted, and the result will probably be held together by shoestrings, so I am not going to research that approach.&lt;/p&gt;
+&gt;Stack Overflow&lt;/a&gt;) but it looks very convoluted, and the result will probably be held together by shoestrings, so I am not going to research that approach.&lt;/p&gt;
 &lt;h3 id="the-inkscape-approach"&gt;The Inkscape approach
-&lt;/h3&gt;&lt;p&gt;Inkscape offers the ability to export SVG to something they call &amp;quot;xaml format&amp;quot;, and it can even do that from the command line (&lt;a class="external"
+&lt;/h3&gt;&lt;p&gt;Inkscape offers the ability to export SVG to something they call &amp;quot;xaml format&amp;quot;, and it can even &lt;a class="external"
 href="https://inkscape.org/doc/inkscape-man.html" target="_blank"
-&gt;⬀&lt;/a&gt;), making it suitable for using in an asset pipeline, but this feature is extremely limited. As far as I can tell, Inkscape offers absolutely no options for controlling how the exporting will be done; it just creates files that look like this:&lt;/p&gt;
+&gt;do that from the command line&lt;/a&gt;, making it suitable for using in an asset pipeline, but this feature is extremely limited. As far as I can tell, Inkscape offers absolutely no options for controlling how the exporting will be done; it just creates files that look like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-2-1"&gt;&lt;a class="lnlinks" href="#hl-2-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-2"&gt;&lt;a class="lnlinks" href="#hl-2-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-3"&gt;&lt;a class="lnlinks" href="#hl-2-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-4"&gt;&lt;a class="lnlinks" href="#hl-2-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-5"&gt;&lt;a class="lnlinks" href="#hl-2-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-6"&gt;&lt;a class="lnlinks" href="#hl-2-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-7"&gt;&lt;a class="lnlinks" href="#hl-2-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-8"&gt;&lt;a class="lnlinks" href="#hl-2-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-9"&gt;&lt;a class="lnlinks" href="#hl-2-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-10"&gt;&lt;a class="lnlinks" href="#hl-2-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-11"&gt;&lt;a class="lnlinks" href="#hl-2-11"&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-12"&gt;&lt;a class="lnlinks" href="#hl-2-12"&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-13"&gt;&lt;a class="lnlinks" href="#hl-2-13"&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-14"&gt;&lt;a class="lnlinks" href="#hl-2-14"&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-15"&gt;&lt;a class="lnlinks" href="#hl-2-15"&gt;15&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-16"&gt;&lt;a class="lnlinks" href="#hl-2-16"&gt;16&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-17"&gt;&lt;a class="lnlinks" href="#hl-2-17"&gt;17&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-18"&gt;&lt;a class="lnlinks" href="#hl-2-18"&gt;18&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-19"&gt;&lt;a class="lnlinks" href="#hl-2-19"&gt;19&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;!--This file is NOT compatible with Silverlight--&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;Viewbox xmlns=&amp;#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&amp;#34; Stretch=&amp;#34;Uniform&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Canvas Name=&amp;#34;svg10&amp;#34; Width=&amp;#34;18&amp;#34; Height=&amp;#34;18&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Canvas.RenderTransform&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;TranslateTransform X=&amp;#34;0&amp;#34; Y=&amp;#34;0&amp;#34;/&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Canvas.RenderTransform&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Canvas.Resources/&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;!--Unknown tag: metadata--&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;!--Unknown tag: sodipodi:namedview--&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Canvas Name=&amp;#34;AlertMedium&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Path xmlns:x=&amp;#34;http://schemas.microsoft.com/winfx/2006/xaml&amp;#34; Name=&amp;#34;Shape&amp;#34; Fill=&amp;#34;#FFE68619&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;Path.Data&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;PathGeometry Figures=&amp;#34;M8.564 1.289.2 16.256A.5.5 0 0 0 .636 17H17.364a.5.5 0 0 0 .5-.5.494.494 0 0 0-.064-.244L9.436 1.289a.5.5 0 0 0-.872 0ZM10 14.75a.25.25 0 0 1-.25.25H8.25A.25.25 0 0 1 8 14.75v-1.5A.25.25 0 0 1 8.25 13h1.5a.25.25 0 0 1 .25.25Zm0-3a.25.25 0 0 1-.25.25H8.25A.25.25 0 0 1 8 11.75v-6a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25Z&amp;#34; FillRule=&amp;#34;NonZero&amp;#34;/&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Path.Data&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Path&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Canvas&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/Canvas&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;/Viewbox&amp;gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c"&gt;&amp;lt;!--This file is NOT compatible with Silverlight--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Viewbox&lt;/span&gt; &lt;span class="na"&gt;xmlns=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;http://schemas.microsoft.com/winfx/2006/xaml/presentation&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Stretch=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Uniform&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Canvas&lt;/span&gt; &lt;span class="na"&gt;Name=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;svg10&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Width=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;18&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Height=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;18&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Canvas.RenderTransform&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;TranslateTransform&lt;/span&gt; &lt;span class="na"&gt;X=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;0&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Y=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;0&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Canvas.RenderTransform&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Canvas.Resources/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!--Unknown tag: metadata--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c"&gt;&amp;lt;!--Unknown tag: sodipodi:namedview--&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Canvas&lt;/span&gt; &lt;span class="na"&gt;Name=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;AlertMedium&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Path&lt;/span&gt; &lt;span class="na"&gt;xmlns:x=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;http://schemas.microsoft.com/winfx/2006/xaml&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Name=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;Shape&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Fill=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;#FFE68619&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Path.Data&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PathGeometry&lt;/span&gt; &lt;span class="na"&gt;Figures=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;M8.564 1.289.2 16.256A.5.5 0 0 0 .636 17H17.364a.5.5 0 0 0 .5-.5.494.494 0 0 0-.064-.244L9.436 1.289a.5.5 0 0 0-.872 0ZM10 14.75a.25.25 0 0 1-.25.25H8.25A.25.25 0 0 1 8 14.75v-1.5A.25.25 0 0 1 8.25 13h1.5a.25.25 0 0 1 .25.25Zm0-3a.25.25 0 0 1-.25.25H8.25A.25.25 0 0 1 8 11.75v-6a.25.25 0 0 1 .25-.25h1.5a.25.25 0 0 1 .25.25Z&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;FillRule=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;NonZero&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Path.Data&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Path&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Canvas&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Canvas&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/Viewbox&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Besides the obvious problem of useless elements that should not be there, the main problem with these files is that they are just plain unusable, because XAML offers no means of including one XAML file from within another XAML file. The only file inclusion mechanism supported by XAML is resource dictionaries, but this file is not describing a resource dictionary, so it cannot be included.&lt;/p&gt;
 &lt;p&gt;If you go looking for answers on Stackoverflow you will find that people copy-paste the PathGeometry elements from Inkscape-generated XAML files into their own XAML files, and they find nothing retarded in what they are doing. Others suggest to take the XAML files generated by Inkscape and copy them to Blend, and then convert them to Path, because the more clicks the better, I suppose.&lt;/p&gt;
 &lt;p&gt;It may be possible to programmatically load Inkscape-generated XAML files using the following construct:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;using (Stream stream = App.GetResourceStream(
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; new Uri(&amp;#34;pack://application:,,,/Resources/MySvgExportedAsXaml.xaml&amp;#34;)).Stream)
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; object o = XamlReader.Load(stream);
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;... but then it is unclear how to make objects created this way usable from within XAML.&lt;/p&gt;
-&lt;p&gt;punker76 (the main person behind MahApps) offers a way of programmatically creating an icon pack in his blog post titled &amp;quot;How to create a new IconPack with custom SVG Paths&amp;quot;. (&lt;a class="external"
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;uri&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Uri&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;pack://application:,,,/Resources/MySvgExportedAsXaml.xaml&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;using&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;Stream&lt;/span&gt; &lt;span class="n"&gt;stream&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;App&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetResourceStream&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;uri&lt;/span&gt; &lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;Stream&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;XamlReader&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Load&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stream&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;... but then it is unclear how to make objects created this way usable from within XAML.&lt;/p&gt;
+&lt;p&gt;punker76 (the main person behind &lt;a class="external"
+href="https://mahapps.com/" target="_blank"
+&gt;MahApps&lt;/a&gt;) offers a way of programmatically creating an icon pack in his &lt;a class="external"
 href="https://jkarger.de/2019/04/02/how-to-create-a-new-iconpack-with-custom-svg-paths/" target="_blank"
-&gt;⬀&lt;/a&gt;) Such an icon pack can then be conveniently used from within XAML. However, his solution is tied to MahApps, while I would prefer an independent solution, and it is still not clear how to make that work with an object obtained by invoking the XamlReader.Load method.&lt;/p&gt;
+&gt;blog post titled &amp;quot;How to create a new IconPack with custom SVG Paths&amp;quot;&lt;/a&gt;. Such an icon pack can then be conveniently used from within XAML. However, his solution is tied to MahApps, while I would prefer an independent solution, and it is still not clear how to make that work with an object obtained by invoking the &lt;code&gt;XamlReader.Load()&lt;/code&gt; method.&lt;/p&gt;
 &lt;p&gt;In any case, the process already looks quite a bit convoluted, so that's where I stop researching the Inkscape approach.&lt;/p&gt;
 &lt;p&gt;References:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Stackoverflow: &amp;quot;Import separate XAML as ResourceDictionary and assign x:Key&amp;quot; (&lt;a class="external"
+&lt;li&gt;&lt;a class="external"
 href="https://stackoverflow.com/a/36092689/773113" target="_blank"
-&gt;⬀&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Stackoverflow: &amp;quot;Inkscape (vector graphic)&amp;quot; (&lt;a class="external"
+&gt;Stackoverflow: &amp;quot;Import separate XAML as ResourceDictionary and assign x:Key&amp;quot;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="external"
 href="https://stackoverflow.com/a/24016164/773113" target="_blank"
-&gt;⬀&lt;/a&gt;)&lt;/li&gt;
+&gt;Stackoverflow: &amp;quot;Inkscape (vector graphic)&amp;quot;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="libraries"&gt;Libraries
 &lt;/h3&gt;&lt;p&gt;If you go searching for library suggestions on Stackoverflow you will find the following:&lt;/p&gt;
@@ -1401,36 +1313,7 @@ href="https://t.me/ldp2er5" target="_blank"
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;As it turns out, an explicit interface method implementation in C# must be tied to the base-most interface to which it belongs; it cannot be tied to a descendant interface.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test14&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test14&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1455,35 +1338,14 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Well, sorry, but... it is.&lt;/p&gt;</description></item><item><title>C# Blooper №13: 'Stack' and 'Queue' do not implement 'ICollection'</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/</link><pubDate>Fri, 04 Jan 2013 11:44:32 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Well, sorry, but... it is.&lt;/p&gt;</description></item><item><title>C# Blooper №13: 'Stack' and 'Queue' do not implement 'ICollection'</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/</link><pubDate>Fri, 04 Jan 2013 11:44:32 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;This is a blooper of the Common Language Runtime (CLR), not of the language itself: &lt;code&gt;Stack&amp;lt;T&amp;gt;&lt;/code&gt; and &lt;code&gt;Queue&amp;lt;T&amp;gt;&lt;/code&gt; derive from &lt;code&gt;ICollection&lt;/code&gt;, but not from &lt;code&gt;ICollection&amp;lt;T&amp;gt;&lt;/code&gt;, so they do not support the &lt;code&gt;Remove( T )&lt;/code&gt; method! Why, oh why?&lt;/p&gt;</description></item><item><title>C# Blooper №12: 'Where' constraints not included in method signatures</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/</link><pubDate>Fri, 04 Jan 2013 11:31:10 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;When writing generic methods in C#, it is possible to use the 'where' keyword to specify constraints to the types that the generic parameters can take. Unfortunately, these constraints cannot be used for resolving overloaded methods. Case in point:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test12&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test12&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1498,34 +1360,11 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>C# Blooper №11: Zero to Enum conversion weirdness</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/</link><pubDate>Fri, 04 Jan 2013 11:27:27 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# Blooper №11: Zero to Enum conversion weirdness</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/</link><pubDate>Fri, 04 Jan 2013 11:27:27 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;When you assign an enum to int, you have to cast it. That's good. When you assign an int to enum, you also have to cast it. That's also good. But if you assign zero to an enum, you don't have to cast it! Go figure.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test11&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test11&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1542,37 +1381,11 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description></item><item><title>C# Blooper №9: Annoying case statement fall-through rules</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/</link><pubDate>Fri, 04 Jan 2013 11:16:41 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>C# Blooper №9: Annoying case statement fall-through rules</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/</link><pubDate>Fri, 04 Jan 2013 11:16:41 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;Overall, C# takes an approach which is far more friendly to novice programmers than its predecessors, C and C++ were. For example, in the case of switch statements, C# does not allow the old, error-prone style of C and C++ where you could simply fall through from one case statement to the following one; instead, at the end of each case statement C# requires either a break statement, or a goto statement to explicitly jump to another label. That's all very nice and dandy, except for one thing: C# requires a break or goto even at the last case statement of a switch statement!&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test9&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test9&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1592,70 +1405,11 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;I mean, seriously, WTF?&lt;/p&gt;</description></item><item><title>C# Blooper №10: Switch statements are not properly formatted</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/</link><pubDate>Fri, 04 Jan 2013 11:06:17 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I mean, seriously, WTF?&lt;/p&gt;</description></item><item><title>C# Blooper №10: Switch statements are not properly formatted</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/</link><pubDate>Fri, 04 Jan 2013 11:06:17 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;This is rather a Microsoft Visual Studio blooper than a Microsoft C# blooper: When formatting source code, Visual Studio offers an &amp;quot;indent case contents&amp;quot; option, but you will only find it useful if you happen to have a crooked notion as to how switch statements should be formatted. The one and only normal form of formatting switch statements is not supported.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;span class="lnt"&gt;42
-&lt;/span&gt;&lt;span class="lnt"&gt;43
-&lt;/span&gt;&lt;span class="lnt"&gt;44
-&lt;/span&gt;&lt;span class="lnt"&gt;45
-&lt;/span&gt;&lt;span class="lnt"&gt;46
-&lt;/span&gt;&lt;span class="lnt"&gt;47
-&lt;/span&gt;&lt;span class="lnt"&gt;48
-&lt;/span&gt;&lt;span class="lnt"&gt;49
-&lt;/span&gt;&lt;span class="lnt"&gt;50
-&lt;/span&gt;&lt;span class="lnt"&gt;51
-&lt;/span&gt;&lt;span class="lnt"&gt;52
-&lt;/span&gt;&lt;span class="lnt"&gt;53
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test10&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test10&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1708,33 +1462,11 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;I know, you might disagree that my way of formatting switch statements is in any way 'normal'. So, in your case, let us agree on this: my way of formatting switch statements, whether you like it or not, is in perfect accordance to the way I format the rest of my code; and since Visual Studio allows me to precisely describe my coding style, it should also allow for a switch statement style that matches the rest of my code.&lt;/p&gt;</description></item><item><title>C# Blooper №8: No warnings for conditions that are always true/false</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/</link><pubDate>Fri, 04 Jan 2013 10:51:13 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I know, you might disagree that my way of formatting switch statements is in any way 'normal'. So, in your case, let us agree on this: my way of formatting switch statements, whether you like it or not, is in perfect accordance to the way I format the rest of my code; and since Visual Studio allows me to precisely describe my coding style, it should also allow for a switch statement style that matches the rest of my code.&lt;/p&gt;</description></item><item><title>C# Blooper №8: No warnings for conditions that are always true/false</title><link>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/</link><pubDate>Fri, 04 Jan 2013 10:51:13 +0000</pubDate><guid>https://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;The Microsoft C# compiler does not issue 'condition is always true' and 'condition is always false' warnings. Perhaps these warnings are not particularly meaningful in Java, which lacks conditional compilation directives, and therefore &lt;strong&gt;if( true )&lt;/strong&gt; and &lt;strong&gt;if( false )&lt;/strong&gt; are the only means of achieving conditional compilation; but in C#, which has special conditional compilation directives, conditions which are always true or always false are invariably so by mistake; therefore, these warnings would indeed be meaningful, and useful.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test8&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test8&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1750,9 +1482,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For more information see &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For more information see &lt;a
 href="https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
 &gt;Why the Microsoft C# compiler lacks many useful warnings&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Why the Microsoft C# compiler lacks many useful warnings</title><link>https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/</link><pubDate>Tue, 13 Nov 2012 10:46:49 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/</guid><description>&lt;p&gt;As my &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
@@ -1765,20 +1495,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;If you have a private method which is never used, you will not be given a warning about it by the Microsoft C# compiler. This means that your app will likely get shipped with unnecessary chunks of code in it, some of them possibly containing string literals that were never meant to make it out of the development environment, or even requiring libraries to be linked which were never meant to be required on the field.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;span class="lnt"&gt;8
-&lt;/span&gt;&lt;span class="lnt"&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test7&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test7&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1787,36 +1504,13 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For more information see &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For more information see &lt;a
 href="https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
 &gt;Why the Microsoft C# compiler lacks many useful warnings&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>C# Blooper №4: Lame/annoying variable scoping rules, Part 1</title><link>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/</link><pubDate>Fri, 09 Nov 2012 15:04:33 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;A variable identifier is, of course, only visible within the scope in which it is declared. This includes nested (child) scopes, but it does not include enclosing (parent) scopes. In C# however, once a variable identifier has been used in a scope, its name is &amp;quot;poisoned&amp;quot;, so it cannot be used in enclosing scopes. Take this example:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test4&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test4&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1833,9 +1527,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Well, I am sorry, but in the above case the new variable named 'o' would most definitely *not* give a different meaning to the 'o' which was used in the child scope. It would, if it had been declared before the 'if' statement, but it wasn't. Luckily, if this &amp;quot;feature&amp;quot; was to be removed from the language, it would not break any existing code. So, can we please have this fixed? Pretty please?&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Well, I am sorry, but in the above case the new variable named 'o' would most definitely *not* give a different meaning to the 'o' which was used in the child scope. It would, if it had been declared before the 'if' statement, but it wasn't. Luckily, if this &amp;quot;feature&amp;quot; was to be removed from the language, it would not break any existing code. So, can we please have this fixed? Pretty please?&lt;/p&gt;
 &lt;p&gt;See also: &lt;a
 href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/"
 &gt;C# Blooper №5: Lame/annoying variable scoping rules, Part 2&lt;/a&gt;&lt;/p&gt;</description></item><item><title>C# Blooper №6: No warnings about unused parameters</title><link>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/</link><pubDate>Fri, 09 Nov 2012 14:29:46 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
@@ -1843,20 +1535,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;One common mistake that programmers make is to forget to make use of a parameter to a method. This can lead to quite subtle bugs that are hard to track down and correct.&lt;/p&gt;
 &lt;p&gt;Now, other language compilers are kind enough to warn the programmer that a parameter is unused, and they also allow temporary suppression of the warning for the rare case when such lack of use is legitimate. But not so in Visual C#. If you forget to use a parameter in Visual C#, you will not know unless you run the &amp;quot;Code Analysis&amp;quot; tool on it.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;span class="lnt"&gt;8
-&lt;/span&gt;&lt;span class="lnt"&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test6&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test6&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1865,9 +1544,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For more information see &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For more information see &lt;a
 href="https://blog2.michael.gr/post/2012-11-13-why-microsoft-c-compiler-lacks-many/"
 &gt;Why the Microsoft C# compiler lacks many useful warnings&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
@@ -1896,28 +1573,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;p&gt;In light of &lt;a
 href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
 &gt;C# Blooper №4: Lame/annoying variable scoping rules, Part 1&lt;/a&gt;, this one is more of a confusing error message than an actual new blooper. What I am doing below is that I am declaring a field within a class, I am accessing that field from within a method, and further down within the same method I am declaring a new local variable with the same name as the field. Now, C# will not allow me to declare that local variable because it has the same name as the field, but that's not where I am receiving the error. Instead, the error is given when accessing the field. If you only read the first sentence of the error message, it does not make any sense at all. If you bother also reading the second sentence, it gives you a hint as to the real problem. Now, that's not very cool.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test5&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test5&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1934,43 +1590,13 @@ href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-var
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;See also: &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;See also: &lt;a
 href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
 &gt;C# Blooper №4: Lame/annoying variable scoping rules, Part 1&lt;/a&gt;&lt;/p&gt;</description></item><item><title>C# Blooper №3: No warnings about fields having already been initialized</title><link>https://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/</link><pubDate>Fri, 06 Jan 2012 13:51:54 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/</guid><description>&lt;p&gt;Before reading any further, please read the disclaimer in the &lt;a
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;When you declare a member variable and you pre-initialize it at the same time, and then you try to re-initialize it within the constructor without ever making use of its original pre-initialized value, you receive no warning about the field having already been initialized.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test3&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -1994,9 +1620,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This means that you may accidentally invoke complex initialization logic twice, unnecessarily wasting memory and clock cycles, and it may also lead to logic errors, if by any chance that initialization logic has side effects which are only meant to occur once. It may also confuse someone reading your code, (or even yourself looking at your code months later,) trying to figure out what's the purpose behind the seemingly repeated initialization, before the realization sinks in that it is simply redundant. Furthermore, if the re-initialization happens to differ from the pre-initialization, a good question arises, asking which one of the two was meant to be the correct one.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This means that you may accidentally invoke complex initialization logic twice, unnecessarily wasting memory and clock cycles, and it may also lead to logic errors, if by any chance that initialization logic has side effects which are only meant to occur once. It may also confuse someone reading your code, (or even yourself looking at your code months later,) trying to figure out what's the purpose behind the seemingly repeated initialization, before the realization sinks in that it is simply redundant. Furthermore, if the re-initialization happens to differ from the pre-initialization, a good question arises, asking which one of the two was meant to be the correct one.&lt;/p&gt;
 &lt;p&gt;It is a pity, because the compiler could warn the programmer against this pitfall.&lt;/p&gt;
 &lt;p&gt;Also see related post: &lt;a
 href="https://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/"
@@ -2004,35 +1628,7 @@ href="https://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-abou
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;When you declare a member variable, and then you try to read it from within the constructor without having first initialized it, you receive no warning about accessing an uninitialized member. This happens even if the member is declared as readonly.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test2&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test2&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -2056,9 +1652,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Someone might argue that this is behavior is fine because the member in question is guaranteed to contain its default value. First of all, a readonly member containing its default value is completely useless. (See &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Someone might argue that this is behavior is fine because the member in question is guaranteed to contain its default value. First of all, a readonly member containing its default value is completely useless. (See &lt;a
 href="https://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/"
 &gt;C# Blooper №1: No warnings about uninitialized readonly members&lt;/a&gt;) Secondly, if the compiler is to help the developer catch potential errors and write better code, this is not a valid excuse: a different strategy is necessary.&lt;/p&gt;
 &lt;p&gt;If the programmer intends the member to contain its default value, then the programmer ought to explicitly state so. Failing to do so ought to imply intention to initialize the member later on, and certainly before any attempt is made to read the member. This way, the programmer can have it both ways: they can have members pre-initialized to their default values, and they can receive warnings when they fail to initialize members.&lt;/p&gt;
@@ -2118,52 +1712,7 @@ href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-
 href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &gt;C# Bloopers&lt;/a&gt; post.&lt;/p&gt;
 &lt;p&gt;The C# compiler is kind enough to give you a &amp;quot;field is never assigned to&amp;quot; warning if you forget to initialize a readonly member which is private or internal, or if the class in which it is being declared is internal. But if the class is public, and the readonly member is public, protected or protected internal, then no warning for you! Why, oh why?&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;Test1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test1&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -2204,9 +1753,7 @@ href="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="k"&gt;readonly&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//Blooper: no warning about field never assigned to. &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For a moment you might think &amp;quot;well, a descendant might initialize that member&amp;quot;, but that theory does not hold any water, for a number of reasons:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For a moment you might think &amp;quot;well, a descendant might initialize that member&amp;quot;, but that theory does not hold any water, for a number of reasons:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Internal classes may also be subclassed, but the compiler does not fail to issue the warning in their case.&lt;/li&gt;
 &lt;li&gt;Sealed classes may not be subclassed, but the compiler fails to issue the warning in their case, as Test3 in the sample code demonstrates.&lt;/li&gt;

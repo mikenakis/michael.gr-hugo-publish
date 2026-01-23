@@ -631,21 +631,11 @@ contents, and you also have to make sure that Visual Studio is not running when 
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;If you have any styles where you had to specify the type of the data context so as to enjoy type safety and auto-completion when editing, (and to avoid ReSharper warings,) make sure that you do not use the &lt;code&gt;d:DataContext=&amp;quot;{d:DesignInstance ...&lt;/code&gt; magical incantation suggested by some folks out there. If something like that appears outside of the root XAML element, XAML Hot Reload will stop working. Instead, use the following magical incantation:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&amp;lt;Style TargetType=&amp;#34;{x:Type ...}&amp;#34;&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;d:Style.DataContext&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;x:Type Type=&amp;#34;SomeViewModel&amp;#34; /&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &amp;lt;/d:Style.DataContext&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-xaml" data-lang="xaml"&gt;&amp;lt;Style TargetType=&amp;#34;{x:Type ...}&amp;#34;&amp;gt;
+&amp;lt;d:Style.DataContext&amp;gt;
+&amp;lt;x:Type Type=&amp;#34;SomeViewModel&amp;#34; /&amp;gt;
+&amp;lt;/d:Style.DataContext&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;

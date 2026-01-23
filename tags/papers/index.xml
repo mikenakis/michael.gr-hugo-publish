@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog2.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 24 Oct 2025 10:19:02 +0200</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog2.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-09-refactoring/images/refactoring.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog2.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 23 Jan 2026 17:50:37 +0100</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog2.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog2.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2025-09-refactoring/images/refactoring.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -436,56 +436,7 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Here is an excerpt from a &lt;code&gt;.csproj&lt;/code&gt; file implementing the above matrix, assuming that we have defined our own set of assertion functions, dependent upon an &lt;code&gt;ASSERTIONS&lt;/code&gt; define-constant, and our own set of precondition functions, dependent upon a &lt;code&gt;PRECONDITIONS&lt;/code&gt; define-constant.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;span class="lnt"&gt;20
-&lt;/span&gt;&lt;span class="lnt"&gt;21
-&lt;/span&gt;&lt;span class="lnt"&gt;22
-&lt;/span&gt;&lt;span class="lnt"&gt;23
-&lt;/span&gt;&lt;span class="lnt"&gt;24
-&lt;/span&gt;&lt;span class="lnt"&gt;25
-&lt;/span&gt;&lt;span class="lnt"&gt;26
-&lt;/span&gt;&lt;span class="lnt"&gt;27
-&lt;/span&gt;&lt;span class="lnt"&gt;28
-&lt;/span&gt;&lt;span class="lnt"&gt;29
-&lt;/span&gt;&lt;span class="lnt"&gt;30
-&lt;/span&gt;&lt;span class="lnt"&gt;31
-&lt;/span&gt;&lt;span class="lnt"&gt;32
-&lt;/span&gt;&lt;span class="lnt"&gt;33
-&lt;/span&gt;&lt;span class="lnt"&gt;34
-&lt;/span&gt;&lt;span class="lnt"&gt;35
-&lt;/span&gt;&lt;span class="lnt"&gt;36
-&lt;/span&gt;&lt;span class="lnt"&gt;37
-&lt;/span&gt;&lt;span class="lnt"&gt;38
-&lt;/span&gt;&lt;span class="lnt"&gt;39
-&lt;/span&gt;&lt;span class="lnt"&gt;40
-&lt;/span&gt;&lt;span class="lnt"&gt;41
-&lt;/span&gt;&lt;span class="lnt"&gt;42
-&lt;/span&gt;&lt;span class="lnt"&gt;43
-&lt;/span&gt;&lt;span class="lnt"&gt;44
-&lt;/span&gt;&lt;span class="lnt"&gt;45
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Choose&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;Choose&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;When&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;Optimize&amp;gt;&lt;/span&gt;False&lt;span class="nt"&gt;&amp;lt;/Optimize&amp;gt;&lt;/span&gt;
@@ -530,23 +481,14 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; ...
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;/Otherwise&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/Choose&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the 'Develop' package, and the 'Release' package.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If we follow this build configuration scheme, then each time we publish a library we must generate two packages: the 'Develop' package, and the 'Release' package.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The 'Develop' package is to be referenced by software under development.&lt;/li&gt;
 &lt;li&gt;The 'Release' package is to be referenced by software that is being shipped to production.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The generation of two different packages for a single library can be accomplished by building twice, once for each configuration, and constructing the assembly name as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;AssemblyName&amp;gt;&lt;/span&gt;$(MSBuildProjectName)-$(Configuration)&lt;span class="nt"&gt;&amp;lt;/AssemblyName&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This way, instead of a single package called &lt;code&gt;MyPackage&lt;/code&gt; we create two packages: &lt;code&gt;MyPackage-Develop&lt;/code&gt; and &lt;code&gt;MyPackage-Release&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;AssemblyName&amp;gt;&lt;/span&gt;$(MSBuildProjectName)-$(Configuration)&lt;span class="nt"&gt;&amp;lt;/AssemblyName&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This way, instead of a single package called &lt;code&gt;MyPackage&lt;/code&gt; we create two packages: &lt;code&gt;MyPackage-Develop&lt;/code&gt; and &lt;code&gt;MyPackage-Release&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;There may be a better way to build a library, so that only one package gets generated, containing both the develop and release builds, and the right binaries somehow end up in the right output directory; however, I have not been able to figure that out yet. If you know how to do it, please let me know.&lt;/p&gt;
 &lt;p&gt;For any build configuration of a certain module, (either an application or a library,) the build configuration of the libraries it uses can be determined using the following table:&lt;/p&gt;
 &lt;table&gt;
@@ -577,34 +519,15 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/table&gt;
 &lt;p&gt;Note that the 'Develop' configuration of a module could, in theory, make use of the better-performing 'Release' configuration of a library, instead of the 'Develop' configuration; however, that can only work if the module does not expose the library, or if there is no other module in the solution that uses the 'Develop' configuration of the library. Otherwise, there are going to be build errors saying that a certain type exists in both the develop and release configuration of a certain library.&lt;/p&gt;
 &lt;p&gt;Here is an excerpt of a .csproj file implementing the above table:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;PropertyGroup&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Debug&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Optimized&amp;#39;&amp;#34;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Develop&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Develop&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackagesConfiguration&lt;/span&gt; &lt;span class="na"&gt;Condition=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;&amp;#39;$(Configuration)&amp;#39;==&amp;#39;Release&amp;#39;&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;Release&lt;span class="nt"&gt;&amp;lt;/PackagesConfiguration&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Then, packages can be referenced as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class="na"&gt;Include=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Version=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h3 id="conclusions"&gt;Conclusions
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, packages can be referenced as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class="na"&gt;Include=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Version=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="conclusions"&gt;Conclusions
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;An 'Optimized' build configuration has been proposed, for cutting in half the time it takes to run slow, computationally expensive tests on build servers. (Not needed by projects with small, fast tests.)&lt;/li&gt;
 &lt;li&gt;A 'Develop' build configuration for libraries has been proposed, intended for use during development of software using the libraries, but not for shipping to production. It has preconditions enabled, in order to catch bugs in the software using the libraries.&lt;/li&gt;
@@ -1971,15 +1894,8 @@ Unfortunately:&lt;/p&gt;
 &lt;h3 id="the-solution"&gt;The Solution
 &lt;/h3&gt;&lt;p&gt;In order to be able to perform general-purpose operations on application-specific invocations we need a mechanism for converting application-specific invocations into a general-purpose form and back, so that the operators can act upon the general-purpose form. What follows is a description of such a mechanism, which I call &lt;em&gt;&lt;strong&gt;Intertwine&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Intertwine introduces a general-purpose form for expressing invocations, which is called &lt;em&gt;&lt;strong&gt;the normal form of invocations&lt;/strong&gt;&lt;/em&gt;, and is represented by a single method of the following signature:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;MethodKey&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;MethodKey&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;In C#, &lt;code&gt;AnyCall&lt;/code&gt; would be a &lt;em&gt;delegate.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;In Java, &lt;code&gt;AnyCall&lt;/code&gt; would be a &lt;em&gt;single-method interface&lt;/em&gt;, otherwise known as a &lt;em&gt;functional interface&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -2046,11 +1962,11 @@ following:
 &lt;p&gt;Let us consider the following interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IFooable&lt;/span&gt;
@@ -2063,11 +1979,11 @@ following:
 &lt;/div&gt;&lt;p&gt;And let us consider the following class implementing that interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-2-1"&gt;&lt;a class="lnlinks" href="#hl-2-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-2"&gt;&lt;a class="lnlinks" href="#hl-2-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-3"&gt;&lt;a class="lnlinks" href="#hl-2-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-4"&gt;&lt;a class="lnlinks" href="#hl-2-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-5"&gt;&lt;a class="lnlinks" href="#hl-2-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;FooImplementation&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt;
@@ -2080,11 +1996,11 @@ following:
 &lt;/div&gt;&lt;p&gt;And then let us consider the following method which invokes the interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-3-1"&gt;&lt;a class="lnlinks" href="#hl-3-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-2"&gt;&lt;a class="lnlinks" href="#hl-3-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-3"&gt;&lt;a class="lnlinks" href="#hl-3-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-4"&gt;&lt;a class="lnlinks" href="#hl-3-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-5"&gt;&lt;a class="lnlinks" href="#hl-3-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;InvokeFoo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt; &lt;span class="n"&gt;fooable&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
@@ -2097,11 +2013,11 @@ following:
 &lt;/div&gt;&lt;p&gt;The InvokeFoo method can be directly hooked up to an instance of the implementing class in a completely conventional way as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-4-1"&gt;&lt;a class="lnlinks" href="#hl-4-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-2"&gt;&lt;a class="lnlinks" href="#hl-4-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-3"&gt;&lt;a class="lnlinks" href="#hl-4-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-4"&gt;&lt;a class="lnlinks" href="#hl-4-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-5"&gt;&lt;a class="lnlinks" href="#hl-4-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run1&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -2114,13 +2030,13 @@ following:
 &lt;/div&gt;&lt;p&gt;Now, an entwiner for our IFooable interface could be hand-crafted as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-5-1"&gt;&lt;a class="lnlinks" href="#hl-5-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-2"&gt;&lt;a class="lnlinks" href="#hl-5-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-3"&gt;&lt;a class="lnlinks" href="#hl-5-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-4"&gt;&lt;a class="lnlinks" href="#hl-5-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-5"&gt;&lt;a class="lnlinks" href="#hl-5-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-6"&gt;&lt;a class="lnlinks" href="#hl-5-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-7"&gt;&lt;a class="lnlinks" href="#hl-5-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;EntwinerForFooable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt;
@@ -2135,21 +2051,21 @@ following:
 &lt;/div&gt;&lt;p&gt;Whereas an untwiner for IFooable could be hand-crafted as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-6-1"&gt;&lt;a class="lnlinks" href="#hl-6-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-2"&gt;&lt;a class="lnlinks" href="#hl-6-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-3"&gt;&lt;a class="lnlinks" href="#hl-6-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-4"&gt;&lt;a class="lnlinks" href="#hl-6-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-5"&gt;&lt;a class="lnlinks" href="#hl-6-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-6"&gt;&lt;a class="lnlinks" href="#hl-6-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-7"&gt;&lt;a class="lnlinks" href="#hl-6-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-8"&gt;&lt;a class="lnlinks" href="#hl-6-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-9"&gt;&lt;a class="lnlinks" href="#hl-6-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-10"&gt;&lt;a class="lnlinks" href="#hl-6-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-11"&gt;&lt;a class="lnlinks" href="#hl-6-11"&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-12"&gt;&lt;a class="lnlinks" href="#hl-6-12"&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-13"&gt;&lt;a class="lnlinks" href="#hl-6-13"&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-14"&gt;&lt;a class="lnlinks" href="#hl-6-14"&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-15"&gt;&lt;a class="lnlinks" href="#hl-6-15"&gt;15&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UntwinerForFooable&lt;/span&gt;
@@ -2172,13 +2088,13 @@ following:
 &lt;/div&gt;&lt;p&gt;With the above classes, we can now write the following piece of awesomeness:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-7-1"&gt;&lt;a class="lnlinks" href="#hl-7-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-2"&gt;&lt;a class="lnlinks" href="#hl-7-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-3"&gt;&lt;a class="lnlinks" href="#hl-7-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-4"&gt;&lt;a class="lnlinks" href="#hl-7-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-5"&gt;&lt;a class="lnlinks" href="#hl-7-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-6"&gt;&lt;a class="lnlinks" href="#hl-7-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-7"&gt;&lt;a class="lnlinks" href="#hl-7-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run2&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -2196,21 +2112,21 @@ following:
 &lt;/h3&gt;&lt;p&gt;It is possible to write a general-purpose untwiner that does its job using reflection, but reflection is slow, so the result is going to suffer performance-wise. For the sake of completeness, here is a possible implementation for a general-purpose reflecting untwiner using reflection:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-8-1"&gt;&lt;a class="lnlinks" href="#hl-8-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-2"&gt;&lt;a class="lnlinks" href="#hl-8-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-3"&gt;&lt;a class="lnlinks" href="#hl-8-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-4"&gt;&lt;a class="lnlinks" href="#hl-8-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-5"&gt;&lt;a class="lnlinks" href="#hl-8-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-6"&gt;&lt;a class="lnlinks" href="#hl-8-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-7"&gt;&lt;a class="lnlinks" href="#hl-8-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-8"&gt;&lt;a class="lnlinks" href="#hl-8-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-9"&gt;&lt;a class="lnlinks" href="#hl-8-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-10"&gt;&lt;a class="lnlinks" href="#hl-8-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-11"&gt;&lt;a class="lnlinks" href="#hl-8-11"&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-12"&gt;&lt;a class="lnlinks" href="#hl-8-12"&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-13"&gt;&lt;a class="lnlinks" href="#hl-8-13"&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-14"&gt;&lt;a class="lnlinks" href="#hl-8-14"&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-15"&gt;&lt;a class="lnlinks" href="#hl-8-15"&gt;15&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ReflectingUntwiner&lt;/span&gt; &lt;span class="c1"&gt;//WARNING: SLOW AS MOLASSES&lt;/span&gt;
@@ -2235,35 +2151,21 @@ following:
 &lt;h3 id="automating-it-with-intertwine"&gt;Automating it with Intertwine
 &lt;/h3&gt;&lt;p&gt;The Intertwine library will automatically generate for us a pair of optimally-performing entwiner and untwiner classes for any interface. These classes are generated at runtime, so no extra build step is needed. To accomplish this, the C# implementation of Intertwine generates MSIL and creates assemblies from it; the Java Implementation generates bytecode and creates classes from it.&lt;/p&gt;
 &lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an entwiner:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;NewEntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;anycall&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For &lt;code&gt;T&lt;/code&gt; we give the type of our interface, and for &lt;code&gt;anycall&lt;/code&gt; we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given &lt;code&gt;AnyCall&lt;/code&gt; instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our &lt;code&gt;AnyCall&lt;/code&gt; delegate.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;NewEntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;anycall&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;T&lt;/code&gt; we give the type of our interface, and for &lt;code&gt;anycall&lt;/code&gt; we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given &lt;code&gt;AnyCall&lt;/code&gt; instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our &lt;code&gt;AnyCall&lt;/code&gt; delegate.&lt;/p&gt;
 &lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an untwiner:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;NewUntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For target we give an implementation of our interface, and what we get is a reference to an &lt;code&gt;AnyCall&lt;/code&gt; delegate implemented by an Untwiner-derived class that was dynamically generated specifically for our interface, and instantiated to work with the given target instance. For every call received through the &lt;code&gt;AnyCall&lt;/code&gt; delegate, this special untwiner will be unmarshalling the arguments and forwarding the call to the appropriate method of our target interface.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;NewUntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For target we give an implementation of our interface, and what we get is a reference to an &lt;code&gt;AnyCall&lt;/code&gt; delegate implemented by an Untwiner-derived class that was dynamically generated specifically for our interface, and instantiated to work with the given target instance. For every call received through the &lt;code&gt;AnyCall&lt;/code&gt; delegate, this special untwiner will be unmarshalling the arguments and forwarding the call to the appropriate method of our target interface.&lt;/p&gt;
 &lt;p&gt;So, with the dynamically generated entwiners and untwiners we can now do the following epicness:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-11-1"&gt;&lt;a class="lnlinks" href="#hl-11-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-2"&gt;&lt;a class="lnlinks" href="#hl-11-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-3"&gt;&lt;a class="lnlinks" href="#hl-11-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-4"&gt;&lt;a class="lnlinks" href="#hl-11-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-5"&gt;&lt;a class="lnlinks" href="#hl-11-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-6"&gt;&lt;a class="lnlinks" href="#hl-11-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-7"&gt;&lt;a class="lnlinks" href="#hl-11-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run3&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -2290,12 +2192,12 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;p&gt;Consider the following interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-12-1"&gt;&lt;a class="lnlinks" href="#hl-12-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-2"&gt;&lt;a class="lnlinks" href="#hl-12-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-3"&gt;&lt;a class="lnlinks" href="#hl-12-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-4"&gt;&lt;a class="lnlinks" href="#hl-12-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-5"&gt;&lt;a class="lnlinks" href="#hl-12-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-6"&gt;&lt;a class="lnlinks" href="#hl-12-6"&gt;6&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;ITableNotification&lt;/span&gt;
@@ -2309,9 +2211,9 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;/div&gt;&lt;p&gt;And consider the following hypothetical (not actually possible) way of using it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-13-1"&gt;&lt;a class="lnlinks" href="#hl-13-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-13-2"&gt;&lt;a class="lnlinks" href="#hl-13-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-13-3"&gt;&lt;a class="lnlinks" href="#hl-13-3"&gt;3&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;event&lt;/span&gt; &lt;span class="n"&gt;ITableNotification&lt;/span&gt; &lt;span class="n"&gt;tableNotificationEvent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -2322,9 +2224,9 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;/div&gt;&lt;p&gt;The above does not work because events in C# work only with delegates, not with interfaces. However, with Intertwine, the next best thing is actually possible:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-14-1"&gt;&lt;a class="lnlinks" href="#hl-14-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-14-2"&gt;&lt;a class="lnlinks" href="#hl-14-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-14-3"&gt;&lt;a class="lnlinks" href="#hl-14-3"&gt;3&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;tableNotificationEventManager&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;InterfaceEventManager&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ITableNotifcation&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;();&lt;/span&gt;
@@ -3759,108 +3661,108 @@ href="https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/implem
 &lt;p&gt;An implementation of lifeguard in C# is as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt; 10
-&lt;/span&gt;&lt;span class="lnt"&gt; 11
-&lt;/span&gt;&lt;span class="lnt"&gt; 12
-&lt;/span&gt;&lt;span class="lnt"&gt; 13
-&lt;/span&gt;&lt;span class="lnt"&gt; 14
-&lt;/span&gt;&lt;span class="lnt"&gt; 15
-&lt;/span&gt;&lt;span class="lnt"&gt; 16
-&lt;/span&gt;&lt;span class="lnt"&gt; 17
-&lt;/span&gt;&lt;span class="lnt"&gt; 18
-&lt;/span&gt;&lt;span class="lnt"&gt; 19
-&lt;/span&gt;&lt;span class="lnt"&gt; 20
-&lt;/span&gt;&lt;span class="lnt"&gt; 21
-&lt;/span&gt;&lt;span class="lnt"&gt; 22
-&lt;/span&gt;&lt;span class="lnt"&gt; 23
-&lt;/span&gt;&lt;span class="lnt"&gt; 24
-&lt;/span&gt;&lt;span class="lnt"&gt; 25
-&lt;/span&gt;&lt;span class="lnt"&gt; 26
-&lt;/span&gt;&lt;span class="lnt"&gt; 27
-&lt;/span&gt;&lt;span class="lnt"&gt; 28
-&lt;/span&gt;&lt;span class="lnt"&gt; 29
-&lt;/span&gt;&lt;span class="lnt"&gt; 30
-&lt;/span&gt;&lt;span class="lnt"&gt; 31
-&lt;/span&gt;&lt;span class="lnt"&gt; 32
-&lt;/span&gt;&lt;span class="lnt"&gt; 33
-&lt;/span&gt;&lt;span class="lnt"&gt; 34
-&lt;/span&gt;&lt;span class="lnt"&gt; 35
-&lt;/span&gt;&lt;span class="lnt"&gt; 36
-&lt;/span&gt;&lt;span class="lnt"&gt; 37
-&lt;/span&gt;&lt;span class="lnt"&gt; 38
-&lt;/span&gt;&lt;span class="lnt"&gt; 39
-&lt;/span&gt;&lt;span class="lnt"&gt; 40
-&lt;/span&gt;&lt;span class="lnt"&gt; 41
-&lt;/span&gt;&lt;span class="lnt"&gt; 42
-&lt;/span&gt;&lt;span class="lnt"&gt; 43
-&lt;/span&gt;&lt;span class="lnt"&gt; 44
-&lt;/span&gt;&lt;span class="lnt"&gt; 45
-&lt;/span&gt;&lt;span class="lnt"&gt; 46
-&lt;/span&gt;&lt;span class="lnt"&gt; 47
-&lt;/span&gt;&lt;span class="lnt"&gt; 48
-&lt;/span&gt;&lt;span class="lnt"&gt; 49
-&lt;/span&gt;&lt;span class="lnt"&gt; 50
-&lt;/span&gt;&lt;span class="lnt"&gt; 51
-&lt;/span&gt;&lt;span class="lnt"&gt; 52
-&lt;/span&gt;&lt;span class="lnt"&gt; 53
-&lt;/span&gt;&lt;span class="lnt"&gt; 54
-&lt;/span&gt;&lt;span class="lnt"&gt; 55
-&lt;/span&gt;&lt;span class="lnt"&gt; 56
-&lt;/span&gt;&lt;span class="lnt"&gt; 57
-&lt;/span&gt;&lt;span class="lnt"&gt; 58
-&lt;/span&gt;&lt;span class="lnt"&gt; 59
-&lt;/span&gt;&lt;span class="lnt"&gt; 60
-&lt;/span&gt;&lt;span class="lnt"&gt; 61
-&lt;/span&gt;&lt;span class="lnt"&gt; 62
-&lt;/span&gt;&lt;span class="lnt"&gt; 63
-&lt;/span&gt;&lt;span class="lnt"&gt; 64
-&lt;/span&gt;&lt;span class="lnt"&gt; 65
-&lt;/span&gt;&lt;span class="lnt"&gt; 66
-&lt;/span&gt;&lt;span class="lnt"&gt; 67
-&lt;/span&gt;&lt;span class="lnt"&gt; 68
-&lt;/span&gt;&lt;span class="lnt"&gt; 69
-&lt;/span&gt;&lt;span class="lnt"&gt; 70
-&lt;/span&gt;&lt;span class="lnt"&gt; 71
-&lt;/span&gt;&lt;span class="lnt"&gt; 72
-&lt;/span&gt;&lt;span class="lnt"&gt; 73
-&lt;/span&gt;&lt;span class="lnt"&gt; 74
-&lt;/span&gt;&lt;span class="lnt"&gt; 75
-&lt;/span&gt;&lt;span class="lnt"&gt; 76
-&lt;/span&gt;&lt;span class="lnt"&gt; 77
-&lt;/span&gt;&lt;span class="lnt"&gt; 78
-&lt;/span&gt;&lt;span class="lnt"&gt; 79
-&lt;/span&gt;&lt;span class="lnt"&gt; 80
-&lt;/span&gt;&lt;span class="lnt"&gt; 81
-&lt;/span&gt;&lt;span class="lnt"&gt; 82
-&lt;/span&gt;&lt;span class="lnt"&gt; 83
-&lt;/span&gt;&lt;span class="lnt"&gt; 84
-&lt;/span&gt;&lt;span class="lnt"&gt; 85
-&lt;/span&gt;&lt;span class="lnt"&gt; 86
-&lt;/span&gt;&lt;span class="lnt"&gt; 87
-&lt;/span&gt;&lt;span class="lnt"&gt; 88
-&lt;/span&gt;&lt;span class="lnt"&gt; 89
-&lt;/span&gt;&lt;span class="lnt"&gt; 90
-&lt;/span&gt;&lt;span class="lnt"&gt; 91
-&lt;/span&gt;&lt;span class="lnt"&gt; 92
-&lt;/span&gt;&lt;span class="lnt"&gt; 93
-&lt;/span&gt;&lt;span class="lnt"&gt; 94
-&lt;/span&gt;&lt;span class="lnt"&gt; 95
-&lt;/span&gt;&lt;span class="lnt"&gt; 96
-&lt;/span&gt;&lt;span class="lnt"&gt; 97
-&lt;/span&gt;&lt;span class="lnt"&gt; 98
-&lt;/span&gt;&lt;span class="lnt"&gt; 99
-&lt;/span&gt;&lt;span class="lnt"&gt;100
-&lt;/span&gt;&lt;span class="lnt"&gt;101
-&lt;/span&gt;&lt;span class="lnt"&gt;102
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-0-1"&gt;&lt;a class="lnlinks" href="#hl-0-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-2"&gt;&lt;a class="lnlinks" href="#hl-0-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-3"&gt;&lt;a class="lnlinks" href="#hl-0-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-4"&gt;&lt;a class="lnlinks" href="#hl-0-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-5"&gt;&lt;a class="lnlinks" href="#hl-0-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-6"&gt;&lt;a class="lnlinks" href="#hl-0-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-7"&gt;&lt;a class="lnlinks" href="#hl-0-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-8"&gt;&lt;a class="lnlinks" href="#hl-0-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-9"&gt;&lt;a class="lnlinks" href="#hl-0-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-10"&gt;&lt;a class="lnlinks" href="#hl-0-10"&gt; 10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-11"&gt;&lt;a class="lnlinks" href="#hl-0-11"&gt; 11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-12"&gt;&lt;a class="lnlinks" href="#hl-0-12"&gt; 12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-13"&gt;&lt;a class="lnlinks" href="#hl-0-13"&gt; 13&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-14"&gt;&lt;a class="lnlinks" href="#hl-0-14"&gt; 14&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-15"&gt;&lt;a class="lnlinks" href="#hl-0-15"&gt; 15&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-16"&gt;&lt;a class="lnlinks" href="#hl-0-16"&gt; 16&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-17"&gt;&lt;a class="lnlinks" href="#hl-0-17"&gt; 17&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-18"&gt;&lt;a class="lnlinks" href="#hl-0-18"&gt; 18&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-19"&gt;&lt;a class="lnlinks" href="#hl-0-19"&gt; 19&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-20"&gt;&lt;a class="lnlinks" href="#hl-0-20"&gt; 20&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-21"&gt;&lt;a class="lnlinks" href="#hl-0-21"&gt; 21&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-22"&gt;&lt;a class="lnlinks" href="#hl-0-22"&gt; 22&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-23"&gt;&lt;a class="lnlinks" href="#hl-0-23"&gt; 23&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-24"&gt;&lt;a class="lnlinks" href="#hl-0-24"&gt; 24&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-25"&gt;&lt;a class="lnlinks" href="#hl-0-25"&gt; 25&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-26"&gt;&lt;a class="lnlinks" href="#hl-0-26"&gt; 26&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-27"&gt;&lt;a class="lnlinks" href="#hl-0-27"&gt; 27&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-28"&gt;&lt;a class="lnlinks" href="#hl-0-28"&gt; 28&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-29"&gt;&lt;a class="lnlinks" href="#hl-0-29"&gt; 29&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-30"&gt;&lt;a class="lnlinks" href="#hl-0-30"&gt; 30&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-31"&gt;&lt;a class="lnlinks" href="#hl-0-31"&gt; 31&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-32"&gt;&lt;a class="lnlinks" href="#hl-0-32"&gt; 32&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-33"&gt;&lt;a class="lnlinks" href="#hl-0-33"&gt; 33&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-34"&gt;&lt;a class="lnlinks" href="#hl-0-34"&gt; 34&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-35"&gt;&lt;a class="lnlinks" href="#hl-0-35"&gt; 35&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-36"&gt;&lt;a class="lnlinks" href="#hl-0-36"&gt; 36&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-37"&gt;&lt;a class="lnlinks" href="#hl-0-37"&gt; 37&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-38"&gt;&lt;a class="lnlinks" href="#hl-0-38"&gt; 38&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-39"&gt;&lt;a class="lnlinks" href="#hl-0-39"&gt; 39&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-40"&gt;&lt;a class="lnlinks" href="#hl-0-40"&gt; 40&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-41"&gt;&lt;a class="lnlinks" href="#hl-0-41"&gt; 41&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-42"&gt;&lt;a class="lnlinks" href="#hl-0-42"&gt; 42&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-43"&gt;&lt;a class="lnlinks" href="#hl-0-43"&gt; 43&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-44"&gt;&lt;a class="lnlinks" href="#hl-0-44"&gt; 44&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-45"&gt;&lt;a class="lnlinks" href="#hl-0-45"&gt; 45&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-46"&gt;&lt;a class="lnlinks" href="#hl-0-46"&gt; 46&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-47"&gt;&lt;a class="lnlinks" href="#hl-0-47"&gt; 47&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-48"&gt;&lt;a class="lnlinks" href="#hl-0-48"&gt; 48&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-49"&gt;&lt;a class="lnlinks" href="#hl-0-49"&gt; 49&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-50"&gt;&lt;a class="lnlinks" href="#hl-0-50"&gt; 50&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-51"&gt;&lt;a class="lnlinks" href="#hl-0-51"&gt; 51&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-52"&gt;&lt;a class="lnlinks" href="#hl-0-52"&gt; 52&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-53"&gt;&lt;a class="lnlinks" href="#hl-0-53"&gt; 53&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-54"&gt;&lt;a class="lnlinks" href="#hl-0-54"&gt; 54&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-55"&gt;&lt;a class="lnlinks" href="#hl-0-55"&gt; 55&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-56"&gt;&lt;a class="lnlinks" href="#hl-0-56"&gt; 56&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-57"&gt;&lt;a class="lnlinks" href="#hl-0-57"&gt; 57&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-58"&gt;&lt;a class="lnlinks" href="#hl-0-58"&gt; 58&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-59"&gt;&lt;a class="lnlinks" href="#hl-0-59"&gt; 59&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-60"&gt;&lt;a class="lnlinks" href="#hl-0-60"&gt; 60&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-61"&gt;&lt;a class="lnlinks" href="#hl-0-61"&gt; 61&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-62"&gt;&lt;a class="lnlinks" href="#hl-0-62"&gt; 62&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-63"&gt;&lt;a class="lnlinks" href="#hl-0-63"&gt; 63&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-64"&gt;&lt;a class="lnlinks" href="#hl-0-64"&gt; 64&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-65"&gt;&lt;a class="lnlinks" href="#hl-0-65"&gt; 65&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-66"&gt;&lt;a class="lnlinks" href="#hl-0-66"&gt; 66&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-67"&gt;&lt;a class="lnlinks" href="#hl-0-67"&gt; 67&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-68"&gt;&lt;a class="lnlinks" href="#hl-0-68"&gt; 68&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-69"&gt;&lt;a class="lnlinks" href="#hl-0-69"&gt; 69&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-70"&gt;&lt;a class="lnlinks" href="#hl-0-70"&gt; 70&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-71"&gt;&lt;a class="lnlinks" href="#hl-0-71"&gt; 71&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-72"&gt;&lt;a class="lnlinks" href="#hl-0-72"&gt; 72&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-73"&gt;&lt;a class="lnlinks" href="#hl-0-73"&gt; 73&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-74"&gt;&lt;a class="lnlinks" href="#hl-0-74"&gt; 74&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-75"&gt;&lt;a class="lnlinks" href="#hl-0-75"&gt; 75&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-76"&gt;&lt;a class="lnlinks" href="#hl-0-76"&gt; 76&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-77"&gt;&lt;a class="lnlinks" href="#hl-0-77"&gt; 77&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-78"&gt;&lt;a class="lnlinks" href="#hl-0-78"&gt; 78&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-79"&gt;&lt;a class="lnlinks" href="#hl-0-79"&gt; 79&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-80"&gt;&lt;a class="lnlinks" href="#hl-0-80"&gt; 80&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-81"&gt;&lt;a class="lnlinks" href="#hl-0-81"&gt; 81&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-82"&gt;&lt;a class="lnlinks" href="#hl-0-82"&gt; 82&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-83"&gt;&lt;a class="lnlinks" href="#hl-0-83"&gt; 83&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-84"&gt;&lt;a class="lnlinks" href="#hl-0-84"&gt; 84&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-85"&gt;&lt;a class="lnlinks" href="#hl-0-85"&gt; 85&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-86"&gt;&lt;a class="lnlinks" href="#hl-0-86"&gt; 86&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-87"&gt;&lt;a class="lnlinks" href="#hl-0-87"&gt; 87&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-88"&gt;&lt;a class="lnlinks" href="#hl-0-88"&gt; 88&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-89"&gt;&lt;a class="lnlinks" href="#hl-0-89"&gt; 89&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-90"&gt;&lt;a class="lnlinks" href="#hl-0-90"&gt; 90&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-91"&gt;&lt;a class="lnlinks" href="#hl-0-91"&gt; 91&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-92"&gt;&lt;a class="lnlinks" href="#hl-0-92"&gt; 92&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-93"&gt;&lt;a class="lnlinks" href="#hl-0-93"&gt; 93&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-94"&gt;&lt;a class="lnlinks" href="#hl-0-94"&gt; 94&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-95"&gt;&lt;a class="lnlinks" href="#hl-0-95"&gt; 95&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-96"&gt;&lt;a class="lnlinks" href="#hl-0-96"&gt; 96&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-97"&gt;&lt;a class="lnlinks" href="#hl-0-97"&gt; 97&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-98"&gt;&lt;a class="lnlinks" href="#hl-0-98"&gt; 98&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-99"&gt;&lt;a class="lnlinks" href="#hl-0-99"&gt; 99&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-100"&gt;&lt;a class="lnlinks" href="#hl-0-100"&gt;100&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-101"&gt;&lt;a class="lnlinks" href="#hl-0-101"&gt;101&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-0-102"&gt;&lt;a class="lnlinks" href="#hl-0-102"&gt;102&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;namespace&lt;/span&gt; &lt;span class="nn"&gt;SomeNamespace&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -3971,17 +3873,17 @@ href="https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/implem
 &lt;p&gt;&lt;code&gt;DebugMode&lt;/code&gt; is defined as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-6"&gt;&lt;a class="lnlinks" href="#hl-1-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-7"&gt;&lt;a class="lnlinks" href="#hl-1-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-8"&gt;&lt;a class="lnlinks" href="#hl-1-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-9"&gt;&lt;a class="lnlinks" href="#hl-1-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-10"&gt;&lt;a class="lnlinks" href="#hl-1-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-11"&gt;&lt;a class="lnlinks" href="#hl-1-11"&gt;11&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="n"&gt;DebugMode&lt;/span&gt;
@@ -5592,9 +5494,9 @@ href="https://danluu.com/empirical-pl/" target="_blank"
 &lt;/h4&gt;&lt;p&gt;I don't need to say much here, just watch the legendary &lt;a class="external"
 href="https://www.destroyallsoftware.com/talks/wat" target="_blank"
 &gt;&amp;quot;Wat&amp;quot; video by Gary Bernhardt from CodeMash 2012&lt;/a&gt;, it is only 4 minutes long:&lt;/p&gt;
-&lt;video width="97%" poster="https://www.destroyallsoftware.com/assets/posters/talks/wat.poster-4f5425901c10ffeaceb61f82e25dc40b9212aadf078cead0dc6ffe40696e2bec.png" preload="none"&gt;
-&lt;source src="https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20241128%2Fus-east-1%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20241128T124514Z&amp;amp;X-Amz-Expires=14400&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=866f87a9e2a988029db034ad51f846818c5a2e4415da80559bb334e602fd6bad" /&gt;
-&lt;track label="English" kind="captions" srclang="en" src="https://blog2.michael.gr/captions/talks/wat.vtt"&gt;&lt;/track&gt;
+&lt;video width="100%" poster="https://www.destroyallsoftware.com/assets/posters/talks/wat.poster-4f5425901c10ffeaceb61f82e25dc40b9212aadf078cead0dc6ffe40696e2bec.png" preload="none" controls=""&gt;
+&lt;source src="https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20260123%2Fus-east-1%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260123T164724Z&amp;amp;X-Amz-Expires=14400&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=925edbc9ca044a60e32e5e0d26cb9e8afdea20040b007655e1b9f0e1ff4e2409"&gt;
+&lt;track label="English" kind="captions" srclang="en" src="https://blog2.michael.gr/captions/talks/wat.vtt"&gt;
 &lt;/video&gt;
 &lt;p&gt;The reason for all this nonsense is that all these languages are hacks.&lt;/p&gt;
 &lt;p&gt;When the foundation that you are working on is a hack, then either anything you will build on top of it will in turn be a hack, or you are going to be putting an enormous effort to circumvent the hackiness of the foundation and build something reasonable over it. Why handicap yourself?&lt;/p&gt;
@@ -5808,15 +5710,8 @@ href="https://en.wikipedia.org/wiki/Computational_complexity_theory" target="_bl
 &lt;p&gt;So, think about it: every time you code an assertion statement you are actually making your program more simple instead of more complicated. I believe that this realization alone should be enough to convince anyone that &lt;code&gt;assert&lt;/code&gt;, along with &lt;code&gt;final&lt;/code&gt;, are literally the most useful constructs that any programmer could ever use.&lt;/p&gt;
 &lt;h3 id="8-assertions-help-the-compiler-make-better-sense-of-your-code"&gt;8. Assertions help the compiler make better sense of your code.
 &lt;/h3&gt;&lt;p&gt;Please do try this at home:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;If you have a reasonable number of warnings enabled, (as any decent programmer would,) your compiler should issue a warning telling you that the condition &lt;code&gt;x == null&lt;/code&gt; is always false. What this demonstrates is that the preceding assertion gave the compiler knowledge of the fact that &lt;code&gt;x&lt;/code&gt; cannot be null, and the compiler is now making use of this knowledge as it compiles the rest of your method, pointing out to you potential flaws in your reasoning. Furthermore, some compilers perform useful optimizations based on knowledge that they gather from assertion statements. (I do not know to what extent java compilers do that, but I know for a fact that the Microsoft Visual C++ compiler does it; see footnote 2.)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;void&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you have a reasonable number of warnings enabled, (as any decent programmer would,) your compiler should issue a warning telling you that the condition &lt;code&gt;x == null&lt;/code&gt; is always false. What this demonstrates is that the preceding assertion gave the compiler knowledge of the fact that &lt;code&gt;x&lt;/code&gt; cannot be null, and the compiler is now making use of this knowledge as it compiles the rest of your method, pointing out to you potential flaws in your reasoning. Furthermore, some compilers perform useful optimizations based on knowledge that they gather from assertion statements. (I do not know to what extent java compilers do that, but I know for a fact that the Microsoft Visual C++ compiler does it; see footnote 2.)&lt;/p&gt;
 &lt;h3 id="conclusion"&gt;Conclusion
 &lt;/h3&gt;&lt;p&gt;Test code should always be treating production code as a black box, and knowledge of the inner workings of the production code should be used at most as a hint for testing, never as an instrument for testing. Consequently, assertions are necessary for performing white box tests within the production code so as to ensure that absolutely nothing is left to chance.&lt;/p&gt;
 &lt;p&gt;Additionally, assertions help document the code, reduce its complexity, strengthen it against assumptions made by the testing code, and help build systems that, in the event of an error, can tell you what is wrong with themselves.&lt;/p&gt;
@@ -5825,97 +5720,42 @@ href="https://en.wikipedia.org/wiki/Computational_complexity_theory" target="_bl
 &lt;/h3&gt;&lt;p&gt;Assertions can be used in every single place where an unexpected exception would otherwise be thrown. This includes all instances of contract violations such as a null pointer exception or an illegal argument exception, and in general, all instances of errors which a) indicate a bug, (should never happen,) and b) cannot be handled in any meaningful way.&lt;/p&gt;
 &lt;p&gt;In java the &lt;code&gt;assert&lt;/code&gt; keyword cannot throw any exception that you might wish it to throw; it only throws the &lt;code&gt;AssertionError&lt;/code&gt; exception. Usually this is not a problem, because no piece of production code should ever try to catch an unexpected exception. (That is, after all, precisely why it is called unexpected; it is not that the guest may arrive unannounced, it is that he is not supposed to arrive at all.) Therefore, since it is never meant to be caught, &lt;code&gt;AssertionError&lt;/code&gt; is, generally speaking, a suitable one-class-fits-all replacement of all unexpected exceptions.&lt;/p&gt;
 &lt;p&gt;However, when developing a library, which will be used with assertions presumably enabled at times, you will of course need to have tests which attempt to use your library in various wrong ways, ascertaining that every single one of those attempts gets asserted against, and the problem then with all errors being reported as &lt;code&gt;AssertionError&lt;/code&gt;s is that your tests cannot tell whether the error that was caught was the specific error that you were testing for, and not some unrelated coincidental error. For this reason, when developing libraries, a different approach is needed. One approach is the following:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;n&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;This works nicely because according to the java language specification, the expression at the right hand side of the colon of an assertion statement does not have to be of any particular type, but if it happens to be of an exception type, then it will be treated as the 'cause' of the &lt;code&gt;AssertionError&lt;/code&gt; exception. (In all other cases, its &lt;code&gt;toString()&lt;/code&gt; will be used as the 'message' of the &lt;code&gt;AssertionError&lt;/code&gt; exception.) Thus, your testing code can catch the assertion exception and examine its cause to ensure that it is indeed the expected exception.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;n&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This works nicely because according to the java language specification, the expression at the right hand side of the colon of an assertion statement does not have to be of any particular type, but if it happens to be of an exception type, then it will be treated as the 'cause' of the &lt;code&gt;AssertionError&lt;/code&gt; exception. (In all other cases, its &lt;code&gt;toString()&lt;/code&gt; will be used as the 'message' of the &lt;code&gt;AssertionError&lt;/code&gt; exception.) Thus, your testing code can catch the assertion exception and examine its cause to ensure that it is indeed the expected exception.&lt;/p&gt;
 &lt;p&gt;So, your test suite might contain a utility method like the following:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
-&lt;/span&gt;&lt;span class="lnt"&gt;16
-&lt;/span&gt;&lt;span class="lnt"&gt;17
-&lt;/span&gt;&lt;span class="lnt"&gt;18
-&lt;/span&gt;&lt;span class="lnt"&gt;19
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="n"&gt;final&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Throwable&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;expectException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;Class&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;exceptionClass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Runnable&lt;/span&gt; &lt;span class="n"&gt;runnable&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;try&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;runnable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;catch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;Throwable&lt;/span&gt; &lt;span class="n"&gt;throwable&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;throwable&lt;/span&gt; &lt;span class="n"&gt;instanceof&lt;/span&gt; &lt;span class="n"&gt;AssertionError&lt;/span&gt; &lt;span class="p"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getCause&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;throwable&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getCause&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;exceptionClass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isInstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;throwable&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//exception of the wrong kind was thrown.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="n"&gt;exceptionClass&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//exception thrown was a subclass, but not the exact class, expected.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;@SuppressWarnings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;unchecked&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;assert&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//expected exception was not thrown.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;//to keep the compiler happy.&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Which might be used as follows:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;expectException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;myObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;getMessage&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="k"&gt;equals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;n&amp;#34;&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;There are times when you have the need to check whether assertions are enabled. For example, in the first thing I always do in my test suites is to make sure that assertions are enabled, because if someone forgot to pass the -ea switch, all tests may pass without checking for a single defect in the code. Here is how to test whether assertions are enabled in java:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
-&lt;/span&gt;&lt;span class="lnt"&gt;8
-&lt;/span&gt;&lt;span class="lnt"&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;isAssertEnabled&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;//noinspection UnusedAssignment&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;assertEnabled&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;//noinspection AssertWithSideEffects,NestedAssignment,ConstantConditions&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;assertEnabled&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;//noinspection ConstantConditions&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;assertEnabled&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;Note: the &lt;code&gt;//noinspection&lt;/code&gt; comments are understood by IntelliJ IDEA; if the misfortune hath befallen thee of having to use some other IDE such as Eclipse, you will have to use some different warning suppression notation.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;final&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;extends&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Throwable&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;expectException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exceptionClass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Runnable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;runnable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;runnable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;catch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Throwable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;instanceof&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;AssertionError&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getCause&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getCause&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exceptionClass&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;isInstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//exception of the wrong kind was thrown.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getClass&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exceptionClass&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//exception thrown was a subclass, but not the exact class, expected.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nd"&gt;@SuppressWarnings&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;unchecked&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;throwable&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//expected exception was not thrown.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//to keep the compiler happy.&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Which might be used as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;expectException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;myObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getMessage&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="na"&gt;equals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;n&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are times when you have the need to check whether assertions are enabled. For example, in the first thing I always do in my test suites is to make sure that assertions are enabled, because if someone forgot to pass the -ea switch, all tests may pass without checking for a single defect in the code. Here is how to test whether assertions are enabled in java:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;static&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;isAssertEnabled&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//noinspection UnusedAssignment&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;assertEnabled&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//noinspection AssertWithSideEffects,NestedAssignment,ConstantConditions&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;assertEnabled&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//noinspection ConstantConditions&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;assertEnabled&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Note: the &lt;code&gt;//noinspection&lt;/code&gt; comments are understood by IntelliJ IDEA; if the misfortune hath befallen thee of having to use some other IDE such as Eclipse, you will have to use some different warning suppression notation.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="footnote-1"&gt;Footnote 1
 &lt;/h3&gt;&lt;p&gt;What makes the Fragile Test Problem especially bad is that the process of fixing tests to make them pass is often carried out under unfavorable conditions, resulting in a sloppy job:&lt;/p&gt;
@@ -5943,125 +5783,7 @@ href="https://stackoverflow.com/a/27622328/773113" target="_blank"
 &lt;p&gt;In order to avoid inaccuracies due to jitting, we always perform one run of the code under measurement before the measurements begin. This gives the JIT compiler a chance to do its job, so it will not be getting in the way later, during the actual benchmark.&lt;/p&gt;
 &lt;p&gt;In order to avoid inaccuracies due to garbage collection, we always perform one full garbage collection before starting the benchmark, and we try to keep the benchmark short, so as to reduce the chances of another garbage collection happening before it completes. The garbage collection APIs of most VMs tend to be somewhat snobbish, and they do not really guarantee that a full garbage collection will actually take place when requested, so we need an additional trick: we allocate an object keeping only a weak reference to it, then we keep calling the VM to garbage collect and run finalizers until that object disappears. This still does not guarantee that a full garbage collection will take place, but it gives us the closest we can have to a guarantee by using only conventional means.&lt;/p&gt;
 &lt;p&gt;So, here is the class that I use for benchmarking, employing all of the above tricks:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt; 10
-&lt;/span&gt;&lt;span class="lnt"&gt; 11
-&lt;/span&gt;&lt;span class="lnt"&gt; 12
-&lt;/span&gt;&lt;span class="lnt"&gt; 13
-&lt;/span&gt;&lt;span class="lnt"&gt; 14
-&lt;/span&gt;&lt;span class="lnt"&gt; 15
-&lt;/span&gt;&lt;span class="lnt"&gt; 16
-&lt;/span&gt;&lt;span class="lnt"&gt; 17
-&lt;/span&gt;&lt;span class="lnt"&gt; 18
-&lt;/span&gt;&lt;span class="lnt"&gt; 19
-&lt;/span&gt;&lt;span class="lnt"&gt; 20
-&lt;/span&gt;&lt;span class="lnt"&gt; 21
-&lt;/span&gt;&lt;span class="lnt"&gt; 22
-&lt;/span&gt;&lt;span class="lnt"&gt; 23
-&lt;/span&gt;&lt;span class="lnt"&gt; 24
-&lt;/span&gt;&lt;span class="lnt"&gt; 25
-&lt;/span&gt;&lt;span class="lnt"&gt; 26
-&lt;/span&gt;&lt;span class="lnt"&gt; 27
-&lt;/span&gt;&lt;span class="lnt"&gt; 28
-&lt;/span&gt;&lt;span class="lnt"&gt; 29
-&lt;/span&gt;&lt;span class="lnt"&gt; 30
-&lt;/span&gt;&lt;span class="lnt"&gt; 31
-&lt;/span&gt;&lt;span class="lnt"&gt; 32
-&lt;/span&gt;&lt;span class="lnt"&gt; 33
-&lt;/span&gt;&lt;span class="lnt"&gt; 34
-&lt;/span&gt;&lt;span class="lnt"&gt; 35
-&lt;/span&gt;&lt;span class="lnt"&gt; 36
-&lt;/span&gt;&lt;span class="lnt"&gt; 37
-&lt;/span&gt;&lt;span class="lnt"&gt; 38
-&lt;/span&gt;&lt;span class="lnt"&gt; 39
-&lt;/span&gt;&lt;span class="lnt"&gt; 40
-&lt;/span&gt;&lt;span class="lnt"&gt; 41
-&lt;/span&gt;&lt;span class="lnt"&gt; 42
-&lt;/span&gt;&lt;span class="lnt"&gt; 43
-&lt;/span&gt;&lt;span class="lnt"&gt; 44
-&lt;/span&gt;&lt;span class="lnt"&gt; 45
-&lt;/span&gt;&lt;span class="lnt"&gt; 46
-&lt;/span&gt;&lt;span class="lnt"&gt; 47
-&lt;/span&gt;&lt;span class="lnt"&gt; 48
-&lt;/span&gt;&lt;span class="lnt"&gt; 49
-&lt;/span&gt;&lt;span class="lnt"&gt; 50
-&lt;/span&gt;&lt;span class="lnt"&gt; 51
-&lt;/span&gt;&lt;span class="lnt"&gt; 52
-&lt;/span&gt;&lt;span class="lnt"&gt; 53
-&lt;/span&gt;&lt;span class="lnt"&gt; 54
-&lt;/span&gt;&lt;span class="lnt"&gt; 55
-&lt;/span&gt;&lt;span class="lnt"&gt; 56
-&lt;/span&gt;&lt;span class="lnt"&gt; 57
-&lt;/span&gt;&lt;span class="lnt"&gt; 58
-&lt;/span&gt;&lt;span class="lnt"&gt; 59
-&lt;/span&gt;&lt;span class="lnt"&gt; 60
-&lt;/span&gt;&lt;span class="lnt"&gt; 61
-&lt;/span&gt;&lt;span class="lnt"&gt; 62
-&lt;/span&gt;&lt;span class="lnt"&gt; 63
-&lt;/span&gt;&lt;span class="lnt"&gt; 64
-&lt;/span&gt;&lt;span class="lnt"&gt; 65
-&lt;/span&gt;&lt;span class="lnt"&gt; 66
-&lt;/span&gt;&lt;span class="lnt"&gt; 67
-&lt;/span&gt;&lt;span class="lnt"&gt; 68
-&lt;/span&gt;&lt;span class="lnt"&gt; 69
-&lt;/span&gt;&lt;span class="lnt"&gt; 70
-&lt;/span&gt;&lt;span class="lnt"&gt; 71
-&lt;/span&gt;&lt;span class="lnt"&gt; 72
-&lt;/span&gt;&lt;span class="lnt"&gt; 73
-&lt;/span&gt;&lt;span class="lnt"&gt; 74
-&lt;/span&gt;&lt;span class="lnt"&gt; 75
-&lt;/span&gt;&lt;span class="lnt"&gt; 76
-&lt;/span&gt;&lt;span class="lnt"&gt; 77
-&lt;/span&gt;&lt;span class="lnt"&gt; 78
-&lt;/span&gt;&lt;span class="lnt"&gt; 79
-&lt;/span&gt;&lt;span class="lnt"&gt; 80
-&lt;/span&gt;&lt;span class="lnt"&gt; 81
-&lt;/span&gt;&lt;span class="lnt"&gt; 82
-&lt;/span&gt;&lt;span class="lnt"&gt; 83
-&lt;/span&gt;&lt;span class="lnt"&gt; 84
-&lt;/span&gt;&lt;span class="lnt"&gt; 85
-&lt;/span&gt;&lt;span class="lnt"&gt; 86
-&lt;/span&gt;&lt;span class="lnt"&gt; 87
-&lt;/span&gt;&lt;span class="lnt"&gt; 88
-&lt;/span&gt;&lt;span class="lnt"&gt; 89
-&lt;/span&gt;&lt;span class="lnt"&gt; 90
-&lt;/span&gt;&lt;span class="lnt"&gt; 91
-&lt;/span&gt;&lt;span class="lnt"&gt; 92
-&lt;/span&gt;&lt;span class="lnt"&gt; 93
-&lt;/span&gt;&lt;span class="lnt"&gt; 94
-&lt;/span&gt;&lt;span class="lnt"&gt; 95
-&lt;/span&gt;&lt;span class="lnt"&gt; 96
-&lt;/span&gt;&lt;span class="lnt"&gt; 97
-&lt;/span&gt;&lt;span class="lnt"&gt; 98
-&lt;/span&gt;&lt;span class="lnt"&gt; 99
-&lt;/span&gt;&lt;span class="lnt"&gt;100
-&lt;/span&gt;&lt;span class="lnt"&gt;101
-&lt;/span&gt;&lt;span class="lnt"&gt;102
-&lt;/span&gt;&lt;span class="lnt"&gt;103
-&lt;/span&gt;&lt;span class="lnt"&gt;104
-&lt;/span&gt;&lt;span class="lnt"&gt;105
-&lt;/span&gt;&lt;span class="lnt"&gt;106
-&lt;/span&gt;&lt;span class="lnt"&gt;107
-&lt;/span&gt;&lt;span class="lnt"&gt;108
-&lt;/span&gt;&lt;span class="lnt"&gt;109
-&lt;/span&gt;&lt;span class="lnt"&gt;110
-&lt;/span&gt;&lt;span class="lnt"&gt;111
-&lt;/span&gt;&lt;span class="lnt"&gt;112
-&lt;/span&gt;&lt;span class="lnt"&gt;113
-&lt;/span&gt;&lt;span class="lnt"&gt;114
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;saganaki&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;saganaki&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;java.lang.ref.WeakReference&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
@@ -6175,9 +5897,7 @@ href="https://stackoverflow.com/a/27622328/773113" target="_blank"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;shifted&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;magnitude&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For an application of the above class, see my next post: &lt;a
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For an application of the above class, see my next post: &lt;a
 href="https://blog2.michael.gr/post/2014-07-benchmarking-java-8-lambdas/"
 &gt;Benchmarking Java 8 lambdas&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Intertwine: Normalizing Interface Invocations</title><link>https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/</link><pubDate>Sun, 16 Oct 2011 18:42:25 +0000</pubDate><guid>https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/</guid><description>&lt;p&gt;Note: This post has been superseded by a new post in 2022. See &lt;a
 href="https://blog2.michael.gr/post/2022-12-intertwine/"

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming languages on Michael's Blog</title><link>https://blog2.michael.gr/tags/programming-languages/</link><description>Recent content in Programming languages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 19:26:45 +0200</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/programming-languages/index.xml" rel="self" type="application/rss+xml"/><item><title>On messages and message-passing</title><link>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</link><pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming languages on Michael's Blog</title><link>https://blog2.michael.gr/tags/programming-languages/</link><description>Recent content in Programming languages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 21 Jan 2026 10:28:27 +0100</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/programming-languages/index.xml" rel="self" type="application/rss+xml"/><item><title>On messages and message-passing</title><link>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</link><pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing.png"
 width="2673"
 height="1494"
 loading="lazy"
@@ -98,15 +98,8 @@ Unfortunately:&lt;/p&gt;
 &lt;h3 id="the-solution"&gt;The Solution
 &lt;/h3&gt;&lt;p&gt;In order to be able to perform general-purpose operations on application-specific invocations we need a mechanism for converting application-specific invocations into a general-purpose form and back, so that the operators can act upon the general-purpose form. What follows is a description of such a mechanism, which I call &lt;em&gt;&lt;strong&gt;Intertwine&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Intertwine introduces a general-purpose form for expressing invocations, which is called &lt;em&gt;&lt;strong&gt;the normal form of invocations&lt;/strong&gt;&lt;/em&gt;, and is represented by a single method of the following signature:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;MethodKey&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;MethodKey&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;In C#, &lt;code&gt;AnyCall&lt;/code&gt; would be a &lt;em&gt;delegate.&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;In Java, &lt;code&gt;AnyCall&lt;/code&gt; would be a &lt;em&gt;single-method interface&lt;/em&gt;, otherwise known as a &lt;em&gt;functional interface&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -173,11 +166,11 @@ following:
 &lt;p&gt;Let us consider the following interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-1-1"&gt;&lt;a class="lnlinks" href="#hl-1-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-2"&gt;&lt;a class="lnlinks" href="#hl-1-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-3"&gt;&lt;a class="lnlinks" href="#hl-1-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-4"&gt;&lt;a class="lnlinks" href="#hl-1-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-1-5"&gt;&lt;a class="lnlinks" href="#hl-1-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;IFooable&lt;/span&gt;
@@ -190,11 +183,11 @@ following:
 &lt;/div&gt;&lt;p&gt;And let us consider the following class implementing that interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-2-1"&gt;&lt;a class="lnlinks" href="#hl-2-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-2"&gt;&lt;a class="lnlinks" href="#hl-2-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-3"&gt;&lt;a class="lnlinks" href="#hl-2-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-4"&gt;&lt;a class="lnlinks" href="#hl-2-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-2-5"&gt;&lt;a class="lnlinks" href="#hl-2-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;FooImplementation&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt;
@@ -207,11 +200,11 @@ following:
 &lt;/div&gt;&lt;p&gt;And then let us consider the following method which invokes the interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-3-1"&gt;&lt;a class="lnlinks" href="#hl-3-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-2"&gt;&lt;a class="lnlinks" href="#hl-3-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-3"&gt;&lt;a class="lnlinks" href="#hl-3-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-4"&gt;&lt;a class="lnlinks" href="#hl-3-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-3-5"&gt;&lt;a class="lnlinks" href="#hl-3-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;InvokeFoo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt; &lt;span class="n"&gt;fooable&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
@@ -224,11 +217,11 @@ following:
 &lt;/div&gt;&lt;p&gt;The InvokeFoo method can be directly hooked up to an instance of the implementing class in a completely conventional way as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-4-1"&gt;&lt;a class="lnlinks" href="#hl-4-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-2"&gt;&lt;a class="lnlinks" href="#hl-4-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-3"&gt;&lt;a class="lnlinks" href="#hl-4-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-4"&gt;&lt;a class="lnlinks" href="#hl-4-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-4-5"&gt;&lt;a class="lnlinks" href="#hl-4-5"&gt;5&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run1&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -241,13 +234,13 @@ following:
 &lt;/div&gt;&lt;p&gt;Now, an entwiner for our IFooable interface could be hand-crafted as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-5-1"&gt;&lt;a class="lnlinks" href="#hl-5-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-2"&gt;&lt;a class="lnlinks" href="#hl-5-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-3"&gt;&lt;a class="lnlinks" href="#hl-5-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-4"&gt;&lt;a class="lnlinks" href="#hl-5-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-5"&gt;&lt;a class="lnlinks" href="#hl-5-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-6"&gt;&lt;a class="lnlinks" href="#hl-5-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-5-7"&gt;&lt;a class="lnlinks" href="#hl-5-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;EntwinerForFooable&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;IFooable&lt;/span&gt;
@@ -262,21 +255,21 @@ following:
 &lt;/div&gt;&lt;p&gt;Whereas an untwiner for IFooable could be hand-crafted as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-6-1"&gt;&lt;a class="lnlinks" href="#hl-6-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-2"&gt;&lt;a class="lnlinks" href="#hl-6-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-3"&gt;&lt;a class="lnlinks" href="#hl-6-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-4"&gt;&lt;a class="lnlinks" href="#hl-6-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-5"&gt;&lt;a class="lnlinks" href="#hl-6-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-6"&gt;&lt;a class="lnlinks" href="#hl-6-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-7"&gt;&lt;a class="lnlinks" href="#hl-6-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-8"&gt;&lt;a class="lnlinks" href="#hl-6-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-9"&gt;&lt;a class="lnlinks" href="#hl-6-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-10"&gt;&lt;a class="lnlinks" href="#hl-6-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-11"&gt;&lt;a class="lnlinks" href="#hl-6-11"&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-12"&gt;&lt;a class="lnlinks" href="#hl-6-12"&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-13"&gt;&lt;a class="lnlinks" href="#hl-6-13"&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-14"&gt;&lt;a class="lnlinks" href="#hl-6-14"&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-6-15"&gt;&lt;a class="lnlinks" href="#hl-6-15"&gt;15&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;UntwinerForFooable&lt;/span&gt;
@@ -299,13 +292,13 @@ following:
 &lt;/div&gt;&lt;p&gt;With the above classes, we can now write the following piece of awesomeness:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-7-1"&gt;&lt;a class="lnlinks" href="#hl-7-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-2"&gt;&lt;a class="lnlinks" href="#hl-7-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-3"&gt;&lt;a class="lnlinks" href="#hl-7-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-4"&gt;&lt;a class="lnlinks" href="#hl-7-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-5"&gt;&lt;a class="lnlinks" href="#hl-7-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-6"&gt;&lt;a class="lnlinks" href="#hl-7-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-7-7"&gt;&lt;a class="lnlinks" href="#hl-7-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run2&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -323,21 +316,21 @@ following:
 &lt;/h3&gt;&lt;p&gt;It is possible to write a general-purpose untwiner that does its job using reflection, but reflection is slow, so the result is going to suffer performance-wise. For the sake of completeness, here is a possible implementation for a general-purpose reflecting untwiner using reflection:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt; 1
-&lt;/span&gt;&lt;span class="lnt"&gt; 2
-&lt;/span&gt;&lt;span class="lnt"&gt; 3
-&lt;/span&gt;&lt;span class="lnt"&gt; 4
-&lt;/span&gt;&lt;span class="lnt"&gt; 5
-&lt;/span&gt;&lt;span class="lnt"&gt; 6
-&lt;/span&gt;&lt;span class="lnt"&gt; 7
-&lt;/span&gt;&lt;span class="lnt"&gt; 8
-&lt;/span&gt;&lt;span class="lnt"&gt; 9
-&lt;/span&gt;&lt;span class="lnt"&gt;10
-&lt;/span&gt;&lt;span class="lnt"&gt;11
-&lt;/span&gt;&lt;span class="lnt"&gt;12
-&lt;/span&gt;&lt;span class="lnt"&gt;13
-&lt;/span&gt;&lt;span class="lnt"&gt;14
-&lt;/span&gt;&lt;span class="lnt"&gt;15
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-8-1"&gt;&lt;a class="lnlinks" href="#hl-8-1"&gt; 1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-2"&gt;&lt;a class="lnlinks" href="#hl-8-2"&gt; 2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-3"&gt;&lt;a class="lnlinks" href="#hl-8-3"&gt; 3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-4"&gt;&lt;a class="lnlinks" href="#hl-8-4"&gt; 4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-5"&gt;&lt;a class="lnlinks" href="#hl-8-5"&gt; 5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-6"&gt;&lt;a class="lnlinks" href="#hl-8-6"&gt; 6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-7"&gt;&lt;a class="lnlinks" href="#hl-8-7"&gt; 7&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-8"&gt;&lt;a class="lnlinks" href="#hl-8-8"&gt; 8&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-9"&gt;&lt;a class="lnlinks" href="#hl-8-9"&gt; 9&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-10"&gt;&lt;a class="lnlinks" href="#hl-8-10"&gt;10&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-11"&gt;&lt;a class="lnlinks" href="#hl-8-11"&gt;11&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-12"&gt;&lt;a class="lnlinks" href="#hl-8-12"&gt;12&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-13"&gt;&lt;a class="lnlinks" href="#hl-8-13"&gt;13&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-14"&gt;&lt;a class="lnlinks" href="#hl-8-14"&gt;14&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-8-15"&gt;&lt;a class="lnlinks" href="#hl-8-15"&gt;15&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ReflectingUntwiner&lt;/span&gt; &lt;span class="c1"&gt;//WARNING: SLOW AS MOLASSES&lt;/span&gt;
@@ -362,35 +355,21 @@ following:
 &lt;h3 id="automating-it-with-intertwine"&gt;Automating it with Intertwine
 &lt;/h3&gt;&lt;p&gt;The Intertwine library will automatically generate for us a pair of optimally-performing entwiner and untwiner classes for any interface. These classes are generated at runtime, so no extra build step is needed. To accomplish this, the C# implementation of Intertwine generates MSIL and creates assemblies from it; the Java Implementation generates bytecode and creates classes from it.&lt;/p&gt;
 &lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an entwiner:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;NewEntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;anycall&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For &lt;code&gt;T&lt;/code&gt; we give the type of our interface, and for &lt;code&gt;anycall&lt;/code&gt; we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given &lt;code&gt;AnyCall&lt;/code&gt; instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our &lt;code&gt;AnyCall&lt;/code&gt; delegate.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;NewEntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;anycall&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;T&lt;/code&gt; we give the type of our interface, and for &lt;code&gt;anycall&lt;/code&gt; we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given &lt;code&gt;AnyCall&lt;/code&gt; instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our &lt;code&gt;AnyCall&lt;/code&gt; delegate.&lt;/p&gt;
 &lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an untwiner:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
-&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;NewUntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;For target we give an implementation of our interface, and what we get is a reference to an &lt;code&gt;AnyCall&lt;/code&gt; delegate implemented by an Untwiner-derived class that was dynamically generated specifically for our interface, and instantiated to work with the given target instance. For every call received through the &lt;code&gt;AnyCall&lt;/code&gt; delegate, this special untwiner will be unmarshalling the arguments and forwarding the call to the appropriate method of our target interface.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;NewUntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For target we give an implementation of our interface, and what we get is a reference to an &lt;code&gt;AnyCall&lt;/code&gt; delegate implemented by an Untwiner-derived class that was dynamically generated specifically for our interface, and instantiated to work with the given target instance. For every call received through the &lt;code&gt;AnyCall&lt;/code&gt; delegate, this special untwiner will be unmarshalling the arguments and forwarding the call to the appropriate method of our target interface.&lt;/p&gt;
 &lt;p&gt;So, with the dynamically generated entwiners and untwiners we can now do the following epicness:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
-&lt;/span&gt;&lt;span class="lnt"&gt;7
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-11-1"&gt;&lt;a class="lnlinks" href="#hl-11-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-2"&gt;&lt;a class="lnlinks" href="#hl-11-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-3"&gt;&lt;a class="lnlinks" href="#hl-11-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-4"&gt;&lt;a class="lnlinks" href="#hl-11-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-5"&gt;&lt;a class="lnlinks" href="#hl-11-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-6"&gt;&lt;a class="lnlinks" href="#hl-11-6"&gt;6&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-11-7"&gt;&lt;a class="lnlinks" href="#hl-11-7"&gt;7&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="n"&gt;Run3&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
@@ -417,12 +396,12 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;p&gt;Consider the following interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
-&lt;/span&gt;&lt;span class="lnt"&gt;4
-&lt;/span&gt;&lt;span class="lnt"&gt;5
-&lt;/span&gt;&lt;span class="lnt"&gt;6
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-12-1"&gt;&lt;a class="lnlinks" href="#hl-12-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-2"&gt;&lt;a class="lnlinks" href="#hl-12-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-3"&gt;&lt;a class="lnlinks" href="#hl-12-3"&gt;3&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-4"&gt;&lt;a class="lnlinks" href="#hl-12-4"&gt;4&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-5"&gt;&lt;a class="lnlinks" href="#hl-12-5"&gt;5&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-12-6"&gt;&lt;a class="lnlinks" href="#hl-12-6"&gt;6&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;interface&lt;/span&gt; &lt;span class="nc"&gt;ITableNotification&lt;/span&gt;
@@ -436,9 +415,9 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;/div&gt;&lt;p&gt;And consider the following hypothetical (not actually possible) way of using it:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-13-1"&gt;&lt;a class="lnlinks" href="#hl-13-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-13-2"&gt;&lt;a class="lnlinks" href="#hl-13-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-13-3"&gt;&lt;a class="lnlinks" href="#hl-13-3"&gt;3&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;event&lt;/span&gt; &lt;span class="n"&gt;ITableNotification&lt;/span&gt; &lt;span class="n"&gt;tableNotificationEvent&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
@@ -449,9 +428,9 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;/div&gt;&lt;p&gt;The above does not work because events in C# work only with delegates, not with interfaces. However, with Intertwine, the next best thing is actually possible:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
-&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
-&lt;/span&gt;&lt;span class="lnt"&gt;2
-&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-14-1"&gt;&lt;a class="lnlinks" href="#hl-14-1"&gt;1&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-14-2"&gt;&lt;a class="lnlinks" href="#hl-14-2"&gt;2&lt;/a&gt;
+&lt;/span&gt;&lt;span class="lnt" id="hl-14-3"&gt;&lt;a class="lnlinks" href="#hl-14-3"&gt;3&lt;/a&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;tableNotificationEventManager&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;InterfaceEventManager&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;ITableNotifcation&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;();&lt;/span&gt;
