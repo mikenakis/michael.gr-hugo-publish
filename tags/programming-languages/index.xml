@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming languages on Michael's Blog</title><link>https://blog2.michael.gr/tags/programming-languages/</link><description>Recent content in Programming languages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 21 Jan 2026 10:28:27 +0100</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/programming-languages/index.xml" rel="self" type="application/rss+xml"/><item><title>On messages and message-passing</title><link>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</link><pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-messages-and-message-passing/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming languages on Michael's Blog</title><link>https://blog.michael.gr/tags/programming-languages/</link><description>Recent content in Programming languages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 21 Jan 2026 10:28:27 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/programming-languages/index.xml" rel="self" type="application/rss+xml"/><item><title>On messages and message-passing</title><link>https://blog.michael.gr/post/2022-12-messages-and-message-passing/</link><pubDate>Sun, 18 Dec 2022 08:59:25 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-messages-and-message-passing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-messages-and-message-passing/media/message-passing.png"
 width="2673"
 height="1494"
 loading="lazy"
@@ -9,7 +9,7 @@ data-flex-basis="429px"
 &lt;/p&gt;
 &lt;p&gt;Over the decades, numerous software system architectures have emerged which require invocations across subsystems to be done via message-passing instead of programmatic interface method calls. Such architectures are so common that many programmers have come to regard message-passing as an end in and of itself, oblivious of the fact that it is nothing but a (poor) technical mechanism for accomplishing a certain architectural goal.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The architectural goal is to be able to perform general-purpose operations on invocations, for example routing the invocations according to configuration, or queuing the invocations for delivery on a different thread. In order to be able to do things like that, the invocations must first be expressed in a general-purpose form.&lt;/p&gt;
 &lt;p&gt;Message-passing is simply the only general-purpose form that could be imagined by the pioneers who built the first asynchronous event-driven systems, or perhaps the only form that could readily be implemented using the programming languages available back then. However, in succeeding decades our thinking and our tools have advanced considerably, to the point where we now have much better ways of achieving things technically, so it might be worth taking a moment to re-examine the concept of message-passing.&lt;/p&gt;
@@ -31,12 +31,12 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;Furthermore, if we bother creating such packaging and unpackaging adaptors, the realization quickly starts to sink-in that all the message classes are irrelevant; there is no need to define a special message class containing a separate field for each parameter of each method, because the only code that would ever deal with such a class would be the corresponding pair of packaging and unpackaging adaptors; so, the adaptors might as well use a single universal message class which simply stores all parameters in an array of object, and voila, the entire menagerie of message classes becomes entirely unnecessary.&lt;/p&gt;
 &lt;p&gt;Thus, it becomes evident that what we are really after is not message-passing per se; it is some general-purpose form of expressing invocations, so that general-purpose operations can be performed on them, and some mechanism for converting back and forth between this general-purpose form and the natural form, which is programmatic interface method calls, so that we can write code naturally. Ideally, the conversion mechanism would be automatic and transparent, so that we do not even have to write those adaptors. Messages have only existed due to the historical absence of such an automatic and transparent mechanism.&lt;/p&gt;
 &lt;p&gt;Fortunately, with modern reflecting, intermediate-code-based, just-in-time compiled programming languages, today we have at our disposal all that is necessary to build such mechanisms. For more information see &lt;a
-href="https://blog2.michael.gr/post/2022-12-intertwine/"
+href="https://blog.michael.gr/post/2022-12-intertwine/"
 &gt;Intertwine&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2022-12-messages-and-message-passing/media/grumpy-cat-message-passing.jpg"
 width="493"
 height="555"
 loading="lazy"
@@ -54,14 +54,14 @@ data-flex-basis="213px"
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: Conceptual illustration of message-passing, by michael.gr, based on original art by Youmena and Made from the Noun Project.&lt;/p&gt;</description></item><item><title>Intertwine</title><link>https://blog2.michael.gr/post/2022-12-intertwine/</link><pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-12-intertwine/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-12-intertwine/media/intertwine-logo.svg"
+&lt;p&gt;Cover image: Conceptual illustration of message-passing, by michael.gr, based on original art by Youmena and Made from the Noun Project.&lt;/p&gt;</description></item><item><title>Intertwine</title><link>https://blog.michael.gr/post/2022-12-intertwine/</link><pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-intertwine/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-intertwine/media/intertwine-logo.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="the-problem"&gt;The Problem
 &lt;/h3&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
@@ -79,7 +79,7 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a
-href="https://blog2.michael.gr/post/2022-12-messages-and-message-passing/"
+href="https://blog.michael.gr/post/2022-12-messages-and-message-passing/"
 &gt;On messages and message-passing&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -444,10 +444,10 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 href="https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing" target="_blank"
 &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
 &lt;p&gt;This post supersedes the original post from 2011: &lt;a
-href="https://blog2.michael.gr/post/2011-10-16-intertwine-normalizing-interface/"
+href="https://blog.michael.gr/post/2011-10-16-intertwine-normalizing-interface/"
 &gt;Intertwine: Normalizing Interface Invocations&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description></item><item><title>On Visual Programming Languages</title><link>https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/</link><pubDate>Tue, 16 Aug 2022 10:48:21 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/media/visual-programming-language-logos.png"
+&lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description></item><item><title>On Visual Programming Languages</title><link>https://blog.michael.gr/post/2022-08-on-visual-programming-languages/</link><pubDate>Tue, 16 Aug 2022 10:48:21 +0000</pubDate><guid>https://blog.michael.gr/post/2022-08-on-visual-programming-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-08-on-visual-programming-languages/media/visual-programming-language-logos.png"
 width="1930"
 height="851"
 loading="lazy"
@@ -457,18 +457,18 @@ data-flex-basis="544px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;This post is intended as support material for another post of mine; see &lt;a
-href="https://blog2.michael.gr/post/2023-12-09-authoritative-technical-design/"
+href="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/"
 &gt;Towards Authoritative Software Design&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The idea of creating software using visual tools has existed ever since the first aspiring programmer was bitterly disillusioned by discovering that programming almost exclusively entails writing lots of little text files containing nothing but boring and cryptic text.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Given the relative abundance of people who engage in programming, and the relative scarcity of people who engage in software design, it should come as no surprise that visual software development has largely been regarded as an issue of visual programming rather than an issue of visual software design.&lt;/p&gt;
 &lt;p&gt;Thus, there has been a multitude of attempts to create so-called &lt;em&gt;Visual Programming Languages&lt;/em&gt; (&lt;a class="external"
 href="https://en.wikipedia.org/wiki/Visual_programming_language" target="_blank"
 &gt;see Wikipedia&lt;/a&gt;) such as Snap!, Scratch, EduBlocks, Blockly, etc. where code is expressed not as boring text, but instead as colorful blocks on a canvas.&lt;/p&gt;
 &lt;p&gt;The following example is borrowed from &lt;em&gt;Computer Science with Snap!&lt;/em&gt; by Eckart Modrow from University of Goettingen, 2018.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-08-on-visual-programming-languages/media/snap.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-08-on-visual-programming-languages/media/snap.png"
 width="482"
 height="476"
 loading="lazy"
@@ -481,13 +481,13 @@ data-flex-basis="243px"
 &lt;p&gt;The usefulness of these languages goes as far as teaching the basic principles of programming to kids, using elements that are colorful and can be manipulated with the mouse, but no further, because as it turns out, code expressed as text is far more expressive, terse, and malleable than blocks.&lt;/p&gt;
 &lt;p&gt;(Not to mention, less distracting and less likely to cause epileptic seizures due to excessive application of color.)&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: Logos of various visual programming languages.&lt;/p&gt;</description></item><item><title>What is wrong with Scala</title><link>https://blog2.michael.gr/post/2021-10-what-is-wrong-with-scala/</link><pubDate>Mon, 04 Oct 2021 15:39:46 +0000</pubDate><guid>https://blog2.michael.gr/post/2021-10-what-is-wrong-with-scala/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2021-10-what-is-wrong-with-scala/media/scala.svg"
+&lt;p&gt;Cover image: Logos of various visual programming languages.&lt;/p&gt;</description></item><item><title>What is wrong with Scala</title><link>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</link><pubDate>Mon, 04 Oct 2021 15:39:46 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/media/scala.svg"
 loading="lazy"
 &gt;
 This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
 &lt;p&gt;I will be amending and revising these texts over time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="what-is-wrong-with-scala"&gt;What is wrong with Scala:
 &lt;/h2&gt;&lt;ul&gt;
@@ -530,14 +530,14 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;li&gt;Inelegant built-in collection class names like &lt;code&gt;Seq&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note: the above list of disadvantages is kind of short, because I am &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; intimately familiar with the language.&lt;/p&gt;
-&lt;p&gt;Feedback is more than welcome: you'd be doing me a favor. However, be aware that blogger sometimes eats comments, so be sure to save your text before submitting it. If blogger eats your comment, please e-mail it to me.&lt;/p&gt;</description></item><item><title>What is wrong with C#</title><link>https://blog2.michael.gr/post/2021-10-what-is-wrong-with-csharp/</link><pubDate>Mon, 04 Oct 2021 15:25:56 +0000</pubDate><guid>https://blog2.michael.gr/post/2021-10-what-is-wrong-with-csharp/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2021-10-what-is-wrong-with-csharp/media/csharp.svg"
+&lt;p&gt;Feedback is more than welcome: you'd be doing me a favor. However, be aware that blogger sometimes eats comments, so be sure to save your text before submitting it. If blogger eats your comment, please e-mail it to me.&lt;/p&gt;</description></item><item><title>What is wrong with C#</title><link>https://blog.michael.gr/post/2021-10-what-is-wrong-with-csharp/</link><pubDate>Mon, 04 Oct 2021 15:25:56 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-what-is-wrong-with-csharp/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-what-is-wrong-with-csharp/media/csharp.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
 &lt;p&gt;I will be amending and revising these texts over time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="what-is-wrong-with-c"&gt;What is wrong with C#:
 &lt;/h2&gt;&lt;ul&gt;
@@ -646,13 +646,13 @@ href="https://stackoverflow.com/q/60729865/773113" target="_blank"
 &lt;li&gt;If you omit the &lt;code&gt;break&lt;/code&gt; at the end, the compiler complains that &lt;code&gt;Control cannot fall out of switch from final case label&lt;/code&gt;. Huh?&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>What is wrong with Java</title><link>https://blog2.michael.gr/post/2021-10-what-is-wrong-with-java/</link><pubDate>Mon, 04 Oct 2021 15:22:38 +0000</pubDate><guid>https://blog2.michael.gr/post/2021-10-what-is-wrong-with-java/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2021-10-what-is-wrong-with-java/media/java.svg"
+&lt;/ul&gt;</description></item><item><title>What is wrong with Java</title><link>https://blog.michael.gr/post/2021-10-what-is-wrong-with-java/</link><pubDate>Mon, 04 Oct 2021 15:22:38 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-what-is-wrong-with-java/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-what-is-wrong-with-java/media/java.svg"
 loading="lazy"
 &gt;
 This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
 &lt;p&gt;I will be amending and revising these texts over time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="what-is-wrong-with-java"&gt;What is wrong with Java:
 &lt;/h2&gt;&lt;ul&gt;
@@ -883,13 +883,13 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;li&gt;Class&amp;lt;T&amp;gt; is a misnomer. It is actually a type, because it may stand for either a class or an interface. C# does better here, too.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note: the above list of disadvantages is kind of long, because I am intimately familiar with the language.&lt;/p&gt;
-&lt;p&gt;Feedback is more than welcome: you'd be doing me a favor. However, be aware that blogger sometimes eats comments, so be sure to save your text before submitting it. If blogger eats your comment, please e-mail it to me.&lt;/p&gt;</description></item><item><title>What is wrong with C++</title><link>https://blog2.michael.gr/post/2021-10-what-is-wrong-with-cplusplus/</link><pubDate>Mon, 04 Oct 2021 14:23:59 +0000</pubDate><guid>https://blog2.michael.gr/post/2021-10-what-is-wrong-with-cplusplus/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2021-10-what-is-wrong-with-cplusplus/media/cplusplus.svg"
+&lt;p&gt;Feedback is more than welcome: you'd be doing me a favor. However, be aware that blogger sometimes eats comments, so be sure to save your text before submitting it. If blogger eats your comment, please e-mail it to me.&lt;/p&gt;</description></item><item><title>What is wrong with C++</title><link>https://blog.michael.gr/post/2021-10-what-is-wrong-with-cplusplus/</link><pubDate>Mon, 04 Oct 2021 14:23:59 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-what-is-wrong-with-cplusplus/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-what-is-wrong-with-cplusplus/media/cplusplus.svg"
 loading="lazy"
 &gt;
 This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
 &lt;p&gt;I will be amending and revising these texts over time.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="what-is-wrong-with-c"&gt;What is wrong with C++:
 &lt;/h2&gt;&lt;ul&gt;
@@ -953,7 +953,7 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;And in some cases I'd say you are flat wrong&lt;/p&gt;
 &lt;p&gt;&amp;quot;Templates do not promote abstraction&amp;quot; &amp;lt;- You can't add an interface to a class post-hoc, whereas you can have a class that models a type constraint post-hoc&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>A Programming Language</title><link>https://blog2.michael.gr/post/2022-07-a-programming-language/</link><pubDate>Wed, 01 Sep 2021 04:47:26 +0000</pubDate><guid>https://blog2.michael.gr/post/2022-07-a-programming-language/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2022-07-a-programming-language/media/a-programming-language-cover.jpg"
+&lt;/ul&gt;</description></item><item><title>A Programming Language</title><link>https://blog.michael.gr/post/2022-07-a-programming-language/</link><pubDate>Wed, 01 Sep 2021 04:47:26 +0000</pubDate><guid>https://blog.michael.gr/post/2022-07-a-programming-language/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-07-a-programming-language/media/a-programming-language-cover.jpg"
 width="1000"
 height="667"
 loading="lazy"
@@ -978,7 +978,7 @@ data-flex-basis="359px"
 &lt;p&gt;This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust.&lt;/p&gt;
 &lt;h3 id="summary-of-language-characteristics"&gt;Summary of language characteristics
 &lt;/h3&gt;&lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The main goals of the language are achieved via the following characteristics:&lt;/p&gt;
 &lt;ul&gt;
@@ -1032,16 +1032,16 @@ href="https://blog2.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;For a list of shortcomings of other languages, which this language intends to fix, see:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a
-href="https://blog2.michael.gr/post/2021-10-what-is-wrong-with-cplusplus/"
+href="https://blog.michael.gr/post/2021-10-what-is-wrong-with-cplusplus/"
 &gt;What is wrong with C++&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a
-href="https://blog2.michael.gr/post/2021-10-what-is-wrong-with-java/"
+href="https://blog.michael.gr/post/2021-10-what-is-wrong-with-java/"
 &gt;What is wrong with Java&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a
-href="https://blog2.michael.gr/post/2021-10-what-is-wrong-with-csharp/"
+href="https://blog.michael.gr/post/2021-10-what-is-wrong-with-csharp/"
 &gt;What is wrong with C#&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a
-href="https://blog2.michael.gr/post/2021-10-what-is-wrong-with-scala/"
+href="https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/"
 &gt;What is wrong with Scala&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -2084,7 +2084,7 @@ static, public, protected, and private methods.&lt;/li&gt;
 &lt;p&gt;Built-in support for testing.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Bundled Testana, see &lt;a
-href="https://blog2.michael.gr/post/2024-10-testana/"
+href="https://blog.michael.gr/post/2024-10-testana/"
 &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Somewhat different testing semantics than JUnit:
 &lt;ul&gt;
@@ -2198,52 +2198,52 @@ will never change it.)&lt;/li&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &amp;quot;Coding Software Running On A Computer Monitor&amp;quot; by Scopio from NounProject.com&lt;/p&gt;</description></item><item><title>C# Bloopers</title><link>https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/</link><pubDate>Thu, 05 Jan 2012 12:21:02 +0000</pubDate><guid>https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2012-01-05-csharp-bloopers/media/csharp-logo-2023.svg"
+&lt;p&gt;Cover image: &amp;quot;Coding Software Running On A Computer Monitor&amp;quot; by Scopio from NounProject.com&lt;/p&gt;</description></item><item><title>C# Bloopers</title><link>https://blog.michael.gr/post/2012-01-05-csharp-bloopers/</link><pubDate>Thu, 05 Jan 2012 12:21:02 +0000</pubDate><guid>https://blog.michael.gr/post/2012-01-05-csharp-bloopers/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2012-01-05-csharp-bloopers/media/csharp-logo-2023.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Please do not get me wrong; C# is awesome. It is the language of my choice, even though I am pretty well versed in C++ and Java. That having been said, it cannot be denied that C# has its share of flaws, too. In this series of posts I am documenting some of them, in no particular order.&lt;/p&gt;
 &lt;p&gt;Also please note that some of the issues described here are Visual Studio bloopers, or DotNet bloopers, and not C#-in-general bloopers.&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/"
+href="https://blog.michael.gr/post/2011-12-31-csharp-blooper-1-no-warnings-about/"
 &gt;C# Blooper №1: No warnings about uninitialized readonly members&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/"
+href="https://blog.michael.gr/post/2012-01-06-csharp-blooper-2-no-warnings-about/"
 &gt;C# Blooper №2: No warnings about accessing uninitialized members&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/"
+href="https://blog.michael.gr/post/2012-01-06-csharp-blooper-3-no-warnings-about-fields/"
 &gt;C# Blooper №3: No warnings about fields having already been initialized&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
+href="https://blog.michael.gr/post/2012-11-09-csharp-blooper-4-lameannoying-variable/"
 &gt;C# Blooper №4: Lame/annoying variable scoping rules, Part 1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/"
+href="https://blog.michael.gr/post/2012-11-09-csharp-blooper-5-lameannoying-variable/"
 &gt;C# Blooper №5: Lame/annoying variable scoping rules, Part 2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/"
+href="https://blog.michael.gr/post/2012-11-09-csharp-blooper-6-no-warnings-about-unused/"
 &gt;C# Blooper №6: No warnings about unused parameters&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/"
+href="https://blog.michael.gr/post/2012-11-10-csharp-blooper-7-no-warnings-about-unused/"
 &gt;C# Blooper №7: No warnings about unused private methods&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/"
+href="https://blog.michael.gr/post/2013-01-04-csharp-blooper-8-no-warnings-for-conditions/"
 &gt;C# Blooper №8: No warnings for conditions that are always true/false&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/"
+href="https://blog.michael.gr/post/2013-01-04-csharp-blooper-9-annoying-case-statement/"
 &gt;C# Blooper №9: Annoying case statement fall-through rules&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/"
+href="https://blog.michael.gr/post/2013-01-04-csharp-blooper-10-switch-statements-are-not/"
 &gt;C# Blooper №10: Switch statements are not properly formatted&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/"
+href="https://blog.michael.gr/post/2013-01-04-csharp-blooper-11-zero-to-enum-conversion/"
 &gt;C# Blooper №11: Zero to Enum conversion weirdness&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/"
+href="https://blog.michael.gr/post/2013-01-04-csharp-blooper-12-where-constraints-not/"
 &gt;C# Blooper №12: 'Where' constraints not included in method signatures&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/"
+href="https://blog.michael.gr/post/2013-01-04-csharp-blooper-13-stack-and-queue-do-not/"
 &gt;C# Blooper №13: 'Stack' and 'Queue' do not implement 'ICollection'&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a
-href="https://blog2.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/"
+href="https://blog.michael.gr/post/2013-01-04-csharp-blooper-14-weird-annoying-interface/"
 &gt;C# Blooper №14: Weird / annoying interface method visibility rules&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Stay tuned, there is more to come.&lt;/p&gt;</description></item></channel></rss>

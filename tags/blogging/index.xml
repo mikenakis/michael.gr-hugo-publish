@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogging on Michael's Blog</title><link>https://blog2.michael.gr/tags/blogging/</link><description>Recent content in Blogging on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 21 Jan 2026 07:52:24 +0100</lastBuildDate><atom:link href="https://blog2.michael.gr/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>New year, new blog!</title><link>https://blog2.michael.gr/post/2026-01-08-new-blog/</link><pubDate>Thu, 08 Jan 2026 12:05:54 +0100</pubDate><guid>https://blog2.michael.gr/post/2026-01-08-new-blog/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2026-01-08-new-blog/media/new-blog.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogging on Michael's Blog</title><link>https://blog.michael.gr/tags/blogging/</link><description>Recent content in Blogging on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 14:41:36 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>New year, new blog!</title><link>https://blog.michael.gr/post/2026-01-08-new-blog/</link><pubDate>Thu, 08 Jan 2026 12:05:54 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-08-new-blog/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-08-new-blog/media/new-blog.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;As of today, I have a brand new blog. The old posts are still here, but the look and feel, and everything under the hood, is different. Everything is still free, except the domain name.&lt;/p&gt;
-&lt;p&gt;This post gives a high-level explanation of how I did it.&lt;/p&gt;
+&lt;p&gt;As of today, I have a brand new blog. The old posts are still here, but the look and feel, and everything under the hood, is different. Everything is still free for me, except the domain name.&lt;/p&gt;
+&lt;p&gt;This post lists the technologies involved in editing and publishing my blog.&lt;/p&gt;
 &lt;p&gt;To read why I transitioned from my old blog to this new blog, see &lt;a
-href="https://blog2.michael.gr/post/2026-01-07-goodbye-blogger/"
+href="https://blog.michael.gr/post/2026-01-07-goodbye-blogger/"
 &gt;Goodbye blogger!&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="repository-github"&gt;Repository: GitHub
 &lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-github.svg" alt="GitHub logo"/&gt;The blog content now consists of markdown files and image files. They all live in a private repository on &lt;a class="external"
@@ -44,7 +44,7 @@ href="https://en.wikipedia.org/wiki/Inkscape" target="_blank"
 &lt;hr&gt;
 &lt;p&gt;Of course, this is not to say that all of the above tools and technologies are without problems; I will probably be writing some grumpy post in the future listing the issues that I have with each of them. But for now, I am really enjoying the new look of my blog.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: the logos of the technologies that I am currently using for blogging.&lt;/p&gt;</description></item><item><title>Goodbye blogger!</title><link>https://blog2.michael.gr/post/2026-01-07-goodbye-blogger/</link><pubDate>Wed, 07 Jan 2026 08:33:59 +0100</pubDate><guid>https://blog2.michael.gr/post/2026-01-07-goodbye-blogger/</guid><description>&lt;p&gt;&lt;img src="https://blog2.michael.gr/post/2026-01-07-goodbye-blogger/media/blogger-logo.svg"
+&lt;p&gt;Cover image: the logos of the technologies that I am currently using for blogging.&lt;/p&gt;</description></item><item><title>Goodbye blogger!</title><link>https://blog.michael.gr/post/2026-01-07-goodbye-blogger/</link><pubDate>Wed, 07 Jan 2026 08:33:59 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-07-goodbye-blogger/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-07-goodbye-blogger/media/blogger-logo.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -92,7 +92,7 @@ href="https://blogger.com" target="_blank"
 href="https://github.com/mikenakis/MarkdownFromBlogger" target="_blank"
 &gt;https://github.com/mikenakis/MarkdownFromBlogger&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Once I converted my blogger content to markdown and media files, the next step was to create my new blog from those. How I created it, and how I maintain it, is described in &lt;a
-href="https://blog2.michael.gr/post/2026-01-08-new-blog/"
+href="https://blog.michael.gr/post/2026-01-08-new-blog/"
 &gt;New year, new blog!&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: the blogger logo from &lt;a class="external"
