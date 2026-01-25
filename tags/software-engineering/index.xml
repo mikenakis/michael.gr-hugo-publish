@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 23 Jan 2026 20:28:21 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Technical debt</title><link>https://blog.michael.gr/post/2025-09-technical-debt/</link><pubDate>Wed, 17 Sep 2025 07:28:57 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-technical-debt/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-technical-debt/media/sisyphus.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 15:42:23 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Technical debt</title><link>https://blog.michael.gr/post/2025-09-technical-debt/</link><pubDate>Wed, 17 Sep 2025 07:28:57 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-technical-debt/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-technical-debt/media/sisyphus.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -4617,8 +4617,7 @@ immutable value.&lt;/li&gt;
 &lt;li&gt;Static analysis does not work when a class is an unmodifiable collection of elements, where the elements can be of any type. The most famous examples in this category are the JDK-internal classes &lt;code&gt;java.util.ListN&lt;/code&gt; and &lt;code&gt;java.util.List12&lt;/code&gt;, instances of which are returned by &lt;code&gt;java.util.List.of()&lt;/code&gt; and its overloads.
 &lt;ul&gt;
 &lt;li&gt;Some static analysis tools assess such classes as immutable, which can be
-a false positive, e.g. in the case of &lt;code&gt;List.of( new
-StringBuilder() )&lt;/code&gt;.&lt;/li&gt;
+a false positive, e.g. in the case of &lt;code&gt;List.of( new StringBuilder() )&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Some static analysis tools assess such classes as mutable, which can be a
 false negative, e.g. in the case of &lt;code&gt;List.of( 1 )&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -10810,14 +10809,15 @@ href="https://www.techsummit.io/amsterdam/" target="_blank"
 &lt;iframe allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/5bvgTs7DfJ0" width="560"&gt;&lt;/iframe&gt;
 &lt;p&gt;Mind you, these were just the talks that I attended. There were more, some happening in parallel, and at least one more happening after I left. (By the time 6th talk was over, my brain was fried.)&lt;/p&gt;</description></item><item><title>What is wrong with UUIDs and GUIDs</title><link>https://blog.michael.gr/post/2017-06-on-uuids-and-guids/</link><pubDate>Mon, 12 Jun 2017 17:47:55 +0000</pubDate><guid>https://blog.michael.gr/post/2017-06-on-uuids-and-guids/</guid><description>&lt;h4 id="introduction"&gt;Introduction
 &lt;/h4&gt;&lt;p&gt;Universally Unique Identifiers (UUIDs) otherwise known as Globally Unique Identifiers (GUIDs) are 128-bit numbers that are often used to identify information. In its canonical representation, a UUID looks like this: 2205cf3e-139c-4abc-be2d-e29b692934b0.&lt;/p&gt;
-&lt;p&gt;The Wikipedia entry for Universally Unique Identifier (&lt;a class="external"
+&lt;p&gt;The Wikipedia entry for &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank"
-&gt;?&lt;/a&gt;) says that they are &lt;em&gt;for practical purposes unique&lt;/em&gt; and that &lt;em&gt;while the probability that a UUID will be duplicated is not zero, it is so close to zero as to be negligible.&lt;/em&gt; Wikipedia then does the math and shows that if 103 trillion UUIDs are generated, the chance of duplication among them is one in a billion.&lt;/p&gt;
-&lt;p&gt;Despite the infinitesimally small chances of receiving a duplicate UUID, there exist programmers out there who are afraid of this actually happening, and who will not hesitate to suspect duplicate UUIDs as being responsible for an observed malfunction rather than first look for a bug in their code. Clearly, these folks do not understand the meaning of &lt;em&gt;infinitesimally small chance&lt;/em&gt;, so let me try to explain it:&lt;/p&gt;
+&gt;Universally Unique Identifier&lt;/a&gt; says that they are &lt;em&gt;for practical purposes unique&lt;/em&gt; and that &lt;em&gt;while the probability that a UUID will be duplicated is not zero, it is so close to zero as to be negligible&lt;/em&gt;. Wikipedia then does the math and shows that if 103 trillion UUIDs are generated, the chance of duplication among them is one in a billion.&lt;/p&gt;
+&lt;p&gt;Despite the infinitesimally small chances of receiving a duplicate UUID, there exist programmers out there who are afraid of this actually happening, and who will not hesitate to suspect duplicate UUIDs as being responsible for an observed malfunction rather than first look for a bug in their code. Clearly, these folks do not understand the meaning of &lt;em&gt;infinitesimally small chance&lt;/em&gt;, so let me explain it:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;Infinitessimally small chance&lt;/em&gt; means &lt;em&gt;practically impossible to happen&lt;/em&gt;, and the &lt;em&gt;practically&lt;/em&gt; part is only mentioned for scientific correctness: practically, you can disregard the word &lt;em&gt;practically&lt;/em&gt; and consider it as simply &lt;em&gt;impossible to happen&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Infinitesimally small chance&lt;/strong&gt;&lt;/em&gt; means &lt;em&gt;&lt;strong&gt;practically impossible to happen&lt;/strong&gt;&lt;/em&gt;, and the &lt;em&gt;&lt;strong&gt;practically&lt;/strong&gt;&lt;/em&gt; part is only mentioned for scientific correctness: practically, you can disregard the word &lt;em&gt;&lt;strong&gt;practically&lt;/strong&gt;&lt;/em&gt; and consider it as simply &lt;em&gt;&lt;strong&gt;impossible to happen&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Great. Now, let me tell you why I hate UUIDs.&lt;/p&gt;
+&lt;p&gt;Great.&lt;/p&gt;
+&lt;p&gt;Now, let me tell you why I hate UUIDs.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
@@ -10833,9 +10833,9 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/h4&gt;&lt;p&gt;When looking at a table of columns, I find that the UUID column is always the angry column. This is because the 32 hexadecimal digits that make up a UUID have a higher concentration of entropy than anything else that I deal with during a regular working day. (It helps that IntelliJ IDEA spares me from having to see git commit hashes.) This is to say that the overwhelming majority of all the entropy that I am exposed to nowadays is due to seeing UUIDs. This was not happening in the days before the UUID; entire weeks could pass without seeing something as hopelessly nonsensical as a UUID, requiring me to coerce my brain to ignore it because &lt;em&gt;there is no sense to be made there&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;The higher the entropy of the visual stimulus we are exposed to, the higher the cognitive effort required to process it, even if just to dismiss it as un-processable. This makes UUIDs very tiresome to work with.&lt;/p&gt;
 &lt;h4 id="the-undebuggability"&gt;The Undebuggability
-&lt;/h4&gt;&lt;p&gt;Ben Morris says in &lt;em&gt;The Problem with GUIDs&lt;/em&gt; (&lt;a class="external"
+&lt;/h4&gt;&lt;p&gt;Ben Morris says in &lt;a class="external"
 href="https://www.ben-morris.com/the-problem-with-guids/" target="_blank"
-&gt;http://www.ben-morris.com/the-problem-with-guids/&lt;/a&gt;) :&lt;/p&gt;
+&gt;&lt;em&gt;The Problem with GUIDs&lt;/em&gt;&lt;/a&gt; :&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This readability issue is often dismissed as mere inconvenience, but it's a real problem for anybody who has to support applications or trouble-shoot data. GUIDs are often a lazy solution selected by developers who will not have to deal with the support consequences.&lt;/p&gt;
 &lt;/blockquote&gt;

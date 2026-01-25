@@ -583,8 +583,7 @@ immutable value.&lt;/li&gt;
 &lt;li&gt;Static analysis does not work when a class is an unmodifiable collection of elements, where the elements can be of any type. The most famous examples in this category are the JDK-internal classes &lt;code&gt;java.util.ListN&lt;/code&gt; and &lt;code&gt;java.util.List12&lt;/code&gt;, instances of which are returned by &lt;code&gt;java.util.List.of()&lt;/code&gt; and its overloads.
 &lt;ul&gt;
 &lt;li&gt;Some static analysis tools assess such classes as immutable, which can be
-a false positive, e.g. in the case of &lt;code&gt;List.of( new
-StringBuilder() )&lt;/code&gt;.&lt;/li&gt;
+a false positive, e.g. in the case of &lt;code&gt;List.of( new StringBuilder() )&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Some static analysis tools assess such classes as mutable, which can be a
 false negative, e.g. in the case of &lt;code&gt;List.of( 1 )&lt;/code&gt;.&lt;/li&gt;
 &lt;/ul&gt;

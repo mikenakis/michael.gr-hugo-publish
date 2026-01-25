@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogging on Michael's Blog</title><link>https://blog.michael.gr/tags/blogging/</link><description>Recent content in Blogging on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 14:41:36 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>New year, new blog!</title><link>https://blog.michael.gr/post/2026-01-08-new-blog/</link><pubDate>Thu, 08 Jan 2026 12:05:54 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-08-new-blog/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-08-new-blog/media/new-blog.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogging on Michael's Blog</title><link>https://blog.michael.gr/tags/blogging/</link><description>Recent content in Blogging on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 23:21:13 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>New year, new blog!</title><link>https://blog.michael.gr/post/2026-01-08-new-blog/</link><pubDate>Thu, 08 Jan 2026 12:05:54 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-08-new-blog/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-08-new-blog/media/new-blog.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -7,23 +7,39 @@ loading="lazy"
 &lt;p&gt;To read why I transitioned from my old blog to this new blog, see &lt;a
 href="https://blog.michael.gr/post/2026-01-07-goodbye-blogger/"
 &gt;Goodbye blogger!&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="repository-github"&gt;Repository: GitHub
-&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-github.svg" alt="GitHub logo"/&gt;The blog content now consists of markdown files and image files. They all live in a private repository on &lt;a class="external"
-href="https://en.wikipedia.org/wiki/GitHub" target="_blank"
-&gt;GitHub&lt;/a&gt;, a clone of which I have on my local computer. Every once in a while I push to origin, essentially creating a backup. This means that I can always view the history of all changes I make to my blog. Also, if something bad happens to my local computer, I have everything on GitHub. If something bad happens to GitHub, I have everything on my local computer.&lt;/p&gt;
-&lt;h3 id="markdown-editor-obsidian"&gt;Markdown editor: Obsidian
-&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-obsidian.svg" alt="Obsidian logo"/&gt;For editing the markdown files I use &lt;a class="external"
+&lt;h3 id="markdown"&gt;Markdown
+&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-markdown.svg" alt="MarkDown logo"/&gt;All the blog content now is in &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Markdown" target="_blank"
+&gt;Markdown&lt;/a&gt; files, which are just plain text files with some minimal formatting notation. This is very important to me, because it means that my blog content is now in an open format, as opposed to some vendor-specific format such as Blogger, WordPress, etc. Furthermore, since Markdown files are text files, they are extremely versatile: I can use any text editor to edit them, I can use text search tools, text transformation tools, I have unlimited search-and-replace capabilities, I can put them on version control, etc. I love Markdown. Everything should be in Markdown.&lt;/p&gt;
+&lt;h3 id="obsidian"&gt;Obsidian
+&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-obsidian.svg" alt="Obsidian logo"/&gt;For editing Markdown files I use &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Obsidian_%28software%29" target="_blank"
-&gt;Obsidian&lt;/a&gt;, a cross-platform desktop application which is proprietary but free. Obsidian gives me a very nice markdown editor, which, although not perfect, is probably the best in existence. Most importantly, Obsidian keeps all my links in sync, so I can freely rename content files and move them around without fearing that the links might be broken. Obsidian even has git integration, so I can push my files to GitHub with a click of a button. The important thing is that my blog content is now in an open format, as opposed to Blogger format, or WordPress format, etc. this means that I could switch to another markdown editor if I wanted to, without having to change the slightest thing in my blog content to accommodate that editor.&lt;/p&gt;
-&lt;h3 id="site-builder-hugo"&gt;Site builder: Hugo
-&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-hugo.svg" alt="Hugo logo"/&gt;For converting the markdown files into HTML I use &lt;a class="external"
+&gt;Obsidian&lt;/a&gt;, a cross-platform desktop application which is proprietary but free. Obsidian gives me a very nice markdown editor, which, although not perfect, is probably the best in existence. Most importantly, Obsidian keeps all my links in sync, so I can freely rename content files and move them around without fearing that the links might be broken. Finally, Obsidian is just a Markdown editor; if a better Markdown editor was to appear one day, I could very easily switch to it, because nothing about my blog content or my editing and publishing process depends specifically on Obsidian.&lt;/p&gt;
+&lt;h3 id="svg"&gt;SVG
+&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-svg.svg" alt="SVG logo"/&gt;My preferred image file format is &lt;a class="external"
+href="https://en.wikipedia.org/wiki/SVG" target="_blank"
+&gt;SVG&lt;/a&gt;, which stands for &lt;em&gt;Scalable Vector Graphics&lt;/em&gt;. Of course, in many situations raster images are necessary, and then I do of course use JPG, PNG, etc. but whenever I can, I use vector images in SVG format. I like SVG so much that on some occasions I have gone through the trouble using tracing software to vectorize raster images and create SVG images from them. This requires quite a bit of editing afterwards, so it is time consuming, but I like the small size and unlimited scalability of the result.&lt;/p&gt;
+&lt;h3 id="inkscape"&gt;Inkscape
+&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-inkscape.svg" alt="Inkscape logo"/&gt;For editing my SVG images I use &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Inkscape" target="_blank"
+&gt;Inkscape&lt;/a&gt;, a popular free and open-source editor for SVG images. As far as I know Inkscape is currently the best available option for SVG image editing, but if something better appears, I can switch to it in no time, because again, nothing about my content or my editing and publishing process depends specifically on Inkscape.&lt;/p&gt;
+&lt;h3 id="git"&gt;Git
+&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-git.svg" alt="Git logo"/&gt;For version control, I use &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Git" target="_blank"
+&gt;Git&lt;/a&gt;. This allows me to view the history of all changes that I have ever made to my blog. Luckily, there is an Obsidian plugin that provides integration with git, so I can always see what files I have changed from within Obsidian, and I can commit with a single click.&lt;/p&gt;
+&lt;h3 id="github"&gt;GitHub
+&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-github.svg" alt="GitHub logo"/&gt;For hosting my git repository on the cloud, I use &lt;a class="external"
+href="https://en.wikipedia.org/wiki/GitHub" target="_blank"
+&gt;GitHub&lt;/a&gt;. To prevent my drafts from being publicly visible by anyone, the repository is private. Every once in a while I push my local working copy to origin, essentially creating a backup. This means that if something bad happens to my local computer, I have everything on GitHub, and if something bad happens to GitHub, I have everything on my local computer. GitHub is also necessary for automating the publishing progress, see below.&lt;/p&gt;
+&lt;h3 id="hugo"&gt;Hugo
+&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-hugo.svg" alt="Hugo logo"/&gt;For converting the markdown files to a static website, I use &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Hugo_%28software%29" target="_blank"
-&gt;Hugo&lt;/a&gt;, a free, open-source, cross-platform, command-line tool that is distinguished for being much faster than other tools that serve the same purpose. Hugo reads the entire directory containing my markdown files, plus another entire directory containing a &amp;quot;Hugo theme&amp;quot;, and produces a new directory containing a static website. Hugo then remains running, acting as a local web-server, making my website available on http://localhost, so that I can view it using my web-browser. As an added bonus, each time I modify any of the content files or theme files, Hugo causes the browser to immediately show the change. Hugo can be replaced with something else, at the cost of learning a new theming mechanism and redoing theme customization.&lt;/p&gt;
-&lt;h3 id="hugo-theme-stack"&gt;Hugo theme: 'Stack'
+&gt;Hugo&lt;/a&gt;, a free, open-source, cross-platform, command-line tool that is distinguished for being much faster than other tools that serve the same purpose. Hugo reads the entire directory containing my markdown files, plus another entire directory containing a &amp;quot;Hugo theme&amp;quot;, and produces a new directory containing a static website, consisting of HTML, CSS and JavaScript files. Hugo then remains running, acting as a local web-server, making my website available on http://localhost, so that I can view it using my web-browser. As an added bonus, each time I modify any of the content files or theme files, Hugo causes the browser to immediately show the change. Hugo can be replaced with something else, at the cost of learning a new theming mechanism and redoing theme customization.&lt;/p&gt;
+&lt;h3 id="stack-theme-for-hugo"&gt;Stack theme for Hugo
 &lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-stack.svg" alt="Stack Hugo theme logo"/&gt;The theme that I currently use is based on the free, open-source &lt;a class="external"
 href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank"
 &gt;&amp;quot;Stack&amp;quot; theme for Hugo&lt;/a&gt;. I have customized the original theme to suit my needs, and my custom files also live on GitHub, alongside the content files. (Same repository but different directory.) When the original theme gets updated by its author, I use a git merge tool to combine the new changes with mine, resolving conflicts if necessary, just as I would do if I was merging program code. This theme could, in principle, be replaced with another, but that would require redoing the customization work.&lt;/p&gt;
-&lt;h3 id="commenting-intensedebate"&gt;Commenting: IntenseDebate
+&lt;h3 id="intensedebate"&gt;IntenseDebate
 &lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-intensedebate.svg" alt="IntenseDebate logo"/&gt;For commenting I use &lt;a class="external"
 href="https://intensedebate.com/" target="_blank"
 &gt;IntenseDebate&lt;/a&gt;, which is a free service provided by &lt;a class="external"
@@ -33,14 +49,10 @@ href="https://en.wikipedia.org/wiki/WordPress" target="_blank"
 &gt;WordPress&lt;/a&gt; and &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Gravatar" target="_blank"
 &gt;Gravatar&lt;/a&gt;. They provide a small HTML snippet which I have added at the right place in my theme, so it shows at the bottom of every post. The snippet handles everything comment-related: showing existing comments, adding a new comment, subscribing for notifications, etc. Blog commenting is all about spam control, which is a fairly complicated topic, and Automattic (sic) have a lot of experience with spam control, so I trust that they do it right. If it turns out that IntenseDebate does not suit my needs, I can easily replace it with something else.&lt;/p&gt;
-&lt;h3 id="hosting-netlify"&gt;Hosting: Netlify
-&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-netlify.svg" alt="Netlify logo"/&gt;For serving my static web-site to the world, I currently use a free hosting plan with &lt;a class="external"
+&lt;h3 id="netlify"&gt;Netlify
+&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-netlify.svg" alt="Netlify logo"/&gt;For serving my static website to the world, I currently have a free hosting plan with &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Netlify" target="_blank"
 &gt;Netlify&lt;/a&gt;, a well known web hosting company headquartered in San Francisco, USA. This free plan seems to offer enough to suit my needs, and can certainly be upgraded in the future if my personal blog grows into a blogging empire or something. Once the static website has been generated by Hugo, and I decide that it is ready for publishing, I push it to yet another private GitHub repository, and from there Netlify automatically clones it, processes it, and makes it available to the world. If it turns out that Netlify does not suit my needs, I can move my blog elsewhere. (I am planning to give CloudFlare a try.)&lt;/p&gt;
-&lt;h3 id="vector-image-editor-inkscape"&gt;Vector image editor: Inkscape
-&lt;/h3&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-inkscape.svg" alt="Inkscape logo"/&gt;Finally, since I am now in full possession and full control of my own content, I have replaced many of the PNG and JPG images in my blog with SVG images. For that, I use &lt;a class="external"
-href="https://en.wikipedia.org/wiki/Inkscape" target="_blank"
-&gt;Inkscape&lt;/a&gt;, a free and open-source SVG editor. I like SVG so much that on some occasions I have gone through the trouble using the tracing feature of Inkscape to produce SVG images from raster images. (This requires editing afterwards, so it is time consuming.) Again, the SVG format is open, so I can switch from Inkscape to any alternative without having to change the slightest thing in my content.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Of course, this is not to say that all of the above tools and technologies are without problems; I will probably be writing some grumpy post in the future listing the issues that I have with each of them. But for now, I am really enjoying the new look of my blog.&lt;/p&gt;
 &lt;hr&gt;

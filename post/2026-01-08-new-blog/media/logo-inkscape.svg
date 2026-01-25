@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    fill="none"
-   height="373.88171"
-   width="373.88171"
-   viewBox="0 0 373.88171 373.88171"
+   height="300"
+   width="300"
+   viewBox="0 0 300 300"
    version="1.1"
    id="svg27"
-   sodipodi:docname="lgoo-inkscape.svg"
+   sodipodi:docname="logo-inkscape.svg"
    xml:space="preserve"
    inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -274,16 +274,16 @@
        x2="231.37646"
        y2="200.07138" /></defs><sodipodi:namedview
      id="namedview27"
-     pagecolor="#ffffff"
+     pagecolor="#bdbdbd"
      bordercolor="#000000"
      borderopacity="0.25"
      inkscape:showpageshadow="2"
      inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pagecheckerboard="true"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.40292658"
-     inkscape:cx="-227.08852"
-     inkscape:cy="-121.61024"
+     inkscape:zoom="1.1396485"
+     inkscape:cx="198.7455"
+     inkscape:cy="175.49271"
      inkscape:window-width="1465"
      inkscape:window-height="1032"
      inkscape:window-x="334"
@@ -413,7 +413,7 @@
 	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
 </style><g
      id="g4"
-     transform="matrix(0.81011286,0,0,0.81011286,-1036.1343,-805.25218)"><circle
+     transform="matrix(0.65002872,0,0,0.65002872,-831.38673,-646.12855)"><circle
        style="fill:#ffffff;fill-opacity:1;stroke-width:11.3386;stroke-linecap:round"
        id="path14-232"
        cx="1509.759"
