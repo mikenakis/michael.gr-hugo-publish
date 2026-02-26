@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pages on Michael's Blog</title><link>https://blog.michael.gr/page/</link><description>Recent content in pages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 08:28:54 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Portfolio</title><link>https://blog.michael.gr/portfolio/</link><pubDate>Wed, 25 Feb 2026 16:24:36 +0100</pubDate><guid>https://blog.michael.gr/portfolio/</guid><description>&lt;table&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pages on Michael's Blog</title><link>https://blog.michael.gr/page/</link><description>Recent content in pages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 10:56:34 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Portfolio</title><link>https://blog.michael.gr/portfolio/</link><pubDate>Wed, 25 Feb 2026 16:24:36 +0100</pubDate><guid>https://blog.michael.gr/portfolio/</guid><description>&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Stack Exchange Badges&lt;/th&gt;
@@ -71,7 +71,7 @@ href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
 href="https://blog.michael.gr/post/2021-12-white-box-vs-black-box-testing/"
 &gt;White-Box vs. Black-Box Testing&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a
-href="https://blog.michael.gr/post/2021-12-full-stack-development/"
+href="https://blog.michael.gr/post/2018-04-full-stack-development/"
 &gt;What is wrong with Full Stack Development&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a
 href="https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/"

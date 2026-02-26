@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 07:21:40 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Technical debt</title><link>https://blog.michael.gr/post/2025-09-technical-debt/</link><pubDate>Wed, 17 Sep 2025 07:28:57 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-technical-debt/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-technical-debt/media/sisyphus.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 12:45:27 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Technical debt</title><link>https://blog.michael.gr/post/2025-09-technical-debt/</link><pubDate>Wed, 17 Sep 2025 07:28:57 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-technical-debt/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-technical-debt/media/sisyphus.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -9047,7 +9047,7 @@ href="https://en.wikipedia.org/wiki/Rectification_of_names" target="_blank"
 &lt;p&gt;Another thing we can all take home is that:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Confucius was not fond of confusion.&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>GitHub project: mikenakis-rumination</title><link>https://blog.michael.gr/post/2018-04-github-project-mikenakis-rumination/</link><pubDate>Wed, 11 Apr 2018 05:17:08 +0000</pubDate><guid>https://blog.michael.gr/post/2018-04-github-project-mikenakis-rumination/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/media/mikenakis-rumination-512.png"
+&lt;/blockquote&gt;</description></item><item><title>GitHub project: mikenakis-rumination</title><link>https://blog.michael.gr/post/2018-04-github-project-mikenakis-rumination/</link><pubDate>Wed, 11 Apr 2018 05:17:08 +0000</pubDate><guid>https://blog.michael.gr/post/2018-04-github-project-mikenakis-rumination/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2018-04-github-project-mikenakis-rumination/media/mikenakis-rumination.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -9465,10 +9465,10 @@ href="https://opensource.stackexchange.com/q/1154/10201" target="_blank"
 href="https://opensource.stackexchange.com/q/1154/10201" target="_blank"
 &gt;https://opensource.stackexchange.com/q/1154/10201&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;(Okay, if you compile any of my projects and run it once or twice in order to check it out, I promise I will turn a blind eye.)&lt;/p&gt;
-&lt;p&gt;If you want to do anything more with any of these projects, contact me.&lt;/p&gt;</description></item><item><title>What is wrong with Full Stack Development</title><link>https://blog.michael.gr/post/2021-12-full-stack-development/</link><pubDate>Sun, 01 Apr 2018 14:37:37 +0000</pubDate><guid>https://blog.michael.gr/post/2021-12-full-stack-development/</guid><description>&lt;table&gt;
+&lt;p&gt;If you want to do anything more with any of these projects, contact me.&lt;/p&gt;</description></item><item><title>What is wrong with Full Stack Development</title><link>https://blog.michael.gr/post/2018-04-full-stack-development/</link><pubDate>Sun, 01 Apr 2018 14:37:37 +0000</pubDate><guid>https://blog.michael.gr/post/2018-04-full-stack-development/</guid><description>&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2021-12-full-stack-development/media/tag-blogger.com,1999-blog-3494795920779884230.post-79094073589883987961.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2018-04-full-stack-development/media/inntel-hotel-zaandam.jpg"
 width="408"
 height="639"
 loading="lazy"
@@ -9485,24 +9485,6 @@ data-flex-basis="153px"
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h4 id="table-of-contents"&gt;Table of Contents
-&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;What is full-stack development&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Why is full-stack development necessary today&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;What is wrong with full-stack development&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Conclusion&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
-href="https://blog.michael.gr/post/2022-11-about-these-papers/"
-&gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h4 id="what-is-full-stack-development"&gt;What is full-stack development
 &lt;/h4&gt;&lt;p&gt;The predominant web application development model today requires splitting application logic in two parts:&lt;/p&gt;
 &lt;ul&gt;
@@ -9512,6 +9494,9 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;The front-end is typically written in JavaScript, while the back-end is typically written in Java, Scala, C#, or some other programming language. The two ends invariably communicate with each other via REST. The choice of JavaScript and REST is not due to any technical merit inherent in these technologies, (there is none,) but purely due to historical accident; see &lt;a
 href="https://blog.michael.gr/post/2020-10-19-the-wild-wild-web/"
 &gt;The Wild, Wild Web&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a
+href="https://blog.michael.gr/post/2022-11-about-these-papers/"
+&gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;A web application developer can either focus on one part of the stack, or work on both parts. Due to reasons that will be explained further down, more often than not, web developers are asked to work on both parts simultaneously. When this happens, it is known as full-stack development.&lt;/p&gt;
 &lt;p&gt;For the purposes of this paper, we will call full-stack development not just this mode of work, but also this architectural style as a whole: full-stack development is when application logic must be written both on the server and on the client.&lt;/p&gt;
 &lt;p&gt;Full-Stack Development is a paradox, since it suggests a way of work which is contrary to what common sense dictates. Common sense calls for specialists each working on their own area of specialization, so one would expect to see different developers focusing on different layers of the stack, and nobody ever attempting something as preposterous as working on all layers simultaneously. However, there is a technological hurdle which renders this necessary today.&lt;/p&gt;
@@ -9742,13 +9727,8 @@ individual company, but from a global perspective, we have collectively been
 &lt;p&gt;A solution that would confine all application logic to the server and thus
 eliminate full-stack development has the potential of being very beneficial to
 the industry as a whole.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-12-full-stack-development/media/grumpy-cat-full-stack-development-i-hate-it.jpg"
-width="500"
-height="461"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/2018/2018-04-full-stack-development/media/grumpy-cat-full-stack-development-i-hate-it.jpg"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="108"
-data-flex-basis="260px"
 &gt;
 &lt;/p&gt;</description></item><item><title>Douglas Crockford talking nonsense</title><link>https://blog.michael.gr/post/2018-03-douglas-crockford-talking-nonsense/</link><pubDate>Sat, 24 Mar 2018 14:30:34 +0000</pubDate><guid>https://blog.michael.gr/post/2018-03-douglas-crockford-talking-nonsense/</guid><description>&lt;iframe allowfullscreen="" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/NPB34lDZj3E/0.jpg" frameborder="0" height="360" src="https://www.youtube.com/embed/NPB34lDZj3E?t=1663&amp;amp;feature=player_embedded" width="640"&gt;&lt;/iframe&gt;
 &lt;p&gt;Here is Douglas Crockford,&lt;/p&gt;
@@ -10238,7 +10218,7 @@ href="https://blogs.oracle.com/javamagazine/post/java-inheritance-design-documen
 &lt;/h3&gt;&lt;p&gt;Security is not something that you can add on top of an insecure foundation, because there exist no automated tests that can detect security hazards and no amount of carefulness on behalf of programmers that is careful enough. So, what is necessary is architectural choices that eliminate entire classes of security hazards. (Do not worry, there will always be other classes of security hazards to have to worry about.)&lt;/p&gt;
 &lt;p&gt;So, if a certain architectural choice is prone to security vulnerabilities, do not make that choice. An example of a vulnerability-prone architectural choice is putting application code on the web browser, otherwise known as full-stack development. Full-stack developers can cry me a river.&lt;/p&gt;
 &lt;p&gt;For more on this, read: &lt;a
-href="https://blog.michael.gr/post/2021-12-full-stack-development/"
+href="https://blog.michael.gr/post/2018-04-full-stack-development/"
 &gt;What is wrong with Full Stack Development&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="keep-the-log-clean"&gt;Keep the log clean
 &lt;/h3&gt;&lt;p&gt;Do not vex your colleagues, and do not make your own life harder, with torrential info-level or debug-level spam in the log. Keep the info-level messages down to an absolute minimum, and once debugging is done, completely remove all the debug-level log statements. Utilize commit hooks that deliberately fail a commit if it contains debug-level logging statements. Regularly use the &amp;quot;blame&amp;quot; feature of the version control system to remind developers of info-level logging statements that they should remove. Never use the log for capturing metrics or any other kind of structured information; use some separate, specialized instrumentation facility for that.&lt;/p&gt;

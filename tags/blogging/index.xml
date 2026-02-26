@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogging on Michael's Blog</title><link>https://blog.michael.gr/tags/blogging/</link><description>Recent content in Blogging on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 25 Feb 2026 07:48:50 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>New year, new blog!</title><link>https://blog.michael.gr/post/2026-01-08-new-blog/</link><pubDate>Thu, 08 Jan 2026 12:05:54 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-08-new-blog/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-08-new-blog/media/new-blog.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogging on Michael's Blog</title><link>https://blog.michael.gr/tags/blogging/</link><description>Recent content in Blogging on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 09:23:27 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>New year, new blog!</title><link>https://blog.michael.gr/post/2026-01-08-new-blog/</link><pubDate>Thu, 08 Jan 2026 12:05:54 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-08-new-blog/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-08-new-blog/media/new-blog.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -62,11 +62,16 @@ href="https://blog.michael.gr/post/2026-01-25-netlify-vs-cloudflare/"
 loading="lazy"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;My first attempt at blogging started in 2001, with a web-site entirely hand-made in HTML. It was crude, it had no commenting, and it was very difficult to maintain it, so it was necessarily tiny. Back then, finding a web host that was both free and would allow you to use your own domain name for free was quite difficult, so I had no option but to go with various questionable free hosting places. First it was &lt;strong&gt;united.net.kg&lt;/strong&gt;. (Where &lt;strong&gt;kg&lt;/strong&gt; is the top-level-domain of &lt;a class="external"
+&lt;p&gt;My first attempt at blogging started in 2001, with a web-site entirely hand-made in HTML. It was crude, it had no commenting, and it was very difficult to maintain it, so it was necessarily tiny. Back then, finding a web host that was both free and would allow you to use your own domain name for free was quite difficult, so I had no option but to go with various questionable free hosting places.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;First it was &lt;strong&gt;united.net.kg&lt;/strong&gt;. (Where &lt;strong&gt;kg&lt;/strong&gt; is the top-level-domain of &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Kyrgyzstan" target="_blank"
-&gt;Kyrgyzstan&lt;/a&gt;.) Predictably, it one day just disappeared. Then, it was &lt;strong&gt;digitalrice.com&lt;/strong&gt;. It had the same fate. Starting from 2007 and lasting until yesterday, I had been hosting my blog on &lt;a class="external"
+&gt;Kyrgyzstan&lt;/a&gt;.) One day, it just disappeared.&lt;/li&gt;
+&lt;li&gt;Then, it was &lt;strong&gt;digitalrice.com&lt;/strong&gt;. It had the same fate.&lt;/li&gt;
+&lt;li&gt;Starting from 2007 and lasting until yesterday, my blog was hosted on &lt;a class="external"
 href="https://blogger.com" target="_blank"
-&gt;blogger.com&lt;/a&gt; (formerly blogspot.com) which, luckily, has been stable.&lt;/p&gt;
+&gt;blogger.com&lt;/a&gt; (formerly blogspot.com)&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Blogger had several advantages:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Being backed by google, it was unlikely to disappear suddenly and without a warning.&lt;/li&gt;
