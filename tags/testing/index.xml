@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Testing on Michael's Blog</title><link>https://blog.michael.gr/tags/testing/</link><description>Recent content in Testing on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:16:22 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/testing/index.xml" rel="self" type="application/rss+xml"/><item><title>The confusion about the term Unit Testing</title><link>https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</link><pubDate>Fri, 04 Apr 2025 14:53:02 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/images/crash-test-dummy-penseur.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Testing on Michael's Blog</title><link>https://blog.michael.gr/tags/testing/</link><description>Recent content in Testing on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:16:22 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/testing/index.xml" rel="self" type="application/rss+xml"/><item><title>The confusion about the term Unit Testing</title><link>https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</link><pubDate>Fri, 04 Apr 2025 14:53:02 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/media/crash-test-dummy-penseur.jpg"
 width="2560"
 height="1600"
 loading="lazy"
@@ -306,7 +306,7 @@ href="https://thenounproject.com/term/crash-test-dummy/401583/" target="_blank"
 href="https://thenounproject.com/term/woman/129498/" target="_blank"
 &gt;Alexander Skowalsky&lt;/a&gt;. Used under &lt;a class="external"
 href="https://creativecommons.org/licenses/by/3.0/us/" target="_blank"
-&gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Artificial Code Coverage</title><link>https://blog.michael.gr/post/2024-03-codecoverage/</link><pubDate>Tue, 26 Mar 2024 15:01:55 +0000</pubDate><guid>https://blog.michael.gr/post/2024-03-codecoverage/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-03-codecoverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash.jpg"
+&gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Artificial Code Coverage</title><link>https://blog.michael.gr/post/2024-03-codecoverage/</link><pubDate>Tue, 26 Mar 2024 15:01:55 +0000</pubDate><guid>https://blog.michael.gr/post/2024-03-codecoverage/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-03-codecoverage/media/patrick-robert-doyle-UrHNIeIjoE4-unsplash.jpg"
 width="3258"
 height="1890"
 loading="lazy"
@@ -444,7 +444,7 @@ href="https://en.wikipedia.org/wiki/Box-drawing_character" target="_blank"
 &lt;hr&gt;
 &lt;p&gt;Cover image by &lt;a class="external"
 href="https://unsplash.com/@teapowered" target="_blank"
-&gt;Patrick Robert Doyle from Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Audit Testing</title><link>https://blog.michael.gr/post/2024-04-audit-testing/</link><pubDate>Fri, 09 Feb 2024 14:55:40 +0000</pubDate><guid>https://blog.michael.gr/post/2024-04-audit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-04-audit-testing/images/audit-testing.svg"
+&gt;Patrick Robert Doyle from Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Audit Testing</title><link>https://blog.michael.gr/post/2024-04-audit-testing/</link><pubDate>Fri, 09 Feb 2024 14:55:40 +0000</pubDate><guid>https://blog.michael.gr/post/2024-04-audit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-04-audit-testing/media/audit-testing.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -565,7 +565,7 @@ threshold to be exceeded. Exactly when and how this happens depends on the imple
 &lt;h4 id="conclusion"&gt;Conclusion
 &lt;/h4&gt;&lt;p&gt;Audit Testing is a universally applicable technique for automated software testing which can significantly reduce the effort of writing and maintaining tests by sparing us from having to stipulate our expectations in test code, and from having to go fixing test code each time our expectations change.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &amp;quot;Audit Testing&amp;quot; by michael.gr.&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/images/mocking.svg"
+&lt;p&gt;Cover image: &amp;quot;Audit Testing&amp;quot; by michael.gr.&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/mocking.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -735,7 +735,7 @@ href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/grumpy-cat-mock-objects.jpg"
 width="797"
 height="1024"
 loading="lazy"
@@ -755,7 +755,7 @@ data-flex-basis="186px"
 &lt;hr&gt;
 &lt;p&gt;Cover image: &amp;quot;Mocking&amp;quot; by michael.gr, based on &lt;a class="external"
 href="https://thenounproject.com/icon/mock-2657532/" target="_blank"
-&gt;'mock' by 'Iconbox' from the noun project.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Collaboration Monitoring</title><link>https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/</link><pubDate>Fri, 06 Jan 2023 13:03:22 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitoring.png"
+&gt;'mock' by 'Iconbox' from the noun project.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Collaboration Monitoring</title><link>https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/</link><pubDate>Fri, 06 Jan 2023 13:03:22 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/media/collaboration-monitoring.png"
 width="1024"
 height="512"
 loading="lazy"
@@ -817,7 +817,7 @@ href="https://blog.michael.gr/post/2023-01-14-mocking/"
 href="https://blog.michael.gr/post/2024-04-audit-testing/"
 &gt;Audit Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let us assume that we have a component that we want to test, which invokes interface T as part of its job. In order to test the component, we have to wire it with a collaborator that implements T. For this, we can use either the real collaborator that would be wired in the production environment, or a Fake thereof. Regardless of what we choose, we have a very simple picture which looks like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-1.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/media/collaboration-monitor-1.png"
 width="422"
 height="74"
 loading="lazy"
@@ -831,7 +831,7 @@ data-flex-basis="1368px"
 href="https://blog.michael.gr/post/2024-04-audit-testing/"
 &gt;Audit Testing&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Thus, we now have the following picture:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/images/collaboration-monitor-2.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/media/collaboration-monitor-2.png"
 width="568"
 height="193"
 loading="lazy"

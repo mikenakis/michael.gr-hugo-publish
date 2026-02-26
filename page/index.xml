@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pages on Michael's Blog</title><link>https://blog.michael.gr/page/</link><description>Recent content in pages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 15:30:33 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Contact via E-mail</title><link>https://blog.michael.gr/contact-via-e-mail/</link><pubDate>Sat, 24 Jan 2026 15:30:33 +0100</pubDate><guid>https://blog.michael.gr/contact-via-e-mail/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/contact-via-e-mail/media/e-mail.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pages on Michael's Blog</title><link>https://blog.michael.gr/page/</link><description>Recent content in pages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 07:21:18 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Portfolio</title><link>https://blog.michael.gr/portfolio/</link><pubDate>Wed, 25 Feb 2026 16:24:36 +0100</pubDate><guid>https://blog.michael.gr/portfolio/</guid><description>&lt;p&gt;Stack Overflow&lt;/p&gt;
+&lt;a href="http://stackoverflow.com/users/773113/mike-nakis"&gt;
+&lt;img
+alt="profile for Mike Nakis at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers"
+height="58"
+src="http://stackoverflow.com/users/flair/773113.png"
+title="profile for Mike Nakis at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers"
+width="208"
+/&gt;
+&lt;/a&gt;
+&lt;p&gt;Software Engineering (formerly &amp;quot;Programmers SE&amp;quot;)&lt;/p&gt;
+&lt;a href="http://programmers.stackexchange.com/users/41811/mike-nakis"&gt;
+&lt;img alt="profile for Mike Nakis at Programmers, Q&amp;amp;A for professional programmers interested in conceptual questions about software development"
+height="58"
+src="http://programmers.stackexchange.com/users/flair/41811.png"
+title="profile for Mike Nakis at Programmers, Q&amp;amp;A for professional programmers interested in conceptual questions about software development"
+width="208" /&gt;&lt;/a&gt;
+&lt;p&gt;Stack Exchange Total&lt;/p&gt;
+&lt;a href="http://stackexchange.com/users/404649"&gt;
+&lt;img alt="profile for MikeNakis on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites"
+height="58"
+src="http://stackexchange.com/users/flair/404649.png"
+title="profile for MikeNakis on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites"
+width="208" /&gt;&lt;/a&gt;
+&lt;p&gt;Me on &lt;a class="external"
+href="https://www.linkedin.com/in/mikenakis/" target="_blank"
+&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Me on &lt;a class="external"
+href="https://stackoverflow.com/users/773113/mike-nakis" target="_blank"
+&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Me on &lt;a class="external"
+href="https://github.com/mikenakis" target="_blank"
+&gt;GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Notable posts on this blog:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2024-04-audit-testing/"
+&gt;Audit Testing&lt;/a&gt;  (White-box testing)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2024-03-codecoverage/"
+&gt;Artificial Code Coverage&lt;/a&gt;  (The case for 100% coverage)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/"
+&gt;Towards Authoritative Software Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
+&gt;Testing with Fakes instead of Mocks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2023-01-14-mocking/"
+&gt;If you are using mock objects you are doing it wrong&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2022-12-intertwine/"
+&gt;Intertwine&lt;/a&gt; (2022)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
+&gt;Incremental Integration Testing&lt;/a&gt; (Black-box testing)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2022-05-bathyscaphe/"
+&gt;Bathyscaphe&lt;/a&gt; (Immutability and thread safety detection for Java)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
+&gt;The Stateful Microservice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2021-12-white-box-vs-black-box-testing/"
+&gt;White-Box vs. Black-Box Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2021-12-full-stack-development/"
+&gt;What is wrong with Full Stack Development&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/"
+&gt;Object Lifetime Awareness&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2019-12-on-software-testing/"
+&gt;The case for software testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2017-05-on-scripting-languages/"
+&gt;On Scripting Languages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2018-02-code-craftsmanship/"
+&gt;On Code Craftsmanship&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2014-09-assertions-and-testing/"
+&gt;Assertions and Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2012-01-03-hail-mary-initialization/"
+&gt;Hail-Mary Initialization&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vintage stuff:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2013-06-03-a-few-samples-of-my-work-on-darkfall/"
+&gt;A few samples of my work on Darkfall Online&lt;/a&gt; (2010; Java; Screenshots.)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2015-10-my-crossword-compiler/"
+&gt;Crossword Puzzle Compiler&lt;/a&gt; (2003; C# 1.0; Video.)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2015-10-computer-telephony-in-c-with-mfc/"
+&gt;Computer telephony in C++ with MFC&lt;/a&gt; (1999; C++/MFC; Screenshots.)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2013-05-30-vintage-stuff-from-my-days-of-visual-c/"
+&gt;Vintage: my work on FESPA for Windows (Visual C++ and MFC)&lt;/a&gt; (1998; C++/MFC; Screenshots.)&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2013-06-07-vintage-stuff-from-my-days-of-320x200/"
+&gt;Vintage stuff from my days of 320x200-pixel 256-color VGA&lt;/a&gt; (1993; C++/x86 Assembly; Videos.)&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Contact via E-mail</title><link>https://blog.michael.gr/contact-via-e-mail/</link><pubDate>Sat, 24 Jan 2026 15:30:33 +0100</pubDate><guid>https://blog.michael.gr/contact-via-e-mail/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/contact-via-e-mail/media/e-mail.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;</description></item><item><title>Contact via WhatsApp</title><link>https://blog.michael.gr/contact-via-whatsapp/</link><pubDate>Sat, 24 Jan 2026 15:30:33 +0100</pubDate><guid>https://blog.michael.gr/contact-via-whatsapp/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/contact-via-whatsapp/media/whatsapp-contact-info.png"

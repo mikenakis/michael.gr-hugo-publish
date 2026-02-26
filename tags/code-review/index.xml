@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Code review on Michael's Blog</title><link>https://blog.michael.gr/tags/code-review/</link><description>Recent content in Code review on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 15 Oct 2025 17:21:08 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/code-review/index.xml" rel="self" type="application/rss+xml"/><item><title>Code review memes</title><link>https://blog.michael.gr/post/2025-06-code-review-images/</link><pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-code-review-images/</guid><description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
 &lt;p&gt;I like to use this feature to post memes.&lt;/p&gt;
 &lt;p&gt;Here is my collection of the most useful code review memes:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/xi8cf.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/xi8cf.jpg"
 width="700"
 height="474"
 loading="lazy"
@@ -10,7 +10,7 @@ data-flex-grow="147"
 data-flex-basis="354px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wgwzh.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wgwzh.jpg"
 width="505"
 height="494"
 loading="lazy"
@@ -19,7 +19,7 @@ data-flex-grow="102"
 data-flex-basis="245px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/e040f790ce334dbf7c59b317639c8b17.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/e040f790ce334dbf7c59b317639c8b17.jpg"
 width="640"
 height="640"
 loading="lazy"
@@ -28,7 +28,7 @@ data-flex-grow="100"
 data-flex-basis="240px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/318fbb9b2a30f5f06fc3b6cbe2bfdd25.jpg"
 width="1000"
 height="720"
 loading="lazy"
@@ -37,7 +37,7 @@ data-flex-grow="138"
 data-flex-basis="333px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/Darth_Vader_Noooo_Banner.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/Darth_Vader_Noooo_Banner.jpg"
 width="1200"
 height="675"
 loading="lazy"
@@ -46,7 +46,7 @@ data-flex-grow="177"
 data-flex-basis="426px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/oh-no-no-dd7f7d8f8e.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/oh-no-no-dd7f7d8f8e.jpg"
 width="600"
 height="389"
 loading="lazy"
@@ -55,7 +55,7 @@ data-flex-grow="154"
 data-flex-basis="370px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wguxc.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wguxc.jpg"
 width="645"
 height="387"
 loading="lazy"
@@ -64,7 +64,7 @@ data-flex-grow="166"
 data-flex-basis="400px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u.jpg"
 width="750"
 height="1000"
 loading="lazy"
@@ -73,7 +73,7 @@ data-flex-grow="75"
 data-flex-basis="180px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wh26z.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wh26z.jpg"
 width="673"
 height="371"
 loading="lazy"
@@ -82,7 +82,7 @@ data-flex-grow="181"
 data-flex-basis="435px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wh0pu.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wh0pu.jpg"
 width="500"
 height="515"
 loading="lazy"
@@ -91,7 +91,7 @@ data-flex-grow="97"
 data-flex-basis="233px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wgzsg.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wgzsg.jpg"
 width="706"
 height="353"
 loading="lazy"
@@ -100,7 +100,7 @@ data-flex-grow="200"
 data-flex-basis="480px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wgyqm.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wgyqm.jpg"
 width="668"
 height="374"
 loading="lazy"
@@ -109,7 +109,7 @@ data-flex-grow="178"
 data-flex-basis="428px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/1bq1b7.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/1bq1b7.jpg"
 width="250"
 height="298"
 loading="lazy"
@@ -118,7 +118,7 @@ data-flex-grow="83"
 data-flex-basis="201px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/0a1247a0c9dc93afebfa57647e1149a39093c540.jpeg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/0a1247a0c9dc93afebfa57647e1149a39093c540.jpeg"
 width="474"
 height="307"
 loading="lazy"
@@ -127,7 +127,7 @@ data-flex-grow="154"
 data-flex-basis="370px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/you-shall-not-pass.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/you-shall-not-pass.jpg"
 width="1213"
 height="682"
 loading="lazy"
@@ -135,7 +135,7 @@ class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 &gt;
-&lt;/p&gt;</description></item><item><title>The best code review comment ever</title><link>https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/</link><pubDate>Mon, 10 Feb 2025 11:30:14 +0000</pubDate><guid>https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/images/code-review.jpg"
+&lt;/p&gt;</description></item><item><title>The best code review comment ever</title><link>https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/</link><pubDate>Mon, 10 Feb 2025 11:30:14 +0000</pubDate><guid>https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/media/code-review.jpg"
 width="1536"
 height="1024"
 loading="lazy"

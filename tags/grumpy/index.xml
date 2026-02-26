@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grumpy on Michael's Blog</title><link>https://blog.michael.gr/tags/grumpy/</link><description>Recent content in Grumpy on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 15:42:23 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/grumpy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-06-visual-studio-solutions/images/microsoft-visual-studio-2022-logo.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grumpy on Michael's Blog</title><link>https://blog.michael.gr/tags/grumpy/</link><description>Recent content in Grumpy on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 15:42:23 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/grumpy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-06-visual-studio-solutions/media/microsoft-visual-studio-2022-logo.svg"
 loading="lazy"
 &gt;
 Visual Studio is a capricious product, and its &amp;quot;Solution&amp;quot; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
@@ -33,7 +33,7 @@ plenty of options to call your test project: &amp;quot;CovfefeTest&amp;quot;, &a
 &lt;p&gt;Thank you for sharing your experiences and all the useful info.
 Visual Studio is increasingly becoming such a bloatware, while still missing quite a lot of basic fundamental functionality.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Incident Impact Calculation Formula</title><link>https://blog.michael.gr/post/2024-05-incident-impact-calculation/</link><pubDate>Fri, 31 May 2024 12:53:30 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-incident-impact-calculation/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-incident-impact-calculation/images/titanic.jpg"
+&lt;/ul&gt;</description></item><item><title>Incident Impact Calculation Formula</title><link>https://blog.michael.gr/post/2024-05-incident-impact-calculation/</link><pubDate>Fri, 31 May 2024 12:53:30 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-incident-impact-calculation/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-incident-impact-calculation/media/titanic.jpg"
 width="2000"
 height="1324"
 loading="lazy"
@@ -61,7 +61,7 @@ data-flex-basis="362px"
 &lt;p&gt;For example:&lt;/p&gt;
 &lt;p&gt;The sinking of the Titanic was certainly a disaster, but it was largely an isolated incident: it happened only once, on the 15th of April 1912, and only in one place, at 41°43'32''N 49°56'49''W; we have not had anything quite like that happening before, and we have been doing a decent job at avoiding similar incidents ever since, so in the big picture, it is not of particularly high impact.&lt;/p&gt;
 &lt;p&gt;On the other hand:&lt;/p&gt;
-&lt;p&gt;A modern computer taking several long seconds to reboot, despite having a multi-core, multi-gigahertz, hyper-threaded and pipelined CPU with multi-level cache and solid-state storage, is something that affects &lt;em&gt;&lt;strong&gt;everyone&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;everywhere, every day&lt;/strong&gt;&lt;/em&gt;, so it does in fact have &lt;em&gt;quite a high impact.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>On Dotfuscator by PreEmptive Solutions</title><link>https://blog.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</link><pubDate>Tue, 15 Aug 2023 12:29:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/images/dotfuscator.png"
+&lt;p&gt;A modern computer taking several long seconds to reboot, despite having a multi-core, multi-gigahertz, hyper-threaded and pipelined CPU with multi-level cache and solid-state storage, is something that affects &lt;em&gt;&lt;strong&gt;everyone&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;everywhere, every day&lt;/strong&gt;&lt;/em&gt;, so it does in fact have &lt;em&gt;quite a high impact.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>On Dotfuscator by PreEmptive Solutions</title><link>https://blog.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</link><pubDate>Tue, 15 Aug 2023 12:29:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/media/dotfuscator.png"
 width="598"
 height="253"
 loading="lazy"
@@ -274,7 +274,7 @@ href="https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-
 &lt;p&gt;What happened is that GitHub apparently has some monstrous bug which causes artifact deployment to fail if some other repository (only by the same owner, I hope!) has already deployed an artifact with the exact same name.&lt;/p&gt;
 &lt;p&gt;In this case, one repository was called Bathyscaphe, the other was called BathyscapheClaims, but each repository was trying to deploy an artifact called bathyscaphe-claims.&lt;/p&gt;
 &lt;p&gt;I changed the name of the artifact in the second repository from bathyscaphe-claims to bathyscaphe-claims2 and it worked.&lt;/p&gt;
-&lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>Program Code is Uncountable</title><link>https://blog.michael.gr/post/2023-05-26-code-is-uncountable/</link><pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate><guid>https://blog.michael.gr/post/2023-05-26-code-is-uncountable/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/images/code.jpg"
+&lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>Program Code is Uncountable</title><link>https://blog.michael.gr/post/2023-05-26-code-is-uncountable/</link><pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate><guid>https://blog.michael.gr/post/2023-05-26-code-is-uncountable/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/code.jpg"
 width="800"
 height="331"
 loading="lazy"
@@ -292,7 +292,7 @@ href="https://www.oxfordlearnersdictionaries.com/definition/english/code" target
 &gt;Oxford Learner's Dictionaries - English - Code&lt;/a&gt; (Scroll down to meaning 3, &amp;quot;programming&amp;quot;.)&lt;/p&gt;
 &lt;p&gt;Now, we live in free societies where everyone enjoys freedom of speech, and more generally, freedom of expression. You can choose to say whatever you like, just as you can choose to dress in whatever way you like.&lt;/p&gt;
 &lt;p&gt;But when you say &amp;quot;codes&amp;quot; referring to program code, please do keep in mind that you come across like this complete idiot:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/saggy.jpg"
 width="600"
 height="900"
 loading="lazy"
@@ -302,7 +302,7 @@ data-flex-basis="160px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Or like this complete idiot:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/hat-fail.jpg"
 width="600"
 height="768"
 loading="lazy"
@@ -313,7 +313,7 @@ data-flex-basis="187px"
 &lt;/p&gt;
 &lt;p&gt;Do you want to come across like a complete idiot?&lt;/p&gt;
 &lt;p&gt;The choice is yours.&lt;/p&gt;
-&lt;p&gt;(Grumpy cat meme unnecessary; this was grumpy enough by itself.)&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/images/mocking.svg"
+&lt;p&gt;(Grumpy cat meme unnecessary; this was grumpy enough by itself.)&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/mocking.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -483,7 +483,7 @@ href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/grumpy-cat-mock-objects.jpg"
 width="797"
 height="1024"
 loading="lazy"
@@ -722,7 +722,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;What is happening here is that this error message is a notorious instance of trolling with which Microsoft has been torturing software professionals for decades now by telling them lies instead of reporting the actual problem. The problem is indeed that one of the dependencies of the library in question could not be found, but Windows will not tell you which one. Instead, it will give you this insidiously worded message which will send you looking for the problem in wrong directions.&lt;/p&gt;
 &lt;p&gt;There is probably some programmer who worked at Microsoft some 30 years ago and is probably a pensioner by now, who has a permanent evil grin on his face knowing that he has personally caused millions of work hours wasted all over the planet over the course of several decades simply by creating this particular error message in this particular way. (Or, perhaps, he told his manager that the task he was working on would need to take a little longer because he had to collect all necessary information to produce a useful error message, and his manager told him to not do that because deadlines.)&lt;/p&gt;
 &lt;p&gt;To fix this problem you have to use some special software called a &amp;quot;Dependency Analyzer&amp;quot; to trace all the dependencies of your application and locate the one that fails to load.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/images/grumpy-cat-lame-error-messages.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/media/grumpy-cat-lame-error-messages.jpg"
 width="324"
 height="400"
 loading="lazy"
@@ -896,7 +896,7 @@ data-flex-basis="360px"
 &lt;p&gt;This post was inspired by a Stack Overflow answer that I wrote, here:
 &lt;a class="external"
 href="https://stackoverflow.com/a/8642874/773113" target="_blank"
-&gt;https://stackoverflow.com/a/8642874/773113&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Scripting Languages</title><link>https://blog.michael.gr/post/2017-05-on-scripting-languages/</link><pubDate>Fri, 19 May 2017 19:46:34 +0000</pubDate><guid>https://blog.michael.gr/post/2017-05-on-scripting-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers.jpg"
+&gt;https://stackoverflow.com/a/8642874/773113&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Scripting Languages</title><link>https://blog.michael.gr/post/2017-05-on-scripting-languages/</link><pubDate>Fri, 19 May 2017 19:46:34 +0000</pubDate><guid>https://blog.michael.gr/post/2017-05-on-scripting-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/pacifiers.jpg"
 width="1023"
 height="575"
 loading="lazy"
@@ -1081,7 +1081,7 @@ href="https://www.catb.org/jargon/html/S/search-and-destroy-mode.html" target="_
 &lt;p&gt;Obligatory &lt;a class="external"
 href="https://www.xkcd.com/1638/" target="_blank"
 &gt;XKCD comic: &amp;quot;Backslashes&amp;quot;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/xkcd-backslash.png"
 width="571"
 height="207"
 loading="lazy" alt="Backslashes" title="I searched my .bash_history for the line with the highest ratio of special characters to regular alphanumeric characters, and the winner was: cat out.txt | grep -o &amp;amp;quot;[[(].*[])][^]]*$&amp;amp;quot; ... I have no memory of this and no idea what I was trying to do, but I sure hope it worked."
@@ -1094,7 +1094,7 @@ data-flex-basis="662px"
 href="https://www.youtube.com/watch?v=zlcnOr81lPc" target="_blank"
 &gt;TEDxVienna 2016&lt;/a&gt;, opening statement, &amp;quot;Hello, I am to blame for JavaScript&amp;quot;.) Also, pretty much anyone deeply involved with JavaScript will admit that it has serious problems. One of the most highly acclaimed books on the language is &lt;em&gt;&lt;strong&gt;JavaScript: The Good Parts&lt;/strong&gt;&lt;/em&gt;, authored by Douglas Crockford and published by O'Reilly; you can take the title of the book as a hint.&lt;/p&gt;
 &lt;p&gt;As a matter of fact, here is a photo that has become a meme in and of itself, showing the relative sizes of two of the most popular books about JavaScript: &lt;em&gt;&lt;strong&gt;The Definitive Guide&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;The Good Parts&lt;/strong&gt;&lt;/em&gt;, both published by O'Reilly:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/images/javascript.webp"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/javascript.webp"
 width="1080"
 height="607"
 loading="lazy"
@@ -1130,7 +1130,7 @@ href="https://en.wikipedia.org/wiki/PHP#Early_history" target="_blank"
 &lt;p&gt;Usually, once a language becomes extremely popular, tools are created to lessen the impact of its deficiencies. Thanks to the herculean efforts of teams that develop scripting engines, and through all kinds of sorcery being done under the hood in these engines, the most popular scripting languages are considerably faster today than they used to be. However, the sorcery is not always applicable, even when it is applicable it is imperfect, and besides, it incurs a penalty of its own, so scripting languages will never match the performance of real programming languages. Also, modern IDEs have evolved to provide some resemblance of semantic checking in some scripting languages, but since this checking has been added as an afterthought, it is always partial, unreliable, hacky, and generally an uphill battle.&lt;/p&gt;
 &lt;p&gt;So, you might ask, what about the hundreds of thousands of successful projects written in scripting languages? Are they all junk? And what about the hundreds of thousands of programmers all over the world who are making extensive use of scripting languages every day and are happy with them? Are they all misguided? Can't they see all these problems? Are they all ensnared in a monstrous collective delusion?&lt;/p&gt;
 &lt;p&gt;Yep, that's exactly it. You took the words from my mouth.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/grumpy-cat-scripting-languages.jpg"
 width="600"
 height="400"
 loading="lazy" alt="Mandatory grumpy cat meme" title="Scripting Languages - I Hate Them"

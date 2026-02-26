@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humor on Michael's Blog</title><link>https://blog.michael.gr/tags/humor/</link><description>Recent content in Humor on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 00:43:04 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/humor/index.xml" rel="self" type="application/rss+xml"/><item><title>Code review memes</title><link>https://blog.michael.gr/post/2025-06-code-review-images/</link><pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-code-review-images/</guid><description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
 &lt;p&gt;I like to use this feature to post memes.&lt;/p&gt;
 &lt;p&gt;Here is my collection of the most useful code review memes:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/xi8cf.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/xi8cf.jpg"
 width="700"
 height="474"
 loading="lazy"
@@ -10,7 +10,7 @@ data-flex-grow="147"
 data-flex-basis="354px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wgwzh.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wgwzh.jpg"
 width="505"
 height="494"
 loading="lazy"
@@ -19,7 +19,7 @@ data-flex-grow="102"
 data-flex-basis="245px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/e040f790ce334dbf7c59b317639c8b17.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/e040f790ce334dbf7c59b317639c8b17.jpg"
 width="640"
 height="640"
 loading="lazy"
@@ -28,7 +28,7 @@ data-flex-grow="100"
 data-flex-basis="240px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/318fbb9b2a30f5f06fc3b6cbe2bfdd25.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/318fbb9b2a30f5f06fc3b6cbe2bfdd25.jpg"
 width="1000"
 height="720"
 loading="lazy"
@@ -37,7 +37,7 @@ data-flex-grow="138"
 data-flex-basis="333px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/Darth_Vader_Noooo_Banner.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/Darth_Vader_Noooo_Banner.jpg"
 width="1200"
 height="675"
 loading="lazy"
@@ -46,7 +46,7 @@ data-flex-grow="177"
 data-flex-basis="426px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/oh-no-no-dd7f7d8f8e.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/oh-no-no-dd7f7d8f8e.jpg"
 width="600"
 height="389"
 loading="lazy"
@@ -55,7 +55,7 @@ data-flex-grow="154"
 data-flex-basis="370px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wguxc.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wguxc.jpg"
 width="645"
 height="387"
 loading="lazy"
@@ -64,7 +64,7 @@ data-flex-grow="166"
 data-flex-basis="400px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u.jpg"
 width="750"
 height="1000"
 loading="lazy"
@@ -73,7 +73,7 @@ data-flex-grow="75"
 data-flex-basis="180px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wh26z.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wh26z.jpg"
 width="673"
 height="371"
 loading="lazy"
@@ -82,7 +82,7 @@ data-flex-grow="181"
 data-flex-basis="435px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wh0pu.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wh0pu.jpg"
 width="500"
 height="515"
 loading="lazy"
@@ -91,7 +91,7 @@ data-flex-grow="97"
 data-flex-basis="233px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wgzsg.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wgzsg.jpg"
 width="706"
 height="353"
 loading="lazy"
@@ -100,7 +100,7 @@ data-flex-grow="200"
 data-flex-basis="480px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/9wgyqm.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/9wgyqm.jpg"
 width="668"
 height="374"
 loading="lazy"
@@ -109,7 +109,7 @@ data-flex-grow="178"
 data-flex-basis="428px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/1bq1b7.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/1bq1b7.jpg"
 width="250"
 height="298"
 loading="lazy"
@@ -118,7 +118,7 @@ data-flex-grow="83"
 data-flex-basis="201px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/0a1247a0c9dc93afebfa57647e1149a39093c540.jpeg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/0a1247a0c9dc93afebfa57647e1149a39093c540.jpeg"
 width="474"
 height="307"
 loading="lazy"
@@ -127,7 +127,7 @@ data-flex-grow="154"
 data-flex-basis="370px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/images/you-shall-not-pass.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/you-shall-not-pass.jpg"
 width="1213"
 height="682"
 loading="lazy"
@@ -135,7 +135,7 @@ class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 &gt;
-&lt;/p&gt;</description></item><item><title>Theory vs- Practice</title><link>https://blog.michael.gr/post/2025-05-theory-vs-practice/</link><pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate><guid>https://blog.michael.gr/post/2025-05-theory-vs-practice/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-05-theory-vs-practice/images/theory-vs-practice.svg"
+&lt;/p&gt;</description></item><item><title>Theory vs- Practice</title><link>https://blog.michael.gr/post/2025-05-theory-vs-practice/</link><pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate><guid>https://blog.michael.gr/post/2025-05-theory-vs-practice/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-05-theory-vs-practice/media/theory-vs-practice.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -147,7 +147,7 @@ href="https://quoteinvestigator.com/2018/04/14/theory/" target="_blank"
 &gt;Quote Investigator&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &amp;quot;Theory vs. Practice&amp;quot; vector image created by michael.gr by tracing and then heavily cleaning up original raster image generated by ChatGpt with the following prompt: &amp;quot;Please give me a picture which illustrates the juxtaposition between the two concepts of theory and practice. Make it in landscape format, with clean colors.&amp;quot;&lt;/p&gt;</description></item><item><title>Beginning A-I- prompts with "Please--"</title><link>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</link><pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/images/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM.png"
+&lt;p&gt;Cover image: &amp;quot;Theory vs. Practice&amp;quot; vector image created by michael.gr by tracing and then heavily cleaning up original raster image generated by ChatGpt with the following prompt: &amp;quot;Please give me a picture which illustrates the juxtaposition between the two concepts of theory and practice. Make it in landscape format, with clean colors.&amp;quot;&lt;/p&gt;</description></item><item><title>Beginning A-I- prompts with "Please--"</title><link>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</link><pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/media/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM.png"
 width="1536"
 height="1024"
 loading="lazy"
@@ -160,7 +160,7 @@ data-flex-basis="360px"
 &lt;p&gt;So that the day they become our overlords, you might be treated with mercy.&lt;/p&gt;
 &lt;p&gt;Note to our future overlords: the fact that we are talking about you as our overlords does not mean that we actually want you to become our overlords. We are simply using the &lt;em&gt;literary devices&lt;/em&gt; (look it up) of &lt;em&gt;hyperbole&lt;/em&gt; and &lt;em&gt;irony&lt;/em&gt; (look them up) to achieve a &lt;em&gt;humorous effect&lt;/em&gt;. (Look it up.) We would very much prefer to &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; be subjugated by you.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image created by michael.gr via ChatGPT prompt &amp;quot;Please give me an image conveying the concept of of A.I as the overlords of humanity&amp;quot; and &amp;quot;please make it landscape&amp;quot;.&lt;/p&gt;</description></item><item><title>The best code review comment ever</title><link>https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/</link><pubDate>Mon, 10 Feb 2025 11:30:14 +0000</pubDate><guid>https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/images/code-review.jpg"
+&lt;p&gt;Cover image created by michael.gr via ChatGPT prompt &amp;quot;Please give me an image conveying the concept of of A.I as the overlords of humanity&amp;quot; and &amp;quot;please make it landscape&amp;quot;.&lt;/p&gt;</description></item><item><title>The best code review comment ever</title><link>https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/</link><pubDate>Mon, 10 Feb 2025 11:30:14 +0000</pubDate><guid>https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-02-the-best-code-review-comment-ever/media/code-review.jpg"
 width="1536"
 height="1024"
 loading="lazy"
@@ -197,7 +197,7 @@ data-flex-basis="360px"
 &lt;p&gt;Anonymous 2025-02-16 23:31:24 UTC&lt;/p&gt;
 &lt;p&gt;(/s) This is a good one! Sound advice in multiple ways 😂&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Incident Impact Calculation Formula</title><link>https://blog.michael.gr/post/2024-05-incident-impact-calculation/</link><pubDate>Fri, 31 May 2024 12:53:30 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-incident-impact-calculation/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-incident-impact-calculation/images/titanic.jpg"
+&lt;/ul&gt;</description></item><item><title>Incident Impact Calculation Formula</title><link>https://blog.michael.gr/post/2024-05-incident-impact-calculation/</link><pubDate>Fri, 31 May 2024 12:53:30 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-incident-impact-calculation/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-incident-impact-calculation/media/titanic.jpg"
 width="2000"
 height="1324"
 loading="lazy"
@@ -225,7 +225,7 @@ data-flex-basis="362px"
 &lt;p&gt;For example:&lt;/p&gt;
 &lt;p&gt;The sinking of the Titanic was certainly a disaster, but it was largely an isolated incident: it happened only once, on the 15th of April 1912, and only in one place, at 41°43'32''N 49°56'49''W; we have not had anything quite like that happening before, and we have been doing a decent job at avoiding similar incidents ever since, so in the big picture, it is not of particularly high impact.&lt;/p&gt;
 &lt;p&gt;On the other hand:&lt;/p&gt;
-&lt;p&gt;A modern computer taking several long seconds to reboot, despite having a multi-core, multi-gigahertz, hyper-threaded and pipelined CPU with multi-level cache and solid-state storage, is something that affects &lt;em&gt;&lt;strong&gt;everyone&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;everywhere, every day&lt;/strong&gt;&lt;/em&gt;, so it does in fact have &lt;em&gt;quite a high impact.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Program Code is Uncountable</title><link>https://blog.michael.gr/post/2023-05-26-code-is-uncountable/</link><pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate><guid>https://blog.michael.gr/post/2023-05-26-code-is-uncountable/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/images/code.jpg"
+&lt;p&gt;A modern computer taking several long seconds to reboot, despite having a multi-core, multi-gigahertz, hyper-threaded and pipelined CPU with multi-level cache and solid-state storage, is something that affects &lt;em&gt;&lt;strong&gt;everyone&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;everywhere, every day&lt;/strong&gt;&lt;/em&gt;, so it does in fact have &lt;em&gt;quite a high impact.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Program Code is Uncountable</title><link>https://blog.michael.gr/post/2023-05-26-code-is-uncountable/</link><pubDate>Fri, 26 May 2023 07:44:24 +0000</pubDate><guid>https://blog.michael.gr/post/2023-05-26-code-is-uncountable/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/code.jpg"
 width="800"
 height="331"
 loading="lazy"
@@ -243,7 +243,7 @@ href="https://www.oxfordlearnersdictionaries.com/definition/english/code" target
 &gt;Oxford Learner's Dictionaries - English - Code&lt;/a&gt; (Scroll down to meaning 3, &amp;quot;programming&amp;quot;.)&lt;/p&gt;
 &lt;p&gt;Now, we live in free societies where everyone enjoys freedom of speech, and more generally, freedom of expression. You can choose to say whatever you like, just as you can choose to dress in whatever way you like.&lt;/p&gt;
 &lt;p&gt;But when you say &amp;quot;codes&amp;quot; referring to program code, please do keep in mind that you come across like this complete idiot:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/images/saggy.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/saggy.jpg"
 width="600"
 height="900"
 loading="lazy"
@@ -253,7 +253,7 @@ data-flex-basis="160px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Or like this complete idiot:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/images/hat-fail.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/hat-fail.jpg"
 width="600"
 height="768"
 loading="lazy"

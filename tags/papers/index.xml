@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 15:42:23 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/images/refactoring.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 25 Feb 2026 17:15:04 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -145,7 +145,7 @@ href="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/"
 href="https://commons.wikimedia.org/wiki/File:Coa_Illustration_Elements_Chimera.svg" target="_blank"
 &gt;Illustration of a chimera by Christie L. Ward, from Wikimedia Commons&lt;/a&gt;, used under &lt;a class="external"
 href="https://creativecommons.org/licenses/by-sa/3.0/deed.en" target="_blank"
-&gt;CC BY-SA 3.0&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Immutability Assessment</title><link>https://blog.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-immutability-assessment/images/diamond.svg"
+&gt;CC BY-SA 3.0&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Immutability Assessment</title><link>https://blog.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-immutability-assessment/media/diamond.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -299,7 +299,7 @@ href="https://thenounproject.com/icon/diamond-4452869/" target="_blank"
 &lt;/ul&gt;
 &lt;p&gt;&lt;a class="external"
 href="http://mustoverride.com/tuples%5C_structs/" target="_blank"
-&gt;Vladimir Sadov: &amp;quot;C# Tuples. Why mutable structs?&amp;quot;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Build configurations</title><link>https://blog.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-build-configurations/images/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
+&gt;Vladimir Sadov: &amp;quot;C# Tuples. Why mutable structs?&amp;quot;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Build configurations</title><link>https://blog.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-build-configurations/media/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
 width="1536"
 height="1024"
 loading="lazy"
@@ -702,7 +702,7 @@ href="https://thenounproject.com/term/crash-test-dummy/401583/" target="_blank"
 href="https://thenounproject.com/term/woman/129498/" target="_blank"
 &gt;Alexander Skowalsky&lt;/a&gt;. Used under &lt;a class="external"
 href="https://creativecommons.org/licenses/by/3.0/us/" target="_blank"
-&gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Simplification of triple-choice prompts to dual-choice</title><link>https://blog.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/</link><pubDate>Fri, 31 May 2024 09:53:03 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/images/image.png"
+&gt;CC BY License.&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Simplification of triple-choice prompts to dual-choice</title><link>https://blog.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/</link><pubDate>Fri, 31 May 2024 09:53:03 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-simplification-of-triple-choice-prompts/media/image.png"
 width="400"
 height="132"
 loading="lazy"
@@ -761,7 +761,7 @@ href="https://martin.kleppmann.com/2007/07/19/yes-no-cancel-causes-aspirin-sales
 &lt;li&gt;Sparing the user from having to do one click per unmodified file.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;To summarize:&lt;/p&gt;
-&lt;p&gt;Presenting the user with only two choices is immensely better than presenting the user with three choices, when the missing choice can be trivially accomplished by the user, in a way which is intuitively obvious to the user.&lt;/p&gt;</description></item><item><title>Artificial Code Coverage</title><link>https://blog.michael.gr/post/2024-03-codecoverage/</link><pubDate>Tue, 26 Mar 2024 15:01:55 +0000</pubDate><guid>https://blog.michael.gr/post/2024-03-codecoverage/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-03-codecoverage/images/patrick-robert-doyle-UrHNIeIjoE4-unsplash.jpg"
+&lt;p&gt;Presenting the user with only two choices is immensely better than presenting the user with three choices, when the missing choice can be trivially accomplished by the user, in a way which is intuitively obvious to the user.&lt;/p&gt;</description></item><item><title>Artificial Code Coverage</title><link>https://blog.michael.gr/post/2024-03-codecoverage/</link><pubDate>Tue, 26 Mar 2024 15:01:55 +0000</pubDate><guid>https://blog.michael.gr/post/2024-03-codecoverage/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-03-codecoverage/media/patrick-robert-doyle-UrHNIeIjoE4-unsplash.jpg"
 width="3258"
 height="1890"
 loading="lazy"
@@ -899,7 +899,7 @@ href="https://en.wikipedia.org/wiki/Box-drawing_character" target="_blank"
 &lt;hr&gt;
 &lt;p&gt;Cover image by &lt;a class="external"
 href="https://unsplash.com/@teapowered" target="_blank"
-&gt;Patrick Robert Doyle from Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Audit Testing</title><link>https://blog.michael.gr/post/2024-04-audit-testing/</link><pubDate>Fri, 09 Feb 2024 14:55:40 +0000</pubDate><guid>https://blog.michael.gr/post/2024-04-audit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-04-audit-testing/images/audit-testing.svg"
+&gt;Patrick Robert Doyle from Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Audit Testing</title><link>https://blog.michael.gr/post/2024-04-audit-testing/</link><pubDate>Fri, 09 Feb 2024 14:55:40 +0000</pubDate><guid>https://blog.michael.gr/post/2024-04-audit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-04-audit-testing/media/audit-testing.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -1020,7 +1020,7 @@ threshold to be exceeded. Exactly when and how this happens depends on the imple
 &lt;h4 id="conclusion"&gt;Conclusion
 &lt;/h4&gt;&lt;p&gt;Audit Testing is a universally applicable technique for automated software testing which can significantly reduce the effort of writing and maintaining tests by sparing us from having to stipulate our expectations in test code, and from having to go fixing test code each time our expectations change.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &amp;quot;Audit Testing&amp;quot; by michael.gr.&lt;/p&gt;</description></item><item><title>Types of dependencies</title><link>https://blog.michael.gr/post/2024-01-types-of-dependencies/</link><pubDate>Thu, 11 Jan 2024 17:33:42 +0000</pubDate><guid>https://blog.michael.gr/post/2024-01-types-of-dependencies/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-01-types-of-dependencies/images/dependency0.png"
+&lt;p&gt;Cover image: &amp;quot;Audit Testing&amp;quot; by michael.gr.&lt;/p&gt;</description></item><item><title>Types of dependencies</title><link>https://blog.michael.gr/post/2024-01-types-of-dependencies/</link><pubDate>Thu, 11 Jan 2024 17:33:42 +0000</pubDate><guid>https://blog.michael.gr/post/2024-01-types-of-dependencies/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-01-types-of-dependencies/media/dependency0.png"
 width="1861"
 height="1046"
 loading="lazy"
@@ -1046,7 +1046,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 href="https://en.wikipedia.org/wiki/Dependency_inversion_principle" target="_blank"
 &gt;Dependency Inversion Principle (DIP)&lt;/a&gt; for granted in software architecture, (and we should,) then software architecture is not concerned with static dependencies. This is because the DIP states that concrete modules should never statically depend on other concrete modules; instead, concrete modules may statically depend only on abstractions. Thus, the DIP is advising us to build our concrete modules so that they have no knowledge of each other. Instead, they should be making outgoing invocations to interfaces, and these invocations should be wired to concrete modules implementing those interfaces. Interfaces are abstractions, so it is okay for a concrete module to have compile-time dependencies on modules defining such abstractions.&lt;/p&gt;
 &lt;p&gt;Assembly-time dependencies are what software architecture is mostly concerned with. The architecture of a software system specifies how to wire interface invocations between components. The wiring prescribed by the design is normally performed during system assembly, which is part of system deployment. Thus, the wires constitute assembly-time dependencies, and the graph of these dependencies is essentially the call graph of the system as defined by the architecture.&lt;/p&gt;
-&lt;p&gt;Post-assembly-time dependencies do not affect the topology of a design, because every post-assembly time dependency requires an existing assembly-time dependency through which the callback can be communicated. Thus, post-assembly-time dependencies constitute implementation details of the modules that supply and invoke callbacks. As such, they are of only limited interest in software architecture.&lt;/p&gt;</description></item><item><title>Call Graph Acyclicity</title><link>https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/</link><pubDate>Wed, 27 Dec 2023 12:08:24 +0000</pubDate><guid>https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic0.png"
+&lt;p&gt;Post-assembly-time dependencies do not affect the topology of a design, because every post-assembly time dependency requires an existing assembly-time dependency through which the callback can be communicated. Thus, post-assembly-time dependencies constitute implementation details of the modules that supply and invoke callbacks. As such, they are of only limited interest in software architecture.&lt;/p&gt;</description></item><item><title>Call Graph Acyclicity</title><link>https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/</link><pubDate>Wed, 27 Dec 2023 12:08:24 +0000</pubDate><guid>https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic0.png"
 width="1860"
 height="1122"
 loading="lazy"
@@ -1069,7 +1069,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;A temperature indicator component, whose job is to display a temperature on the screen.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic1.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic1.png"
 width="1860"
 height="686"
 loading="lazy"
@@ -1158,7 +1158,7 @@ declared as mutable, even though in principle they ought to be immutable. Simila
 &lt;/h3&gt;&lt;p&gt;If our goal is to eliminate the cycle in the call graph of the earlier example with the temperature sensor and the temperature indicator, we can trivially accomplish it by applying the &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Observer_pattern" target="_blank"
 &gt;Observer Pattern&lt;/a&gt;, as shown in the following figure:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic2.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic2.png"
 width="1861"
 height="587"
 loading="lazy"
@@ -1178,7 +1178,7 @@ data-flex-basis="760px"
 &lt;li&gt;Save space in the diagram.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The following figure shows an example of what this notation could look like:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic3.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic3.png"
 width="1860"
 height="590"
 loading="lazy"
@@ -1203,7 +1203,7 @@ href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_bl
 &lt;/ul&gt;
 &lt;p&gt;The above may not represent a lot of work, but it is nonetheless a refactoring which must be applied to the code in order to support the needs of the design; however, in a different design, the observer pattern might be unnecessary, so why should the components be hard-coded to support it?&lt;/p&gt;
 &lt;p&gt;To solve this problem, let us revisit our first design, where we had a temperature sensor with a simple &lt;em&gt;&lt;strong&gt;Changed&lt;/strong&gt;&lt;/em&gt; output and a temperature indicator with a simple &lt;em&gt;&lt;strong&gt;Refresh&lt;/strong&gt;&lt;/em&gt; input, and hence a call cycle. Let us us now introduce two new components into the design, where one is a &lt;em&gt;&lt;strong&gt;General-Purpose Observable&lt;/strong&gt;&lt;/em&gt; and the other is a &lt;em&gt;&lt;strong&gt;General-Purpose Observer&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic4.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic4.png"
 width="1860"
 height="888"
 loading="lazy"
@@ -1216,7 +1216,7 @@ data-flex-basis="502px"
 &lt;p&gt;The job of the observable is to receive an observer registration via its &lt;em&gt;&lt;strong&gt;Registration&lt;/strong&gt;&lt;/em&gt; input, and to keep echoing invocations coming into its &lt;em&gt;&lt;strong&gt;Trigger&lt;/strong&gt;&lt;/em&gt; input to the registered observer, if any.&lt;/p&gt;
 &lt;p&gt;Note that with this arrangement, the call cycle is still eliminated, and at the same time we have managed to retain the sensor and indicator components in their original form, with no code refactoring necessary, since the refactoring has now been applied to the design. Also note that the SRP is being nicely upheld.&lt;/p&gt;
 &lt;p&gt;I postulate that the combination of a general-purpose observer and a general-purpose observable will be occurring quite frequently, to the point where it might be worth simplifying their representation using some special notation. For this purpose, I propose an &lt;em&gt;&lt;strong&gt;air-gap pseudo-component&lt;/strong&gt;&lt;/em&gt;. With the use of an air-gap, the previous figure turns into the following:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic5.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic5.png"
 width="1860"
 height="835"
 loading="lazy"
@@ -1241,7 +1241,7 @@ data-flex-basis="534px"
 &lt;h3 id="strategy-fusion"&gt;Strategy: Fusion
 &lt;/h3&gt;&lt;p&gt;The presence of a call cycle between components &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; might indicate that perhaps they should not be separate components, and that we might be better off by fusing &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; into a single component. In doing so, we remove the cycle from the topology of the design by turning it
 into an implementation detail of the new component. The following figure illustrates this:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic6.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic6.png"
 width="1860"
 height="426"
 loading="lazy"
@@ -1256,7 +1256,7 @@ data-flex-basis="1047px"
 &lt;/h3&gt;&lt;p&gt;The presence of a call cycle between components &lt;strong&gt;A&lt;/strong&gt; and &lt;strong&gt;B&lt;/strong&gt; might indicate that at least one of the two components violates the &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Single_responsibility_principle" target="_blank"
 &gt;&lt;strong&gt;Single Responsibility Principle&lt;/strong&gt; (&lt;strong&gt;SRP&lt;/strong&gt;)&lt;/a&gt;. In this case, one of the responsibilities can be extracted into a separate component which only exposes inputs, thus breaking the cycle, as the following figure illustrates:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic7.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic7.png"
 width="1861"
 height="722"
 loading="lazy"
@@ -1271,7 +1271,7 @@ data-flex-basis="618px"
 &lt;/h3&gt;&lt;p&gt;The astute reader might notice that in the plain fission example, components &lt;strong&gt;A1&lt;/strong&gt; and &lt;strong&gt;A2&lt;/strong&gt; are not exactly equivalent to component &lt;strong&gt;A&lt;/strong&gt;: In the original diagram &lt;strong&gt;A&lt;/strong&gt; used to be able to take notice of incoming calls from &lt;strong&gt;B&lt;/strong&gt; intended for the data model, and could therefore take action in response to those calls, whereas in the refactored diagram &lt;strong&gt;A1&lt;/strong&gt; is oblivious to any calls that &lt;strong&gt;B&lt;/strong&gt; makes to &lt;strong&gt;A2&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;If &lt;strong&gt;A1&lt;/strong&gt; needs to be aware of such calls, this can be very easily accomplished by having &lt;strong&gt;A2&lt;/strong&gt; issue change notifications, and wiring these notifications back to &lt;strong&gt;A1&lt;/strong&gt;. This new wire does not introduce a call cycle, because as we have already shown when describing the trivial case, notifications can always be air-gapped.&lt;/p&gt;
 &lt;p&gt;The following figure illustrates the application of the observable fission strategy:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/images/acyclic8.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-27-call-graph-acyclicity/media/acyclic8.png"
 width="1861"
 height="722"
 loading="lazy"
@@ -1604,7 +1604,7 @@ href="https://youtu.be/BNTt2aLB1tg?t=464" target="_blank"
 &gt;Practical (a.k.a. Actually Useful) Architecture by Stefan Tilkov, GOTO 2023, section 2, &amp;quot;Explicitly architect your team setup&amp;quot;&lt;/a&gt; -- Related term: &lt;em&gt;Team Topologies.&lt;/em&gt;&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/images/mocking.svg"
+&lt;/div&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/mocking.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -1774,7 +1774,7 @@ href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/images/grumpy-cat-mock-objects.jpg"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/grumpy-cat-mock-objects.jpg"
 width="797"
 height="1024"
 loading="lazy"
@@ -3415,7 +3415,7 @@ href="https://en.wikipedia.org/wiki/VisualWorks" target="_blank"
 &lt;li&gt;Note that again, this mapping table consists of nothing but statically available information, (view types and viewmodel types,) so everything is still achievable in markup.&lt;/li&gt;
 &lt;li&gt;A child viewmodel property can be optional or nullable, thus allowing the application logic to control whether an entire section of the user interface is available or not at any given moment.&lt;/li&gt;
 &lt;li&gt;A child viewmodel property can be a collection of viewmodels, allowing for a corresponding child view which is a list control or a tab control. Viewmodel type mapping still applies, so if the collection contains viewmodels of different types at runtime, the resulting list control will consist of different kinds of rows, or the resulting tab control will consist of different kinds of tabs.&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>Object Lifetime Awareness</title><link>https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/</link><pubDate>Sun, 27 Dec 2020 10:46:17 +0000</pubDate><guid>https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/images/le-penseur.jpg"
+&lt;/ul&gt;</description></item><item><title>Object Lifetime Awareness</title><link>https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/</link><pubDate>Sun, 27 Dec 2020 10:46:17 +0000</pubDate><guid>https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/media/le-penseur.jpg"
 width="3648"
 height="5472"
 loading="lazy"
@@ -4352,44 +4352,21 @@ data-flex-basis="153px"
 &lt;p&gt;Conclusion&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(Useful pre-reading:
-&lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h4 id="what-is-full-stack-development"&gt;What is full-stack development
-&lt;/h4&gt;&lt;p&gt;The predominant web application development model today requires splitting
-application logic in two parts:&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;The predominant web application development model today requires splitting application logic in two parts:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;The front-end, running on the browser.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The back-end, running on the server.&lt;/p&gt;
-&lt;p&gt;The front-end is typically written in JavaScript, while the back-end is
-typically written in Java, Scala, C#, or some other programming language. The
-two ends invariably communicate with each other via REST. The choice of
-JavaScript and REST is not due to any technical merit inherent in these
-technologies, (there is none,) but purely due to historical accident; see
-&lt;a
+&lt;li&gt;The front-end, running on the browser.&lt;/li&gt;
+&lt;li&gt;The back-end, running on the server.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The front-end is typically written in JavaScript, while the back-end is typically written in Java, Scala, C#, or some other programming language. The two ends invariably communicate with each other via REST. The choice of JavaScript and REST is not due to any technical merit inherent in these technologies, (there is none,) but purely due to historical accident; see &lt;a
 href="https://blog.michael.gr/post/2020-10-19-the-wild-wild-web/"
 &gt;The Wild, Wild Web&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;A web application developer can either focus on one part of the stack, or work
-on both parts. Due to reasons that will be explained further down, more often
-than not, web developers are asked to work on both parts simultaneously. When
-this happens, it is known as full-stack development.&lt;/p&gt;
-&lt;p&gt;For the purposes of this paper, we will call full-stack development not just
-this mode of work, but also this architectural style as a whole: full-stack
-development is when application logic must be written both on the server and
-on the client.&lt;/p&gt;
-&lt;p&gt;Full-Stack Development is a paradox, since it suggests a way of work which is
-contrary to what common sense dictates. Common sense calls for specialists
-each working on their own area of specialization, so one would expect to see
-different developers focusing on different layers of the stack, and nobody
-ever attempting something as preposterous as working on all layers
-simultaneously. However, there is a technological hurdle which renders this
-necessary today.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;A web application developer can either focus on one part of the stack, or work on both parts. Due to reasons that will be explained further down, more often than not, web developers are asked to work on both parts simultaneously. When this happens, it is known as full-stack development.&lt;/p&gt;
+&lt;p&gt;For the purposes of this paper, we will call full-stack development not just this mode of work, but also this architectural style as a whole: full-stack development is when application logic must be written both on the server and on the client.&lt;/p&gt;
+&lt;p&gt;Full-Stack Development is a paradox, since it suggests a way of work which is contrary to what common sense dictates. Common sense calls for specialists each working on their own area of specialization, so one would expect to see different developers focusing on different layers of the stack, and nobody ever attempting something as preposterous as working on all layers simultaneously. However, there is a technological hurdle which renders this necessary today.&lt;/p&gt;
 &lt;h4 id="why-is-full-stack-development-necessary-today"&gt;Why is full-stack development necessary today
 &lt;/h4&gt;&lt;p&gt;Normally, (outside of web application development,) in a system that consists
 of multiple layers, only one of the layers tends to be application-specific,
@@ -4617,8 +4594,13 @@ individual company, but from a global perspective, we have collectively been
 &lt;p&gt;A solution that would confine all application logic to the server and thus
 eliminate full-stack development has the potential of being very beneficial to
 the industry as a whole.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/images/images/blog.michael.gr/content/post/generated/2021/2021-12-full-stack-development/images/grumpy-cat-full-stack-development-i-hate-it.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-12-full-stack-development/media/grumpy-cat-full-stack-development-i-hate-it.jpg"
+width="500"
+height="461"
 loading="lazy"
+class="gallery-image"
+data-flex-grow="108"
+data-flex-basis="260px"
 &gt;
 &lt;/p&gt;</description></item><item><title>On Code Craftsmanship</title><link>https://blog.michael.gr/post/2018-02-code-craftsmanship/</link><pubDate>Mon, 05 Feb 2018 15:55:42 +0000</pubDate><guid>https://blog.michael.gr/post/2018-02-code-craftsmanship/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2018-02-code-craftsmanship/media/craftsmanship-guitar.jpg"
 width="2048"
@@ -4744,7 +4726,8 @@ href="https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/" t
 &lt;p&gt;Of course, by this I do not mean replacing &lt;code&gt;if&lt;/code&gt; statements with the conditional operator ( &lt;code&gt;a ? x : y&lt;/code&gt; ); the conditional operator is nice, because it makes code more expressive and compact, but it is equivalent to an &lt;code&gt;if&lt;/code&gt; statement, so it too should be eliminated when possible.&lt;/p&gt;
 &lt;p&gt;The &lt;code&gt;if&lt;/code&gt; statement can be avoided in many cases with the use of calculations, with lookup tables, with the judicious application of inheritance and polymorphism, etc.&lt;/p&gt;
 &lt;h3 id="favor-one-and-only-one-way-of-doing-any-given-thing"&gt;Favor one and only one way of doing any given thing
-&lt;/h3&gt;&lt;p&gt;If you ask a hundred programmers to write some code that accomplishes a certain simple task, you will get a hundred different solutions. These solutions will reflect different ways of thinking, which is inevitable, but they will also reflect different coding conventions, which is entirely unnecessary. Establish conventions that minimize unnecessary differences. One easy way to achieve this is to stipulate that any construct which is optional must be omitted. For example:&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;If you ask a hundred programmers to write some code that accomplishes a certain simple task, you will get a hundred different solutions. These solutions will reflect different ways of thinking, which is inevitable, but they will also reflect different coding conventions, which is entirely unnecessary. So, it is a good idea to establish coding conventions that minimize unnecessary differences.&lt;/p&gt;
+&lt;p&gt;One easy way to achieve this is to stipulate that any construct which is optional must be omitted. For example:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Disallow extra parentheses in expressions.&lt;/p&gt;
@@ -4889,13 +4872,29 @@ href="https://blog.michael.gr/post/2017-05-on-scripting-languages/"
 &lt;p&gt;The &amp;quot;treat warnings as errors&amp;quot; option corrects the wrong behavior of compilers, and exists precisely for the benefit of those (apparently very few) people in our discipline who happen to have their reasoning right on this issue.&lt;/p&gt;
 &lt;p&gt;Be one of those people. Use that option.&lt;/p&gt;
 &lt;h3 id="strive-for-readability"&gt;Strive for readability
-&lt;/h3&gt;&lt;p&gt;Readability is one of the most important qualities of code, second only to correctness. Code is generally read far more often that it is written. We tend to read code several times as we write it, at least once more as we review it, and then many more times throughout its lifetime as we extend it, refactor it, or tweak it; as we write nearby code; as we browse through code to understand how things work; as we perform troubleshooting; etc. In other words, over time, the reads-to-writes ratio of any piece of code approaches infinity. Therefore:&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Readability is one of the most important qualities of code, second only to correctness. Code is generally read far more often that it is written. We tend to read code:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;several times as we write it;&lt;/li&gt;
+&lt;li&gt;at least once more as we review it;&lt;/li&gt;
+&lt;li&gt;many more times throughout its lifetime as we:
+&lt;ul&gt;
+&lt;li&gt;extend it;&lt;/li&gt;
+&lt;li&gt;refactor it;&lt;/li&gt;
+&lt;li&gt;tweak it;&lt;/li&gt;
+&lt;li&gt;as we write nearby code;&lt;/li&gt;
+&lt;li&gt;as we browse through code to understand how things work;&lt;/li&gt;
+&lt;li&gt;as we perform troubleshooting;
+etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In other words, over time, the reads-to-writes ratio of any piece of code approaches infinity. Therefore:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Absolutely any&lt;/strong&gt;&lt;/em&gt; choice that makes code easier to read is &lt;em&gt;&lt;strong&gt;absolutely always&lt;/strong&gt;&lt;/em&gt; preferable over &lt;em&gt;&lt;strong&gt;absolutely any&lt;/strong&gt;&lt;/em&gt; choice that makes code easier to write.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;This means that languages that achieve great terseness of code are not really delivering anything of value by this alone, (I am looking at you, Scala,) because verbosity of code is not one of the major problems that our profession is faced with; unreadable code is. This also means that certain languages whose grotesquely arcane syntax has earned them the &amp;quot;write-only language&amp;quot; designation are not to be touched with a 10 ft. pole. Perl enthusiasts can cry me a river.&lt;/p&gt;
 &lt;h3 id="avoid-using-elements-of-prose-in-code"&gt;Avoid using elements of prose in code
-&lt;/h3&gt;&lt;p&gt;Identifiers should be pedantic, not creative, and unless they pertain to the problem domain, they should come from the realm of engineering, not from the realm of literature. Think twice before using a term like &amp;quot;drop&amp;quot; instead of &amp;quot;delete&amp;quot;, &amp;quot;payload&amp;quot; instead of &amp;quot;content&amp;quot;, etc. because &amp;quot;drop&amp;quot; and &amp;quot;payload&amp;quot; are metaphors. Metaphor should be avoided unless it helps to express something that would otherwise require an entire sentence to express, for example &amp;quot;Factory&amp;quot; instead of &amp;quot;Object-that-creates-other-objects&amp;quot;.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Identifiers should be pedantic, not creative, and unless they pertain to the problem domain, they should come from the realm of engineering, not from the realm of literature. Think twice before using a term like &amp;quot;drop&amp;quot; instead of &amp;quot;delete&amp;quot;, or &amp;quot;payload&amp;quot; instead of &amp;quot;content&amp;quot;, because &amp;quot;drop&amp;quot; and &amp;quot;payload&amp;quot; are metaphors. Metaphor should be avoided unless it helps to express something that would otherwise require an entire sentence to express, for example &amp;quot;Factory&amp;quot; instead of &amp;quot;Object-that-creates-other-objects&amp;quot;.&lt;/p&gt;
 &lt;h3 id="use-an-ide-with-a-spell-checker"&gt;Use an IDE with a spell checker
 &lt;/h3&gt;&lt;p&gt;Avoid anything that fails to pass the spell check.&lt;/p&gt;
 &lt;p&gt;Add the spell-checking dictionary of the IDE to source control and review any commits to it just as you review any other code.&lt;/p&gt;
@@ -4908,8 +4907,7 @@ href="https://blog.michael.gr/post/2017-05-on-scripting-languages/"
 &lt;p&gt;numberOfPoints; pointCount; pointsLength&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id="avoid-acronyms-and-abbreviations"&gt;Avoid acronyms and abbreviations
-&lt;/h3&gt;&lt;p&gt;Use fully spelled-out words of the English language instead.&lt;/p&gt;
-&lt;p&gt;Acronyms and abbreviations are cryptic for the uninitiated, and even if they are not, they make the code look unnecessarily technical. Modern IDEs have formidable auto-completion features, so fully spelling out every word does not necessarily mean that you will have to type more, but even if it did, typing is not one of the major problems that our profession is faced with; unreadable code is.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Acronyms and abbreviations are cryptic for the uninitiated, and even if they are not, they make the code look unnecessarily technical and foreboding. Use fully spelled-out words of the English language instead. Modern IDEs have formidable auto-completion features, so fully spelling out every word does not necessarily mean that you will have to type more, but even if it did, typing is not one of the major problems that our profession is faced with; unreadable code is.&lt;/p&gt;
 &lt;p&gt;This means that a huge number of abbreviations which have traditionally been staple terms in programming, should never be used, or their use should be seriously reconsidered. This includes all of the following: abs, addr, alloc, alt, app, arg, async, attr, auth, avg, bg, bat, bin, bool, buf, buff, btn, calc, cert, char, cls, clr, col, coll, cmd, com, cmp, comp, cfg, conf, config, const, ctx, ctrl, conv, coord, cos, cnt, cur, curr, db, dbg, dec, decl, def, deg, del, desc, dest, dev, diff, dim, dir, disp, div, doc, drv, dyn, env, eq, err, exe, exp, expr, ext, fac, fig, fg, fmt, frac, freq, fn, fun, func, gen, geom, hdr, hex, img, imp, impl, inc, idx, info, init, ins, inst, int, iter, lang, len, lib, lnk, max, mem, msg, mid, min, misc, mod, mul, mut, nav, net, num, obj, org, pkg, param, perf, pic, ptr, pos, pow, pwr, pred, pref, prev, priv, proc, prof, pub, rand, rnd, recv, rec, rect, ref, regex, rel, rem, rm, repo, req, res, ret, rev, sel, seq, svc, sess, sin, sln, src, spec, sqrt, std, stmt, stat, str, sub, sync, tan, tmp, temp, txt, usr, util, var, val, vec, ver, win, wiz.&lt;/p&gt;
 &lt;p&gt;If a particular acronym is understood by every programmer, then it might be okay to use it in code, but if it is only understood by domain experts, then it is &lt;em&gt;not okay&lt;/em&gt;. This is because programmers often work on software for domains on which they are not experts, and even if they do eventually become domain experts, in the beginning they are not, but the beginning is when everything is difficult, so that is precisely the time that you do not want to be adding any extra difficulty to them. This means that very few acronyms are actually okay.&lt;/p&gt;
 &lt;p&gt;Let me stress this to make sure it is understood: Domain Experts may protest that it is awkward to see a particular term fully spelled out in the code, because the term is so well known, that it appears as an acronym in the entirety of the literature in their field; let them find it awkward, and let them protest. Your code is not part of the literature in their field.&lt;/p&gt;
@@ -4917,10 +4915,10 @@ href="https://blog.michael.gr/post/2017-05-on-scripting-languages/"
 &lt;p&gt;Also beware of abbreviations that do not look like abbreviations. For example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;The word &amp;quot;out&amp;quot; can be a word on its own, but more often than not, it is used as an abbreviation of &amp;quot;output&amp;quot;. Spell out the full word.&lt;/p&gt;
+&lt;p&gt;The word &amp;quot;out&amp;quot; can be a word on its own, but more often than not, it is used as an abbreviation of &amp;quot;output&amp;quot;. Spell out the full word. Let the computer hacker of the seventies go gently into the good night; be modern and sophisticated; use the fully spelled-out term &lt;code&gt;StandardOutput&lt;/code&gt; instead of the cryptic abbreviation &lt;code&gt;StdOut&lt;/code&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;In the methods &lt;code&gt;ToUpper()&lt;/code&gt; and &lt;code&gt;ToLower()&lt;/code&gt;, the terms &amp;quot;Upper&amp;quot; and &amp;quot;Lower&amp;quot; have no inherent meaning of their own; the proper terms that these abbreviations stand for are &amp;quot;UpperCase&amp;quot; and &amp;quot;LowerCase&amp;quot;. Use the proper terms.&lt;/p&gt;
+&lt;p&gt;In the methods &lt;code&gt;ToUpper()&lt;/code&gt; and &lt;code&gt;ToLower()&lt;/code&gt;, the terms &amp;quot;upper&amp;quot; and &amp;quot;lower&amp;quot; have no inherent meaning of their own; if you think about it, they make no sense; what happens in fact is that they are abbreviations of the proper terms, which are &lt;code&gt;UpperCase&lt;/code&gt; and &lt;code&gt;LowerCase&lt;/code&gt; respectively. The proper terms make sense; use the proper terms.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="pay-attention-to-naming"&gt;Pay attention to naming
@@ -4957,32 +4955,46 @@ href="https://softwareengineering.stackexchange.com/q/409455/41811" target="_bla
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Variables:&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Single-value:&lt;/strong&gt; The name of a single-value variable must always be a noun in singular form, unless it is of boolean type, in which case it may signify a condition, such as isEmpty.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Collection:&lt;/strong&gt; The name of a collection variable must always be a noun in plural form, no exceptions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Single-value:&lt;/strong&gt; The name of a single-value variable must always be a noun in singular form, unless it is of Boolean type, in which case it may signify a condition, such as &lt;code&gt;isEmpty&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Collection:&lt;/strong&gt; The name of a collection variable must either be a noun in plural form, (e.g. &lt;code&gt;Gizmos&lt;/code&gt;,) or it must be suffixed with a collection-signifying term (e.g. &lt;code&gt;GizmoList&lt;/code&gt;.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Functions:&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Pure:&lt;/strong&gt; The name of a function that returns a result without mutating anything must always be a noun unless it returns boolean, in which case it may signify a condition, such as hasChildren(). The name must be in singular form, unless a collection is returned, in which case the name must be in plural form.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Impure:&lt;/strong&gt; The name of a function that performs an operation (has side effects) must be a verb, no exceptions. If the impure function returns a result indicating success or failure, the name must begin with 'try' followed by the actual verb, for example 'tryAdd()'. If the name does not begin with &lt;code&gt;try&lt;/code&gt; then the rule is that the function will signal failure by throwing an exception.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pure:&lt;/strong&gt; The name of a function that returns a result without mutating anything must always be a noun unless it returns Boolean, in which case it may signify a condition, such as &lt;code&gt;hasChildren()&lt;/code&gt;. The name must be in singular form, unless a collection is returned, in which case the name must either be in plural form, (e.g. &lt;code&gt;GetGizmos()&lt;/code&gt;,) or be suffixed with a collection-signifying term. (e.g. &lt;code&gt;GetGizmoList()&lt;/code&gt;.)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Impure:&lt;/strong&gt; The name of a function that performs an operation (has side effects) must be a verb, no exceptions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fallible:&lt;/strong&gt; If a function returns a result indicating success or failure, the name must begin with 'try', for example &lt;code&gt;TryGetGizmos()&lt;/code&gt; or &lt;code&gt;TryAddGizmo()&lt;/code&gt;. If the name does not begin with 'try' then the absolutely inviolable rule is that the function will signal failure by throwing an exception.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;When multiple words are combined to form an identifier, they must still make sense. As an example of what to avoid, take the &lt;code&gt;INotifyPropertyChanged&lt;/code&gt; interface of WPF. This name is deplorable because notify is a verb, not a noun or an adjective, and because an object implementing this interface is not a property-changed notification, it is an object which may issue property-changed notifications. Admittedly, it is difficult to come up with a good name to describe such objects; a decent choice might be &lt;code&gt;PropertyChangedNotificationIssuer&lt;/code&gt;, but this might be a bit too long for some people's taste. An alternative is to use a familiar term of broader scope if there is no possibility of confusion. So, another decent choice here might simply be &lt;code&gt;Mutable&lt;/code&gt;. It is true that all kinds of different classes are mutable without issuing property-changed notifications, but then again the only thing that different mutable classes could have in common simply by virtue of being mutable, so as to warrant a common interface for all of them, is issuing notifications about their mutations. The point to take home from all this is that although it is difficult to come up with good names, the application of some actual thinking should produce a name which is at least a bit better than nonsense.&lt;/p&gt;
+&lt;p&gt;When multiple words are combined to form an identifier, they must still make sense. As an example of what to avoid, take the &lt;code&gt;INotifyPropertyChanged&lt;/code&gt; interface of WPF. This name is deplorable because notify is a verb, not a noun or an adjective, and because an object implementing this interface is not a property-changed notification, it is an object which may issue property-changed notifications.&lt;/p&gt;
+&lt;p&gt;Admittedly, it is difficult to come up with a good name to describe such objects; a decent choice might be &lt;code&gt;PropertyChangedNotificationIssuer&lt;/code&gt;, but this might be a bit too long for some people's taste. An alternative is to use a familiar term of broader scope if there is no possibility of confusion. So, another decent choice here might simply be &lt;code&gt;Mutable&lt;/code&gt;. It is true that all kinds of different classes are mutable without issuing property-changed notifications, but then again the only thing that different mutable classes could have in common simply by virtue of being mutable, so as to warrant a common interface for all of them, is issuing notifications about their mutations. The point to take home from all this is that although it is difficult to come up with good names, the application of some actual thinking should produce a name which is at least a bit better than nonsense.&lt;/p&gt;
 &lt;p&gt;As mentioned earlier, special cases of the English grammar can, and should, be ignored. An example of this is the simplification of plurals: choose &amp;quot;indexes&amp;quot; instead of &amp;quot;indices&amp;quot;, &amp;quot;schemas&amp;quot; instead of &amp;quot;schemata&amp;quot;, and, even though I know this is a tough proposition for some, &amp;quot;companys&amp;quot; instead of &amp;quot;companies&amp;quot;. See &lt;a class="external"
 href="https://softwareengineering.stackexchange.com/q/290951/41811" target="_blank"
 &gt;Software Engineering Stack Exchange: Does it make sense to use &amp;quot;ys&amp;quot; instead of &amp;quot;ies&amp;quot; in identifiers to ease find-and-replace functionality?&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Never begin a function name with the prefix 'check'. Doing so is a typical example of a developer choosing names according to fleeting notions in their head, without the slightest concern as to how these names will be understood by others. The word &lt;code&gt;check&lt;/code&gt; means nothing; a function that only checks something and then does nothing about it would serve absolutely no purpose; presumably, whatever checking the function does culminates in taking some kind of action, or returning some kind of result; this is an extremely important piece of information that the name of the function should not fail to convey; therefore, the name of the function should indicate what kind of action is performed, or what kind of result is returned.&lt;/p&gt;
+&lt;p&gt;Never begin a function name with the prefix 'check'. Doing so is a typical example of a developer choosing names according to fleeting notions in their head, without the slightest concern as to how these names will be understood by others. The word &lt;code&gt;check&lt;/code&gt; means nothing; a function that only checks something and then does nothing about it would serve absolutely no purpose; presumably, whatever checking the function does culminates in taking some kind of action, or returning some kind of result; this is an extremely important piece of information that the name of the function should not fail to convey; therefore, the name of the function must indicate what kind of action is performed, or what kind of result is returned.&lt;/p&gt;
 &lt;h3 id="avoid-conventions-that-make-code-look-unnecessarily-technical"&gt;Avoid conventions that make code look unnecessarily technical
 &lt;/h3&gt;&lt;p&gt;Code is, by definition, already quite technical; we do not need to be making it look even more technical than it already is. Abandon the abhorrent practice of prefixing static variables with &amp;quot;s_&amp;quot;, prefixing member variables with &amp;quot;m_&amp;quot;, and prefixing private member variables with &amp;quot;_&amp;quot;. Modern IDEs can be configured to provide sufficient visual clues about these things via syntax highlighting. If your IDE does not support this, throw it away and find one that does. If you are not using an IDE, then please switch to the arts and humanities.&lt;/p&gt;
 &lt;h3 id="avoid-hungarian-notation"&gt;Avoid Hungarian Notation.
 &lt;/h3&gt;&lt;p&gt;(&lt;a class="external"
 href="https://en.wikipedia.org/wiki/Hungarian_notation" target="_blank"
-&gt;https://en.wikipedia.org/wiki/Hungarian_notation&lt;/a&gt;.) For example, no matter how popular it is in the DotNet world, the practice of prefixing interface names with &lt;code&gt;I&lt;/code&gt; is ill-conceived. What also helps in order to avoid Hungarian Notation is &lt;em&gt;The Maximalistic Approach to Typing&lt;/em&gt;, where the nature of a variable is fully determined from its data type without the need for name adornments.&lt;/p&gt;
-&lt;p&gt;Which brings us to the next item:&lt;/p&gt;
-&lt;h3 id="use-the-type-system-to-the-fullest"&gt;Use the type system to the fullest
-&lt;/h3&gt;&lt;p&gt;Avoid using general purpose data types; try as much as possible to use data types that are specific for the job. A classic example of this is the use of a &lt;code&gt;Duration&lt;/code&gt; data type instead of an &lt;code&gt;int&lt;/code&gt; number of milliseconds, but it goes a lot further than that.&lt;/p&gt;
-&lt;p&gt;So, no, your height is not of type &lt;code&gt;double&lt;/code&gt;, it is of type &lt;code&gt;Length&lt;/code&gt;; your married status is not a boolean, it is an instance of &lt;code&gt;MarriedStatus&lt;/code&gt;; a customer id and a product id are not both of type &lt;code&gt;int&lt;/code&gt;; one is of type &lt;code&gt;CustomerId&lt;/code&gt;, while the other is of type &lt;code&gt;ProductId&lt;/code&gt;; and so on. I call this &lt;em&gt;&lt;strong&gt;The Maximalistic Approach To Typing&lt;/strong&gt;&lt;/em&gt;. Untyped programming language aficionados can cry me a river.&lt;/p&gt;
+&gt;https://en.wikipedia.org/wiki/Hungarian_notation&lt;/a&gt;.) One thing that greatly helps in avoiding Hungarian Notation is &lt;em&gt;The Maximalistic Approach to Typing&lt;/em&gt;, (see next item below,) where the nature of a variable is fully determined from its data type without the need for name adornments.&lt;/p&gt;
+&lt;p&gt;One more thing: no matter how popular it is in the DotNet world, the practice of prefixing interface names with &lt;code&gt;I&lt;/code&gt; is an instance of Hungarian notation, and is therefore a bad practice. It is indicative of uncertainty and uneasiness on behalf of the programmers who first started using interfaces a long time ago, perhaps without fully understanding what they are. Obviously, they wanted to have that &lt;code&gt;I&lt;/code&gt; clearly visible in every interface name, to make it evident that this is one of those new interface things. This is laughable today. There is absolutely no reason to view an interface as something so special as to deserve its own naming convention.&lt;/p&gt;
+&lt;h3 id="follow-the-maximalistic-approach-to-data-typing"&gt;Follow the Maximalistic Approach To Data-Typing
+&lt;/h3&gt;&lt;p&gt;Many programmers tend to use general-purpose data types everywhere, even when values conceptually belong to specialized types. This is a bad practice, known as &lt;em&gt;&lt;strong&gt;Primitive Obsession&lt;/strong&gt;&lt;/em&gt;. The classic example of this is using an &lt;code&gt;int&lt;/code&gt; number of milliseconds instead of a &lt;code&gt;Duration&lt;/code&gt; data type, which is more specific, and unit-agnostic, and therefore far more type-safe than an &lt;code&gt;int&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, in most modern programming languages, a data type like &lt;code&gt;Duration&lt;/code&gt; already exists, so using it instead of &lt;code&gt;int&lt;/code&gt; is a no-brainer; however, there is a lot to be gained by creating user-defined data types to represent quantities for which there are no pre-existing data types; for example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Your height is not of type &lt;code&gt;double&lt;/code&gt;; it is of type &lt;code&gt;Length&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;A value indicating whether you are married or not is not a Boolean; it is an instance of &lt;code&gt;MarriedStatus&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;A customer id and a product id are not both of type &lt;code&gt;int&lt;/code&gt;; one is of type &lt;code&gt;CustomerId&lt;/code&gt;, while the other is of type &lt;code&gt;ProductId&lt;/code&gt;.
+...and so on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The practice of creating user-defined types is such a good thing that we can never have too much of it. So, in every case where we see primitives being used, we must consider whether it would make sense to be using more specific types instead, and if so, to add such types and refactor all code to start making use of them. I call this &lt;em&gt;&lt;strong&gt;The Maximalistic Approach To Data-Typing&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;User-defined data types that stand for physical quantities are called &lt;em&gt;&lt;strong&gt;Strongly Typed Units&lt;/strong&gt;&lt;/em&gt;. With them, we can go a step further and make use of user-defined operators to implement an entire type-safe algebra, where a &lt;code&gt;Length&lt;/code&gt; divided by a &lt;code&gt;Time&lt;/code&gt; yields a &lt;code&gt;Velocity&lt;/code&gt;, thus guiding the programmer to make the correct calculations, and sparing the programmer from ever having to worry about unit conversions. (Wrong unit conversions is the stuff that &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Mars_Climate_Orbiter" target="_blank"
+&gt;Mars Climate Orbiter mission failures&lt;/a&gt; are made of.)&lt;/p&gt;
+&lt;p&gt;Strongly Typed Units are such a good thing to have, that I would recommend using only programming languages that have support for them, for example C++, C#, Scala, etc., and avoiding any programming languages that lack support for them, for example Java.&lt;/p&gt;
+&lt;p&gt;Oh, and, untyped programming language aficionados can cry me a river.&lt;/p&gt;
 &lt;h3 id="avoid-defensive-programming-engage-in-offensive-programming-instead"&gt;Avoid defensive programming; engage in &lt;em&gt;offensive&lt;/em&gt; programming instead
 &lt;/h3&gt;&lt;p&gt;Defensive programming is summarized by &lt;em&gt;Postel's law&lt;/em&gt;, otherwise known as the &lt;em&gt;Robustness Principle&lt;/em&gt;, which says:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5005,11 +5017,11 @@ href="https://trevorjim.com/postels-law-is-not-for-you" target="_blank"
 &lt;/ul&gt;
 &lt;p&gt;Examples of offensive programming:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Avoid conversion functions that return &lt;code&gt;null&lt;/code&gt; if given &lt;code&gt;null&lt;/code&gt;; always assert that the parameter is non-null. Better yet, avoid nullability altogether, or use a type system with explicit nullability, so as to restrict it via strong typing to only those places where it is meaningful. The same applies to empty strings: if an empty string is not meaningful somewhere, do not simply cope with it; explicitly and categorically disallow it.&lt;/li&gt;
-&lt;li&gt;Avoid things like a &lt;code&gt;Map.put()&lt;/code&gt; method which either adds or replaces, and instead design for an &lt;code&gt;add()&lt;/code&gt; method which asserts that the item being added does not already exist, and a &lt;code&gt;replace()&lt;/code&gt; method which asserts that the item being replaced does in fact already exist.&lt;/li&gt;
+&lt;li&gt;Avoid conversion functions that return &lt;code&gt;null&lt;/code&gt; if given &lt;code&gt;null&lt;/code&gt;; always assert that the parameter is non-null. Better yet, avoid nullability altogether, or use a type system with explicit nullability, so as to restrict it via strong typing to only those places where it is meaningful. The same applies to empty strings: if an empty string is not meaningful somewhere, do not simply cope with it; explicitly and categorically disallow it by throwing an exception.&lt;/li&gt;
+&lt;li&gt;Avoid things like a &lt;code&gt;Map.put()&lt;/code&gt; method which either adds or replaces, and instead design for an &lt;code&gt;add()&lt;/code&gt; method which asserts that the item being added does not already exist, and a &lt;code&gt;replace()&lt;/code&gt; method which asserts that the item being replaced does in fact already exist. Force the programmer to clearly indicate their intention, and assert that things are exactly as the programmer assumes they are.&lt;/li&gt;
 &lt;li&gt;In scenarios where an add-or-replace operation seems useful to have, (and in my experience, such scenarios are exceedingly rare,) add such a function but give it a name that clearly indicates the weirdness in what it does: call it &lt;code&gt;addOrReplace()&lt;/code&gt;. (Duh!)&lt;/li&gt;
 &lt;li&gt;Avoid things like a &lt;code&gt;close()&lt;/code&gt; method which is allowed to be invoked more than once with no penalty: assert that your &lt;code&gt;close()&lt;/code&gt; methods are invoked exactly once.&lt;/li&gt;
-&lt;li&gt;Never use the garbage collector for cleanup; always perform explicit and deterministic clean-up at the exact moment when it is supposed to happen; the cleanup function invoked by the garbage collector should only be used for producing diagnostic messages in case we forgot to do explicit cleanup. Read this: &lt;a
+&lt;li&gt;Never use the garbage collector for cleanup; always perform explicit and deterministic clean-up at the exact moment when it is supposed to happen; the cleanup function invoked by the garbage collector should only be used for producing a diagnostic message in case we forgot to do explicit cleanup. Read this: &lt;a
 href="https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/"
 &gt;Object Lifetime Awareness&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -5103,7 +5115,7 @@ href="https://blog.michael.gr/post/2021-12-full-stack-development/"
 &lt;p&gt;A class should be as long as necessary to do its job, and if that is 2000 lines, so be it. I would much rather keep some ugly code confined in a single class than split it into multiple classes and thus propagate the ugliness in the design.&lt;/p&gt;
 &lt;p&gt;A function should accept as many parameters as necessary to do its job, and if that is 15 parameters, so be it. I would much rather have a long constructor than a mutable object.&lt;/p&gt;
 &lt;p&gt;Breaking things down to smaller units should be done because there is some actual tangible merit in doing so, not because some prophecy said so.&lt;/p&gt;
-&lt;h3 id="private-static-methods-are-fine-really"&gt;Private static methods are fine. Really
+&lt;h3 id="private-static-methods-are-fine-really"&gt;Private static methods are fine. Really!
 &lt;/h3&gt;&lt;p&gt;An instance method has the entire object state at its disposal to read and manipulate, and this state may be altered by any other instance method, including instance methods that this method may invoke. The complexity of this is mind-boggling. A static method on the other hand is obviously not in a position to read nor alter any of the object's state, and it is unable to invoke any instance methods that would do that. By its nature, a static method has to rely exclusively on parameters, which are all clearly visible at each call site. Thus, a static method is an &lt;em&gt;&lt;strong&gt;immensely less complex&lt;/strong&gt;&lt;/em&gt; beast than an instance method. What this means is that private static methods are not the slightest bit evil as some folks believe they are, and we should have more of them.&lt;/p&gt;
 &lt;p&gt;Personally, when I have a class that has both complex logic and mutable state, I tend to move the complex logic into private static methods, reducing the instance methods to doing nothing but invoking private static methods, passing instance fields to them and storing results into instance fields as necessary.&lt;/p&gt;
 &lt;h3 id="do-not-fix-it-unless-there-is-a-test-for-it"&gt;Do not fix it unless there is a test for it
@@ -5125,7 +5137,7 @@ href="https://blog.michael.gr/post/2021-12-full-stack-development/"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Here is a StackOverflow question and answer which simplifies things a lot: &lt;a class="external"
+&lt;p&gt;Here is a Stack Overflow question and answer which simplifies things a lot: &lt;a class="external"
 href="https://stackoverflow.com/q/71115356/773113" target="_blank"
 &gt;https://stackoverflow.com/q/71115356/773113&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="write-code-as-if-it-will-be-reviewed-by-someone-even-if-it-never-will"&gt;Write code as if it will be reviewed by someone, even if it never will
@@ -5213,7 +5225,7 @@ Note that it does not need to address each one of those items separately; a doc-
 &lt;/ul&gt;
 &lt;p&gt;This applies not only to code, but also to any piece of information, including individual values. Why did you choose this particular value and not some other value? Unless the value in question is a &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Fundamental_constant" target="_blank"
-&gt;Fundamental Constant&lt;/a&gt; (e.g. &lt;code&gt;static readonly Velocity SpeedOfLight = 299792458.0&lt;/code&gt;) you should add a comment to it explaining exactly why this particular value was chosen, or where it came from. For example, if you need to use the population of Mexico City in code, then &lt;code&gt;const int MexicoCityPopulation = 9209944;&lt;/code&gt; is not enough; it must be followed by a comment saying &lt;code&gt;//2020 data from https://en.wikipedia.org/wiki/Mexico_City&lt;/code&gt;.&lt;/p&gt;
+&gt;Fundamental Constant&lt;/a&gt; (e.g. &lt;code&gt;static readonly Velocity SpeedOfLight = Velocity.FromMetersPerSecond( 299792458.0 )&lt;/code&gt;) you should add a comment to it explaining exactly why this particular value was chosen, or where it came from. For example, if you need to use the population of Mexico City, then &lt;code&gt;const int MexicoCityPopulation = 9209944;&lt;/code&gt; is not enough; it must be followed by a comment saying &lt;code&gt;//2020 data from https://en.wikipedia.org/wiki/Mexico_City&lt;/code&gt;.&lt;/p&gt;
 &lt;h3 id="stick-with-utc-everywhere"&gt;Stick with UTC everywhere
 &lt;/h3&gt;&lt;p&gt;Use UTC and only UTC for any purpose that involves storing, retrieving, communicating, converting, calculating, and doing really anything whatsoever with time, except for the following two cases, and only the following two cases:&lt;/p&gt;
 &lt;ul&gt;
@@ -5223,7 +5235,8 @@ href="https://en.wikipedia.org/wiki/Fundamental_constant" target="_blank"
 &lt;p&gt;&lt;strong&gt;However:&lt;/strong&gt; When dealing with events that happen in the future, make sure to also store the targeted time-zone along with the UTC coordinate, because every few years various countries around the world decide to change their daylight savings policy, which means that the mapping from UTC to local time may change in the future, and you have no way of knowing that in advance.&lt;/p&gt;
 &lt;h3 id="keep-technical-implementation-concerns-separate-from-application-concerns"&gt;Keep technical implementation concerns separate from application concerns
 &lt;/h3&gt;&lt;p&gt;Application code should not be making assumptions about the technical details of the system, so that the technical details are free to change with minimal changes to application code, and vice versa.&lt;/p&gt;
-&lt;p&gt;For example, the multi-threading regime under which a system operates (whether the system utilizes a single thread, or multiple discrete threads, or a thread-pool,) is a technical implementation concern. As such, all knowledge of how multi-threading is done should be isolated in the relatively small body of code which wires up (realizes) the system, and all application code should be capable of operating regardless of the multi-threading regime. Incidentally, this facilitates running tests under a strictly single-threaded regime, to ease debugging. Async/await aficionados can cry me a river.&lt;/p&gt;
+&lt;p&gt;For example, the multi-threading regime under which a system operates (whether the system utilizes a single thread, or multiple discrete threads, or a thread-pool) is a technical implementation concern. As such, all knowledge of how multi-threading is done should be isolated in the relatively small body of code which wires up the system, and all application code should be capable of operating regardless of the multi-threading regime. Incidentally, this facilitates running tests either under a strictly single-threaded regime, to ease debugging, or under a multi-threaded regime, to maximize speed.&lt;/p&gt;
+&lt;p&gt;Async/await aficionados can cry me a river.&lt;/p&gt;
 &lt;h3 id="maximize-the-consistency-of-code-formatting"&gt;Maximize the consistency of code formatting
 &lt;/h3&gt;&lt;p&gt;I would be tempted to say &amp;quot;format code with absolute consistency&amp;quot;, but I cannot, because we usually lack the tools to achieve this, so the goal is to strive to get as close as possible to achieving absolute formatting consistency.&lt;/p&gt;
 &lt;p&gt;In the preface of the highly acclaimed book &amp;quot;Clean Code&amp;quot; by Robert C. Martin, the author mentions some experimental findings indicating that &amp;quot;consistent indentation style was one of the most statistically significant indicators of low bug density.&amp;quot; The author also states that &amp;quot;style distinguishes excellence from mere competence&amp;quot;, which I think is a very good observation; however, the conclusion at which the author arrives is unwarranted, because correlation does not imply causation: it is probably not the consistent indentation style that causes fewer bugs, it is the kind of mindset of programmers who strive for a consistent indentation style which also happens to be the kind of mindset that produces fewer bugs. Be the programmer who has that mindset.&lt;/p&gt;
@@ -5249,7 +5262,8 @@ href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/" 
 &lt;h3 id="thoroughly-emulate-any-and-all-hardware"&gt;Thoroughly emulate any and all hardware
 &lt;/h3&gt;&lt;p&gt;Hardware emulation is a special case of abstraction, where instead of abstracting software we are abstracting hardware. Incomplete hardware emulations are a curse for the same reasons that leaky abstractions are a curse. Hardware emulations must be 100% complete so that any software performing high level operations with the hardware can make use of all of the functionality of the hardware while remaining completely agnostic of whether it is connected to the real hardware or to an emulation thereof.&lt;/p&gt;
 &lt;h3 id="only-use-absolute-file-system-paths"&gt;Only use absolute file-system paths
-&lt;/h3&gt;&lt;p&gt;All file-system paths must be absolute. It is fine to provide the user with the convenience of entering a relative path, but the relative path must be converted to absolute immediately upon entering the system. Relative paths are based on the notion of a &amp;quot;current directory&amp;quot;, which is one of the most ill-conceived, misused, and treacherous notions in the history of programming, because it is a global mutable variable. (I hope I do not need to explain why a global mutable variable is evil, right?) Note that the &amp;quot;current directory&amp;quot; is global not only across all classes of your application, but also across all threads of your application, and, in DotNet, even global across all AppDomains of your application, which were supposed to be completely isolated. Duh!? What were they thinking?&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;All file-system paths must be absolute. It is fine to provide the user with the convenience of entering a relative path, but the relative path must be converted to absolute immediately upon entering the system.&lt;/p&gt;
+&lt;p&gt;Relative paths are based on the notion of a &amp;quot;current directory&amp;quot;, which is one of the most ill-conceived, misused, and treacherous notions in the history of programming, because it is a global mutable variable. (I hope I do not need to explain why a global mutable variable is evil, right?) Note that the &amp;quot;current directory&amp;quot; is global not only across all classes of your application, but also across all threads of your application, and, in DotNet, even global across all AppDomains of your application, which were supposed to be completely isolated. Duh!? What were they thinking?&lt;/p&gt;
 &lt;h3 id="avoid-guids-also-known-as-uuids"&gt;Avoid GUIDs (also known as UUIDs)
 &lt;/h3&gt;&lt;p&gt;Never use GUIDs if you can avoid them. If you must use them, then make sure they are an implementation detail and that they constitute a side-note of your design, not a predominant feature of your design. Read this: &lt;a
 href="https://blog.michael.gr/post/2017-06-on-uuids-and-guids/"
@@ -5355,7 +5369,7 @@ data-flex-basis="360px"
 &lt;p&gt;This post was inspired by a Stack Overflow answer that I wrote, here:
 &lt;a class="external"
 href="https://stackoverflow.com/a/8642874/773113" target="_blank"
-&gt;https://stackoverflow.com/a/8642874/773113&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Scripting Languages</title><link>https://blog.michael.gr/post/2017-05-on-scripting-languages/</link><pubDate>Fri, 19 May 2017 19:46:34 +0000</pubDate><guid>https://blog.michael.gr/post/2017-05-on-scripting-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/images/pacifiers.jpg"
+&gt;https://stackoverflow.com/a/8642874/773113&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Scripting Languages</title><link>https://blog.michael.gr/post/2017-05-on-scripting-languages/</link><pubDate>Fri, 19 May 2017 19:46:34 +0000</pubDate><guid>https://blog.michael.gr/post/2017-05-on-scripting-languages/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/pacifiers.jpg"
 width="1023"
 height="575"
 loading="lazy"
@@ -5540,7 +5554,7 @@ href="https://www.catb.org/jargon/html/S/search-and-destroy-mode.html" target="_
 &lt;p&gt;Obligatory &lt;a class="external"
 href="https://www.xkcd.com/1638/" target="_blank"
 &gt;XKCD comic: &amp;quot;Backslashes&amp;quot;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/images/xkcd-backslash.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/xkcd-backslash.png"
 width="571"
 height="207"
 loading="lazy" alt="Backslashes" title="I searched my .bash_history for the line with the highest ratio of special characters to regular alphanumeric characters, and the winner was: cat out.txt | grep -o &amp;amp;quot;[[(].*[])][^]]*$&amp;amp;quot; ... I have no memory of this and no idea what I was trying to do, but I sure hope it worked."
@@ -5553,7 +5567,7 @@ data-flex-basis="662px"
 href="https://www.youtube.com/watch?v=zlcnOr81lPc" target="_blank"
 &gt;TEDxVienna 2016&lt;/a&gt;, opening statement, &amp;quot;Hello, I am to blame for JavaScript&amp;quot;.) Also, pretty much anyone deeply involved with JavaScript will admit that it has serious problems. One of the most highly acclaimed books on the language is &lt;em&gt;&lt;strong&gt;JavaScript: The Good Parts&lt;/strong&gt;&lt;/em&gt;, authored by Douglas Crockford and published by O'Reilly; you can take the title of the book as a hint.&lt;/p&gt;
 &lt;p&gt;As a matter of fact, here is a photo that has become a meme in and of itself, showing the relative sizes of two of the most popular books about JavaScript: &lt;em&gt;&lt;strong&gt;The Definitive Guide&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;The Good Parts&lt;/strong&gt;&lt;/em&gt;, both published by O'Reilly:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/images/javascript.webp"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/javascript.webp"
 width="1080"
 height="607"
 loading="lazy"
@@ -5589,7 +5603,7 @@ href="https://en.wikipedia.org/wiki/PHP#Early_history" target="_blank"
 &lt;p&gt;Usually, once a language becomes extremely popular, tools are created to lessen the impact of its deficiencies. Thanks to the herculean efforts of teams that develop scripting engines, and through all kinds of sorcery being done under the hood in these engines, the most popular scripting languages are considerably faster today than they used to be. However, the sorcery is not always applicable, even when it is applicable it is imperfect, and besides, it incurs a penalty of its own, so scripting languages will never match the performance of real programming languages. Also, modern IDEs have evolved to provide some resemblance of semantic checking in some scripting languages, but since this checking has been added as an afterthought, it is always partial, unreliable, hacky, and generally an uphill battle.&lt;/p&gt;
 &lt;p&gt;So, you might ask, what about the hundreds of thousands of successful projects written in scripting languages? Are they all junk? And what about the hundreds of thousands of programmers all over the world who are making extensive use of scripting languages every day and are happy with them? Are they all misguided? Can't they see all these problems? Are they all ensnared in a monstrous collective delusion?&lt;/p&gt;
 &lt;p&gt;Yep, that's exactly it. You took the words from my mouth.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/images/grumpy-cat-scripting-languages.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/grumpy-cat-scripting-languages.jpg"
 width="600"
 height="400"
 loading="lazy" alt="Mandatory grumpy cat meme" title="Scripting Languages - I Hate Them"
@@ -5725,7 +5739,7 @@ href="https://en.wikipedia.org/wiki/Computational_complexity_theory" target="_bl
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This works nicely because according to the java language specification, the expression at the right hand side of the colon of an assertion statement does not have to be of any particular type, but if it happens to be of an exception type, then it will be treated as the 'cause' of the &lt;code&gt;AssertionError&lt;/code&gt; exception. (In all other cases, its &lt;code&gt;toString()&lt;/code&gt; will be used as the 'message' of the &lt;code&gt;AssertionError&lt;/code&gt; exception.) Thus, your testing code can catch the assertion exception and examine its cause to ensure that it is indeed the expected exception.&lt;/p&gt;
 &lt;p&gt;So, your test suite might contain a utility method like the following:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;final&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;extends&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Throwable&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;expectException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Class&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exceptionClass&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Runnable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;runnable&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;runnable&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;run&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="w"&gt;
@@ -5742,10 +5756,10 @@ href="https://en.wikipedia.org/wiki/Computational_complexity_theory" target="_bl
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//expected exception was not thrown.&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="c1"&gt;//to keep the compiler happy.&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Which might be used as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;expectException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;-&amp;gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;myObject&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;foo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;0&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getMessage&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="na"&gt;equals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;n&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;assert&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;getMessage&lt;/span&gt;&lt;span class="p"&gt;().&lt;/span&gt;&lt;span class="na"&gt;equals&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s"&gt;&amp;#34;n&amp;#34;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are times when you have the need to check whether assertions are enabled. For example, in the first thing I always do in my test suites is to make sure that assertions are enabled, because if someone forgot to pass the -ea switch, all tests may pass without checking for a single defect in the code. Here is how to test whether assertions are enabled in java:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;static&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;isAssertEnabled&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
@@ -5786,15 +5800,15 @@ href="https://stackoverflow.com/a/27622328/773113" target="_blank"
 &lt;p&gt;So, here is the class that I use for benchmarking, employing all of the above tricks:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-Java" data-lang="Java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;package&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;saganaki&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;java.lang.ref.WeakReference&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kn"&gt;import&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;java.lang.ref.WeakReference&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="cm"&gt;/**
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt;/**
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * Measures the time it takes to run a piece of code.
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; *
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; * @author Michael Belivanakis (michael.gr)
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cm"&gt; */&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Benchmark&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;public&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Benchmark&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;static&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;final&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;long&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;NANOSECONDS_PER_MILLISECOND&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;1000_000L&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;private&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;final&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;long&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;durationInMilliseconds&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;
@@ -5897,7 +5911,7 @@ href="https://stackoverflow.com/a/27622328/773113" target="_blank"
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kd"&gt;final&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kt"&gt;long&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;shifted&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="na"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;magnitude&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;shifted&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;magnitude&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="w"&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For an application of the above class, see my next post: &lt;a
 href="https://blog.michael.gr/post/2014-07-benchmarking-java-8-lambdas/"
 &gt;Benchmarking Java 8 lambdas&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Intertwine: Normalizing Interface Invocations</title><link>https://blog.michael.gr/post/2011-10-16-intertwine-normalizing-interface/</link><pubDate>Sun, 16 Oct 2011 18:42:25 +0000</pubDate><guid>https://blog.michael.gr/post/2011-10-16-intertwine-normalizing-interface/</guid><description>&lt;p&gt;Note: This post has been superseded by a new post in 2022. See &lt;a
