@@ -1,34 +1,41 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pages on Michael's Blog</title><link>https://blog.michael.gr/page/</link><description>Recent content in pages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 07:21:18 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Portfolio</title><link>https://blog.michael.gr/portfolio/</link><pubDate>Wed, 25 Feb 2026 16:24:36 +0100</pubDate><guid>https://blog.michael.gr/portfolio/</guid><description>&lt;p&gt;Stack Overflow&lt;/p&gt;
-&lt;a href="http://stackoverflow.com/users/773113/mike-nakis"&gt;
-&lt;img
-alt="profile for Mike Nakis at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers"
-height="58"
-src="http://stackoverflow.com/users/flair/773113.png"
-title="profile for Mike Nakis at Stack Overflow, Q&amp;amp;A for professional and enthusiast programmers"
-width="208"
-/&gt;
-&lt;/a&gt;
-&lt;p&gt;Software Engineering (formerly &amp;quot;Programmers SE&amp;quot;)&lt;/p&gt;
-&lt;a href="http://programmers.stackexchange.com/users/41811/mike-nakis"&gt;
-&lt;img alt="profile for Mike Nakis at Programmers, Q&amp;amp;A for professional programmers interested in conceptual questions about software development"
-height="58"
-src="http://programmers.stackexchange.com/users/flair/41811.png"
-title="profile for Mike Nakis at Programmers, Q&amp;amp;A for professional programmers interested in conceptual questions about software development"
-width="208" /&gt;&lt;/a&gt;
-&lt;p&gt;Stack Exchange Total&lt;/p&gt;
-&lt;a href="http://stackexchange.com/users/404649"&gt;
-&lt;img alt="profile for MikeNakis on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites"
-height="58"
-src="http://stackexchange.com/users/flair/404649.png"
-title="profile for MikeNakis on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites"
-width="208" /&gt;&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pages on Michael's Blog</title><link>https://blog.michael.gr/page/</link><description>Recent content in pages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 08:28:54 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Portfolio</title><link>https://blog.michael.gr/portfolio/</link><pubDate>Wed, 25 Feb 2026 16:24:36 +0100</pubDate><guid>https://blog.michael.gr/portfolio/</guid><description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Stack Exchange Badges&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Stack Overflow&lt;/td&gt;
+&lt;td&gt;&lt;img src="http://stackoverflow.com/users/flair/773113.png"
+loading="lazy" alt="profile for Mike Nakis at Stack Overflow"
+&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Software Engineering&lt;br&gt;(formerly &amp;quot;Programmers SE&amp;quot;)&lt;/td&gt;
+&lt;td&gt;&lt;img src="http://programmers.stackexchange.com/users/flair/41811.png"
+loading="lazy" alt="profile for Mike Nakis at Programmers, Q&amp;A for professional programmers interested in conceptual questions about software development" title="profile for Mike Nakis at Programmers, Q&amp;amp;A for professional programmers interested in conceptual questions about software development"
+&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Total&lt;/td&gt;
+&lt;td&gt;&lt;img src="http://stackexchange.com/users/flair/404649.png"
+loading="lazy" alt="profile for MikeNakis on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for MikeNakis on Stack Exchange, a network of free, community-driven Q&amp;amp;A sites"
+&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;Me on &lt;a class="external"
 href="https://www.linkedin.com/in/mikenakis/" target="_blank"
-&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Me on &lt;a class="external"
+&gt;LinkedIn&lt;/a&gt;
+Me on &lt;a class="external"
 href="https://stackoverflow.com/users/773113/mike-nakis" target="_blank"
-&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Me on &lt;a class="external"
+&gt;Stack Overflow&lt;/a&gt;
+Me on &lt;a class="external"
 href="https://github.com/mikenakis" target="_blank"
 &gt;GitHub&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Notable posts on this blog:&lt;/p&gt;
