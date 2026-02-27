@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 26 Feb 2026 10:58:33 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 27 Feb 2026 13:41:25 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -158,7 +158,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/h2&gt;&lt;p&gt;Raise your hand if you have ever had to troubleshoot a bug that manifested itself in mysterious ways, defied rational explanation, tenaciously evaded detection, made you rage at the absurdity of the observed behavior, and after much weeping and wailing and gnashing of teeth, turned out to be due to one of the following reasons:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;Inadvertently mutating an object that has been added as a key in a hash map.&lt;/p&gt;
+&lt;p&gt;Inadvertently mutating an object that is being used as a key in a hash map.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Inadvertently mutating an object that has been passed to another thread.&lt;/p&gt;
@@ -182,20 +182,19 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;So, in order to reap any benefits whatsoever from immutability, it must be deep immutability. Shallow immutability is irrelevant. Please keep this in mind, as it has severe implications in our quest to ascertain the immutability of anything.&lt;/p&gt;
 &lt;h3 id="static-analysis"&gt;Static Analysis
 &lt;/h3&gt;&lt;p&gt;The term &amp;quot;static analysis&amp;quot; refers to examining the code that makes a program, (as written, or as compiled,) but not the state of the program as it runs. Consequently, static analysis can examine the definitions of data structures, but not the actual contents of those data structures during runtime.&lt;/p&gt;
-&lt;p&gt;A popular but naïve understanding of immutability is that it is an inherent characteristic of types, and that the instances of the types (i.e. the objects) simply follow suit. According to this understanding, all we need to do is to ascertain that a certain type is immutable, and from that moment on we know that all of its instances are immutable.&lt;/p&gt;
+&lt;p&gt;A popular but naïve understanding of immutability is that it is an inherent characteristic of types, and that the instances of the types (i.e. the objects) simply follow suit. According to this understanding, all we need to do is to ascertain that a certain type is immutable via static analysis, and from that moment on we know that all of its instances are immutable.&lt;/p&gt;
 &lt;p&gt;This understanding is not entirely false, but it is very limiting, because it means that only concrete and non-extensible (a.k.a. final, sealed) types can potentially be assessed as immutable: All interfaces must necessarily be considered as mutable, because we have no idea how they may be implemented, and all abstract or simply extensible types must also necessarily be considered as mutable, because we have no idea how they may be extended.&lt;/p&gt;
 &lt;p&gt;This poses an insurmountable problem if we wanted to have, say, a queue for exchanging messages between threads, where the messages are organized in a class hierarchy: such a queue would not be able to ascertain the immutability of the messages it handles, because all it knows is the base-most 'Message' class, which is necessarily extensible, and therefore mutable, as far as static analysis can tell.&lt;/p&gt;
 &lt;p&gt;Now, consider that many perfectly immutable classes tend to be passed around as interfaces, (e.g. &lt;code&gt;Comparer&lt;/code&gt;, &lt;code&gt;Hasher&lt;/code&gt;, &lt;code&gt;Predicate&lt;/code&gt;, all sorts of stateless converters, etc.) that these interfaces are often stored in fields, and that a field of mutable type makes the class containing that field also mutable. It quickly becomes evident that static analysis can only work in a universe where no abstraction is utilized; however, we do not live in such a universe: we make use of languages like Java and C# precisely because we want the benefits of &lt;em&gt;unlimited&lt;/em&gt; abstraction.&lt;/p&gt;
 &lt;p&gt;One final nail in the coffin of static analysis is the issue of delayed immutability.&lt;/p&gt;
 &lt;h3 id="delayed-immutability"&gt;Delayed Immutability
-&lt;/h3&gt;&lt;p&gt;Some objects begin life as mutable, so that they can undergo some non-trivial initialization, and become immutable later, once initialization is complete. This behavior is necessary when creating cyclic graphs of immutable objects, or when creating an immutable object while loading its contents from some
-external storage. (Alternative terms used by others for this kind of immutability are &lt;em&gt;Freezing&lt;/em&gt; and &lt;em&gt;Popsicle immutability&lt;/em&gt;.)&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Some objects begin life as mutable, so that they can undergo some non-trivial initialization, and become immutable later, once initialization is complete. This behavior is necessary when creating cyclic graphs of immutable objects, or when creating an immutable object while deserializing it, in other words loading its contents from some storage. Alternative terms used by others for this kind of immutability are &lt;em&gt;Freezing&lt;/em&gt; and &lt;em&gt;Popsicle immutability&lt;/em&gt;, but I prefer the term &lt;em&gt;Delayed immutability&lt;/em&gt; because it is more straightforward and self-explanatory.&lt;/p&gt;
 &lt;p&gt;There is no standard way of representing delayed immutability, so let me propose one real quick:&lt;/p&gt;
 &lt;p&gt;Let there be a &lt;code&gt;SelfAssessing&lt;/code&gt; interface, which is to be implemented by any class that utilizes delayed immutability. This interface is to have just one method, &lt;code&gt;IsImmutable()&lt;/code&gt;, which is expected to return &lt;code&gt;false&lt;/code&gt; for as long as the object is mutable, and to start returning &lt;code&gt;true&lt;/code&gt; once the object becomes immutable.&lt;/p&gt;
 &lt;p&gt;Note that static analysis is by nature limited to examining types, but delayed immutability requires invoking a method of an instance of a type. Thus, static analysis completely fails to assess delayed immutability. Furthermore, a delayed immutable may appear as a field in any type, meaning that static analysis fails to assess potentially any type.&lt;/p&gt;
 &lt;p&gt;Since static analysis fails in the presence of abstraction and/or delayed immutability, it follows that we have to examine not just types, but also the instances of types in the running software system. This calls for &lt;em&gt;dynamic analysis&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id="dynamic-analysis"&gt;Dynamic Analysis
-&lt;/h3&gt;&lt;p&gt;The term &amp;quot;dynamic analysis&amp;quot; refers to examining various aspects of a software system as it runs. In some cases the aim is to examine the behavior of the software, in other cases (such as the case at hand) it is to examine the data structures it creates. Dynamic analysis may require (and in the case at hand it does require) static analysis as a prerequisite.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;The term &amp;quot;dynamic analysis&amp;quot; refers to examining various aspects of a software system as it runs. In some cases the aim is to examine the behavior of the software, in other cases (such as the case at hand) it is to examine the data structures it creates. Dynamic analysis may require (and in the case at hand it does in fact require) static analysis as a prerequisite.&lt;/p&gt;
 &lt;p&gt;With dynamic analysis we can look past the advertised type of a field, which may be abstract, and obtain the instance stored in the field, (the value of the field,) in order to find out the actual, concrete type of that instance.&lt;/p&gt;
 &lt;p&gt;Once we have the concrete type of an instance, we can assess whether it is immutable, and this may involve recursively assessing any instances referenced by that instance. If everything is immutable, then and only then can the containing instance assessed as immutable.&lt;/p&gt;
 &lt;p&gt;To make all of this work, we begin with static analysis where we use reflection to examine a type with the goal of giving it one of &lt;em&gt;three&lt;/em&gt; possible assessments:&lt;/p&gt;
@@ -206,20 +205,9 @@ external storage. (Alternative terms used by others for this kind of immutabilit
 &lt;/ul&gt;
 &lt;p&gt;These type assessments are issued as follows:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The &lt;strong&gt;mutable&lt;/strong&gt; type assessment is issued if:
-&lt;ul&gt;
-&lt;li&gt;The type has any fields that are variable, (non-final/non-readonly,) because such fields are mutable no matter what their advertised type (field type) is.&lt;/li&gt;
-&lt;li&gt;The type has nothing but invariable fields, but one or more of them is of an advertised type that has received a mutable assessment, because this means that the containing type is not deeply immutable.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;mutable&lt;/strong&gt; type assessment is issued if the type has any fields that are variable, or has nothing but invariable fields, but one or more of them is of an advertised type that has received a mutable assessment.&lt;/li&gt;
 &lt;li&gt;The &lt;strong&gt;immutable&lt;/strong&gt; type assessment is issued if a type consists exclusively of fields that are both invariable and of an advertised type which has received an immutable assessment.&lt;/li&gt;
-&lt;li&gt;The &lt;strong&gt;inconclusive&lt;/strong&gt; type assessment is issued if:
-&lt;ul&gt;
-&lt;li&gt;The type is abstract or extensible (non-final/non-sealed.)&lt;/li&gt;
-&lt;li&gt;The type is self-assessing.&lt;/li&gt;
-&lt;li&gt;The type contains any fields of an advertised type that has in turn received an inconclusive assessment.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;The &lt;strong&gt;inconclusive&lt;/strong&gt; type assessment is issued if the type is abstract or extensible, (non-final/non-sealed,) self-assessing, or contains only fields of advertised types that have received either immutable or inconclusive assessments.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note that the above are &lt;em&gt;type&lt;/em&gt; assessments, issued on types, by static analysis alone.&lt;/p&gt;
 &lt;p&gt;Every instance of a type that has received a mutable or immutable assessment is in turn mutable or immutable without the need to examine the contents of the instance; however, every instance of a type that has received an inconclusive assessment must be further examined to issue a final assessment for that instance only.&lt;/p&gt;
@@ -229,16 +217,18 @@ external storage. (Alternative terms used by others for this kind of immutabilit
 &lt;/ul&gt;
 &lt;p&gt;Both type assessment and instance assessment can be expensive; however, note the following:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Once a type assessment has been issued, it will never change, so it can be
-cached, and never recomputed again.&lt;/li&gt;
-&lt;li&gt;Instance assessments can be requested only from within assertions, meaning
-that they can incur zero runtime overhead on production.&lt;/li&gt;
+&lt;li&gt;Once a type assessment has been issued, it will never change, so it can be cached, and never recomputed again.&lt;/li&gt;
+&lt;li&gt;Instance assessments can be requested only from within assertions, meaning that they can incur zero runtime overhead on production.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Note that for static analysis we employed nothing but reflection to examine the fields of a type, and for dynamic analysis we also employed nothing but reflection to examine the values of fields of instances, so no code analysis was necessary. However, for the sake of completeness, let us also take a brief look at code analysis.&lt;/p&gt;
 &lt;h3 id="code-analysis"&gt;Code analysis
 &lt;/h3&gt;&lt;p&gt;There is a school of thought according to which the answer to the immutability assessment question lies in analyzing the executable instructions that comprise a type to determine whether any fields are mutated by code outside of the constructor.&lt;/p&gt;
-&lt;p&gt;The problem with code analysis is that it is a form of static analysis, so it suffers from the disadvantages of static analysis that were previously explained.&lt;/p&gt;
-&lt;p&gt;Suppose that code analysis determines that a type does not mutate any fields outside of its constructor; suppose, however, that the type contains a field of abstract type, which gets initialized from a constructor parameter; is this type mutable or immutable? Obviously, it depends on the concrete type of the instance that will be stored, at runtime, in that field. So, we are back at square one, where static analysis simply does not work in the face of abstraction. Therefore, code analysis is not the answer.&lt;/p&gt;
+&lt;p&gt;The problem with code analysis is that it is a form of static analysis, so it suffers from the disadvantages of static analysis that were previously explained:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Suppose that code analysis determines that a type does not mutate any fields outside of its constructor; suppose, however, that the type contains a field of abstract type, which gets initialized from a constructor parameter; is this type mutable or immutable?&lt;/li&gt;
+&lt;li&gt;Obviously, it depends on the concrete type of the instance that will be stored, at runtime, in that field, which is something that static analysis cannot determine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, we are back at square one, where static analysis simply does not work in the face of abstraction. Therefore, code analysis is not the answer.&lt;/p&gt;
 &lt;p&gt;Code analysis could potentially be useful, as a supplement to dynamic analysis, in the following ways:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In some cases, a type contains a field which is written by a method other than the constructor. For this to work, the field has to be variable. (Non-final/non-readonly.) Thus, with the use of reflection alone, this type will be assessed as mutable. However, it may be that the method which writes the field makes sure that the field is only written once during the lifetime of the instance, and that it gets written before it is ever read, so it will never appear to mutate as far as external observers can tell. Thus, the type is effectively immutable. It is in theory possible (though not easy) for code analysis to detect that the field is treated in this way, thus allowing the type to be assessed as immutable.&lt;/li&gt;
@@ -269,12 +259,18 @@ that they can incur zero runtime overhead on production.&lt;/li&gt;
 &lt;/h3&gt;&lt;p&gt;Once we have immutability assessment working as described in the preceding sections, a new challenge becomes apparent: sometimes, a data structure that was intended to be immutable will be assessed as mutable due to some tiny programmer mistake. If the data structure is large and complex, it might not be obvious where the mistake is. The programmer will receive a mutable assessment, but will not know why it was given and where to look to find the problem.&lt;/p&gt;
 &lt;p&gt;For this reason, every mutable instance assessment must come with a sentence explaining to the programmer why the assessment was issued. Since every mutable instance assessment typically has one or more other assessments that are the reasons that led to it, these sentences will often form entire trees, each sentence being further explained by nested sentences.&lt;/p&gt;
 &lt;p&gt;I call this feature elucidation.&lt;/p&gt;
+&lt;h3 id="an-implementation"&gt;An Implementation
+&lt;/h3&gt;&lt;p&gt;I have already created a library for Java that achieves all of the above; I call it Bathyscaphe. You can find out about it &lt;a
+href="https://blog.michael.gr/post/2022-05-bathyscaphe/"
+&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I have also ported this library to C#, and all of its (quite extensive) tests pass, so I have sufficient reason to believe that it is working correctly; however, I have yet to try it in any real projects, so I cannot confidently proclaim it to be of release grade at the moment. I am planning to release it as soon as I can.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="further-reading"&gt;Further reading
-&lt;/h2&gt;&lt;p&gt;Eric Lippert's must-read post about the different kinds of immutability:
-&lt;a class="external"
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Eric Lippert's must-read series of posts about immutability: &lt;a class="external"
 href="https://ericlippert.com/2007/11/13/immutability-in-c-part-one-kinds-of-immutability/" target="_blank"
-&gt;Immutability in C# Part One: Kinds of Immutability&lt;/a&gt;&lt;/p&gt;
+&gt;Immutability in C# Part One: Kinds of Immutability&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id="appendix"&gt;Appendix
 &lt;/h2&gt;&lt;p&gt;Immutability assessment is awesome, but the more the compiler can do for us, the better.&lt;/p&gt;
@@ -4353,36 +4349,10 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;For the purposes of this paper, we will call full-stack development not just this mode of work, but also this architectural style as a whole: full-stack development is when application logic must be written both on the server and on the client.&lt;/p&gt;
 &lt;p&gt;Full-Stack Development is a paradox, since it suggests a way of work which is contrary to what common sense dictates. Common sense calls for specialists each working on their own area of specialization, so one would expect to see different developers focusing on different layers of the stack, and nobody ever attempting something as preposterous as working on all layers simultaneously. However, there is a technological hurdle which renders this necessary today.&lt;/p&gt;
 &lt;h4 id="why-is-full-stack-development-necessary-today"&gt;Why is full-stack development necessary today
-&lt;/h4&gt;&lt;p&gt;Normally, (outside of web application development,) in a system that consists
-of multiple layers, only one of the layers tends to be application-specific,
-while all other layers tend to be general purpose infrastructure layers that
-are agnostic of any application that might put them to use. Under such an
-arrangement, the functionality offered by each layer is dictated by what makes
-sense for that layer to be doing, so the work to be done at each layer tends
-to be rather self-contained and straightforward. In this scenario, each
-specialist can indeed work on the layer that they specialize in.&lt;/p&gt;
-&lt;p&gt;However, in web development we have a server, and we have a client, and so far
-we have been unable to find a solution that would allow us to confine all of
-our application logic to only one of them. (There have been some attempts in
-that direction, but they were only moderately successful, and virtually none
-of them survived the transition from monolithic architectures to microservices
-architectures.) As a result, in modern web applications, both layers are
-application-specific.&lt;/p&gt;
-&lt;p&gt;In the early days people did try to apply specialization and division of labor
-to web application development, and they found that when all the layers are
-application-specific, collaboration between teams working on different layers
-suffers, resulting in low productivity. There are too many details that have
-to be agreed upon by people working on different layers; too much waiting for
-the guys working on the layer below to finish their part before the guys
-working on layer above can do their job; too much disagreement as to whose
-fault it is when the system is not working as expected; in general, too much
-back and forth, too much friction.&lt;/p&gt;
-&lt;p&gt;For this reason, full-stack development was invented: instead of dividing the
-workforce horizontally, it ends up being less inefficient to divide them
-vertically: when each developer works on a different feature of the product
-from top to bottom, they do not have to interact too intensively with other
-developers, and this represents a gain which seems to offset the loss of not
-having specialists working on their respective areas of specialization.&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;Normally, (outside of web application development,) in a system that consists of multiple layers, only one of the layers tends to be application-specific, while all other layers tend to be general-purpose infrastructure layers that are agnostic of any application that might put them to use. Under such an arrangement, the functionality offered by each layer is dictated by what makes sense for that layer to be doing, so the work to be done at each layer tends to be rather self-contained and straightforward. In this scenario, each specialist can indeed work on the layer that they specialize in.&lt;/p&gt;
+&lt;p&gt;However, in web development we have a server, and we have a client, and so far we have been unable to find a solution that would allow us to confine all of our application logic to only one of them. (There have been some attempts in that direction, but they were only moderately successful, and virtually none of them survived the transition from monolithic architectures to microservices architectures.) As a result, in modern web applications, both layers are application-specific.&lt;/p&gt;
+&lt;p&gt;In the early days people did try to apply specialization and division of labor to web application development, and they found that when all the layers are application-specific, collaboration between teams working on different layers suffers, resulting in low productivity. There are too many details that have to be agreed upon by people working on different layers; too much waiting for the guys working on the layer below to finish their part before the guys working on layer above can do their job; too much disagreement as to whose fault it is when the system is not working as expected; in general, too much back and forth, too much friction.&lt;/p&gt;
+&lt;p&gt;For this reason, full-stack development was invented: instead of dividing the workforce horizontally, it ends up being less inefficient to divide them vertically: when each developer works on a different feature of the product from top to bottom, they do not have to interact too intensively with other developers, and this represents a gain which seems to offset the loss of not having specialists working on their respective areas of specialization.&lt;/p&gt;
 &lt;h4 id="what-is-wrong-with-full-stack-development"&gt;What is wrong with full-stack development
 &lt;/h4&gt;&lt;p&gt;In brief, full-stack development has the following disadvantages:&lt;/p&gt;
 &lt;ul&gt;
@@ -4391,17 +4361,8 @@ having specialists working on their respective areas of specialization.&lt;/p&gt
 &lt;li&gt;&lt;strong&gt;Has limited capabilities.&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;Is confined within the sand-boxed execution environment of the browser.&lt;/li&gt;
-&lt;li&gt;Admittedly, browsers today are pretty feature-rich, (actually,
-monstrously so,) but still, you are writing code which is running out
-there, on browsers, and is therefore out of your control, instead of
-here, on the server, where you do have control.&lt;/li&gt;
-&lt;li&gt;So, there are always things that you would like to accomplish, but you
-cannot on the client, so you have to suffer the additional bureaucracy
-of having the client communicate what you are trying to accomplish to
-the server, having the server do it for you, and receiving the results
-back on the client. That?s an awful lot of work for something as simple
-as, say, obtaining the current date and time regardless of client
-configuration or misconfiguration.&lt;/li&gt;
+&lt;li&gt;Admittedly, browsers today are pretty feature-rich, (actually, monstrously so,) but still, you are writing code which is running out there, on browsers, and is therefore out of your control, instead of here, on the server, where you do have control.&lt;/li&gt;
+&lt;li&gt;So, there are always things that you would like to accomplish, but you cannot on the client, so you have to suffer the additional bureaucracy of having the client communicate what you are trying to accomplish to the server, having the server do it for you, and receiving the results back on the client. That's an awful lot of work for something as simple as, say, obtaining the current date and time regardless of client configuration or misconfiguration.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Suffers from incidental complexity.&lt;/strong&gt;
@@ -4412,57 +4373,36 @@ HTTP, REST, Ajax, etc.&lt;/li&gt;
 incompatibilities.&lt;/li&gt;
 &lt;li&gt;Security hazards.
 &lt;ul&gt;
-&lt;li&gt;Code on the client must not only accomplish application goals, but it
-must do so while avoiding various commonly known and not-so-commonly
-known security pitfalls.&lt;/li&gt;
-&lt;li&gt;Each time a new security hazard is discovered by the security
-community, vast amounts of application code must be meticulously
-audited and painstakingly fixed.&lt;/li&gt;
+&lt;li&gt;Code on the client must not only accomplish application goals, but it must do so while avoiding various commonly known and not-so-commonly known security pitfalls.&lt;/li&gt;
+&lt;li&gt;Each time a new security hazard is discovered by the security community, vast amounts of application code must be meticulously audited and painstakingly fixed.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Must be re-written on each targeted format (web, mobile, desktop.)&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;When targeting a new format besides the web (e.g. desktop, mobile) we
-have to re-engineer not only the presentation markup, but also all of
-the application logic which is inextricably mangled with it.&lt;/li&gt;
-&lt;li&gt;This necessitates the creation and maintenance of multiple separate code
-bases that largely duplicate the functionality of each other.&lt;/li&gt;
-&lt;li&gt;These code bases are liable to diverge, thus causing user workflows and
-overall user experience to unwantedly differ across formats.&lt;/li&gt;
+&lt;li&gt;When targeting a new format besides the web (e.g. desktop, mobile) we have to re-engineer not only the presentation markup, but also all of the application logic which is inextricably mangled with it.&lt;/li&gt;
+&lt;li&gt;This necessitates the creation and parallel maintenance of multiple separate code bases that largely duplicate the functionality of each other.&lt;/li&gt;
+&lt;li&gt;These code bases are liable to diverge, thus causing user workflows and overall user experience to unwantedly differ across formats.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Is usually written in a scripting language.&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is error-prone due to scripting languages being untyped.&lt;/li&gt;
-&lt;li&gt;The code is hard to maintain due to untyped languages being impervious
-to refactoring.&lt;/li&gt;
-&lt;li&gt;The code is messy due to scripting languages invariably being inferior
-to real programming languages.&lt;/li&gt;
-&lt;li&gt;The code is transmitted in source code form to the browser, thus
-exposing potentially sensitive intellectual property.&lt;/li&gt;
+&lt;li&gt;The code is hard to maintain due to untyped languages being impervious to refactoring.&lt;/li&gt;
+&lt;li&gt;The code is messy due to scripting languages invariably being inferior to real programming languages.&lt;/li&gt;
+&lt;li&gt;The code is transmitted in source code form to the browser, thus exposing potentially sensitive intellectual property.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Is usually written in JavaScript in particular.&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;JavaScript was originally intended for no more than a few, tiny, and
-isolated snippets of code per HTML page. The haphazardness of the
-language design reflects this intention. However, modern web
-applications tend to contain tens of thousands of lines of
-application-specific JavaScript. That is an awful lot of code in a
-language which is defective by design.&lt;/li&gt;
+&lt;li&gt;JavaScript was originally intended for no more than a few, tiny, and isolated snippets of code per HTML page. The haphazardness of the language design reflects this intention. However, modern web applications tend to contain tens of thousands of lines of application-specific JavaScript. That is an awful lot of code in a language which is defective by design.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Excludes artists.&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Artists are prevented from actively participating in the creation and
-maintenance of web pages, because HTML is inextricably mangled with
-JavaScript, so they cannot touch it.&lt;/li&gt;
-&lt;li&gt;Thus, artists are resigned to creating mock-ups showing how they want
-web pages to look like, and programmers are then tasked with making the
-web pages look like the mockups. (As if the programmers did not already
-have enough in their hands.)&lt;/li&gt;
+&lt;li&gt;Artists are prevented from actively participating in the creation and maintenance of web pages, because HTML is inextricably mangled with JavaScript, so they cannot touch it.&lt;/li&gt;
+&lt;li&gt;Thus, artists are resigned to creating mock-ups showing how they want web pages to look like, and programmers are then tasked with making the web pages look like the mockups. (As if the programmers did not already have enough in their hands.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4472,19 +4412,14 @@ have enough in their hands.)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Is inextricably tied to REST&lt;/strong&gt;
 &lt;ul&gt;
 &lt;li&gt;This is because REST is impervious to abstraction.&lt;/li&gt;
-&lt;li&gt;REST forces reliance on binding-by-name, which undermines the coherence
-of the entire system and prevents static code analysis, invariably
-resulting in a big unknown chaos.&lt;/li&gt;
+&lt;li&gt;REST forces reliance on binding-by-name, which undermines the coherence of the entire system and prevents static code analysis, invariably resulting in a big unknown chaos.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Duplicates part of the client-side application logic.&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;This is necessary in order to perform validation on the server-side too,
-because from a security standpoint the client must always be considered
-compromised.&lt;/li&gt;
+&lt;li&gt;This is necessary in order to perform validation on the server-side too, because from a security standpoint the client must always be considered compromised.&lt;/li&gt;
 &lt;li&gt;This translates to additional development and maintenance cost.&lt;/li&gt;
-&lt;li&gt;Inevitable discrepancies between the validation done on the client and
-the validation done on the server are a continuous source of bugs.&lt;/li&gt;
+&lt;li&gt;Inevitable discrepancies between the validation done on the client and the validation done on the server are a continuous source of bugs.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4495,49 +4430,30 @@ the validation done on the server are a continuous source of bugs.&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;Usually having each part written in a different programming language.&lt;/li&gt;
 &lt;li&gt;Having &lt;em&gt;The Internet&lt;/em&gt; interjected between the two parts.&lt;/li&gt;
-&lt;li&gt;Having the point of split dictated not by business considerations, but
-by technological limitations instead.&lt;/li&gt;
+&lt;li&gt;Having the point of split dictated not by business considerations, but by technological limitations instead.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Mixes application with presentation.&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;A fundamental principle of graphical user interface application
-development is that application logic should be kept completely separate
-from presentation logic. This principle warns against inadvertently
-allowing application logic to bleed into the presentation layer;
-however, with full-stack development we have application logic not just
-&lt;em&gt;bleeding&lt;/em&gt; to the presentation layer, but actually
-&lt;em&gt;embarking on a massive deliberate large-scale exodus&lt;/em&gt; to the
-presentation layer.&lt;/li&gt;
-&lt;li&gt;One might naively think that full-stack development accomplishes
-separation by keeping application logic on the server and presentation
-logic on the client, but this is demonstrably not so:
+&lt;li&gt;A fundamental principle of graphical user interface application development is that application logic should be kept completely separate from presentation logic. This principle warns against inadvertently allowing application logic to bleed into the presentation layer; however, with full-stack development we have application logic not just &lt;em&gt;bleeding&lt;/em&gt; to the presentation layer, but actually &lt;em&gt;embarking on a massive deliberate large-scale exodus&lt;/em&gt; to the presentation layer.&lt;/li&gt;
+&lt;li&gt;One might naively think that full-stack development accomplishes separation by keeping application logic on the server and presentation logic on the client, but this is demonstrably not so:
 &lt;ul&gt;
-&lt;li&gt;The server is largely reduced to a bunch of dumb REST endpoints that
-perform not much more than Create, Read, Update, Delete, List (CRUDL)
-operations with validation. That is not application logic; that's
-mostly just querying and updating the data store.&lt;/li&gt;
-&lt;li&gt;The client not only decides how things should look, but it also
-decides what options should be available to the user at any moment,
-and what new options will become available to the user as a result of
-user actions. Essentially, all application workflows are implemented
-on the client. That's application logic
-&lt;em&gt;par excellence&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;The server is largely reduced to a bunch of dumb REST endpoints that perform not much more than Create, Read, Update, Delete, List (CRUDL) operations with validation. That is not application logic; that's mostly just querying and updating the data store.&lt;/li&gt;
+&lt;li&gt;The client not only decides how things should look, but it also decides what options should be available to the user at any moment, and what new options will become available to the user as a result of user actions. Essentially, all application workflows are implemented on the client. That's application logic &lt;em&gt;par excellence&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Is hard to test.&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;The front-end is not functional without the back-end, so the two ends
-usually have to be tested in integration, necessitating such
-monstrosities as Selenium.&lt;/li&gt;
+&lt;li&gt;The front-end is not functional without the back-end, so the two ends usually have to be tested in integration, necessitating such monstrosities as &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Selenium_%28software%29" target="_blank"
+&gt;Selenium&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Prevents specialization and division of labor.&lt;/strong&gt;
 &lt;ul&gt;
-&lt;li&gt;Full-stack development necessitates &lt;em&gt;The Full-stack Developer&lt;/em&gt;, who
-is:
+&lt;li&gt;Full-stack development necessitates &lt;em&gt;The Full-stack Developer&lt;/em&gt;, who is:
 &lt;ul&gt;
 &lt;li&gt;a front-end programmer,&lt;/li&gt;
 &lt;li&gt;a back-end programmer,&lt;/li&gt;
@@ -4545,7 +4461,8 @@ is:
 &lt;li&gt;a security expert,&lt;/li&gt;
 &lt;li&gt;a user experience expert,&lt;/li&gt;
 &lt;li&gt;an accessibility expert, and&lt;/li&gt;
-&lt;li&gt;a graphic artist&lt;/li&gt;
+&lt;li&gt;a graphic artist
+all rolled into one, thus running the risk of being a &lt;em&gt;jack of all trades, master of none&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -4553,36 +4470,20 @@ is:
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt; ? all rolled into one, thus running the risk of being a
-*jack of all trades, master of none*.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
 &lt;h4 id="conclusion"&gt;Conclusion
-&lt;/h4&gt;&lt;p&gt;By its nature, web application development requires systems that consist of
-multiple layers; the current state of affairs is such that
-application-specific code must be running on each of these layers, and this is
-called full-stack development. However, as I have shown, full-stack
-development has a list of disadvantages which is rather extensive, and each of
-these disadvantages is rather severe.&lt;/p&gt;
-&lt;p&gt;Essentially, we are suffering the consequences of a technological limitation:
-we currently have no means of confining all application logic to the server,
-so we have to be placing application logic on the client too, so we have no
-option but to be engaging in full-stack development.&lt;/p&gt;
-&lt;p&gt;Technological limitations require technological solutions, but companies with
-commercial goals do not usually take it upon themselves to solve the world's
-technological problems. Instead, they tend to make do with the existing
-problems, providing non-technological workarounds to them, such as throwing
-more manpower into the development effort. This might make sense for each
-individual company, but from a global perspective, we have collectively been
-&lt;em&gt;too busy mopping the floor to turn off the faucet.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;A solution that would confine all application logic to the server and thus
-eliminate full-stack development has the potential of being very beneficial to
-the industry as a whole.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/2018/2018-04-full-stack-development/media/grumpy-cat-full-stack-development-i-hate-it.jpg"
+&lt;/h4&gt;&lt;p&gt;By its nature, web application development requires systems that consist of multiple layers; the current state of affairs is such that application-specific code must be running on each of these layers, and this is called full-stack development. However, as I have shown, full-stack development has a list of disadvantages which is rather extensive, and each of these disadvantages is rather severe.&lt;/p&gt;
+&lt;p&gt;Essentially, we are suffering the consequences of a technological limitation: we currently have no means of confining all application logic to the server, so we have to be placing application logic on the client too, so we have no option but to be engaging in full-stack development.&lt;/p&gt;
+&lt;p&gt;Technological limitations require technological solutions, but companies with commercial goals do not usually take it upon themselves to solve the world's technological problems. Instead, they tend to make do with the existing problems, providing non-technological workarounds to them, such as throwing more manpower into the development effort. This might make sense for each individual company, but from a global perspective, we are collectively &lt;em&gt;too busy mopping the floor to turn off the faucet.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;A solution that would confine all application logic to the server and thus eliminate full-stack development has the potential of being very beneficial to the industry as a whole.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2018-04-full-stack-development/media/grumpy-cat-full-stack-development-i-hate-it.jpg"
+width="500"
+height="461"
 loading="lazy"
+class="gallery-image"
+data-flex-grow="108"
+data-flex-basis="260px"
 &gt;
-&lt;/p&gt;</description></item><item><title>On Code Craftsmanship</title><link>https://blog.michael.gr/post/2018-02-code-craftsmanship/</link><pubDate>Mon, 05 Feb 2018 15:55:42 +0000</pubDate><guid>https://blog.michael.gr/post/2018-02-code-craftsmanship/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2018-02-code-craftsmanship/media/craftsmanship-guitar.jpg"
+Grumpy cat meme - Full stack development: I hate it.&lt;/p&gt;</description></item><item><title>On Code Craftsmanship</title><link>https://blog.michael.gr/post/2018-02-code-craftsmanship/</link><pubDate>Mon, 05 Feb 2018 15:55:42 +0000</pubDate><guid>https://blog.michael.gr/post/2018-02-code-craftsmanship/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2018-02-code-craftsmanship/media/craftsmanship-guitar.jpg"
 width="2048"
 height="1365"
 loading="lazy"
