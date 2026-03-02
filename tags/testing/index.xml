@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Testing on Michael's Blog</title><link>https://blog.michael.gr/tags/testing/</link><description>Recent content in Testing on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:16:22 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/testing/index.xml" rel="self" type="application/rss+xml"/><item><title>The confusion about the term Unit Testing</title><link>https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</link><pubDate>Fri, 04 Apr 2025 14:53:02 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/media/crash-test-dummy-penseur.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Testing on Michael's Blog</title><link>https://blog.michael.gr/tags/testing/</link><description>Recent content in Testing on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 02 Mar 2026 09:09:44 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/testing/index.xml" rel="self" type="application/rss+xml"/><item><title>The confusion about the term Unit Testing</title><link>https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</link><pubDate>Fri, 04 Apr 2025 14:53:02 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-the-confusion-about-term-unit-testing/media/crash-test-dummy-penseur.jpg"
 width="2560"
 height="1600"
 loading="lazy"
@@ -316,12 +316,12 @@ data-flex-basis="413px"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
-&lt;/h3&gt;&lt;p&gt;In this paper I put forth the proposition that contrary to popular belief, 100% code coverage can be a very advantageous thing to have, and I discuss a technique for achieving it without excessive effort.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;In this paper I put forth the proposition that contrary to popular belief, 100% code coverage can be a very advantageous thing to have, and I discuss a couple of techniques for achieving it without excessive effort.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h3 id="the-problem"&gt;The problem
-&lt;/h3&gt;&lt;p&gt;Conventional wisdom says that 100% code coverage is unnecessary, or even undesirable, because achieving it requires an exceedingly large amount of effort &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; for the purpose of asserting correctness, but instead for the sole purpose of achieving coverage. In other words, it is often said that 100% code coverage has no business value.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Conventional wisdom says that 100% code coverage is unnecessary, or even undesirable, because achieving it requires an exceedingly large amount of effort for the sole self-serving purpose of achieving coverage instead of asserting correctness.&lt;/p&gt;
 &lt;p&gt;Let me tell you why this is wrong, and why 100% code coverage can indeed be a very good thing to have.&lt;/p&gt;
 &lt;p&gt;If you don't have 100% code coverage, then by definition, you have some lower percentage, like 87.2%, or 94.5%. The remaining 12.8%, or 5.5% is uncovered. I call this &lt;em&gt;&lt;strong&gt;the worrisome percentage.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;As you keep working on your code base, the worrisome percentage fluctuates:&lt;/p&gt;
@@ -331,125 +331,158 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;li&gt;yet another day you may add some more code along with tests, so even though the number of uncovered lines has not changed, it now represents a smaller percentage;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;... and it goes on like that.&lt;/p&gt;
-&lt;p&gt;If the worrisome percentage is high, then you know for sure that you are doing a bad job, but if it is low, it does not mean that you are doing a good job, because some very important functionality may be left uncovered, and you just do not know. To make matters worse, modern programming languages offer constructs that achieve great terseness of code, meaning that a few uncovered lines may represent a considerable amount of uncovered functionality.&lt;/p&gt;
-&lt;p&gt;So, each time you look at the worrisome percentage, you have to wonder what is in there: are all the important lines covered? are the uncovered lines okay to be left uncovered?&lt;/p&gt;
+&lt;p&gt;If the worrisome percentage is high, then you know for sure that you are doing a bad job, but if it is low, it does not necessarily mean that you are doing a good job, because some very important functionality may be left uncovered, and you just do not know. To make matters worse, modern programming languages offer constructs that achieve great terseness of code, meaning that a few uncovered lines may represent a considerable amount of uncovered functionality.&lt;/p&gt;
+&lt;p&gt;So, each time you look at the worrisome percentage, you have to wonder what is in there: are all the important lines covered? are all the uncovered lines okay to be left uncovered?&lt;/p&gt;
 &lt;p&gt;In order to answer this question, you have to go over every single line of code in the worrisome percentage, and examine it to determine whether it is okay that it is being left uncovered. What you find is, more often than not, the usual suspects:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Some &lt;code&gt;ToString()&lt;/code&gt; function which is only used for diagnostics;&lt;/li&gt;
 &lt;li&gt;Some &lt;code&gt;Equals()&lt;/code&gt; and &lt;code&gt;HashCode()&lt;/code&gt; functions of some value type which does not currently happen to be used as a key in a hash-map;&lt;/li&gt;
-&lt;li&gt;Some &lt;code&gt;default&lt;/code&gt; &lt;code&gt;switch&lt;/code&gt; clause which can never be reached, and if it was to ever be reached it would throw;&lt;/li&gt;
+&lt;li&gt;Some &lt;code&gt;switch&lt;/code&gt; statement with a &lt;code&gt;default&lt;/code&gt; clause which can never be reached, and if it was to ever be reached it would throw;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;... etc.&lt;/p&gt;
-&lt;p&gt;So, your curiosity is satisfied, your worries are allayed, and you go back to your usual software development tasks.&lt;/p&gt;
-&lt;p&gt;A couple of weeks later, the worrisome percentage has changed again, prompting the same question: what is being left uncovered now?&lt;/p&gt;
-&lt;p&gt;Each time you need to have this question answered, you have to re-examine every single line of code in the worrisome percentage. As you do this, you discover that in the vast majority of cases, the lines that you are examining now are the exact same lines that you were examining the previous time you were going through this exercise. After a while, this starts getting tedious. Eventually, you quit looking. Sooner or later, everyone in the shop quits looking.&lt;/p&gt;
+&lt;p&gt;So, your curiosity is satisfied, your worries are allayed, and you go back to your usual, day-to-day software development tasks.&lt;/p&gt;
+&lt;p&gt;Some time later, the worrisome percentage has changed again, prompting the same question: what is being left uncovered now?&lt;/p&gt;
+&lt;p&gt;Each time you need to have this question answered, you have to re-examine every single line of code in the worrisome percentage. As you do this, you discover that in the vast majority of cases, the lines that you are examining now are the exact same lines that you were examining the previous time you were going through this exercise.&lt;/p&gt;
+&lt;p&gt;After a while, this starts getting tedious. Eventually, you quit looking. Sooner or later, everyone in the shop quits looking.&lt;/p&gt;
 &lt;p&gt;The worrisome percentage has now become &lt;em&gt;&lt;strong&gt;terra incognita&lt;/strong&gt;&lt;/em&gt;: literally anything could be in there; nobody knows, and nobody wants to know, because finding out is such a dreary chore.&lt;/p&gt;
 &lt;p&gt;That is not a particularly nice situation to be in.&lt;/p&gt;
 &lt;h3 id="the-solution"&gt;The solution
-&lt;/h3&gt;&lt;p&gt;So, here is a radical proposition: If you always keep your code coverage at 100%, then the worrisome percentage is always zero, so there is nothing to worry about!&lt;/p&gt;
-&lt;p&gt;When the worrisome percentage is never zero, then no matter how it fluctuates, it never represents an appreciable change in the situation: it always goes from some non-zero number to some other non-zero number, meaning that we used to have some code uncovered, and we still have some code uncovered. No matter what happens, there is no actionable item.&lt;/p&gt;
-&lt;p&gt;On the other hand, if the worrisome percentage is normally zero, then each time it rises above zero it represents a definite change in the situation: you used to have everything covered, and now you have something uncovered. This signifies a clear call to action: the code that is now being left uncovered needs to be examined, and dealt with.&lt;/p&gt;
-&lt;p&gt;By dealing with uncovered code as soon as it gets introduced, you bring the worrisome percentage back to zero, thus achieving two things:&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;So, here is a radical proposition: If you always keep your code coverage at 100%, then the worrisome percentage is always zero, so there is nothing to worry about! How much is it worth for you to be able to sleep well at night?&lt;/p&gt;
+&lt;p&gt;If the worrisome percentage is normally zero, then each time it rises above zero it represents a definite change in the situation: you used to have everything covered, and now you have something uncovered. This signifies a call to action: the code that is now being left uncovered needs to be examined, and dealt with.&lt;/p&gt;
+&lt;p&gt;Contrast this with the situation where the worrisome percentage is never zero: no matter how it fluctuates, it never represents an appreciable change in the situation: it always goes from some non-zero number to some other non-zero number, meaning that we used to have some code uncovered, and we still have some code uncovered. There is no actionable item.&lt;/p&gt;
+&lt;p&gt;By dealing with uncovered code as soon as it gets introduced, you bring the worrisome percentage back to zero, thus achieving the following:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;You ensure that next time the worrisome percentage becomes non-zero, it will represent a new call to action.&lt;/li&gt;
+&lt;li&gt;You ensure that each time you have to examine uncovered code, the amount of code is small, and it is necessarily related to changes you just made.&lt;/li&gt;
 &lt;li&gt;You never find yourself in the unpleasant situation of re-examining code that has been examined before; so, the examination does not feel like a dreary chore.&lt;/li&gt;
+&lt;li&gt;You ensure that next time the worrisome percentage becomes non-zero, it will represent a new call to action.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The conventional understanding of how to deal with uncovered code is to write a test for it, and that is why achieving 100% code coverage is regarded as onerous; however, there exist alternatives that are much easier. For any given piece of uncovered code, you have three options:&lt;/p&gt;
+&lt;p&gt;The conventional understanding of how to deal with uncovered code is to write tests for it, and that is why achieving 100% code coverage is regarded as onerous; however, there exist alternatives that are much easier. For any given piece of uncovered code, besides the option of &lt;em&gt;&lt;strong&gt;Proper Testing&lt;/strong&gt;&lt;/em&gt;, we have two more options: &lt;em&gt;&lt;strong&gt;Selective Exclusion&lt;/strong&gt;&lt;/em&gt;, and &lt;em&gt;&lt;strong&gt;Artificial Coverage&lt;/strong&gt;&lt;/em&gt;. Let us examine them in detail.&lt;/p&gt;
+&lt;h4 id="proper-testing"&gt;Proper Testing
+&lt;/h4&gt;&lt;p&gt;This means turning uncovered code into covered code by writing actual tests for it. (Duh!)&lt;/p&gt;
+&lt;p&gt;This is of course the highest quality option, but:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Option #1: Write a test for the code.&lt;/p&gt;
-&lt;p&gt;This is of course the highest quality option, but it does not always represent the best value for money, and it is not even always possible. You only need to do it if the code is important enough to warrant testing, and you can only do it if the code is in fact testable. If you write a test, you can still minimize the effort of doing so, by utilizing certain techniques that I talk about in other posts, such as &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt;, &lt;a
+&lt;li&gt;It is not always possible.
+(You can only write a test for code that is in fact testable.)&lt;/li&gt;
+&lt;li&gt;It does not always represent the best value for money.
+(You only want to be writing tests for code that is important enough to warrant testing.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you decide to write a test, you can still minimize the effort of doing so, by utilizing certain techniques that I talk about in other posts, such as &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt;, &lt;a
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;, and &lt;a
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
+&lt;h4 id="selective-exclusion"&gt;Selective Exclusion
+&lt;/h4&gt;&lt;p&gt;This means instructing the code coverage analyzer to exclude the uncovered code from the total code coverage percentage calculation.&lt;/p&gt;
+&lt;p&gt;Code that is not testable, or not important enough to warrant testing, can be moved into a separate module which does not participate in coverage analysis. Alternatively, if the code coverage analysis tool supports it, you may be able to exclude individual methods or entire classes without having to move them to another module.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Option #2: Exclude the code from code coverage.&lt;/p&gt;
-&lt;p&gt;Code that is not testable, or not important enough to warrant testing, can be moved into a separate module which does not participate in coverage analysis. Alternatively, if your code coverage analysis tool supports it, you may be able to exclude individual methods without having to move them to another module. In the DotNet world, this can be accomplished by marking a method with &lt;a class="external"
+&lt;p&gt;In the DotNet world, this can be accomplished by marking a class or method with &lt;a class="external"
 href="https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.codeanalysis.excludefromcodecoverageattribute" target="_blank"
-&gt;the &lt;code&gt;ExcludeFromCodeCoverage&lt;/code&gt; attribute&lt;/a&gt;, found in the &lt;code&gt;System.Diagnostics.CodeAnalysis&lt;/code&gt; namespace. In the Java world, IntelliJ IDEA offers a setting for specifying what annotation we want to use for marking methods to be excluded from code coverage, so you can use any annotation you like. (See &lt;a
-href="https://blog.michael.gr/post/2022-12-intellij-idea-can-now-exclude-methods/"
-&gt;IntelliJ IDEA can now exclude methods from code coverage&lt;/a&gt;.) Various different code coverage analyzers support additional ways of excluding code from coverage.&lt;/p&gt;
+&gt;the ExcludeFromCodeCoverage attribute&lt;/a&gt;, found in the &lt;code&gt;System.Diagnostics.CodeAnalysis&lt;/code&gt; namespace.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Option #3: Artificially cover the code.&lt;/p&gt;
-&lt;p&gt;With the previous two options you should be able to bring the worrisome percentage down to a very small number, like 1 or 2 percent. What remains is code which should really be excluded from coverage, but it cannot, due to limitations in available tooling: although code coverage analyzers generally allow excluding entire functions from coverage analysis, they generally do not offer any means of excluding individual lines of code, such as the unreachable &lt;code&gt;default&lt;/code&gt; clause of some &lt;code&gt;switch&lt;/code&gt; statement. You can try moving that line into a separate function, and excluding that function, but you cannot exclude the call to that function, so the problem remains.&lt;/p&gt;
-&lt;p&gt;The solution in these cases is to cause the uncovered code to be invoked during testing, &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; in order to test it, but simply in order to have it covered. This might sound like cheating, but it is not, because the stated objective was not to test the code, it was to exclude it from coverage. You would have excluded that line from coverage if the tooling supported doing so, but since it does not, the next best thing, (and the only option you are left with,) is to artificially include it in the code coverage.&lt;/p&gt;
-&lt;p&gt;Here is a (hopefully exhaustive) list of all the different reasons due to which code might be left uncovered, and what to do in each case:&lt;/p&gt;
+&lt;p&gt;In the Java world, IntelliJ IDEA offers a setting for specifying what annotation we want to use for marking methods to be excluded from code coverage, so we can use any annotation we like. (See &lt;a
+href="https://blog.michael.gr/post/2022-12-intellij-idea-can-now-exclude-methods/"
+&gt;IntelliJ IDEA can now exclude methods from code coverage&lt;/a&gt;.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Various code coverage analyzers support additional ways of selectively excluding code from coverage.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Some might object that Selective Exclusion constitutes cheating, because it increases our code coverage percentage while in fact a lot of code goes uncovered. This objection is based on a misunderstanding of the goal of achieving 100% code coverage. It falsely assumes that the purpose of 100% code coverage is bragging rights. Nothing could be further from the truth. As previously explained, the purpose of 100% code coverage is:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To ensure that each time we have to examine uncovered code, the amount of code is small, and it is necessarily related to changes that we just made.&lt;/li&gt;
+&lt;li&gt;To never find ourselves in the unpleasant situation of re-examining uncovered code that has been examined before.&lt;/li&gt;
+&lt;li&gt;To ensure that each time the code coverage percentage drops below 100% it represents a call to action: look at the uncovered code, do something about it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="artificial-coverage"&gt;Artificial Coverage
+&lt;/h4&gt;&lt;p&gt;This means invoking the code from a test, not in order to test it, but in order to prevent it from negatively affecting the total code coverage percentage.&lt;/p&gt;
+&lt;p&gt;With the previous two options we should be able to bring the worrisome percentage down to a very small number, like 1 percent. What remains is code such as the unreachable &lt;code&gt;default&lt;/code&gt; clause of some &lt;code&gt;switch&lt;/code&gt; statement, which should really be excluded from coverage, but it cannot, due to limitations in available tooling:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Programming languages tend to allow attaching attributes or annotations to classes and methods, but not to individual lines of code.&lt;/li&gt;
+&lt;li&gt;Subsequently, code coverage analyzers cannot be instructed to exclude individual lines from coverage.&lt;/li&gt;
+&lt;li&gt;You can try moving the problematic line into a separate function, and excluding the function, but you cannot exclude the call to that function, so the problem remains.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The solution in this case is to deliberately cause the uncovered line to be invoked during testing, &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; in order to test it, but simply in order to prevent it from negatively affecting the total code coverage percentage.&lt;/p&gt;
+&lt;p&gt;This might sound like cheating, but it is not, because the objective was not to test that line in the first place. Think about it this way: If the tooling supported excluding that individual line from coverage, you would have done so. In doing so, the line would have been prevented from negatively affecting the total code coverage percentage, and it would have gone untested. Since the tooling does not support that, the next thing we can do is to artificially cause that line to be included in coverage. In this case, the result is the same: the line is prevented from negatively affecting the total code coverage percentage, and the line goes untested.&lt;/p&gt;
+&lt;h3 id="scenarios"&gt;Scenarios
+&lt;/h3&gt;&lt;p&gt;Here is a (hopefully exhaustive) list of all the different scenarios under which code might be left uncovered, and what to do in each case:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;The code should really be covered, but you forgot to write tests for it, or you have plans to write tests in the future.&lt;/p&gt;
-&lt;p&gt;Go with Option #1: write tests for it. Not in the future, &lt;em&gt;&lt;strong&gt;now&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The code should really be covered, but you forgot to write tests, or you are planning to write tests in the future.&lt;/p&gt;
+&lt;p&gt;Go with &lt;em&gt;&lt;strong&gt;Proper Testing&lt;/strong&gt;&lt;/em&gt;. Write tests for that code. Not in the future, but &lt;em&gt;&lt;strong&gt;now&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The code is not used and there is no plan to use it.&lt;/p&gt;
-&lt;p&gt;This is presumably code which exists for historical reasons, or for reference, or because it took some effort to write it and you do not want to admit that the effort was a waste by throwing away the code.&lt;/p&gt;
-&lt;p&gt;Go with Option #2 and exclude it from coverage.&lt;/p&gt;
+&lt;p&gt;This is presumably code which exists for historical reasons, or for reference, or because it took some effort to write it and you do not want to admit that it was in vain by throwing away the code.&lt;/p&gt;
+&lt;p&gt;Go with &lt;em&gt;&lt;strong&gt;Selective Exclusion&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The code is only used for diagnostics.&lt;/p&gt;
-&lt;p&gt;The prime example of this is &lt;code&gt;ToString()&lt;/code&gt; methods that are not normally invoked in a production environment, but give informative
-descriptions of our objects while debugging.&lt;/p&gt;
-&lt;p&gt;Go with Option #2: Exclude such methods from coverage.&lt;/p&gt;
+&lt;p&gt;The prime example of this is &lt;code&gt;ToString()&lt;/code&gt; methods whose sole purpose of existence is to give informative descriptions of our objects while debugging.&lt;/p&gt;
+&lt;p&gt;Go with &lt;em&gt;&lt;strong&gt;Selective Exclusion&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The code is not normally reachable, but it is there in case something unexpected happens.&lt;/p&gt;
-&lt;p&gt;The prime example of this is C# &lt;code&gt;switch&lt;/code&gt; statements that cover all possible cases and yet also contain a &lt;code&gt;default&lt;/code&gt; clause just in case an unexpected value somehow manages to creep in.&lt;/p&gt;
-&lt;p&gt;Go with Option #3: Artificially cover such code. This may require a bit of refactoring to make it easier to cause the problematic &lt;code&gt;switch&lt;/code&gt; statement to be invoked with an invalid value. The code most likely throws, so catch the exception and swallow it. You can also assert that the expected exception was thrown, in which case it becomes more like Option #1: a test.&lt;/p&gt;
+&lt;p&gt;The prime example of this is &lt;code&gt;switch&lt;/code&gt; statements that cover all possible cases and yet also contain a &lt;code&gt;default&lt;/code&gt; clause just in case an unexpected value somehow manages to creep in.&lt;/p&gt;
+&lt;p&gt;Go with &lt;em&gt;&lt;strong&gt;Artificial Coverage&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This may require a bit of refactoring to make it easier to cause the problematic &lt;code&gt;switch&lt;/code&gt; statement to be invoked with an invalid value. The code most likely throws, so catch the exception and swallow it. You can also assert that the expected exception was thrown, in which case it becomes more like &lt;em&gt;&lt;strong&gt;Proper Testing&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The code is reachable but not currently being reached.&lt;/p&gt;
-&lt;p&gt;This is code which is necessary for completeness, and it just so happens that it is not currently being used, but nothing prevents it from being used at any moment. A prime example of this is the &lt;code&gt;Equals()&lt;/code&gt; and &lt;code&gt;HashCode()&lt;/code&gt; functions of value types: without those functions, a value type is incomplete; however, if the value type does not currently happen to be used as a key in a hash-map, then those functions are almost certainly unused.&lt;/p&gt;
+&lt;p&gt;This is code which is necessary for completeness, and it just so happens that it is not currently being used, but nothing prevents it from being used in the future. A prime example of this is the &lt;code&gt;Equals()&lt;/code&gt; and &lt;code&gt;HashCode()&lt;/code&gt; functions of value types: without those functions, a value type is incomplete; however, if the value type does not currently happen to be used as a key in a hash-map, then those functions are almost certainly unused.&lt;/p&gt;
 &lt;p&gt;In this case, you can go with any of the three options:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;You can go with Option #1 and write a proper test.&lt;/li&gt;
-&lt;li&gt;You can go with Option #2 and exclude the code.&lt;/li&gt;
-&lt;li&gt;You can go with Option #3 and artificially cover the code.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Proper Testing&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Selective Exclusion&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Artificial Coverage&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;The code is not important enough to have a test for it.&lt;/p&gt;
 &lt;p&gt;Say you have a function which takes a tree data structure and converts it to text using &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Box-drawing_character" target="_blank"
-&gt;&lt;em&gt;box-drawing characters&lt;/em&gt;&lt;/a&gt; so as to be able to print it nicely as a tree on the console. Since the function receives text and emits text, it is certainly testable, but is it really worth testing? If it ever draws something wrongly, you will probably notice, and if you do not notice, then maybe it did not matter anyway.&lt;/p&gt;
-&lt;p&gt;In this case you can go either with Option #2 and exclude such functions, or Option #3 and artificially cover them.&lt;/p&gt;
+&gt;&lt;em&gt;box-drawing characters&lt;/em&gt;&lt;/a&gt; to print it nicely as a tree on the console. The function is certainly testable, but is it really worth testing? If it ever draws something wrongly, you will probably notice, and if you do not notice, then maybe it did not matter anyway.&lt;/p&gt;
+&lt;p&gt;In this case you can go with either of the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Selective Exclusion&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Artificial Coverage&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;The code is literally or practically untestable.&lt;/p&gt;
+&lt;p&gt;The code is practically or literally untestable.&lt;/p&gt;
 &lt;p&gt;For example:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;If your application has a Graphical User Interface (GUI), you can write automated tests for all of your application logic, but the only practical way to ascertain the correctness of the GUI is to have human eyes staring at the screen. (There exist tools for testing GUIs, but I assess them as &lt;em&gt;woefully impractical and acutely ineffective&lt;/em&gt;.)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If your application controls some hardware, you may have a hardware abstraction layer with two implementations, one which emulates the hardware, and one which interacts with the actual hardware. The emulator will enable you to test all of your application logic without having the actual hardware in place; however, the implementation which interacts with the actual hardware is practically untestable by software alone.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If you have a piece of code that queries the endianness of the hardware architecture and operates slightly differently depending on it, the only path you can truly cover is the one for the endianness of the hardware architecture you are actually using. (You can fake the endianness query, and pretend that your hardware has the opposite endianness, but you still have no guarantees as to whether the bit-juggling that you do in that path is right for the opposite endianness.)&lt;/p&gt;
-&lt;p&gt;In all of the above cases, and in all similar cases, we have no option but #2: exclude the code from coverage.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;If your application has a Graphical User Interface (GUI), you can write automated tests for all of your application logic, but the only practical way to ascertain the correctness of the GUI is to have human eyes staring at the screen. (There exist tools for testing GUIs, but I assess them as &lt;em&gt;woefully impractical and acutely ineffective&lt;/em&gt;.)&lt;/li&gt;
+&lt;li&gt;If your application controls some hardware, you may have a hardware abstraction layer with two implementations, one which emulates the hardware, and one which interacts with the actual hardware. The emulator will enable you to test all of your application logic without having the actual hardware in place; however, the implementation which interacts with the actual hardware is practically untestable by software alone.&lt;/li&gt;
+&lt;li&gt;If you have a piece of code that queries the endianness of the hardware architecture and operates slightly differently depending on it, the only path you can truly cover is the one for the endianness of the hardware architecture you are actually using. (You can fake the endianness query, and pretend that your hardware has the opposite endianness, but then you end up with machine words that are unusable on your own architecture, so your tests cannot continue.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In all of the above cases, and in all similar cases, we have one option:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Selective Exclusion&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id="conclusion"&gt;Conclusion
-&lt;/h4&gt;&lt;p&gt;If testing has business value, then 100% code coverage has business value, too.&lt;/p&gt;
-&lt;p&gt;A code coverage percentage of 100% is very useful, not for bragging, but for maintaining certainty that everything that ought to be tested is in fact being tested.&lt;/p&gt;
-&lt;p&gt;Achieving a code coverage percentage of 100% does require some effort, but with techniques such as Artificial Coverage the effort can be reduced to manageable levels.&lt;/p&gt;
-&lt;p&gt;Ideally, Artificial Coverage should never be necessary, but it is a practical workaround for the inability of coverage tools to exclude individual lines of code from analysis.&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;A code coverage percentage of 100% is very useful, not for bragging, but for easily maintaining certainty that everything that ought to be tested is in fact being tested.&lt;/p&gt;
+&lt;p&gt;Achieving a code coverage percentage of 100% does require some effort, but with techniques such as &lt;em&gt;&lt;strong&gt;Selective Exclusion&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;Artificial Coverage&lt;/strong&gt;&lt;/em&gt; the effort can be reduced to manageable levels.&lt;/p&gt;
+&lt;p&gt;Ideally, Artificial Code Coverage should not be necessary, but it is a practical workaround for the inability of coverage tools to selectively exclude individual lines of code from code coverage analysis.&lt;/p&gt;
+&lt;h3 id="appendix-future-tooling-improvements"&gt;Appendix: Future tooling improvements
+&lt;/h3&gt;&lt;h4 id="fine-grained-exclusion"&gt;Fine-grained exclusion
+&lt;/h4&gt;&lt;p&gt;Programming languages should be offering the ability to attach attributes or annotations to individual lines of code. That would give us the ability to instruct code coverage analysis tools to exclude individual lines from coverage. That would make artificial code coverage unnecessary.&lt;/p&gt;
+&lt;h4 id="expectation-management"&gt;Expectation management
+&lt;/h4&gt;&lt;p&gt;When the programmer specifies that a particular piece of code should be excluded from coverage, what the programmer is actually doing is stating their expectation that the code will not be invoked during testing. Unfortunately, code coverage analysis tools simply ignore that code. This is wrong. The tools should instead be verifying the programmer's expectation: If the code was indeed not invoked during testing, then everything is fine. But if the code was in fact invoked, despite the programmer's stated expectation that it will not be invoked, then the tooling should issue an error.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image by &lt;a class="external"
 href="https://unsplash.com/@teapowered" target="_blank"
-&gt;Patrick Robert Doyle from Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Audit Testing</title><link>https://blog.michael.gr/post/2024-04-audit-testing/</link><pubDate>Fri, 09 Feb 2024 14:55:40 +0000</pubDate><guid>https://blog.michael.gr/post/2024-04-audit-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-04-audit-testing/media/audit-testing.svg"
+&gt;Patrick Robert Doyle from Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Approval Testing</title><link>https://blog.michael.gr/post/2024-04-approval-testing/</link><pubDate>Fri, 09 Feb 2024 14:55:40 +0000</pubDate><guid>https://blog.michael.gr/post/2024-04-approval-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-04-approval-testing/media/approval-testing.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
-&lt;h4 id="abstract"&gt;Abstract
-&lt;/h4&gt;&lt;p&gt;An automated software testing technique is presented which spares us from having to stipulate our expectations in test code, and from having to go fixing test code each time our expectations change.&lt;/p&gt;
+&lt;h3 id="abstract"&gt;Abstract
+&lt;/h3&gt;&lt;p&gt;An automated software testing technique is presented which spares us from having to stipulate our expectations in test code, and from having to go fixing test code each time our expectations change.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
@@ -458,59 +491,49 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;This approach works, but it is inefficient, because during the development and evolution of a software system we often make changes to the production code fully anticipating the output of certain components to change. Unfortunately, each time we do this, the tests fail, because they are still expecting the old output. So, each change in the production code must be followed by a round of fixing tests to make them pass.&lt;/p&gt;
 &lt;p&gt;Note that under Test-Driven Development things are not any better: first we modify the tests to start expecting the new output, then we observe them fail, then we modify the components to produce the new output, then we watch the tests pass. We still have to stipulate our expectations in test code, and we still have to change test code each time our expectations change, which is inefficient.&lt;/p&gt;
 &lt;p&gt;This imposes a considerable burden on the software development process. As a matter of fact, it often happens that programmers refrain from making needed changes to their software because they dread the prospect of having to fix all the tests that will break as a result of those changes.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Audit Testing&lt;/strong&gt;&lt;/em&gt; is a technique for automated software testing which aims to correct all this.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Approval Testing&lt;/strong&gt;&lt;/em&gt; is a technique for automated software testing which aims to correct all this.&lt;/p&gt;
 &lt;h3 id="the-solution"&gt;The Solution
-&lt;/h3&gt;&lt;p&gt;Under Audit Testing, the assertions that verify the correctness of the output of the component-under-test are abolished, and replaced with code that simply saves the output to a text file. This file is known as the &lt;em&gt;&lt;strong&gt;Audit File&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;The test may still fail if the component-under-test encounters an error while producing output, in which case we follow a conventional test-fix-repeat workflow, but if the component-under-test manages to produce output, then the output is saved in the Audit File and the test completes successfully &lt;em&gt;&lt;strong&gt;without examining it.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The trick is that the Audit File is saved right next to the source code file of the test, which means that it is kept under Version Control. In the most common case, each test run produces the exact same audit output as the previous run, so nothing changes, meaning that all is good. If a test run produces different audit output from a previous test run, then the tooling alerts the developer to that effect, and the Version Control System additionally indicates that the Audit File has been modified and is in need of committing. Thus, the developer cannot fail to notice that the audit output has changed.&lt;/p&gt;
-&lt;p&gt;The developer can then utilize the &amp;quot;Compare with unmodified&amp;quot; feature of the Version Control System to see the differences between the audit output that was produced by the modified code, and the audit output of the last known-good test run. By visually inspecting these differences, the developer can decide whether they are as expected or not, according to the changes they made in the code.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Under Approval Testing, the assertions that verify the correctness of the output of the component-under-test are abolished, and replaced with code that simply saves the output to a text file. This text file is known as the &lt;em&gt;&lt;strong&gt;test output file&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The test may still fail if the component-under-test encounters an error while producing output, causing an exception to be thrown, in which case we follow a conventional test-troubleshoot-fix-repeat workflow. However, if no error is encountered, then the test completes successfully &lt;em&gt;&lt;strong&gt;without examining&lt;/strong&gt;&lt;/em&gt; the test output file.&lt;/p&gt;
+&lt;p&gt;The trick is that the test output file is saved right next to the source code file of the test, which means that it is kept under Version Control. In the most common case, each test run produces the exact same output as the previous run, so nothing changes, meaning that all is good. If a test run produces different output from a previous test run, then the Version Control System indicates that the test output file has been modified and is in need of committing. Thus, the developer cannot fail to notice that the test output has changed.&lt;/p&gt;
+&lt;p&gt;The developer can then utilize the &amp;quot;Compare with unmodified&amp;quot; feature of the Version Control System to see the differences between the test output that was produced by the modified code, and the test output of the last known-good test run. By visually inspecting these differences, the developer can decide whether they are as expected or not, according to the changes they made in the code.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;If the observed differences are not as expected, then the developer needs to keep working on their code until they are.&lt;/li&gt;
-&lt;li&gt;If the observed differences are as expected, then the developer can simply commit the new code, along with the new Audit File, &lt;em&gt;&lt;strong&gt;and they are done.&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;If the observed differences are as expected, then the developer can simply commit the new code, along with the new test output file, &lt;em&gt;&lt;strong&gt;and they are done.&lt;/strong&gt;&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This way, we eliminate the following burdens:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Having to hard-code into the tests the output expected from the component-under-test.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Having to assert, in each test, that the output of the component-under-test matches the expected output.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Having to go fixing test code each time there is a (fully expected) change in the output of the component-under-test.&lt;/p&gt;
+&lt;li&gt;Having to hard-code into the tests the output expected from the component-under-test.&lt;/li&gt;
+&lt;li&gt;Having to write code, in each test, which asserts that the output of the component-under-test matches the expected output.&lt;/li&gt;
+&lt;li&gt;Having to go fixing test code each time there is a fully expected change in the output of the component-under-test.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;The eliminated burdens are traded for the following much simpler responsibilities:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The output of the component-under-test must be converted to text and written to an audit file.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;When the version control system shows that an audit file changed after a test run, the differences must be reviewed, and a decision must be made as to whether they are as expected or not.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Tests and production code must be written with some noise reduction concerns in mind. (More on that further down.)&lt;/p&gt;
-&lt;p&gt;This represents a considerable optimization of the software development process.&lt;/p&gt;
-&lt;p&gt;Note that the arrangement is also convenient for the reviewer, who can see both the changes in the code and the resulting changes in the Audit Files.&lt;/p&gt;
-&lt;p&gt;As an added safety measure, the continuous build pipeline can deliberately fail the tests if an unclean working copy is detected after running the tests, because that would mean that the tests produced different results from what was expected, or that someone failed to commit some updated audit file.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="noise-reduction"&gt;Noise reduction
-&lt;/h3&gt;&lt;p&gt;For Audit Testing to work effectively, all audit output must be completely free of noise. By noise we mean:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Two test runs of the exact same code producing different audit output.&lt;/li&gt;
-&lt;li&gt;A single change in the code producing wildly different audit output.&lt;/li&gt;
+&lt;li&gt;The output of the component-under-test must be converted to text and written to a test output file.&lt;/li&gt;
+&lt;li&gt;When the version control system shows that a test output file changed after a test run, the differences must be reviewed, and a decision must be made as to whether they are as expected or not.&lt;/li&gt;
+&lt;li&gt;Production code and testing code must be written with some noise reduction concerns in mind. (More on that further down.)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;For example, if a test emits the username of the current user into the audit output, then the audit file generated by that test will be different for every user that runs it, even if the user does not modify any code.&lt;/p&gt;
+&lt;p&gt;This represents a considerable optimization of the software development process.&lt;/p&gt;
+&lt;p&gt;Note that the arrangement is also convenient for the reviewer, who can see both the changes in the code and the resulting changes in the test output files.&lt;/p&gt;
+&lt;p&gt;As an added safety measure, the continuous build pipeline may deliberately fail the tests if an unclean working copy is detected after running the tests, because that would mean that the tests produced different results from what was expected, or that someone failed to commit an updated test output file.&lt;/p&gt;
+&lt;h3 id="noise-reduction"&gt;Noise reduction
+&lt;/h3&gt;&lt;p&gt;For Approval Testing to work effectively, all test output must be completely free of noise. By noise we mean:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Two test runs of the exact same code producing different output.&lt;/li&gt;
+&lt;li&gt;A single change in the code producing wildly different output.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, if a test emits the username of the current user into the output file, then the output file generated by that test will be different for every user that runs it, which in turn means that for most people it will be different from the one that was committed.&lt;/p&gt;
 &lt;p&gt;Noise is undesirable, because:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Needlessly modified audit files are a false cause of alarm.&lt;/li&gt;
-&lt;li&gt;Examining changes in audit files only to discover that they are due to noise is a waste of time.&lt;/li&gt;
-&lt;li&gt;A change that might be important to notice can be lost in the noise.&lt;/li&gt;
+&lt;li&gt;Needlessly modified test output files are a false cause of alarm.&lt;/li&gt;
+&lt;li&gt;Examining changes in test output files only to discover that they are due to noise is a waste of time.&lt;/li&gt;
+&lt;li&gt;A change that might be important to notice may be lost in the noise.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Noise in audit files is most commonly caused by various sources of non-determinism, such as:&lt;/p&gt;
+&lt;p&gt;Noise in test output files is most commonly caused by various sources of non-determinism, such as:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Wall-clock time.&lt;/p&gt;
-&lt;p&gt;As the saying goes, the arrow of time is always moving forward. This means that the &amp;quot;current&amp;quot; time coordinate is always different from test run to test run, and this in turn means that if any wall-clock timestamps find their way into the audit output, the resulting audit file will always be different from the previous run. So, for example, if your software generates a log, and you were thinking of using the log as your audit output, then you will have to either remove the timestamps from the log, or fake them. Faking the clock for the purpose of testing is a well-known best practice anyway, regardless of audit testing. To accomplish this, create a &amp;quot;Clock&amp;quot; interface, and propagate it to every place in your software that needs to know the current time. Create two implementations of that interface: one for production, which queries the actual wall-clock time from the operating environment, and one for testing, which starts from some fixed, known origin and increments by a fixed amount each time it is queried.&lt;/p&gt;
+&lt;p&gt;As the saying goes, the arrow of time is always moving forward. This means that the &amp;quot;current&amp;quot; time coordinate is always different from test run to test run, and this in turn means that if any wall-clock timestamps find their way into the test output, the resulting test output file will always be different from the previous run. So, for example, if your software generates a log, and you were thinking of using the log as your test output, then you will have to either remove the timestamps from the log, or fake them. Faking the clock for the purpose of testing is a well-known best practice anyway, regardless of approval testing. To accomplish this, create a &amp;quot;Clock&amp;quot; interface, and propagate it to every place in your software that needs to know the current time. Create two implementations of that interface: one for production, which queries the actual wall-clock time from the operating environment, and one for testing, which starts from some fixed, known origin and increments by a fixed amount each time it is queried.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Random number generation.&lt;/p&gt;
@@ -518,54 +541,82 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Multi-threading.&lt;/p&gt;
-&lt;p&gt;Multiple threads running in parallel tend to exhibit unpredictable timing irregularities, and result in a chaotically changing order of events. If these threads affect audit output, then the ordering of the content of the audit file will be changing on every test run. For this reason, multi-threading must either be completely avoided when testing, or additional mechanisms (queuing, sorting, etc.) must be employed to guarantee a consistent ordering of audit output.&lt;/p&gt;
+&lt;p&gt;Multiple threads running in parallel tend to exhibit unpredictable timing irregularities, and result in a chaotically changing order of events. If these threads affect test output, then the order of the content of the test output file will be changing on every test run. For this reason, multi-threading must either be completely avoided when testing, or additional mechanisms (queuing, sorting, etc.) must be employed to guarantee a consistent ordering of test output.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Floating-point number imprecision.&lt;/p&gt;
-&lt;p&gt;Floating-point calculations can produce slightly different results depending on whether optimizations are enabled or not. To ensure that the audit file is unaffected, any floating point values emitted to the audit file must be rounded to as few digits as necessary. At the very least, they must be rounded to one digit less than their full precision.&lt;/p&gt;
+&lt;p&gt;Floating-point calculations can produce slightly different results depending on whether optimizations are enabled or not. To ensure that the test output file is unaffected, any floating point values emitted to the test output file must be rounded to as few digits as necessary. At the very least, they must be rounded to one digit less than their full precision.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Other external factors.&lt;/p&gt;
-&lt;p&gt;User names, computer names, file creation times, IP addresses resolved from DNS, etc must either be prevented from finding their way into the audit output, or they must be faked when running tests. Fake your file-system; fake The Internet if necessary. For more information about faking stuff, see &lt;a
+&lt;p&gt;User names, computer names, file creation times, IP addresses resolved from DNS, etc. must either be prevented from finding their way into the test output file, or they must be faked when running tests. Fake your file-system; fake The Internet if necessary. For more information about faking stuff, see &lt;a
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In short, anything that would cause &lt;a class="external"
 href="https://ell.stackexchange.com/a/299395/129530" target="_blank"
-&gt;flakiness&lt;/a&gt; in software tests will cause noisiness in Audit Testing.&lt;/p&gt;
-&lt;p&gt;Additionally, the content of audit files can be affected by some constructs that are fully deterministic in their nature. These constructs will never result in changed audit files without any changes in the code, but may produce drastically different audit files as a result of only minute changes in the code. For example:&lt;/p&gt;
+&gt;flakiness&lt;/a&gt; in software tests will cause noisiness in Approval Testing.&lt;/p&gt;
+&lt;p&gt;Additionally, the content of test output files can be affected by some constructs that are fully deterministic in their nature. These constructs will never result in changed test output files without any corresponding changes in the code, but may produce drastically different test output files as a result of only minute changes in the code. For example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Hash Table Rehashing.&lt;/p&gt;
-&lt;p&gt;A hash table may decide to re-hash itself as a result of a single key addition, if that addition happens to cause some internal load factor
-threshold to be exceeded. Exactly when and how this happens depends on the implementation of the hash table and we usually have no control over it. After re-hashing, the order in which the hash table enumerates its keys is drastically different, and if the keys are emitted to audit output, then the audit file will be drastically different. To avoid this, replace plain hash tables with hash tables that retain the order of key insertion.&lt;/p&gt;
+&lt;p&gt;A hash table may decide to re-hash itself as a result of a single key addition, if that addition happens to cause some internal load factor threshold to be exceeded. Exactly when and how this happens depends on the implementation of the hash table and we usually have no control over it. After re-hashing, the order in which the hash table enumerates its keys is drastically different, and if the keys are emitted to the test output, then the contents of the test output file will be drastically different. To avoid this, replace plain hash tables with hash tables that retain the order of key insertion.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Insufficient Sorting Keys.&lt;/p&gt;
 &lt;p&gt;When sorting data, the order of items with identical keys is undefined. It is still deterministic, but the addition or removal of a single item can cause all items with the same sorting key to be arbitrarily rearranged. To avoid this, always use a full set of sorting keys when sorting data, so as to give every item a specific unique order. Introduce additional sorting keys if necessary, even if you would not normally have a use for them.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Noise reduction aims to ensure that we will never see changes in the audit files unless there have been changes in the code, and that for every unique change in the code we will see a specific expected set of changes in the audit output, instead of a large number of irrelevant changes. This ensures that the single change that matters will not be lost in the noise, and makes it easier to determine that the modifications we made to the code have exactly the intended consequences and not any unintended consequences.&lt;/p&gt;
-&lt;p&gt;Note that in some cases, noise reduction can be implemented in the tests rather than in the production code. For example, instead of replacing a plain hash table with an ordered hash table in production code, our test can obtain the contents of the plain hash table and sort them before writing them to the audit file. However, this may not be possible in cases where the hash table is several transformations away from the auditing. Thus, replacing a plain hash table with an ordered hash table may sometimes be necessary in production code.&lt;/p&gt;
+&lt;p&gt;Noise reduction aims to ensure that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;there will never be any changes in the test output unless there have been some changes in the code, and&lt;/li&gt;
+&lt;li&gt;for every unique change in the code we will see a specific expected set of changes in the test output, instead of a large number of irrelevant changes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This ensures that the single change in the test output that matters will not be lost in the noise, and makes it easier to determine that the modifications we made to the code have exactly the intended consequences and not any unintended consequences.&lt;/p&gt;
+&lt;p&gt;Note that in some cases, noise reduction can be implemented in the tests rather than in the production code. For example, instead of replacing a plain hash table with an ordered hash table in production code, our test can obtain the contents of the plain hash table and sort them before writing them to the test output file. However, this may not be possible in cases where the hash table is several transformations away from the testing. Thus, replacing a plain hash table with an ordered hash table may sometimes be necessary in production code.&lt;/p&gt;
 &lt;p&gt;Noise reduction in production code can be either always enabled, or only enabled during testing. The most performant choice is to only have it enabled during testing, but the safest choice is to have it always enabled.&lt;/p&gt;
 &lt;h3 id="failure-testing"&gt;Failure Testing
-&lt;/h3&gt;&lt;p&gt;Failure Testing is the practice of deliberately supplying the component-under-test with invalid input and ensuring that the component-under-test detects the error and throws an appropriate exception. Such scenarios can leverage Audit Testing by simply catching exceptions and serializing them, as text, into the audit output.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Failure Testing is the practice of deliberately supplying the component-under-test with invalid input and ensuring that the component-under-test detects the error and throws the appropriate exception, filled in with the appropriate details. Such scenarios can leverage Approval Testing by simply catching exceptions and serializing them, as text, into the test output file.&lt;/p&gt;
 &lt;h3 id="applicability"&gt;Applicability
-&lt;/h3&gt;&lt;p&gt;Audit Testing is most readily useful when the Component Under Test produces results as text, or results that are directly translatable to text. With a bit of effort, any kind of output can be converted to text, so Audit Testing is universally applicable.&lt;/p&gt;
-&lt;h3 id="must-audit-files-be-committed"&gt;Must Audit Files be committed?
-&lt;/h3&gt;&lt;p&gt;It is in theory possible to refrain from storing Audit Files in the source code repository, but doing so would have the following disadvantages:&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Approval Testing is most readily useful when the Component Under Test produces results as text, or results that are directly translatable to text. With a bit of effort, any kind of output can be converted to text, so Approval Testing is universally applicable.&lt;/p&gt;
+&lt;h3 id="must-test-output-files-be-committed"&gt;Must test output files be committed?
+&lt;/h3&gt;&lt;p&gt;It is in theory possible to refrain from keeping test output files in the source code repository, but doing so would have the following disadvantages:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;It would deprive the code reviewer from the convenience of being able to see not only the changes in the code, but also the differences that these changes have introduced in the audit output of the test.&lt;/li&gt;
-&lt;li&gt;It would require the developer to always remember to immediately run the tests each time they pull from the source code repository, so as to have the unmodified Audit Files produced locally, before proceeding to make modifications to the code which would further modify the Audit Files.&lt;/li&gt;
-&lt;li&gt;It would make it more difficult for the developer to take notice when the Audit Files change.&lt;/li&gt;
-&lt;li&gt;It would make it more difficult for the developer to see diffs between the modified Audit Files and the unmodified ones.&lt;/li&gt;
+&lt;li&gt;It would deprive the code reviewer from the convenience of being able to see not only the changes in the code, but also the differences that these changes have introduced in the output of each test.&lt;/li&gt;
+&lt;li&gt;It would require the developer to always remember to immediately run the tests each time they pull from the source code repository, so as to have the unmodified test output files produced locally, before proceeding to make modifications to the code which would further modify the test output files.&lt;/li&gt;
+&lt;li&gt;It would make it more difficult for the developer to take notice when the test output files change.&lt;/li&gt;
+&lt;li&gt;It would make it more difficult for the developer to see diffs between the modified test output files and the unmodified ones.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Of course all of this could be taken care of with some extra tooling. What remains to be seen is whether the effort of developing such tooling can be justified by the mere benefit of not having to store Audit Files in the source code repository.&lt;/p&gt;
-&lt;h4 id="conclusion"&gt;Conclusion
-&lt;/h4&gt;&lt;p&gt;Audit Testing is a universally applicable technique for automated software testing which can significantly reduce the effort of writing and maintaining tests by sparing us from having to stipulate our expectations in test code, and from having to go fixing test code each time our expectations change.&lt;/p&gt;
+&lt;p&gt;Of course all of this could be taken care of with some extra tooling. What remains to be seen is whether the effort of developing such tooling can be justified by the mere benefit of not having to store test output files in the source code repository.&lt;/p&gt;
+&lt;h3 id="conclusion"&gt;Conclusion
+&lt;/h3&gt;&lt;p&gt;Approval Testing is a universally applicable technique for automated software testing which can significantly reduce the effort of writing and maintaining tests by sparing us from having to stipulate our expectations in test code, and from having to go fixing test code each time our expectations change.&lt;/p&gt;
+&lt;h3 id="addendum-history"&gt;Addendum: History
+&lt;/h3&gt;&lt;p&gt;I independently invented this testing technique back in 2017, when I was writing Java code that was generating bytecode and I desperately needed my tests to stop failing each time I wanted to start producing a slightly different bytecode sequence accomplishing the same thing in a slightly better way.&lt;/p&gt;
+&lt;p&gt;In the beginning I had not given this technique any name, it was just an awesome trick employed by some of my tests that greatly improved the efficiency of testing.&lt;/p&gt;
+&lt;p&gt;Then, a few years later, probably around 2022, a colleague at work asked me for advice on how to go about testing some C# code that was producing &lt;a class="external"
+href="https://en.wikipedia.org/wiki/G-code" target="_blank"
+&gt;G-code&lt;/a&gt;. Seeing the similarity between what he was doing and what I had done in the past, I described my technique to him. He went on to implement it, and he was quite happy with it, but when I looked at what he had done later, I did not like the terminology he had come up with. So, I decided to come up with a set of terms that I considered appropriate, and to write a blog post describing my idea in writing, for reference by all future generations of software developers in all eternity.&lt;/p&gt;
+&lt;p&gt;I decided to call the technique &amp;quot;Audit Testing&amp;quot; and the test output files &amp;quot;Audit Files&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Then, after a couple of more years, I discovered that my testing technique had (of course) already been thought of by others, and it already had a name: &amp;quot;Approval Testing&amp;quot;. I found out about this while watching videos from the &lt;a class="external"
+href="https://www.youtube.com/@ModernSoftwareEngineeringYT" target="_blank"
+&gt;Modern Software Engineering&lt;/a&gt; channel on YouTube, which I highly recommend.&lt;/p&gt;
+&lt;p&gt;As it turns out, this testing technique has been independently invented by many people, who have come up with different names to describe their inventions, such as &amp;quot;Snapshot Testing&amp;quot; or &amp;quot;Golden Master Testing&amp;quot;. I think that the term &amp;quot;Approval Testing&amp;quot;, although not perfect, is preferable over those, and good enough to choose as the standard.&lt;/p&gt;
+&lt;p&gt;So, I re-visited this post, and I changed all of my terminology to speak of &amp;quot;Approval Testing&amp;quot; instead of &amp;quot;Audit Testing&amp;quot;. I did this with some sadness, because the term &amp;quot;Audit Testing&amp;quot; is more versatile, allowing me to speak of &amp;quot;audit output&amp;quot; and &amp;quot;audit files&amp;quot;, whereas the term &amp;quot;Approval Testing&amp;quot; does not seem to allow such versatility: terms like &amp;quot;approval output&amp;quot; and &amp;quot;approval file&amp;quot; do not sound right. So, when fixing the terminology used in this post I had to go with the more generic terms &amp;quot;test output&amp;quot; and &amp;quot;test output file&amp;quot;, which are less expressive.&lt;/p&gt;
+&lt;p&gt;It should be noted that Dave Farland from Modern Software Engineering sees Approval Testing as primarily suitable for testing legacy code, whereas I view it as suitable for any kind of software development where the output of the component-under-test is expected to change, intentionally, as the code evolves. Since this is true of almost all software development, Approval Testing is applicable practically everywhere.&lt;/p&gt;
+&lt;h3 id="addendum-further-reading"&gt;Addendum: Further reading
+&lt;/h3&gt;&lt;p&gt;To see what others say about Approval Testing, see:&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://www.youtube.com/watch?v=jAMVtMesHqk" target="_blank"
+&gt;YouTube: Modern Software Engineering: Add APPROVAL TESTING To Your Bag Of Tricks&lt;/a&gt; (2023-03-03)&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://www.youtube.com/watch?v=n5vzuQAToZE" target="_blank"
+&gt;YouTube: Modern Software Engineering: Approval Tests vs Acceptance Tests: What's the Difference?&lt;/a&gt; (2026-02-20)&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://www.youtube.com/watch?v=5H2s1knHUlA" target="_blank"
+&gt;YouTube: Modern Software Engineering: Gain CONFIDENCE With Approval Testing&lt;/a&gt; (2023-09-10)&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &amp;quot;Audit Testing&amp;quot; by michael.gr.&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/mocking.svg"
+&lt;p&gt;Cover image: &amp;quot;Approval Testing&amp;quot; by michael.gr.&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/mocking.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -678,8 +729,8 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;In most cases, examining the invocations made by the component-under-test to its collaborators is in fact bad practice, because it constitutes white-box testing. The only reason why this is being widely practiced in the industry is because mocking does not work otherwise, so in this regard mocking contains a certain element of a self-serving paradigm.&lt;/li&gt;
 &lt;li&gt;In those rare cases where examining the invocations is in fact necessary, it is still bad practice to do so programmatically, because it results in tests that are over-specified and fragile.&lt;/li&gt;
 &lt;li&gt;What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt; and &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt; and &lt;a
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -694,8 +745,8 @@ href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;li&gt;Mocking allows us to verify the correctness of components that generate their output by means of forwarding results to collaborators rather than by returning results from invocations.
 &lt;ul&gt;
 &lt;li&gt;Even in this case, &lt;em&gt;Collaboration Monitoring&lt;/em&gt; can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt; and &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt; and &lt;a
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -721,14 +772,14 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;Fakes (see &lt;a
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Incremental Integration Testing (see &lt;a
+&lt;li&gt;&lt;a
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
-&gt;Incremental Integration Testing&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Audit Testing (see &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt;) and Collaboration Monitoring (see &lt;a
+&gt;Incremental Integration Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt; and &lt;a
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
-&gt;Collaboration Monitoring&lt;/a&gt;)&lt;/li&gt;
+&gt;Collaboration Monitoring&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="conclusion"&gt;Conclusion
 &lt;/h4&gt;&lt;p&gt;As we have shown, the practice of using Mock Objects in automated software testing is laborious, over-specified, presumptuous, and leads to tests that are fragile and non-reusable, while each of the alleged benefits of using mocks is either not a real benefit, or can be realized by other means, which we have named.&lt;/p&gt;
@@ -813,9 +864,9 @@ href="https://blog.michael.gr/post/2023-01-14-mocking/"
 &lt;li&gt;Each time we modify some code and run the tests, we want to be able to see what has changed in the interactions as a result of only those modifications, so that we do not have to pore through long lists of irrelevant interactions, and so that no information gets lost in the noise.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To achieve this, I use a technique that I call Collaboration Monitoring.&lt;/p&gt;
-&lt;p&gt;Collaboration Monitoring is based on another testing technique that I call Audit Testing, so it might be a good idea to read the related paper before proceeding: &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Collaboration Monitoring is based on another testing technique called Approval Testing, so it might be a good idea to read the related paper before proceeding: &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let us assume that we have a component that we want to test, which invokes interface T as part of its job. In order to test the component, we have to wire it with a collaborator that implements T. For this, we can use either the real collaborator that would be wired in the production environment, or a Fake thereof. Regardless of what we choose, we have a very simple picture which looks like this:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/media/collaboration-monitor-1.png"
 width="422"
@@ -827,9 +878,9 @@ data-flex-basis="1368px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Note that with this setup we can exercise the component-under-test as a black-box, but we cannot yet observe how it interacts with its collaborator.&lt;/p&gt;
-&lt;p&gt;In order to observe how the component-under-test interacts with its collaborator, we interject between the two of them a new component, called a &lt;em&gt;&lt;strong&gt;Collaboration Monitor&lt;/strong&gt;&lt;/em&gt;, which is a decorator of T. The purpose of this Collaboration Monitor is to record into a text file information about each function call that passes through it. The text file is called a &lt;em&gt;&lt;strong&gt;Snoop File&lt;/strong&gt;&lt;/em&gt;, and it is a special form of &lt;em&gt;&lt;strong&gt;Audit File&lt;/strong&gt;&lt;/em&gt;. (See &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;In order to observe how the component-under-test interacts with its collaborator, we interject between the two of them a new component, called a &lt;em&gt;&lt;strong&gt;Collaboration Monitor&lt;/strong&gt;&lt;/em&gt;, which is a decorator of T. The purpose of this Collaboration Monitor is to record into a text file information about each function call that passes through it. The text file is called a &lt;em&gt;&lt;strong&gt;Snoop File&lt;/strong&gt;&lt;/em&gt;, and it is a special form of &lt;em&gt;&lt;strong&gt;test output file&lt;/strong&gt;&lt;/em&gt;. (See &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Thus, we now have the following picture:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/media/collaboration-monitor-2.png"
 width="568"
@@ -846,13 +897,17 @@ data-flex-basis="706px"
 &lt;li&gt;A serialization of the value of each parameter that was passed to the function.&lt;/li&gt;
 &lt;li&gt;A serialization of the return value of the function.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As per Audit Testing, the Snoop File is saved in the source code tree, right next to the source code file of the test that generated it, and gets committed into the Source Code Repository / Version Control System along with the source code. For example, if we have &lt;code&gt;SuchAndSuchTest.java&lt;/code&gt;, then after running the tests for the first time we will find a &lt;code&gt;SuchAndSuchTest.snoop&lt;/code&gt; file right next to it. We can examine this file to ensure that the component-under-test interacted with the collaborator exactly as expected.&lt;/p&gt;
+&lt;p&gt;As dictated by &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt;, the Snoop File is saved in the source code tree, right next to the source code file of the test that generated it, and gets committed into the Source Code Repository / Version Control System along with the source code. For example, if we have &lt;code&gt;SuchAndSuchTest.java&lt;/code&gt;, then after running the tests for the first time we will find a &lt;code&gt;SuchAndSuchTest.snoop&lt;/code&gt; file right next to it. We can examine this file to ensure that the component-under-test interacted with the collaborator exactly as expected.&lt;/p&gt;
 &lt;p&gt;As we continue developing our system, the modifications that we make to the code will sometimes have no effect on how collaborators interact with each other, and sometimes will cause the collaborators to start interacting differently. Thus, as we continue running our tests while developing our system, we will be observing the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;For as long as the collaborations continue in exactly the same way, the contents of the Snoop Files remain unchanged, despite the fact that the files are re-generated on each test run.&lt;/li&gt;
 &lt;li&gt;As soon as some collaborations change, the contents of some Snoop Files will change.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As per Audit Testing, we can then leverage our Version Control System and our Integrated Development Environment to take care of the rest of the workflow, as follows:&lt;/p&gt;
+&lt;p&gt;As per &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt;, we can then leverage our Version Control System and our Integrated Development Environment to take care of the rest of the workflow, as follows:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When we make a revision in the production code or in the testing code, and as a result of this revision the interactions between the component-under-test and its collaborators are now even slightly different, we will not fail to take notice because our Version Control System will show the corresponding Snoop File as modified and in need of committing.&lt;/li&gt;
 &lt;li&gt;By asking our Integrated Development Environment to show us a &amp;quot;diff&amp;quot; between the current snoop file and the unmodified version, we can see precisely what has changed without having to pore through the entire snoop file.&lt;/li&gt;
@@ -860,11 +915,13 @@ data-flex-basis="706px"
 &lt;li&gt;When we are confident that the differences in the interactions are exactly as expected according to the changes that we made to the code, we commit our revision, along with the Snoop Files.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="what-about-code-review"&gt;What about code review?
-&lt;/h3&gt;&lt;p&gt;As per Audit Testing, the reviewer is able to see both the changes in the code, and the corresponding changes in the Snoop Files, and vouch for them, or not, as the case might be.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;As per &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt;, the reviewer is able to see both the changes in the code, and the corresponding changes in the Snoop Files, and vouch for them, or not, as the case might be.&lt;/p&gt;
 &lt;h3 id="requirements"&gt;Requirements
 &lt;/h3&gt;&lt;p&gt;For Collaboration Monitoring to work, snoop files must be free from non-deterministic noise, and it is best if they are also free from deterministic noise. For more information about these types of noise and what you can do about them, see &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt;.&lt;/p&gt;
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="automation"&gt;Automation
 &lt;/h3&gt;&lt;p&gt;When using languages like Java and C# which support reflection and intermediate code generation, we do not have to write Collaboration Monitors by hand; we can instead create a facility which will be automatically generating them for us on demand, at runtime. Such a facility can be very easily written with the help of Intertwine (see &lt;a
 href="https://blog.michael.gr/post/2022-12-intertwine/"
@@ -951,7 +1008,9 @@ wrong:
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4 id="conclusion"&gt;Conclusion
-&lt;/h4&gt;&lt;p&gt;Collaboration Monitoring is an adaptation of Audit Testing which allows the developer to write black-box tests which only exercise the public interface of the component-under-test, while remaining confident that the component interacts with its collaborators inside the black box according to their expectations, without having to write white-box testing code to stipulate the expectations, and without having to modify white-box testing code each time the expectations change.&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;Collaboration Monitoring is an adaptation of &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt; which allows the developer to write black-box tests which only exercise the public interface of the component-under-test, while remaining confident that the component interacts with its collaborators inside the black box according to their expectations, without having to write white-box testing code to stipulate the expectations, and without having to modify white-box testing code each time the expectations change.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: &amp;quot;Collaboration Monitoring&amp;quot; by michael.gr based on original work &lt;a class="external"
 href="https://thenounproject.com/icon/monitoring-4861371/" target="_blank"

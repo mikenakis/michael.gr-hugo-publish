@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grumpy on Michael's Blog</title><link>https://blog.michael.gr/tags/grumpy/</link><description>Recent content in Grumpy on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 24 Jan 2026 15:42:23 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/grumpy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-06-visual-studio-solutions/media/microsoft-visual-studio-2022-logo.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grumpy on Michael's Blog</title><link>https://blog.michael.gr/tags/grumpy/</link><description>Recent content in Grumpy on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 01 Mar 2026 14:09:42 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/grumpy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-06-visual-studio-solutions/media/microsoft-visual-studio-2022-logo.svg"
 loading="lazy"
 &gt;
 Visual Studio is a capricious product, and its &amp;quot;Solution&amp;quot; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
@@ -426,8 +426,8 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;In most cases, examining the invocations made by the component-under-test to its collaborators is in fact bad practice, because it constitutes white-box testing. The only reason why this is being widely practiced in the industry is because mocking does not work otherwise, so in this regard mocking contains a certain element of a self-serving paradigm.&lt;/li&gt;
 &lt;li&gt;In those rare cases where examining the invocations is in fact necessary, it is still bad practice to do so programmatically, because it results in tests that are over-specified and fragile.&lt;/li&gt;
 &lt;li&gt;What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt; and &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt; and &lt;a
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -442,8 +442,8 @@ href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;li&gt;Mocking allows us to verify the correctness of components that generate their output by means of forwarding results to collaborators rather than by returning results from invocations.
 &lt;ul&gt;
 &lt;li&gt;Even in this case, &lt;em&gt;Collaboration Monitoring&lt;/em&gt; can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt; and &lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt; and &lt;a
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -469,14 +469,14 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;Fakes (see &lt;a
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Incremental Integration Testing (see &lt;a
+&lt;li&gt;&lt;a
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
-&gt;Incremental Integration Testing&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Audit Testing (see &lt;a
-href="https://blog.michael.gr/post/2024-04-audit-testing/"
-&gt;Audit Testing&lt;/a&gt;) and Collaboration Monitoring (see &lt;a
+&gt;Incremental Integration Testing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a
+href="https://blog.michael.gr/post/2024-04-approval-testing/"
+&gt;Approval Testing&lt;/a&gt; and &lt;a
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
-&gt;Collaboration Monitoring&lt;/a&gt;)&lt;/li&gt;
+&gt;Collaboration Monitoring&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id="conclusion"&gt;Conclusion
 &lt;/h4&gt;&lt;p&gt;As we have shown, the practice of using Mock Objects in automated software testing is laborious, over-specified, presumptuous, and leads to tests that are fragile and non-reusable, while each of the alleged benefits of using mocks is either not a real benefit, or can be realized by other means, which we have named.&lt;/p&gt;

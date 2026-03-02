@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# on Michael's Blog</title><link>https://blog.michael.gr/tags/csharp/</link><description>Recent content in C# on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 27 Feb 2026 13:41:25 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/csharp/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-immutability-assessment/media/diamond.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C# on Michael's Blog</title><link>https://blog.michael.gr/tags/csharp/</link><description>Recent content in C# on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 01 Mar 2026 16:09:31 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/csharp/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-immutability-assessment/media/diamond.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
-&lt;/h2&gt;&lt;p&gt;The need is identified for programmatically ascertaining, in languages like C# and Java, the immutability of certain objects used in situations where they are expected to be immutable. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;The need is identified for programmatically ascertaining the immutability of certain objects used in situations where they are expected to be immutable, in languages like C# and Java. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
@@ -113,9 +113,9 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;For this reason, every mutable instance assessment must come with a sentence explaining to the programmer why the assessment was issued. Since every mutable instance assessment typically has one or more other assessments that are the reasons that led to it, these sentences will often form entire trees, each sentence being further explained by nested sentences.&lt;/p&gt;
 &lt;p&gt;I call this feature elucidation.&lt;/p&gt;
 &lt;h3 id="an-implementation"&gt;An Implementation
-&lt;/h3&gt;&lt;p&gt;I have already created a library for Java that achieves all of the above; I call it Bathyscaphe. You can find out about it &lt;a
+&lt;/h3&gt;&lt;p&gt;I have already created a library for Java that achieves all of the above; I call it &lt;a
 href="https://blog.michael.gr/post/2022-05-bathyscaphe/"
-&gt;here&lt;/a&gt;.&lt;/p&gt;
+&gt;Bathyscaphe&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I have also ported this library to C#, and all of its (quite extensive) tests pass, so I have sufficient reason to believe that it is working correctly; however, I have yet to try it in any real projects, so I cannot confidently proclaim it to be of release grade at the moment. I am planning to release it as soon as I can.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="further-reading"&gt;Further reading
