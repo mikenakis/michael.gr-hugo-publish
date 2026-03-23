@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 02 Mar 2026 14:50:14 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 23 Mar 2026 09:15:18 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
 &lt;/h3&gt;&lt;p&gt;Two distinctly different widely used meanings of the term &lt;em&gt;&lt;strong&gt;code refactoring&lt;/strong&gt;&lt;/em&gt; are identified and named:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Changing how code works, without changing the requirements that it fulfills (refactoring in the weak sense)&lt;/li&gt;
-&lt;li&gt;Changing how code is expressed, without changing how it works (refactoring in the strong sense)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Refactoring in the strong sense:&lt;/strong&gt;
+Changing how code is expressed, without changing how it works.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Refactoring in the weak sense:&lt;/strong&gt;
+Changing how code works, without changing the requirements that it fulfills.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
@@ -5440,11 +5442,7 @@ href="https://danluu.com/empirical-pl/" target="_blank"
 &lt;/h3&gt;&lt;h4 id="the-nonsense"&gt;The nonsense
 &lt;/h4&gt;&lt;p&gt;I don't need to say much here, just watch the legendary &lt;a class="external"
 href="https://www.destroyallsoftware.com/talks/wat" target="_blank"
-&gt;&amp;quot;Wat&amp;quot; video by Gary Bernhardt from CodeMash 2012&lt;/a&gt;, it is only 4 minutes long:&lt;/p&gt;
-&lt;video width="100%" poster="https://www.destroyallsoftware.com/assets/posters/talks/wat.poster-4f5425901c10ffeaceb61f82e25dc40b9212aadf078cead0dc6ffe40696e2bec.png" preload="none" controls=""&gt;
-&lt;source src="https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;amp;X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20260123%2Fus-east-1%2Fs3%2Faws4_request&amp;amp;X-Amz-Date=20260123T164724Z&amp;amp;X-Amz-Expires=14400&amp;amp;X-Amz-SignedHeaders=host&amp;amp;X-Amz-Signature=925edbc9ca044a60e32e5e0d26cb9e8afdea20040b007655e1b9f0e1ff4e2409"&gt;
-&lt;track label="English" kind="captions" srclang="en" src="https://blog.michael.gr/captions/talks/wat.vtt"&gt;
-&lt;/video&gt;
+&gt;&amp;quot;Wat&amp;quot; video by Gary Bernhardt from CodeMash 2012&lt;/a&gt;, it is only 4 minutes long.&lt;/p&gt;
 &lt;p&gt;The reason for all this nonsense is that all these languages are hacks.&lt;/p&gt;
 &lt;p&gt;When the foundation that you are working on is a hack, then either anything you will build on top of it will in turn be a hack, or you are going to be putting an enormous effort to circumvent the hackiness of the foundation and build something reasonable over it. Why handicap yourself?&lt;/p&gt;
 &lt;h4 id="the-errors"&gt;The errors
