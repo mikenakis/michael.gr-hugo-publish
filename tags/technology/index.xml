@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on Michael's Blog</title><link>https://blog.michael.gr/tags/technology/</link><description>Recent content in Technology on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 15 Oct 2025 16:37:03 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>Beginning A-I- prompts with "Please--"</title><link>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</link><pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/media/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM.png"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Technology on Michael's Blog</title><link>https://blog.michael.gr/tags/technology/</link><description>Recent content in Technology on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 18 Oct 2025 00:12:34 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/technology/index.xml" rel="self" type="application/rss+xml"/><item><title>Beginning A-I- prompts with "Please--"</title><link>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</link><pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/media/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM.png"
 width="1536"
 height="1024"
 loading="lazy"
@@ -34,4 +34,391 @@ data-flex-basis="384px"
 href="https://unsplash.com/@maxence_pira?utm_content=creditCopyText&amp;amp;amp;utm_medium=referral&amp;amp;amp;utm_source=unsplash" target="_blank"
 &gt;Maxence Pira&lt;/a&gt; on &lt;a class="external"
 href="https://unsplash.com/photos/a-close-up-of-a-pattern-of-small-squares-7hR3FrFs4Q0?utm_content=creditCopyText&amp;amp;amp;utm_medium=referral&amp;amp;amp;utm_source=unsplash" target="_blank"
-&gt;Unsplash&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
+&gt;Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>[SOLVED] Windows: Sound becomes distorted after 1 second of playback</title><link>https://blog.michael.gr/post/2023-03-15-solved-windows-sound-becomes-distorted/</link><pubDate>Wed, 15 Mar 2023 19:53:01 +0000</pubDate><guid>https://blog.michael.gr/post/2023-03-15-solved-windows-sound-becomes-distorted/</guid><description>&lt;p&gt;So today I started encountering a very weird audio issue: When I play music, it sounds normal in the beginning, but then after about a second the sound gets distorted, as if it is muffled, or as if it is undergoing severe lossy compression. If I stop and resume the music, it goes through the same.&lt;/p&gt;
+&lt;p&gt;Normally I would know what to do in this situation, but as the years pass Microsoft keeps changing Windows, in the direction of making them dumber and dumber, so in Windows 10 I cannot find the old sound options dialog that I used to use to fix this problem.&lt;/p&gt;
+&lt;p&gt;Looking around the interwebz for a solution was not easy, so I decided to document the solution that I found. If you are a power user, you can skim through the text and only look at the words in bold-italics.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Type &lt;em&gt;&lt;strong&gt;Win+R&lt;/strong&gt;&lt;/em&gt; and type &lt;em&gt;&lt;strong&gt;mmsys.cpl&lt;/strong&gt;&lt;/em&gt;. This will bring up the good old sound options, which Microsoft recently made inaccessible by any means other than this magical incantation, because
+obviously, nobody should ever want to fix any sound problems, because obviously, Windows has no sound problems.&lt;/li&gt;
+&lt;li&gt;In the &lt;em&gt;&lt;strong&gt;Playback&lt;/strong&gt;&lt;/em&gt; tab, locate your &lt;em&gt;&lt;strong&gt;Speakers&lt;/strong&gt;&lt;/em&gt;. If you are playing music at that moment, they are easy to locate from the live volume meter right next to them.&lt;/li&gt;
+&lt;li&gt;Select &lt;em&gt;&lt;strong&gt;Properties&lt;/strong&gt;&lt;/em&gt; on your speakers. (Not &lt;em&gt;Configure&lt;/em&gt;, but &lt;em&gt;Properties&lt;/em&gt;.) This should open a &lt;em&gt;Speakers Properties&lt;/em&gt; dialog.&lt;/li&gt;
+&lt;li&gt;On the &lt;em&gt;Speaker Properties&lt;/em&gt; dialog, select the &lt;em&gt;&lt;strong&gt;Advanced&lt;/strong&gt;&lt;/em&gt; tab.&lt;/li&gt;
+&lt;li&gt;Near the bottom of the &lt;em&gt;Advanced&lt;/em&gt; tab there is an &lt;em&gt;&lt;strong&gt;Enable Fucked Up Sound&lt;/strong&gt;&lt;/em&gt; checkbox, which is actually labelled &lt;em&gt;&lt;strong&gt;Enable Enhancements&lt;/strong&gt;&lt;/em&gt;. (Euphemism has always been Microsoft's forte.)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Uncheck&lt;/strong&gt;&lt;/em&gt; that checkbox; you are done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Afterword&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I probably started experiencing this problem right after pairing a new bluetooth sound device. Apparently when Windows detects a new sound device it sets some things up for it, and while doing that it entirely arbitrarily also goes and resets some settings for existing devices, e.g. it enables this &amp;quot;Enhancements&amp;quot; setting for my existing speakers.&lt;/p&gt;</description></item><item><title>"Andy" android emulator - Avoid it like the plague</title><link>https://blog.michael.gr/post/2016-05-andy-android-emulator-avoid-it-like/</link><pubDate>Sun, 15 May 2016 08:17:33 +0000</pubDate><guid>https://blog.michael.gr/post/2016-05-andy-android-emulator-avoid-it-like/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2016-05-andy-android-emulator-avoid-it-like/media/super-andy.png"
+width="416"
+height="346"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="120"
+data-flex-basis="288px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;If you were thinking of installing the &amp;quot;Andy&amp;quot; android emulator on your PC, think again. Here is my experience with it:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The installable file (Andy_46.2_207_x64bit.exe) is a whole 431 MB.&lt;/li&gt;
+&lt;li&gt;It installed VMware without asking me, so the installation took a really long time.&lt;/li&gt;
+&lt;li&gt;It installed some &amp;quot;Bonjour Service&amp;quot; by Apple, Inc. without asking me.&lt;/li&gt;
+&lt;li&gt;It replaced all my .apk icons with its own icon without asking me. (I am using apk shell extension and I much prefer it that way.)&lt;/li&gt;
+&lt;li&gt;During installation, there were 15 attempts to call home by &amp;quot;Andy&amp;quot; and/or by other crapware that it installed. (I have a firewall, so I didn't let any of that happen.)&lt;/li&gt;
+&lt;li&gt;At the end of the installation, it popped up a message box saying that the installation failed because it could not detect my internet connection, and that it &lt;em&gt;requires internet access&lt;/em&gt; in order to install.&lt;/li&gt;
+&lt;li&gt;Despite the failed installation message, &amp;quot;Andy&amp;quot; was found under &amp;quot;installed programs&amp;quot; so I uninstalled it.&lt;/li&gt;
+&lt;li&gt;During uninstallation there were a couple of more attempts to call home.&lt;/li&gt;
+&lt;li&gt;After uninstallation it left &amp;quot;Bonjour Service&amp;quot; installed, so I had to go find it and uninstall it too.&lt;/li&gt;
+&lt;li&gt;After uninstallation it left an &amp;quot;Andy&amp;quot; folder on the root of my user folder, which I had to delete.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;What a piece of crapware!&lt;/p&gt;</description></item><item><title>Solved: "something went wrong" trying to create new user account on Windows 10</title><link>https://blog.michael.gr/post/2016-05-solved-something-went-wrong-trying-to/</link><pubDate>Mon, 02 May 2016 21:23:32 +0000</pubDate><guid>https://blog.michael.gr/post/2016-05-solved-something-went-wrong-trying-to/</guid><description>&lt;p&gt;So, while trying to create a new user account on my Windows 10 computer, I get this:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2016-05-solved-something-went-wrong-trying-to/media/Screenshot-2016-05-02-22.58.52.png"
+width="668"
+height="640"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="250px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;The solution:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Start a command prompt as administrator.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Type the following command:&lt;/p&gt;
+&lt;p&gt;net user &amp;lt;username&amp;gt; &amp;lt;password&amp;gt; &lt;username&gt;&lt;password&gt; /add&lt;/password&gt;&lt;/username&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;username&gt;&lt;password&gt;Voila, the user has been created. &lt;/password&gt;&lt;/username&gt;&lt;/p&gt;
+&lt;p&gt;&lt;username&gt;&lt;password&gt;What in fact went wrong is that Microsoft completely broke Windows after Windows 7. &lt;/password&gt;&lt;/username&gt;&lt;/p&gt;
+&lt;p&gt;&lt;username&gt;&lt;password&gt;&lt;br&gt;&lt;/password&gt;&lt;/username&gt;&lt;/p&gt;</description></item><item><title>Solved: Brightness control keys do not work on Asus Laptop</title><link>https://blog.michael.gr/post/2016-03-solved-brightness-control-keys-do-not/</link><pubDate>Sun, 20 Mar 2016 22:39:39 +0000</pubDate><guid>https://blog.michael.gr/post/2016-03-solved-brightness-control-keys-do-not/</guid><description>&lt;p&gt;So, the brightness keys on my Asus Laptop do not work anymore. All other Fn keys still work, but the Fn+F5 and Fn+F6 keys which control brightness do not work anymore.&lt;/p&gt;
+&lt;p&gt;The way to solve this problem is as follows:&lt;/p&gt;
+&lt;p&gt;Initiate an update of the driver of your monitor. This can be accomplished in many ways, for example:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Right-click on the desktop&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &amp;quot;Display settings&amp;quot;, then&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &amp;quot;Advanced display settings&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &amp;quot;Display adapter properties&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Switch to the &amp;quot;Monitor&amp;quot; tab&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &amp;quot;Properties&amp;quot; for the monitor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Switch to the &amp;quot;Driver&amp;quot; tab&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;quot;Update driver&amp;quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Alternatively, you can:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Hit Win+Pause to open the &amp;quot;System&amp;quot; window&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;quot;Device Manager&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Find your monitor under &amp;quot;Monitors&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Right-click on the monitor and select &amp;quot;Update Driver&amp;quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once the &amp;quot;Update Driver Software&amp;quot; dialog is up:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In the wizard which prompts you whether you want to search automatically or browse your computer, lie and say that you want to browse your computer. (Windows is so messed up that you have to lie to it to coax it to work.)&lt;/li&gt;
+&lt;li&gt;On the next screen, do not browse anything, select &amp;quot;let me pick from a list of drivers on my computer&amp;quot;.&lt;/li&gt;
+&lt;li&gt;On the next screen, select &amp;quot;Generic PnP Monitor&amp;quot; and click &amp;quot;Next&amp;quot;.&lt;/li&gt;
+&lt;li&gt;You are done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Source:
+&lt;a class="external"
+href="https://visihow.com/Restore_Lost_Brightness_Control_app_in_ASUS_Laptops_After_Updating" target="_blank"
+&gt;http://visihow.com/Restore_Lost_Brightness_Control_app_in_ASUS_Laptops_After_Updating&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Rooting my Samsung Galaxy S2 mobile phone</title><link>https://blog.michael.gr/post/2016-03-rooting-my-samsung-s2/</link><pubDate>Sun, 21 Feb 2016 08:34:52 +0000</pubDate><guid>https://blog.michael.gr/post/2016-03-rooting-my-samsung-s2/</guid><description>&lt;p&gt;So, I bought a brand new Samsung Android phone, and it was a huge disappointment due to all the distracting, annoying, and completely useless crapware from Google, Samsung, Vodafone, and even Yahoo, which came pre-loaded with the phone and which I am not allowed to uninstall. I mean, never mind that a certain application is useless; suppose it is in fact very useful; and yet, suppose that despite it being so awesomely useful, I for some reason still want to uninstall it. It is my phone, I should be able to do it, right? But no, the powers that be have decided that I am not allowed to uninstall apps from my own phone. Even when they are not only useless, but actually harmful, since some of them are always running, thus consuming memory, CPU cycles, battery, and communications bandwidth. Some apps can be uninstalled, but many others cannot be uninstalled. They have to stay on the phone. Whether I like them or not.&lt;/p&gt;
+&lt;p&gt;After this horrible experience I am very seriously considering the possibility that next time I buy a phone it will be an iPhone. But for now, I am stuck with Android, so I am now learning how to root my phone so that I can be somewhat in control of the situation. I am experimenting with my old phone first, a Samsung Galaxy S2. Here are my notes.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First of all, make sure that your S2 is updated to the latest version of Android by going to settings -&amp;gt; About device and selecting Software update. Then, come to the same screen and check your Android version. The last time the powers that be bothered to distribute a new android version to the S2 was in 2012, and it was android version 4.1.2 &amp;quot;Jelly Bean&amp;quot;. In the future I will probably be upgrading to some custom ROM with some newer version of Android, but for now I only care to root the phone, and that is what this document deals with. So, make sure that your Android version is 4.1.2. If not, then these instructions are not applicable to you.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Installing the Samsung USB drivers was unnecessary, since windows had already detected my Samsung phone and downloaded the necessary drivers for it. But just in case, the drivers can be found here: &lt;a class="external"
+href="http://developer.samsung.com/android/tools-sdks/Samsung-Andorid-USB-Driver-for-Windows" target="_blank"
+&gt;http://developer.samsung.com/android/tools-sdks/Samsung-Andorid-USB-Driver-for-Windows&lt;/a&gt; (yes, it says &amp;quot;Andorid&amp;quot;. But it works. Go figure.) If you have ever installed Samsung Kies, then you already have the drivers, but rumor has it that Kies must not be running during this procedure.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download and run adb-setup-1.4.3.exe from &lt;a class="external"
+href="http://forum.xda-developers.com/showthread.php?t=2588979" target="_blank"
+&gt;http://forum.xda-developers.com/showthread.php?t=2588979&lt;/a&gt; It copies some files under C:\adb without asking (How lame is that!) and adds that directory to the path. When prompted to install the Google USB drivers, the answer is &amp;quot;No&amp;quot;, because the Samsung Galaxy S2 is a Samsung phone, not a Google phone.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Go to developer options, turn them on, enable USB debugging, then on the PC run cmd.exe and execute &amp;quot;adb devices&amp;quot;. The phone should be listed. In retrospect, I think that installing ADB simply to check the connection makes it a rather unnecessary step for rooting the phone, but never mind, having adb will certainly come handy for doing other things with the phone once it has been rooted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download a kernel. The process of rooting the phone involves replacing the kernel of the system, and rumors have it that when doing so you have to find the right kernel flavor for the &amp;quot;build number&amp;quot; of the device. Under Settings -&amp;gt; About device my phone reports its build number as JZO54K.I9100XWLSE. The JZO54K part seems to be irrelevant, the I9100XW part says that I have a Samsung Galaxy S2, (if not, then these instructions are inapplicable,) and the LSE part tells which flavor of the kernel is needed. Luckily, the Jaboo kernel that I found on the interwebz is said to cover many flavors, including LSE. So, visit &lt;a class="external"
+href="http://forum.xda-developers.com/galaxy-s2/development-derivatives/kernel-v2-3a-jb-i9100-t2062208" target="_blank"
+&gt;http://forum.xda-developers.com/galaxy-s2/development-derivatives/kernel-v2-3a-jb-i9100-t2062208&lt;/a&gt; and you will be directed to download a jeboo_kernel_i9100_v2-3a.zip or similar, which is useless, because it is a zip file. So, extract zImage from it, and then use 7zip to create a tar file containing zImage. Luckily, 7zip creates the file in &amp;quot;ustar&amp;quot; format, which is the correct format. Let's call it jeboo_kernel_i9100_v2-3a.tar&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Disconnect the USB cable from the phone.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Boot your phone into &amp;quot;Download Mode&amp;quot; with the following voodoo magic: power-off the phone, (and wait for its final death throe,) then press and hold the [Volume Down] and [Home] buttons together and then press and hold the [Power] button for a few seconds. This should cause a screen to appear, at which point you may release all these buttons. The screen is warning you that what you are about to do is oh-so-scary, and asking you to press [Volume Up] to continue. Press [Volume Up]. The phone enters &amp;quot;Download Mode&amp;quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run Odin.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connect the USB cable to the phone, and one of the boxes in Odin under ID:COM will turn yellow, indicating that it found your phone.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In Odin, make sure Auto Reboot and F. Reset Time are checked.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In Odin, click the PDA button, and select jeboo_kernel_i9100_v2-3a.tar. When done, there should also be a check next to PDA.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In Odin, click Start. Odin will flash the jaboo kernel onto the phone, and the phone will restart. Your phone now has ClockworkMod Recovery installed on it, but it is still not rooted.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Visit &lt;a class="external"
+href="http://d-h.st/9WL" target="_blank"
+&gt;http://d-h.st/9WL&lt;/a&gt; and download UPDATE-SuperSU-v1.30.zip.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Copy UPDATE-SuperSU-v1.30.zip to your mobile phone.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Boot your phone into CWM Recovery mode with the following voodoo magic: power-off the phone, (and wait for its final death throe,) then press and hold the [Volume Up] and [Home] buttons, and then press and hold the [Power] button for several seconds. The &amp;quot;Jaboo Recovery&amp;quot; screen should now appear, at which point you may release the buttons. The screen has instructions on how to navigate using swipes, but you can also use the volume keys to navigate and the power button to make a selection.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &amp;quot;Install Zip&amp;quot;, then navigate and select UPDATE-SuperSU-v1.30.zip. The file will be installed, and you will also see a log describing that everything went fine, undoubtedly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Return to the main menu and select &amp;quot;reboot system now&amp;quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;At the end of all this, your device is rooted. While booting, a yellow warning triangle will be displayed under the Samsung logo, indicating that you have tampered with the flash storage of the device. If you want to get rid of this triangle, download the &amp;quot;Triangle Away&amp;quot; app from here: &lt;a class="external"
+href="http://forum.xda-developers.com/galaxy-s2/orig-development/2014-01-15-triangleaway-v3-26-t1494114" target="_blank"
+&gt;http://forum.xda-developers.com/galaxy-s2/orig-development/2014-01-15-triangleaway-v3-26-t1494114&lt;/a&gt; and if you like it, consider buying the app from the Google Play store, thus buying the developer a beer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class="external"
+href="http://michael.gr" target="_blank"
+&gt;michael.gr&lt;/a&gt; 2016-03-28 14:34:51 UTC&lt;/p&gt;
+&lt;p&gt;First adventure: downloaded &amp;quot;JRummy Root Browser&amp;quot; and tried to get rid of some apps from /system/app by moving them into a new folder /system/app/away. I moved a whole bunch of seemingly irrelevant stuff, then went back to the home screen, and my google calendar was not working. It was saying &amp;quot;Oops, your calendars and events can't be displayed because Calendar Storage is disabled&amp;quot; and &amp;quot;Turn Calendar Storage back on in Settings&amp;quot; and it had a button &amp;quot;Enable in Settings&amp;quot; which would take me to some settings, but there was nothing there to enable. I started troubleshooting, and I found that apparently some com.android.providers.calendar component was missing, but nothing more helpful. Finally, I realized that I should not have moved &amp;quot;SecCalendarProvider.apk&amp;quot; and &amp;quot;SecCalendarProvider.odex&amp;quot; to &amp;quot;away&amp;quot;. I put them back in their original place, restarted the device, and things went back to normal.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>How to: Completely disable "Aero" in Windows 7</title><link>https://blog.michael.gr/post/2015-07-how-to-completely-disable-aero-in/</link><pubDate>Sun, 26 Jul 2015 14:27:56 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-how-to-completely-disable-aero-in/</guid><description>&lt;p&gt;So, with Windows 8 sporting these god-awfully ugly opaque square boxes, which are not adorned in any way whatsoever, (not even the decent in all its simplicity gradient of Windows 98,) it seems like a confession on Microsoft's behalf that the spiffy &amp;quot;Aero&amp;quot; look of Windows 7 was nothing but an unnecessary gimmick after all.&lt;/p&gt;
+&lt;p&gt;So, are you sticking with Windows 7 but want to disable Aero in order to enjoy considerable gains in performance, memory, power consumption, and GPU temperature? Here is how:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open up &amp;quot;Services&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Locate the service &amp;quot;Desktop Window Manager Session Manager&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Disable it and stop it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</description></item><item><title>How to: Enable the Administrator account in Windows</title><link>https://blog.michael.gr/post/2015-07-how-to-enable-administrator-account-in/</link><pubDate>Fri, 24 Jul 2015 23:47:05 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-how-to-enable-administrator-account-in/</guid><description>&lt;p&gt;To enable the Administrator account in Windows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open up an &lt;em&gt;&lt;strong&gt;elevated&lt;/strong&gt;&lt;/em&gt; command prompt. (If you do not know what this is, you should not be even &lt;em&gt;thinking&lt;/em&gt; of enabling the Administrator account.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Type the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;net user administrator /active:yes&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>How to: Disable the administrative shares in Windows</title><link>https://blog.michael.gr/post/2015-07-how-to-disable-administrative-shares-in/</link><pubDate>Fri, 24 Jul 2015 23:45:12 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-how-to-disable-administrative-shares-in/</guid><description>&lt;p&gt;To disable the administrative shares in Windows, (default shares like &lt;code&gt;C$&lt;/code&gt;, &lt;code&gt;ADMIN$&lt;/code&gt;, etc.) follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Run the Registry Editor and go to the following key:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet \Services\LanmanServer\Parameters&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a new &lt;code&gt;DWORD&lt;/code&gt;, name it &lt;code&gt;AutoShareWks&lt;/code&gt;, and leave the default value of &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reboot Windows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This will disable things like &lt;code&gt;C$&lt;/code&gt; and &lt;code&gt;ADMIN$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I am not sure how to also delete &lt;code&gt;print$&lt;/code&gt; and &lt;code&gt;IPC$&lt;/code&gt;. (&lt;code&gt;net share ipc$ /delete&lt;/code&gt; appears to work temporarily, but the share automagically re-appears after the next reboot.)&lt;/p&gt;</description></item><item><title>Solved: Windows: WiFi connect immediately after boot and before logon</title><link>https://blog.michael.gr/post/2015-07-solved-wifi-connect-immediately-after/</link><pubDate>Mon, 20 Jul 2015 18:13:07 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-solved-wifi-connect-immediately-after/</guid><description>&lt;p&gt;In order to have your windows computer connect to your favorite WiFi access point immediately after booting, (without you having to first login to your computer,) follow these simple steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First of all, make sure that this computer has previously connected to the WiFi spot of interest. (This is necessary, because a so-called &lt;strong&gt;&lt;em&gt;wireless profile&lt;/em&gt;&lt;/strong&gt; is created as a result of this manual process.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;strong&gt;cmd.exe&lt;/strong&gt; and issue the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netsh wlan show profile&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the list of wireless profiles that are displayed, locate the one you want, and copy its name to the clipboard.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;strong&gt;regedit.exe&lt;/strong&gt; and navigate to this key:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HKEY\_LOCAL\_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add a string value to this registry key. Name it anything you like, and give it the following value:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;%comspec% /c netsh wlan connect name=&amp;quot;&amp;amp;lt;profile name&amp;amp;gt;&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Voila, next time you restart, your computer will immediately connect to this WiFi spot if it is in range.&lt;/p&gt;
+&lt;p&gt;Many thanks to user &lt;em&gt;Soumya&lt;/em&gt; of superuser.com for posting this:&lt;a class="external"
+href="https://superuser.com/a/133935/111757" target="_blank"
+&gt; http://superuser.com/a/133935/111757&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Solved: cannot eject USB device: "This device is currently in use-"</title><link>https://blog.michael.gr/post/2015-07-solved-cannot-eject-usb-device-this/</link><pubDate>Tue, 14 Jul 2015 00:40:18 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-solved-cannot-eject-usb-device-this/</guid><description>&lt;p&gt;Millions of people all over the planet continuously have this problem: they try to eject their USB drive so as to avoid data loss, but windows does not allow them. Which is very frustrating, because whatever reasons windows thinks it has for not allowing the removal should have &lt;strong&gt;lower&lt;/strong&gt; priority than the user's explicitly stated direct wish to &lt;strong&gt;remove the damned thing&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Anyway, suggestions for solutions abound on the interwebz, but they are mostly misguided and ineffective. Here are some that I found with a quick search:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Put your computer to sleep.&lt;/strong&gt; When going to sleep, Windows flushes all buffers to all devices, so while the computer is asleep, it is safe to remove the device. The problem with this approach is that I don't want to have to put my bloody computer to sleep each time I want to take a USB device out.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Use SysInternals Process Explorer&lt;/strong&gt; to search for the drive name, find which process has a handle open on the drive, and terminate it. The problem is that drive names are only one a letter and a colon, a search for &amp;quot;D:&amp;quot; may yield thousands of handles from several dozen processes, all of which are unrelated to your drive &amp;quot;D&amp;quot;. Unfortunately, Process Explorer does not offer any option to search for a whole word only. Another problem is that this approach hardly ever works. Apparently, there are ways in which devices can be locked which do not show in Process Explorer. Even if you remember to launch it as Administrator.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Select &amp;quot;Quick removal&amp;quot; policy&lt;/strong&gt; as opposed to &amp;quot;Better performance&amp;quot; policy in the drive properties. The problem with this is that it is not really a solution: we generally do specifically want the better performance, and we are willing to sacrifice quick removal for it, accepting slow removal instead. But this issue is not one of slow vs. fast removal, it is about &lt;strong&gt;not being allowed to remove your device at all, ever!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Here is the solution which worked for me, after the above failed:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Make sure that the drive, or any folders in it, are not shared on the network!&lt;/strong&gt; (Use &amp;quot;NET SHARE&amp;quot; on the command prompt to quickly find out what you are sharing.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Unknown 2015-09-25 03:56:30 UTC&lt;/p&gt;
+&lt;p&gt;Well, that's helpful, except I want to share the drive on the network most of the time!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Unknown 2015-09-25 03:56:56 UTC&lt;/p&gt;
+&lt;p&gt;Any way to unshare to eject drive??&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class="external"
+href="http://michael.gr" target="_blank"
+&gt;michael.gr&lt;/a&gt; 2015-09-25 08:14:39 UTC&lt;/p&gt;
+&lt;p&gt;Yes, of course. You can either stop sharing the drive from the &amp;quot;host&amp;quot; computer (the one on which the drive physically resides,) or from each &amp;quot;client&amp;quot; computer (that makes use of the shared drive.) Right-click on the drive, and there should be sharing-related options. They differ depending on whether you are on the host or on one of the clients, on your version of windows, and also depending on what is your configuration, (whether you are in a domain, a workgroup, or a homegroup and whether you have &amp;quot;advanced sharing&amp;quot; enabled or not,) but the options are there.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Solved: The network folder specified is currently mapped using a different user name and password</title><link>https://blog.michael.gr/post/2015-07-the-network-folder-specified-is/</link><pubDate>Tue, 14 Jul 2015 00:30:36 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-the-network-folder-specified-is/</guid><description>&lt;p&gt;So, I am on computer A, trying to map a local drive to a shared folder of computer B, and Windows gives me this message: &amp;quot;The network folder specified is currently mapped using a different user name and password&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Microsoft supposedly addresses this issue here: &lt;a class="external"
+href="https://support.microsoft.com/en-us/kb/938120" target="_blank"
+&gt;https://support.microsoft.com/en-us/kb/938120&lt;/a&gt; and concludes that it is so by design.&lt;/p&gt;
+&lt;p&gt;Bullshit. They are missing the point. The error message is wrong. The network folder specified is &lt;strong&gt;not&lt;/strong&gt; currently mapped using a different user name and password. Instead, what is happening, is that &lt;strong&gt;another&lt;/strong&gt; folder of the same computer B is already mapped on computer A using a different user name and password.&lt;/p&gt;
+&lt;p&gt;So, apparently, with windows, if you connect from computer A to any share of computer B, then all subsequent attempts to connect from computer A to other shares of computer B must be done using the same credentials. Go figure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Unspecified 2018-09-21 20:43:15 UTC&lt;/p&gt;
+&lt;p&gt;Sounds like what I'm experiencing, except that I believe I have used the same username password for all connections. I'm afraid that if I change them all to make sure they're the same, none will work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>The GWX (Get Windows 10) KB3035583 trojan horse</title><link>https://blog.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/</link><pubDate>Sun, 12 Jul 2015 23:43:43 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-07-the-gwx-get-windows-10-kb3035583-trojan/media/gwx.webp"
+width="640"
+height="341"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="187"
+data-flex-basis="450px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So, Microsoft has pushed this trojan horse to every single user of Windows on the planet. It displays a Windows 10 logo on the taskbar, and it is basically telling you that not only &lt;strong&gt;you will&lt;/strong&gt; get Windows 10 as soon as it comes out, but you should right now begin acting as if you are looking forward to it. Because, you know, you are their biatch.&lt;/p&gt;
+&lt;p&gt;So, let's see:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;It installs on your machine without your consent;&lt;/li&gt;
+&lt;li&gt;Once installed, you cannot &amp;quot;quit&amp;quot; it or &amp;quot;exit&amp;quot; it; and&lt;/li&gt;
+&lt;li&gt;You cannot find it anywhere to uninstall it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, it fits squarely within the definition of malware.&lt;/p&gt;
+&lt;p&gt;GWX is delivered by means of an innocent looking optional update, KB3035583. The update is designated as &lt;em&gt;&amp;quot;Recommended&amp;quot;&lt;/em&gt;, and its description says:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Install this update to resolve issues in Windows. For a complete listing of the issues that are included in this update, see the associated Microsoft Knowledge Base article for more information.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;(I am not making this up, that's exactly what it says; I suppose English is not their forte at Microsoft.)&lt;/p&gt;
+&lt;p&gt;Of course, with dozens upon dozens of updates each time you check, which give you no clue as to what they are about, and instead each one of them refers you to some web page for more information, you don't bother checking, and so you passively consent to this trojan horse being downloaded and installed on your computer. If you click on &lt;em&gt;&amp;quot;More information&amp;quot;&lt;/em&gt;, you are taken to a web page which admits that update KB3035583 is nothing but an incredibly lame and stupid publicity stunt about the upcoming Windows 10.&lt;/p&gt;
+&lt;p&gt;And so, as it turns out, that bit about resolving issues in Windows was &lt;em&gt;&lt;strong&gt;a fucking lie&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;How to get rid of the KB3035583 trojan horse:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;In &lt;em&gt;Windows Update&lt;/em&gt; select &lt;em&gt;Change settings&lt;/em&gt;, and make sure that &lt;em&gt;&amp;quot;Give me recommended updates the same way I receive important updates&amp;quot;&lt;/em&gt; is unchecked. This way, the fact that this is a &amp;quot;Recommended&amp;quot; update will not cause it to jump from the &amp;quot;Optional&amp;quot; updates list to the &amp;quot;Important&amp;quot; updates list.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In &lt;em&gt;Windows Update&lt;/em&gt; select &lt;em&gt;View update history&lt;/em&gt;, find KB3035583, and uninstall it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In &lt;em&gt;Windows Update&lt;/em&gt; click on &amp;quot;Check for updates&amp;quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In &lt;em&gt;Windows Update&lt;/em&gt; go to &lt;em&gt;Optional Updates&lt;/em&gt;, find KB3035583, and specify that you want it to be hidden.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And then in 2017 there is this: &lt;a class="external"
+href="https://betanews.com/2017/08/23/no-more-forced-windows-upgrade-downloads/" target="_blank"
+&gt;betanews.com: Microsoft will never again sneakily force Windows downloads on users&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(Though it is unclear to me whether this is about Germany only or the whole world.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Anonymous 2015-09-27 05:24:14 UTC&lt;/p&gt;
+&lt;p&gt;Yea but it still lists and keeps the check mark in it.So why hide it with the check mark in it.It won't go away.Keeps always reloading with the check mark in it.So next time you do check for updates or have it set for auto then it will sneak in.Now I have to keep an eye on this every time now.I already deleted the patch.Someone should tell them to do a delete it off the list patch.Oh since I did delete the patch it now came up as an important one to install now.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Remote Desktop Connection quits without a word</title><link>https://blog.michael.gr/post/2015-07-remote-services-rdp-quits-without-word/</link><pubDate>Thu, 09 Jul 2015 08:52:58 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-remote-services-rdp-quits-without-word/</guid><description>&lt;p&gt;So, I am firing up a remote desktop (RDP) connection, and the little box appears saying that it is trying to connect:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-07-remote-services-rdp-quits-without-word/media/remote_desktop_connection.png"
+width="433"
+height="150"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="288"
+data-flex-basis="692px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;And then the box just disappears, without an error message or any other hint as to what might have gone wrong.&lt;/p&gt;
+&lt;p&gt;The interwebz abound with reports of this happening, and people asking how to fix it, and various solutions being offered that range from the complex to the hopelessly complex.&lt;/p&gt;
+&lt;p&gt;Luckily, every time I have encountered this problem, the solution for me was very simple: just wait and try again later. The remote computer is probably busy booting, or perhaps booting and installing updates.&lt;/p&gt;
+&lt;p&gt;Now, I will tell you a little secret: when something goes wrong, software can ALWAYS give a meaningful error message. If it does not, then someone, somewhere, is being either EVIL or INCOMPETENT.&lt;/p&gt;
+&lt;p&gt;If it could not find the server, it would have said that the server was not found.&lt;/p&gt;
+&lt;p&gt;If the server was not responding, it would have said that the server is not responding.&lt;/p&gt;
+&lt;p&gt;In this case, the server was actively refusing the connections, and someone at Microsoft was either so evil that they decided that in this specific case the software should not say anything, or, more likely, someone at Microsoft was so incompetent that they could not simply write their world-class software to give a meaningful error message in a very frequently occurring usage scenario.&lt;/p&gt;</description></item><item><title>Intel NUC5CPYH incompatible with Windows 7 Ulitmate 64 bit?</title><link>https://blog.michael.gr/post/2015-07-intel-nuc5cpyh-incompatible-with/</link><pubDate>Wed, 08 Jul 2015 20:23:30 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-intel-nuc5cpyh-incompatible-with/</guid><description>&lt;p&gt;Intel advertises &lt;a class="external"
+href="https://mail.google.com/mail/u/0/?pli=1#14e4f88d9fc9ea60_" target="_blank"
+&gt;NUC5CPYH - (Celeron N3050&lt;/a&gt;) as being compatible with Windows 7. It is not. All my attempts to install Windows 7 Ultimate 64 bit on it failed. The installation would start, and when it would reach the first interactive screen (language selection) the keyboard and mouse would be dead, (not even NumLock would work on the keyboard,) even though both keyboard and mouse work fine on the BIOS screens of the NUC. On other occasions I managed to overcome this problem, (I don remember how,) and the installation would proceed to 99%, only to fail in the end with some error about not being able to update my computer's boot configuration or something.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; be sure to read nucblog's comment below for a link to an article with instructions that might bring you more luck than I had.&lt;/p&gt;
+&lt;p&gt;In general, my overall experience of interacting with the BIOS of the NUC5CPYH was not pleasant at all. The spiffy looking BIOS screens were not welcome by me, as they were not structured in the perfect logical order that I would expect of them, and certain parts of them were clunky. Attempts to introduce an aesthetic upgrade which result in something technically more flawed than its ugly predecessor generally make a very bad impression, at least to me.&lt;/p&gt;
+&lt;p&gt;Perhaps the most annoying thing is that the initial screen with the prompts to press F2 to enter setup, F10 to enter the boot menu, etc. appears as if it requires not one, but two key-presses. It probably requires only one, but there is an initial period of time during which if you press a key, that key is ignored, and that's extremely annoying. Hey you, Intel BIOS programmers, I have a hint for you: if you are not ready to accept key-presses, do not display a prompt for them!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class="external"
+href="http://nucblog.net" target="_blank"
+&gt;nucblog&lt;/a&gt; 2015-07-27 21:08:45 UTC&lt;/p&gt;
+&lt;p&gt;It's indeed a bit tricky, but can be done:
+&lt;a class="external"
+href="http://nucblog.net/2015/07/installing-windows-7-on-the-nuc5cpyh-or-nuc5ppyh/" target="_blank"
+&gt;http://nucblog.net/2015/07/installing-windows-7-on-the-nuc5cpyh-or-nuc5ppyh/&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class="external"
+href="http://michael.gr" target="_blank"
+&gt;michael.gr&lt;/a&gt; 2015-07-27 22:59:42 UTC&lt;/p&gt;
+&lt;p&gt;Thank you, nucblog, for the excellent article. I have installed Windows 8.1 now, so it is too late for me, but hopefully it will be helpful to others.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Anonymous 2016-04-02 04:33:30 UTC&lt;/p&gt;
+&lt;p&gt;I'm having the same hassle with my $500 &amp;quot;NUC from Hell&amp;quot;
+( a NUC5CPYH).&lt;/p&gt;
+&lt;p&gt;I was hoping to buy a bunch of these to use in the school where I'm the IT manager. I can't install a working Windows 7 Pro 64-bit OS&lt;/p&gt;
+&lt;p&gt;&amp;lt; &lt;a class="external"
+href="mailto:khemelberg@kurnhattin.org" target="_blank"
+&gt;khemelberg@kurnhattin.org&lt;/a&gt; &amp;gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt; &lt;a class="external"
+href="https://kurnhattin.org/" target="_blank"
+&gt;https://kurnhattin.org/&lt;/a&gt; &amp;gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Solid State For The Win!</title><link>https://blog.michael.gr/post/2015-03-solid-state-for-win/</link><pubDate>Fri, 13 Mar 2015 18:09:30 +0000</pubDate><guid>https://blog.michael.gr/post/2015-03-solid-state-for-win/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-03-solid-state-for-win/media/CrystalDiskMark-SSD-HDD.png"
+width="869"
+height="407"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="213"
+data-flex-basis="512px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;These two side-by-side screen captures are from CrystalDiskMark measuring the performance of my brand new Samsung 850 PRO 256GB Solid State Drive (C:) versus the performance of my old Seagate Barracuda 1TB 7200 RPM 32MB Cache Hard Disk Drive (D:). Higher numbers are better.&lt;/p&gt;
+&lt;p&gt;Both devices are capable of SATA III, but my machine only has SATA II. Under SATA III, I would expect the HDD to perform somewhat faster, but the SSD to perform a lot faster. I will update this post when I upgrade to SATA III.&lt;/p&gt;
+&lt;p&gt;SSD, where had you been all my life?&lt;/p&gt;</description></item></channel></rss>

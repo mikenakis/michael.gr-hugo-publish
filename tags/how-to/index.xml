@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How-to on Michael's Blog</title><link>https://blog.michael.gr/tags/how-to/</link><description>Recent content in How-to on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 11 Jan 2026 13:37:15 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>The Ju52 cocktail</title><link>https://blog.michael.gr/post/2024-07-ju52/</link><pubDate>Fri, 12 Jul 2024 20:58:28 +0000</pubDate><guid>https://blog.michael.gr/post/2024-07-ju52/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-ingredients.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How-to on Michael's Blog</title><link>https://blog.michael.gr/tags/how-to/</link><description>Recent content in How-to on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 21 Jan 2026 11:16:48 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>The Ju52 cocktail</title><link>https://blog.michael.gr/post/2024-07-ju52/</link><pubDate>Fri, 12 Jul 2024 20:58:28 +0000</pubDate><guid>https://blog.michael.gr/post/2024-07-ju52/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-ingredients.jpg"
 width="2000"
 height="1116"
 loading="lazy"
@@ -646,7 +646,20 @@ if it gives you some hint as to why it broke,&lt;br&gt;
 or even just a hint that it just now broke,&lt;br&gt;
 then you can fix it;&lt;br&gt;
 but if it gives no hint, then you can't fix it.&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>Mouse Wheel Natural Scrolling in Windows</title><link>https://blog.michael.gr/post/2022-03-mouse-natural-scrolling/</link><pubDate>Wed, 16 Mar 2022 09:55:12 +0000</pubDate><guid>https://blog.michael.gr/post/2022-03-mouse-natural-scrolling/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-03-mouse-natural-scrolling/media/mouse-and-wheel.jpg"
+&lt;/blockquote&gt;</description></item><item><title>[SOLVED] Windows: Sound becomes distorted after 1 second of playback</title><link>https://blog.michael.gr/post/2023-03-15-solved-windows-sound-becomes-distorted/</link><pubDate>Wed, 15 Mar 2023 19:53:01 +0000</pubDate><guid>https://blog.michael.gr/post/2023-03-15-solved-windows-sound-becomes-distorted/</guid><description>&lt;p&gt;So today I started encountering a very weird audio issue: When I play music, it sounds normal in the beginning, but then after about a second the sound gets distorted, as if it is muffled, or as if it is undergoing severe lossy compression. If I stop and resume the music, it goes through the same.&lt;/p&gt;
+&lt;p&gt;Normally I would know what to do in this situation, but as the years pass Microsoft keeps changing Windows, in the direction of making them dumber and dumber, so in Windows 10 I cannot find the old sound options dialog that I used to use to fix this problem.&lt;/p&gt;
+&lt;p&gt;Looking around the interwebz for a solution was not easy, so I decided to document the solution that I found. If you are a power user, you can skim through the text and only look at the words in bold-italics.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Type &lt;em&gt;&lt;strong&gt;Win+R&lt;/strong&gt;&lt;/em&gt; and type &lt;em&gt;&lt;strong&gt;mmsys.cpl&lt;/strong&gt;&lt;/em&gt;. This will bring up the good old sound options, which Microsoft recently made inaccessible by any means other than this magical incantation, because
+obviously, nobody should ever want to fix any sound problems, because obviously, Windows has no sound problems.&lt;/li&gt;
+&lt;li&gt;In the &lt;em&gt;&lt;strong&gt;Playback&lt;/strong&gt;&lt;/em&gt; tab, locate your &lt;em&gt;&lt;strong&gt;Speakers&lt;/strong&gt;&lt;/em&gt;. If you are playing music at that moment, they are easy to locate from the live volume meter right next to them.&lt;/li&gt;
+&lt;li&gt;Select &lt;em&gt;&lt;strong&gt;Properties&lt;/strong&gt;&lt;/em&gt; on your speakers. (Not &lt;em&gt;Configure&lt;/em&gt;, but &lt;em&gt;Properties&lt;/em&gt;.) This should open a &lt;em&gt;Speakers Properties&lt;/em&gt; dialog.&lt;/li&gt;
+&lt;li&gt;On the &lt;em&gt;Speaker Properties&lt;/em&gt; dialog, select the &lt;em&gt;&lt;strong&gt;Advanced&lt;/strong&gt;&lt;/em&gt; tab.&lt;/li&gt;
+&lt;li&gt;Near the bottom of the &lt;em&gt;Advanced&lt;/em&gt; tab there is an &lt;em&gt;&lt;strong&gt;Enable Fucked Up Sound&lt;/strong&gt;&lt;/em&gt; checkbox, which is actually labelled &lt;em&gt;&lt;strong&gt;Enable Enhancements&lt;/strong&gt;&lt;/em&gt;. (Euphemism has always been Microsoft's forte.)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Uncheck&lt;/strong&gt;&lt;/em&gt; that checkbox; you are done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Afterword&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I probably started experiencing this problem right after pairing a new bluetooth sound device. Apparently when Windows detects a new sound device it sets some things up for it, and while doing that it entirely arbitrarily also goes and resets some settings for existing devices, e.g. it enables this &amp;quot;Enhancements&amp;quot; setting for my existing speakers.&lt;/p&gt;</description></item><item><title>Mouse Wheel Natural Scrolling in Windows</title><link>https://blog.michael.gr/post/2022-03-mouse-natural-scrolling/</link><pubDate>Wed, 16 Mar 2022 09:55:12 +0000</pubDate><guid>https://blog.michael.gr/post/2022-03-mouse-natural-scrolling/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-03-mouse-natural-scrolling/media/mouse-and-wheel.jpg"
 width="640"
 height="225"
 loading="lazy"
@@ -670,4 +683,378 @@ data-flex-basis="682px"
 &lt;li&gt;Restart Windows. (Logging out and back in will not work, because remember, this is a Windows-wide setting, not a per-user setting.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: Artwork by michael.gr based on original mouse-15887 by Arkthus from the Noun Project&lt;/p&gt;</description></item><item><title>How to get a raise</title><link>https://blog.michael.gr/post/2012-11-09-how-to-get-raise/</link><pubDate>Fri, 09 Nov 2012 16:19:29 +0000</pubDate><guid>https://blog.michael.gr/post/2012-11-09-how-to-get-raise/</guid><description>&lt;p&gt;Once upon a time I was dissatisfied with my salary at my workplace, and I let it show. The boss, fearing that he was about to lose me, placed an ad in the newspaper for my exact job description. Since I was looking for a job, I saw the ad in the newspaper. What I did was to reply to that ad, sending my boss my resume, which of course included precisely those qualifications that the job required. The boss got the message.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Cover image: Artwork by michael.gr based on original mouse-15887 by Arkthus from the Noun Project&lt;/p&gt;</description></item><item><title>Solved: Brightness control keys do not work on Asus Laptop</title><link>https://blog.michael.gr/post/2016-03-solved-brightness-control-keys-do-not/</link><pubDate>Sun, 20 Mar 2016 22:39:39 +0000</pubDate><guid>https://blog.michael.gr/post/2016-03-solved-brightness-control-keys-do-not/</guid><description>&lt;p&gt;So, the brightness keys on my Asus Laptop do not work anymore. All other Fn keys still work, but the Fn+F5 and Fn+F6 keys which control brightness do not work anymore.&lt;/p&gt;
+&lt;p&gt;The way to solve this problem is as follows:&lt;/p&gt;
+&lt;p&gt;Initiate an update of the driver of your monitor. This can be accomplished in many ways, for example:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Right-click on the desktop&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &amp;quot;Display settings&amp;quot;, then&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &amp;quot;Advanced display settings&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &amp;quot;Display adapter properties&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Switch to the &amp;quot;Monitor&amp;quot; tab&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click on &amp;quot;Properties&amp;quot; for the monitor&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Switch to the &amp;quot;Driver&amp;quot; tab&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;quot;Update driver&amp;quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Alternatively, you can:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Hit Win+Pause to open the &amp;quot;System&amp;quot; window&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &amp;quot;Device Manager&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Find your monitor under &amp;quot;Monitors&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Right-click on the monitor and select &amp;quot;Update Driver&amp;quot;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once the &amp;quot;Update Driver Software&amp;quot; dialog is up:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In the wizard which prompts you whether you want to search automatically or browse your computer, lie and say that you want to browse your computer. (Windows is so messed up that you have to lie to it to coax it to work.)&lt;/li&gt;
+&lt;li&gt;On the next screen, do not browse anything, select &amp;quot;let me pick from a list of drivers on my computer&amp;quot;.&lt;/li&gt;
+&lt;li&gt;On the next screen, select &amp;quot;Generic PnP Monitor&amp;quot; and click &amp;quot;Next&amp;quot;.&lt;/li&gt;
+&lt;li&gt;You are done.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Source:
+&lt;a class="external"
+href="https://visihow.com/Restore_Lost_Brightness_Control_app_in_ASUS_Laptops_After_Updating" target="_blank"
+&gt;http://visihow.com/Restore_Lost_Brightness_Control_app_in_ASUS_Laptops_After_Updating&lt;/a&gt;&lt;/p&gt;</description></item><item><title>How to: Completely disable "Aero" in Windows 7</title><link>https://blog.michael.gr/post/2015-07-how-to-completely-disable-aero-in/</link><pubDate>Sun, 26 Jul 2015 14:27:56 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-how-to-completely-disable-aero-in/</guid><description>&lt;p&gt;So, with Windows 8 sporting these god-awfully ugly opaque square boxes, which are not adorned in any way whatsoever, (not even the decent in all its simplicity gradient of Windows 98,) it seems like a confession on Microsoft's behalf that the spiffy &amp;quot;Aero&amp;quot; look of Windows 7 was nothing but an unnecessary gimmick after all.&lt;/p&gt;
+&lt;p&gt;So, are you sticking with Windows 7 but want to disable Aero in order to enjoy considerable gains in performance, memory, power consumption, and GPU temperature? Here is how:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open up &amp;quot;Services&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Locate the service &amp;quot;Desktop Window Manager Session Manager&amp;quot;.&lt;/li&gt;
+&lt;li&gt;Disable it and stop it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Enjoy!&lt;/p&gt;</description></item><item><title>How to: Enable the Administrator account in Windows</title><link>https://blog.michael.gr/post/2015-07-how-to-enable-administrator-account-in/</link><pubDate>Fri, 24 Jul 2015 23:47:05 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-how-to-enable-administrator-account-in/</guid><description>&lt;p&gt;To enable the Administrator account in Windows:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Open up an &lt;em&gt;&lt;strong&gt;elevated&lt;/strong&gt;&lt;/em&gt; command prompt. (If you do not know what this is, you should not be even &lt;em&gt;thinking&lt;/em&gt; of enabling the Administrator account.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Type the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;net user administrator /active:yes&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>How to: Disable the administrative shares in Windows</title><link>https://blog.michael.gr/post/2015-07-how-to-disable-administrative-shares-in/</link><pubDate>Fri, 24 Jul 2015 23:45:12 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-how-to-disable-administrative-shares-in/</guid><description>&lt;p&gt;To disable the administrative shares in Windows, (default shares like &lt;code&gt;C$&lt;/code&gt;, &lt;code&gt;ADMIN$&lt;/code&gt;, etc.) follow these steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Run the Registry Editor and go to the following key:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet \Services\LanmanServer\Parameters&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Create a new &lt;code&gt;DWORD&lt;/code&gt;, name it &lt;code&gt;AutoShareWks&lt;/code&gt;, and leave the default value of &lt;code&gt;0&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Reboot Windows.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This will disable things like &lt;code&gt;C$&lt;/code&gt; and &lt;code&gt;ADMIN$&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I am not sure how to also delete &lt;code&gt;print$&lt;/code&gt; and &lt;code&gt;IPC$&lt;/code&gt;. (&lt;code&gt;net share ipc$ /delete&lt;/code&gt; appears to work temporarily, but the share automagically re-appears after the next reboot.)&lt;/p&gt;</description></item><item><title>Solved: Windows: WiFi connect immediately after boot and before logon</title><link>https://blog.michael.gr/post/2015-07-solved-wifi-connect-immediately-after/</link><pubDate>Mon, 20 Jul 2015 18:13:07 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-solved-wifi-connect-immediately-after/</guid><description>&lt;p&gt;In order to have your windows computer connect to your favorite WiFi access point immediately after booting, (without you having to first login to your computer,) follow these simple steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;First of all, make sure that this computer has previously connected to the WiFi spot of interest. (This is necessary, because a so-called &lt;strong&gt;&lt;em&gt;wireless profile&lt;/em&gt;&lt;/strong&gt; is created as a result of this manual process.)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;strong&gt;cmd.exe&lt;/strong&gt; and issue the following command:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netsh wlan show profile&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;In the list of wireless profiles that are displayed, locate the one you want, and copy its name to the clipboard.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Run &lt;strong&gt;regedit.exe&lt;/strong&gt; and navigate to this key:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HKEY\_LOCAL\_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add a string value to this registry key. Name it anything you like, and give it the following value:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;%comspec% /c netsh wlan connect name=&amp;quot;&amp;amp;lt;profile name&amp;amp;gt;&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Voila, next time you restart, your computer will immediately connect to this WiFi spot if it is in range.&lt;/p&gt;
+&lt;p&gt;Many thanks to user &lt;em&gt;Soumya&lt;/em&gt; of superuser.com for posting this:&lt;a class="external"
+href="https://superuser.com/a/133935/111757" target="_blank"
+&gt; http://superuser.com/a/133935/111757&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Solved: cannot eject USB device: "This device is currently in use-"</title><link>https://blog.michael.gr/post/2015-07-solved-cannot-eject-usb-device-this/</link><pubDate>Tue, 14 Jul 2015 00:40:18 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-solved-cannot-eject-usb-device-this/</guid><description>&lt;p&gt;Millions of people all over the planet continuously have this problem: they try to eject their USB drive so as to avoid data loss, but windows does not allow them. Which is very frustrating, because whatever reasons windows thinks it has for not allowing the removal should have &lt;strong&gt;lower&lt;/strong&gt; priority than the user's explicitly stated direct wish to &lt;strong&gt;remove the damned thing&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;Anyway, suggestions for solutions abound on the interwebz, but they are mostly misguided and ineffective. Here are some that I found with a quick search:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Put your computer to sleep.&lt;/strong&gt; When going to sleep, Windows flushes all buffers to all devices, so while the computer is asleep, it is safe to remove the device. The problem with this approach is that I don't want to have to put my bloody computer to sleep each time I want to take a USB device out.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Use SysInternals Process Explorer&lt;/strong&gt; to search for the drive name, find which process has a handle open on the drive, and terminate it. The problem is that drive names are only one a letter and a colon, a search for &amp;quot;D:&amp;quot; may yield thousands of handles from several dozen processes, all of which are unrelated to your drive &amp;quot;D&amp;quot;. Unfortunately, Process Explorer does not offer any option to search for a whole word only. Another problem is that this approach hardly ever works. Apparently, there are ways in which devices can be locked which do not show in Process Explorer. Even if you remember to launch it as Administrator.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Select &amp;quot;Quick removal&amp;quot; policy&lt;/strong&gt; as opposed to &amp;quot;Better performance&amp;quot; policy in the drive properties. The problem with this is that it is not really a solution: we generally do specifically want the better performance, and we are willing to sacrifice quick removal for it, accepting slow removal instead. But this issue is not one of slow vs. fast removal, it is about &lt;strong&gt;not being allowed to remove your device at all, ever!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Here is the solution which worked for me, after the above failed:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Make sure that the drive, or any folders in it, are not shared on the network!&lt;/strong&gt; (Use &amp;quot;NET SHARE&amp;quot; on the command prompt to quickly find out what you are sharing.)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Unknown 2015-09-25 03:56:30 UTC&lt;/p&gt;
+&lt;p&gt;Well, that's helpful, except I want to share the drive on the network most of the time!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Unknown 2015-09-25 03:56:56 UTC&lt;/p&gt;
+&lt;p&gt;Any way to unshare to eject drive??&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class="external"
+href="http://michael.gr" target="_blank"
+&gt;michael.gr&lt;/a&gt; 2015-09-25 08:14:39 UTC&lt;/p&gt;
+&lt;p&gt;Yes, of course. You can either stop sharing the drive from the &amp;quot;host&amp;quot; computer (the one on which the drive physically resides,) or from each &amp;quot;client&amp;quot; computer (that makes use of the shared drive.) Right-click on the drive, and there should be sharing-related options. They differ depending on whether you are on the host or on one of the clients, on your version of windows, and also depending on what is your configuration, (whether you are in a domain, a workgroup, or a homegroup and whether you have &amp;quot;advanced sharing&amp;quot; enabled or not,) but the options are there.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Solved: The network folder specified is currently mapped using a different user name and password</title><link>https://blog.michael.gr/post/2015-07-the-network-folder-specified-is/</link><pubDate>Tue, 14 Jul 2015 00:30:36 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-the-network-folder-specified-is/</guid><description>&lt;p&gt;So, I am on computer A, trying to map a local drive to a shared folder of computer B, and Windows gives me this message: &amp;quot;The network folder specified is currently mapped using a different user name and password&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Microsoft supposedly addresses this issue here: &lt;a class="external"
+href="https://support.microsoft.com/en-us/kb/938120" target="_blank"
+&gt;https://support.microsoft.com/en-us/kb/938120&lt;/a&gt; and concludes that it is so by design.&lt;/p&gt;
+&lt;p&gt;Bullshit. They are missing the point. The error message is wrong. The network folder specified is &lt;strong&gt;not&lt;/strong&gt; currently mapped using a different user name and password. Instead, what is happening, is that &lt;strong&gt;another&lt;/strong&gt; folder of the same computer B is already mapped on computer A using a different user name and password.&lt;/p&gt;
+&lt;p&gt;So, apparently, with windows, if you connect from computer A to any share of computer B, then all subsequent attempts to connect from computer A to other shares of computer B must be done using the same credentials. Go figure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Old comments&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Unspecified 2018-09-21 20:43:15 UTC&lt;/p&gt;
+&lt;p&gt;Sounds like what I'm experiencing, except that I believe I have used the same username password for all connections. I'm afraid that if I change them all to make sure they're the same, none will work.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Remote Desktop Connection quits without a word</title><link>https://blog.michael.gr/post/2015-07-remote-services-rdp-quits-without-word/</link><pubDate>Thu, 09 Jul 2015 08:52:58 +0000</pubDate><guid>https://blog.michael.gr/post/2015-07-remote-services-rdp-quits-without-word/</guid><description>&lt;p&gt;So, I am firing up a remote desktop (RDP) connection, and the little box appears saying that it is trying to connect:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-07-remote-services-rdp-quits-without-word/media/remote_desktop_connection.png"
+width="433"
+height="150"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="288"
+data-flex-basis="692px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;And then the box just disappears, without an error message or any other hint as to what might have gone wrong.&lt;/p&gt;
+&lt;p&gt;The interwebz abound with reports of this happening, and people asking how to fix it, and various solutions being offered that range from the complex to the hopelessly complex.&lt;/p&gt;
+&lt;p&gt;Luckily, every time I have encountered this problem, the solution for me was very simple: just wait and try again later. The remote computer is probably busy booting, or perhaps booting and installing updates.&lt;/p&gt;
+&lt;p&gt;Now, I will tell you a little secret: when something goes wrong, software can ALWAYS give a meaningful error message. If it does not, then someone, somewhere, is being either EVIL or INCOMPETENT.&lt;/p&gt;
+&lt;p&gt;If it could not find the server, it would have said that the server was not found.&lt;/p&gt;
+&lt;p&gt;If the server was not responding, it would have said that the server is not responding.&lt;/p&gt;
+&lt;p&gt;In this case, the server was actively refusing the connections, and someone at Microsoft was either so evil that they decided that in this specific case the software should not say anything, or, more likely, someone at Microsoft was so incompetent that they could not simply write their world-class software to give a meaningful error message in a very frequently occurring usage scenario.&lt;/p&gt;</description></item><item><title>Minimal MySQL Memory Footprint</title><link>https://blog.michael.gr/post/2015-03-minimal-mysql-memory-footprint/</link><pubDate>Tue, 03 Mar 2015 22:10:45 +0000</pubDate><guid>https://blog.michael.gr/post/2015-03-minimal-mysql-memory-footprint/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-03-minimal-mysql-memory-footprint/media/mysql-logo.svg"
+loading="lazy"
+&gt;
+As a developer, I have configured MySQL to launch automatically at startup, because I will probably be using it, if this is a workday, and if my computer is starting up during work hours, and if my work these days involves databases. That's a lot of ifs. Quite often, I launch it but do not use it, so, it would be nice if it is as unobtrusive as possible. Unfortunately, it is obtrusive in at least one way: it occupies a large amount of memory, which is unreasonably large for a piece of software that is just sitting there doing nothing.&lt;/p&gt;
+&lt;p&gt;In this post I show how to configure it to occupy as little memory as possible.&lt;/p&gt;
+&lt;p&gt;The following image shows the mind-boggling amount of memory occupied by MySQL 5.6 server on Windows 7 64-bit.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-03-minimal-mysql-memory-footprint/media/mysql-630MB.png"
+width="449"
+height="73"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="615"
+data-flex-basis="1476px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;(This is despite the fact that during installation I explicitly specified that this MySQL server is going to be used for development, not for production.)&lt;/p&gt;
+&lt;p&gt;A quick search on the web shows that this preposterous amount of memory can be reduced to something less preposterous by editing my.ini (usually found in some place like ProgramData\MySQL\MySQL Server 5.6) and replacing the following line:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;table_definition_cache=1400&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;with this line:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;table_definition_cache=400&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Unfortunately, even though the savings are huge, the memory footprint of mysql is still nothing short of gargantuan:&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-03-minimal-mysql-memory-footprint/media/mysql-275MB.png"
+width="449"
+height="73"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="615"
+data-flex-basis="1476px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So, I tried to trim it down as much as possible by doing some more reading up on the subject and tweaking with more settings of my.ini, and this is what I finally managed to get it down to:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-03-minimal-mysql-memory-footprint/media/mysql-20MB.png"
+width="449"
+height="73"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="615"
+data-flex-basis="1476px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;So, the &amp;quot;private bytes&amp;quot; went from 630MB down to 20MB and the &amp;quot;working set&amp;quot; went from 450MB down to 21MB. Not bad, eh?&lt;/p&gt;
+&lt;p&gt;The server is functional, too, meaning that I ran the tests of a medium-sized project, which do heavily hit the database, and they all completed as easily as they used to with the bloated out-of-the-box server.&lt;/p&gt;
+&lt;p&gt;This is the my.ini file that achieves these savings:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# MySQL Server Instance Configuration File
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[client]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;no-beep
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# pipe
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;socket=0.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;port=3306
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[mysql]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;default-character-set=utf8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# server_type=3
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;[mysqld]
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# skip-networking
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;enable-named-pipe
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# shared-memory
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# shared-memory-base-name=MYSQL
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;socket=MYSQL
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;port=3306
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# basedir=&amp;#34;C:/Program Files/MySQL/MySQL Server 5.6/&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;datadir=C:/ProgramData/MySQL/MySQL Server 5.6/Data
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;character-set-server=utf8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;default-storage-engine=INNODB
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sql-mode=&amp;#34;STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# plugin-load=authentication_windows.dll
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;log-output=FILE
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;general-log=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;general_log_file=&amp;#34;PEGASUS.log&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;slow-query-log=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;slow_query_log_file=&amp;#34;PEGASUS-slow.log&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;long_query_time=10
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# log-bin
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;log-error=&amp;#34;PEGASUS.err&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;server-id=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: 151
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;max_connections=20
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;query_cache_size=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: table_open_cache=2000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table_open_cache=100
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;tmp_table_size=44M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: 9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;thread_cache_size=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;myisam_max_sort_file_size=100G
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: 80M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;myisam_sort_buffer_size=1M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: 8M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;key_buffer_size=8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: read_buffer_size=64K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* minimum appears to be 8K.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;read_buffer_size=8K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: read_rnd_buffer_size=256K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;read_rnd_buffer_size=8K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: sort_buffer_size=256K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* minimum appears to be 32K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sort_buffer_size=32K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# innodb_data_home_dir=0.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# skip-innodb
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB*: If this setting is enabled, the server fails to start with message &amp;#34;this option is deprecated and will be removed in a future release.&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: innodb_additional_mem_pool_size=6M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_additional_mem_pool_size=1M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: innodb_flush_log_at_trx_commit=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_flush_log_at_trx_commit=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: innodb_log_buffer_size=4M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* minimum appears to be 256K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_log_buffer_size=256K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: innodb_buffer_pool_size=255M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* minimum appears to be 5M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_buffer_pool_size=5M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_log_file_size=48M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_thread_concurrency=9
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_autoextend_increment=64
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: innodb_buffer_pool_instances=8
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_buffer_pool_instances=2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: innodb_concurrency_tickets=5000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_concurrency_tickets=10
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_old_blocks_time=1000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# The minimum value is 10.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: innodb_open_files=300
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_open_files=10
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_stats_on_metadata=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_file_per_table=1
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_checksum_algorithm=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: back_log=80
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;back_log=5
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: flush_time=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;flush_time=10
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: join_buffer_size=256K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;join_buffer_size=16K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: max_allowed_packet=4M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;max_allowed_packet=1M
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;max_connect_errors=100
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: open_files_limit=4161
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;open_files_limit=100
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: query_cache_type=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;query_cache_type=2
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# The minimum and default values are both 400.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# *MB* original: table_definition_cache=1400
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;table_definition_cache=400
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# The value should be a multiple of 256.
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;binlog_row_event_max_size=8K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sync_master_info=10000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sync_relay_log=10000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;sync_relay_log_info=10000
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;# additional hints from http://www.tocker.ca/2014/03/10/configuring-mysql-to-use-minimal-memory.html
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;host_cache_size=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;thread_stack=128K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;max_heap_table_size=16K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;bulk_insert_buffer_size=0
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;net_buffer_length=1K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;innodb_sort_buffer_size=64K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;binlog_cache_size=4K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;binlog_stmt_cache_size=4K
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;performance_schema=0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>How to get a raise</title><link>https://blog.michael.gr/post/2012-11-09-how-to-get-raise/</link><pubDate>Fri, 09 Nov 2012 16:19:29 +0000</pubDate><guid>https://blog.michael.gr/post/2012-11-09-how-to-get-raise/</guid><description>&lt;p&gt;Once upon a time I was dissatisfied with my salary at my workplace, and I let it show. The boss, fearing that he was about to lose me, placed an ad in the newspaper for my exact job description. Since I was looking for a job, I saw the ad in the newspaper. What I did was to reply to that ad, sending my boss my resume, which of course included precisely those qualifications that the job required. The boss got the message.&lt;/p&gt;</description></item></channel></rss>

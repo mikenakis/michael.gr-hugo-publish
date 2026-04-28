@@ -1169,4 +1169,18 @@ for( URL url : Collections.list( classLoader.getResources( &amp;quot;&amp;quot; 
 &lt;h4 id="issue-8-jackson-fails-to-deserialize-exceptions-from-json"&gt;Issue #8 Jackson fails to deserialize exceptions from JSON.
 &lt;/h4&gt;&lt;p&gt;For debugging purposes, I used to have exceptions serialized into JSON and deserialized later. For some unknown reason, this does not work anymore. Now each element of the stackTrace contains several additional fields, like classLoaderName, moduleName and moduleVersion, and although Jackson serializes them just fine, for some reason it fails to deserialize them. Upgrading to the latest version of jackson-jaxrs-json-provider (version 2.9.0) did not fix this problem.&lt;/p&gt;
 &lt;p&gt;Solution: stop serializing and deserializing exceptions.&lt;/p&gt;
-&lt;p&gt;At the end of all this, my 817 tests passed, so I consider the migration complete.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;At the end of all this, my 817 tests passed, so I consider the migration complete.&lt;/p&gt;</description></item><item><title>Oracle Certified Associate</title><link>https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/</link><pubDate>Fri, 04 Nov 2016 00:00:00 +0100</pubDate><guid>https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/</guid><description>&lt;p&gt;Hey, I passed the &amp;quot;Java SE 8 Programmer I&amp;quot; exam and received the &amp;quot;Oracle Certified Associate&amp;quot; certification.&lt;/p&gt;
+&lt;p&gt;Here is the link to the certification:&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://www.credly.com/badges/97c9a618-181d-406f-918e-46d68cbcd782" target="_blank"
+&gt;https://www.credly.com/badges/97c9a618-181d-406f-918e-46d68cbcd782&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now, I do not know how trust-worthy this credly.com thing is, and archive.org is telling me that it has never captured the above page, so, here it is in image form:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/media/oracle-certified-associate.png"
+width="1189"
+height="790"
+loading="lazy" alt="Mike Nakis - Oracle Certified Associate"
+class="gallery-image"
+data-flex-grow="150"
+data-flex-basis="361px"
+&gt;
+&lt;/p&gt;</description></item></channel></rss>

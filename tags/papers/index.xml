@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 23 Mar 2026 09:15:18 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 25 Apr 2026 19:25:32 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -4728,6 +4728,9 @@ href="https://www.joelonsoftware.com/2005/05/11/making-wrong-code-look-wrong/" t
 &lt;li&gt;adding only 2 lines of application code but a whole 10 lines of infrastructure code&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;then opt for the latter, even if these 10 lines of infrastructure code are unlikely to ever be reused. Saving 3 lines of application code is worth writing an extra 10 lines of infrastructure code.&lt;/p&gt;
+&lt;p&gt;Read about &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Inventor%27s_paradox" target="_blank"
+&gt;The Inventor's Paradox&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="use-abstraction-even-in-the-spoken-language"&gt;Use abstraction even in the spoken language
 &lt;/h3&gt;&lt;p&gt;People have the unfortunate tendency of using the most specific term for any given thing, rather than the most abstract term. I am not sure why people do this, perhaps it is addiction to technicality, perhaps it is trying to sound smart, but it often ends up causing miscommunication. For example:&lt;/p&gt;
 &lt;ul&gt;
