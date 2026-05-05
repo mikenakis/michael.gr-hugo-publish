@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 05 May 2026 11:33:05 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 05 May 2026 12:38:39 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -8959,7 +8959,7 @@ href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-a
 &lt;/div&gt;</description></item><item><title>The famous "Could not load file or assembly or one of its dependencies" error message</title><link>https://blog.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/</link><pubDate>Wed, 16 Dec 2020 12:15:11 +0000</pubDate><guid>https://blog.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2020-12-16-the-famous-could-not-load-file-or/media/file_not_found.png"
 width="808"
 height="463"
-loading="lazy" alt="file-not-found"
+loading="lazy"
 class="gallery-image"
 data-flex-grow="174"
 data-flex-basis="418px"
