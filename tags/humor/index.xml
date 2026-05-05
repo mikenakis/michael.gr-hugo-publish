@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humor on Michael's Blog</title><link>https://blog.michael.gr/tags/humor/</link><description>Recent content in Humor on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 05 May 2026 08:35:14 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/humor/index.xml" rel="self" type="application/rss+xml"/><item><title>Code review memes</title><link>https://blog.michael.gr/post/2025-06-code-review-images/</link><pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-code-review-images/</guid><description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humor on Michael's Blog</title><link>https://blog.michael.gr/tags/humor/</link><description>Recent content in Humor on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 05 May 2026 11:33:05 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/humor/index.xml" rel="self" type="application/rss+xml"/><item><title>Code review memes</title><link>https://blog.michael.gr/post/2025-06-code-review-images/</link><pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-code-review-images/</guid><description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
 &lt;p&gt;I like to use this feature to post memes.&lt;/p&gt;
 &lt;p&gt;Here is my collection of the most useful code review memes:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/polar-bear-nooo.jpg"
@@ -253,13 +253,13 @@ data-flex-basis="160px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Or like this complete idiot:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/hat-fail.jpg"
-width="600"
-height="768"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/hat-fail-03.jpg"
+width="1110"
+height="1417"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="78"
-data-flex-basis="187px"
+data-flex-basis="188px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Do you want to come across like a complete idiot?&lt;/p&gt;
