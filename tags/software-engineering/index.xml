@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 05 May 2026 12:38:39 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 05 May 2026 12:39:28 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -8965,7 +8965,7 @@ data-flex-grow="174"
 data-flex-basis="418px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;If you have ever done any software development under Microsoft Windows you have probably come across this famous error message:&lt;/p&gt;
+&lt;p&gt;If you have done any software development under Microsoft Windows you have probably come across this famous error message:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;System.IO.FileNotFoundException : Could not load file or assembly 'Acme.dll' or one of its dependencies. The specified module could not be found.&lt;/p&gt;
 &lt;/blockquote&gt;
