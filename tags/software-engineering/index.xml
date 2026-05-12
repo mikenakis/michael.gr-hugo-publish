@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 05 May 2026 12:39:28 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 12 May 2026 08:36:23 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -368,116 +368,143 @@ href="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/"
 &lt;hr&gt;
 &lt;p&gt;Cover image: Created via ChatGPT with the prompt &amp;quot;please give me a photographic quality image of a 40-year-old programmer in a home-office environment looking at a computer screen with disappointment and resignation&amp;quot; and &amp;quot;please give me the same picture but his frown a bit less exaggerated&amp;quot;.&lt;/p&gt;</description></item><item><title>Code review memes</title><link>https://blog.michael.gr/post/2025-06-code-review-images/</link><pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-code-review-images/</guid><description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
 &lt;p&gt;I like to use this feature to post memes.&lt;/p&gt;
-&lt;p&gt;Here is my collection of the most useful code review memes:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/polar-bear-nooo.jpg"
-width="700"
-height="474"
+&lt;p&gt;Here is my collection of the most useful code review meme pictures:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/polar-bear-nooo-320.jpg"
+width="320"
+height="217"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="147"
-data-flex-basis="354px"
+data-flex-basis="353px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/futurama-fry-hmmm.gif"
-width="498"
-height="365"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/wait-what/katt-williams-wait-what-320.jpg"
+width="320"
+height="353"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="90"
+data-flex-basis="217px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/wait-what/side-seeing-chloe-wait-what-320.jpg"
+width="320"
+height="202"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="158"
+data-flex-basis="380px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/wait-what/skeptical-baby-wait-what-320.jpg"
+width="320"
+height="353"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="90"
+data-flex-basis="217px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/futurama-fry-hmmm-320.gif"
+width="320"
+height="235"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="136"
-data-flex-basis="327px"
+data-flex-basis="326px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/gorilla-nooo.jpg"
-width="505"
-height="494"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/gorilla-nooo-320.jpg"
+width="320"
+height="313"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="102"
 data-flex-basis="245px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/squirrel-nooo.jpg"
-width="640"
-height="640"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/squirrel-nooo-320.jpg"
+width="320"
+height="320"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/luke-skywalker-nooo.jpg"
-width="1000"
-height="720"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/luke-skywalker-nooo-320.jpg"
+width="320"
+height="230"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="138"
+data-flex-grow="139"
 data-flex-basis="333px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/darth-vader-nooo.jpg"
-width="1200"
-height="675"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/darth-vader-nooo-320.jpg"
+width="320"
+height="180"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/chacky-chan-oh-no-no-no.jpg"
-width="600"
-height="389"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/chacky-chan-oh-no-no-no-320.jpg"
+width="320"
+height="207"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="154"
-data-flex-basis="370px"
+data-flex-basis="371px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/carell-nooo.jpg"
-width="645"
-height="387"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/carell-nooo-320.jpg"
+width="320"
+height="192"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
 data-flex-basis="400px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/thor-nooo.jpg"
-width="673"
-height="371"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/thor-nooo-320.jpg"
+width="320"
+height="176"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="181"
-data-flex-basis="435px"
+data-flex-basis="436px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/hipster-ariel-nooo.jpg"
-width="500"
-height="515"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/hipster-ariel-nooo-320.jpg"
+width="320"
+height="330"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="97"
-data-flex-basis="233px"
+data-flex-grow="96"
+data-flex-basis="232px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/sheldon-cooper-nooo.jpg"
-width="706"
-height="353"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/sheldon-cooper-nooo-320.jpg"
+width="320"
+height="160"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
 data-flex-basis="480px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/schwarzenegger-nooo.jpg"
-width="668"
-height="374"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/schwarzeneger-nooo-320.jpg"
+width="320"
+height="179"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="178"
-data-flex-basis="428px"
+data-flex-basis="429px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/lady-nooo.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/lady-nooo.jpg"
 width="250"
 height="298"
 loading="lazy"
@@ -486,18 +513,18 @@ data-flex-grow="83"
 data-flex-basis="201px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/piccard-no-just-no.jpeg"
-width="474"
-height="307"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/piccard-no-just-no-320.jpg"
+width="320"
+height="207"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="154"
-data-flex-basis="370px"
+data-flex-basis="371px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/gandalf-you-shall-not-pass.jpg"
-width="1213"
-height="682"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/gandalf-you-shall-not-pass-320.jpg"
+width="320"
+height="180"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -1506,41 +1533,39 @@ While working on code in the context of a certain task, a programmer often disco
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;The practice of continuously improving the quality of the code-base is called &lt;em&gt;&lt;strong&gt;Boy-Scouting&lt;/strong&gt;&lt;/em&gt;. The term comes from a rule of the &lt;em&gt;&lt;strong&gt;Boy Scouts of America&lt;/strong&gt;&lt;/em&gt; that says: &lt;em&gt;&lt;strong&gt;Always leave the campground cleaner than you found it&lt;/strong&gt;&lt;/em&gt;. In the first chapter of &lt;em&gt;Clean Code&lt;/em&gt; by Robert C. Martin there is a
-short section titled &lt;em&gt;The Boy Scout Rule&lt;/em&gt; where the author gives an adaptation of that rule for software: &lt;em&gt;&lt;strong&gt;Always leave the code you are editing a little better than you found it&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Opinions vary as to exactly what constitutes Boy-Scouting, and whether it is a good thing or a bad thing. Some people believe that Boy-Scouting should be avoided; they say that when a quality issue is discovered while working on a certain task, a new ticket must always be created and handled separately.&lt;/p&gt;
-&lt;p&gt;I once worked at a company where different development teams within the same department had different approaches: most frowned upon boy-scouting, but some embraced it. Since Boy-Scouting had a bad name overall within that company, one team that insisted on practicing it decided to rebrand it by inventing their own term for it: they called it &lt;em&gt;&lt;strong&gt;Quality Osmosis&lt;/strong&gt;&lt;/em&gt;. (TopDesk, Team Octarine 2016-2017.)&lt;/p&gt;
-&lt;h4 id="the-problem"&gt;The problem
-&lt;/h4&gt;&lt;p&gt;Arguments raised against Boy-Scouting include the following:&lt;/p&gt;
+&lt;p&gt;The practice of continuously improving the quality of the code-base is called &lt;em&gt;&lt;strong&gt;Boy-Scouting&lt;/strong&gt;&lt;/em&gt;. The term comes from a rule of the &lt;em&gt;&lt;strong&gt;Boy Scouts of America&lt;/strong&gt;&lt;/em&gt; that says: &lt;em&gt;&lt;strong&gt;Always leave the campground cleaner than you found it&lt;/strong&gt;&lt;/em&gt;. In the first chapter of &lt;em&gt;Clean Code&lt;/em&gt; by Robert C. Martin (uncle Bob) there is a short section titled &lt;em&gt;The Boy Scout Rule&lt;/em&gt; where the author gives an adaptation of that rule for software: &lt;em&gt;&lt;strong&gt;Always leave the code you are editing a little better than you found it&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Despite the fact that Uncle Bob has endorsed the practice, opinions vary as to whether it is a good thing or a bad thing. Some people believe that Boy-Scouting should be avoided; they say that when a quality issue is discovered while working on a certain task, a new ticket must always be created and handled separately.&lt;/p&gt;
+&lt;p&gt;I once worked at a company where different development teams within the same department had different approaches: most frowned upon boy-scouting, but some embraced it. Since Boy-Scouting had a bad name overall within that company, one team that insisted on practicing it decided to rebrand it by inventing their own term for it: they called it &lt;em&gt;&lt;strong&gt;Quality Osmosis&lt;/strong&gt;&lt;/em&gt;. (TopDesk, Team &lt;em&gt;Octarine&lt;/em&gt;, 2016-2017.)&lt;/p&gt;
+&lt;h3 id="the-problems-of-engaging-in-boy-scouting"&gt;The problems of engaging in Boy-Scouting
+&lt;/h3&gt;&lt;p&gt;Arguments raised against Boy-Scouting include the following:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Boy-Scouting interferes with time tracking, because the hours it takes to complete a certain task get inflated by fixing quality issues, whereas the hours spent on fixing quality issues is unaccounted for.&lt;/li&gt;
+&lt;li&gt;Boy-Scouting is unplanned work, which should never happen, and it even gets arbitrarily prioritized over planned work, which is unacceptable.&lt;/li&gt;
 &lt;li&gt;Boy-Scouting renders quality improvements untraceable, because each quality improvement is hidden inside a commit for some other task.&lt;/li&gt;
 &lt;li&gt;Boy-Scouting adds extra burden to code review, because the reviewer has to examine not only the changes for the task at hand, but also additional changes that are unrelated to, or strictly speaking unnecessary for, or in any case not directly aiming to solve, the task at hand.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Furthermore, Boy-Scouting is viewed as undesirable in some management-heavy environments because it is seen as giving programmers too much autonomy:&lt;/p&gt;
-&lt;ul&gt;
 &lt;li&gt;Boy-Scouting implies that programmers are free to get sidetracked, instead of always being laser-focused on (what management perceives to be) their job.&lt;/li&gt;
-&lt;li&gt;Boy-Scouting implies that programmers have carte blanche to be making any modifications they see fit to the code base without prior authorization, so who knows what else they might be doing.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(Note that these concerns are rarely voiced, but often implied.)&lt;/p&gt;
-&lt;p&gt;Let us look at the different kinds of quality issues that may be encountered while working on a task:&lt;/p&gt;
+&lt;li&gt;Boy-Scouting implies that programmers have carte blanche to be making any modifications they see fit to the code base without prior authorization, so who knows what else they might be changing.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(The last two concerns are rarely voiced, but often implied.)&lt;/p&gt;
+&lt;h3 id="the-problems-of-not-engaging-in-boy-scouting"&gt;The problems of &lt;em&gt;not&lt;/em&gt; engaging in Boy-Scouting
+&lt;/h3&gt;&lt;p&gt;Let us look at the different kinds of quality issues that may be encountered while working on a task:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Low-impact&lt;/strong&gt; - e.g. a misspelled identifier or a violation of formatting guidelines.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Medium-impact&lt;/strong&gt; - e.g. a code construct which is more convoluted than necessary and could be simplified to make it more understandable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Medium-impact&lt;/strong&gt; - e.g. a code construct which constitutes technical debt and should be restructured to eliminate the debt.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;High-impact:&lt;/strong&gt; - e.g. a previously undiscovered bug.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Low-impact issues&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A low impact quality issue is by definition so trivial that it is not worth creating a new task for it; imagine a ticket with the title &amp;quot;fix spelling mistake in identifier such-and-such&amp;quot; or &amp;quot;abstract class so-and-so constructor is public, make it protected&amp;quot;; nobody wants to go through the motions of creating, grooming, and resolving such tickets; everyone is better off if no such tickets ever exist. So, unless the low-impact issue gets fixed the moment it is discovered, and committed as part of the task at hand, it will never get fixed. This means that we can safely establish the following rule:&lt;/p&gt;
+&lt;h4 id="low-impact-issues"&gt;Low-impact issues
+&lt;/h4&gt;&lt;p&gt;A low impact quality issue is by definition so trivial that it is not worth creating a new task for it; imagine a ticket with the title &amp;quot;fix spelling mistake in identifier such-and-such&amp;quot; or &amp;quot;abstract class so-and-so constructor is public, make it protected&amp;quot;; nobody wants to go through the motions of creating, grooming, and resolving such tickets; everyone is better off if no such tickets ever exist. So, unless the low-impact issue gets fixed the moment it is discovered, and committed as part of the task at hand, it will never get fixed. This means that we can safely establish the following rule:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;When a low-impact quality issue is discovered while working on a certain task, the quality issue should be fixed on the spot, and committed as part of the task at hand.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Note that fixing a spelling mistake may involve modifying a large number of source files, which would not otherwise need to be modified in the context of the task at hand; this means that the code reviewer will have more work to do; we will address this problem later.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Medium-impact and high-impact issues&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A medium-impact or high-impact quality issue does, in principle, deserve creating a separate ticket for, but first we need to ask whether it can actually be handled separately from the task at hand, because if not, then creating a separate ticket is moot point.&lt;/p&gt;
+&lt;p&gt;Note that fixing a spelling mistake may involve modifying a large number of source files, which would otherwise not need to be modified in the context of the task at hand; this means that the code reviewer will have more work to do; we will address this problem later.&lt;/p&gt;
+&lt;h4 id="medium-impact-and-high-impact-issues"&gt;Medium-impact and high-impact issues
+&lt;/h4&gt;&lt;p&gt;A medium-impact or high-impact quality issue does, in principle, deserve creating a separate ticket for, but first we need to ask whether it can actually be handled separately from the task at hand, because if not, then creating a separate ticket is moot point.&lt;/p&gt;
 &lt;p&gt;If it is known beyond a shadow of a doubt that the quality issue does not interfere at all with the task at hand, then the straightforward approach is in fact to create a separate ticket for the quality issue, and handle it after the task at hand has been completed; however, it is often very difficult to know for sure that a piece of code really does not affect another piece of code. There may be obscure mechanisms at play, through which a malfunction creeps through the system in non-obvious ways, and manifests in another place that nobody expected.&lt;/p&gt;
 &lt;p&gt;When we come across a code construct which is convoluted or buggy, what we essentially have in our hands is code that works in mysterious ways, so we do not necessarily know exactly how it behaves; we could try to reason about that code, throw the debugger at it if necessary, get down to the bottom of it, and determine whether it does in fact interfere or not with the task at hand, but:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Nobody has time for that.&lt;/li&gt;
+&lt;li&gt;Ain't nobody got no time for that.&lt;/li&gt;
 &lt;li&gt;It is futile, because the convoluted or buggy code has to be fixed anyway.&lt;/li&gt;
 &lt;li&gt;Whatever conclusion you arrive to, can you actually be sure?&lt;/li&gt;
 &lt;/ul&gt;
@@ -1548,41 +1573,48 @@ short section titled &lt;em&gt;The Boy Scout Rule&lt;/em&gt; where the author gi
 href="https://en.wikipedia.org/wiki/Halting_problem" target="_blank"
 &gt;Halting Problem&lt;/a&gt;.) As a matter of fact, it is so difficult, that we usually prefer to not have to ascertain things ourselves, and to write tests instead, that will ascertain things for us. However, writing tests to check whether flawed code interferes or not with other code is an exercise in futility, especially if we consider that the flawed code has to be fixed, sooner or later, anyway.&lt;/p&gt;
 &lt;p&gt;Therefore, when a quality issue is discovered while working on a certain task, and we suspect that it might be interfering with the task, it must be treated as if it does.&lt;/p&gt;
-&lt;h3 id="the-bureaucracy"&gt;The bureaucracy
-&lt;/h3&gt;&lt;p&gt;Now, some will insist that even if the quality issue interferes, or is suspected to interfere, with the task at hand, and must therefore be resolved before the task can be completed, the quality issue must nonetheless be resolved as a separate ticket. Let us look at the workflow necessary for that:&lt;/p&gt;
+&lt;h4 id="the-bureaucracy"&gt;The bureaucracy
+&lt;/h4&gt;&lt;p&gt;Now, some will insist that even if the quality issue interferes, or is suspected to interfere, with the task at hand, and must therefore be resolved before the task can be completed, the quality issue must nonetheless be resolved as a separate ticket. Let us look at the workflow necessary for that:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Work on the task at hand must be suspended.&lt;/li&gt;
+&lt;li&gt;Work on the original task at hand must be suspended.&lt;/li&gt;
 &lt;li&gt;A new ticket must be created for the quality issue, and given immediate priority.&lt;/li&gt;
 &lt;li&gt;A new branch must be created, from master, for fixing the quality issue.&lt;/li&gt;
 &lt;li&gt;A fix for the quality issue must be devised, coded, tested, and committed.&lt;/li&gt;
-&lt;li&gt;The changes made in the new branch must undergo code review.&lt;/li&gt;
-&lt;li&gt;The reviewed branch must be merged into the master branch.&lt;/li&gt;
-&lt;li&gt;The master branch must be merged into the branch of the task at hand.&lt;/li&gt;
+&lt;li&gt;The changes made in the quality issue branch must undergo code review.&lt;/li&gt;
+&lt;li&gt;The quality issue branch must be merged into the master branch.&lt;/li&gt;
+&lt;li&gt;The master branch must be merged into the branch of the original task.&lt;/li&gt;
 &lt;li&gt;Merge conflicts must be resolved.&lt;/li&gt;
-&lt;li&gt;Work on the task at hand can now resume.&lt;/li&gt;
+&lt;li&gt;Work on the original task can now resume.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note that merge conflicts are very likely to happen even if nobody else in the entire shop has touched the code in the mean time, because the quality issue was discovered while working on the task at hand, therefore the code affected by fixing the quality issue most likely overlaps with code that has already been modified in the context of the task at hand.&lt;/p&gt;
-&lt;p&gt;Also note that the programmer who is likely to fix the quality issue is the same programmer who was working on the original task, because they are probably free, since work on the original task has been suspended. When this programmer started working on the original task, they branched off from master; the code coming from master had a certain shape, and then they started making changes to it, giving it a new shape, which they are now intimately familiar with. By going back and branching off from master again in order to fix the quality issue, this programmer is now faced with the code in its original shape, which is in conflict with the shape that they have become intimately familiar with; this is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;. When the programmer is done fixing the quality issue and returns to the branch of the task at hand, there is bound to be &lt;em&gt;&lt;strong&gt;more brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Also note that the programmer who is most likely to fix the quality issue is the same programmer who was working on the original task, because they are free, since work on the original task has been suspended. When this programmer started working on the original task, they branched off from master; the code coming from master had a certain shape, and then they started making changes to it, giving it a new shape, which they are now intimately familiar with; however, by going back and branching off from master again in order to fix the quality issue, this programmer is now faced with the code in its original shape, which is in conflict with the shape that they have become intimately familiar with; this is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;. When the programmer is done fixing the quality issue and returns to the branch of the task at hand, there is bound to be &lt;em&gt;&lt;strong&gt;more brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Apparently, there are no limits to the bureaucracy and the inconvenience that some people are willing to suffer in the name of some purist notion of &amp;quot;doing things right&amp;quot;. I prefer a more pragmatic approach.&lt;/p&gt;
 &lt;h3 id="enter-continuous-code-quality-improvement-ccqi"&gt;Enter Continuous Code Quality Improvement (CCQI)
 &lt;/h3&gt;&lt;p&gt;&lt;sup&gt;&lt;sub&gt;a.k.a. Boy-Scouting / Quality Osmosis.&lt;/sub&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;When a quality issue is discovered while working on a certain task, and the issue interferes, or it is suspected to interfere, with the task at hand, then the quality issue should be fixed on the spot, (while the programmer is &lt;em&gt;in the flow&lt;/em&gt;,) and committed as part of the task at hand.&lt;/p&gt;
+&lt;p&gt;When a quality issue is discovered while working on a certain task, and the issue is even slightly suspected to even slightly interfere with the task at hand, then the quality issue should be fixed on the spot, (while the programmer is &lt;em&gt;in the flow&lt;/em&gt;,) and committed as part of the task at hand.&lt;/p&gt;
 &lt;p&gt;If someone wants to create a ticket, fine, but then a single commit will constitute a fix for multiple tickets.&lt;/p&gt;
 &lt;p&gt;Of course, an exception to this rule is the case where fixing the quality issue is going to be a month-long project in and of itself, in which case another pragmatic approach is necessary: make do with the quality issue as it is for the time being, and handle it later, when a month is available to spare.&lt;/p&gt;
 &lt;h3 id="what-about-time-tracking"&gt;What about time-tracking?
 &lt;/h3&gt;&lt;p&gt;As mentioned earlier, Boy-Scouting interferes with time tracking, because the hours it takes to complete a certain task get inflated by fixing quality issues, whereas the hours spent on fixing quality issues is unaccounted for.&lt;/p&gt;
-&lt;p&gt;The solution to this is simple: whoever is in charge of time-tracking should be using larger error bars. The work of the programmers is difficult enough as it stands, it will not be made more difficult for the convenience of those who do time-tracking.&lt;/p&gt;
-&lt;h3 id="what-about-the-commit-history"&gt;What about the commit history?
-&lt;/h3&gt;&lt;p&gt;As mentioned earlier, Boy-Scouting renders the history of quality improvements
-untraceable, because each quality improvement is hidden inside a commit for
-some other task.&lt;/p&gt;
+&lt;p&gt;The solution to this is simple: whoever is in charge of time-tracking should be using larger error bars.&lt;/p&gt;
+&lt;p&gt;The work of the programmers is difficult enough as it stands, it will not be made more difficult for the convenience of those who do time-tracking.&lt;/p&gt;
+&lt;h3 id="what-about-planning"&gt;What about planning?
+&lt;/h3&gt;&lt;p&gt;Management usually takes issue with Boy-Scouting because they perceive it as unplanned work which arbitrarily delays the delivery of features that have been planned. However:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As we have already explained, this unplanned work facilitates the development of the planned features.&lt;/li&gt;
+&lt;li&gt;When it comes to technical debt elimination, the planed vs. unplanned work concern would be a legitimate concern if management ever approved technical debt elimination work, (actually entire sprints of doing nothing but that,) but they never do, so programmers are left with no option but to engage in technical debt elimination while working on other planned work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="what-about-traceability"&gt;What about traceability?
+&lt;/h3&gt;&lt;p&gt;As mentioned earlier, Boy-Scouting renders the history of quality improvements untraceable, because each quality improvement is hidden inside a commit for some other task.&lt;/p&gt;
 &lt;p&gt;The solution to this is also simple: there shall be no traceable history for quality improvements, because quality improvements are being continuously applied to the code-base as it is being worked on.&lt;/p&gt;
 &lt;h3 id="what-about-code-review"&gt;What about code review?
 &lt;/h3&gt;&lt;p&gt;As mentioned earlier, Boy-Scouting adds extra burden to code review, because the reviewer has to examine not only changes pertinent to the task at hand, but also changes that are unrelated to, or strictly speaking unnecessary for, or in any case not directly aiming to solve, the task at hand.&lt;/p&gt;
-&lt;p&gt;The solution to this is the simplest of all: the reviewer needs to get used to it.&lt;/p&gt;
+&lt;p&gt;The solution to this is very simple: the reviewer needs to get used to it.&lt;/p&gt;
+&lt;p&gt;The quality improvements would have to be made anyway, and they would have to be reviewed anyway, so they might as well be made and reviewed right now.&lt;/p&gt;
 &lt;h3 id="and-what-about-the-management"&gt;And what about the management?
 &lt;/h3&gt;&lt;p&gt;As mentioned earlier, management tends to be skeptical of Boy-Scouting because it gives programmers too much autonomy.&lt;/p&gt;
-&lt;p&gt;The solution to this is very similar to the solution for code review: the management needs to get used to it. If programmers are competent enough to work on software development tasks, they are competent enough to decide exactly what needs to be done in the context of each task.&lt;/p&gt;
+&lt;p&gt;The solution to this is very similar to the solution for code review: the management needs to get used to it.&lt;/p&gt;
+&lt;p&gt;If programmers are competent enough to work on software development tasks, they are competent enough to decide exactly what needs to be done at any given moment in the context of each task.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image by &lt;a class="external"
 href="https://michael.gr/" target="_blank"

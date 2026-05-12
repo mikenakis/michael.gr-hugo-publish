@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 06 May 2026 08:14:41 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 12 May 2026 08:36:23 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -686,116 +686,143 @@ href="https://thenounproject.com/icon/sinusoid-37912/" target="_blank"
 href="https://thenounproject.com/icon/stars-602908/" target="_blank"
 &gt;&amp;quot;Stars&amp;quot; by Ken Murray from the Noun Project&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Code review memes</title><link>https://blog.michael.gr/post/2025-06-code-review-images/</link><pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-code-review-images/</guid><description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
 &lt;p&gt;I like to use this feature to post memes.&lt;/p&gt;
-&lt;p&gt;Here is my collection of the most useful code review memes:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/polar-bear-nooo.jpg"
-width="700"
-height="474"
+&lt;p&gt;Here is my collection of the most useful code review meme pictures:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/polar-bear-nooo-320.jpg"
+width="320"
+height="217"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="147"
-data-flex-basis="354px"
+data-flex-basis="353px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/futurama-fry-hmmm.gif"
-width="498"
-height="365"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/wait-what/katt-williams-wait-what-320.jpg"
+width="320"
+height="353"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="90"
+data-flex-basis="217px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/wait-what/side-seeing-chloe-wait-what-320.jpg"
+width="320"
+height="202"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="158"
+data-flex-basis="380px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/wait-what/skeptical-baby-wait-what-320.jpg"
+width="320"
+height="353"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="90"
+data-flex-basis="217px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/futurama-fry-hmmm-320.gif"
+width="320"
+height="235"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="136"
-data-flex-basis="327px"
+data-flex-basis="326px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/gorilla-nooo.jpg"
-width="505"
-height="494"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/gorilla-nooo-320.jpg"
+width="320"
+height="313"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="102"
 data-flex-basis="245px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/squirrel-nooo.jpg"
-width="640"
-height="640"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/squirrel-nooo-320.jpg"
+width="320"
+height="320"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/luke-skywalker-nooo.jpg"
-width="1000"
-height="720"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/luke-skywalker-nooo-320.jpg"
+width="320"
+height="230"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="138"
+data-flex-grow="139"
 data-flex-basis="333px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/darth-vader-nooo.jpg"
-width="1200"
-height="675"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/darth-vader-nooo-320.jpg"
+width="320"
+height="180"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/chacky-chan-oh-no-no-no.jpg"
-width="600"
-height="389"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/chacky-chan-oh-no-no-no-320.jpg"
+width="320"
+height="207"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="154"
-data-flex-basis="370px"
+data-flex-basis="371px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/carell-nooo.jpg"
-width="645"
-height="387"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/carell-nooo-320.jpg"
+width="320"
+height="192"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
 data-flex-basis="400px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/thor-nooo.jpg"
-width="673"
-height="371"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/thor-nooo-320.jpg"
+width="320"
+height="176"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="181"
-data-flex-basis="435px"
+data-flex-basis="436px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/hipster-ariel-nooo.jpg"
-width="500"
-height="515"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/hipster-ariel-nooo-320.jpg"
+width="320"
+height="330"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="97"
-data-flex-basis="233px"
+data-flex-grow="96"
+data-flex-basis="232px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/sheldon-cooper-nooo.jpg"
-width="706"
-height="353"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/sheldon-cooper-nooo-320.jpg"
+width="320"
+height="160"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
 data-flex-basis="480px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/schwarzenegger-nooo.jpg"
-width="668"
-height="374"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/schwarzeneger-nooo-320.jpg"
+width="320"
+height="179"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="178"
-data-flex-basis="428px"
+data-flex-basis="429px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/lady-nooo.jpg"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/lady-nooo.jpg"
 width="250"
 height="298"
 loading="lazy"
@@ -804,18 +831,18 @@ data-flex-grow="83"
 data-flex-basis="201px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/piccard-no-just-no.jpeg"
-width="474"
-height="307"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/piccard-no-just-no-320.jpg"
+width="320"
+height="207"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="154"
-data-flex-basis="370px"
+data-flex-basis="371px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/gandalf-you-shall-not-pass.jpg"
-width="1213"
-height="682"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/gandalf-you-shall-not-pass-320.jpg"
+width="320"
+height="180"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -2310,41 +2337,39 @@ While working on code in the context of a certain task, a programmer often disco
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;The practice of continuously improving the quality of the code-base is called &lt;em&gt;&lt;strong&gt;Boy-Scouting&lt;/strong&gt;&lt;/em&gt;. The term comes from a rule of the &lt;em&gt;&lt;strong&gt;Boy Scouts of America&lt;/strong&gt;&lt;/em&gt; that says: &lt;em&gt;&lt;strong&gt;Always leave the campground cleaner than you found it&lt;/strong&gt;&lt;/em&gt;. In the first chapter of &lt;em&gt;Clean Code&lt;/em&gt; by Robert C. Martin there is a
-short section titled &lt;em&gt;The Boy Scout Rule&lt;/em&gt; where the author gives an adaptation of that rule for software: &lt;em&gt;&lt;strong&gt;Always leave the code you are editing a little better than you found it&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Opinions vary as to exactly what constitutes Boy-Scouting, and whether it is a good thing or a bad thing. Some people believe that Boy-Scouting should be avoided; they say that when a quality issue is discovered while working on a certain task, a new ticket must always be created and handled separately.&lt;/p&gt;
-&lt;p&gt;I once worked at a company where different development teams within the same department had different approaches: most frowned upon boy-scouting, but some embraced it. Since Boy-Scouting had a bad name overall within that company, one team that insisted on practicing it decided to rebrand it by inventing their own term for it: they called it &lt;em&gt;&lt;strong&gt;Quality Osmosis&lt;/strong&gt;&lt;/em&gt;. (TopDesk, Team Octarine 2016-2017.)&lt;/p&gt;
-&lt;h4 id="the-problem"&gt;The problem
-&lt;/h4&gt;&lt;p&gt;Arguments raised against Boy-Scouting include the following:&lt;/p&gt;
+&lt;p&gt;The practice of continuously improving the quality of the code-base is called &lt;em&gt;&lt;strong&gt;Boy-Scouting&lt;/strong&gt;&lt;/em&gt;. The term comes from a rule of the &lt;em&gt;&lt;strong&gt;Boy Scouts of America&lt;/strong&gt;&lt;/em&gt; that says: &lt;em&gt;&lt;strong&gt;Always leave the campground cleaner than you found it&lt;/strong&gt;&lt;/em&gt;. In the first chapter of &lt;em&gt;Clean Code&lt;/em&gt; by Robert C. Martin (uncle Bob) there is a short section titled &lt;em&gt;The Boy Scout Rule&lt;/em&gt; where the author gives an adaptation of that rule for software: &lt;em&gt;&lt;strong&gt;Always leave the code you are editing a little better than you found it&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Despite the fact that Uncle Bob has endorsed the practice, opinions vary as to whether it is a good thing or a bad thing. Some people believe that Boy-Scouting should be avoided; they say that when a quality issue is discovered while working on a certain task, a new ticket must always be created and handled separately.&lt;/p&gt;
+&lt;p&gt;I once worked at a company where different development teams within the same department had different approaches: most frowned upon boy-scouting, but some embraced it. Since Boy-Scouting had a bad name overall within that company, one team that insisted on practicing it decided to rebrand it by inventing their own term for it: they called it &lt;em&gt;&lt;strong&gt;Quality Osmosis&lt;/strong&gt;&lt;/em&gt;. (TopDesk, Team &lt;em&gt;Octarine&lt;/em&gt;, 2016-2017.)&lt;/p&gt;
+&lt;h3 id="the-problems-of-engaging-in-boy-scouting"&gt;The problems of engaging in Boy-Scouting
+&lt;/h3&gt;&lt;p&gt;Arguments raised against Boy-Scouting include the following:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Boy-Scouting interferes with time tracking, because the hours it takes to complete a certain task get inflated by fixing quality issues, whereas the hours spent on fixing quality issues is unaccounted for.&lt;/li&gt;
+&lt;li&gt;Boy-Scouting is unplanned work, which should never happen, and it even gets arbitrarily prioritized over planned work, which is unacceptable.&lt;/li&gt;
 &lt;li&gt;Boy-Scouting renders quality improvements untraceable, because each quality improvement is hidden inside a commit for some other task.&lt;/li&gt;
 &lt;li&gt;Boy-Scouting adds extra burden to code review, because the reviewer has to examine not only the changes for the task at hand, but also additional changes that are unrelated to, or strictly speaking unnecessary for, or in any case not directly aiming to solve, the task at hand.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Furthermore, Boy-Scouting is viewed as undesirable in some management-heavy environments because it is seen as giving programmers too much autonomy:&lt;/p&gt;
-&lt;ul&gt;
 &lt;li&gt;Boy-Scouting implies that programmers are free to get sidetracked, instead of always being laser-focused on (what management perceives to be) their job.&lt;/li&gt;
-&lt;li&gt;Boy-Scouting implies that programmers have carte blanche to be making any modifications they see fit to the code base without prior authorization, so who knows what else they might be doing.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(Note that these concerns are rarely voiced, but often implied.)&lt;/p&gt;
-&lt;p&gt;Let us look at the different kinds of quality issues that may be encountered while working on a task:&lt;/p&gt;
+&lt;li&gt;Boy-Scouting implies that programmers have carte blanche to be making any modifications they see fit to the code base without prior authorization, so who knows what else they might be changing.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(The last two concerns are rarely voiced, but often implied.)&lt;/p&gt;
+&lt;h3 id="the-problems-of-not-engaging-in-boy-scouting"&gt;The problems of &lt;em&gt;not&lt;/em&gt; engaging in Boy-Scouting
+&lt;/h3&gt;&lt;p&gt;Let us look at the different kinds of quality issues that may be encountered while working on a task:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Low-impact&lt;/strong&gt; - e.g. a misspelled identifier or a violation of formatting guidelines.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Medium-impact&lt;/strong&gt; - e.g. a code construct which is more convoluted than necessary and could be simplified to make it more understandable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Medium-impact&lt;/strong&gt; - e.g. a code construct which constitutes technical debt and should be restructured to eliminate the debt.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;High-impact:&lt;/strong&gt; - e.g. a previously undiscovered bug.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Low-impact issues&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A low impact quality issue is by definition so trivial that it is not worth creating a new task for it; imagine a ticket with the title &amp;quot;fix spelling mistake in identifier such-and-such&amp;quot; or &amp;quot;abstract class so-and-so constructor is public, make it protected&amp;quot;; nobody wants to go through the motions of creating, grooming, and resolving such tickets; everyone is better off if no such tickets ever exist. So, unless the low-impact issue gets fixed the moment it is discovered, and committed as part of the task at hand, it will never get fixed. This means that we can safely establish the following rule:&lt;/p&gt;
+&lt;h4 id="low-impact-issues"&gt;Low-impact issues
+&lt;/h4&gt;&lt;p&gt;A low impact quality issue is by definition so trivial that it is not worth creating a new task for it; imagine a ticket with the title &amp;quot;fix spelling mistake in identifier such-and-such&amp;quot; or &amp;quot;abstract class so-and-so constructor is public, make it protected&amp;quot;; nobody wants to go through the motions of creating, grooming, and resolving such tickets; everyone is better off if no such tickets ever exist. So, unless the low-impact issue gets fixed the moment it is discovered, and committed as part of the task at hand, it will never get fixed. This means that we can safely establish the following rule:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;When a low-impact quality issue is discovered while working on a certain task, the quality issue should be fixed on the spot, and committed as part of the task at hand.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Note that fixing a spelling mistake may involve modifying a large number of source files, which would not otherwise need to be modified in the context of the task at hand; this means that the code reviewer will have more work to do; we will address this problem later.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Medium-impact and high-impact issues&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;A medium-impact or high-impact quality issue does, in principle, deserve creating a separate ticket for, but first we need to ask whether it can actually be handled separately from the task at hand, because if not, then creating a separate ticket is moot point.&lt;/p&gt;
+&lt;p&gt;Note that fixing a spelling mistake may involve modifying a large number of source files, which would otherwise not need to be modified in the context of the task at hand; this means that the code reviewer will have more work to do; we will address this problem later.&lt;/p&gt;
+&lt;h4 id="medium-impact-and-high-impact-issues"&gt;Medium-impact and high-impact issues
+&lt;/h4&gt;&lt;p&gt;A medium-impact or high-impact quality issue does, in principle, deserve creating a separate ticket for, but first we need to ask whether it can actually be handled separately from the task at hand, because if not, then creating a separate ticket is moot point.&lt;/p&gt;
 &lt;p&gt;If it is known beyond a shadow of a doubt that the quality issue does not interfere at all with the task at hand, then the straightforward approach is in fact to create a separate ticket for the quality issue, and handle it after the task at hand has been completed; however, it is often very difficult to know for sure that a piece of code really does not affect another piece of code. There may be obscure mechanisms at play, through which a malfunction creeps through the system in non-obvious ways, and manifests in another place that nobody expected.&lt;/p&gt;
 &lt;p&gt;When we come across a code construct which is convoluted or buggy, what we essentially have in our hands is code that works in mysterious ways, so we do not necessarily know exactly how it behaves; we could try to reason about that code, throw the debugger at it if necessary, get down to the bottom of it, and determine whether it does in fact interfere or not with the task at hand, but:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Nobody has time for that.&lt;/li&gt;
+&lt;li&gt;Ain't nobody got no time for that.&lt;/li&gt;
 &lt;li&gt;It is futile, because the convoluted or buggy code has to be fixed anyway.&lt;/li&gt;
 &lt;li&gt;Whatever conclusion you arrive to, can you actually be sure?&lt;/li&gt;
 &lt;/ul&gt;
@@ -2352,41 +2377,48 @@ short section titled &lt;em&gt;The Boy Scout Rule&lt;/em&gt; where the author gi
 href="https://en.wikipedia.org/wiki/Halting_problem" target="_blank"
 &gt;Halting Problem&lt;/a&gt;.) As a matter of fact, it is so difficult, that we usually prefer to not have to ascertain things ourselves, and to write tests instead, that will ascertain things for us. However, writing tests to check whether flawed code interferes or not with other code is an exercise in futility, especially if we consider that the flawed code has to be fixed, sooner or later, anyway.&lt;/p&gt;
 &lt;p&gt;Therefore, when a quality issue is discovered while working on a certain task, and we suspect that it might be interfering with the task, it must be treated as if it does.&lt;/p&gt;
-&lt;h3 id="the-bureaucracy"&gt;The bureaucracy
-&lt;/h3&gt;&lt;p&gt;Now, some will insist that even if the quality issue interferes, or is suspected to interfere, with the task at hand, and must therefore be resolved before the task can be completed, the quality issue must nonetheless be resolved as a separate ticket. Let us look at the workflow necessary for that:&lt;/p&gt;
+&lt;h4 id="the-bureaucracy"&gt;The bureaucracy
+&lt;/h4&gt;&lt;p&gt;Now, some will insist that even if the quality issue interferes, or is suspected to interfere, with the task at hand, and must therefore be resolved before the task can be completed, the quality issue must nonetheless be resolved as a separate ticket. Let us look at the workflow necessary for that:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Work on the task at hand must be suspended.&lt;/li&gt;
+&lt;li&gt;Work on the original task at hand must be suspended.&lt;/li&gt;
 &lt;li&gt;A new ticket must be created for the quality issue, and given immediate priority.&lt;/li&gt;
 &lt;li&gt;A new branch must be created, from master, for fixing the quality issue.&lt;/li&gt;
 &lt;li&gt;A fix for the quality issue must be devised, coded, tested, and committed.&lt;/li&gt;
-&lt;li&gt;The changes made in the new branch must undergo code review.&lt;/li&gt;
-&lt;li&gt;The reviewed branch must be merged into the master branch.&lt;/li&gt;
-&lt;li&gt;The master branch must be merged into the branch of the task at hand.&lt;/li&gt;
+&lt;li&gt;The changes made in the quality issue branch must undergo code review.&lt;/li&gt;
+&lt;li&gt;The quality issue branch must be merged into the master branch.&lt;/li&gt;
+&lt;li&gt;The master branch must be merged into the branch of the original task.&lt;/li&gt;
 &lt;li&gt;Merge conflicts must be resolved.&lt;/li&gt;
-&lt;li&gt;Work on the task at hand can now resume.&lt;/li&gt;
+&lt;li&gt;Work on the original task can now resume.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Note that merge conflicts are very likely to happen even if nobody else in the entire shop has touched the code in the mean time, because the quality issue was discovered while working on the task at hand, therefore the code affected by fixing the quality issue most likely overlaps with code that has already been modified in the context of the task at hand.&lt;/p&gt;
-&lt;p&gt;Also note that the programmer who is likely to fix the quality issue is the same programmer who was working on the original task, because they are probably free, since work on the original task has been suspended. When this programmer started working on the original task, they branched off from master; the code coming from master had a certain shape, and then they started making changes to it, giving it a new shape, which they are now intimately familiar with. By going back and branching off from master again in order to fix the quality issue, this programmer is now faced with the code in its original shape, which is in conflict with the shape that they have become intimately familiar with; this is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;. When the programmer is done fixing the quality issue and returns to the branch of the task at hand, there is bound to be &lt;em&gt;&lt;strong&gt;more brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Also note that the programmer who is most likely to fix the quality issue is the same programmer who was working on the original task, because they are free, since work on the original task has been suspended. When this programmer started working on the original task, they branched off from master; the code coming from master had a certain shape, and then they started making changes to it, giving it a new shape, which they are now intimately familiar with; however, by going back and branching off from master again in order to fix the quality issue, this programmer is now faced with the code in its original shape, which is in conflict with the shape that they have become intimately familiar with; this is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;. When the programmer is done fixing the quality issue and returns to the branch of the task at hand, there is bound to be &lt;em&gt;&lt;strong&gt;more brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Apparently, there are no limits to the bureaucracy and the inconvenience that some people are willing to suffer in the name of some purist notion of &amp;quot;doing things right&amp;quot;. I prefer a more pragmatic approach.&lt;/p&gt;
 &lt;h3 id="enter-continuous-code-quality-improvement-ccqi"&gt;Enter Continuous Code Quality Improvement (CCQI)
 &lt;/h3&gt;&lt;p&gt;&lt;sup&gt;&lt;sub&gt;a.k.a. Boy-Scouting / Quality Osmosis.&lt;/sub&gt;&lt;/sup&gt;&lt;/p&gt;
-&lt;p&gt;When a quality issue is discovered while working on a certain task, and the issue interferes, or it is suspected to interfere, with the task at hand, then the quality issue should be fixed on the spot, (while the programmer is &lt;em&gt;in the flow&lt;/em&gt;,) and committed as part of the task at hand.&lt;/p&gt;
+&lt;p&gt;When a quality issue is discovered while working on a certain task, and the issue is even slightly suspected to even slightly interfere with the task at hand, then the quality issue should be fixed on the spot, (while the programmer is &lt;em&gt;in the flow&lt;/em&gt;,) and committed as part of the task at hand.&lt;/p&gt;
 &lt;p&gt;If someone wants to create a ticket, fine, but then a single commit will constitute a fix for multiple tickets.&lt;/p&gt;
 &lt;p&gt;Of course, an exception to this rule is the case where fixing the quality issue is going to be a month-long project in and of itself, in which case another pragmatic approach is necessary: make do with the quality issue as it is for the time being, and handle it later, when a month is available to spare.&lt;/p&gt;
 &lt;h3 id="what-about-time-tracking"&gt;What about time-tracking?
 &lt;/h3&gt;&lt;p&gt;As mentioned earlier, Boy-Scouting interferes with time tracking, because the hours it takes to complete a certain task get inflated by fixing quality issues, whereas the hours spent on fixing quality issues is unaccounted for.&lt;/p&gt;
-&lt;p&gt;The solution to this is simple: whoever is in charge of time-tracking should be using larger error bars. The work of the programmers is difficult enough as it stands, it will not be made more difficult for the convenience of those who do time-tracking.&lt;/p&gt;
-&lt;h3 id="what-about-the-commit-history"&gt;What about the commit history?
-&lt;/h3&gt;&lt;p&gt;As mentioned earlier, Boy-Scouting renders the history of quality improvements
-untraceable, because each quality improvement is hidden inside a commit for
-some other task.&lt;/p&gt;
+&lt;p&gt;The solution to this is simple: whoever is in charge of time-tracking should be using larger error bars.&lt;/p&gt;
+&lt;p&gt;The work of the programmers is difficult enough as it stands, it will not be made more difficult for the convenience of those who do time-tracking.&lt;/p&gt;
+&lt;h3 id="what-about-planning"&gt;What about planning?
+&lt;/h3&gt;&lt;p&gt;Management usually takes issue with Boy-Scouting because they perceive it as unplanned work which arbitrarily delays the delivery of features that have been planned. However:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;As we have already explained, this unplanned work facilitates the development of the planned features.&lt;/li&gt;
+&lt;li&gt;When it comes to technical debt elimination, the planed vs. unplanned work concern would be a legitimate concern if management ever approved technical debt elimination work, (actually entire sprints of doing nothing but that,) but they never do, so programmers are left with no option but to engage in technical debt elimination while working on other planned work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="what-about-traceability"&gt;What about traceability?
+&lt;/h3&gt;&lt;p&gt;As mentioned earlier, Boy-Scouting renders the history of quality improvements untraceable, because each quality improvement is hidden inside a commit for some other task.&lt;/p&gt;
 &lt;p&gt;The solution to this is also simple: there shall be no traceable history for quality improvements, because quality improvements are being continuously applied to the code-base as it is being worked on.&lt;/p&gt;
 &lt;h3 id="what-about-code-review"&gt;What about code review?
 &lt;/h3&gt;&lt;p&gt;As mentioned earlier, Boy-Scouting adds extra burden to code review, because the reviewer has to examine not only changes pertinent to the task at hand, but also changes that are unrelated to, or strictly speaking unnecessary for, or in any case not directly aiming to solve, the task at hand.&lt;/p&gt;
-&lt;p&gt;The solution to this is the simplest of all: the reviewer needs to get used to it.&lt;/p&gt;
+&lt;p&gt;The solution to this is very simple: the reviewer needs to get used to it.&lt;/p&gt;
+&lt;p&gt;The quality improvements would have to be made anyway, and they would have to be reviewed anyway, so they might as well be made and reviewed right now.&lt;/p&gt;
 &lt;h3 id="and-what-about-the-management"&gt;And what about the management?
 &lt;/h3&gt;&lt;p&gt;As mentioned earlier, management tends to be skeptical of Boy-Scouting because it gives programmers too much autonomy.&lt;/p&gt;
-&lt;p&gt;The solution to this is very similar to the solution for code review: the management needs to get used to it. If programmers are competent enough to work on software development tasks, they are competent enough to decide exactly what needs to be done in the context of each task.&lt;/p&gt;
+&lt;p&gt;The solution to this is very similar to the solution for code review: the management needs to get used to it.&lt;/p&gt;
+&lt;p&gt;If programmers are competent enough to work on software development tasks, they are competent enough to decide exactly what needs to be done at any given moment in the context of each task.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image by &lt;a class="external"
 href="https://michael.gr/" target="_blank"
@@ -7237,13 +7269,14 @@ href="https://www.ef.com/wwen/epi/" target="_blank"
 &gt;yearly reports&lt;/a&gt; by the &lt;em&gt;&lt;strong&gt;Education First (EF)&lt;/strong&gt;&lt;/em&gt; organization. (&lt;a class="external"
 href="https://en.wikipedia.org/wiki/EF_Education_First" target="_blank"
 &gt;Wikipedia&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;I can attest that at least in the Randstad area, almost everyone speaks English, and many do so very fluently.&lt;/p&gt;
-&lt;p&gt;Nonetheless, there are certain mistakes that the Dutch are somewhat prone to make in English, mostly due to interference from peculiarities of the Dutch language. When this happens, it is called &lt;em&gt;&lt;strong&gt;Dutchlish&lt;/strong&gt;&lt;/em&gt; or &lt;em&gt;&lt;strong&gt;Dunglish&lt;/strong&gt;&lt;/em&gt;. The phenomenon is acknowledged by the Dutch, who have a word for it: &lt;em&gt;Steenkolenengels&lt;/em&gt;, which literally means &amp;quot;coal-English&amp;quot;.&lt;/p&gt;
+&lt;p&gt;I can attest that at least in the Randstad area, (where half the population of the country lives,) almost everyone speaks English, and many do so very fluently.&lt;/p&gt;
+&lt;p&gt;Nonetheless, there are certain mistakes that the Dutch are somewhat prone to make in English, mostly due to interference from peculiarities of the Dutch language. When this happens, it is called &lt;em&gt;&lt;strong&gt;Dutchlish&lt;/strong&gt;&lt;/em&gt; or &lt;em&gt;&lt;strong&gt;Dunglish&lt;/strong&gt;&lt;/em&gt;. The phenomenon is acknowledged by the Dutch, who have their own word for it: &lt;em&gt;Steenkolenengels&lt;/em&gt;, which literally means &amp;quot;coal-English&amp;quot;.&lt;/p&gt;
 &lt;p&gt;Here is a long list of examples of Steenkolenengels that I have compiled over the course of several years of living in The Netherlands.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="i-will-learn-you-how-to-skate"&gt;I will learn you how to skate.
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Learn&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;teach&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;From Dutch &lt;em&gt;&lt;strong&gt;leren&lt;/strong&gt;&lt;/em&gt;, which means either to learn or to teach, depending on context. (A teacher is a &lt;em&gt;&lt;strong&gt;leerar&lt;/strong&gt;&lt;/em&gt;, a student is a &lt;em&gt;&lt;strong&gt;leerling&lt;/strong&gt;&lt;/em&gt;, and they both engage in &lt;em&gt;&lt;strong&gt;leren&lt;/strong&gt;&lt;/em&gt;; go figure.)&lt;/p&gt;
+&lt;p&gt;From Dutch &lt;em&gt;&lt;strong&gt;leren&lt;/strong&gt;&lt;/em&gt;, which means either to learn or to teach, depending on context.&lt;/p&gt;
+&lt;p&gt;(In Dutch, a teacher is a &lt;em&gt;&lt;strong&gt;leerar&lt;/strong&gt;&lt;/em&gt;, a student is a &lt;em&gt;&lt;strong&gt;leerling&lt;/strong&gt;&lt;/em&gt;, and they both engage in &lt;em&gt;&lt;strong&gt;leren&lt;/strong&gt;&lt;/em&gt;; go figure.)&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="when-you-want-we-also-have-it-in-white"&gt;When you want, we also have it in white.
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;When&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;if&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -7260,33 +7293,31 @@ href="https://en.wikipedia.org/wiki/Freudian_slip" target="_blank"
 &lt;h3 id="dear-colleagues-hereby-the-schedule"&gt;Dear colleagues, hereby the schedule.
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Hereby&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;Here is&lt;/strong&gt;&lt;/em&gt; or &lt;em&gt;&lt;strong&gt;Hereby I give you&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Because in Dutch, &lt;strong&gt;hierbij&lt;/strong&gt; (which sounds and means the same as &lt;em&gt;&lt;strong&gt;hereby&lt;/strong&gt;&lt;/em&gt;) can in fact be used alone like that; however, in English, it cannot: you have to add a verb.&lt;/p&gt;
-&lt;p&gt;Also note that you might hear some advise is to avoid &amp;quot;hereby&amp;quot; unless you are a lawyer, because it is considered too formal, but that's a matter of taste. The requirement for hereby to be followed by a verb is not a matter of taste, it is dictated by grammar.&lt;/p&gt;
+&lt;p&gt;Also note that some advise going around is to avoid &amp;quot;hereby&amp;quot; unless you are a lawyer, because it is considered too formal, but that's a matter of taste. The requirement for hereby to be followed by a verb is not a matter of taste; it is dictated by grammar.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="we-have-lots-of-bicycles"&gt;We have lot's of bicycle's
-&lt;/h3&gt;&lt;p&gt;In the written word, using apostrophe-s to signify plural, whereas in English plural is signified with -s alone, and apostrophe-s is only used to signify genitive (possessive) case.&lt;/p&gt;
-&lt;p&gt;Because in the Dutch language, that is in fact how plural is signified. Different language, different rules. However, the mistake that Dutchies sometimes make when writing English is to confuse the English way of writing plural with the Dutch way of writing plural.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;In the written word, using apostrophe -s to signify plural.&lt;/p&gt;
+&lt;p&gt;In English, plural is signified with -s alone, whereas apostrophe -s is only used to signify genitive (possessive) case. Dutchies are likely to make this mistake because in the Dutch language, that is in fact how plural is signified. Different language, different rules.&lt;/p&gt;
 &lt;p&gt;I used to get considerably annoyed when I would come across this mistake in written conversations on the Internet, but now I get less annoyed thinking that the people making this mistake might just be Dutch.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id="i-will-meet-you-at-the-busstop"&gt;I will meet you at the busstop
+&lt;h3 id="meet-you-at-the-busstop"&gt;Meet you at the busstop
 &lt;/h3&gt;&lt;p&gt;In the written word, concatenating words that are not normally concatenated in English.&lt;/p&gt;
 &lt;p&gt;In Dutch it is very common to concatenate words to form new words. That is, for example, how come the Dutch word for &lt;em&gt;&lt;strong&gt;Multiple personality disorder&lt;/strong&gt;&lt;/em&gt; is &lt;strong&gt;&lt;em&gt;Meervoudigepersoonlijkheidsstoornis&lt;/em&gt;&lt;/strong&gt;. So, to the Dutch, the term &lt;em&gt;&lt;strong&gt;bus stop&lt;/strong&gt;&lt;/em&gt; as two separate words looks unnatural; when they see &lt;em&gt;&lt;strong&gt;bus stop&lt;/strong&gt;&lt;/em&gt; they are seized with an overwhelming desire to concatenate the two words into one: &lt;em&gt;&lt;strong&gt;busstop&lt;/strong&gt;&lt;/em&gt;. However, this is not a valid thing to do in English.&lt;/p&gt;
 &lt;p&gt;I swear I can sometimes hear them using concatenated terms like busstop even in the spoken word. (Or maybe I am just imagining it.)&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="lets-have-a-telco"&gt;Let's have a telco
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Telco&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;teleconference&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;The Dutch words for telephone and conference are &lt;em&gt;telefoon&lt;/em&gt; and &lt;em&gt;conferentie&lt;/em&gt;, so the Dutch have every right to create the word &lt;em&gt;&lt;strong&gt;telco&lt;/strong&gt;&lt;/em&gt; in their language.&lt;/p&gt;
-&lt;p&gt;The mistake that they sometimes make is to use this word when speaking English, because to English speakers, &lt;em&gt;&lt;strong&gt;telco&lt;/strong&gt;&lt;/em&gt; generally does not mean anything, and if it was to mean something, that would perhaps be &lt;em&gt;&lt;strong&gt;telecommunications company&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The Dutch words for telephone and conference are &lt;em&gt;telefoon&lt;/em&gt; and &lt;em&gt;conferentie&lt;/em&gt;, so the Dutch have every right to create the word &lt;em&gt;&lt;strong&gt;telco&lt;/strong&gt;&lt;/em&gt; in their language, if they so please. The mistake that they sometimes make is using this word when speaking English, because to English speakers, &lt;em&gt;&lt;strong&gt;telco&lt;/strong&gt;&lt;/em&gt; generally does not mean anything, and if it was to mean something, that would perhaps be &lt;em&gt;&lt;strong&gt;telecommunications company&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="turn-on-the-airco"&gt;Turn on the airco
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Airco&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;air-conditioner&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Judging by the fact that the Dutch word for &lt;em&gt;&lt;strong&gt;air&lt;/strong&gt;&lt;/em&gt; sounds nothing like &lt;em&gt;&lt;strong&gt;air&lt;/strong&gt;&lt;/em&gt;, (it is &lt;em&gt;&lt;strong&gt;lucht&lt;/strong&gt;&lt;/em&gt;,) the word &lt;em&gt;&lt;strong&gt;airco&lt;/strong&gt;&lt;/em&gt; is probably the result of the Dutch trying to forge a word that is intended to sound English.&lt;/p&gt;
-&lt;p&gt;However, for English-speakers, &lt;em&gt;&lt;strong&gt;airco&lt;/strong&gt;&lt;/em&gt; does not mean anything, and if it was to mean something, that would perhaps be &lt;em&gt;&lt;strong&gt;airline company&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Judging by the fact that the Dutch word for &lt;em&gt;&lt;strong&gt;air&lt;/strong&gt;&lt;/em&gt; sounds nothing like &lt;em&gt;&lt;strong&gt;air&lt;/strong&gt;&lt;/em&gt;, (it is &lt;em&gt;&lt;strong&gt;lucht&lt;/strong&gt;&lt;/em&gt;,) the word &lt;em&gt;&lt;strong&gt;airco&lt;/strong&gt;&lt;/em&gt; is probably the result of the Dutch trying to forge a word that is intended to sound English. However, for English-speakers, &lt;em&gt;&lt;strong&gt;airco&lt;/strong&gt;&lt;/em&gt; does not mean anything, and if it was to mean something, that would perhaps be &lt;em&gt;&lt;strong&gt;airline company&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Apparently, the Dutch do not make the connection between &amp;quot;co&amp;quot; and &amp;quot;company&amp;quot;, perhaps because in their language the word for &lt;em&gt;&lt;strong&gt;company&lt;/strong&gt;&lt;/em&gt; sounds nothing like company; it is &lt;em&gt;&lt;strong&gt;bedrijf&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="estimate-repair-laptop"&gt;Estimate repair laptop
 &lt;/h3&gt;&lt;p&gt;In titles, word ordering that makes no sense in English.&lt;/p&gt;
 &lt;p&gt;The Dutch apparently have certain special rules dictating how to write signs, titles, and e-mail subjects: the sentence is first written in its fully spelled out form, and then all the small words are removed. So, &amp;quot;The estimate for the repair of the laptop&amp;quot; is &amp;quot;De schatting voor de reparatie van de laptop&amp;quot;, and then to turn this into a title we remove all the small words to be left with &amp;quot;Schatting reparatie laptop&amp;quot;. Unfortunately, the Dutch are prone to follow the same rule when translating to English, yielding &amp;quot;Estimate repair laptop&amp;quot; (or &amp;quot;Estimate laptop repair&amp;quot; at best) which either makes no sense or means something different.&lt;/p&gt;
-&lt;p&gt;My favorite example of this is a sign that you can see in every single train in the entire little Kingdom of The Netherlands. The Dutch text says &amp;quot;Nooduitgang machinist vrijhouden&amp;quot; and the English translation says &amp;quot;Emergency exit train driver, do not block&amp;quot;. &lt;em&gt;&lt;strong&gt;(What?)&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My favorite example of this is a sign that you can see in every single train in the entire little Kingdom of The Netherlands. The Dutch text says &lt;em&gt;&lt;strong&gt;Nooduitgang machinist vrijhouden&lt;/strong&gt;&lt;/em&gt; and the English translation below it says &lt;em&gt;&lt;strong&gt;Emergency exit train driver, do not block&lt;/strong&gt;&lt;/em&gt;. (Uh, &lt;em&gt;what?&lt;/em&gt;)&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -7315,8 +7346,8 @@ data-flex-basis="487px"
 &lt;hr&gt;
 &lt;h3 id="how-long-are-you"&gt;How long are you?
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Long&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;tall&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;In English, when speaking of a person's height, we do not use the word &lt;em&gt;&lt;strong&gt;high&lt;/strong&gt;&lt;/em&gt;; we use the word &lt;em&gt;&lt;strong&gt;tall&lt;/strong&gt;&lt;/em&gt; instead. When the Dutch want to refer to a person's height they also refrain from using their word for for &lt;em&gt;&lt;strong&gt;high&lt;/strong&gt;&lt;/em&gt;, (which, by the way, is &lt;em&gt;&lt;strong&gt;hoog&lt;/strong&gt;&lt;/em&gt;,) but they have no unnecessary extra word like &lt;em&gt;&lt;strong&gt;tall&lt;/strong&gt;&lt;/em&gt;; so, they use the word &lt;em&gt;&lt;strong&gt;lang&lt;/strong&gt;&lt;/em&gt; instead, which means &lt;em&gt;&lt;strong&gt;long&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;So, when a Dutch person wants to ask you, in English, how tall you are, they may inadvertently ask you how long you are.&lt;/p&gt;
+&lt;p&gt;In English, when speaking of a person's height, for some reason we do not use the word &lt;em&gt;&lt;strong&gt;high&lt;/strong&gt;&lt;/em&gt;; we use the word &lt;em&gt;&lt;strong&gt;tall&lt;/strong&gt;&lt;/em&gt; instead. When the Dutch want to refer to a person's height they also refrain from using their word for &lt;em&gt;&lt;strong&gt;high&lt;/strong&gt;&lt;/em&gt;, (which, is &lt;em&gt;&lt;strong&gt;hoog&lt;/strong&gt;&lt;/em&gt;,) but they have no unnecessary extra word like &lt;em&gt;&lt;strong&gt;tall&lt;/strong&gt;&lt;/em&gt;; so, they use the word &lt;em&gt;&lt;strong&gt;lang&lt;/strong&gt;&lt;/em&gt; instead, which means &lt;em&gt;&lt;strong&gt;long&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;As a consequence, when a Dutch person wants to ask you, in English, how tall you are, they may inadvertently ask you how long you are.&lt;/p&gt;
 &lt;p&gt;(Another &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Freudian_slip" target="_blank"
 &gt;Freudian slip&lt;/a&gt;? LOL!)&lt;/p&gt;
@@ -7328,6 +7359,7 @@ href="https://en.wikipedia.org/wiki/Freudian_slip" target="_blank"
 &lt;h3 id="can-i-lend-your-umbrella"&gt;Can I lend your umbrella?
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Lend&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;borrow&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;From Dutch &lt;em&gt;&lt;strong&gt;lenen&lt;/strong&gt;&lt;/em&gt; which means either to lend or to borrow, depending on context.&lt;/p&gt;
+&lt;p&gt;(In Dutch, the one who borrows is a &lt;em&gt;&lt;strong&gt;lener&lt;/strong&gt;&lt;/em&gt;, the one who lends is an &lt;em&gt;&lt;strong&gt;uitlener&lt;/strong&gt;&lt;/em&gt;, and they both engage in &lt;em&gt;&lt;strong&gt;lenen&lt;/strong&gt;&lt;/em&gt;; go figure.)&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="you-want-just-the-bread"&gt;You want just the bread?
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Bread&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;Hamburger&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
@@ -7335,15 +7367,22 @@ href="https://en.wikipedia.org/wiki/Freudian_slip" target="_blank"
 &lt;hr&gt;
 &lt;h3 id="fodafone"&gt;Fodafone
 &lt;/h3&gt;&lt;p&gt;In the spoken word, pronouncing the letter &lt;em&gt;&lt;strong&gt;V&lt;/strong&gt;&lt;/em&gt; as if it was an &lt;em&gt;&lt;strong&gt;F&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Dutch pronunciation rules tend to cause some weird things to happen; for example, when you call Vodafone in The Netherlands, the recorded greeting welcomes you to &amp;quot;Fodafone&amp;quot;. Here I have recorded two such greetings, one from sales, one from billing:&lt;/p&gt;
+&lt;p&gt;Dutch pronunciation rules tend to cause some weirdness in the spoken word; for example, when you call Vodafone in The Netherlands, the recorded greeting welcomes you to &amp;quot;Fodafone&amp;quot;. Here I have recorded two such greetings, one from sales, one from billing:&lt;/p&gt;
 &lt;audio controls preload="metadata"&gt;
 &lt;source src="media/welcom-bij-vodafone.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
-&lt;p&gt;This is due to some weirdness in how the letter &lt;strong&gt;V&lt;/strong&gt; sounds in the Dutch language. A similar weirdness also exists in German; if you are an English speaker, chances are you have always pronounced Volkswagen wrongly; the correct pronunciation is &lt;em&gt;&lt;strong&gt;folks&lt;/strong&gt;-va-gen&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;However, the use of Dutch pronunciation rules is questionable when it comes to the names of companies originating outside of The Netherlands, such as Vodafone, which hails from the UK.&lt;/p&gt;
+&lt;p&gt;This is due to some weirdness in how the letter &lt;strong&gt;V&lt;/strong&gt; sounds in the Dutch language. A similar weirdness also exists in German; if you are an English speaker, chances are you have always pronounced Volkswagen wrongly; the correct pronunciation is &lt;em&gt;&lt;strong&gt;f&lt;/strong&gt;olks-&lt;strong&gt;v&lt;/strong&gt;a-gen&lt;/em&gt;. (The letter V is supposed to sound like an English F, and the letter W is supposed to sound like an English V.)&lt;/p&gt;
+&lt;p&gt;Now, the Dutch are free to make the rules in their own language and pronounce their letters in whatever way they please; however, the use of Dutch pronunciation rules is questionable when it comes to saying the names of companies originating outside of The Netherlands, such as Vodafone, which hails from the UK.&lt;/p&gt;
+&lt;p&gt;This is not to say that I know of an easy solution to this problem, or that there could be a solution to this problem:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We cannot expect the Dutch to know by heart how foreign words are supposed to sound in foreign languages,&lt;/li&gt;
+&lt;li&gt;The company name Vodafone could not have received a different spelling just for the Dutch market,&lt;/li&gt;
+&lt;li&gt;I am not even sure that there exists some spelling that would achieve a &amp;quot;V&amp;quot; sound in the beginning of a Dutch word.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So, it may well be that things could not be done otherwise.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="tax-for-taxi"&gt;Tax for Taxi
-&lt;/h3&gt;&lt;p&gt;Using the word &amp;quot;tax&amp;quot; in reference to &amp;quot;taxi&amp;quot;, which does not quite work in English.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tax&lt;/strong&gt;&lt;/em&gt; in reference to &lt;em&gt;&lt;strong&gt;taxi&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Naturally, taxi firms all over the world tend to want to do their best to communicate in English, because their clients are often tourists, and the international language of tourism is English. It is surprising then, that many taxi companies in The Netherlands use &amp;quot;tax&amp;quot; to mean &amp;quot;taxi&amp;quot;.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-01-dutchlish/media/cosi-tax.jpg"
 width="1280"
@@ -7376,15 +7415,24 @@ href="https://eagletax.nl/" target="_blank"
 href="https://www.star-tax.nl/" target="_blank"
 &gt;star-tax.nl&lt;/a&gt;; and my personal favorite, &lt;a class="external"
 href="https://www.city-tax.nl/" target="_blank"
-&gt;city-tax.nl&lt;/a&gt;. The list is practically endless. Apparently, many Dutchies are under the impression that the word &amp;quot;tax&amp;quot; evokes the notion of &amp;quot;taxi&amp;quot; in English, but that is not so; in the English-speaking world, all these domain names would belong to accounting firms. (And fun fact: in Europe, another name for &amp;quot;city tax&amp;quot; is &amp;quot;tourist tax&amp;quot;; probably not an association you want to be making if you are a taxi service.)&lt;/p&gt;
-&lt;p&gt;I used to think that perhaps this is happening because the Dutch word for tax sounds nothing like &amp;quot;tax&amp;quot;, it is &lt;em&gt;&lt;strong&gt;belasting&lt;/strong&gt;&lt;/em&gt;, so maybe they do not associate &amp;quot;tax&amp;quot; with taxation, but according to the Dutch dictionary, the word tax also exists in the language, and is indeed a financial term, and is in fact related to taxation. So, how come the Dutch feel free to use &amp;quot;tax&amp;quot; to stand for taxi, is beyond me.&lt;/p&gt;
-&lt;p&gt;Another fun fact: The word taxi is a shortening of the word &lt;em&gt;&lt;strong&gt;taxicab&lt;/strong&gt;&lt;/em&gt;. The word taxicab is a contraction of the term &lt;em&gt;&lt;strong&gt;taximeter&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;cabriolet&lt;/strong&gt;&lt;/em&gt;. Cabriolet is a type of light, horse-drawn carriage. Taximeter is a blend of Greek &lt;em&gt;&lt;strong&gt;metron&lt;/strong&gt;&lt;/em&gt; (measure) and Latin &lt;em&gt;&lt;strong&gt;taxa&lt;/strong&gt;&lt;/em&gt;, which means fee, or charge, or charging a fee. So, albeit very remotely, &amp;quot;taxi&amp;quot; &lt;em&gt;&lt;strong&gt;is&lt;/strong&gt;&lt;/em&gt; in fact related to &amp;quot;tax&amp;quot; in English. The Dutch are not entirely wrong on this one, after all!&lt;/p&gt;
+&gt;city-tax.nl&lt;/a&gt;. Apparently, many Dutchies are under the impression that the word &amp;quot;tax&amp;quot; evokes the notion of &amp;quot;taxi&amp;quot; in English, but that is not so; in the English-speaking world, all of these domain names would in all certainty belong to accounting firms. (And fun fact: in Europe, another name for &amp;quot;city tax&amp;quot; is &amp;quot;tourist tax&amp;quot;; probably not an association you want to be making if you are a taxi service.)&lt;/p&gt;
+&lt;p&gt;I used to think that perhaps this is happening because the Dutch word for tax sounds nothing like &amp;quot;tax&amp;quot;, it is &lt;em&gt;&lt;strong&gt;belasting&lt;/strong&gt;&lt;/em&gt;, so maybe they do not associate &amp;quot;tax&amp;quot; with taxation, but according to the Dutch dictionary, the word tax also exists in the language, and is in fact related to taxation. So, how come the Dutch feel free to use &amp;quot;tax&amp;quot; to stand for taxi, is beyond me.&lt;/p&gt;
+&lt;p&gt;Another fun fact: The word taxi is a shortening of the word &lt;em&gt;&lt;strong&gt;taxicab&lt;/strong&gt;&lt;/em&gt;. The word taxicab is a contraction of the term &lt;em&gt;&lt;strong&gt;taximeter&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;&lt;strong&gt;cabriolet&lt;/strong&gt;&lt;/em&gt;. Cabriolet is a type of light, horse-drawn carriage. Taximeter is a blend of Greek &lt;em&gt;&lt;strong&gt;metron&lt;/strong&gt;&lt;/em&gt; (measure) and Latin &lt;em&gt;&lt;strong&gt;taxa&lt;/strong&gt;&lt;/em&gt;, which means fee, or charge, or charging a fee. So, albeit very remotely, &amp;quot;taxi&amp;quot; &lt;em&gt;&lt;strong&gt;is&lt;/strong&gt;&lt;/em&gt; in fact related to &amp;quot;tax&amp;quot; in English. The Dutch are not entirely wrong on this one!&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="absenteeism"&gt;Absenteeism
-&lt;/h3&gt;&lt;p&gt;Using the word &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;absence&lt;/strong&gt;&lt;/em&gt; when referring to sick leave from work.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Use of the word &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;absence&lt;/strong&gt;&lt;/em&gt; when referring to sick leave from work.&lt;/p&gt;
 &lt;p&gt;This can even be seen in official Dutch government communications in English, for example here: &lt;a class="external"
 href="https://www.government.nl/themes/work/absenteeism-from-work" target="_blank"
 &gt;https://www.government.nl/themes/work/absenteeism-from-work&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-01-dutchlish/media/government.nl-absenteeism.png"
+width="1885"
+height="1667"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="271px"
+&gt;
+&lt;/p&gt;
 &lt;p&gt;I suspect this stems from the rampant, indiscriminate, and uncritical use of Microsoft Office machine translation:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The Dutch word is &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt;.&lt;/li&gt;
@@ -7394,21 +7442,21 @@ href="https://www.government.nl/themes/work/absenteeism-from-work" target="_blan
 &lt;p&gt;Translating &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; is not just wrong; it is &lt;em&gt;&lt;strong&gt;embarrassingly&lt;/strong&gt;&lt;/em&gt; wrong, because the word absenteeism does not just mean absence; it specifically means &lt;em&gt;&lt;strong&gt;a habitual pattern of unexcused absence from duties&lt;/strong&gt;&lt;/em&gt;, and is therefore &lt;em&gt;&lt;strong&gt;presumptuous&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;insulting&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="i-want-to-react-further"&gt;I want to react further
-&lt;/h3&gt;&lt;p&gt;Using the word &lt;em&gt;&lt;strong&gt;react&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;respond&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;This appears to be direct translation from Dutch &amp;quot;ik wil meer reageren&amp;quot; where &lt;em&gt;&lt;strong&gt;reageren&lt;/strong&gt;&lt;/em&gt; means &lt;em&gt;&lt;strong&gt;react&lt;/strong&gt;&lt;/em&gt;, but also &lt;em&gt;&lt;strong&gt;respond&lt;/strong&gt;&lt;/em&gt;, which is actually the word that should have been used in this case.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;React&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;respond&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This appears to be direct translation from Dutch &lt;em&gt;&lt;strong&gt;ik wil meer reageren&lt;/strong&gt;&lt;/em&gt; where &lt;em&gt;&lt;strong&gt;reageren&lt;/strong&gt;&lt;/em&gt; means &lt;em&gt;&lt;strong&gt;react&lt;/strong&gt;&lt;/em&gt;, but also &lt;em&gt;&lt;strong&gt;respond&lt;/strong&gt;&lt;/em&gt;, which is actually the word that should have been used in this case.&lt;/p&gt;
 &lt;p&gt;It is a nuanced difference, but it can sometimes cause confusion.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="you-must-confirm-before-the-31st"&gt;You must confirm before the 31st
-&lt;/h3&gt;&lt;p&gt;Use of &amp;quot;you must&amp;quot; instead of &amp;quot;please&amp;quot;.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;You must&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;please&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Maybe this is an example of the famous &lt;em&gt;&lt;strong&gt;Dutch directness&lt;/strong&gt;&lt;/em&gt;: the Dutch will not hesitate to use commanding words when they need to convey urgency and/or definitiveness; however, the use of such words in English sounds rude.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="how-late-is-it"&gt;How late is it?
-&lt;/h3&gt;&lt;p&gt;&amp;quot;How late&amp;quot; instead of &amp;quot;what time&amp;quot;.&lt;/p&gt;
-&lt;p&gt;This is word-for-word translation from the Dutch phrase &amp;quot;hoe laat is het?&amp;quot; which literally means &amp;quot;how late is it?&amp;quot;.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;How late&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;what time&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This is word-for-word translation from the Dutch phrase &lt;em&gt;&lt;strong&gt;hoe laat is het?&lt;/strong&gt;&lt;/em&gt; which literally means &lt;em&gt;&lt;strong&gt;how late is it?&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Maybe this just goes to show how strong the morning culture is in The Netherlands: everything after wake-up time is late.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="further-reading"&gt;Further reading...
-&lt;/h3&gt;&lt;p&gt;If you have not had enough of this, then head over to:&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;If you have not had enough of this by now, then head over to:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Dunglish" target="_blank"
