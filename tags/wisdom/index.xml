@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wisdom on Michael's Blog</title><link>https://blog.michael.gr/tags/wisdom/</link><description>Recent content in Wisdom on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 25 Apr 2026 19:25:32 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/wisdom/index.xml" rel="self" type="application/rss+xml"/><item><title>Theory vs- Practice</title><link>https://blog.michael.gr/post/2025-05-theory-vs-practice/</link><pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate><guid>https://blog.michael.gr/post/2025-05-theory-vs-practice/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-05-theory-vs-practice/media/theory-vs-practice.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wisdom on Michael's Blog</title><link>https://blog.michael.gr/tags/wisdom/</link><description>Recent content in Wisdom on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 24 May 2026 20:00:11 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/wisdom/index.xml" rel="self" type="application/rss+xml"/><item><title>Theory vs- Practice</title><link>https://blog.michael.gr/post/2025-05-theory-vs-practice/</link><pubDate>Fri, 02 May 2025 10:57:28 +0000</pubDate><guid>https://blog.michael.gr/post/2025-05-theory-vs-practice/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-05-theory-vs-practice/media/theory-vs-practice.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -710,7 +710,38 @@ href="https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/" 
 &lt;/h3&gt;&lt;p&gt;Never use GUIDs if you can avoid them. If you must use them, then make sure they are an implementation detail and that they constitute a side-note of your design, not a predominant feature of your design. Read this: &lt;a
 href="https://blog.michael.gr/post/2017-06-on-uuids-and-guids/"
 &gt;What is wrong with UUIDs and GUIDs&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="do-it-right-"&gt;Do It Right ™
+&lt;h3 id="avoid-identifiers-that-beg-questions"&gt;Avoid identifiers that beg questions
+&lt;/h3&gt;&lt;p&gt;Identifiers should convey useful information, instead of useless information that begs questions.&lt;/p&gt;
+&lt;p&gt;Consider the following &lt;code&gt;convertedTime&lt;/code&gt; identifier:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; TimeCoordinate convertedTime = clock.UtcFromLocal( localTime );
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is a bad identifier, because it begs questions: converted from what? and most importantly, to what?&lt;/p&gt;
+&lt;p&gt;This identifier does not beg such questions:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; TimeCoordinate utcTime = clock.UtcFromLocal( localTime );
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="minimize-information-per-scope"&gt;Minimize information per scope
+&lt;/h3&gt;&lt;p&gt;Think of the state complexity of any given piece of code as an exponential function of all the bits of information available to it. This means that every additional bit of information in a scope increases the complexity of that scope exponentially. Thus, the less information available in a scope, the better.&lt;/p&gt;
+&lt;p&gt;Minimizing information per scope is usually done by extracting information into other scopes. For example:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; int sample_function()
+{
+int a = get_a();
+int b = get_b();
+int c = calculate_c( a, b );
+int d = get_d();
+return calculate_e( c, d );
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this example a and b do not need to co-exist with d and e; So, a better arrangement would be as follows:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt; int get_c()
+{
+int a = get_a();
+int b = get_b();
+return calculate_c( a, b );
+}
+int sample_function()
+{
+int c = get_c();
+int d = get_d();
+return calculate_e( c, d );
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="do-it-right-"&gt;Do It Right ™
 &lt;/h3&gt;&lt;p&gt;Avoid taking shortcuts in the name of immediate savings now but at the expense of headaches later, because the later headaches invariably end-up costing orders of magnitude more than the immediate savings. When some colleague, manager, or decision-maker suggests to &amp;quot;make it simple now, and worry about making it right later&amp;quot; they are imagining that they are being smart and they are helping optimize things, while in fact they are being a smart-ass, and they are suggesting that a technical crime be committed.&lt;/p&gt;
 &lt;p&gt;An example of this, which has already been mentioned, is finding proper names for identifiers. If you want to introduce a new identifier, finding a proper name for it may require opening up the thesaurus, spending a considerable amount of time creating a list of candidate words, opening up the dictionary, looking up the exact meaning of each candidate word, applying the process of elimination, etc. So, you can save lots of time right now by skipping all this and simply calling it something meaningless, or worse yet, something inaccurate and therefore misleading. It is a fact that you will indeed experience immediate time savings right now if you do this. However, it is also a fact that the time you save now by performing this act of sabotage against yourself will invariably be paid a hundredfold later, when you and your coworkers will be wondering what on earth was meant by this meaningless name, or struggling with the realization that it is being used in the code in ways that are in conflict with its meaning.&lt;/p&gt;
 &lt;p&gt;Of course, &lt;em&gt;Do It Right&lt;/em&gt; ™ does not apply only to naming, it applies to everything. And when I say everything, I mean &lt;strong&gt;E V E R Y T H I N G&lt;/strong&gt;. The practice of &lt;em&gt;Do It Right&lt;/em&gt; ™ must be a conditioned reflex; it must be the default, reliable, fail-safe, look-no-further choice that we always make, without spending time calculating the costs vs. savings of &lt;em&gt;Do it Right&lt;/em&gt; ™, debating whether we should &lt;em&gt;Do It Right&lt;/em&gt; ™ or not &lt;em&gt;Do It Right&lt;/em&gt; ™, etc. The term &lt;em&gt;Do It Right&lt;/em&gt; ™ contains in it the reason why we should &lt;em&gt;Do It Right&lt;/em&gt; ™.&lt;/p&gt;
