@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 24 May 2026 20:30:45 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>CA1051: Do not declare visible instance fields</title><link>https://blog.michael.gr/post/2026-05-14-ca1051-do-not-declare-visible-instance-fields/</link><pubDate>Thu, 14 May 2026 15:42:53 +0200</pubDate><guid>https://blog.michael.gr/post/2026-05-14-ca1051-do-not-declare-visible-instance-fields/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-05-14-ca1051-do-not-declare-visible-instance-fields/media/ca1051.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 10 Jun 2026 08:35:30 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</link><pubDate>Wed, 10 Jun 2026 07:35:16 +0200</pubDate><guid>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/cover.svg"
+loading="lazy"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;The previous post in this series is here: &lt;a
+href="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/"
+&gt;Buienradar 1, Buienalarm: 0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Below are two screenshots of the two websites as they looked in the morning.&lt;/p&gt;
+&lt;p&gt;Buienradar was predicting dry weather, Buienalarm was predicting light rain.&lt;/p&gt;
+&lt;p&gt;Then below them is a photo of the great outdoors, taken from my apartment, in the afternoon.&lt;/p&gt;
+&lt;p&gt;The weather was dry.&lt;/p&gt;
+&lt;p&gt;So: Buienradar: 2, Buienalarm: 0&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/2026-06-09-buinenradar.png"
+width="1894"
+height="2021"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="93"
+data-flex-basis="224px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/2026-06-09-buinealarm.png"
+width="1899"
+height="2021"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="93"
+data-flex-basis="225px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/PXL_20260609_160512286_1620.jpg"
+width="1620"
+height="1220"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+&gt;
+&lt;/p&gt;</description></item><item><title>CA1051: Do not declare visible instance fields</title><link>https://blog.michael.gr/post/2026-05-14-ca1051-do-not-declare-visible-instance-fields/</link><pubDate>Thu, 14 May 2026 15:42:53 +0200</pubDate><guid>https://blog.michael.gr/post/2026-05-14-ca1051-do-not-declare-visible-instance-fields/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-05-14-ca1051-do-not-declare-visible-instance-fields/media/ca1051.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -21,7 +59,7 @@ loading="lazy"
 &lt;p&gt;CA1051 &amp;quot;Do not declare visible instance fields&amp;quot;&lt;/p&gt;
 &lt;p&gt;This is unsuitable because:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;It prohibits visible fields regardless of whether they are read-only or not&lt;/li&gt;
+&lt;li&gt;It prohibits visible fields regardless of whether they are &lt;code&gt;readonly&lt;/code&gt; or not&lt;/li&gt;
 &lt;li&gt;As its name says, it only prohibits instance fields, ignoring static fields.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -29,6 +67,7 @@ loading="lazy"
 &lt;p&gt;CA2211 &amp;quot;Non-constant fields should not be visible&amp;quot;&lt;/p&gt;
 &lt;p&gt;This is unsuitable because:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;It only allows &lt;code&gt;const&lt;/code&gt; fields, it does not allow &lt;code&gt;readonly&lt;/code&gt; fields.&lt;/li&gt;
 &lt;li&gt;Contrary to what its name says, it only checks static fields, not instance fields.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -71,7 +110,6 @@ href="https://regex101.com/" target="_blank"
 &lt;li&gt;In any place where we use a space, it is always a single space.&lt;/li&gt;
 &lt;li&gt;We have a space after the coma that separates argument names in generic argument lists.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Also, the above regular expressions have a limitation: They will not find fields that contain any arrays within their type signature. For the most part this is fine, because nobody exposes public fields of array type. One very oddball case that was not handled by these regular expressions and I had to handle manually was a field of type &lt;code&gt;System.Action&amp;lt;Type[]&amp;gt;&lt;/code&gt;. That's okay, fields of generic types that include array parameters are exceedingly rare.&lt;/p&gt;
 &lt;p&gt;Obligatory XKCD: &lt;a class="external"
 href="https://xkcd.com/208/" target="_blank"
 &gt;https://xkcd.com/208/&lt;/a&gt; &amp;quot;Regular Expressions&amp;quot;&lt;/p&gt;</description></item><item><title>Too busy mopping the floor to turn off the faucet</title><link>https://blog.michael.gr/post/2026-05-19-too-busy-mopping-the-floor/</link><pubDate>Thu, 14 May 2026 15:42:53 +0200</pubDate><guid>https://blog.michael.gr/post/2026-05-19-too-busy-mopping-the-floor/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-05-19-too-busy-mopping-the-floor/media/too-busy-mopping-the-floor-default-style.svg"
@@ -2334,26 +2372,10 @@ href="https://martin.kleppmann.com/2007/07/19/yes-no-cancel-causes-aspirin-sales
 &lt;li&gt;Sparing the user from having to do one click per unmodified file.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;To summarize:&lt;/p&gt;
-&lt;p&gt;Presenting the user with only two choices is immensely better than presenting the user with three choices, when the missing choice can be trivially accomplished by the user, in a way which is intuitively obvious to the user.&lt;/p&gt;</description></item><item><title>Buienalarm vs- Buienradar</title><link>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</link><pubDate>Thu, 16 May 2024 14:00:09 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</guid><description>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/NL-relief-1600.jpg"
-width="1600"
-height="1000"
+&lt;p&gt;Presenting the user with only two choices is immensely better than presenting the user with three choices, when the missing choice can be trivially accomplished by the user, in a way which is intuitively obvious to the user.&lt;/p&gt;</description></item><item><title>Buienradar 1, Buienalarm 0</title><link>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</link><pubDate>Thu, 16 May 2024 14:00:09 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/cover.svg"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="160"
-data-flex-basis="384px"
 &gt;
-&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align: center"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;/p&gt;
 &lt;p&gt;So, today I had the chance to observe an example of the relative accuracy of buienalarm.nl vs. buienradar.nl&lt;/p&gt;
 &lt;h1 id="time-1300"&gt;Time: ~13:00
 &lt;/h1&gt;&lt;p&gt;Around 13:00 I wanted to know what the weather was going to be at 17:00, and I noticed that buienradar was predicting complete dryness,
@@ -2412,7 +2434,7 @@ data-flex-grow="132"
 data-flex-basis="318px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;Of course this is just a single observation; in another observation, the roles might be reversed. It will take many more comparisons before I can tell if there is a pattern.&lt;/p&gt;
+&lt;p&gt;Of course this is just a single observation; in another observation, the roles might be reversed. It will take many more comparisons before I can tell if there is a pattern. But for now, the score is: Buienradar: 1, Buienalarm: 0&lt;/p&gt;
 &lt;p&gt;Cover image: &amp;quot;Relief map of the European Netherlands&amp;quot; &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Netherlands#/media/File:2012-NL-prov-relief-3000.jpg" target="_blank"
 &gt;from Wikipedia&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Continuous Code Quality Improvement</title><link>https://blog.michael.gr/post/2024-09-boy-scouting/</link><pubDate>Fri, 12 Apr 2024 10:48:53 +0000</pubDate><guid>https://blog.michael.gr/post/2024-09-boy-scouting/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-09-boy-scouting/media/quality.svg"
@@ -5960,6 +5982,29 @@ data-flex-basis="240px"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
+&lt;p&gt;Unfuck Windows&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Disable application pinning to taskbar
+&lt;ul&gt;
+&lt;li&gt;Run gpedit.msc&lt;/li&gt;
+&lt;li&gt;Go to &amp;quot;User Configuration&amp;quot; -&amp;gt; &amp;quot;Administrative Templates&amp;quot; -&amp;gt; &amp;quot;Start menu and Taskbar&amp;quot;&lt;/li&gt;
+&lt;li&gt;Look for &amp;quot;Do not allow pinning programs to the Taskbar&amp;quot; -&amp;gt; Enable it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Disable fucking up of the Alt+Tab switcher
+&lt;ul&gt;
+&lt;li&gt;Open windows settings (Win+I)&lt;/li&gt;
+&lt;li&gt;Search for &amp;quot;multitasking settings&amp;quot;&lt;/li&gt;
+&lt;li&gt;Find &amp;quot;Show tabs from apps when snapping or pressing Alt+Tab&amp;quot;
+&lt;ul&gt;
+&lt;li&gt;-&amp;gt; set to &amp;quot;Don't show tabs&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
 &lt;p&gt;Enable natural mouse wheel scrolling&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Follow the instructions at &lt;a
@@ -7191,7 +7236,7 @@ data-flex-basis="682px"
 &lt;p&gt;There exists a procedure for finding the specific mouse device that you are using, and modifying the wheel mode of only that device, but it is finicky, so we will be skipping that procedure and modifying the setting for all mouse devices that are currently connected to the computer, or have ever been connected. If a new mouse is connected to the system, the procedure will need to be repeated.&lt;/p&gt;
 &lt;p&gt;Luckily, I do not have any contractual obligations to give warnings regarding the alleged dangers of modifying the registry; so, without further ado, here is what you need to do in order to configure natural scrolling under Windows:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Open up RegEdit, and navigate to &lt;code&gt;Computer\HKEY\_LOCAL\_MACHINE\SYSTEM\CurrentControlSet\Enum\HID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Open up RegEdit, and navigate to &lt;code&gt;Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\HID&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Search for values named &lt;code&gt;FlipFlopWheel&lt;/code&gt;. (Do not forget to check the &amp;quot;Search in subtree&amp;quot; checkbox.)&lt;/li&gt;
 &lt;li&gt;For each value you find, if the data is 0, change the data to 1.&lt;/li&gt;
 &lt;li&gt;Restart Windows. (Logging out and back in will not work, because remember, this is a Windows-wide setting, not a per-user setting.)&lt;/li&gt;
@@ -7499,7 +7544,7 @@ href="https://www.city-tax.nl/" target="_blank"
 &lt;hr&gt;
 &lt;h3 id="absenteeism-from-work"&gt;Absenteeism from work
 &lt;/h3&gt;&lt;p&gt;Use of the word &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;absence&lt;/strong&gt;&lt;/em&gt; when referring to sick leave.&lt;/p&gt;
-&lt;p&gt;This is naive translation of the Dutch word &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt;, which means means &lt;strong&gt;absenteeism&lt;/strong&gt; in every-day language, but &lt;strong&gt;absence&lt;/strong&gt; in legal, official and generally formal contexts. Translating &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; in formal speech is not just wrong; it is &lt;em&gt;&lt;strong&gt;embarrassingly&lt;/strong&gt;&lt;/em&gt; wrong, because absenteeism specifically means &lt;em&gt;&lt;strong&gt;a habitual pattern of unexcused absence from duties&lt;/strong&gt;&lt;/em&gt;, and is therefore &lt;em&gt;&lt;strong&gt;presumptuous&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;insulting&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This is naive translation of the Dutch word &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt;, which means &lt;strong&gt;absenteeism&lt;/strong&gt; in every-day language, but &lt;strong&gt;absence&lt;/strong&gt; in legal, official and generally formal contexts. Translating &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; in formal speech is not just wrong; it is &lt;em&gt;&lt;strong&gt;embarrassingly&lt;/strong&gt;&lt;/em&gt; wrong, because absenteeism specifically means &lt;em&gt;&lt;strong&gt;a habitual pattern of unexcused absence from duties&lt;/strong&gt;&lt;/em&gt;, and is therefore &lt;em&gt;&lt;strong&gt;presumptuous&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;insulting&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;This mistake can even be seen in official Dutch government communications in English, for example here: &lt;a class="external"
 href="https://www.government.nl/themes/work/absenteeism-from-work" target="_blank"
 &gt;https://www.government.nl/themes/work/absenteeism-from-work&lt;/a&gt;&lt;/p&gt;

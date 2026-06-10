@@ -1,23 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Netherlands on Michael's Blog</title><link>https://blog.michael.gr/tags/netherlands/</link><description>Recent content in The Netherlands on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 20 May 2026 12:59:11 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/netherlands/index.xml" rel="self" type="application/rss+xml"/><item><title>Buienalarm vs- Buienradar</title><link>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</link><pubDate>Thu, 16 May 2024 14:00:09 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</guid><description>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/NL-relief-1600.jpg"
-width="1600"
-height="1000"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Netherlands on Michael's Blog</title><link>https://blog.michael.gr/tags/netherlands/</link><description>Recent content in The Netherlands on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 10 Jun 2026 08:35:30 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/netherlands/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</link><pubDate>Wed, 10 Jun 2026 07:35:16 +0200</pubDate><guid>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/cover.svg"
+loading="lazy"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;The previous post in this series is here: &lt;a
+href="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/"
+&gt;Buienradar 1, Buienalarm: 0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Below are two screenshots of the two websites as they looked in the morning.&lt;/p&gt;
+&lt;p&gt;Buienradar was predicting dry weather, Buienalarm was predicting light rain.&lt;/p&gt;
+&lt;p&gt;Then below them is a photo of the great outdoors, taken from my apartment, in the afternoon.&lt;/p&gt;
+&lt;p&gt;The weather was dry.&lt;/p&gt;
+&lt;p&gt;So: Buienradar: 2, Buienalarm: 0&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/2026-06-09-buinenradar.png"
+width="1894"
+height="2021"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="160"
-data-flex-basis="384px"
+data-flex-grow="93"
+data-flex-basis="224px"
 &gt;
-&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align: center"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/2026-06-09-buinealarm.png"
+width="1899"
+height="2021"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="93"
+data-flex-basis="225px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/PXL_20260609_160512286_1620.jpg"
+width="1620"
+height="1220"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+&gt;
+&lt;/p&gt;</description></item><item><title>Buienradar 1, Buienalarm 0</title><link>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</link><pubDate>Thu, 16 May 2024 14:00:09 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/cover.svg"
+loading="lazy"
+&gt;
+&lt;/p&gt;
 &lt;p&gt;So, today I had the chance to observe an example of the relative accuracy of buienalarm.nl vs. buienradar.nl&lt;/p&gt;
 &lt;h1 id="time-1300"&gt;Time: ~13:00
 &lt;/h1&gt;&lt;p&gt;Around 13:00 I wanted to know what the weather was going to be at 17:00, and I noticed that buienradar was predicting complete dryness,
@@ -76,7 +98,7 @@ data-flex-grow="132"
 data-flex-basis="318px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;Of course this is just a single observation; in another observation, the roles might be reversed. It will take many more comparisons before I can tell if there is a pattern.&lt;/p&gt;
+&lt;p&gt;Of course this is just a single observation; in another observation, the roles might be reversed. It will take many more comparisons before I can tell if there is a pattern. But for now, the score is: Buienradar: 1, Buienalarm: 0&lt;/p&gt;
 &lt;p&gt;Cover image: &amp;quot;Relief map of the European Netherlands&amp;quot; &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Netherlands#/media/File:2012-NL-prov-relief-3000.jpg" target="_blank"
 &gt;from Wikipedia&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Common mistakes Dutchies make in the use of English</title><link>https://blog.michael.gr/post/2022-01-dutchlish/</link><pubDate>Thu, 13 Jan 2022 12:17:42 +0000</pubDate><guid>https://blog.michael.gr/post/2022-01-dutchlish/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-01-dutchlish/media/dutch-tongue.svg"
@@ -244,7 +266,7 @@ href="https://www.city-tax.nl/" target="_blank"
 &lt;hr&gt;
 &lt;h3 id="absenteeism-from-work"&gt;Absenteeism from work
 &lt;/h3&gt;&lt;p&gt;Use of the word &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;absence&lt;/strong&gt;&lt;/em&gt; when referring to sick leave.&lt;/p&gt;
-&lt;p&gt;This is naive translation of the Dutch word &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt;, which means means &lt;strong&gt;absenteeism&lt;/strong&gt; in every-day language, but &lt;strong&gt;absence&lt;/strong&gt; in legal, official and generally formal contexts. Translating &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; in formal speech is not just wrong; it is &lt;em&gt;&lt;strong&gt;embarrassingly&lt;/strong&gt;&lt;/em&gt; wrong, because absenteeism specifically means &lt;em&gt;&lt;strong&gt;a habitual pattern of unexcused absence from duties&lt;/strong&gt;&lt;/em&gt;, and is therefore &lt;em&gt;&lt;strong&gt;presumptuous&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;insulting&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This is naive translation of the Dutch word &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt;, which means &lt;strong&gt;absenteeism&lt;/strong&gt; in every-day language, but &lt;strong&gt;absence&lt;/strong&gt; in legal, official and generally formal contexts. Translating &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;absenteeism&lt;/strong&gt;&lt;/em&gt; in formal speech is not just wrong; it is &lt;em&gt;&lt;strong&gt;embarrassingly&lt;/strong&gt;&lt;/em&gt; wrong, because absenteeism specifically means &lt;em&gt;&lt;strong&gt;a habitual pattern of unexcused absence from duties&lt;/strong&gt;&lt;/em&gt;, and is therefore &lt;em&gt;&lt;strong&gt;presumptuous&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;insulting&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;This mistake can even be seen in official Dutch government communications in English, for example here: &lt;a class="external"
 href="https://www.government.nl/themes/work/absenteeism-from-work" target="_blank"
 &gt;https://www.government.nl/themes/work/absenteeism-from-work&lt;/a&gt;&lt;/p&gt;
