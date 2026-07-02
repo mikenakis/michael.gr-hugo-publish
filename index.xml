@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 14 Jun 2026 20:10:50 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>Buienradar vs. Buienalarm: 2-0</title><link>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</link><pubDate>Wed, 10 Jun 2026 07:35:16 +0200</pubDate><guid>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/cover.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 02 Jul 2026 12:34:28 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>Simon Brown at Miro, Amsterdam</title><link>https://blog.michael.gr/post/2026-07-01-simon-brown/</link><pubDate>Thu, 02 Jul 2026 08:23:44 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-01-simon-brown/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-01-simon-brown/media/PXL_20260701_171017403_1620.jpg"
+width="1620"
+height="1001"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="161"
+data-flex-basis="388px"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;I went to see a talk by Simon Brown organized by the &lt;a class="external"
+href="https://amsterdamjug.com/" target="_blank"
+&gt;Amsterdam Java Users Group (JUG)&lt;/a&gt; in the (quite awesome, to be honest) facilities of &lt;a class="external"
+href="https://miro.com" target="_blank"
+&gt;Miro&lt;/a&gt; in Amsterdam. (&lt;a class="external"
+href="https://www.youtube.com/watch?v=tv5TLrYrqSE" target="_blank"
+&gt;YouTube&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Simon Brown has a new book out, &lt;a class="external"
+href="https://www.oreilly.com/library/view/the-c4-model/9798341660113/" target="_blank"
+&gt;&amp;quot;The C4 Model&amp;quot;, published by O'Reilly&lt;/a&gt;. It will be available for purchase in the next few days. The animal on the cover is supposed to be a &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Western_tree_hyrax" target="_blank"
+&gt;Western Tree Hyrax&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Simon said that when O'Reilly contacted him about writing a book he told them that he did not have much material, so it would necessarily be a small book. O'Reilly replied that it's okay, times have changed, people do not actually like big books nowadays, they prefer small books. (I guess this is one more way, in the already long list of ways, in which we are witnessing the demise of humankind.)&lt;/p&gt;
+&lt;p&gt;Since I do not often travel to Amsterdam, I suffered from a bit of anxiety to be there on time, and as a result I arrived there very early. So, I had the opportunity to have a chat with the very friendly organizer &lt;a class="external"
+href="https://nl.linkedin.com/in/geertjanwielenga" target="_blank"
+&gt;Geertjan Wielenga&lt;/a&gt;, who then introduced me to Simon, so I had the chance to have a chat with him too, one-on-one, for a decent length of time, which is something that I was completely unprepared for.&lt;/p&gt;
+&lt;p&gt;I admire Simon brown for caring about the same things that I care about, and for having skill and charisma in talking about those things, but the truth of the matter is that we disagree in just about everything. (-:=&lt;/p&gt;
+&lt;p&gt;He believes that software architecture should be strictly &lt;strong&gt;descriptive (suggestive)&lt;/strong&gt;, I believe it should be &lt;strong&gt;prescriptive (authoritative)&lt;/strong&gt;. I mentioned to him that as things stand today, there is nothing to guarantee to me, the architect, that the programmers and the devops folk have implemented the system exactly as I designed it. Furthermore, as the system evolves, there is nothing to guarantee that the design still matches the implementation. I brought electronic design as an example of what we should ideally have, where a schematic diagram can be sent to a manufacturing shop that will turn it into a functioning electronic board with close to zero human intervention, and he indicated that he was completely familiar with the paradigm.&lt;/p&gt;
+&lt;p&gt;He said that some people will argue that in software we do not need authoritative architecture because we have the code. I counter-argued that this is equivalent to saying that the design of a one-million-line-of-source-code software system is the million lines of source code that make up that system, which is as preposterous as saying that the design of the Great Wall of China is a listing of all the bricks that make up the Great Wall of China. Simon said that model driven architecture was tried in the beginning of the 2000s and it was not a success. He mentioned that the failed attempts invariably involved code generation. I think we both agreed that code generation as a central feature of a software architecture methodology was a bad idea.&lt;/p&gt;
+&lt;p&gt;Nonetheless, Simon Brown believes that code is one of the concerns of software architecture. (That's what the fourth &amp;quot;C&amp;quot; stands for in C4.) I believe that architecture need not, and should not, be concerned with code.&lt;/p&gt;
+&lt;p&gt;Moving on above the level of code, Simon Brown is quite insistent in his C4 model that we need exactly three more layers, with fixed responsibilities: Components, Containers, and Context. People have brought to his attention that this is quite unmanageable when we have dozens or even hundreds of components inside a container, and his answer to this is that in this case, we should choose to visualize the components as little circles instead of boxes, which is essentially saying &amp;quot;well, draw them smaller!&amp;quot;. In contrast, I favor the notion of Hierarchical System Composition, which means that any component can in turn be a container, to an arbitrary level of nesting. Also, a container can be thought of as acting as &amp;quot;context&amp;quot; for its constituent components, so we do not need context as a separate layer, either.&lt;/p&gt;
+&lt;p&gt;So, when I wrote that we disagree in just about everything, I meant it. But I still like him, he is a cool guy.&lt;/p&gt;
+&lt;p&gt;Among other take-aways from Simon Brown's talk, A.I. does not seem to (currently?) fare particularly well either with building C4 designs by examining source code bases, or with writing source code from C4 designs.&lt;/p&gt;</description></item><item><title>Buienradar vs. Buienalarm: 2-0</title><link>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</link><pubDate>Wed, 10 Jun 2026 07:35:16 +0200</pubDate><guid>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/cover.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -137,7 +168,7 @@ loading="lazy"
 &lt;/h3&gt;&lt;p&gt;I started programming in the mid-eighties. Over the decades I have done a lot of work with GUIs. I have written GUI code in several different programming languages, and for several different GUI frameworks in each language. In Java alone, I have worked with AWT, Swing, and SWT. I have also built an entire windowed GUI framework from scratch, based on just 3 primitives provided to me by a graphics engine: a draw-image primitive, a draw-text primitive, and a measure-text primitive allowing me to implement a layout mechanism. Then, on top of that GUI, I wrote a big part of the application that the GUI was built for. That's a lot of GUI work. Until 2019, all that work had been on conventional (non-MVVM) GUI frameworks.&lt;/p&gt;
 &lt;h3 id="the-noise-in-the-search-results"&gt;The noise in the search results
 &lt;/h3&gt;&lt;p&gt;From the late 1990s until the late 2010s I was programming in Java for work. For several years during that time I was also experimenting with C# at home, in the evenings. The first GUI framework that was made available for C# was Windows Forms, (WinForms,) and it suited me fine because it was a conventional GUI framework, so at a fundamental level it worked in a way similar to all other GUI frameworks I had previously worked with. Even the terminology used by WinForms was familiar to me, because I had previously worked with Win32 GDI and with MFC during my C++ years.&lt;/p&gt;
-&lt;p&gt;Then around 2010 I started using Stack Overflow, and I noticed something ugly happening: as I was searching for information on how to accomplish things with C# and --what else?-- WinForms, my search results were being polluted more and more with completely irrelevant, preposterously complicated, and hopelessly incomprehensible &lt;em&gt;&lt;strong&gt;noise&lt;/strong&gt;&lt;/em&gt; pertaining to some new GUI framework called WPF, which had been introduced by Microsoft as an alternative to WinForms. Why would anyone want to use anything but WinForms was completely beyond me, so I kept treating those results as noise.&lt;/p&gt;
+&lt;p&gt;Then in the late 2000s I started using Stack Overflow, and I noticed something ugly happening: as I was searching for information on how to accomplish things with C# and --what else?-- WinForms, my search results were being polluted more and more with completely irrelevant, preposterously complicated, and hopelessly incomprehensible &lt;em&gt;&lt;strong&gt;noise&lt;/strong&gt;&lt;/em&gt; pertaining to some new GUI framework called WPF, which had been introduced by Microsoft as an alternative to WinForms. Why would anyone want to use anything but WinForms was completely beyond me, so I kept treating those results as noise.&lt;/p&gt;
 &lt;p&gt;At some point I decided to take a look into WPF to see what the fuss was all about, and I very quickly came to the conclusion that if Microsoft wanted people to start using this new framework, they should have made it... understandable. There was also talk about some MVVM thing, which was supposed to be some high level concept that WPF was based on; I did not see the point in it. As far as I was concerned, the case was closed, and I never needed to take a second look at WPF and MVVM again.&lt;/p&gt;
 &lt;p&gt;Little did I know that ten years later I was going to take not only a second look at them, but much more than that.&lt;/p&gt;
 &lt;h3 id="the-3-major-problems"&gt;The 3 major problems
@@ -3979,7 +4010,7 @@ data-flex-grow="100"
 data-flex-basis="240px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;For reference, if you wish.&lt;/p&gt;</description></item><item><title>Migrating a project from DotNet Framework 4-7-2 to DotNet 7</title><link>https://blog.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/</link><pubDate>Fri, 21 Jul 2023 11:33:13 +0000</pubDate><guid>https://blog.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/media/dotnet-framework-4.7.2-to-dotnet-7.jpg"
+&lt;p&gt;For reference, if you wish.&lt;/p&gt;</description></item><item><title>Migrating a dotnet project from net472 to net7</title><link>https://blog.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/</link><pubDate>Fri, 21 Jul 2023 11:33:13 +0000</pubDate><guid>https://blog.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-07-21-migrating-project-from-dotnet-framework/media/dotnet-framework-4.7.2-to-dotnet-7.jpg"
 width="1173"
 height="437"
 loading="lazy"
@@ -11395,16 +11426,16 @@ href="https://en.wikipedia.org/wiki/VisualWorks" target="_blank"
 &gt;certain Smalltalk circles&lt;/a&gt; as early as in the 1980s, and that's where we lose track of it: for all we know, it may have originated in Ancient Egypt.&lt;/li&gt;
 &lt;li&gt;The acronym stands for &lt;em&gt;Model&lt;/em&gt;, &lt;em&gt;View&lt;/em&gt;, &lt;em&gt;Viewmodel&lt;/em&gt;.
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/em&gt; refers to the main &lt;em&gt;estate&lt;/em&gt; data model of our application; it is optional and largely irrelevant, so it will only be mentioned a couple of times here.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/em&gt; refers to the main &lt;em&gt;estate&lt;/em&gt; data model of our application; it is optional and largely irrelevant, so we will not be talking much about it here.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;View&lt;/strong&gt;&lt;/em&gt; refers to the user interface.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Viewmodel&lt;/strong&gt;&lt;/em&gt; is the secret sauce, but in essence it refers to the application logic.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Application logic is placed in objects known as viewmodels. A viewmodel does the following:
 &lt;ul&gt;
-&lt;li&gt;Publicly exposes state, part of which is publicly mutable.&lt;/li&gt;
-&lt;li&gt;Issues notifications about any mutation of its state.&lt;/li&gt;
-&lt;li&gt;Responds to state mutations with behavior, such as querying and updating data stores, issuing events in some messaging backbone, etc.&lt;/li&gt;
+&lt;li&gt;Publicly exposes state, part of which is publicly (externally) mutable.&lt;/li&gt;
+&lt;li&gt;Issues notification events about either internally or externally induced mutations of its state.&lt;/li&gt;
+&lt;li&gt;Responds to state mutations with behavior, such as querying and updating data stores, sending additional events into some messaging backbone, etc.&lt;/li&gt;
 &lt;li&gt;Manifests its behavior by means of further modifying its own state, which in turn generates more state mutation notifications.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;

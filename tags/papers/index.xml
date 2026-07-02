@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 24 May 2026 20:00:11 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Papers on Michael's Blog</title><link>https://blog.michael.gr/tags/papers/</link><description>Recent content in Papers on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 28 Jun 2026 15:58:25 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/papers/index.xml" rel="self" type="application/rss+xml"/><item><title>Refactoring: strong vs weak</title><link>https://blog.michael.gr/post/2025-09-refactoring/</link><pubDate>Fri, 12 Sep 2025 10:50:44 +0000</pubDate><guid>https://blog.michael.gr/post/2025-09-refactoring/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-09-refactoring/media/refactoring.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -3394,16 +3394,16 @@ href="https://en.wikipedia.org/wiki/VisualWorks" target="_blank"
 &gt;certain Smalltalk circles&lt;/a&gt; as early as in the 1980s, and that's where we lose track of it: for all we know, it may have originated in Ancient Egypt.&lt;/li&gt;
 &lt;li&gt;The acronym stands for &lt;em&gt;Model&lt;/em&gt;, &lt;em&gt;View&lt;/em&gt;, &lt;em&gt;Viewmodel&lt;/em&gt;.
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/em&gt; refers to the main &lt;em&gt;estate&lt;/em&gt; data model of our application; it is optional and largely irrelevant, so it will only be mentioned a couple of times here.&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;&lt;strong&gt;Model&lt;/strong&gt;&lt;/em&gt; refers to the main &lt;em&gt;estate&lt;/em&gt; data model of our application; it is optional and largely irrelevant, so we will not be talking much about it here.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;View&lt;/strong&gt;&lt;/em&gt; refers to the user interface.&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;&lt;strong&gt;Viewmodel&lt;/strong&gt;&lt;/em&gt; is the secret sauce, but in essence it refers to the application logic.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Application logic is placed in objects known as viewmodels. A viewmodel does the following:
 &lt;ul&gt;
-&lt;li&gt;Publicly exposes state, part of which is publicly mutable.&lt;/li&gt;
-&lt;li&gt;Issues notifications about any mutation of its state.&lt;/li&gt;
-&lt;li&gt;Responds to state mutations with behavior, such as querying and updating data stores, issuing events in some messaging backbone, etc.&lt;/li&gt;
+&lt;li&gt;Publicly exposes state, part of which is publicly (externally) mutable.&lt;/li&gt;
+&lt;li&gt;Issues notification events about either internally or externally induced mutations of its state.&lt;/li&gt;
+&lt;li&gt;Responds to state mutations with behavior, such as querying and updating data stores, sending additional events into some messaging backbone, etc.&lt;/li&gt;
 &lt;li&gt;Manifests its behavior by means of further modifying its own state, which in turn generates more state mutation notifications.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
