@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grumpy on Michael's Blog</title><link>https://blog.michael.gr/tags/grumpy/</link><description>Recent content in Grumpy on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 03 Jul 2026 20:49:33 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/grumpy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-06-visual-studio-solutions/media/microsoft-visual-studio-2022-logo.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Grumpy on Michael's Blog</title><link>https://blog.michael.gr/tags/grumpy/</link><description>Recent content in Grumpy on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 04 Jul 2026 13:05:43 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/grumpy/index.xml" rel="self" type="application/rss+xml"/><item><title>How to organize a Visual Studio Solution</title><link>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</link><pubDate>Fri, 07 Jun 2024 15:58:23 +0000</pubDate><guid>https://blog.michael.gr/post/2024-06-visual-studio-solutions/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-06-visual-studio-solutions/media/microsoft-visual-studio-2022-logo.svg"
 loading="lazy"
 &gt;
 Visual Studio is a capricious product, and its &amp;quot;Solution&amp;quot; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
@@ -593,31 +593,31 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;UML is probably very close to the top of the list of things that everyone mentions, but nobody uses, and this is due to a number of good reasons:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;It is incredibly comprehensive, to the point where its sheer size acts as a very strong deterrent to most people attempting to learn it. There are about 20 different types of diagrams for different purposes, each with its own complete set of meticulously detailed notation and rules. UML only begins to make sense once you realize that it has mostly been an effort to catalogue every imaginable type of diagram used in software development, and to standardize the notation used in each one of them. However, the vast majority of those types of diagrams are anywhere from largely irrelevant to completely irrelevant to our day to day job, and even if you pick a single diagram type that you happen to have some use for, and decide to learn just that one, the notation for a single type of diagram is still so comprehensive that the task is daunting.&lt;/li&gt;
+&lt;li&gt;It is incredibly comprehensive, to the point where its sheer size acts as a very strong deterrent to most people attempting to learn it. There are about 20 different types of diagrams for different purposes, each with its own complete set of meticulously detailed notation and rules. UML only begins to make sense once you realize that it has mostly been an effort to catalogue every imaginable type of diagram used in software development, and to standardize the notation of every single one of them. However, the vast majority of those types of diagrams are anywhere from largely irrelevant to completely irrelevant to our day to day job, and even if you pick a single type of diagram that you think you might have some use for, and decide to learn just that one, the notation for even a single type of diagram is still so comprehensive that the task is daunting.&lt;/li&gt;
 &lt;li&gt;Most of UML is so rarely useful that it is not worth the learning effort. In the extremely rare event that a software development team is to have a meeting in which they could benefit from having an &lt;em&gt;&lt;strong&gt;Interaction Overview Diagram&lt;/strong&gt;&lt;/em&gt; to point at, it will be a lot easier to use some ad-hoc but intuitive notation to get the point across, than to only schedule the meeting &lt;em&gt;&lt;strong&gt;after&lt;/strong&gt;&lt;/em&gt; every attendee has completed a UML course to refresh upon the intricacies of the &lt;em&gt;UML Interaction Overview Diagram&lt;/em&gt;.&lt;/li&gt;
 &lt;li&gt;The type of UML diagram that has received most attention in the software engineering profession is the &lt;em&gt;&lt;strong&gt;UML Class Diagram&lt;/strong&gt;&lt;/em&gt; (&lt;a class="external"
 href="https://en.wikipedia.org/wiki/Class_diagram" target="_blank"
 &gt;see Wikipedia&lt;/a&gt;) which deals with representing a class, and its relationships with other classes. Unfortunately:
 &lt;ul&gt;
-&lt;li&gt;The UML Class Diagram insists on prescribing a very specific type of notation for everything about a class, and this notation is not always intuitive, thus posing the same obstacles to understanding as posed by program code written in apocryphal syntax and convoluted structure: in both cases, it is all jargon. This might not be an issue for those who have already gone through the trouble of learning the jargon, but the uninitiated are bound to question the usefulness of the entire exercise.&lt;/li&gt;
+&lt;li&gt;The UML Class Diagram insists on prescribing a very specific type of notation for every little aspect of a class, and this notation is not always intuitive, thus posing the same obstacles to understanding as posed by program code written in apocryphal syntax and convoluted structure: in both cases, it is all jargon. This might not be an issue for those who have already gone through the trouble of learning the jargon, but the uninitiated are bound to question the usefulness of the entire exercise.&lt;/li&gt;
 &lt;li&gt;The UML Class Diagram prescribes its notation in excruciatingly meticulous detail, so there is no abstraction, and no information hiding: the amount of information contained in a UML Class Diagram is roughly equivalent to the amount of information contained in a C or C++ header file, or in a Java Interface, so there is virtually nothing to be gained by looking at one vs. the other. This in turn seriously begs the question of why should we be doing double book-keeping.&lt;/li&gt;
-&lt;li&gt;The UML Class Diagram is much too low-level and too finely detailed to be pertinent to software systems design, where the unit of interest is the system component, corresponding to an entire module, rather than individual classes within a module.&lt;/li&gt;
+&lt;li&gt;The UML Class Diagram is much too low-level and too finely detailed to be pertinent to software design, where the unit of interest is the component, corresponding to an entire module, rather than an individual class.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;UML is mostly used as documentation, meaning that its role tends to be indicative or suggestive, and usually non-enforceable and non-materializable. This means that mistakes made in the use of the meticulously detailed notation generally go undetected, or might be detected by colleagues, but not by some automated validation tools, because for most types of UML diagrams, there exist no such tools.&lt;/li&gt;
-&lt;li&gt;UML is trying to solve problems which do not exist: When a human needs to communicate something to a machine, this does admittedly have to be done in an inambiguous fashion, which makes special notation, i.e. jargon, necessary. However, when there is no machine involved, and a human simply needs to communicate something to other humans, what matters most is to get the point across, so jargon is actually undesirable, despite the unambiguousness that it would bring. That is okay, because humans thrive in ambiguity. In other words, UML is an attempt to apply a rigid engineering discipline to a form of communication which is fine as it is: free and fluid. (One of the &amp;quot;Three Amigos&amp;quot; that created UML had a military background; coincidence? maybe.)&lt;/li&gt;
+&lt;li&gt;UML is mostly used as documentation, meaning that its role tends to be indicative or suggestive, and usually non-enforceable and non-materializable. This means that mistakes made in the use of the meticulously detailed notation generally go unnoticed, or might be noticed by colleagues, but not by some automated validation tools, because for most types of UML diagrams, there exist no such tools.&lt;/li&gt;
+&lt;li&gt;UML is trying to solve a problem that does not exist: When a human needs to communicate something to a machine, this does admittedly have to be done in an inambiguous fashion, which makes special notation, i.e. jargon, necessary. However, when there is no machine involved, and a human simply needs to communicate something to other humans, what matters most is to get the point across, so jargon is actually undesirable, despite the unambiguousness that it would bring. That is okay, because humans are perfectly okay with ambiguity; as a matter of fact, humans thrive in ambiguity. So, UML is an attempt to apply a rigid engineering discipline to a form of communication which is fine as it is: free and fluid. (One of the &amp;quot;Three Amigos&amp;quot; that created UML had a military background; coincidence? maybe.)&lt;/li&gt;
 &lt;li&gt;In an attempt to make UML more pertinent to the software development process, some UML tools offer some automatic code generation features. I hate to break it to the creators and users of such tools, but automatic code generation is almost always a bad idea, because each time the design changes, code generation must be re-applied, but this invariably results in the following bad things happening to code that has already been hand-written:
 &lt;ul&gt;
-&lt;li&gt;Hand-written code is overwritten by auto-generated code and thus forever lost, or&lt;/li&gt;
-&lt;li&gt;Hand-written code does not compile anymore due to dependencies on auto-generated definitions which have now changed, or, more often,&lt;/li&gt;
+&lt;li&gt;Hand-written code is overwritten by auto-generated stubs and thus forever lost; or:&lt;/li&gt;
+&lt;li&gt;Hand-written code does not compile anymore due to dependencies on auto-generated definitions which have now changed; or, more often:&lt;/li&gt;
 &lt;li&gt;Both of the above.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;The idea that you can apply automatic code generation once and never repeat it stems from the &amp;quot;all design up-front&amp;quot; doctrine, which may have been strong back in the 1990s when the foundations of UML were laid down, but it was one of the most stupid ideas that humans ever had; it suffered its well-deserved death very soon thereafter, and it has been dead since then.&lt;/li&gt;
+&lt;li&gt;The idea that you can apply automatic code generation once and never repeat it stems from the &amp;quot;all design up-front&amp;quot; doctrine, which may have been strong back in the early 1990s, when the foundations of UML were being laid down, but as it turns out, it was one of the most stupid ideas that humans ever had; it suffered its well-deserved death in the early 2000s, and it has been dead since then. That was more than 20 years ago.&lt;/li&gt;
 &lt;li&gt;From the plethora of diagram types offered by UML, the only one that could perhaps be useful in our daily jobs is the &lt;em&gt;&lt;strong&gt;UML Component Diagram&lt;/strong&gt;&lt;/em&gt; (&lt;a class="external"
 href="https://en.wikipedia.org/wiki/Component_diagram" target="_blank"
 &gt;see Wikipedia&lt;/a&gt;) but there exist no tools that I am aware of that are capable of either guiding the composition of such a diagram from existing software components, or materializing such a diagram into a running system. Furthermore, if any such tools were to be introduced, they are unlikely to be well-received, because by now people have developed a distaste towards UML and anything associated with it.&lt;/li&gt;
-&lt;li&gt;UML literature follows a lofty &lt;em&gt;&lt;strong&gt;standardspeak&lt;/strong&gt;&lt;/em&gt; writing style which is not just incomprehensible, but actually annoyingly incomprehensible. For details, keep reading.&lt;/li&gt;
+&lt;li&gt;UML literature follows a &lt;em&gt;&lt;strong&gt;standardspeak&lt;/strong&gt;&lt;/em&gt;&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; writing style which is not just incomprehensible, but actually &lt;em&gt;&lt;strong&gt;annoyingly incomprehensible&lt;/strong&gt;&lt;/em&gt;. For details, keep reading.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;So, I tried looking up the term &amp;quot;collaboration&amp;quot; in UML literature, and here is what I found &lt;a class="external"
 href="https://www.ibm.com/docs/en/idsa?topic=diagrams-collaborations" target="_blank"
@@ -631,19 +631,22 @@ href="https://www.ibm.com/docs/en/idsa?topic=diagrams-collaborations" target="_b
 &lt;p&gt;The definition depends on other definitions. This happens everywhere in UML. So, in order to understand a certain term you first have to understand other terms, and quite often the definitions make circles, so in order to understand anything you first have to understand everything. Essentially, you have to have superpowers.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;This kind of looks like a recursive definition. They may be implying that there is something hierarchical in the nature of the concept, but they are not saying it. This is an example of a particular kind of wooden language which is written not with the goal of being understood, but instead with the goal of being correct. Note how convenient this is for the authors: since nobody understands it, nobody can tell whether it is correct or not.&lt;/p&gt;
+&lt;p&gt;This kind of looks like a recursive definition. They may be implying that there is something hierarchical in the nature of the concept, but they are not saying it. This is an example of a particular kind of wooden language which is written not with the goal of being understood, but instead with the goal of not being wrong. Note how convenient this is for the author: since nobody understands it, nobody can tell whether it is wrong or not.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Okay, let's look at the next sentence:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;You use a collaboration when you want to define only the roles and connections that are required to accomplish a specific goal of the collaboration.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Surprise! recursion again. This is the point where I, personally, am out. I am done. &lt;em&gt;&lt;strong&gt;I am fucking done.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Surprise! recursion again.&lt;/p&gt;
+&lt;p&gt;This is the point where I, personally, am out.&lt;/p&gt;
+&lt;p&gt;I am done.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;I am fucking done.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;And that's how it goes with UML.&lt;/p&gt;
 &lt;p&gt;To summarize:&lt;/p&gt;
 &lt;p&gt;UML is &lt;em&gt;&lt;strong&gt;insufferably baroque&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;It should have never been, and it should cease to be.&lt;/p&gt;
-&lt;p&gt;It should be let go into the good night.&lt;/p&gt;
+&lt;p&gt;It should be let go gently into the good night.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-08-uml/media/grumpy-cat-uml.jpg"
 width="1715"
 height="1553"
@@ -657,7 +660,17 @@ data-flex-basis="265px"
 &lt;hr&gt;
 &lt;p&gt;Cover image: The UML logo, by Object Management Group®, Inc. from &lt;a class="external"
 href="https://www.uml.org/" target="_blank"
-&gt;uml.org&lt;/a&gt;; Public Domain.&lt;/p&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
+&gt;uml.org&lt;/a&gt;; Public Domain.&lt;/p&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;strong&gt;standardspeak&lt;/strong&gt;: I just coined this term in the fashion of Orwellian &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Newspeak" target="_blank"
+&gt;Newspeak&lt;/a&gt;.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
 width="2775"
 height="1684"
 loading="lazy" title="Illustration from &amp;#39;The history of slavery and the slave trade, ancient and modern&amp;#39; by Blake, William O (1860) from wikimedia.org"
