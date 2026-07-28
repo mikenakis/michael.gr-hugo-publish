@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 27 Jul 2026 16:28:09 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-my-movie-list/media/movie-list.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 28 Jul 2026 02:57:35 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-my-movie-list/media/movie-list.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -1490,18 +1490,32 @@ href="https://playground.microsoft.ai/chat?model=mai-voice-2" target="_blank"
 &gt;MAI (Microsoft AI) playground&lt;/a&gt; because it is free, and it is incredibly, astonishingly, mind-blowingly good. I experimented a bit and found that voice &amp;quot;Harper&amp;quot; with style &amp;quot;Softvoice&amp;quot; produced excellent results for my purposes. It does have a limit on the amount of text that it will process, so I had to do two prompts and receive two audio files.&lt;/p&gt;
 &lt;p&gt;For editing the audio, I used &lt;a class="external"
 href="https://www.audacityteam.org/" target="_blank"
-&gt;Audacity&lt;/a&gt; because it is a well-known, free, and decently capable audio editor. Here is what I did in terms of audio editing:
-1. I very aggressively de-essed the speech.
-- After a lot of experimentation, I realized I had to use the Filter Curve EQ effect to cut out everything above about 5 kilohertz by configuring it as follows:
-1. From 20 Hz to 4 kHz a flat line at 0 dB, then
-2. from 4 kHz to 6.1 kHz a steep slope dropping from 0 dB down to -27 dB, and then
-3. from 6.1 kHz to 20 kHz a flat line at -27 dB
-(In retrospect, I may have de-essed it a bit too aggressively in version 1; I will try to fix this in version 2.)
-2. I slowed down the speech.
-- Audio editing software have this awesome feature which allows us to alter the speed or the pitch of audio independently of one another; So, it is possible to slow down the audio without a corresponding drop in the pitch. I tried 75% speed and it was too slow, but 80% speed was just about right.
-3. I inserted longer silences where I thought they were needed.
-- In order to give the listener plenty of time to follow each instruction before the next instruction starts.
-4. I mixed it with the music. (See below.)&lt;/p&gt;
+&gt;Audacity&lt;/a&gt; because it is a well-known, free, and decently capable audio editor. Here is what I did in terms of audio editing:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I very aggressively de-essed the speech.
+&lt;ul&gt;
+&lt;li&gt;After a lot of experimentation, I realized I had to use the Filter Curve EQ effect to cut out everything above about 5 kilohertz by configuring it as follows:
+&lt;ol&gt;
+&lt;li&gt;From 20 Hz to 4 kHz a flat line at 0 dB, then&lt;/li&gt;
+&lt;li&gt;from 4 kHz to 6.1 kHz a steep slope dropping from 0 dB down to -27 dB, and then&lt;/li&gt;
+&lt;li&gt;from 6.1 kHz to 20 kHz a flat line at -27 dB
+(In retrospect, I may have de-essed it a bit too aggressively in version 1; I will try to fix this in version 2.)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I slowed down the speech.
+&lt;ul&gt;
+&lt;li&gt;Audio editing software have this awesome feature which allows us to alter the speed or the pitch of audio independently of one another; So, it is possible to slow down the audio without a corresponding drop in the pitch. I tried 75% speed and it was too slow, but 80% speed was just about right.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I inserted longer silences where I thought they were needed.
+&lt;ul&gt;
+&lt;li&gt;In order to give the listener plenty of time to follow each instruction before the next instruction starts.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;I mixed it with the music. (See below.)&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;For the music, I used Google Gemini, because it is one of the few services that a) actually work, and b) do actually understand what I mean when I say &amp;quot;in the style of Brian Eno's ambient music&amp;quot;. It only creates 30-second tracks, which is a joke, but for my purposes it was okay because ambient music can be repeated over and over again, especially when it is in the background with human voice in the foreground.&lt;/p&gt;
 &lt;p&gt;I decided that music is necessary as an introduction, in order to give me some time from the moment I press &amp;quot;play&amp;quot; on the bedside phone, to turn off the light, lie on the bed, and cover myself with the quilt before the instructions begin. In the beginning I was thinking of using several seconds of silence before the instructions begin, but I quickly realized that this would not work, because the problem with silence is that you never know whether you have actually started it, or whether you made a mistake and nothing is happening.&lt;/p&gt;
 &lt;p&gt;Finding an A.I. service that would generate the music according to my specifications, and for free, was the hardest part.&lt;/p&gt;
@@ -1513,12 +1527,12 @@ href="https://www.audacityteam.org/" target="_blank"
 &lt;li&gt;Soundraw did not give me any text box to describe what I want in text; instead, it follows a multiple choice quiz approach, which is, of course, so stupendously limited as to be completely useless.&lt;/li&gt;
 &lt;li&gt;Only &lt;a class="external"
 href="https://playground.microsoft.ai/chat?model=mai-voice-2" target="_blank"
-&gt;MAI (Microsoft AI) playground&lt;/a&gt; worked for me, although its 30-second limitation makes it as useless as the rest for most purposes.&lt;/li&gt;
+&gt;MAI (Microsoft AI) playground&lt;/a&gt; worked for me, although for most purposes, its 30-second limitation makes it as useless as the rest.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I will leave you with a quote from Lloyd Bud Winter:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Demand perfection of yourself and you will seldom attain it.
-Fear of making a mistake is the biggest single cause of making one.
+&lt;p&gt;Demand perfection of yourself and you will seldom attain it.&lt;br&gt;
+Fear of making a mistake is the biggest single cause of making one.&lt;br&gt;
 Relax: pursue excellence, not perfection.&lt;/p&gt;
 &lt;p&gt;— Lloyd (Bud) Winter&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>The Heron and the Hawk</title><link>https://blog.michael.gr/post/2026-07-10-heron-and-hawk/</link><pubDate>Fri, 10 Jul 2026 12:21:41 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-10-heron-and-hawk/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-10-heron-and-hawk/media/heron-and-hawk.svg"
