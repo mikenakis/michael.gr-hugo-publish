@@ -35,8 +35,8 @@ href="https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-
 &lt;p&gt;In this case, one repository was called Bathyscaphe, the other was called BathyscapheClaims, but each repository was trying to deploy an artifact called bathyscaphe-claims.&lt;/p&gt;
 &lt;p&gt;I changed the name of the artifact in the second repository from bathyscaphe-claims to bathyscaphe-claims2 and it worked.&lt;/p&gt;
 &lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
-width="2775"
-height="1684"
+width="1620"
+height="983"
 loading="lazy" title="Illustration from &amp;#39;The history of slavery and the slave trade, ancient and modern&amp;#39; by Blake, William O (1860) from wikimedia.org"
 class="gallery-image"
 data-flex-grow="164"

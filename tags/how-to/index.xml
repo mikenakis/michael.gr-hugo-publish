@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How-to on Michael's Blog</title><link>https://blog.michael.gr/tags/how-to/</link><description>Recent content in How-to on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 28 Jul 2026 02:57:35 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>The Bud Winter Sleeping Technique</title><link>https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/media/lloyd-bud-winter.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>How-to on Michael's Blog</title><link>https://blog.michael.gr/tags/how-to/</link><description>Recent content in How-to on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 29 Jul 2026 13:19:14 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/how-to/index.xml" rel="self" type="application/rss+xml"/><item><title>The Bud Winter Sleeping Technique</title><link>https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/media/lloyd-bud-winter.jpg"
 width="300"
 height="300"
 loading="lazy"
@@ -11,7 +11,7 @@ data-flex-basis="240px"
 href="https://en.wikipedia.org/wiki/Bud_Winter" target="_blank"
 &gt;Lloyd Bud Winter&lt;/a&gt;, originally intended to help Olympic athletes relax, and later adopted by the U.S. military. It can, supposedly, make someone fall asleep within a couple of minutes.&lt;/p&gt;
 &lt;p&gt;The technique is quite simple, but it requires consistent daily practice to train your nervous system to flip the &amp;quot;sleep switch&amp;quot;. Reports have allegedly shown that in the military, after 6 weeks of exercising this method daily, it has a success rate of around 96%. If that is true, it is phenomenal.&lt;/p&gt;
-&lt;p&gt;I created an adaptation of Bud Winter's technique, as a flat list of steps suitable for listening to as a narration when going to sleep. I call it an adaptation because I have removed some stuff that are unsuitable for do-as-you-hear narration, and I have added a few more steps at the end about additional sensory detail, which I saw proposed somewhere, but I do not know whether they exist in the original. I also moved the steps about relaxing the torso after the steps about relaxing the arms, because I found that in order to settle my torso I often have to use my arms, but then this may leave some of the muscles in my arms under tension, requiring the arms to be relaxed again.&lt;/p&gt;
+&lt;p&gt;I created an adaptation of Bud Winter's technique, as a flat list of steps suitable for listening to as a narration when going to sleep. I call it an adaptation because I have removed some stuff that are unsuitable for do-as-you-hear narration, and I have added a few more steps at the end about additional sensory detail, which I saw proposed somewhere, but probably did not exist in the original. I also moved the steps about relaxing the torso after the steps about relaxing the arms, because I found that in order to settle my torso I often have to use my arms, but if I do that then I need to repeat the relaxing of the arms, so why not do that just once, after settling the torso.&lt;/p&gt;
 &lt;p&gt;Here it is:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Close your eyes.&lt;/li&gt;
@@ -52,9 +52,9 @@ href="https://en.wikipedia.org/wiki/Bud_Winter" target="_blank"
 &lt;li&gt;soil, moss, and grass from the shoreline,&lt;/li&gt;
 &lt;li&gt;green notes from water plants, and trees around the lake.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I have tried the technique a few times so far, and each time I am surprised to find that certain groups of muscles (for example, the muscles around my eyes) are in tension without me realizing it, and I only become aware of it when the voice brings my attention to those muscles, telling me to relax them. So, it seems like it does really help.&lt;/p&gt;
+&lt;p&gt;I have tried the technique a few times so far, and each time I am surprised to find that certain groups of muscles (for example, the muscles around my eyes) are in tension, and I only realize it when the voice brings my attention to those muscles, telling me to relax them. So, it seems like it does really help.&lt;/p&gt;
 &lt;p&gt;I created an mp3 file so that I can listen to it when going to sleep.&lt;/p&gt;
-&lt;p&gt;Here is version 1, there will be better versions:&lt;/p&gt;
+&lt;p&gt;Here is version 1; there will be better versions:&lt;/p&gt;
 &lt;audio controls preload="metadata"&gt;
 &lt;source src="media/bud-lloyd-winter-sleeping-technique.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
@@ -101,7 +101,7 @@ href="https://www.audacityteam.org/" target="_blank"
 &lt;li&gt;Soundraw did not give me any text box to describe what I want in text; instead, it follows a multiple choice quiz approach, which is, of course, so stupendously limited as to be completely useless.&lt;/li&gt;
 &lt;li&gt;Only &lt;a class="external"
 href="https://playground.microsoft.ai/chat?model=mai-voice-2" target="_blank"
-&gt;MAI (Microsoft AI) playground&lt;/a&gt; worked for me, although for most purposes, its 30-second limitation makes it as useless as the rest.&lt;/li&gt;
+&gt;MAI (Microsoft AI) playground&lt;/a&gt; worked for me, although for most purposes, its 30-second limitation makes it about as useless as the rest.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I will leave you with a quote from Lloyd Bud Winter:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -213,8 +213,8 @@ href="https://en.wikipedia.org/wiki/Hugo_Junkers" target="_blank"
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-crete.jpg"
-width="2935"
-height="2104"
+width="1600"
+height="1147"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="139"
@@ -237,11 +237,11 @@ href="https://www.asisbiz.com/il2/Ju-52/Crete/pages/Unternehmen-Merkur-Junkers-J
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-seaplane.jpg"
-width="2000"
-height="1389"
+width="1620"
+height="1125"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="143"
+data-flex-grow="144"
 data-flex-basis="345px"
 &gt;
 &lt;/th&gt;
@@ -281,8 +281,8 @@ href="https://www.reddit.com/r/WeirdWings/comments/sldjba/junkers_ju_52_minensuc
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-medevac.jpg"
-width="1800"
-height="1013"
+width="1620"
+height="912"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -305,13 +305,13 @@ href="https://www.asisbiz.com/il2/Ju-52/Junkers-Ju-52/pages/Ostfront-Junkers-Ju-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-d2600.png"
-width="1986"
-height="1113"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-d2600.jpg"
+width="1620"
+height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="178"
-data-flex-basis="428px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/th&gt;
 &lt;/tr&gt;

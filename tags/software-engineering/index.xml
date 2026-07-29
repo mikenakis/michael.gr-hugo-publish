@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 12 Jul 2026 11:45:29 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Simon Brown at Miro, Amsterdam</title><link>https://blog.michael.gr/post/2026-07-01-simon-brown/</link><pubDate>Thu, 02 Jul 2026 08:23:44 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-01-simon-brown/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-01-simon-brown/media/PXL_20260701_171017403_1620.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Engineering on Michael's Blog</title><link>https://blog.michael.gr/tags/software-engineering/</link><description>Recent content in Software Engineering on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 29 Jul 2026 13:48:19 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-engineering/index.xml" rel="self" type="application/rss+xml"/><item><title>Simon Brown at Miro, Amsterdam</title><link>https://blog.michael.gr/post/2026-07-01-simon-brown/</link><pubDate>Thu, 02 Jul 2026 08:23:44 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-01-simon-brown/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-01-simon-brown/media/PXL_20260701_171017403_1620.jpg"
 width="1620"
 height="1001"
 loading="lazy"
@@ -2294,12 +2294,12 @@ data-flex-basis="618px"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Towards Authoritative Software Design</title><link>https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/</link><pubDate>Sat, 09 Dec 2023 19:16:05 +0000</pubDate><guid>https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/media/blueprint.jpg"
-width="5000"
-height="2740"
+width="1620"
+height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="182"
-data-flex-basis="437px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
@@ -2373,12 +2373,12 @@ href="https://en.wikipedia.org/wiki/Electronic_design_automation" target="_blank
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/media/the-great-wall-by-hao-wei.jpg"
-width="4606"
-height="3071"
+width="1620"
+height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="149"
-data-flex-basis="359px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/th&gt;
 &lt;/tr&gt;
@@ -3221,13 +3221,13 @@ loading="lazy"
 &lt;p&gt;Speeds up Visual Studio debug output by orders of magnitude.&lt;/p&gt;
 &lt;p&gt;On GitHub: &lt;a class="external"
 href="https://github.com/mikenakis/VsDebugLogger" target="_blank"
-&gt;https://github.com/mikenakis/VsDebugLogger&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Debating with other Software Engineers</title><link>https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</link><pubDate>Tue, 17 Jan 2023 20:03:20 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/media/debating.png"
-width="2000"
+&gt;https://github.com/mikenakis/VsDebugLogger&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Debating with other Software Engineers</title><link>https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</link><pubDate>Tue, 17 Jan 2023 20:03:20 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/media/debating.jpg"
+width="1620"
 height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="200"
-data-flex-basis="480px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Stackoverflow and the whole Stackexchange network is good for asking very narrowly-scoped questions that can receive objective and preferably authoritative answers that cite documentation or definitions. Any kind of question which is subject of opinion, or liable to elicit debate, is off-topic there. This means that stackoverflow is only good for asking strictly technical questions, and there is an upper limit on how valuable this can be. Sure it can be very helpful when you are trying to solve a specific technical problem, but in the grand scheme of things, it is irrelevant; from a philosophical point of view, it is trivial.&lt;/p&gt;
@@ -4995,8 +4995,8 @@ href="https://en.wikipedia.org/wiki/Newspeak" target="_blank"
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
-width="2775"
-height="1684"
+width="1620"
+height="983"
 loading="lazy" title="Illustration from &amp;#39;The history of slavery and the slave trade, ancient and modern&amp;#39; by Blake, William O (1860) from wikimedia.org"
 class="gallery-image"
 data-flex-grow="164"
@@ -5858,187 +5858,64 @@ resilience.&lt;/p&gt;
 &lt;p&gt;Cover image: Photo of two elephants friendly interacting with each other, from
 &lt;a class="external"
 href="https://www.scientificamerican.com/article/elephants-never-forget/" target="_blank"
-&gt;The Scientific American: &lt;em&gt;Fact or Fiction?: Elephants Never Forget&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Stateless Microservices</title><link>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</link><pubDate>Thu, 14 Oct 2021 10:53:38 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</guid><description>&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as
-support material for other posts of mine that discuss microservices, mainly
-&lt;a
-href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
-&gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-on-stateless-microservices/media/8.png"
-width="1378"
-height="2048"
+&gt;The Scientific American: &lt;em&gt;Fact or Fiction?: Elephants Never Forget&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Stateless Microservices</title><link>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</link><pubDate>Thu, 14 Oct 2021 10:53:38 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-on-stateless-microservices/media/8.png"
+width="1090"
+height="1620"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="67"
 data-flex-basis="161px"
 &gt;
 &lt;/p&gt;
+&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as support material for other posts of mine that discuss microservices, mainly &lt;a
+href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
+&gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id="is-statelessness-a-requirement-for-a-microservice"&gt;Is statelessness a requirement for a microservice?
-&lt;/h4&gt;&lt;p&gt;In another post (see
-&lt;a
+&lt;/h4&gt;&lt;p&gt;In another post (see &lt;a
 href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
-&gt;So, what is a Microservice, anyway?&lt;/a&gt;) I examine what a microservice really is, and I come to the conclusion that from a purely technical standpoint, a working definition could be
-as simple as this:&lt;/p&gt;
+&gt;So, what is a Microservice, anyway?&lt;/a&gt;) I examine what a microservice really is, and I come to the conclusion that from a purely technical standpoint, a working definition could be as simple as this:&lt;/p&gt;
 &lt;p&gt;A microservice is a scalable and resilient module.&lt;/p&gt;
-&lt;p&gt;Even if you disagree with the terseness of this definition, and you regard
-microservices as necessarily more than that, I hope you will at least agree
-that it is precisely scalability and resilience that statelessness in microservices aims to address, so this definition serves its
-purpose at least in the context of this series of posts.&lt;/p&gt;
-&lt;p&gt;There are many who will try to convince you that in order to build a scalable
-and resilient system, you need statelessness; so much so, that microservices
-have almost come to be regarded as synonymous with statelessness. This post
-examines whether this is that in fact so, and what is the cost of doing things
-this way.&lt;/p&gt;
+&lt;p&gt;Even if you disagree with the terseness of this definition, and you regard microservices as necessarily more than that, I hope you will at least agree that it is precisely scalability and resilience that statelessness in microservices aims to address, so this definition serves its purpose at least in the context of this series of posts.&lt;/p&gt;
+&lt;p&gt;There are many who will try to convince you that in order to build a scalable and resilient system, you need statelessness; so much so, that microservices have almost come to be regarded as synonymous with statelessness. This post examines whether this is that in fact so, and what is the cost of doing things this way.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;If we take a step back for a moment and examine the issue from a somewhat
-distanced point of view, we notice that there is no such thing as a stateless
-software system. If there was such a thing, it would not be capable of
-performing any function worth speaking of, and it would necessarily be less
-useful than a brick, because a brick has physical existence, so you can, at
-the very least, throw it at someone.&lt;/p&gt;
-&lt;p&gt;If there is one thing that a software system necessarily has, it is state, so
-there is no word that is more unsuitable to go with the word &amp;quot;software&amp;quot; than
-the word &amp;quot;stateless&amp;quot;. (By the way, that is also a little something that
-functional programming aficionados should perhaps take a moment to
-philosophically ponder about.)&lt;/p&gt;
-&lt;p&gt;What this all means is that even if you build a system using so-called
-stateless microservices, that system will still have state; for example, if it
-is a web shop, it will very conveniently remember me when I come to visit
-again, and if I order any goods during my visit, it will very inconveniently
-&lt;em&gt;not&lt;/em&gt; forget to send me an invoice. That is all happening due to state, which is
-stored in the database system of the web shop. So, when people speak of
-microservices with no state what they actually mean is microservices with no
-&lt;em&gt;transient&lt;/em&gt; state. The state is definitely there, the system just does
-not rely on any microservice remembering any of it. Each microservice
-refrains from keeping any state in memory for any longer than it absolutely
-has to; it always begins the processing of every single transaction by
-querying the database for all necessary state, and it makes sure to persist
-any changed state into the database before proclaiming the transaction
-complete.&lt;/p&gt;
-&lt;p&gt;Stateless microservices were invented because statelessness is an easy way of
-achieving scalability and resilience: if a module does not keep any state, then an
-indefinite number of copies of that module can be created to process requests in
-parallel; any request arriving at the server farm can be serviced by any
-instance of that module, and any subset of copies of the module can be destroyed at any moment,
-without depriving the system from its ability to function.&lt;/p&gt;
-&lt;p&gt;That's great, but statelessness is not an end in and of itself; it is a means
-to an end; it is just one way of achieving scalability and
-resilience. This is proven by the fact that the database systems upon which
-stateless microservice architectures are built are most certainly not
-stateless at all, and yet they do somehow manage to be scalable and resilient.
-Obviously, they are doing something differently.&lt;/p&gt;
+&lt;p&gt;If we take a step back for a moment and examine the issue from a somewhat distanced point of view, we notice that there is no such thing as a stateless software system. If there was such a thing, it would not be capable of performing any function worth speaking of, and it would necessarily be less useful than a brick, because a brick has physical existence, so you can, at the very least, throw it at someone.&lt;/p&gt;
+&lt;p&gt;If there is one thing that a software system necessarily has, it is state, so there is no word that is more unsuitable to go with the word &amp;quot;software&amp;quot; than the word &amp;quot;stateless&amp;quot;. (By the way, that is also a little something that functional programming aficionados should perhaps take a moment to philosophically ponder about.)&lt;/p&gt;
+&lt;p&gt;What this all means is that even if you build a system using so-called stateless microservices, that system will still have state; for example, if it is a web shop, it will very conveniently remember me when I come to visit again, and if I order any goods during my visit, it will very inconveniently &lt;em&gt;not&lt;/em&gt; forget to send me an invoice. That is all happening due to state, which is stored in the database system of the web shop. So, when people speak of microservices with no state what they actually mean is microservices with no &lt;em&gt;transient&lt;/em&gt; state. The state is definitely there, the system just does not rely on any microservice remembering any of it. Each microservice refrains from keeping any state in memory for any longer than it absolutely has to; it always begins the processing of every single transaction by querying the database for all necessary state, and it makes sure to persist any changed state into the database before proclaiming the transaction complete.&lt;/p&gt;
+&lt;p&gt;Stateless microservices were invented because statelessness is an easy way of achieving scalability and resilience: if a module does not keep any state, then an indefinite number of copies of that module can be created to process requests in parallel; any request arriving at the server farm can be serviced by any instance of that module, and any subset of copies of the module can be destroyed at any moment, without depriving the system from its ability to function.&lt;/p&gt;
+&lt;p&gt;That's great, but statelessness is not an end in and of itself; it is a means to an end; it is just one way of achieving scalability and resilience. This is proven by the fact that the database systems upon which stateless microservice architectures are built are most certainly not stateless at all, and yet they do somehow manage to be scalable and resilient. Obviously, they are doing something differently.&lt;/p&gt;
 &lt;h4 id="what-is-wrong-with-statelessness"&gt;What is wrong with statelessness?
-&lt;/h4&gt;&lt;p&gt;When building a system which needs to be scalable and resilient, and also
-needs to be very stateful as a whole, one has to begin with a scalable and
-resilient data layer as a foundation. Luckily, there exist various
-commercially available products that accomplish this. On top of that
-foundation, one has to build their application-specific logic in a way that is
-also scalable and resilient. Stateless microservices will achieve this, but
-they are one of the &lt;strong&gt;worst performing&lt;/strong&gt;, and from an engineering
-standpoint most &lt;em&gt;&lt;strong&gt;cowardly&lt;/strong&gt;&lt;/em&gt; ways of achieving scalability and
-resilience. Choosing the stateless microservices approach is like saying the
-following:&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;When building a system which needs to be scalable and resilient, and also needs to be very stateful as a whole, one has to begin with a scalable and resilient data layer as a foundation. Luckily, there exist various commercially available products that accomplish this. On top of that foundation, one has to build their application-specific logic in a way that is also scalable and resilient. Stateless microservices will achieve this, but they are one of the &lt;strong&gt;worst performing&lt;/strong&gt;, and from an engineering standpoint most &lt;em&gt;&lt;strong&gt;cowardly&lt;/strong&gt;&lt;/em&gt; ways of achieving scalability and resilience. Choosing the stateless microservices approach is like saying the following:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;State is hard; we do not have the slightest clue as to how we can maintain
-state and at the same time remain scalable and resilient; but look, the
-creators of our database system are very smart folks, they seem to have
-figured it all out! So, here is what we will do: we will delegate the entire
-task of maintaining state to them!&lt;/p&gt;
+&lt;p&gt;State is hard; we do not have the slightest clue as to how we can maintain state and at the same time remain scalable and resilient; but look, the creators of our database system are very smart folks, they seem to have figured it all out! So, here is what we will do: we will delegate the entire task of maintaining state to them!&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;That is how we arrived at the stateless microservice model, which I like to
-call the &amp;quot;Dory&amp;quot; model, after the fish that suffered from amnesia in the
-&lt;em&gt;Finding Nemo&lt;/em&gt; movie.&lt;/p&gt;
-&lt;p&gt;In the Dory model, every single incoming transaction gets processed by a
-microservice that is drawing a complete blank. Upon receiving the request, the
-microservice starts with very basic questions:&lt;/p&gt;
+&lt;p&gt;That is how we arrived at the stateless microservice model, which I like to call the &amp;quot;Dory&amp;quot; model, after the fish that suffered from amnesia in the &lt;em&gt;Finding Nemo&lt;/em&gt; movie.&lt;/p&gt;
+&lt;p&gt;In the Dory model, every single incoming transaction gets processed by a microservice that is drawing a complete blank. Upon receiving the request, the microservice starts with very basic questions:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Who am I, and what is this strange place I am running in?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Who are these folks sending me requests, and why?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Should I respond to them, or should I four-oh-three them away?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Let's start by authenticating them...&lt;/p&gt;
-&lt;p&gt;...and it goes on like that. For every single request, there are multiple
-round-trips to the database while the microservice is discovering more and more
-about what it is being requested to do and whether it should in fact do it,
-and even more round-trips to retrieve the information that will go into the
-response, including very basic information that hardly ever changes, such as
-the name of the visitor on whose behalf the request was sent, and in multi-tenancy scenarios even
-the name of the tenant on whose behalf the website is being served.&lt;/p&gt;
-&lt;p&gt;When the transaction is nearing completion, the stateless microservice will
-meticulously store every single little piece of changed state in its exact
-right place in the database, as if it is making notes to itself, lest it
-forgets.&lt;/p&gt;
-&lt;p&gt;Finally, once the transaction is completed, the microservice will proceed to
-deliberately forget absolutely everything that it learned during the
-processing of the transaction, before it starts to wait for the next
-transaction.&lt;/p&gt;
-&lt;p&gt;I am not going to say that this is preposterously inefficient, but
-it is &lt;em&gt;&lt;strong&gt;preposterously inefficient.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Incidentally, the magnificent inefficiency of stateless microservices makes
-them to a certain extent a self-serving paradigm: in order to scale up you
-might think you need them, but once you have them, they will perform so badly,
-that boy oh boy, are you going to need to scale up!&lt;/p&gt;
-&lt;p&gt;Another problem with stateless microservices is that they cannot take any
-initiative of their own, they are restricted to only responding to incoming
-requests. This poses a problem with server-initiated client updates, which in
-certain circles are known as &amp;quot;push notifications&amp;quot;. A server-initiated client
-update happens when the server decides to send some data to the client at an
-arbitrary moment in time, as a result of some event occurring on the server,
-without the client first having to request that data.&lt;/p&gt;
-&lt;p&gt;Actually, the very term &amp;quot;push notification&amp;quot; seems to have originated from
-system designs in which such sending of data is a difficult task, as if the
-developers have to put their shoulders against the notification and push it
-all together to make it straddle the great divide between the server and the
-client. In other designs, where asynchronous bi-directional communication is
-the default mode of operation, there is no need for such laboriousness;
-server-initiated client updates are just part of the normal way things work.
-Alas, you cannot have that with stateless microservices, because
-bi-directional communication requires the notion of a session, which in turn
-implies a notion of state, which is a no-no.&lt;/p&gt;
-&lt;p&gt;Consequently, software systems that utilize the stateless microservice design
-pattern address the problem of server-initiated client updates in various
-wacky hacky ways:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Some opt to not have any; if the user wants to see what has changed, let
-them refresh the page. This can cause serious problems in systems where
-multiple clients may edit the same data, since the system has no way of
-alerting a client that the data they are editing is also being edited by
-another client at the same time.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Some use polling, meaning that each client keeps sending requests to the
-server at regular intervals asking whether there are any updates. This is wasteful, because each of these requests represents work that needs to
-be done, but very few of them will result in anything useful happening. At
-the same time, in order to reduce server load, the polling cannot be too
-frequent, which in turn means that there will always be a time
-lapse between the moment that an event occurs on the server and the moment
-that the clients take notice.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Some opt to have special stateful modules working side by side with the
-stateless microservices to handle the push notifications in a completely
-separate way, under the assumption that notifications are a kind of optional, &amp;quot;nice to have&amp;quot; thing anyway, so if performance suffers due to lack
-of scaling, or if service is interrupted due to lack of resilience, it will
-not hurt too much. On top of being clunky, this approach is also
-short-sighted because from the entire broad topic of server-initiated client
-updates it only considers the narrow case of updates being used for the sole
-purpose of on-screen notifications.&lt;/p&gt;
+&lt;li&gt;Who am I, and what is this strange place I am running in?&lt;/li&gt;
+&lt;li&gt;Who are these folks sending me requests, and why?&lt;/li&gt;
+&lt;li&gt;Should I respond to them, or should I four-oh-three them away?&lt;/li&gt;
+&lt;li&gt;Let's start by authenticating them...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;...and it goes on like that. For every single request, there are multiple round-trips to the database while the microservice is discovering more and more about what it is being requested to do and whether it should in fact do it, and even more round-trips to retrieve the information that will go into the response, including very basic information that hardly ever changes, such as the name of the visitor on whose behalf the request was sent, and in multi-tenancy scenarios even the name of the tenant on whose behalf the website is being served.&lt;/p&gt;
+&lt;p&gt;When the transaction is nearing completion, the stateless microservice will meticulously store every single little piece of changed state in its exact right place in the database, as if it is making notes to itself, lest it forgets.&lt;/p&gt;
+&lt;p&gt;Finally, once the transaction is completed, the microservice will proceed to deliberately forget absolutely everything that it learned during the processing of the transaction, before it starts to wait for the next transaction.&lt;/p&gt;
+&lt;p&gt;I am not going to say that this is preposterously inefficient, but it is &lt;em&gt;&lt;strong&gt;preposterously inefficient.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Incidentally, the magnificent inefficiency of stateless microservices makes them to a certain extent a self-serving paradigm: in order to scale up you might think you need them, but once you have them, they will perform so badly, that boy oh boy, are you going to need to scale up!&lt;/p&gt;
+&lt;p&gt;Another problem with stateless microservices is that they cannot take any initiative of their own, they are restricted to only responding to incoming requests. This poses a problem with server-initiated client updates, which in certain circles are known as &amp;quot;push notifications&amp;quot;. A server-initiated client update happens when the server decides to send some data to the client at an arbitrary moment in time, as a result of some event occurring on the server, without the client first having to request that data.&lt;/p&gt;
+&lt;p&gt;Actually, the very term &amp;quot;push notification&amp;quot; seems to have originated from system designs in which such sending of data is a difficult task, as if the developers have to put their shoulders against the notification and push it all together to make it straddle the great divide between the server and the client. In other designs, where asynchronous bi-directional communication is the default mode of operation, there is no need for such laboriousness; server-initiated client updates are just part of the normal way things work. Alas, you cannot have that with stateless microservices, because bi-directional communication requires the notion of a session, which in turn implies a notion of state, which is a no-no.&lt;/p&gt;
+&lt;p&gt;Consequently, software systems that utilize the stateless microservice design pattern address the problem of server-initiated client updates in various wacky hacky ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Some opt to not have any; if the user wants to see what has changed, let them refresh the page. This can cause serious problems in systems where multiple clients may edit the same data, since the system has no way of alerting a client that the data they are editing is also being edited by another client at the same time.&lt;/li&gt;
+&lt;li&gt;Some use polling, meaning that each client keeps sending requests to the server at regular intervals asking whether there are any updates. This is wasteful, because each of these requests represents work that needs to be done, but very few of them will result in anything useful happening. At the same time, in order to reduce server load, the polling cannot be too frequent, which in turn means that there will always be a time lapse between the moment that an event occurs on the server and the moment that the clients take notice.&lt;/li&gt;
+&lt;li&gt;Some opt to have special stateful modules working side by side with the stateless microservices to handle the push notifications in a completely separate way, under the assumption that notifications are a kind of optional, &amp;quot;nice to have&amp;quot; thing anyway, so if performance suffers due to lack of scaling, or if service is interrupted due to lack of resilience, it will not hurt too much. On top of being clunky, this approach is also short-sighted because from the entire broad topic of server-initiated client updates it only considers the narrow case of updates being used for the sole purpose of on-screen notifications.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Further reading: &lt;a
 href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
 &gt;The Stateful Microservice&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &lt;em&gt;Dory&lt;/em&gt;, the yellow-blue fish (a &lt;em&gt;Royal Blue Tang&lt;/em&gt;) that
-suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pixar.&lt;/p&gt;</description></item><item><title>What is wrong with Scala</title><link>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</link><pubDate>Mon, 04 Oct 2021 15:39:46 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/media/scala.svg"
+&lt;p&gt;Cover image: &lt;em&gt;Dory&lt;/em&gt;, the yellow-blue fish (a &lt;em&gt;Royal Blue Tang&lt;/em&gt;) that suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pixar.&lt;/p&gt;</description></item><item><title>What is wrong with Scala</title><link>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</link><pubDate>Mon, 04 Oct 2021 15:39:46 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/media/scala.svg"
 loading="lazy"
 &gt;
 This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
@@ -8521,8 +8398,8 @@ href="https://en.wikipedia.org/wiki/VisualWorks" target="_blank"
 &lt;li&gt;A child viewmodel property can be optional or nullable, thus allowing the application logic to control whether an entire section of the user interface is available or not at any given moment.&lt;/li&gt;
 &lt;li&gt;A child viewmodel property can be a collection of viewmodels, allowing for a corresponding child view which is a list control or a tab control. Viewmodel type mapping still applies, so if the collection contains viewmodels of different types at runtime, the resulting list control will consist of different kinds of rows, or the resulting tab control will consist of different kinds of tabs.&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Object Lifetime Awareness</title><link>https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/</link><pubDate>Sun, 27 Dec 2020 10:46:17 +0000</pubDate><guid>https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/media/le-penseur.jpg"
-width="3648"
-height="5472"
+width="1080"
+height="1620"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="66"
@@ -11915,7 +11792,7 @@ class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
 &gt;
-&lt;/p&gt;</description></item><item><title>Crossword Puzzle Compiler</title><link>https://blog.michael.gr/post/2015-10-crossword-compiler/</link><pubDate>Sun, 18 Oct 2015 01:16:02 +0000</pubDate><guid>https://blog.michael.gr/post/2015-10-crossword-compiler/</guid><description>&lt;p&gt;![[media/crossword-compiler-screenshot.png]]&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Crossword Puzzle Compiler</title><link>https://blog.michael.gr/post/2015-10-crossword-compiler/</link><pubDate>Sun, 18 Oct 2015 01:16:02 +0000</pubDate><guid>https://blog.michael.gr/post/2015-10-crossword-compiler/</guid><description>&lt;p&gt;![[media/crossword-compiler-screenshot.jpg]]&lt;/p&gt;
 &lt;p&gt;This is old-style artificial intelligence in action, solving within seconds a problem that would normally take eons to complete.&lt;/p&gt;
 &lt;p&gt;You give it a crossword grid, and a long list of words, and it finds ways to mesh words into the grid so as to form a complete crossword puzzle. The final working version was done in 2003 using C# version 1.2 with a minimalistic UI in WinForms.&lt;/p&gt;
 &lt;p&gt;The following 30-second video shows the crossword compiler in action, filling multiple successive crosswords using a word list taken from actual crosswords that have been published on the interwebz by various sources through the years. The video is in real time, showing that the crossword compiler is, in most cases, extremely fast.&lt;/p&gt;
@@ -13011,12 +12888,13 @@ href="https://blog.michael.gr/post/2014-07-benchmarking-java-8-lambdas/"
 &lt;p&gt;Some people complain that application start up is slower when debugging than without; I have not noticed such a thing, but what I have noticed is that sometimes one might be making use of some exotic feature of the debugger without realizing it, (for example having forgotten a so-called &amp;quot;function breakpoint&amp;quot; or a &amp;quot;memory changed breakpoint&amp;quot; active) and that is slowing things down. Just make sure you do not have any fancy debugger features enabled unless you actually need them, and running your program with debugging should be about as fast as running it without debugging.&lt;/p&gt;
 &lt;p&gt;Related article: &lt;a
 href="https://blog.michael.gr/post/2012-04-27-net-code-running-faster-under-profiler/"
-&gt;DotNet code running faster under the profiler?&lt;/a&gt;&lt;/p&gt;</description></item><item><title>My notes on "Spring in Action" (Manning)</title><link>https://blog.michael.gr/post/2014-09-my-notes-on-spring-in-action-manning/</link><pubDate>Wed, 27 Mar 2013 16:22:49 +0000</pubDate><guid>https://blog.michael.gr/post/2014-09-my-notes-on-spring-in-action-manning/</guid><description>&lt;p&gt;![[media/spring-in-action-cover.png]]My notes on the &amp;quot;Spring in Action&amp;quot; book by Craig Walls and Ryan Breidenbach from Manning Publications Co.&lt;/p&gt;
+&gt;DotNet code running faster under the profiler?&lt;/a&gt;&lt;/p&gt;</description></item><item><title>My notes on "Spring in Action" (Manning)</title><link>https://blog.michael.gr/post/2014-09-my-notes-on-spring-in-action-manning/</link><pubDate>Wed, 27 Mar 2013 16:22:49 +0000</pubDate><guid>https://blog.michael.gr/post/2014-09-my-notes-on-spring-in-action-manning/</guid><description>&lt;p&gt;![[media/spring-in-action-cover.jpg]]&lt;/p&gt;
+&lt;p&gt;My notes on the &amp;quot;Spring in Action&amp;quot; book by Craig Walls and Ryan Breidenbach from Manning Publications Co.&lt;/p&gt;
 &lt;p&gt;Page 45&lt;/p&gt;
 &lt;p&gt;The author suggests that there is an ongoing debate on the issue of constructor injection vs. setter injection, and provides arguments for each one of them. Unfortunately, in the arguments that he provides for constructor injection he paints a straw-man, while his arguments for setter injection are all non-issues. It is no wonder then, that at the end of the discussion his personal preference turns out to be setter injection.&lt;/p&gt;
 &lt;p&gt;Arguments for constructor injection:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Of course, this assumes that the bean's constructor has all of the bean?s dependencies in its parameter list.&lt;/p&gt;
+&lt;p&gt;Of course, this assumes that the bean's constructor has all of the bean's dependencies in its parameter list.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;No, constructor injection does not &lt;em&gt;assume&lt;/em&gt; that; instead, it &lt;em&gt;requires&lt;/em&gt; it, because that's &lt;em&gt;precisely the point&lt;/em&gt; of constructor injection. It is quite unfair to take the central premise of constructor injection and reword it as a drawback. Perhaps the author meant to say instead that constructor injection assumes that all of the dependencies are &lt;em&gt;available&lt;/em&gt; at the time of the construction of the bean. Well, the only case in which a dependency might be unavailable at construction time is if the design of our system has a circular dependency built into it. In which case the flaw is with our design, not with the concept of constructor injection! Correspondingly, I favor the use of constructor injection everywhere, and in the rare and unfortunate case when a circular dependency exists and is not easy to factor out, the exceptional use of setter injection as a self-documenting means of temporarily circumventing the problem.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -13028,12 +12906,11 @@ href="https://blog.michael.gr/post/2012-04-27-net-code-running-faster-under-prof
 &lt;blockquote&gt;
 &lt;p&gt;If a bean has several dependencies, the constructor's parameter list can be quite lengthy.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;So what? By the same token, if setter injection is used, then the list of setters will be quite lengthy.
-This is not an argument.&lt;/p&gt;
+&lt;p&gt;So what? By the same token, if setter injection is used, then the list of setters will be quite lengthy. This is not an argument.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If there are several ways to construct a valid object, it can be hard to come up with unique constructors, since constructor signatures vary only by the number and type of parameters.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Oh, puh-leez! &lt;em&gt;if&lt;/em&gt; there are several ways to construct the bean, (a small possibility,) and &lt;em&gt;if&lt;/em&gt; it is hard to come up with unique constructors, (a minutely small possibility,) then someone, somewhere, will have to squeeze their brain a little bit more to come up with unique constructors. If one does not want to have to &lt;em&gt;think&lt;/em&gt; at work every once in a while, maybe they should not have become a programmer. Also: with constructors, there are only so many ways to construct a bean as there are constructors for it. With setters, there exist something of the order of number-of-setters-factorial number of ways to construct it. What do you prefer?&lt;/p&gt;
+&lt;p&gt;Oh, puh-leez! &lt;em&gt;if&lt;/em&gt; there are several ways to construct the bean, (a small possibility,) and &lt;em&gt;if&lt;/em&gt; it is hard to come up with unique constructors, (a minutely small possibility,) then someone, somewhere, will have to squeeze their brain a little bit more to come up with unique constructors. If one does not want to have to &lt;em&gt;think&lt;/em&gt; at work every once in a while, maybe they should not have become a programmer. Also: with constructors, there are only so many ways to construct a bean as there are constructors for it. With setters, number of different ways to construct it is something of the order of number-of-setters-factorial . What do you prefer?&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If a constructor takes two or more parameters of the same type, it may be difficult to determine what each parameter's purpose is.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -13041,7 +12918,7 @@ This is not an argument.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Constructor injection does not lend itself readily to inheritance. A bean's constructor will have to pass parameters to super() in order to set private properties in the parent object.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Wha-what? &lt;em&gt;Constructor injection does not lend itself readily to inheritance&lt;/em&gt;? Is the author ignorant about the concept of constructors or the concept of inheritance? &lt;em&gt;Of course&lt;/em&gt; a bean's constructor will have to pass parameters to super, and it will have to pass exactly those parameters that the super requires, and that's precisely what guarantees proper instantiation of the super, and that's &lt;em&gt;the whole point&lt;/em&gt; with using constructors, and a &lt;em&gt;very important premise&lt;/em&gt; of inheritance. Again, a feature presented as a drawback. It is not a sign of a wise man to make the same mistake twice.&lt;/p&gt;
+&lt;p&gt;Wha-what? &lt;em&gt;Constructor injection does not lend itself readily to inheritance&lt;/em&gt;? Is the author ignorant about the concept of constructors or the concept of inheritance? &lt;em&gt;Of course&lt;/em&gt; a bean's constructor will have to pass parameters to super, and it will have to pass exactly those parameters that the super requires, and that's precisely what guarantees proper instantiation of the super, and that's &lt;em&gt;the whole point&lt;/em&gt; with using constructors, and a &lt;em&gt;very important premise&lt;/em&gt; of inheritance. Again, an advantage of constructor injection is being presented as a drawback.&lt;/p&gt;
 &lt;p&gt;In short, I do not believe that there really is a debate; it is just that eternal difference in world views between the real engineers, who are compelled to build compiler-enforced robustness into their software, and those who are programmers by accident, and prefer a certain cozy amount of sloppiness sprinkled everywhere for the sake of some ill-perceived ease in coding, testing, or refactoring. It really is the same short-sighted mentality that says &amp;quot;I make all members public because this way I can access them easier.&amp;quot; Part of the problem might also be some ignorance-induced superstition, on behalf of the second group of people, against the use of constructors. I have seen it again and again: many people simply &lt;em&gt;do not get&lt;/em&gt; constructors. And people tend to fear the unknown.&lt;/p&gt;
 &lt;p&gt;Page 62&lt;/p&gt;
 &lt;p&gt;&amp;quot;Furthermore, if a &lt;strong&gt;constructor&lt;/strong&gt; has multiple constructors, {...}&amp;quot; should read &amp;quot;Furthermore, if a &lt;strong&gt;bean&lt;/strong&gt; has multiple constructors, {...}&amp;quot;.&lt;/p&gt;

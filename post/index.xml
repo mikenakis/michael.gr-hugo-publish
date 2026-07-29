@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 28 Jul 2026 02:57:35 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-my-movie-list/media/movie-list.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 29 Jul 2026 13:48:19 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-my-movie-list/media/movie-list.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -1437,7 +1437,7 @@ data-flex-basis="240px"
 href="https://en.wikipedia.org/wiki/Bud_Winter" target="_blank"
 &gt;Lloyd Bud Winter&lt;/a&gt;, originally intended to help Olympic athletes relax, and later adopted by the U.S. military. It can, supposedly, make someone fall asleep within a couple of minutes.&lt;/p&gt;
 &lt;p&gt;The technique is quite simple, but it requires consistent daily practice to train your nervous system to flip the &amp;quot;sleep switch&amp;quot;. Reports have allegedly shown that in the military, after 6 weeks of exercising this method daily, it has a success rate of around 96%. If that is true, it is phenomenal.&lt;/p&gt;
-&lt;p&gt;I created an adaptation of Bud Winter's technique, as a flat list of steps suitable for listening to as a narration when going to sleep. I call it an adaptation because I have removed some stuff that are unsuitable for do-as-you-hear narration, and I have added a few more steps at the end about additional sensory detail, which I saw proposed somewhere, but I do not know whether they exist in the original. I also moved the steps about relaxing the torso after the steps about relaxing the arms, because I found that in order to settle my torso I often have to use my arms, but then this may leave some of the muscles in my arms under tension, requiring the arms to be relaxed again.&lt;/p&gt;
+&lt;p&gt;I created an adaptation of Bud Winter's technique, as a flat list of steps suitable for listening to as a narration when going to sleep. I call it an adaptation because I have removed some stuff that are unsuitable for do-as-you-hear narration, and I have added a few more steps at the end about additional sensory detail, which I saw proposed somewhere, but probably did not exist in the original. I also moved the steps about relaxing the torso after the steps about relaxing the arms, because I found that in order to settle my torso I often have to use my arms, but if I do that then I need to repeat the relaxing of the arms, so why not do that just once, after settling the torso.&lt;/p&gt;
 &lt;p&gt;Here it is:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Close your eyes.&lt;/li&gt;
@@ -1478,9 +1478,9 @@ href="https://en.wikipedia.org/wiki/Bud_Winter" target="_blank"
 &lt;li&gt;soil, moss, and grass from the shoreline,&lt;/li&gt;
 &lt;li&gt;green notes from water plants, and trees around the lake.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I have tried the technique a few times so far, and each time I am surprised to find that certain groups of muscles (for example, the muscles around my eyes) are in tension without me realizing it, and I only become aware of it when the voice brings my attention to those muscles, telling me to relax them. So, it seems like it does really help.&lt;/p&gt;
+&lt;p&gt;I have tried the technique a few times so far, and each time I am surprised to find that certain groups of muscles (for example, the muscles around my eyes) are in tension, and I only realize it when the voice brings my attention to those muscles, telling me to relax them. So, it seems like it does really help.&lt;/p&gt;
 &lt;p&gt;I created an mp3 file so that I can listen to it when going to sleep.&lt;/p&gt;
-&lt;p&gt;Here is version 1, there will be better versions:&lt;/p&gt;
+&lt;p&gt;Here is version 1; there will be better versions:&lt;/p&gt;
 &lt;audio controls preload="metadata"&gt;
 &lt;source src="media/bud-lloyd-winter-sleeping-technique.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
@@ -1527,7 +1527,7 @@ href="https://www.audacityteam.org/" target="_blank"
 &lt;li&gt;Soundraw did not give me any text box to describe what I want in text; instead, it follows a multiple choice quiz approach, which is, of course, so stupendously limited as to be completely useless.&lt;/li&gt;
 &lt;li&gt;Only &lt;a class="external"
 href="https://playground.microsoft.ai/chat?model=mai-voice-2" target="_blank"
-&gt;MAI (Microsoft AI) playground&lt;/a&gt; worked for me, although for most purposes, its 30-second limitation makes it as useless as the rest.&lt;/li&gt;
+&gt;MAI (Microsoft AI) playground&lt;/a&gt; worked for me, although for most purposes, its 30-second limitation makes it about as useless as the rest.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I will leave you with a quote from Lloyd Bud Winter:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1551,12 +1551,12 @@ href="https://www.greenpeace.gr" target="_blank"
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2026-07-10-heron-and-hawk/media/jailhouse-from-wikimedia.jpg"
-width="3840"
-height="2880"
+width="1620"
+height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="320px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/th&gt;
 &lt;/tr&gt;
@@ -2020,7 +2020,7 @@ href="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/"
 &lt;p&gt;Then below them is a photo of the great outdoors, taken from my apartment, in the afternoon.&lt;/p&gt;
 &lt;p&gt;The weather was dry.&lt;/p&gt;
 &lt;p&gt;So: Buienradar: 2, Buienalarm: 0&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/2026-06-09-buinenradar.png"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/2026-06-09-buinenradar.jpg"
 width="1894"
 height="2021"
 loading="lazy"
@@ -3504,7 +3504,7 @@ href="https://quoteinvestigator.com/2018/04/14/theory/" target="_blank"
 &gt;Quote Investigator&lt;/a&gt;)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &amp;quot;Theory vs. Practice&amp;quot; vector image created by michael.gr by tracing and then heavily cleaning up original raster image generated by ChatGpt with the following prompt: &amp;quot;Please give me a picture which illustrates the juxtaposition between the two concepts of theory and practice. Make it in landscape format, with clean colors.&amp;quot;&lt;/p&gt;</description></item><item><title>Beginning A-I- prompts with "Please--"</title><link>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</link><pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/media/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM.png"
+&lt;p&gt;Cover image: &amp;quot;Theory vs. Practice&amp;quot; vector image created by michael.gr by tracing and then heavily cleaning up original raster image generated by ChatGpt with the following prompt: &amp;quot;Please give me a picture which illustrates the juxtaposition between the two concepts of theory and practice. Make it in landscape format, with clean colors.&amp;quot;&lt;/p&gt;</description></item><item><title>Beginning A-I- prompts with "Please--"</title><link>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</link><pubDate>Mon, 07 Apr 2025 10:58:22 +0000</pubDate><guid>https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-04-beginning-ai-prompt-with-please/media/ChatGPT-Image-Apr-7,-2025,-01_23_58-PM.jpg"
 width="1536"
 height="1024"
 loading="lazy"
@@ -4097,8 +4097,8 @@ href="https://en.wikipedia.org/wiki/Hugo_Junkers" target="_blank"
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-crete.jpg"
-width="2935"
-height="2104"
+width="1600"
+height="1147"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="139"
@@ -4121,11 +4121,11 @@ href="https://www.asisbiz.com/il2/Ju-52/Crete/pages/Unternehmen-Merkur-Junkers-J
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-seaplane.jpg"
-width="2000"
-height="1389"
+width="1620"
+height="1125"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="143"
+data-flex-grow="144"
 data-flex-basis="345px"
 &gt;
 &lt;/th&gt;
@@ -4165,8 +4165,8 @@ href="https://www.reddit.com/r/WeirdWings/comments/sldjba/junkers_ju_52_minensuc
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-medevac.jpg"
-width="1800"
-height="1013"
+width="1620"
+height="912"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -4189,13 +4189,13 @@ href="https://www.asisbiz.com/il2/Ju-52/Junkers-Ju-52/pages/Ostfront-Junkers-Ju-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-d2600.png"
-width="1986"
-height="1113"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2024-07-ju52/media/ju52-d2600.jpg"
+width="1620"
+height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="178"
-data-flex-basis="428px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/th&gt;
 &lt;/tr&gt;
@@ -5250,12 +5250,12 @@ data-flex-basis="618px"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Towards Authoritative Software Design</title><link>https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/</link><pubDate>Sat, 09 Dec 2023 19:16:05 +0000</pubDate><guid>https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/media/blueprint.jpg"
-width="5000"
-height="2740"
+width="1620"
+height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="182"
-data-flex-basis="437px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/p&gt;
 &lt;h3 id="abstract"&gt;Abstract
@@ -5329,12 +5329,12 @@ href="https://en.wikipedia.org/wiki/Electronic_design_automation" target="_blank
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/media/the-great-wall-by-hao-wei.jpg"
-width="4606"
-height="3071"
+width="1620"
+height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="149"
-data-flex-basis="359px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/th&gt;
 &lt;/tr&gt;
@@ -6173,8 +6173,8 @@ href="https://softwareengineering.stackexchange.com/a/280522" target="_blank"
 &gt;java - Is it okay to have objects that cast themselves, even if it pollutes the API of their subclasses?&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Trees of Eternity</title><link>https://blog.michael.gr/post/2023-03-21-trees-of-eternity/</link><pubDate>Tue, 21 Mar 2023 15:55:13 +0000</pubDate><guid>https://blog.michael.gr/post/2023-03-21-trees-of-eternity/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-03-21-trees-of-eternity/media/trees-of-eternity-hour-of-the-nightingale.jpg"
-width="2048"
-height="2048"
+width="1620"
+height="1620"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
@@ -6291,12 +6291,12 @@ href="https://github.com/mikenakis/VsDebugLogger" target="_blank"
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2023-01-21-on-recruiters/media/hiring-concept-with-empty-chair.jpg"
-width="7990"
-height="5330"
+width="1620"
+height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="149"
-data-flex-basis="359px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/th&gt;
 &lt;/tr&gt;
@@ -6376,13 +6376,13 @@ data-flex-basis="360px"
 &lt;hr&gt;
 &lt;p&gt;Cover image from &lt;a class="external"
 href="https://www.freepik.com/free-photo/hiring-concept-with-empty-chair_29675468.htm" target="_blank"
-&gt;Freepik&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Debating with other Software Engineers</title><link>https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</link><pubDate>Tue, 17 Jan 2023 20:03:20 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/media/debating.png"
-width="2000"
+&gt;Freepik&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Debating with other Software Engineers</title><link>https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</link><pubDate>Tue, 17 Jan 2023 20:03:20 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-17-debating-with-other-software-engineers/media/debating.jpg"
+width="1620"
 height="1000"
 loading="lazy"
 class="gallery-image"
-data-flex-grow="200"
-data-flex-basis="480px"
+data-flex-grow="162"
+data-flex-basis="388px"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Stackoverflow and the whole Stackexchange network is good for asking very narrowly-scoped questions that can receive objective and preferably authoritative answers that cite documentation or definitions. Any kind of question which is subject of opinion, or liable to elicit debate, is off-topic there. This means that stackoverflow is only good for asking strictly technical questions, and there is an upper limit on how valuable this can be. Sure it can be very helpful when you are trying to solve a specific technical problem, but in the grand scheme of things, it is irrelevant; from a philosophical point of view, it is trivial.&lt;/p&gt;
@@ -8986,8 +8986,8 @@ href="https://en.wikipedia.org/wiki/Newspeak" target="_blank"
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
-width="2775"
-height="1684"
+width="1620"
+height="983"
 loading="lazy" title="Illustration from &amp;#39;The history of slavery and the slave trade, ancient and modern&amp;#39; by Blake, William O (1860) from wikimedia.org"
 class="gallery-image"
 data-flex-grow="164"
@@ -9578,9 +9578,9 @@ href="https://www.city-tax.nl/" target="_blank"
 &lt;p&gt;This mistake can even be seen in official Dutch government communications in English, for example here: &lt;a class="external"
 href="https://www.government.nl/themes/work/absenteeism-from-work" target="_blank"
 &gt;https://www.government.nl/themes/work/absenteeism-from-work&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-01-dutchlish/media/government.nl-absenteeism.png"
-width="1885"
-height="1667"
+&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-01-dutchlish/media/government.nl-absenteeism.jpg"
+width="1620"
+height="1433"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="113"
@@ -10378,187 +10378,64 @@ resilience.&lt;/p&gt;
 &lt;p&gt;Cover image: Photo of two elephants friendly interacting with each other, from
 &lt;a class="external"
 href="https://www.scientificamerican.com/article/elephants-never-forget/" target="_blank"
-&gt;The Scientific American: &lt;em&gt;Fact or Fiction?: Elephants Never Forget&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Stateless Microservices</title><link>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</link><pubDate>Thu, 14 Oct 2021 10:53:38 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</guid><description>&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as
-support material for other posts of mine that discuss microservices, mainly
-&lt;a
-href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
-&gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-on-stateless-microservices/media/8.png"
-width="1378"
-height="2048"
+&gt;The Scientific American: &lt;em&gt;Fact or Fiction?: Elephants Never Forget&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Stateless Microservices</title><link>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</link><pubDate>Thu, 14 Oct 2021 10:53:38 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-on-stateless-microservices/media/8.png"
+width="1090"
+height="1620"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="67"
 data-flex-basis="161px"
 &gt;
 &lt;/p&gt;
+&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as support material for other posts of mine that discuss microservices, mainly &lt;a
+href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
+&gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id="is-statelessness-a-requirement-for-a-microservice"&gt;Is statelessness a requirement for a microservice?
-&lt;/h4&gt;&lt;p&gt;In another post (see
-&lt;a
+&lt;/h4&gt;&lt;p&gt;In another post (see &lt;a
 href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
-&gt;So, what is a Microservice, anyway?&lt;/a&gt;) I examine what a microservice really is, and I come to the conclusion that from a purely technical standpoint, a working definition could be
-as simple as this:&lt;/p&gt;
+&gt;So, what is a Microservice, anyway?&lt;/a&gt;) I examine what a microservice really is, and I come to the conclusion that from a purely technical standpoint, a working definition could be as simple as this:&lt;/p&gt;
 &lt;p&gt;A microservice is a scalable and resilient module.&lt;/p&gt;
-&lt;p&gt;Even if you disagree with the terseness of this definition, and you regard
-microservices as necessarily more than that, I hope you will at least agree
-that it is precisely scalability and resilience that statelessness in microservices aims to address, so this definition serves its
-purpose at least in the context of this series of posts.&lt;/p&gt;
-&lt;p&gt;There are many who will try to convince you that in order to build a scalable
-and resilient system, you need statelessness; so much so, that microservices
-have almost come to be regarded as synonymous with statelessness. This post
-examines whether this is that in fact so, and what is the cost of doing things
-this way.&lt;/p&gt;
+&lt;p&gt;Even if you disagree with the terseness of this definition, and you regard microservices as necessarily more than that, I hope you will at least agree that it is precisely scalability and resilience that statelessness in microservices aims to address, so this definition serves its purpose at least in the context of this series of posts.&lt;/p&gt;
+&lt;p&gt;There are many who will try to convince you that in order to build a scalable and resilient system, you need statelessness; so much so, that microservices have almost come to be regarded as synonymous with statelessness. This post examines whether this is that in fact so, and what is the cost of doing things this way.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;If we take a step back for a moment and examine the issue from a somewhat
-distanced point of view, we notice that there is no such thing as a stateless
-software system. If there was such a thing, it would not be capable of
-performing any function worth speaking of, and it would necessarily be less
-useful than a brick, because a brick has physical existence, so you can, at
-the very least, throw it at someone.&lt;/p&gt;
-&lt;p&gt;If there is one thing that a software system necessarily has, it is state, so
-there is no word that is more unsuitable to go with the word &amp;quot;software&amp;quot; than
-the word &amp;quot;stateless&amp;quot;. (By the way, that is also a little something that
-functional programming aficionados should perhaps take a moment to
-philosophically ponder about.)&lt;/p&gt;
-&lt;p&gt;What this all means is that even if you build a system using so-called
-stateless microservices, that system will still have state; for example, if it
-is a web shop, it will very conveniently remember me when I come to visit
-again, and if I order any goods during my visit, it will very inconveniently
-&lt;em&gt;not&lt;/em&gt; forget to send me an invoice. That is all happening due to state, which is
-stored in the database system of the web shop. So, when people speak of
-microservices with no state what they actually mean is microservices with no
-&lt;em&gt;transient&lt;/em&gt; state. The state is definitely there, the system just does
-not rely on any microservice remembering any of it. Each microservice
-refrains from keeping any state in memory for any longer than it absolutely
-has to; it always begins the processing of every single transaction by
-querying the database for all necessary state, and it makes sure to persist
-any changed state into the database before proclaiming the transaction
-complete.&lt;/p&gt;
-&lt;p&gt;Stateless microservices were invented because statelessness is an easy way of
-achieving scalability and resilience: if a module does not keep any state, then an
-indefinite number of copies of that module can be created to process requests in
-parallel; any request arriving at the server farm can be serviced by any
-instance of that module, and any subset of copies of the module can be destroyed at any moment,
-without depriving the system from its ability to function.&lt;/p&gt;
-&lt;p&gt;That's great, but statelessness is not an end in and of itself; it is a means
-to an end; it is just one way of achieving scalability and
-resilience. This is proven by the fact that the database systems upon which
-stateless microservice architectures are built are most certainly not
-stateless at all, and yet they do somehow manage to be scalable and resilient.
-Obviously, they are doing something differently.&lt;/p&gt;
+&lt;p&gt;If we take a step back for a moment and examine the issue from a somewhat distanced point of view, we notice that there is no such thing as a stateless software system. If there was such a thing, it would not be capable of performing any function worth speaking of, and it would necessarily be less useful than a brick, because a brick has physical existence, so you can, at the very least, throw it at someone.&lt;/p&gt;
+&lt;p&gt;If there is one thing that a software system necessarily has, it is state, so there is no word that is more unsuitable to go with the word &amp;quot;software&amp;quot; than the word &amp;quot;stateless&amp;quot;. (By the way, that is also a little something that functional programming aficionados should perhaps take a moment to philosophically ponder about.)&lt;/p&gt;
+&lt;p&gt;What this all means is that even if you build a system using so-called stateless microservices, that system will still have state; for example, if it is a web shop, it will very conveniently remember me when I come to visit again, and if I order any goods during my visit, it will very inconveniently &lt;em&gt;not&lt;/em&gt; forget to send me an invoice. That is all happening due to state, which is stored in the database system of the web shop. So, when people speak of microservices with no state what they actually mean is microservices with no &lt;em&gt;transient&lt;/em&gt; state. The state is definitely there, the system just does not rely on any microservice remembering any of it. Each microservice refrains from keeping any state in memory for any longer than it absolutely has to; it always begins the processing of every single transaction by querying the database for all necessary state, and it makes sure to persist any changed state into the database before proclaiming the transaction complete.&lt;/p&gt;
+&lt;p&gt;Stateless microservices were invented because statelessness is an easy way of achieving scalability and resilience: if a module does not keep any state, then an indefinite number of copies of that module can be created to process requests in parallel; any request arriving at the server farm can be serviced by any instance of that module, and any subset of copies of the module can be destroyed at any moment, without depriving the system from its ability to function.&lt;/p&gt;
+&lt;p&gt;That's great, but statelessness is not an end in and of itself; it is a means to an end; it is just one way of achieving scalability and resilience. This is proven by the fact that the database systems upon which stateless microservice architectures are built are most certainly not stateless at all, and yet they do somehow manage to be scalable and resilient. Obviously, they are doing something differently.&lt;/p&gt;
 &lt;h4 id="what-is-wrong-with-statelessness"&gt;What is wrong with statelessness?
-&lt;/h4&gt;&lt;p&gt;When building a system which needs to be scalable and resilient, and also
-needs to be very stateful as a whole, one has to begin with a scalable and
-resilient data layer as a foundation. Luckily, there exist various
-commercially available products that accomplish this. On top of that
-foundation, one has to build their application-specific logic in a way that is
-also scalable and resilient. Stateless microservices will achieve this, but
-they are one of the &lt;strong&gt;worst performing&lt;/strong&gt;, and from an engineering
-standpoint most &lt;em&gt;&lt;strong&gt;cowardly&lt;/strong&gt;&lt;/em&gt; ways of achieving scalability and
-resilience. Choosing the stateless microservices approach is like saying the
-following:&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;When building a system which needs to be scalable and resilient, and also needs to be very stateful as a whole, one has to begin with a scalable and resilient data layer as a foundation. Luckily, there exist various commercially available products that accomplish this. On top of that foundation, one has to build their application-specific logic in a way that is also scalable and resilient. Stateless microservices will achieve this, but they are one of the &lt;strong&gt;worst performing&lt;/strong&gt;, and from an engineering standpoint most &lt;em&gt;&lt;strong&gt;cowardly&lt;/strong&gt;&lt;/em&gt; ways of achieving scalability and resilience. Choosing the stateless microservices approach is like saying the following:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;State is hard; we do not have the slightest clue as to how we can maintain
-state and at the same time remain scalable and resilient; but look, the
-creators of our database system are very smart folks, they seem to have
-figured it all out! So, here is what we will do: we will delegate the entire
-task of maintaining state to them!&lt;/p&gt;
+&lt;p&gt;State is hard; we do not have the slightest clue as to how we can maintain state and at the same time remain scalable and resilient; but look, the creators of our database system are very smart folks, they seem to have figured it all out! So, here is what we will do: we will delegate the entire task of maintaining state to them!&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;That is how we arrived at the stateless microservice model, which I like to
-call the &amp;quot;Dory&amp;quot; model, after the fish that suffered from amnesia in the
-&lt;em&gt;Finding Nemo&lt;/em&gt; movie.&lt;/p&gt;
-&lt;p&gt;In the Dory model, every single incoming transaction gets processed by a
-microservice that is drawing a complete blank. Upon receiving the request, the
-microservice starts with very basic questions:&lt;/p&gt;
+&lt;p&gt;That is how we arrived at the stateless microservice model, which I like to call the &amp;quot;Dory&amp;quot; model, after the fish that suffered from amnesia in the &lt;em&gt;Finding Nemo&lt;/em&gt; movie.&lt;/p&gt;
+&lt;p&gt;In the Dory model, every single incoming transaction gets processed by a microservice that is drawing a complete blank. Upon receiving the request, the microservice starts with very basic questions:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Who am I, and what is this strange place I am running in?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Who are these folks sending me requests, and why?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Should I respond to them, or should I four-oh-three them away?&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Let's start by authenticating them...&lt;/p&gt;
-&lt;p&gt;...and it goes on like that. For every single request, there are multiple
-round-trips to the database while the microservice is discovering more and more
-about what it is being requested to do and whether it should in fact do it,
-and even more round-trips to retrieve the information that will go into the
-response, including very basic information that hardly ever changes, such as
-the name of the visitor on whose behalf the request was sent, and in multi-tenancy scenarios even
-the name of the tenant on whose behalf the website is being served.&lt;/p&gt;
-&lt;p&gt;When the transaction is nearing completion, the stateless microservice will
-meticulously store every single little piece of changed state in its exact
-right place in the database, as if it is making notes to itself, lest it
-forgets.&lt;/p&gt;
-&lt;p&gt;Finally, once the transaction is completed, the microservice will proceed to
-deliberately forget absolutely everything that it learned during the
-processing of the transaction, before it starts to wait for the next
-transaction.&lt;/p&gt;
-&lt;p&gt;I am not going to say that this is preposterously inefficient, but
-it is &lt;em&gt;&lt;strong&gt;preposterously inefficient.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Incidentally, the magnificent inefficiency of stateless microservices makes
-them to a certain extent a self-serving paradigm: in order to scale up you
-might think you need them, but once you have them, they will perform so badly,
-that boy oh boy, are you going to need to scale up!&lt;/p&gt;
-&lt;p&gt;Another problem with stateless microservices is that they cannot take any
-initiative of their own, they are restricted to only responding to incoming
-requests. This poses a problem with server-initiated client updates, which in
-certain circles are known as &amp;quot;push notifications&amp;quot;. A server-initiated client
-update happens when the server decides to send some data to the client at an
-arbitrary moment in time, as a result of some event occurring on the server,
-without the client first having to request that data.&lt;/p&gt;
-&lt;p&gt;Actually, the very term &amp;quot;push notification&amp;quot; seems to have originated from
-system designs in which such sending of data is a difficult task, as if the
-developers have to put their shoulders against the notification and push it
-all together to make it straddle the great divide between the server and the
-client. In other designs, where asynchronous bi-directional communication is
-the default mode of operation, there is no need for such laboriousness;
-server-initiated client updates are just part of the normal way things work.
-Alas, you cannot have that with stateless microservices, because
-bi-directional communication requires the notion of a session, which in turn
-implies a notion of state, which is a no-no.&lt;/p&gt;
-&lt;p&gt;Consequently, software systems that utilize the stateless microservice design
-pattern address the problem of server-initiated client updates in various
-wacky hacky ways:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Some opt to not have any; if the user wants to see what has changed, let
-them refresh the page. This can cause serious problems in systems where
-multiple clients may edit the same data, since the system has no way of
-alerting a client that the data they are editing is also being edited by
-another client at the same time.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Some use polling, meaning that each client keeps sending requests to the
-server at regular intervals asking whether there are any updates. This is wasteful, because each of these requests represents work that needs to
-be done, but very few of them will result in anything useful happening. At
-the same time, in order to reduce server load, the polling cannot be too
-frequent, which in turn means that there will always be a time
-lapse between the moment that an event occurs on the server and the moment
-that the clients take notice.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Some opt to have special stateful modules working side by side with the
-stateless microservices to handle the push notifications in a completely
-separate way, under the assumption that notifications are a kind of optional, &amp;quot;nice to have&amp;quot; thing anyway, so if performance suffers due to lack
-of scaling, or if service is interrupted due to lack of resilience, it will
-not hurt too much. On top of being clunky, this approach is also
-short-sighted because from the entire broad topic of server-initiated client
-updates it only considers the narrow case of updates being used for the sole
-purpose of on-screen notifications.&lt;/p&gt;
+&lt;li&gt;Who am I, and what is this strange place I am running in?&lt;/li&gt;
+&lt;li&gt;Who are these folks sending me requests, and why?&lt;/li&gt;
+&lt;li&gt;Should I respond to them, or should I four-oh-three them away?&lt;/li&gt;
+&lt;li&gt;Let's start by authenticating them...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;...and it goes on like that. For every single request, there are multiple round-trips to the database while the microservice is discovering more and more about what it is being requested to do and whether it should in fact do it, and even more round-trips to retrieve the information that will go into the response, including very basic information that hardly ever changes, such as the name of the visitor on whose behalf the request was sent, and in multi-tenancy scenarios even the name of the tenant on whose behalf the website is being served.&lt;/p&gt;
+&lt;p&gt;When the transaction is nearing completion, the stateless microservice will meticulously store every single little piece of changed state in its exact right place in the database, as if it is making notes to itself, lest it forgets.&lt;/p&gt;
+&lt;p&gt;Finally, once the transaction is completed, the microservice will proceed to deliberately forget absolutely everything that it learned during the processing of the transaction, before it starts to wait for the next transaction.&lt;/p&gt;
+&lt;p&gt;I am not going to say that this is preposterously inefficient, but it is &lt;em&gt;&lt;strong&gt;preposterously inefficient.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Incidentally, the magnificent inefficiency of stateless microservices makes them to a certain extent a self-serving paradigm: in order to scale up you might think you need them, but once you have them, they will perform so badly, that boy oh boy, are you going to need to scale up!&lt;/p&gt;
+&lt;p&gt;Another problem with stateless microservices is that they cannot take any initiative of their own, they are restricted to only responding to incoming requests. This poses a problem with server-initiated client updates, which in certain circles are known as &amp;quot;push notifications&amp;quot;. A server-initiated client update happens when the server decides to send some data to the client at an arbitrary moment in time, as a result of some event occurring on the server, without the client first having to request that data.&lt;/p&gt;
+&lt;p&gt;Actually, the very term &amp;quot;push notification&amp;quot; seems to have originated from system designs in which such sending of data is a difficult task, as if the developers have to put their shoulders against the notification and push it all together to make it straddle the great divide between the server and the client. In other designs, where asynchronous bi-directional communication is the default mode of operation, there is no need for such laboriousness; server-initiated client updates are just part of the normal way things work. Alas, you cannot have that with stateless microservices, because bi-directional communication requires the notion of a session, which in turn implies a notion of state, which is a no-no.&lt;/p&gt;
+&lt;p&gt;Consequently, software systems that utilize the stateless microservice design pattern address the problem of server-initiated client updates in various wacky hacky ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Some opt to not have any; if the user wants to see what has changed, let them refresh the page. This can cause serious problems in systems where multiple clients may edit the same data, since the system has no way of alerting a client that the data they are editing is also being edited by another client at the same time.&lt;/li&gt;
+&lt;li&gt;Some use polling, meaning that each client keeps sending requests to the server at regular intervals asking whether there are any updates. This is wasteful, because each of these requests represents work that needs to be done, but very few of them will result in anything useful happening. At the same time, in order to reduce server load, the polling cannot be too frequent, which in turn means that there will always be a time lapse between the moment that an event occurs on the server and the moment that the clients take notice.&lt;/li&gt;
+&lt;li&gt;Some opt to have special stateful modules working side by side with the stateless microservices to handle the push notifications in a completely separate way, under the assumption that notifications are a kind of optional, &amp;quot;nice to have&amp;quot; thing anyway, so if performance suffers due to lack of scaling, or if service is interrupted due to lack of resilience, it will not hurt too much. On top of being clunky, this approach is also short-sighted because from the entire broad topic of server-initiated client updates it only considers the narrow case of updates being used for the sole purpose of on-screen notifications.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Further reading: &lt;a
 href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
 &gt;The Stateful Microservice&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &lt;em&gt;Dory&lt;/em&gt;, the yellow-blue fish (a &lt;em&gt;Royal Blue Tang&lt;/em&gt;) that
-suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pixar.&lt;/p&gt;</description></item><item><title>What is wrong with Scala</title><link>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</link><pubDate>Mon, 04 Oct 2021 15:39:46 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/media/scala.svg"
+&lt;p&gt;Cover image: &lt;em&gt;Dory&lt;/em&gt;, the yellow-blue fish (a &lt;em&gt;Royal Blue Tang&lt;/em&gt;) that suffered from amnesia in the 2003 movie &lt;em&gt;Finding Nemo&lt;/em&gt; by Pixar.&lt;/p&gt;</description></item><item><title>What is wrong with Scala</title><link>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</link><pubDate>Mon, 04 Oct 2021 15:39:46 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/media/scala.svg"
 loading="lazy"
 &gt;
 This is part of a series of posts in which I am documenting what is wrong with certain popular programming languages that I am (more or less) familiar with. The aim of these posts is to support a future post in which I will be describing what the ideal programming language would look like for me.&lt;/p&gt;
@@ -13366,8 +13243,8 @@ href="https://en.wikipedia.org/wiki/VisualWorks" target="_blank"
 &lt;li&gt;A child viewmodel property can be optional or nullable, thus allowing the application logic to control whether an entire section of the user interface is available or not at any given moment.&lt;/li&gt;
 &lt;li&gt;A child viewmodel property can be a collection of viewmodels, allowing for a corresponding child view which is a list control or a tab control. Viewmodel type mapping still applies, so if the collection contains viewmodels of different types at runtime, the resulting list control will consist of different kinds of rows, or the resulting tab control will consist of different kinds of tabs.&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Object Lifetime Awareness</title><link>https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/</link><pubDate>Sun, 27 Dec 2020 10:46:17 +0000</pubDate><guid>https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2020-12-27-object-lifetime-awareness/media/le-penseur.jpg"
-width="3648"
-height="5472"
+width="1080"
+height="1620"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="66"
@@ -18480,7 +18357,7 @@ class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
 &gt;
-&lt;/p&gt;</description></item><item><title>Crossword Puzzle Compiler</title><link>https://blog.michael.gr/post/2015-10-crossword-compiler/</link><pubDate>Sun, 18 Oct 2015 01:16:02 +0000</pubDate><guid>https://blog.michael.gr/post/2015-10-crossword-compiler/</guid><description>&lt;p&gt;![[media/crossword-compiler-screenshot.png]]&lt;/p&gt;
+&lt;/p&gt;</description></item><item><title>Crossword Puzzle Compiler</title><link>https://blog.michael.gr/post/2015-10-crossword-compiler/</link><pubDate>Sun, 18 Oct 2015 01:16:02 +0000</pubDate><guid>https://blog.michael.gr/post/2015-10-crossword-compiler/</guid><description>&lt;p&gt;![[media/crossword-compiler-screenshot.jpg]]&lt;/p&gt;
 &lt;p&gt;This is old-style artificial intelligence in action, solving within seconds a problem that would normally take eons to complete.&lt;/p&gt;
 &lt;p&gt;You give it a crossword grid, and a long list of words, and it finds ways to mesh words into the grid so as to form a complete crossword puzzle. The final working version was done in 2003 using C# version 1.2 with a minimalistic UI in WinForms.&lt;/p&gt;
 &lt;p&gt;The following 30-second video shows the crossword compiler in action, filling multiple successive crosswords using a word list taken from actual crosswords that have been published on the interwebz by various sources through the years. The video is in real time, showing that the crossword compiler is, in most cases, extremely fast.&lt;/p&gt;
@@ -20527,7 +20404,7 @@ href="https://en.wikipedia.org/wiki/Darkfall" target="_blank"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2013-06-03-darkfall-samples/media/me-with-darkfall-t-shirt.png"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2013-06-03-darkfall-samples/media/me-with-darkfall-t-shirt.jpg"
 width="500"
 height="667"
 loading="lazy"
@@ -20572,7 +20449,7 @@ data-flex-basis="367px"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2013-06-03-darkfall-samples/media/full-screen-cluttered-1.png"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2013-06-03-darkfall-samples/media/full-screen-cluttered-1.jpg"
 width="1024"
 height="768"
 loading="lazy"
@@ -20609,7 +20486,7 @@ data-flex-basis="320px"
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2013-06-03-darkfall-samples/media/full-screen-uncluttered.png"
+&lt;th style="text-align: center"&gt;&lt;img src="https://blog.michael.gr/post/2013-06-03-darkfall-samples/media/full-screen-uncluttered.jpg"
 width="1024"
 height="768"
 loading="lazy"
@@ -21249,12 +21126,13 @@ Not only that, but even if you find the information, it turns out that the task 
 &lt;/blockquote&gt;
 &lt;p&gt;Okay, it is from here: &lt;a class="external"
 href="https://social.technet.microsoft.com/Forums/en-US/w7itprohardware/thread/d6cdda14-51f1-4b06-894a-84fd74c6fd61" target="_blank"
-&gt;social.technet.microsoft.comWindows 7 64 bit and Asus P5Q BIOS issue&lt;/a&gt;&lt;/p&gt;</description></item><item><title>My notes on "Spring in Action" (Manning)</title><link>https://blog.michael.gr/post/2014-09-my-notes-on-spring-in-action-manning/</link><pubDate>Wed, 27 Mar 2013 16:22:49 +0000</pubDate><guid>https://blog.michael.gr/post/2014-09-my-notes-on-spring-in-action-manning/</guid><description>&lt;p&gt;![[media/spring-in-action-cover.png]]My notes on the &amp;quot;Spring in Action&amp;quot; book by Craig Walls and Ryan Breidenbach from Manning Publications Co.&lt;/p&gt;
+&gt;social.technet.microsoft.comWindows 7 64 bit and Asus P5Q BIOS issue&lt;/a&gt;&lt;/p&gt;</description></item><item><title>My notes on "Spring in Action" (Manning)</title><link>https://blog.michael.gr/post/2014-09-my-notes-on-spring-in-action-manning/</link><pubDate>Wed, 27 Mar 2013 16:22:49 +0000</pubDate><guid>https://blog.michael.gr/post/2014-09-my-notes-on-spring-in-action-manning/</guid><description>&lt;p&gt;![[media/spring-in-action-cover.jpg]]&lt;/p&gt;
+&lt;p&gt;My notes on the &amp;quot;Spring in Action&amp;quot; book by Craig Walls and Ryan Breidenbach from Manning Publications Co.&lt;/p&gt;
 &lt;p&gt;Page 45&lt;/p&gt;
 &lt;p&gt;The author suggests that there is an ongoing debate on the issue of constructor injection vs. setter injection, and provides arguments for each one of them. Unfortunately, in the arguments that he provides for constructor injection he paints a straw-man, while his arguments for setter injection are all non-issues. It is no wonder then, that at the end of the discussion his personal preference turns out to be setter injection.&lt;/p&gt;
 &lt;p&gt;Arguments for constructor injection:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Of course, this assumes that the bean's constructor has all of the bean?s dependencies in its parameter list.&lt;/p&gt;
+&lt;p&gt;Of course, this assumes that the bean's constructor has all of the bean's dependencies in its parameter list.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;No, constructor injection does not &lt;em&gt;assume&lt;/em&gt; that; instead, it &lt;em&gt;requires&lt;/em&gt; it, because that's &lt;em&gt;precisely the point&lt;/em&gt; of constructor injection. It is quite unfair to take the central premise of constructor injection and reword it as a drawback. Perhaps the author meant to say instead that constructor injection assumes that all of the dependencies are &lt;em&gt;available&lt;/em&gt; at the time of the construction of the bean. Well, the only case in which a dependency might be unavailable at construction time is if the design of our system has a circular dependency built into it. In which case the flaw is with our design, not with the concept of constructor injection! Correspondingly, I favor the use of constructor injection everywhere, and in the rare and unfortunate case when a circular dependency exists and is not easy to factor out, the exceptional use of setter injection as a self-documenting means of temporarily circumventing the problem.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -21266,12 +21144,11 @@ href="https://social.technet.microsoft.com/Forums/en-US/w7itprohardware/thread/d
 &lt;blockquote&gt;
 &lt;p&gt;If a bean has several dependencies, the constructor's parameter list can be quite lengthy.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;So what? By the same token, if setter injection is used, then the list of setters will be quite lengthy.
-This is not an argument.&lt;/p&gt;
+&lt;p&gt;So what? By the same token, if setter injection is used, then the list of setters will be quite lengthy. This is not an argument.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If there are several ways to construct a valid object, it can be hard to come up with unique constructors, since constructor signatures vary only by the number and type of parameters.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Oh, puh-leez! &lt;em&gt;if&lt;/em&gt; there are several ways to construct the bean, (a small possibility,) and &lt;em&gt;if&lt;/em&gt; it is hard to come up with unique constructors, (a minutely small possibility,) then someone, somewhere, will have to squeeze their brain a little bit more to come up with unique constructors. If one does not want to have to &lt;em&gt;think&lt;/em&gt; at work every once in a while, maybe they should not have become a programmer. Also: with constructors, there are only so many ways to construct a bean as there are constructors for it. With setters, there exist something of the order of number-of-setters-factorial number of ways to construct it. What do you prefer?&lt;/p&gt;
+&lt;p&gt;Oh, puh-leez! &lt;em&gt;if&lt;/em&gt; there are several ways to construct the bean, (a small possibility,) and &lt;em&gt;if&lt;/em&gt; it is hard to come up with unique constructors, (a minutely small possibility,) then someone, somewhere, will have to squeeze their brain a little bit more to come up with unique constructors. If one does not want to have to &lt;em&gt;think&lt;/em&gt; at work every once in a while, maybe they should not have become a programmer. Also: with constructors, there are only so many ways to construct a bean as there are constructors for it. With setters, number of different ways to construct it is something of the order of number-of-setters-factorial . What do you prefer?&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If a constructor takes two or more parameters of the same type, it may be difficult to determine what each parameter's purpose is.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -21279,7 +21156,7 @@ This is not an argument.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Constructor injection does not lend itself readily to inheritance. A bean's constructor will have to pass parameters to super() in order to set private properties in the parent object.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Wha-what? &lt;em&gt;Constructor injection does not lend itself readily to inheritance&lt;/em&gt;? Is the author ignorant about the concept of constructors or the concept of inheritance? &lt;em&gt;Of course&lt;/em&gt; a bean's constructor will have to pass parameters to super, and it will have to pass exactly those parameters that the super requires, and that's precisely what guarantees proper instantiation of the super, and that's &lt;em&gt;the whole point&lt;/em&gt; with using constructors, and a &lt;em&gt;very important premise&lt;/em&gt; of inheritance. Again, a feature presented as a drawback. It is not a sign of a wise man to make the same mistake twice.&lt;/p&gt;
+&lt;p&gt;Wha-what? &lt;em&gt;Constructor injection does not lend itself readily to inheritance&lt;/em&gt;? Is the author ignorant about the concept of constructors or the concept of inheritance? &lt;em&gt;Of course&lt;/em&gt; a bean's constructor will have to pass parameters to super, and it will have to pass exactly those parameters that the super requires, and that's precisely what guarantees proper instantiation of the super, and that's &lt;em&gt;the whole point&lt;/em&gt; with using constructors, and a &lt;em&gt;very important premise&lt;/em&gt; of inheritance. Again, an advantage of constructor injection is being presented as a drawback.&lt;/p&gt;
 &lt;p&gt;In short, I do not believe that there really is a debate; it is just that eternal difference in world views between the real engineers, who are compelled to build compiler-enforced robustness into their software, and those who are programmers by accident, and prefer a certain cozy amount of sloppiness sprinkled everywhere for the sake of some ill-perceived ease in coding, testing, or refactoring. It really is the same short-sighted mentality that says &amp;quot;I make all members public because this way I can access them easier.&amp;quot; Part of the problem might also be some ignorance-induced superstition, on behalf of the second group of people, against the use of constructors. I have seen it again and again: many people simply &lt;em&gt;do not get&lt;/em&gt; constructors. And people tend to fear the unknown.&lt;/p&gt;
 &lt;p&gt;Page 62&lt;/p&gt;
 &lt;p&gt;&amp;quot;Furthermore, if a &lt;strong&gt;constructor&lt;/strong&gt; has multiple constructors, {...}&amp;quot; should read &amp;quot;Furthermore, if a &lt;strong&gt;bean&lt;/strong&gt; has multiple constructors, {...}&amp;quot;.&lt;/p&gt;
@@ -22719,8 +22596,8 @@ href="https://docs.oracle.com/javase/7/docs/technotes/guides/language/try-with-r
 &lt;blockquote&gt;
 &lt;p&gt;[...] subclasses of the &lt;code&gt;AutoCloseable&lt;/code&gt; interface can override this behavior of the &lt;code&gt;close&lt;/code&gt; method to throw specialized exceptions, such as &lt;code&gt;IOException&lt;/code&gt;, or no exception at all.&lt;/p&gt;
 &lt;/blockquote&gt;</description></item><item><title>The exploding hatch in the movie Sunshine (2007)</title><link>https://blog.michael.gr/post/2007-09-23-exploding-hatch-in-sunshine/</link><pubDate>Sun, 23 Sep 2007 01:16:34 +0000</pubDate><guid>https://blog.michael.gr/post/2007-09-23-exploding-hatch-in-sunshine/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2007-09-23-exploding-hatch-in-sunshine/media/sunshine-1.jpg"
-width="4425"
-height="1863"
+width="1920"
+height="808"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="237"
@@ -22733,8 +22610,8 @@ href="https://www.imdb.com/title/tt0448134/" target="_blank"
 &lt;p&gt;Capa first uses a blowtorch to bore a tiny hole on the inner hatch; then, he wears the spacesuit, fastens himself securely so that he won't be blown away, and presses the button which opens the outer hatch. The airlock decompresses violently to the outer void, and for a split second nothing else seems to happen, but immediately afterwards the inner hatch gets mysteriously blown away too, and the atmosphere of the ship escapes, (together with many objects from its interior,) through the airlock, to space.&lt;/p&gt;
 &lt;p&gt;After a few moments the flow of debris abates, and Capa is able to enter the ship. (Do not try this at home.) The movie does not spend any time explaining the cause of the explosion of the inner hatch; for those who got it, fine; for the rest, it is a mystery.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2007-09-23-exploding-hatch-in-sunshine/media/sunshine-2.jpg"
-width="3008"
-height="2002"
+width="1920"
+height="1278"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
