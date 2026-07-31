@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Movies on Michael's Blog</title><link>https://blog.michael.gr/tags/movies/</link><description>Recent content in Movies on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 27 Jul 2026 16:28:09 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/movies/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-my-movie-list/media/movie-list.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Movies on Michael's Blog</title><link>https://blog.michael.gr/tags/movies/</link><description>Recent content in Movies on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 31 Jul 2026 14:22:52 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/movies/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-my-movie-list/media/movie-list.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -10,7 +10,7 @@ loading="lazy"
 &lt;th&gt;&lt;div style="width:200px"&gt;Title&lt;/div&gt;&lt;/th&gt;
 &lt;th&gt;&lt;div style="width:50px"&gt;Year&lt;/div&gt;&lt;/th&gt;
 &lt;th&gt;&lt;div style="width:200px"&gt;Remark&lt;/div&gt;&lt;/th&gt;
-&lt;th&gt;&lt;div style="width:80px"&gt;IMDB link&lt;/div&gt;&lt;/th&gt;
+&lt;th&gt;&lt;div style="width:80px"&gt;link&lt;/div&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -1421,6 +1421,119 @@ href="https://www.imdb.com/title/tt1638355" target="_blank"
 &lt;td&gt;Very impressive visuals, some brilliant and some not-so-brilliant art, mediocre scenario and story-telling, some annoying unlikely or supernatural technology, no message to take home. Oh, and the music in the truck escaping from the barn was Deep Purple - Child in Time.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt11858890" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id="movies-to-watch"&gt;Movies to watch
+&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;div style="width:200px"&gt;Title&lt;/div&gt;&lt;/th&gt;
+&lt;th&gt;&lt;div style="width:50px"&gt;Year&lt;/div&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;div style="width:80px"&gt;link&lt;/div&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Excalibur&lt;/td&gt;
+&lt;td&gt;1989&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0082348/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;All that Jazz&lt;/td&gt;
+&lt;td&gt;1979&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0078754/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;West Side Story&lt;/td&gt;
+&lt;td&gt;2021&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt3581652/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Hidden Figures&lt;/td&gt;
+&lt;td&gt;2016&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt4846340/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Firefly (TV Series)&lt;/td&gt;
+&lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0303461/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Serenity&lt;/td&gt;
+&lt;td&gt;2005&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0379786/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Fantastic Planet (La planète sauvage)&lt;/td&gt;
+&lt;td&gt;1973&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0070544/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;All Quiet on the Western Front&lt;/td&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1016150/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Wargames&lt;/td&gt;
+&lt;td&gt;1983&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0086567/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Day After&lt;/td&gt;
+&lt;td&gt;1983&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0085404/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Ferris Bueller's Day Off&lt;/td&gt;
+&lt;td&gt;1986&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0091042/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
