@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 31 Jul 2026 17:30:13 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>You Want It Darker</title><link>https://blog.michael.gr/post/2026-07-28-leonard-cohen-you-want-it-darker/</link><pubDate>Tue, 28 Jul 2026 14:16:29 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-28-leonard-cohen-you-want-it-darker/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-28-leonard-cohen-you-want-it-darker/media/leonard-cohen.jpeg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 01 Aug 2026 00:07:56 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>You Want It Darker</title><link>https://blog.michael.gr/post/2026-07-28-leonard-cohen-you-want-it-darker/</link><pubDate>Tue, 28 Jul 2026 14:16:29 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-28-leonard-cohen-you-want-it-darker/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-28-leonard-cohen-you-want-it-darker/media/leonard-cohen.jpeg"
 width="2480"
 height="2480"
 loading="lazy"
@@ -232,7 +232,9 @@ href="https://en.wikipedia.org/wiki/Problem_of_evil" target="_blank"
 loading="lazy"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;This is a list of movies that I have watched since I began keeping track in mid-2015, with a short verdict for each.&lt;/p&gt;
+&lt;p&gt;This is a list of movies that I have watched, with a short verdict for each.&lt;/p&gt;
+&lt;p&gt;It is followed by a list of movies I plan to watch.&lt;/p&gt;
+&lt;p&gt;I began keeping track in mid-2015, and later I made some effort to list movies that I had previously watched.\&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -241,140 +243,716 @@ loading="lazy"
 &lt;th&gt;&lt;div style="width:50px"&gt;Year&lt;/div&gt;&lt;/th&gt;
 &lt;th&gt;&lt;div style="width:200px"&gt;Remark&lt;/div&gt;&lt;/th&gt;
 &lt;th&gt;&lt;div style="width:80px"&gt;link&lt;/div&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;The Andromeda Strain&lt;/td&gt;
 &lt;td&gt;1971&lt;/td&gt;
 &lt;td&gt;Quite good, especially considering the time it was made.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0066769/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Idiocracy&lt;/td&gt;
 &lt;td&gt;2006&lt;/td&gt;
 &lt;td&gt;Very, very good. Frighteningly good.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0387808/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Dr. Strangelove&lt;/td&gt;
+&lt;td&gt;1964&lt;/td&gt;
+&lt;td&gt;Excellent.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0057012/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;2001: Space Odyssey&lt;/td&gt;
+&lt;td&gt;1968&lt;/td&gt;
+&lt;td&gt;Absolutely awesome. Also, an extremely important and influential movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0062622" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Abyss&lt;/td&gt;
+&lt;td&gt;1989&lt;/td&gt;
+&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0096754/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Paths of Glory&lt;/td&gt;
+&lt;td&gt;1957&lt;/td&gt;
+&lt;td&gt;Excellent.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0050825/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Sphere&lt;/td&gt;
+&lt;td&gt;1998&lt;/td&gt;
+&lt;td&gt;Lame nonsense.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0120184/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Wall-E&lt;/td&gt;
 &lt;td&gt;2008&lt;/td&gt;
 &lt;td&gt;Very good, except for the fully detached, free-floating parts of the Eve robot, which were extremely annoying and did a lot to ruin the movie for me.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0910970/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Interstellar&lt;/td&gt;
 &lt;td&gt;2014&lt;/td&gt;
-&lt;td&gt;Decent, until some point near the end, when the spiritual nonsense turned the whole movie into a pile of crap.&lt;/td&gt;
+&lt;td&gt;Entertaining, but barely, due to all the impossibilities, (if we had the technology shown in the movie we would certainly be able to fix our crops,) until some point near the end, when the spiritual nonsense turned the whole movie into a pile of crap.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0816692/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;I Am Legend&lt;/td&gt;
 &lt;td&gt;2007&lt;/td&gt;
-&lt;td&gt;Some very good concepts, but overall, kinda meh.&lt;/td&gt;
+&lt;td&gt;Some very good concepts and visuals.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0480249/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;12 Monkeys&lt;/td&gt;
 &lt;td&gt;1995&lt;/td&gt;
 &lt;td&gt;Very, very good.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0114746/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Social Network&lt;/td&gt;
+&lt;td&gt;2010&lt;/td&gt;
+&lt;td&gt;Informative, but of limited interest.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1285016/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The 5th Element&lt;/td&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0119116/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Waterworld&lt;/td&gt;
 &lt;td&gt;1995&lt;/td&gt;
 &lt;td&gt;Impressive, but too many aspects of it were impossible and the bad guys were too stereotypical.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0114898/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Gravity&lt;/td&gt;
 &lt;td&gt;2013&lt;/td&gt;
 &lt;td&gt;Impressive.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1454468/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;127 Hours&lt;/td&gt;
 &lt;td&gt;2010&lt;/td&gt;
-&lt;td&gt;Impressive.&lt;/td&gt;
+&lt;td&gt;A good movie.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1542344/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Cast Away&lt;/td&gt;
 &lt;td&gt;2000&lt;/td&gt;
 &lt;td&gt;Very good.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0162222/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Back to the Future&lt;/td&gt;
 &lt;td&gt;1985&lt;/td&gt;
 &lt;td&gt;Entertaining.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0088763/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Bill and Ted's Excellent Adventure&lt;/td&gt;
 &lt;td&gt;1989&lt;/td&gt;
 &lt;td&gt;Entertaining.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0096928/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;The Book of Eli&lt;/td&gt;
 &lt;td&gt;2010&lt;/td&gt;
-&lt;td&gt;A decently made action adventure up until the end with the religious nonsense.&lt;/td&gt;
+&lt;td&gt;A decently made action adventure up until some point near the end when the religious nonsense was revealed.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1037705" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Unknown&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;Noah&lt;/td&gt;
 &lt;td&gt;2014&lt;/td&gt;
 &lt;td&gt;Pretty crappy.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1959490/" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Olympus Has Fallen&lt;/td&gt;
+&lt;td&gt;2013&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt2302755/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Mad Max&lt;/td&gt;
+&lt;td&gt;1979&lt;/td&gt;
+&lt;td&gt;A good movie, and also, a very influential movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0079501/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Lethal Weapon&lt;/td&gt;
+&lt;td&gt;1987&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0093409/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Lethal Weapon 2&lt;/td&gt;
+&lt;td&gt;1989&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0097733/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Ice Age&lt;/td&gt;
+&lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0268380/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Despicable Me&lt;/td&gt;
+&lt;td&gt;2010&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1323594/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Sin City&lt;/td&gt;
+&lt;td&gt;2005&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0401792/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;300&lt;/td&gt;
+&lt;td&gt;2006&lt;/td&gt;
+&lt;td&gt;Very good, and true to Frank Miller's original comic. A few small issues with it, for example the unnecessary vilification of the Persians, and of Xerxes in particular.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0416449/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Apocalypse Now&lt;/td&gt;
+&lt;td&gt;1979&lt;/td&gt;
+&lt;td&gt;Quite good.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0078788/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Terminal&lt;/td&gt;
+&lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;Excellent.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0362227/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Blade Runner&lt;/td&gt;
+&lt;td&gt;1982&lt;/td&gt;
+&lt;td&gt;Absolutely awesome. Also, one of the most influential movies ever made.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0083658/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Der Untergang (Downfall)&lt;/td&gt;
+&lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;Excellent.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0363163/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;All Quiet on the Western Front&lt;/td&gt;
+&lt;td&gt;1930&lt;/td&gt;
+&lt;td&gt;Excellent.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0020629/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Valkyrie&lt;/td&gt;
+&lt;td&gt;2008&lt;/td&gt;
+&lt;td&gt;Very good. Scarring.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0985699/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Deer Hunter&lt;/td&gt;
+&lt;td&gt;1978&lt;/td&gt;
+&lt;td&gt;Failed to see what is the big issue about it.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0077416/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Wolf Lake&lt;/td&gt;
+&lt;td&gt;1980&lt;/td&gt;
+&lt;td&gt;Very good.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0078508/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Lawrence of Arabia&lt;/td&gt;
+&lt;td&gt;1962&lt;/td&gt;
+&lt;td&gt;From the little that I remember, it was a good movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0056172/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Matrix&lt;/td&gt;
+&lt;td&gt;1999&lt;/td&gt;
+&lt;td&gt;So, apparently I must belong to the 0.1% of the population that found this movie quite crappy.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0133093/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Dredd&lt;/td&gt;
+&lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Entertaining, but barely. It was very disappointing to see that the gear was somewhat of a downgrade both from the original comic book and from the 1995 movie. Even Carl Urban's pointy chin was a downgrade from Sylvester Stallone's square chin.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1343727/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;John Wick&lt;/td&gt;
+&lt;td&gt;2014&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt2911666/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;John Wick: Chapter 2&lt;/td&gt;
+&lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt4425200/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;John Wick: Chapter 3&lt;/td&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt6146586/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;John Wick: Chapter 4&lt;/td&gt;
+&lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt10366206/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Bourne Identity&lt;/td&gt;
+&lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0258463/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Bourne Supremacy&lt;/td&gt;
+&lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0372183/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Bourne Ultimatum&lt;/td&gt;
+&lt;td&gt;2007&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0440963/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Bourne Legacy&lt;/td&gt;
+&lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1194173/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Jason Bourne&lt;/td&gt;
+&lt;td&gt;2016&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt4196776/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Dune&lt;/td&gt;
+&lt;td&gt;1984&lt;/td&gt;
+&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0087182/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Planet of the Apes&lt;/td&gt;
+&lt;td&gt;1968&lt;/td&gt;
+&lt;td&gt;Decent actually, considering when it was made. Important for cultural literacy.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0063442/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Sunshine&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Quite good, although the basic scientific premise was a bit hard to swallow, the villain was completely over the top, and the end looked unnecessarily metaphysical considering that it involved nothing metaphysical.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0448134/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Lord of the Rings: The Fellowship of the Ring&lt;/td&gt;
+&lt;td&gt;2001&lt;/td&gt;
+&lt;td&gt;Entertaining. Barely. I do not care for the genre.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0120737/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Rocky&lt;/td&gt;
+&lt;td&gt;1976&lt;/td&gt;
+&lt;td&gt;Decent, actually.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0075148/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Conan the Barbarian&lt;/td&gt;
+&lt;td&gt;1982&lt;/td&gt;
+&lt;td&gt;Entertaining&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0082198/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Pacific Rim&lt;/td&gt;
+&lt;td&gt;2013&lt;/td&gt;
+&lt;td&gt;Barely entertaining; juvenile.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1663662/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;An Inconvenient Truth&lt;/td&gt;
+&lt;td&gt;2006&lt;/td&gt;
+&lt;td&gt;Not everything in it is accurate, but nonetheless, a must-watch.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0497116/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Koyaanisqatsi&lt;/td&gt;
+&lt;td&gt;1982&lt;/td&gt;
+&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0085809/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Powaqqatsi&lt;/td&gt;
+&lt;td&gt;1988&lt;/td&gt;
+&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0095895/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Naqoyqatsi&lt;/td&gt;
+&lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0145937/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Face/Off&lt;/td&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;What utter crap.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0119094/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Kill Bill: Vol. 1&lt;/td&gt;
+&lt;td&gt;2003&lt;/td&gt;
+&lt;td&gt;Crap.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0266697/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Pulp Fiction&lt;/td&gt;
+&lt;td&gt;1994&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0110912/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Captain Corelli's Mandolin&lt;/td&gt;
+&lt;td&gt;2001&lt;/td&gt;
+&lt;td&gt;Quite good. An attempt has at least been made to make the Greek characters believable. The movie completely fails to show the scale of the actual historical atrocity, but then again, if it did, then the movie audiences would have dismissed it as unbelievable.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0238112/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Contact&lt;/td&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;Uhm, good, except for the very highly unlikely deranged saboteur, (which was not in the book,) and the stuff on the &amp;quot;other&amp;quot; side that was so bizarre as to look metaphysical. (Which was also not in the book.)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0118884/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;The Terminator&lt;/td&gt;
+&lt;td&gt;1984&lt;/td&gt;
+&lt;td&gt;Entertaining, I guess.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0088247/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Terminator 2&lt;/td&gt;
+&lt;td&gt;1881&lt;/td&gt;
+&lt;td&gt;Uhm, whatever.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0103064/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Alien&lt;/td&gt;
+&lt;td&gt;1979&lt;/td&gt;
+&lt;td&gt;Quite good. Also, a highly influential movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0078748/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Rise of the Planet of the Apes&lt;/td&gt;
+&lt;td&gt;2011&lt;/td&gt;
+&lt;td&gt;I do not remember much, but I think it was a decent movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1318514/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Dawn of the Planet of the Apes&lt;/td&gt;
+&lt;td&gt;2014&lt;/td&gt;
+&lt;td&gt;Decent up until the very end, where it turned into crap.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt2103281/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-06&lt;/td&gt;
 &lt;td&gt;Star Wars - all six of them&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Awesome&lt;/td&gt;
+&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -385,6 +963,7 @@ href="https://www.imdb.com/title/tt1959490/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1690953" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-06-16&lt;/td&gt;
@@ -394,6 +973,7 @@ href="https://www.imdb.com/title/tt1690953" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3541262" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-06-19&lt;/td&gt;
@@ -403,6 +983,7 @@ href="https://www.imdb.com/title/tt3541262" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0070723" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-06-22&lt;/td&gt;
@@ -412,6 +993,7 @@ href="https://www.imdb.com/title/tt0070723" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1823672" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-06-28&lt;/td&gt;
@@ -421,6 +1003,7 @@ href="https://www.imdb.com/title/tt1823672" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1392190" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-07-27&lt;/td&gt;
@@ -430,6 +1013,7 @@ href="https://www.imdb.com/title/tt1392190" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0469263" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-07-28&lt;/td&gt;
@@ -439,6 +1023,7 @@ href="https://www.imdb.com/title/tt0469263" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3675568" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-07-29&lt;/td&gt;
@@ -448,6 +1033,7 @@ href="https://www.imdb.com/title/tt3675568" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1385956" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-07-29&lt;/td&gt;
@@ -457,6 +1043,7 @@ href="https://www.imdb.com/title/tt1385956" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2334733" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-01&lt;/td&gt;
@@ -466,6 +1053,7 @@ href="https://www.imdb.com/title/tt2334733" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2802144" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-02&lt;/td&gt;
@@ -475,6 +1063,7 @@ href="https://www.imdb.com/title/tt2802144" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1772288" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-03&lt;/td&gt;
@@ -484,6 +1073,7 @@ href="https://www.imdb.com/title/tt1772288" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3297330" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-05&lt;/td&gt;
@@ -493,6 +1083,7 @@ href="https://www.imdb.com/title/tt3297330" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2404425" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-08&lt;/td&gt;
@@ -502,6 +1093,7 @@ href="https://www.imdb.com/title/tt2404425" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3233418" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-08&lt;/td&gt;
@@ -511,15 +1103,17 @@ href="https://www.imdb.com/title/tt3233418" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1541123" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-09&lt;/td&gt;
 &lt;td&gt;The Russia House&lt;/td&gt;
 &lt;td&gt;1990&lt;/td&gt;
-&lt;td&gt;Excellent, excellent.&lt;/td&gt;
+&lt;td&gt;Excellent.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0100530" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-11&lt;/td&gt;
@@ -529,6 +1123,7 @@ href="https://www.imdb.com/title/tt0100530" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1216491" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-12&lt;/td&gt;
@@ -538,6 +1133,7 @@ href="https://www.imdb.com/title/tt1216491" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2615506" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-13&lt;/td&gt;
@@ -547,6 +1143,7 @@ href="https://www.imdb.com/title/tt2615506" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3247714" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-14&lt;/td&gt;
@@ -556,6 +1153,7 @@ href="https://www.imdb.com/title/tt3247714" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1020072" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-16&lt;/td&gt;
@@ -565,6 +1163,7 @@ href="https://www.imdb.com/title/tt1020072" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1809398" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-21&lt;/td&gt;
@@ -574,6 +1173,7 @@ href="https://www.imdb.com/title/tt1809398" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2532528" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-23&lt;/td&gt;
@@ -583,6 +1183,7 @@ href="https://www.imdb.com/title/tt2532528" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2980516" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-08-24&lt;/td&gt;
@@ -592,6 +1193,7 @@ href="https://www.imdb.com/title/tt2980516" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0103882" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-09-22&lt;/td&gt;
@@ -601,6 +1203,7 @@ href="https://www.imdb.com/title/tt0103882" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2713180" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-10-24&lt;/td&gt;
@@ -610,6 +1213,7 @@ href="https://www.imdb.com/title/tt2713180" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2091478" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-10-25&lt;/td&gt;
@@ -619,6 +1223,7 @@ href="https://www.imdb.com/title/tt2091478" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1964418" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-11-08&lt;/td&gt;
@@ -628,6 +1233,7 @@ href="https://www.imdb.com/title/tt1964418" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2361700" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-11-08&lt;/td&gt;
@@ -637,6 +1243,7 @@ href="https://www.imdb.com/title/tt2361700" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4547120" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-11-20&lt;/td&gt;
@@ -646,6 +1253,7 @@ href="https://www.imdb.com/title/tt4547120" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1638355" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-11-21&lt;/td&gt;
@@ -655,6 +1263,7 @@ href="https://www.imdb.com/title/tt1638355" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2381249" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-11-23&lt;/td&gt;
@@ -664,6 +1273,7 @@ href="https://www.imdb.com/title/tt2381249" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3181776" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-11-24&lt;/td&gt;
@@ -673,6 +1283,7 @@ href="https://www.imdb.com/title/tt3181776" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2140379" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-11-26&lt;/td&gt;
@@ -682,6 +1293,7 @@ href="https://www.imdb.com/title/tt2140379" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4126304" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-11-27&lt;/td&gt;
@@ -691,6 +1303,7 @@ href="https://www.imdb.com/title/tt4126304" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2006295" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-03&lt;/td&gt;
@@ -700,6 +1313,7 @@ href="https://www.imdb.com/title/tt2006295" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3396166" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-04&lt;/td&gt;
@@ -709,6 +1323,7 @@ href="https://www.imdb.com/title/tt3396166" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1340138" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-13&lt;/td&gt;
@@ -718,6 +1333,7 @@ href="https://www.imdb.com/title/tt1340138" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0470752" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-18&lt;/td&gt;
@@ -727,6 +1343,7 @@ href="https://www.imdb.com/title/tt0470752" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2322441" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-18&lt;/td&gt;
@@ -736,6 +1353,7 @@ href="https://www.imdb.com/title/tt2322441" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1951265" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-19&lt;/td&gt;
@@ -745,6 +1363,7 @@ href="https://www.imdb.com/title/tt1951265" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2199571" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-21&lt;/td&gt;
@@ -754,6 +1373,7 @@ href="https://www.imdb.com/title/tt2199571" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2562232" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-21&lt;/td&gt;
@@ -763,6 +1383,7 @@ href="https://www.imdb.com/title/tt2562232" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3327624" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-21&lt;/td&gt;
@@ -772,6 +1393,7 @@ href="https://www.imdb.com/title/tt3327624" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0314331" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-29&lt;/td&gt;
@@ -781,6 +1403,7 @@ href="https://www.imdb.com/title/tt0314331" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3659388" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015-12-30&lt;/td&gt;
@@ -790,6 +1413,7 @@ href="https://www.imdb.com/title/tt3659388" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3659388" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016&lt;/td&gt;
@@ -799,6 +1423,7 @@ href="https://www.imdb.com/title/tt3659388" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1907668" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-01-02&lt;/td&gt;
@@ -808,6 +1433,7 @@ href="https://www.imdb.com/title/tt1907668" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2503944" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-01-07&lt;/td&gt;
@@ -817,6 +1443,7 @@ href="https://www.imdb.com/title/tt2503944" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1289432" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-03-13&lt;/td&gt;
@@ -826,6 +1453,7 @@ href="https://www.imdb.com/title/tt1289432" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2379713" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-04-23&lt;/td&gt;
@@ -835,6 +1463,7 @@ href="https://www.imdb.com/title/tt2379713" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1951266" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-06-12&lt;/td&gt;
@@ -844,6 +1473,7 @@ href="https://www.imdb.com/title/tt1951266" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2125608" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-07-17&lt;/td&gt;
@@ -853,6 +1483,7 @@ href="https://www.imdb.com/title/tt2125608" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3682448" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-07-19&lt;/td&gt;
@@ -862,6 +1493,7 @@ href="https://www.imdb.com/title/tt3682448" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1390411" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-07-21&lt;/td&gt;
@@ -871,6 +1503,7 @@ href="https://www.imdb.com/title/tt1390411" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1596363" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-11-05&lt;/td&gt;
@@ -880,6 +1513,7 @@ href="https://www.imdb.com/title/tt1596363" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0119314" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-11-27&lt;/td&gt;
@@ -889,6 +1523,7 @@ href="https://www.imdb.com/title/tt0119314" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4196776" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-12-24&lt;/td&gt;
@@ -898,6 +1533,7 @@ href="https://www.imdb.com/title/tt4196776" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1995390" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-12-28&lt;/td&gt;
@@ -907,6 +1543,7 @@ href="https://www.imdb.com/title/tt1995390" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0314979" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-12-29&lt;/td&gt;
@@ -916,6 +1553,7 @@ href="https://www.imdb.com/title/tt0314979" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0314979" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-12-30&lt;/td&gt;
@@ -925,6 +1563,7 @@ href="https://www.imdb.com/title/tt0314979" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2660888" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-01-02&lt;/td&gt;
@@ -934,6 +1573,7 @@ href="https://www.imdb.com/title/tt2660888" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3774114" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-01-03&lt;/td&gt;
@@ -943,6 +1583,7 @@ href="https://www.imdb.com/title/tt3774114" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3263904" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-01-07&lt;/td&gt;
@@ -952,6 +1593,7 @@ href="https://www.imdb.com/title/tt3263904" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3393786" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-01-08&lt;/td&gt;
@@ -961,6 +1603,7 @@ href="https://www.imdb.com/title/tt3393786" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2980210" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-01-08&lt;/td&gt;
@@ -970,6 +1613,7 @@ href="https://www.imdb.com/title/tt2980210" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1860357" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-01-13&lt;/td&gt;
@@ -979,6 +1623,7 @@ href="https://www.imdb.com/title/tt1860357" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2005151" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-01-21&lt;/td&gt;
@@ -988,6 +1633,7 @@ href="https://www.imdb.com/title/tt2005151" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1663202" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-02-17&lt;/td&gt;
@@ -997,6 +1643,7 @@ href="https://www.imdb.com/title/tt1663202" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2717822" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-04-14&lt;/td&gt;
@@ -1006,21 +1653,24 @@ href="https://www.imdb.com/title/tt2717822" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2140479" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-04-16&lt;/td&gt;
 &lt;td&gt;Arrival&lt;/td&gt;
 &lt;td&gt;2016&lt;/td&gt;
-&lt;td&gt;Mostly pretty good, but also disappointing in certain ways.&lt;/td&gt;
+&lt;td&gt;Mostly pretty good, but also disappointing in some ways.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2543164" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-04-22&lt;/td&gt;
 &lt;td&gt;Rogue One Bonus Disk&lt;/td&gt;
 &lt;td&gt;2016&lt;/td&gt;
 &lt;td&gt;Interesting. Mildly.&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1031,6 +1681,7 @@ href="https://www.imdb.com/title/tt2543164" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3748528" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-04-25&lt;/td&gt;
@@ -1040,6 +1691,7 @@ href="https://www.imdb.com/title/tt3748528" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3190158" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-04-26&lt;/td&gt;
@@ -1049,6 +1701,7 @@ href="https://www.imdb.com/title/tt3190158" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2674430" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-04-27&lt;/td&gt;
@@ -1058,6 +1711,7 @@ href="https://www.imdb.com/title/tt2674430" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3397884" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-04-28&lt;/td&gt;
@@ -1067,6 +1721,7 @@ href="https://www.imdb.com/title/tt3397884" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1598642" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-05-28&lt;/td&gt;
@@ -1076,6 +1731,7 @@ href="https://www.imdb.com/title/tt1598642" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3014866" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-06-01&lt;/td&gt;
@@ -1085,6 +1741,7 @@ href="https://www.imdb.com/title/tt3014866" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3799694" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-06-14&lt;/td&gt;
@@ -1094,6 +1751,7 @@ href="https://www.imdb.com/title/tt3799694" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2119532" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-02&lt;/td&gt;
@@ -1103,6 +1761,7 @@ href="https://www.imdb.com/title/tt2119532" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1619029" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-15&lt;/td&gt;
@@ -1112,6 +1771,7 @@ href="https://www.imdb.com/title/tt1619029" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1219827" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-16&lt;/td&gt;
@@ -1121,6 +1781,7 @@ href="https://www.imdb.com/title/tt1219827" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0086837" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-22&lt;/td&gt;
@@ -1130,6 +1791,7 @@ href="https://www.imdb.com/title/tt0086837" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0079550" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-22&lt;/td&gt;
@@ -1139,6 +1801,7 @@ href="https://www.imdb.com/title/tt0079550" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt5155780" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-25&lt;/td&gt;
@@ -1148,6 +1811,7 @@ href="https://www.imdb.com/title/tt5155780" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4287320" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-25&lt;/td&gt;
@@ -1157,6 +1821,7 @@ href="https://www.imdb.com/title/tt4287320" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0118158" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-28&lt;/td&gt;
@@ -1166,6 +1831,7 @@ href="https://www.imdb.com/title/tt0118158" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0462335" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-30&lt;/td&gt;
@@ -1175,6 +1841,7 @@ href="https://www.imdb.com/title/tt0462335" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1507355" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-31&lt;/td&gt;
@@ -1184,6 +1851,7 @@ href="https://www.imdb.com/title/tt1507355" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0369610" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-07-31&lt;/td&gt;
@@ -1193,6 +1861,7 @@ href="https://www.imdb.com/title/tt0369610" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0438488" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-02&lt;/td&gt;
@@ -1202,6 +1871,7 @@ href="https://www.imdb.com/title/tt0438488" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1650062" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-03&lt;/td&gt;
@@ -1211,6 +1881,7 @@ href="https://www.imdb.com/title/tt1650062" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0345061" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-07&lt;/td&gt;
@@ -1220,6 +1891,7 @@ href="https://www.imdb.com/title/tt0345061" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2084970" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-08&lt;/td&gt;
@@ -1229,6 +1901,7 @@ href="https://www.imdb.com/title/tt2084970" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1904996" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-10&lt;/td&gt;
@@ -1238,6 +1911,7 @@ href="https://www.imdb.com/title/tt1904996" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3460252" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-10&lt;/td&gt;
@@ -1247,6 +1921,7 @@ href="https://www.imdb.com/title/tt3460252" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2404435" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-10&lt;/td&gt;
@@ -1256,6 +1931,7 @@ href="https://www.imdb.com/title/tt2404435" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0848228" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-11&lt;/td&gt;
@@ -1265,6 +1941,7 @@ href="https://www.imdb.com/title/tt0848228" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3300542" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-12&lt;/td&gt;
@@ -1274,6 +1951,7 @@ href="https://www.imdb.com/title/tt3300542" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3410834" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017-08-13&lt;/td&gt;
@@ -1283,6 +1961,7 @@ href="https://www.imdb.com/title/tt3410834" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0067116" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018-05-20&lt;/td&gt;
@@ -1292,6 +1971,7 @@ href="https://www.imdb.com/title/tt0067116" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4703048" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018-06-10&lt;/td&gt;
@@ -1301,6 +1981,7 @@ href="https://www.imdb.com/title/tt4703048" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1856101" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018-06-12&lt;/td&gt;
@@ -1310,6 +1991,7 @@ href="https://www.imdb.com/title/tt1856101" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1734493" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018-06-23&lt;/td&gt;
@@ -1319,6 +2001,7 @@ href="https://www.imdb.com/title/tt1734493" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0451279" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018-08-10&lt;/td&gt;
@@ -1328,6 +2011,7 @@ href="https://www.imdb.com/title/tt0451279" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2085752" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018-08-10&lt;/td&gt;
@@ -1337,6 +2021,7 @@ href="https://www.imdb.com/title/tt2085752" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2406566" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018-08-26&lt;/td&gt;
@@ -1346,6 +2031,7 @@ href="https://www.imdb.com/title/tt2406566" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt5164214" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018-09-18&lt;/td&gt;
@@ -1355,6 +2041,7 @@ href="https://www.imdb.com/title/tt5164214" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3778644" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1364,6 +2051,7 @@ href="https://www.imdb.com/title/tt3778644" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt6674318" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1373,6 +2061,7 @@ href="https://www.imdb.com/title/tt6674318" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1846589" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1382,6 +2071,7 @@ href="https://www.imdb.com/title/tt1846589" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4912910" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1391,6 +2081,7 @@ href="https://www.imdb.com/title/tt4912910" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2527336" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1400,6 +2091,7 @@ href="https://www.imdb.com/title/tt2527336" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3766354" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1409,6 +2101,7 @@ href="https://www.imdb.com/title/tt3766354" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4244998" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1418,6 +2111,7 @@ href="https://www.imdb.com/title/tt4244998" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1300563" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1427,6 +2121,7 @@ href="https://www.imdb.com/title/tt1300563" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4827558" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
@@ -1436,6 +2131,7 @@ href="https://www.imdb.com/title/tt4827558" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt7946422" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019-07-25&lt;/td&gt;
@@ -1445,6 +2141,7 @@ href="https://www.imdb.com/title/tt7946422" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0094764" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2019-12-18&lt;/td&gt;
@@ -1454,6 +2151,7 @@ href="https://www.imdb.com/title/tt0094764" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt8106534" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-04&lt;/td&gt;
@@ -1463,6 +2161,7 @@ href="https://www.imdb.com/title/tt8106534" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt10095266" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-07&lt;/td&gt;
@@ -1472,6 +2171,7 @@ href="https://www.imdb.com/title/tt10095266" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2935510" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-07&lt;/td&gt;
@@ -1481,6 +2181,7 @@ href="https://www.imdb.com/title/tt2935510" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt6189022" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-11&lt;/td&gt;
@@ -1490,6 +2191,7 @@ href="https://www.imdb.com/title/tt6189022" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt6613878" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-12&lt;/td&gt;
@@ -1499,6 +2201,7 @@ href="https://www.imdb.com/title/tt6613878" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4425200" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-17&lt;/td&gt;
@@ -1508,6 +2211,7 @@ href="https://www.imdb.com/title/tt4425200" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1025100" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-18&lt;/td&gt;
@@ -1517,6 +2221,7 @@ href="https://www.imdb.com/title/tt1025100" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3256226" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-19&lt;/td&gt;
@@ -1526,6 +2231,7 @@ href="https://www.imdb.com/title/tt3256226" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt6146586" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-01-25&lt;/td&gt;
@@ -1535,6 +2241,7 @@ href="https://www.imdb.com/title/tt6146586" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt8236336" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-04-09&lt;/td&gt;
@@ -1544,6 +2251,7 @@ href="https://www.imdb.com/title/tt8236336" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt8579674" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-04-11&lt;/td&gt;
@@ -1553,6 +2261,7 @@ href="https://www.imdb.com/title/tt8579674" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1302006" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-22&lt;/td&gt;
@@ -1562,6 +2271,7 @@ href="https://www.imdb.com/title/tt1302006" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt7458762" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-25&lt;/td&gt;
@@ -1571,6 +2281,7 @@ href="https://www.imdb.com/title/tt7458762" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt5723416" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-27&lt;/td&gt;
@@ -1580,6 +2291,7 @@ href="https://www.imdb.com/title/tt5723416" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1922685" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-27&lt;/td&gt;
@@ -1589,6 +2301,7 @@ href="https://www.imdb.com/title/tt1922685" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0316824" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-28&lt;/td&gt;
@@ -1598,6 +2311,7 @@ href="https://www.imdb.com/title/tt0316824" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4682804" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-28&lt;/td&gt;
@@ -1607,6 +2321,7 @@ href="https://www.imdb.com/title/tt4682804" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt8760684" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-28&lt;/td&gt;
@@ -1616,6 +2331,7 @@ href="https://www.imdb.com/title/tt8760684" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0112740" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-28&lt;/td&gt;
@@ -1625,6 +2341,7 @@ href="https://www.imdb.com/title/tt0112740" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt5968394" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-06-29&lt;/td&gt;
@@ -1634,6 +2351,7 @@ href="https://www.imdb.com/title/tt5968394" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt4575328" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-07-28&lt;/td&gt;
@@ -1643,6 +2361,7 @@ href="https://www.imdb.com/title/tt4575328" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt6048922" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-07-29&lt;/td&gt;
@@ -1652,6 +2371,7 @@ href="https://www.imdb.com/title/tt6048922" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0082096" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2020-08-08&lt;/td&gt;
@@ -1661,6 +2381,7 @@ href="https://www.imdb.com/title/tt0082096" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt6924650" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2021-07-09&lt;/td&gt;
@@ -1670,6 +2391,7 @@ href="https://www.imdb.com/title/tt6924650" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2091473" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2023-01-22&lt;/td&gt;
@@ -1679,6 +2401,7 @@ href="https://www.imdb.com/title/tt2091473" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0113277" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2023-07-20&lt;/td&gt;
@@ -1688,6 +2411,7 @@ href="https://www.imdb.com/title/tt0113277" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt15398776" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2023-12-22&lt;/td&gt;
@@ -1697,6 +2421,7 @@ href="https://www.imdb.com/title/tt15398776" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt11286314" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2023-12-29&lt;/td&gt;
@@ -1706,6 +2431,7 @@ href="https://www.imdb.com/title/tt11286314" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt5830254" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2024-12-30&lt;/td&gt;
@@ -1715,6 +2441,7 @@ href="https://www.imdb.com/title/tt5830254" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt5884796" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2025-03-16&lt;/td&gt;
@@ -1724,6 +2451,7 @@ href="https://www.imdb.com/title/tt5884796" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0071360" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2025-08-10&lt;/td&gt;
@@ -1733,6 +2461,7 @@ href="https://www.imdb.com/title/tt0071360" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3420504" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2025-09-13&lt;/td&gt;
@@ -1742,6 +2471,7 @@ href="https://www.imdb.com/title/tt3420504" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt5264838" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2025-10-20&lt;/td&gt;
@@ -1751,6 +2481,7 @@ href="https://www.imdb.com/title/tt5264838" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3659388" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2025-12-25&lt;/td&gt;
@@ -1760,6 +2491,7 @@ href="https://www.imdb.com/title/tt3659388" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1757678" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-07-23&lt;/td&gt;
@@ -1769,6 +2501,7 @@ href="https://www.imdb.com/title/tt1757678" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1638355" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016-07-25&lt;/td&gt;
@@ -1778,6 +2511,7 @@ href="https://www.imdb.com/title/tt1638355" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt11858890" target="_blank"
 &gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1912,10 +2646,66 @@ href="https://www.imdb.com/title/tt0073260/" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Dune: Part One&lt;/td&gt;
+&lt;td&gt;2021&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1160419/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Dune: Part Two&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt15239678/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Dune: Part Three&lt;/td&gt;
+&lt;td&gt;2026?&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt31378509/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Judge Dredd&lt;/td&gt;
+&lt;td&gt;1995&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0113492" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Lord of War&lt;/td&gt;
+&lt;td&gt;2005&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0399295/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Planet of the Apes&lt;/td&gt;
+&lt;td&gt;2001&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0133152/" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Kingdom of the Planet of the Apes&lt;/td&gt;
+&lt;td&gt;2024&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt11389872" target="_blank"
+&gt;IMDB&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description></item><item><title>The Bud Winter Sleeping Technique</title><link>https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-21-bud-winter-sleeping-technique/media/lloyd-bud-winter.jpg"
