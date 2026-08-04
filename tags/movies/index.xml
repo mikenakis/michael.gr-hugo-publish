@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Movies on Michael's Blog</title><link>https://blog.michael.gr/tags/movies/</link><description>Recent content in Movies on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 01 Aug 2026 22:02:25 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/movies/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-my-movie-list/media/movie-list.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Movies on Michael's Blog</title><link>https://blog.michael.gr/tags/movies/</link><description>Recent content in Movies on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 04 Aug 2026 08:15:59 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/movies/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-my-movie-list/media/movie-list.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -6,7 +6,7 @@ loading="lazy"
 &lt;p&gt;The &amp;quot;Watched&amp;quot; column is one of the following:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The date when I watched the movie, or&lt;/li&gt;
-&lt;li&gt;&amp;quot;Unknown&amp;quot; if I watched the movie before mid-2015, when I began keeping track, or if I forgot to record the date at the time of watching it.&lt;/li&gt;
+&lt;li&gt;&amp;quot;(?)&amp;quot; if I watched the movie before mid-2015, when I began keeping track, or if I forgot to record the date at the time of watching it.&lt;/li&gt;
 &lt;li&gt;&amp;quot;Not yet&amp;quot; if I intend to watch the movie but have not watched it yet.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Some of those movies I watched a very, very long time ago, possibly even on Greek Public TV in the 1980s, so the remark reflects the impression that a much younger me was left with after watching the movie.&lt;/p&gt;
@@ -22,22 +22,49 @@ loading="lazy"
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
+&lt;td&gt;1927&lt;/td&gt;
+&lt;td&gt;Metropolis&lt;/td&gt;
+&lt;td&gt;One of the most influential movies of all time. So far I have made two attempts to watch it, both unsuccessful. For someone who has grown up watching modern movies, it is a very hard movie to follow. Maybe one day I will succeed.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0017136/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;1930&lt;/td&gt;
 &lt;td&gt;All Quiet on the Western Front&lt;/td&gt;
-&lt;td&gt;Excellent. A classic.&lt;/td&gt;
+&lt;td&gt;Excellent. A classic. Zero Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0020629/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1935&lt;/td&gt;
 &lt;td&gt;Mutiny on the Bounty&lt;/td&gt;
-&lt;td&gt;Quite good. A classic.&lt;/td&gt;
+&lt;td&gt;Quite good. A classic. Also see &lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1961) and &lt;em&gt;The Bounty&lt;/em&gt; (1984)&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0026752/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1939&lt;/td&gt;
+&lt;td&gt;The Wizard of Oz&lt;/td&gt;
+&lt;td&gt;A spectacular movie in its time, and a classic. Worth watching for cultural literacy.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0032138/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1940&lt;/td&gt;
+&lt;td&gt;Fantasia&lt;/td&gt;
+&lt;td&gt;Walt Disney's spectacular classic.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0032455/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1941&lt;/td&gt;
@@ -55,34 +82,52 @@ href="https://www.imdb.com/title/tt0033467/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0043265/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1953&lt;/td&gt;
+&lt;td&gt;War of the Worlds&lt;/td&gt;
+&lt;td&gt;A historical classic. Also see &lt;em&gt;War of the Worlds&lt;/em&gt; (2005)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0046534/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1957&lt;/td&gt;
 &lt;td&gt;12 Angry Men&lt;/td&gt;
-&lt;td&gt;Excellent. A classic.&lt;/td&gt;
+&lt;td&gt;Excellent. A classic. Also see &lt;em&gt;12 Angry Men&lt;/em&gt; (1997)&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0050083/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1957&lt;/td&gt;
 &lt;td&gt;Paths of Glory&lt;/td&gt;
-&lt;td&gt;Excellent. A classic.&lt;/td&gt;
+&lt;td&gt;Excellent. A classic. No Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0050825/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1957&lt;/td&gt;
 &lt;td&gt;The Bridge on the River Kwai&lt;/td&gt;
-&lt;td&gt;Excellent. A classic.&lt;/td&gt;
+&lt;td&gt;Excellent. A classic. No Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0050212/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1958&lt;/td&gt;
+&lt;td&gt;The Old Man and the Sea&lt;/td&gt;
+&lt;td&gt;See also &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1990) and &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1999)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0052027/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1959&lt;/td&gt;
@@ -91,25 +136,25 @@ href="https://www.imdb.com/title/tt0050212/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0052618/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1961&lt;/td&gt;
 &lt;td&gt;Mutiny on the Bounty&lt;/td&gt;
-&lt;td&gt;A remake of the classic original which in turn became a classic.&lt;/td&gt;
+&lt;td&gt;A remake of the classic original which in turn became a classic. Also see &lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1935) and &lt;em&gt;The Bounty&lt;/em&gt; (1984).&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0056264/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1961&lt;/td&gt;
 &lt;td&gt;The Guns of Navarone&lt;/td&gt;
-&lt;td&gt;Quite impressive for its time, and for some time after.&lt;/td&gt;
+&lt;td&gt;Quite impressive for its time, and for some time after. This is an old style war movie, so the Truffaut effect is inapplicable.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0054953/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1962&lt;/td&gt;
@@ -118,7 +163,7 @@ href="https://www.imdb.com/title/tt0054953/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0056172/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1962&lt;/td&gt;
@@ -127,16 +172,25 @@ href="https://www.imdb.com/title/tt0056172/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0056592/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1964&lt;/td&gt;
 &lt;td&gt;Dr. Strangelove&lt;/td&gt;
-&lt;td&gt;Excellent. A classic.&lt;/td&gt;
+&lt;td&gt;Excellent. A classic. No Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0057012/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1966&lt;/td&gt;
+&lt;td&gt;Fahrenheit 451&lt;/td&gt;
+&lt;td&gt;Ray Bradbury's book is a classic masterpiece. This movie was incredibly cheap. Also, I think it was not particularly true to the book.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0060390/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1967&lt;/td&gt;
@@ -145,7 +199,7 @@ href="https://www.imdb.com/title/tt0057012/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0061553/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1968&lt;/td&gt;
@@ -154,7 +208,7 @@ href="https://www.imdb.com/title/tt0061553/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0062622" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1968&lt;/td&gt;
@@ -163,34 +217,70 @@ href="https://www.imdb.com/title/tt0062622" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0063442/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1968&lt;/td&gt;
 &lt;td&gt;Where Eagles Dare&lt;/td&gt;
-&lt;td&gt;Quite spectacular considering when it was made. Quite gory. A classic.&lt;/td&gt;
+&lt;td&gt;Quite spectacular considering when it was made. A classic of its genre. Truffaut effect is inapplicable.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0065207/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1970&lt;/td&gt;
+&lt;td&gt;Catch-22&lt;/td&gt;
+&lt;td&gt;I do not remember much anymore, but I think it was very good. No Truffaut effect, as far as I remember.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0065528/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1970&lt;/td&gt;
 &lt;td&gt;Patton&lt;/td&gt;
-&lt;td&gt;I do not remember much, but I think I found it a good movie and worth watching.&lt;/td&gt;
+&lt;td&gt;I do not remember much, but I think I found it decent. Truffaut effect inapplicable.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0066206/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1970&lt;/td&gt;
 &lt;td&gt;Tora! Tora! Tora!&lt;/td&gt;
-&lt;td&gt;I do not remember much, but I think I found it a good movie and worth watching.&lt;/td&gt;
+&lt;td&gt;I do not remember much, but I think I found it decent.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0066473/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1971&lt;/td&gt;
+&lt;td&gt;A Clockwork Orange&lt;/td&gt;
+&lt;td&gt;A powerful and influential movie, but I am not sure it deserves all the hype.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0066921/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1971&lt;/td&gt;
+&lt;td&gt;Johnny Got His Gun&lt;/td&gt;
+&lt;td&gt;Scenes in the video clip for the song &amp;quot;One&amp;quot; by Metallica prompted me to search for, download, and watch it. This is the most brutally anti-war movie ever made. Also, one of the most scarring movies ever made. Negative Truffaut score.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/video/vi1628418329/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1971&lt;/td&gt;
+&lt;td&gt;THX 1138&lt;/td&gt;
+&lt;td&gt;I prefer movies that make sense.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0066434/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1971&lt;/td&gt;
@@ -199,7 +289,7 @@ href="https://www.imdb.com/title/tt0066473/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0066769/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1971&lt;/td&gt;
@@ -211,13 +301,31 @@ href="https://www.imdb.com/title/tt0067116" target="_blank"
 &lt;td&gt;2017-08-13&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;1971&lt;/td&gt;
+&lt;td&gt;The Omega Man&lt;/td&gt;
+&lt;td&gt;Low budget and poor acting, but still, a classic.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0067525/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;1972&lt;/td&gt;
 &lt;td&gt;Silent Running&lt;/td&gt;
-&lt;td&gt;Very good considering its time, and its low budget. Quite an influential movie.&lt;/td&gt;
+&lt;td&gt;Very good considering its time, and its low budget. An influential movie.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0067756/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1972&lt;/td&gt;
+&lt;td&gt;Slaughterhouse 5&lt;/td&gt;
+&lt;td&gt;Very good, especially if you have read Kurt Vonnegut's book and hold it in very high esteem.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0069280/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1972&lt;/td&gt;
@@ -226,16 +334,16 @@ href="https://www.imdb.com/title/tt0067756/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0069113/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1973&lt;/td&gt;
 &lt;td&gt;Fantastic Planet (La planète sauvage)&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;I have made a couple of attempts to watch it, it is really fascinating, but it is also boring, and honestly, the ugliness surpasses the beauty.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0070544/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1973&lt;/td&gt;
@@ -258,29 +366,38 @@ href="https://www.imdb.com/title/tt0071360" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1974&lt;/td&gt;
 &lt;td&gt;The Land that Time Forgot&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Watched it a very long time ago on Public TV in Greece. It has some fascinating aspects, but the production was cheap and lame.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0073260/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1974&lt;/td&gt;
 &lt;td&gt;Zardoz&lt;/td&gt;
-&lt;td&gt;Some fascinating aspects, some cheesy, some incomprehensible, some boring.&lt;/td&gt;
+&lt;td&gt;Watched it a very long time ago on Public TV in Greece. It has some fascinating aspects, some thought-provoking, some cheesy, some incomprehensible, some boring.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0070948/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1975&lt;/td&gt;
+&lt;td&gt;Jaws&lt;/td&gt;
+&lt;td&gt;A classic. Not even nearly as frightening as I feared it would be, but then again I watched it as a grown man, not as a small child. I have a friend who watched it as a small kid and whose relationship with the sea was, as a result, forever messed up.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0073195/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1976&lt;/td&gt;
 &lt;td&gt;Logan's Run&lt;/td&gt;
-&lt;td&gt;A legendary science fiction film. The premise is a bit lame, the production is cheap, the acting is bad, the editing is butchered, and yet it is still a classic.&lt;/td&gt;
+&lt;td&gt;A legendary science fiction film. The premise was a bit lame, the production was cheap, the acting was bad, the editing was butchered, and yet it still is considered a classic. Also see &lt;em&gt;The Island&lt;/em&gt; (2005) and &lt;em&gt;In Time&lt;/em&gt; (2011)&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0074812/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1976&lt;/td&gt;
@@ -289,7 +406,7 @@ href="https://www.imdb.com/title/tt0074812/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0075148/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1976&lt;/td&gt;
@@ -303,11 +420,20 @@ href="https://www.imdb.com/title/tt0074452/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1977&lt;/td&gt;
 &lt;td&gt;A Bridge Too Far&lt;/td&gt;
-&lt;td&gt;Quite good. A classic.&lt;/td&gt;
+&lt;td&gt;A classic. This is a true war movie, so the Truffaut effect is not applicable.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0075784/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1977&lt;/td&gt;
+&lt;td&gt;Close Encounters of the Third Kind&lt;/td&gt;
+&lt;td&gt;I had read the book as a child. I watched the movie decades later. I remember I found it good, albeit slightly slow to build up, and overall underwhelming. Still, it is a classic.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0075860/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1977&lt;/td&gt;
@@ -321,20 +447,20 @@ href="https://www.imdb.com/title/tt0076759/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1978&lt;/td&gt;
 &lt;td&gt;The Deer Hunter&lt;/td&gt;
-&lt;td&gt;It is a decent movie, I guess, but I am failing to see why it is so highly acclaimed.&lt;/td&gt;
+&lt;td&gt;A decent movie, but I am not sure it deserves all the hype it has received. I am not sure about the Truffaut effect on this one.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0077416/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1979&lt;/td&gt;
 &lt;td&gt;Alien&lt;/td&gt;
-&lt;td&gt;Quite good. Also, a highly influential movie.&lt;/td&gt;
+&lt;td&gt;An incredible film. Normally I do not watch horror films, but I watched it as a teenager without knowing it was a horror movie. Luckily, I found it only mildly terrifying, and greatly astounding. A highly influential, classic movie.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0078748/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1979&lt;/td&gt;
@@ -348,11 +474,11 @@ href="https://www.imdb.com/title/tt0078754/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1979&lt;/td&gt;
 &lt;td&gt;Apocalypse Now&lt;/td&gt;
-&lt;td&gt;Interesting, but I cannot say I understood all of it.&lt;/td&gt;
+&lt;td&gt;Interesting, but I cannot say I understood all of it. Not sure about the Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0078788/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1979&lt;/td&gt;
@@ -361,7 +487,7 @@ href="https://www.imdb.com/title/tt0078788/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0079501/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1979&lt;/td&gt;
@@ -375,20 +501,20 @@ href="https://www.imdb.com/title/tt0079550" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1979&lt;/td&gt;
 &lt;td&gt;The China Syndrome&lt;/td&gt;
-&lt;td&gt;A classic. Scarring.&lt;/td&gt;
+&lt;td&gt;A classic.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0078966/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1979&lt;/td&gt;
 &lt;td&gt;Wolf Lake&lt;/td&gt;
-&lt;td&gt;(&amp;quot;Honor guard&amp;quot; release) Very good. Scarring.&lt;/td&gt;
+&lt;td&gt;(&amp;quot;Honor guard&amp;quot; release) Very good. Scarring. Small Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0078508/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1980&lt;/td&gt;
@@ -402,7 +528,7 @@ href="https://www.imdb.com/title/tt0080684/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1981&lt;/td&gt;
 &lt;td&gt;Das Boot&lt;/td&gt;
-&lt;td&gt;A classic. A really great movie. Also, a very influential movie.&lt;/td&gt;
+&lt;td&gt;A classic. A really great movie. Also, a very influential movie. Some minor Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0082096" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -415,43 +541,52 @@ href="https://www.imdb.com/title/tt0082096" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0082869/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1981&lt;/td&gt;
 &lt;td&gt;Quest for Fire&lt;/td&gt;
-&lt;td&gt;A very good movie. Also, a very unique movie.&lt;/td&gt;
+&lt;td&gt;Very good; quite unconventional. One of my personal favorites.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0082484/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1982&lt;/td&gt;
 &lt;td&gt;Blade Runner&lt;/td&gt;
-&lt;td&gt;Absolutely awesome. One of the greatest movies ever. Also, one of the most influential movies ever.&lt;/td&gt;
+&lt;td&gt;Absolutely awesome. One of the greatest and most influential movies ever.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0083658/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1982&lt;/td&gt;
 &lt;td&gt;Conan the Barbarian&lt;/td&gt;
-&lt;td&gt;Entertaining&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0082198/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1982&lt;/td&gt;
+&lt;td&gt;E.T.&lt;/td&gt;
+&lt;td&gt;I watched it back in the day, and I liked most of it, but I was so disappointed by the flying bicycle scene near the end that I characterized the entire movie as crap. I still stand by that conviction.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0083866/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1982&lt;/td&gt;
 &lt;td&gt;Koyaanisqatsi&lt;/td&gt;
-&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;Awesome. One of my personal favorite movies.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0085809/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1982&lt;/td&gt;
@@ -460,7 +595,7 @@ href="https://www.imdb.com/title/tt0085809/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0084503" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1982&lt;/td&gt;
@@ -469,16 +604,16 @@ href="https://www.imdb.com/title/tt0084503" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0083941/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1982&lt;/td&gt;
 &lt;td&gt;Tron&lt;/td&gt;
-&lt;td&gt;Spectacular for its day, and influential.&lt;/td&gt;
+&lt;td&gt;Spectacular for its day, and influential. Also see &lt;em&gt;Tron: Legacy&lt;/em&gt; (2010)&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0084827/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1983&lt;/td&gt;
@@ -487,7 +622,16 @@ href="https://www.imdb.com/title/tt0084827/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0085991/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1983&lt;/td&gt;
+&lt;td&gt;Christine&lt;/td&gt;
+&lt;td&gt;I remember I found it cool when I was 15.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0085333/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1983&lt;/td&gt;
@@ -501,7 +645,7 @@ href="https://www.imdb.com/title/tt0086190/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1983&lt;/td&gt;
 &lt;td&gt;The Day After&lt;/td&gt;
-&lt;td&gt;A very historically important movie. I refrained from watching it back then, because I knew very well, and I thought I just would not bear it. In the 2020s I watched part of it on YouTube. It is a low budget movie, so of course it is lame by today's standards, but that does not diminish its importance. I quit watching a few minutes after the destruction started, because I knew it was not going to get any better.&lt;/td&gt;
+&lt;td&gt;A historically very important movie. I refrained from watching it back then, because I knew very well, and I thought I just would not bear it. In the 2020s I watched part of it on YouTube. It is a low budget movie, so of course it is lame by today's standards, but that does not diminish its importance. I quit watching a few minutes after the destruction started, because I knew it was only going to get worse. I find it astonishing to learn that this movie did in fact have an effect on Ronald Reagan and his subsequent decisions in the direction of disarmament.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0085404/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -532,12 +676,30 @@ href="https://www.imdb.com/title/tt0086837" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0087182/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1984&lt;/td&gt;
+&lt;td&gt;Nausicaä of the Valley of the Wind (Kaze no tani no Naushika)&lt;/td&gt;
+&lt;td&gt;An awesome, breathtaking phantasmagoria. (Art inspired by Mœbius, some concepts borrowed from Dune, Ecological theme, Japanese folklore, what else do you want?)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0087544/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1984&lt;/td&gt;
+&lt;td&gt;Streets of Fire&lt;/td&gt;
+&lt;td&gt;Back then I was impressed by it. Now I would probably find it cheesy to the point of nausea.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0088194/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1984&lt;/td&gt;
 &lt;td&gt;The Bounty&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Also see &lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1935) and &lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1961)&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0086993/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -546,11 +708,11 @@ href="https://www.imdb.com/title/tt0086993/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1984&lt;/td&gt;
 &lt;td&gt;The Terminator&lt;/td&gt;
-&lt;td&gt;Entertaining, I guess.&lt;/td&gt;
+&lt;td&gt;Entertaining, I guess. The kind of movie that is watched precisely for the violence, so the Truffaut effect is inapplicable, I suppose.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0088247/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1985&lt;/td&gt;
@@ -559,7 +721,7 @@ href="https://www.imdb.com/title/tt0088247/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0088763/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1985&lt;/td&gt;
@@ -568,7 +730,7 @@ href="https://www.imdb.com/title/tt0088763/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0088846/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1986&lt;/td&gt;
@@ -582,47 +744,101 @@ href="https://www.imdb.com/title/tt0091042/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1986&lt;/td&gt;
 &lt;td&gt;Platoon&lt;/td&gt;
-&lt;td&gt;Quite good.&lt;/td&gt;
+&lt;td&gt;Quite good, but very high Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0091763/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1986&lt;/td&gt;
+&lt;td&gt;The Fly&lt;/td&gt;
+&lt;td&gt;I watched the trailer back in 1986 and decided that a) there is no way in hell that I am watching this, b) what the hell is wrong with the world making such films, and c) what the hell is wrong with the world going and watching such films. I still stand by that conviction. &lt;em&gt;The Human Fly&lt;/em&gt; by the Cramps is a good song though.&lt;/td&gt;
+&lt;td&gt;&lt;a
+href=""
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1986&lt;/td&gt;
 &lt;td&gt;The Mission&lt;/td&gt;
-&lt;td&gt;Decent.&lt;/td&gt;
+&lt;td&gt;I do not remember much anymore, but I think I found it very decent.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0091530/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1986&lt;/td&gt;
 &lt;td&gt;Top Gun&lt;/td&gt;
-&lt;td&gt;Entertaining. In it's time. Cheesy by today's standads.&lt;/td&gt;
+&lt;td&gt;Entertaining, in it's time. Cheesy by today's standards.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0092099/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1987&lt;/td&gt;
+&lt;td&gt;Empire of the Sun&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0092965/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1987&lt;/td&gt;
 &lt;td&gt;Full Metal Jacket&lt;/td&gt;
-&lt;td&gt;Quite good.&lt;/td&gt;
+&lt;td&gt;Quite good, but very high Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0093058/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1987&lt;/td&gt;
 &lt;td&gt;Lethal Weapon&lt;/td&gt;
-&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;Entertaining, but very high Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0093409/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1987&lt;/td&gt;
+&lt;td&gt;Robocop&lt;/td&gt;
+&lt;td&gt;Entertaining silliness.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0093870/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1988&lt;/td&gt;
+&lt;td&gt;Akira&lt;/td&gt;
+&lt;td&gt;I do not remember much, but I do remember that I was extremely disappointed by the nonsense, the gore, and the cheap dynamic stills. I probably quit watching as soon as things started getting too weird.&lt;/td&gt;
+&lt;td&gt;&lt;a
+href=""
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1988&lt;/td&gt;
+&lt;td&gt;Dangerous Liaisons&lt;/td&gt;
+&lt;td&gt;Uninteresting, irrelevant to anything, pointless.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0094947/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1988&lt;/td&gt;
+&lt;td&gt;Grave of the Fireflies (Hotaru no haka)&lt;/td&gt;
+&lt;td&gt;(No Truffaut effect.)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0095327/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1988&lt;/td&gt;
@@ -631,7 +847,7 @@ href="https://www.imdb.com/title/tt0093409/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0095895/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1989&lt;/td&gt;
@@ -640,7 +856,7 @@ href="https://www.imdb.com/title/tt0095895/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0096928/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1989&lt;/td&gt;
@@ -654,25 +870,25 @@ href="https://www.imdb.com/title/tt0082348/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1989&lt;/td&gt;
 &lt;td&gt;Lethal Weapon 2&lt;/td&gt;
-&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;Entertaining, but very high Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0097733/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1989&lt;/td&gt;
 &lt;td&gt;The Abyss&lt;/td&gt;
-&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;Awesome. Captivating. Frightening. Uplifting.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0096754/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1989&lt;/td&gt;
 &lt;td&gt;The Blood of Heroes&lt;/td&gt;
-&lt;td&gt;Powerful.&lt;/td&gt;
+&lt;td&gt;Powerful. Looked quite low budget. I suppose the Hunger Games were inspired by it.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0094764" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -680,12 +896,39 @@ href="https://www.imdb.com/title/tt0094764" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1990&lt;/td&gt;
+&lt;td&gt;Predator 2&lt;/td&gt;
+&lt;td&gt;I was wise enough to skip the first Predator; I am not sure why I watched the second load of crap.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0100403/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1990&lt;/td&gt;
+&lt;td&gt;The Old Man and the Sea&lt;/td&gt;
+&lt;td&gt;See also &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1958) and &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1999)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0100288/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1990&lt;/td&gt;
 &lt;td&gt;The Russia House&lt;/td&gt;
-&lt;td&gt;Excellent.&lt;/td&gt;
+&lt;td&gt;Very good. Superb directing was extremely successful in imposing a particular mood and achieving immersion.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0100530" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2015-08-09&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1990&lt;/td&gt;
+&lt;td&gt;Total Recall&lt;/td&gt;
+&lt;td&gt;Entertaining, for the most part, and in that era.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0100802/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1991&lt;/td&gt;
@@ -703,7 +946,7 @@ href="https://www.imdb.com/title/tt0103882" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0103064/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1992&lt;/td&gt;
@@ -716,12 +959,48 @@ href="https://www.imdb.com/title/tt0103594/" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1992&lt;/td&gt;
+&lt;td&gt;Basic Instinct&lt;/td&gt;
+&lt;td&gt;Well made as far as crime/thriller/erotic drama movies go, although it is hard to claim that its main selling point was not Sharon Stone's pussy.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0103772/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1992&lt;/td&gt;
 &lt;td&gt;Unforgiven&lt;/td&gt;
 &lt;td&gt;Well made. Gruesome. Scarring.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0105695/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1993&lt;/td&gt;
+&lt;td&gt;Demolition Man&lt;/td&gt;
+&lt;td&gt;Entertaining silliness.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0106697/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1993&lt;/td&gt;
+&lt;td&gt;Free Willy&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0106965/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1993&lt;/td&gt;
+&lt;td&gt;Jurassic Park&lt;/td&gt;
+&lt;td&gt;Quite spectacular, decently made, and entertaining. A hallmark movie in cinematography.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0107290/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1993&lt;/td&gt;
@@ -730,7 +1009,7 @@ href="https://www.imdb.com/title/tt0105695/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0108052/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1994&lt;/td&gt;
@@ -739,7 +1018,7 @@ href="https://www.imdb.com/title/tt0108052/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0109830/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1994&lt;/td&gt;
@@ -748,7 +1027,7 @@ href="https://www.imdb.com/title/tt0109830/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0110912/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1995&lt;/td&gt;
@@ -757,21 +1036,21 @@ href="https://www.imdb.com/title/tt0110912/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0114746/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1995&lt;/td&gt;
 &lt;td&gt;Apollo 13&lt;/td&gt;
-&lt;td&gt;Excellent, in all aspects except the joystick rodeo scene.&lt;/td&gt;
+&lt;td&gt;Excellent, awesome, and very realistic in all aspects except the joystick rodeo scene.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0112384/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1995&lt;/td&gt;
 &lt;td&gt;Crimson Tide&lt;/td&gt;
-&lt;td&gt;Watched it again. Great movie.&lt;/td&gt;
+&lt;td&gt;Watched it again. Great movie. Some Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0112740" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -780,7 +1059,7 @@ href="https://www.imdb.com/title/tt0112740" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1995&lt;/td&gt;
 &lt;td&gt;Heat&lt;/td&gt;
-&lt;td&gt;Pretty solid movie, a bit more nuanced than just crime and violence.&lt;/td&gt;
+&lt;td&gt;Pretty solid movie, more nuanced than just senseless violence, crime and punishment. High Truffaut effect: you cannot help but distance yourself from Pacino, who is the law man, and root for De Niro's character, who is a bank robber. At the moment he also becomes a murderer, you are rooting for him to commit that murder.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0113277" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -797,12 +1076,21 @@ href="https://www.imdb.com/title/tt0113492" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1995&lt;/td&gt;
+&lt;td&gt;Toy Story&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0114709/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1995&lt;/td&gt;
 &lt;td&gt;Waterworld&lt;/td&gt;
 &lt;td&gt;Impressive, but too many aspects of it were impossible and the bad guys were too stereotypical.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0114898/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1996&lt;/td&gt;
@@ -811,7 +1099,7 @@ href="https://www.imdb.com/title/tt0114898/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0104779/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1996&lt;/td&gt;
@@ -820,7 +1108,7 @@ href="https://www.imdb.com/title/tt0104779/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0117060" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1996&lt;/td&gt;
@@ -829,7 +1117,16 @@ href="https://www.imdb.com/title/tt0117060" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0116209/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1996&lt;/td&gt;
+&lt;td&gt;The People vs. Larry Flynt&lt;/td&gt;
+&lt;td&gt;Quite good. Except the basic premise, at the beginning, of how this all started, something along the lines of supposedly wanting to tell other guys how shagable the girls working for him were.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0117318/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1996&lt;/td&gt;
@@ -847,7 +1144,7 @@ href="https://www.imdb.com/title/tt0118158" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0117951/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1996&lt;/td&gt;
@@ -861,11 +1158,20 @@ href="https://www.imdb.com/title/tt0117998/" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
 &lt;td&gt;12 Angry Men&lt;/td&gt;
-&lt;td&gt;Excellent. A remake of the classic original, which in turn became a classic.&lt;/td&gt;
+&lt;td&gt;A remake of the classic 1957 original. Excellent. This, in turn, became a classic.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0118528/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;Austin Powers: International Man of Mystery&lt;/td&gt;
+&lt;td&gt;Way too tacky.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0118655/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -874,7 +1180,25 @@ href="https://www.imdb.com/title/tt0118528/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0118884/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;Cube&lt;/td&gt;
+&lt;td&gt;Highly unconventional, puzzling, gory, and at the end of the day, pointless.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0123755/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;Event Horizon&lt;/td&gt;
+&lt;td&gt;Started watching it, quit as soon as I realized it was a horror movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0119081/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -883,7 +1207,7 @@ href="https://www.imdb.com/title/tt0118884/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0119094/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -892,7 +1216,25 @@ href="https://www.imdb.com/title/tt0119094/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0119177/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;Men in Black&lt;/td&gt;
+&lt;td&gt;Quite silly, adequately funny.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0119654/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;Princess Mononoke (Mononoke-hime)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0119698/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -901,16 +1243,16 @@ href="https://www.imdb.com/title/tt0119177/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0120201/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
 &lt;td&gt;The 5th Element&lt;/td&gt;
-&lt;td&gt;Awesome.&lt;/td&gt;
+&lt;td&gt;Awesome. One of the greatest movies ever made.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0119116/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -919,7 +1261,43 @@ href="https://www.imdb.com/title/tt0119116/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0120338/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1998&lt;/td&gt;
+&lt;td&gt;American History X&lt;/td&gt;
+&lt;td&gt;Pretty decent, solid movie, but high Truffaut effect.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0120586/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1998&lt;/td&gt;
+&lt;td&gt;Armageddon&lt;/td&gt;
+&lt;td&gt;Entertaining, but oh puh-leez Hollywood, will you spare us from the crap?&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0120591/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1998&lt;/td&gt;
+&lt;td&gt;Les Misérables&lt;/td&gt;
+&lt;td&gt;I think I found it good, but I do not really remember.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0119683/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1998&lt;/td&gt;
+&lt;td&gt;Ronin&lt;/td&gt;
+&lt;td&gt;Quite good, but very high Truffaut effect.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0122690/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1998&lt;/td&gt;
@@ -937,7 +1315,7 @@ href="https://www.imdb.com/title/tt0120815" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0120184/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1998&lt;/td&gt;
@@ -947,6 +1325,24 @@ href="https://www.imdb.com/title/tt0120184/" target="_blank"
 href="https://www.imdb.com/title/tt0119314" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2016-11-05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1998&lt;/td&gt;
+&lt;td&gt;The Mask of Zorro&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0120746/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1998&lt;/td&gt;
+&lt;td&gt;The Thin Red Line&lt;/td&gt;
+&lt;td&gt;Impressive. Memorable. Worth watching, as long as it is understood that it belongs to the schizophrenic genre.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0120863/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1999&lt;/td&gt;
@@ -959,12 +1355,30 @@ href="https://www.imdb.com/title/tt0120915/" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1999&lt;/td&gt;
+&lt;td&gt;The Fight Club&lt;/td&gt;
+&lt;td&gt;Incredible amounts of violence for absolutely no good reason, nonsensical end. Hits red on the Truffaut scale.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0137523/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1999&lt;/td&gt;
 &lt;td&gt;The Matrix&lt;/td&gt;
 &lt;td&gt;So, apparently I belong to the exceedingly small percentage of the population that found this entire franchise quite crappy.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0133093/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1999&lt;/td&gt;
+&lt;td&gt;The Old Man and the Sea&lt;/td&gt;
+&lt;td&gt;See also &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1958) and &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1990)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0207639/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1999&lt;/td&gt;
@@ -973,7 +1387,16 @@ href="https://www.imdb.com/title/tt0133093/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0134119/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1999&lt;/td&gt;
+&lt;td&gt;The Virgin Suicides&lt;/td&gt;
+&lt;td&gt;Pointless.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0159097/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1999&lt;/td&gt;
@@ -982,7 +1405,7 @@ href="https://www.imdb.com/title/tt0134119/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0120907/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2000&lt;/td&gt;
@@ -991,7 +1414,7 @@ href="https://www.imdb.com/title/tt0120907/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0162222/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2000&lt;/td&gt;
@@ -1000,7 +1423,43 @@ href="https://www.imdb.com/title/tt0162222/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0134847/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;Quills&lt;/td&gt;
+&lt;td&gt;I think I was unimpressed, but I do not really remember.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0180073/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;Requiem for a Dream&lt;/td&gt;
+&lt;td&gt;Very good. A classic.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0180093/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;Space Cowboys&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0186566/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2000&lt;/td&gt;
+&lt;td&gt;The Beach&lt;/td&gt;
+&lt;td&gt;I do not remember much anymore, but I think I found it quite good.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0163978/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2000&lt;/td&gt;
@@ -1009,7 +1468,7 @@ href="https://www.imdb.com/title/tt0134847/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0141926/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
@@ -1018,16 +1477,18 @@ href="https://www.imdb.com/title/tt0141926/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0212720/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
 &lt;td&gt;Captain Corelli's Mandolin&lt;/td&gt;
-&lt;td&gt;Quite good. At least an attempt has been made to make the Greek characters believable. The movie completely fails to show the scale of the actual historical atrocity, but then again, if it did, then the movie audiences would have dismissed it as unbelievable.&lt;/td&gt;
+&lt;td&gt;Quite good. At least an attempt was made to make the Greek characters believable. The movie completely fails to show the scale of &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Massacre_of_the_Acqui_Division" target="_blank"
+&gt;the actual historical atrocity&lt;/a&gt;, but then again, if it did, then a) the movie would have shown nothing but that, because it lasted for 5 days, and b) audiences would have dismissed it as unbelievable.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0238112/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
@@ -1036,7 +1497,7 @@ href="https://www.imdb.com/title/tt0238112/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0246578/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
@@ -1045,7 +1506,16 @@ href="https://www.imdb.com/title/tt0246578/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0215750/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2001&lt;/td&gt;
+&lt;td&gt;Ocean's Eleven&lt;/td&gt;
+&lt;td&gt;I do not remember much now, but I think it was well made and entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0240772/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
@@ -1058,12 +1528,21 @@ href="https://www.imdb.com/title/tt0133152/" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
+&lt;td&gt;Schrek&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0126029/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2001&lt;/td&gt;
 &lt;td&gt;The Lord of the Rings: The Fellowship of the Ring&lt;/td&gt;
 &lt;td&gt;Entertaining. Barely. I do not care so much for the genre.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0120737/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
@@ -1072,7 +1551,16 @@ href="https://www.imdb.com/title/tt0120737/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0259711/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;Equilibrium&lt;/td&gt;
+&lt;td&gt;The scenario was so cheap that I quit watching before the middle.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0238380/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2002&lt;/td&gt;
@@ -1085,12 +1573,21 @@ href="https://www.imdb.com/title/tt0303461/" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;Gangs of New York&lt;/td&gt;
+&lt;td&gt;If there was a point in this, I must have completely missed it. I quit watching very early on.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0217505/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2002&lt;/td&gt;
 &lt;td&gt;Hero&lt;/td&gt;
 &lt;td&gt;An unforgettable visual masterpiece. (Though, not my genre.)&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0299977/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2002&lt;/td&gt;
@@ -1099,7 +1596,25 @@ href="https://www.imdb.com/title/tt0299977/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0268380/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;K-19: The Widowmaker&lt;/td&gt;
+&lt;td&gt;One of the greatest movies of all time.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0267626/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;Minority Report&lt;/td&gt;
+&lt;td&gt;Having practically grown up with George Orwell's 1984, I failed to see what is the big deal about this movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0181689/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2002&lt;/td&gt;
@@ -1108,7 +1623,7 @@ href="https://www.imdb.com/title/tt0268380/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0145937/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2002&lt;/td&gt;
@@ -1117,7 +1632,16 @@ href="https://www.imdb.com/title/tt0145937/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0274812/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2002&lt;/td&gt;
+&lt;td&gt;Solaris&lt;/td&gt;
+&lt;td&gt;Slow, uneventful, nonsensical, uninteresting.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0307479/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2002&lt;/td&gt;
@@ -1135,7 +1659,7 @@ href="https://www.imdb.com/title/tt0121765/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0258463/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2003&lt;/td&gt;
@@ -1171,7 +1695,7 @@ href="https://www.imdb.com/title/tt0345061" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0266697/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2003&lt;/td&gt;
@@ -1189,7 +1713,16 @@ href="https://www.imdb.com/title/tt0314331" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0339291/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;Alexander&lt;/td&gt;
+&lt;td&gt;Epic and spectacular, so, uhm, okay, I guess. But couldn't they have found an actor resembling Alexander The Great as we know him from statues, coins, etc.? And what is the deal with army generals wearing black eye liner? Whatever.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0346491/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
@@ -1198,7 +1731,7 @@ href="https://www.imdb.com/title/tt0339291/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0363163/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
@@ -1207,7 +1740,7 @@ href="https://www.imdb.com/title/tt0363163/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0343818/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
@@ -1220,12 +1753,21 @@ href="https://www.imdb.com/title/tt0316824" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;Kinsey&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0362269/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2004&lt;/td&gt;
 &lt;td&gt;The Aviator&lt;/td&gt;
 &lt;td&gt;Interesting.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0338751/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
@@ -1234,7 +1776,25 @@ href="https://www.imdb.com/title/tt0338751/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0372183/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;The Day After Tomorrow&lt;/td&gt;
+&lt;td&gt;Entertaining, if you can be entertained by something that is entirely impossible.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0319262/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;The Notebook&lt;/td&gt;
+&lt;td&gt;Very good, actually.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0332280/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
@@ -1243,7 +1803,16 @@ href="https://www.imdb.com/title/tt0372183/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0362227/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;Troy&lt;/td&gt;
+&lt;td&gt;Quite good, except that Brad Pit was unsuitable to play Achilles; him and Patroclus looked more like California surfer boys rather than ancient Greek warriors. Also, the effeminate gayness was almost certainly quite wrong. Also, Helen could have looked more Greek and less Germanic. Other than that, it was quite a fascinating movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0332452/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2005&lt;/td&gt;
@@ -1261,7 +1830,7 @@ href="https://www.imdb.com/title/tt0399295/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0356910/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2005&lt;/td&gt;
@@ -1279,7 +1848,7 @@ href="https://www.imdb.com/title/tt0379786/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0401792/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2005&lt;/td&gt;
@@ -1291,13 +1860,40 @@ href="https://www.imdb.com/title/tt0121766/" target="_blank"
 &lt;td&gt;2015-06&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;2005&lt;/td&gt;
+&lt;td&gt;The Island&lt;/td&gt;
+&lt;td&gt;Obviously inspired by &lt;em&gt;Logan's Run&lt;/em&gt; (1978) but reimagined and executed using modern movie-making technology. Insanely spectacular action scenes, violence, destruction, etc. Entertaining, but very high Truffaut effect. Strangely, the actors in the poster do not look like Ewan McGregor and Scarlett Johansson, but they are.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0399201/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2005&lt;/td&gt;
+&lt;td&gt;War of the Worlds&lt;/td&gt;
+&lt;td&gt;I do not remember anymore what I thought of that movie, but I probably found it very good. Also see &lt;em&gt;War of the Worlds&lt;/em&gt; (1953)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0407304/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
 &lt;td&gt;300&lt;/td&gt;
 &lt;td&gt;Very good, and true to Frank Miller's original comic. A few small issues with it, for example the unnecessary vilification of the Persians, and of Xerxes in particular.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0416449/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2006&lt;/td&gt;
+&lt;td&gt;A Scanner Darkly&lt;/td&gt;
+&lt;td&gt;The artistic choice was too weird and difficult to get accustomed to. The movie did not seem to be getting anywhere fast. I quit watching it.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0405296/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -1306,16 +1902,27 @@ href="https://www.imdb.com/title/tt0416449/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0497116/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2006&lt;/td&gt;
+&lt;td&gt;Blood Diamond&lt;/td&gt;
+&lt;td&gt;A very good movie, and also an awareness-raising movie. Note that although the large-scale civil war violence depicted in the movie is largely reduced, severe labor exploitation, smuggling, and state-backed human rights abuses in the diamond trade persist today. International regulatory efforts have changed the landscape significantly, yet critical loopholes remain unaddressed. (&lt;a class="external"
+href="https://www.hrw.org/news/2018/05/10/diamond-trade-still-fuels-human-suffering" target="_blank"
+&gt;Human Rights Watch, 2018&lt;/a&gt;.) Ironically, the movie came out just shortly after I bought a diamond ring due to getting married.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0450259/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
 &lt;td&gt;Children of Men&lt;/td&gt;
-&lt;td&gt;Quite an amazing movie, if we disregard the impossible basic premise.&lt;/td&gt;
+&lt;td&gt;Quite an amazing movie, if we disregard the impossible basic premise. Allegory? Bullshit.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0206634/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -1324,7 +1931,7 @@ href="https://www.imdb.com/title/tt0206634/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0397313/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -1333,7 +1940,7 @@ href="https://www.imdb.com/title/tt0397313/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0387808/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -1342,16 +1949,25 @@ href="https://www.imdb.com/title/tt0387808/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0409182/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2006&lt;/td&gt;
+&lt;td&gt;The Prestige&lt;/td&gt;
+&lt;td&gt;Well done and intriguing up until the moment you realize that you have been tricked into watching a movie with metaphysical nonsense.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0482571/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2007&lt;/td&gt;
 &lt;td&gt;I Am Legend&lt;/td&gt;
-&lt;td&gt;Some very good concepts and visuals.&lt;/td&gt;
+&lt;td&gt;A remake of a much older movie with the same title. Some very good concepts and visuals. The first part of the movie is astonishingly good; the second, so and so.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0480249/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2007&lt;/td&gt;
@@ -1360,7 +1976,7 @@ href="https://www.imdb.com/title/tt0480249/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0448134/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2007&lt;/td&gt;
@@ -1369,7 +1985,7 @@ href="https://www.imdb.com/title/tt0448134/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0440963/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2008&lt;/td&gt;
@@ -1378,7 +1994,25 @@ href="https://www.imdb.com/title/tt0440963/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0371746/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2008&lt;/td&gt;
+&lt;td&gt;Seven Pounds&lt;/td&gt;
+&lt;td&gt;Good. The mystery keeps piling up, but it is manageable. In the end, it is uplifting.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0814314/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2008&lt;/td&gt;
+&lt;td&gt;Taken&lt;/td&gt;
+&lt;td&gt;Entertaining, if ultra-violence is your kind of entertainment. (You can tell a scenario is cheap when it starts with a convenient simple excuse for an ensuing one and a half hour of ultra-violence.)&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0936501/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2008&lt;/td&gt;
@@ -1387,16 +2021,25 @@ href="https://www.imdb.com/title/tt0371746/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0985699/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2008&lt;/td&gt;
 &lt;td&gt;Wall-E&lt;/td&gt;
-&lt;td&gt;Very good, except for the fully detached, free-floating parts of the Eve robot, which were extremely annoying and did a lot to ruin the movie for me.&lt;/td&gt;
+&lt;td&gt;Very good, except for the fully detached, free-floating parts of the Eve robot, which were extremely annoying and did a lot to ruin the movie for me. Anyway, a spectacular, and deeply emotional movie, with multiple messages. A classic.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0910970/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2009&lt;/td&gt;
+&lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;A spectacular global destruction movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1190080/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2009&lt;/td&gt;
@@ -1405,16 +2048,34 @@ href="https://www.imdb.com/title/tt0910970/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1186830/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2009&lt;/td&gt;
+&lt;td&gt;Avatar&lt;/td&gt;
+&lt;td&gt;By far the most spectacular movie to its date; rich in techno lust; simplistic political ideology; runaway sentimentalism; new age spiritual mumbo jumbo; and of course, ultra violence. Extremely high Truffaut effect.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0499549/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2009&lt;/td&gt;
 &lt;td&gt;District 9&lt;/td&gt;
-&lt;td&gt;The basic premise makes absolutely no sense, and the aliens are too ugly to be looking at them for two hours straight. Yes, the movie gets you to view them from a different angle by the end, but I am not sure that was worth two hours of torture.&lt;/td&gt;
+&lt;td&gt;The basic premise makes no sense, (if they have space-faring technology they cannot possibly need to live in slums, nor do they need to obey human law enforcement) and the aliens are too ugly to be looking at them for two hours straight. Yes, the movie gets you to view them from a different angle by the end, but I am not sure that was worth two hours of torture.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1136608/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2009&lt;/td&gt;
+&lt;td&gt;Moon&lt;/td&gt;
+&lt;td&gt;Very good.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1182345/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2009&lt;/td&gt;
@@ -1453,13 +2114,22 @@ href="https://www.imdb.com/title/tt1507355" target="_blank"
 &lt;td&gt;2017-07-30&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;2009&lt;/td&gt;
+&lt;td&gt;The Road&lt;/td&gt;
+&lt;td&gt;A very good movie. Magnificent. &amp;quot;Not entertainment in any conventional sense&amp;quot;.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0898367/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;2010&lt;/td&gt;
 &lt;td&gt;127 Hours&lt;/td&gt;
 &lt;td&gt;A good movie.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1542344/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2010&lt;/td&gt;
@@ -1468,7 +2138,25 @@ href="https://www.imdb.com/title/tt1542344/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1323594/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2010&lt;/td&gt;
+&lt;td&gt;Inception&lt;/td&gt;
+&lt;td&gt;I prefer movies that make sense.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1375666/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2010&lt;/td&gt;
+&lt;td&gt;Shutter Island&lt;/td&gt;
+&lt;td&gt;When you watch an entire bizarre mystery thriller only to realize in the end that the scenario writer has played a bad joke on you.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1130884/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2010&lt;/td&gt;
@@ -1477,7 +2165,7 @@ href="https://www.imdb.com/title/tt1323594/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1037705" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2010&lt;/td&gt;
@@ -1486,7 +2174,7 @@ href="https://www.imdb.com/title/tt1037705" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1285016/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2010&lt;/td&gt;
@@ -1495,7 +2183,7 @@ href="https://www.imdb.com/title/tt1285016/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1104001/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2011&lt;/td&gt;
@@ -1508,12 +2196,30 @@ href="https://www.imdb.com/title/tt1598778/" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2011&lt;/td&gt;
+&lt;td&gt;Drive&lt;/td&gt;
+&lt;td&gt;Entertaining. Decent.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0780504/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2011&lt;/td&gt;
+&lt;td&gt;In Time&lt;/td&gt;
+&lt;td&gt;Another movie inspired by &lt;em&gt;Logan's Run&lt;/em&gt; (1976). Decent, entertaining.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1637688/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2011&lt;/td&gt;
 &lt;td&gt;Rise of the Planet of the Apes&lt;/td&gt;
 &lt;td&gt;I do not remember much, but I think it was a decent movie.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1318514/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2011&lt;/td&gt;
@@ -1523,6 +2229,15 @@ href="https://www.imdb.com/title/tt1318514/" target="_blank"
 href="https://www.imdb.com/title/tt1650062" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2017-08-02&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2011&lt;/td&gt;
+&lt;td&gt;The Grey&lt;/td&gt;
+&lt;td&gt;Entertaining, if gore is your kind of entertainment. I have an issue with the scenario: why did they ever leave the plane wreck?&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1601913/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
@@ -1544,12 +2259,21 @@ href="https://www.imdb.com/title/tt2615506" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Django Unchained&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1853728/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2012&lt;/td&gt;
 &lt;td&gt;Dredd&lt;/td&gt;
 &lt;td&gt;Entertaining, but barely. Also: it was disappointing to see that the gear was somewhat of a downgrade both from the original comic book and from the 1995 movie. Even Carl Urban's pointy chin was a downgrade from Sylvester Stallone's square chin.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1343727/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
@@ -1559,6 +2283,33 @@ href="https://www.imdb.com/title/tt1343727/" target="_blank"
 href="https://www.imdb.com/title/tt1907668" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2016&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Hemingway &amp;amp; Gellhorn&lt;/td&gt;
+&lt;td&gt;I do not remember much about it now; I think I found it decent.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0423455/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Looper&lt;/td&gt;
+&lt;td&gt;The lameness of the basic premise prevented me from enjoying the movie. Plus, all the violence. Felt like a case study on why time travel is impossible.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1276104/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Prometheus&lt;/td&gt;
+&lt;td&gt;The scenario was not promising right from the beginning. Quit watching as soon as I realized it was a (very poorly done) horror movie.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1446714/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
@@ -1580,12 +2331,21 @@ href="https://www.imdb.com/title/tt2125608" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
+&lt;td&gt;Taken 2&lt;/td&gt;
+&lt;td&gt;Entertaining, if ultra-violence is your kind of entertainment.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1397280/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2012&lt;/td&gt;
 &lt;td&gt;The Avengers&lt;/td&gt;
 &lt;td&gt;Utter crap.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0848228/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
@@ -1603,7 +2363,7 @@ href="https://www.imdb.com/title/tt0848228" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1194173/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
@@ -1612,7 +2372,7 @@ href="https://www.imdb.com/title/tt1194173/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0454876/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2013&lt;/td&gt;
@@ -1657,16 +2417,16 @@ href="https://www.imdb.com/title/tt2532528" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1535108/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2013&lt;/td&gt;
 &lt;td&gt;Gravity&lt;/td&gt;
-&lt;td&gt;Impressive.&lt;/td&gt;
+&lt;td&gt;Do not pay any attention to the lame plot, just focus on the impressively spectacular visuals.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1454468/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2013&lt;/td&gt;
@@ -1675,7 +2435,7 @@ href="https://www.imdb.com/title/tt1454468/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1483013/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2013&lt;/td&gt;
@@ -1684,7 +2444,7 @@ href="https://www.imdb.com/title/tt1483013/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2302755/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2013&lt;/td&gt;
@@ -1693,7 +2453,7 @@ href="https://www.imdb.com/title/tt2302755/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1663662/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2013&lt;/td&gt;
@@ -1729,7 +2489,34 @@ href="https://www.imdb.com/title/tt1922685" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1411250/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2013&lt;/td&gt;
+&lt;td&gt;Snowpiercer&lt;/td&gt;
+&lt;td&gt;Very good.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1706620/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2013&lt;/td&gt;
+&lt;td&gt;The Wind Rises&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt2013293" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2013&lt;/td&gt;
+&lt;td&gt;The Wolf of Wall Street&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0993846/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1738,7 +2525,7 @@ href="https://www.imdb.com/title/tt1411250/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1971325/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1756,7 +2543,7 @@ href="https://www.imdb.com/title/tt2562232" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1843866/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1765,7 +2552,7 @@ href="https://www.imdb.com/title/tt1843866/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2103281/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1774,7 +2561,7 @@ href="https://www.imdb.com/title/tt2103281/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1631867/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1801,7 +2588,7 @@ href="https://www.imdb.com/title/tt3297330" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0816692/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1810,7 +2597,7 @@ href="https://www.imdb.com/title/tt0816692/" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2911666/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1837,7 +2624,7 @@ href="https://www.imdb.com/title/tt2802144" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2872732/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1864,7 +2651,25 @@ href="https://www.imdb.com/title/tt3675568" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt1959490/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2014&lt;/td&gt;
+&lt;td&gt;Of Mice and Men&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt5866708/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2014&lt;/td&gt;
+&lt;td&gt;Selma&lt;/td&gt;
+&lt;td&gt;Inspiring, uplifting, infuriating&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1020072/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -1886,12 +2691,21 @@ href="https://www.imdb.com/title/tt3541262" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
+&lt;td&gt;The Equalizer&lt;/td&gt;
+&lt;td&gt;Entertaining. Very high Truffaut effect.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0455944/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2014&lt;/td&gt;
 &lt;td&gt;The Grand Budapest Hotel&lt;/td&gt;
 &lt;td&gt;Refreshingly different place and time; other than that, I completely failed to see the slightest point in the whole movie.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2278388/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2014&lt;/td&gt;
@@ -2040,6 +2854,15 @@ href="https://www.imdb.com/title/tt3327624" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;2015&lt;/td&gt;
 &lt;td&gt;Jurassic World&lt;/td&gt;
+&lt;td&gt;Entertaining. The Truffaut effect is off the scale.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0369610/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2015&lt;/td&gt;
+&lt;td&gt;Jurassic World&lt;/td&gt;
 &lt;td&gt;Very entertaining.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt0369610" target="_blank"
@@ -2134,7 +2957,7 @@ href="https://www.imdb.com/title/tt2379713" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2488496/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015&lt;/td&gt;
@@ -2180,6 +3003,15 @@ href="https://www.imdb.com/title/tt0469263" target="_blank"
 href="https://www.imdb.com/title/tt1596363" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2016-07-21&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2015&lt;/td&gt;
+&lt;td&gt;The Hateful Eight&lt;/td&gt;
+&lt;td&gt;Decent, but overall, pointless, like most Tarantino movies.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt3460252/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2015&lt;/td&gt;
@@ -2310,7 +3142,7 @@ href="https://www.imdb.com/title/tt2674430" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;2016&lt;/td&gt;
 &lt;td&gt;Arrival&lt;/td&gt;
-&lt;td&gt;Mostly pretty good, but also disappointing in some ways.&lt;/td&gt;
+&lt;td&gt;Mostly pretty good. Requires ignoring a few lame premises. (E.g. if they bothered to come over here to tell us something, they would have probably figured how to say it in our language.)&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2543164" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -2346,7 +3178,7 @@ href="https://www.imdb.com/title/tt1860357" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;2016&lt;/td&gt;
 &lt;td&gt;Hacksaw Ridge&lt;/td&gt;
-&lt;td&gt;Very good.  The gore was a bit over the top, but still, very good.&lt;/td&gt;
+&lt;td&gt;Very good production, story telling, effects. Incredibly gory. Didactic. Scarring. Uplifting. The gore was a bit over the top. I am unsure about the Truffaut effect. Overall, very good.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2119532" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -2414,6 +3246,15 @@ href="https://www.imdb.com/title/tt1995390" target="_blank"
 href="https://www.imdb.com/title/tt3190158" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2017-04-25&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2016&lt;/td&gt;
+&lt;td&gt;Passengers&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1355644/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2016&lt;/td&gt;
@@ -2541,6 +3382,15 @@ href="https://www.imdb.com/title/tt4425200" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017&lt;/td&gt;
+&lt;td&gt;Shock and Awe&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt5540992/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2017&lt;/td&gt;
 &lt;td&gt;Star Wars - The Last Jedi&lt;/td&gt;
 &lt;td&gt;Entertaining.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
@@ -2555,7 +3405,7 @@ href="https://www.imdb.com/title/tt2527336" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt2527336/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017&lt;/td&gt;
@@ -2640,6 +3490,15 @@ href="https://www.imdb.com/title/tt5830254" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018&lt;/td&gt;
+&lt;td&gt;First Man&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1213641/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2018&lt;/td&gt;
 &lt;td&gt;Hunter Killer&lt;/td&gt;
 &lt;td&gt;Decent for an action movie&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
@@ -2655,15 +3514,6 @@ href="https://www.imdb.com/title/tt1846589" target="_blank"
 href="https://www.imdb.com/title/tt4912910" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2019&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2018&lt;/td&gt;
-&lt;td&gt;Mission: Impossible - Fallout&lt;/td&gt;
-&lt;td&gt;Entertaining.&lt;/td&gt;
-&lt;td&gt;&lt;a class="external"
-href="https://www.imdb.com/title/tt4912910" target="_blank"
-&gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018&lt;/td&gt;
@@ -2686,7 +3536,7 @@ href="https://www.imdb.com/title/tt4575328" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;2018&lt;/td&gt;
 &lt;td&gt;Prospect&lt;/td&gt;
-&lt;td&gt;Quite good, and very well done for its low budget.  Extreme contrasts, claustrophobic, gruesome. Not for everyone.&lt;/td&gt;
+&lt;td&gt;Quite good, and very well done for its low budget. Extreme contrasts, claustrophobic, gruesome. Not for everyone.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt7946422" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -2694,8 +3544,8 @@ href="https://www.imdb.com/title/tt7946422" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018&lt;/td&gt;
-&lt;td&gt;Solo - A Star Wars Story&lt;/td&gt;
-&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;Solo: A Star Wars Story&lt;/td&gt;
+&lt;td&gt;Entertaining, but very difficult to accept someone who is not Harrison Ford playing the role of Han Solo. A mixture of good and crappy.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3778644" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -2703,17 +3553,8 @@ href="https://www.imdb.com/title/tt3778644" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2018&lt;/td&gt;
-&lt;td&gt;Solo: A Star Wars Story&lt;/td&gt;
-&lt;td&gt;Very difficult to accept someone who is not Harrison Ford playing the role of Han Solo. The movie is a mixture of good and crappy.&lt;/td&gt;
-&lt;td&gt;&lt;a class="external"
-href="https://www.imdb.com/title/tt3778644/" target="_blank"
-&gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2018&lt;/td&gt;
 &lt;td&gt;The Equalizer 2&lt;/td&gt;
-&lt;td&gt;Unrepresentative-for-the-genre slowness punctuated by grotesque violence and sentimental cheesiness.&lt;/td&gt;
+&lt;td&gt;Unrepresentative-for-the-genre slowness punctuated by grotesque violence and sentimental cheesiness. Ultra-high Truffaut effect.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt3766354" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
@@ -2848,6 +3689,15 @@ href="https://www.imdb.com/title/tt4682804" target="_blank"
 &lt;tr&gt;
 &lt;td&gt;2019&lt;/td&gt;
 &lt;td&gt;Midway&lt;/td&gt;
+&lt;td&gt;Quite spectacular. Has a strange artistic choice about light. Has at least one scene that is forever scarring.&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt6924650/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2019&lt;/td&gt;
+&lt;td&gt;Midway&lt;/td&gt;
 &lt;td&gt;Well made.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt6924650" target="_blank"
@@ -2882,6 +3732,15 @@ href="https://www.imdb.com/title/tt6048922" target="_blank"
 &lt;td&gt;2020-07-28&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;2020&lt;/td&gt;
+&lt;td&gt;Sonic The Hedgehog&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt3794354/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;2021&lt;/td&gt;
 &lt;td&gt;Don't Look Up&lt;/td&gt;
 &lt;td&gt;Quite good. There are some impossibilities in the scenario, but it is okay, they are excused as being allegoric. It is perhaps the most predictable movie ever, but then again, this is meant to show that it is just as predictable in real life.&lt;/td&gt;
@@ -2910,6 +3769,15 @@ href="https://www.imdb.com/title/tt3420504" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2021&lt;/td&gt;
+&lt;td&gt;No Time to Die&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt2382320/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2021&lt;/td&gt;
 &lt;td&gt;West Side Story&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
@@ -2927,6 +3795,15 @@ href="https://www.imdb.com/title/tt1016150/" target="_blank"
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;2022&lt;/td&gt;
+&lt;td&gt;Top Gun Maverick&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1745960/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;2023&lt;/td&gt;
 &lt;td&gt;Crater&lt;/td&gt;
 &lt;td&gt;Nice teenager movie. Watched it with my son.&lt;/td&gt;
@@ -2937,12 +3814,21 @@ href="https://www.imdb.com/title/tt5264838" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2023&lt;/td&gt;
+&lt;td&gt;Indiana Jones and the dial of Destiny&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt1462764/" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2023&lt;/td&gt;
 &lt;td&gt;John Wick: Chapter 4&lt;/td&gt;
 &lt;td&gt;Entertaining.&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt10366206/" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2023&lt;/td&gt;
@@ -2969,7 +3855,7 @@ href="https://www.imdb.com/title/tt5884796" target="_blank"
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt11858890" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;2016-07-25&lt;/td&gt;
+&lt;td&gt;2026-07-25&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2024&lt;/td&gt;
@@ -3009,52 +3895,31 @@ href="https://www.imdb.com/title/tt31378509/" target="_blank"
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;TODO: Equalizer movies&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
 &lt;td&gt;TODO: Godfather movies&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;TODO: James Bond movies&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;TODO: Jurassic Park movies&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;TODO: Pirates of the Caribbean movies&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;TODO: Star Trek movies&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;TODO: Western movies&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
-&lt;td&gt;Unknown.&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description></item><item><title>Movie: Dawn of the Planet of the Apes</title><link>https://blog.michael.gr/post/2014-12-movie-dawn-of-planet-of-apes/</link><pubDate>Mon, 29 Dec 2014 23:32:57 +0000</pubDate><guid>https://blog.michael.gr/post/2014-12-movie-dawn-of-planet-of-apes/</guid><description>&lt;p&gt;This post does not contain any spoilers, unless you would consider as a spoiler my opinion on how the quality if the movie varies as the movie progresses. (Or the image below.)&lt;/p&gt;
