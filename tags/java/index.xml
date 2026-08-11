@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Michael's Blog</title><link>https://blog.michael.gr/tags/java/</link><description>Recent content in Java on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 01 Mar 2026 16:09:31 +0100</lastBuildDate><atom:link href="https://blog.michael.gr/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-immutability-assessment/media/diamond.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Michael's Blog</title><link>https://blog.michael.gr/tags/java/</link><description>Recent content in Java on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 11 Aug 2026 14:58:58 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-immutability-assessment/media/diamond.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -1169,13 +1169,7 @@ for( URL url : Collections.list( classLoader.getResources( &amp;quot;&amp;quot; 
 &lt;h4 id="issue-8-jackson-fails-to-deserialize-exceptions-from-json"&gt;Issue #8 Jackson fails to deserialize exceptions from JSON.
 &lt;/h4&gt;&lt;p&gt;For debugging purposes, I used to have exceptions serialized into JSON and deserialized later. For some unknown reason, this does not work anymore. Now each element of the stackTrace contains several additional fields, like classLoaderName, moduleName and moduleVersion, and although Jackson serializes them just fine, for some reason it fails to deserialize them. Upgrading to the latest version of jackson-jaxrs-json-provider (version 2.9.0) did not fix this problem.&lt;/p&gt;
 &lt;p&gt;Solution: stop serializing and deserializing exceptions.&lt;/p&gt;
-&lt;p&gt;At the end of all this, my 817 tests passed, so I consider the migration complete.&lt;/p&gt;</description></item><item><title>Oracle Certified Associate</title><link>https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/</link><pubDate>Fri, 04 Nov 2016 00:00:00 +0100</pubDate><guid>https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/</guid><description>&lt;p&gt;Hey, I passed the &amp;quot;Java SE 8 Programmer I&amp;quot; exam and received the &amp;quot;Oracle Certified Associate&amp;quot; certification.&lt;/p&gt;
-&lt;p&gt;Here is the link to the certification:&lt;/p&gt;
-&lt;p&gt;&lt;a class="external"
-href="https://www.credly.com/badges/97c9a618-181d-406f-918e-46d68cbcd782" target="_blank"
-&gt;https://www.credly.com/badges/97c9a618-181d-406f-918e-46d68cbcd782&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Now, I do not know how trust-worthy this credly.com thing is, and archive.org is telling me that it has never captured the above page, so, here it is in image form:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/media/oracle-certified-associate.png"
+&lt;p&gt;At the end of all this, my 817 tests passed, so I consider the migration complete.&lt;/p&gt;</description></item><item><title>Oracle Certified Associate</title><link>https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/</link><pubDate>Fri, 04 Nov 2016 00:00:00 +0100</pubDate><guid>https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/media/oracle-certified-associate.png"
 width="1189"
 height="790"
 loading="lazy" alt="Mike Nakis - Oracle Certified Associate"
@@ -1183,4 +1177,9 @@ class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="361px"
 &gt;
-&lt;/p&gt;</description></item></channel></rss>
+&lt;/p&gt;
+&lt;p&gt;On November 4, 2016 I passed the &amp;quot;Java SE 8 Programmer I&amp;quot; exam and received the &amp;quot;Oracle Certified Associate&amp;quot; certification.&lt;/p&gt;
+&lt;p&gt;Here is the link to the certification:&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://www.credly.com/badges/97c9a618-181d-406f-918e-46d68cbcd782" target="_blank"
+&gt;https://www.credly.com/badges/97c9a618-181d-406f-918e-46d68cbcd782&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>
