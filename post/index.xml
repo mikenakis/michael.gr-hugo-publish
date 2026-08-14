@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 11 Aug 2026 15:46:12 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>IriusRisk Threat Modeling Foundations (IR-TMF) Certification</title><link>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</link><pubDate>Tue, 11 Aug 2026 14:33:43 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/media/iriusrisk-tmf-certification-cover.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 14 Aug 2026 11:18:42 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>IriusRisk Threat Modeling Foundations (IR-TMF) Certification</title><link>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</link><pubDate>Tue, 11 Aug 2026 14:33:43 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/media/iriusrisk-tmf-certification-cover.jpg"
 width="1980"
 height="1533"
 loading="lazy"
@@ -285,9 +285,11 @@ But the story's still the same&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;There's a lullaby for suffering&lt;br&gt;
 And a paradox to blame&lt;/p&gt;
-&lt;p&gt;The lullaby for suffering has to be a reference to the perverse fascination of the Christian religion with guilt to the point of self-torture. The paradox has to be the famously nonsensical concept of the &lt;a class="external"
+&lt;p&gt;The lullaby for suffering may refer to the perverse fascination of the Christian religion with guilt to the point of self-torture. The paradox may refer either to the &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Epicurean_paradox" target="_blank"
+&gt;Epicurean Paradox&lt;/a&gt;, or to the famously nonsensical concept of the &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Original_sin" target="_blank"
-&gt;&lt;em&gt;original sin&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&gt;&lt;em&gt;Original Sin&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;But it's written in the scriptures&lt;br&gt;
@@ -299,9 +301,7 @@ And it's not some idle claim&lt;/p&gt;
 And the guards are taking aim&lt;br&gt;
 I struggle with some demons&lt;br&gt;
 They were middle class and tame&lt;/p&gt;
-&lt;p&gt;This is very obviously a reference to the holocaust, and the demons here are probably the conscience of those who witnessed it and yet kept minding their own business, allowing it to happen. It is the second reference in this song to the &lt;a class="external"
-href="https://en.wikipedia.org/wiki/Problem_of_evil" target="_blank"
-&gt;Problem of Evil&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is very obviously a reference to the holocaust, and the demons here are probably the conscience of those who witnessed it and yet kept minding their own business, allowing it to happen.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;I didn't know I had permission&lt;br&gt;
@@ -4458,27 +4458,45 @@ toolset must facilitate hierarchical system composition by means of container co
 &lt;li&gt;An AND-gate component shape for component types that play the role of adapters.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Over time, more component types that perform simple and standard functions will inevitably be identified. This will lead to a demand to introduce additional component shapes, bearing some resemblance to electronic or flowchart symbols, to represent those components; however, the intention is to be conservative in this, and only introduce new shapes if the demand for them is strong and widespread.&lt;/p&gt;
-&lt;p&gt;The preferred placement of pins on the perimeter of a component shall be:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Inputs along the left and top edges&lt;/li&gt;
-&lt;li&gt;Outputs along the right and bottom edges&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The convention for pin placement shall be:&lt;/p&gt;
+&lt;p&gt;The preferred placement of pins on the perimeter of a component is to be decided. There are two possibilities:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;The horizontal convention:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;General-purpose and cross-cutting concern interfaces:
 &lt;ul&gt;
-&lt;li&gt;inputs along the top edge&lt;/li&gt;
-&lt;li&gt;outputs along the bottom edge.&lt;/li&gt;
+&lt;li&gt;inputs along the top edge of the component.&lt;/li&gt;
+&lt;li&gt;outputs along the bottom edge of the component.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Application-specific interfaces:
 &lt;ul&gt;
-&lt;li&gt;inputs along the left edge.&lt;/li&gt;
-&lt;li&gt;outputs along the right edge.&lt;/li&gt;
+&lt;li&gt;inputs along the left edge of the component.&lt;/li&gt;
+&lt;li&gt;outputs along the right edge of the component.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This arrangement is analogous to electronic design, where the convention is that signals flow from left to right and voltages from top to bottom.&lt;/p&gt;
+&lt;p&gt;This is analogous to the convention followed in electronic schematic diagrams, where signals flow from left to right and voltages from top to bottom. It is intended to produce designs that are long on the horizontal axis and relatively short on the vertical axis. This convention is favored in electronic design because it facilitates breaking a large schematic diagram into pages and then binding the pages to form a booklet, where flipping pages traverses the diagram from left to right.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The vertical convention:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;General-purpose and cross-cutting concern interfaces:
+&lt;ul&gt;
+&lt;li&gt;inputs along the left edge of the component.&lt;/li&gt;
+&lt;li&gt;outputs along the right edge of the component.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Application-specific interfaces:
+&lt;ul&gt;
+&lt;li&gt;inputs along the top edge of the component.&lt;/li&gt;
+&lt;li&gt;outputs along the bottom edge of the component.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This convention is the opposite to the one followed in electronic schematic diagrams. It is intended to produce diagrams that are vertically tall and horizontally short, in order to facilitate vertical scrolling with a mouse wheel.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class="footnotes" role="doc-endnotes"&gt;
 &lt;hr&gt;
 &lt;ol&gt;
@@ -9133,9 +9151,7 @@ href="https://blog.michael.gr/post/2021-10-on-stateless-microservices/"
 &lt;hr&gt;
 &lt;p&gt;(1) According to Neal Ford, this started with Pets.com; see &lt;a class="external"
 href="https://youtu.be/fYWvTYFmVYs?t=2156" target="_blank"
-&gt;Neal Ford: &amp;quot;Stories Every Developer Should Know&amp;quot; at YOW! 2018, starting at 35:56&lt;/a&gt;&lt;/p&gt;</description></item><item><title>The Stateful Microservice</title><link>https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/</link><pubDate>Thu, 14 Oct 2021 16:58:10 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/</guid><description>&lt;p&gt;I did a quick search for the term and did not find anything concrete, so I
-thought I might as well publicly document my thoughts.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/media/elephants.jpg"
+&gt;Neal Ford: &amp;quot;Stories Every Developer Should Know&amp;quot; at YOW! 2018, starting at 35:56&lt;/a&gt;&lt;/p&gt;</description></item><item><title>The Stateful Microservice</title><link>https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/</link><pubDate>Thu, 14 Oct 2021 16:58:10 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/media/elephants.jpg"
 width="2048"
 height="1365"
 loading="lazy"
@@ -9144,224 +9160,98 @@ data-flex-grow="150"
 data-flex-basis="360px"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;(Useful pre-reading:
-&lt;a
+&lt;p&gt;I did a quick search for the term &amp;quot;Stateful Microservice&amp;quot; and did not find anything concrete, so I thought I might as well publicly document my thoughts.&lt;/p&gt;
+&lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Almost everyone doing microservices today will tell you that microservices
-need to be stateless. In another post of mine I explain that statelessness is
-not an end in and of itself; instead, it is just a means to an end. The
-desired technical ends are scalability and resilience, and statelessness is just one way of achieving them. Furthermore, I explain that statelessness
-in particular is a very cowardly solution from an engineering standpoint, and
-it performs very badly. For details, please see
-&lt;a
+&lt;p&gt;Almost everyone doing microservices today will tell you that microservices need to be stateless. In another article I explain that statelessness is not an end in and of itself; instead, it is just a means to an end. The desired technical ends are scalability and resilience, and statelessness is just one way of achieving them. Furthermore, I explain that statelessness in particular performs very badly, and is a very cowardly solution from an engineering standpoint. For details, please see &lt;a
 href="https://blog.michael.gr/post/2021-10-on-stateless-microservices/"
 &gt;On Stateless Microservices&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;What remains to be shown is whether there exists an alternative.&lt;/p&gt;
-&lt;p&gt;Obviously, an alternative to the stateless microservice would be the stateful
-microservice, so what we are about to examine here is what a stateful
-microservice could possibly be, and how it would compare to a stateless
-microservice.&lt;/p&gt;
+&lt;p&gt;Obviously, an alternative to the stateless microservice would be the stateful microservice, so what we are about to examine here is what a stateful microservice could possibly be, and how it would compare to a stateless microservice.&lt;/p&gt;
 &lt;h4 id="what-is-a-stateful-microservice"&gt;What is a stateful microservice
-&lt;/h4&gt;&lt;p&gt;A stateful microservice maintains state for the purpose of expediting the
-processing of incoming requests, reducing overall server load, (trading memory
-for processing power and data storage traffic,) and achieving certain things
-that are difficult to achieve otherwise, such as server-initiated client
-updates.&lt;/p&gt;
+&lt;/h4&gt;&lt;p&gt;A stateful microservice maintains state for the purpose of expediting the processing of incoming requests, reducing overall server load, (trading memory for processing power and data storage traffic,) and achieving certain things that are difficult to achieve otherwise, such as server-initiated client updates.&lt;/p&gt;
 &lt;p&gt;The state kept by a stateful microservice can include:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;State that has been obtained from the main data store and has possibly
-undergone expensive transformations. The benefit of maintaining such
-transient state within the microservice is that the data store does not
-need to be re-queried, and the possibly expensive transformations do not
-need to be repeated, with each incoming request; the loading and
-processing of the data only needs to happen once when the microservice
-starts, and to be repeated only in response to a notification from the
-system's messaging backbone that the original data in the main data store
-has changed.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;State that does not exist in the main data store, and does not need to,
-because it is of a transient nature, for example information that is only
-needed during user's visit to a web site and can be dismissed afterwards.
-This can include information necessary for maintaining a session, such as
-the session token, and view-related information, such as which page (or
-pages) of the web site the user is currently viewing. View-related
-information may be useful for the server to have for various reasons, for
-example for the purpose of sending server-initiated client updates that
-are specific to the web page(s) that are being viewed.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;State that may eventually be entered into the main data store but has not
-yet been entered due to various workflow demands or optimization concerns.
-For example, the user may be sequentially visiting each page of a wizard
-workflow, and entering information on each page, but this information
-should not be merged into the main data store unless the user first
-reaches the last page of the wizard workflow and confirms their actions.&lt;/p&gt;
-&lt;p&gt;From the above it should be obvious that a stateful microservice is
-necessarily session-oriented, meaning that it requires a specific client to
-talk to. Session-agnostic stateful microservices already exist, and we do not
-think of them as anything special; they are microservices that implement
-caches, containing information that is pertinent to not just one client, but
-to all clients. These microservices are already scalable and resilient because
-a cache can be trivially duplicated to an arbitrary degree and it can also be
-destroyed and trivially re-created from scratch.&lt;/p&gt;
-&lt;p&gt;We now need to show how a stateful microservice can still be called a
-microservice.&lt;/p&gt;
-&lt;p&gt;In a previous post of mine I examined what a microservice really is, and I
-came to the conclusion that from a purely technical standpoint, it is simply a scalable and resilient module. (See
-&lt;a
-href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
-&gt;So, what is a Microservice, anyway?&lt;/a&gt;) Even if you disagree with this definition, and you regard microservices as
-necessarily more than that, I hope you will at least agree that the purpose of
-statelessness in microservices is precisely to achieve scalability and
-resilience, so the definition of a microservice as a scalable and resilient
-module can serve as a working definition for the purposes of this discussion.&lt;/p&gt;
-&lt;p&gt;So, we need to show how stateful microservices can be scalable and resilient,
-just as their stateless counterparts are.&lt;/p&gt;
-&lt;p&gt;Scalability in stateful microservices can be achieved by means of a
-header-inspecting, session-aware, load balancing gateway which routes new
-session requests to the least busy server, and from that moment on keeps
-routing requests of that same session to the same server. Under such a
-scenario, rebalancing of the server farm can be achieved simply by killing
-microservices on overloaded servers and letting the resilience mechanism
-described next make things right.&lt;/p&gt;
-&lt;p&gt;Resilience can be achieved by having each instance of a stateful microservice
-continuously persisting its transient state in an efficient manner into a
-high-performance backup store which is accessible by all servers in the farm.
-Thus, if a microservice unexpectedly ceases to exist, it can be reconstructed
-from that backup on any other server. The trick, as we shall see, is that the
-backup is taken very efficiently, and in the event that the microservice needs
-to be reconstructed, the restoration from the backup is also done very
-efficiently.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;State that has been obtained from the main data store and has possibly undergone expensive transformations. The benefit of maintaining such transient state within the microservice is that the data store does not need to be re-queried, and the possibly expensive transformations do not need to be repeated, with each incoming request; the loading and processing of the data only needs to happen once when the microservice starts, and to be repeated only in response to a notification from the system's messaging backbone that the original data in the main data store has changed.&lt;/li&gt;
+&lt;li&gt;State that does not exist in the main data store, and does not need to, because it is of a transient nature, for example information that is only needed during user's visit to a web site and can be dismissed afterwards. This can include information necessary for maintaining a session, such as the session token, and view-related information, such as which page (or pages) of the web site the user is currently viewing. View-related information may be useful for the server to have for various reasons, for example for the purpose of sending server-initiated client updates that are specific to the web page(s) that are being viewed.&lt;/li&gt;
+&lt;li&gt;State that may eventually be entered into the main data store but has not yet been entered due to various workflow demands or optimization concerns. For example, the user may be sequentially visiting each page of a wizard workflow, and entering information on each page, but this information should not be merged into the main data store unless the user first reaches the last page of the wizard workflow and confirms their actions.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;From the above it should be obvious that a stateful microservice is necessarily session-oriented, meaning that it requires a specific client to talk to. Session-agnostic stateful microservices already exist, and we do not think of them as anything special; they are microservices that implement caches, containing information that is pertinent to not just one client, but to all clients. These microservices are already scalable and resilient because a cache can be trivially duplicated to an arbitrary degree and it can also be destroyed and trivially re-created from scratch.&lt;/p&gt;
+&lt;p&gt;We now need to show how a stateful microservice can still be called a microservice.&lt;/p&gt;
+&lt;p&gt;In a previous post of mine I examined what a microservice really is, and I came to the conclusion that from a purely technical standpoint, it is simply a scalable and resilient module. (See &lt;a
+href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
+&gt;So, what is a Microservice, anyway?&lt;/a&gt;) Even if you disagree with this definition, and you regard microservices as necessarily more than that, I hope you will at least agree that the purpose of statelessness in microservices is precisely to achieve scalability and resilience, so the definition of a microservice as a scalable and resilient module can serve as a working definition for the purposes of this discussion.&lt;/p&gt;
+&lt;p&gt;So, we need to show how stateful microservices can be scalable and resilient, just as their stateless counterparts are.&lt;/p&gt;
+&lt;p&gt;Scalability in stateful microservices can be achieved by means of a header-inspecting, session-aware, load balancing gateway which routes new session requests to the least busy server, and from that moment on keeps routing requests of that same session to the same server. Under such a scenario, rebalancing of the server farm can be achieved simply by killing microservices on overloaded servers and letting the resilience mechanism described next make things right.&lt;/p&gt;
+&lt;p&gt;Resilience can be achieved by having each instance of a stateful microservice continuously persisting its transient state in an efficient manner into a high-performance backup store which is accessible by all servers in the farm. Thus, if a microservice unexpectedly ceases to exist, it can be reconstructed from that backup on any other server. The trick, as we shall see, is that the backup is taken very efficiently, and in the event that the microservice needs to be reconstructed, the restoration from the backup is also done very efficiently.&lt;/p&gt;
 &lt;p&gt;In more detail, it works as follows:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;When a client initially connects to the server farm, no session has been
-established yet, so the first request that it sends is sessionless.&lt;/li&gt;
-&lt;li&gt;The sessionless request arrives at the load-balancing gateway, which routes
-it to the least busy server in the farm. This mostly takes care of
-scalability, since we can always add more servers, which will initially be
-idle, but as requests for new sessions keep arriving, they are routed to the
-idle servers instead of the busy ones, so over time, the load distribution
-evens out.&lt;/li&gt;
-&lt;li&gt;The server that receives the sessionless request creates a new instance of a
-stateful microservice to handle that request, and the session is established
-between that microservice and the client.&lt;/li&gt;
-&lt;li&gt;From that moment on, any further incoming requests for that same session are
-routed by the gateway to the same server, and the server delegates them to
-the same instance of the stateful microservice. (Alternatively, the
-microservice and the client may negotiate a direct persistent connection
-between the two, thus bypassing any middlemen from that moment on.)&lt;/li&gt;
-&lt;li&gt;The newly spawned stateful microservice registers with the messaging
-backbone of the system to receive notifications about system-wide events, so
-as to be able to keep its state always up to date.&lt;/li&gt;
-&lt;li&gt;The newly spawned stateful microservice loads whatever state it is going to
-need, and keeps that state in memory.&lt;/li&gt;
+&lt;li&gt;When a client initially connects to the server farm, no session has been established yet, so the first request that it sends is sessionless.&lt;/li&gt;
+&lt;li&gt;The sessionless request arrives at the load-balancing gateway, which routes it to the least busy server in the farm. This mostly takes care of scalability, since we can always add more servers, which will initially be idle, but as requests for new sessions keep arriving, they are routed to the idle servers instead of the busy ones, so over time, the load distribution evens out.&lt;/li&gt;
+&lt;li&gt;The server that receives the sessionless request creates a new instance of a stateful microservice to handle that request, and the session is established between that microservice and the client.&lt;/li&gt;
+&lt;li&gt;From that moment on, any further incoming requests for that same session are routed by the gateway to the same server, and the server delegates them to the same instance of the stateful microservice. (Alternatively, the microservice and the client may negotiate a direct persistent connection between the two, thus bypassing any middlemen from that moment on.)&lt;/li&gt;
+&lt;li&gt;The newly spawned stateful microservice registers with the messaging backbone of the system to receive notifications about system-wide events, so as to be able to keep its state always up to date.&lt;/li&gt;
+&lt;li&gt;The newly spawned stateful microservice loads whatever state it is going to need, and keeps that state in memory.&lt;/li&gt;
 &lt;li&gt;The microservice processes the request and sends back a response.
 &lt;ul&gt;
 &lt;li&gt;Possibly also changing its own transient state.&lt;/li&gt;
-&lt;li&gt;Possibly also updating the main data store with information that must
-always be globally available and up to date, and issuing system-wide
-notifications about these changes.&lt;/li&gt;
+&lt;li&gt;Possibly also updating the main data store with information that must always be globally available and up to date, and issuing system-wide notifications about these changes.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;The microservice takes a backup of itself.
 &lt;ul&gt;
 &lt;li&gt;The microservice serializes the entirety of its state into a binary blob&lt;/li&gt;
-&lt;li&gt;The blob is written into a persistent key-value store, using the session
-id as the key.&lt;/li&gt;
+&lt;li&gt;The blob is written into a persistent key-value store, using the session id as the key.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The microservice remains running, doing two things:
+&lt;ul&gt;
+&lt;li&gt;Waits for the next request on the same session, and repeats the steps to process it.&lt;/li&gt;
+&lt;li&gt;Waits for the next event from the messaging backbone, and if pertinent, modifies its internal state and sends server-initiated client updates if necessary.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;pre&gt;&lt;code&gt;This persistent key-value store is used as a backup, meaning that it is
-written often, but it is never read unless something bad happens.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;This persistent key-value store is used as a backup, meaning that it is written often, but it is never read unless something bad happens.&lt;/p&gt;
+&lt;p&gt;Continuous persistence of stateful microservices is not expected to pose a performance problem, because:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Continuous persistence of stateful microservices is not expected to pose a
-performance problem, because:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Serialization to and from a binary format performs much better than
-general-purpose serialization into a textual markup like JSON or XML.&lt;/li&gt;
-&lt;li&gt;The size of the blob is expected to be relatively small. (Of the order of
-kilobytes.)&lt;/li&gt;
+&lt;li&gt;Serialization to and from a binary format performs much better than general-purpose serialization into a textual markup like JSON or XML.&lt;/li&gt;
+&lt;li&gt;The size of the blob is expected to be relatively small. (Of the order of kilobytes.)&lt;/li&gt;
 &lt;li&gt;Key-value stores tend to have very high performance characteristics.&lt;/li&gt;
-&lt;li&gt;The backup store can be physically separate from the main data store,
-(even on a different network,) thus avoiding contention.&lt;/li&gt;
-&lt;li&gt;The act of serializing an in-memory data structure into a single in-memory
-blob and then sending that blob as one piece into persistent storage is
-bound to perform far better than a series of operations to update a
-structured data store. (For one thing, there are no index updates.)&lt;/li&gt;
-&lt;li&gt;Persisting the blob can be done asynchronously and in parallel to the
-sending of the response to the client, so it does not contribute to
-user-perceived latency.&lt;/li&gt;
+&lt;li&gt;The backup store can be physically separate from the main data store, (even on a different network,) thus avoiding contention.&lt;/li&gt;
+&lt;li&gt;The act of serializing an in-memory data structure into a single in-memory blob and then sending that blob as one piece into persistent storage is bound to perform far better than a series of operations to update a structured data store. (For one thing, there are no index updates.)&lt;/li&gt;
+&lt;li&gt;Persisting the blob can be done asynchronously and in parallel to the sending of the response to the client, so it does not contribute to user-perceived latency.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;For as long as the session does not expire, the stateful microservice can
-remain alive, continuing to serve requests efficiently, taking advantage of
-the transient state that it contains and keeps up-to-date. Contrast this
-with the stateless microservice approach, which requires that any request
-can be handled by any server, therefore each microservice must contain no
-state at all:&lt;/p&gt;
+&lt;p&gt;For as long as the session does not expire, the stateful microservice can remain alive, continuing to serve requests efficiently, taking advantage of the transient state that it contains and keeps up-to-date. Contrast this with the stateless microservice approach, which requires that any request can be handled by any server, therefore each microservice must contain no state at all:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The processing of each request begins with zero knowledge of the state of
-the system, so persistent storage must always be queried to obtain state.&lt;/li&gt;
-&lt;li&gt;These queries represent overhead, and this overhead must be suffered in
-full before the request can be serviced, thus manifesting as latency to
-the user.&lt;/li&gt;
-&lt;li&gt;The results of these queries may not be cached, because they may at any
-moment be rendered out-of-date by any other microservice in the system.&lt;/li&gt;
+&lt;li&gt;The processing of each request begins with zero knowledge of the state of the system, so persistent storage must always be queried to obtain state.&lt;/li&gt;
+&lt;li&gt;These queries represent overhead, and this overhead must be suffered in full before the request can be serviced, thus manifesting as latency to the user.&lt;/li&gt;
+&lt;li&gt;The results of these queries may not be cached, because they may at any moment be rendered out-of-date by any other microservice in the system.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;An instance of a stateful microservice may prematurely cease to exist due to
-a number of reasons:&lt;/p&gt;
+&lt;p&gt;An instance of a stateful microservice may prematurely cease to exist due to a number of reasons:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The microservice may be terminated on demand in order to rebalance the
-server farm.&lt;/li&gt;
-&lt;li&gt;The server hosting the microservice may become unavailable due to hardware
-failure.&lt;/li&gt;
-&lt;li&gt;The microservice may fall victim to the whim of the chaos monkey.&lt;/li&gt;
+&lt;li&gt;The microservice may be terminated on demand in order to rebalance the server farm.&lt;/li&gt;
+&lt;li&gt;The server hosting the microservice may become unavailable due to hardware failure.&lt;/li&gt;
+&lt;li&gt;The microservice may fall victim to the whim of the &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Chaos_engineering" target="_blank"
+&gt;chaos monkey&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;If for whatever reason a microservice ceases to exist, the gateway discovers
-this either on its own, or when the next request arrives from the client.&lt;/p&gt;
+&lt;p&gt;If, for whatever reason, a microservice ceases to exist, the gateway discovers this either on its own, or when the next request arrives from the client.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The gateway routes the request to the least busy server in the farm.&lt;/li&gt;
-&lt;li&gt;The server that receives the request sees that there is no microservice to
-handle requests for that session, so it creates a new one.&lt;/li&gt;
-&lt;li&gt;The newly instantiated microservice checks, whether the key-value store
-contains a backup for the current session, and discovers that it does.&lt;/li&gt;
+&lt;li&gt;The server that receives the request sees that there is no microservice to handle requests for that session, so it creates a new one.&lt;/li&gt;
+&lt;li&gt;The newly instantiated microservice checks whether the key-value store contains a backup for the current session, and discovers that it does.&lt;/li&gt;
 &lt;li&gt;The microservice restores its state from the backup.&lt;/li&gt;
 &lt;li&gt;Operation continues from that moment on as if nothing happened.&lt;/li&gt;
-&lt;li&gt;Between the moment in time that a certain microservice instance
-prematurely ceases to exist, and the moment in time that a new incarnation
-of that microservice is ready for showtime on a freshly assigned server,
-some events from the messaging backbone may be lost. To avoid
-inconsistencies in the state of the microservice, we must utilize a
-messaging backbone which is capable of replaying events. For example, if
-we use Kafka, then the stateful microservice can make sure to include
-among its persistent state what is known in Kafka terminology as the
-&amp;quot;consumer offset&amp;quot;. Thus, when the microservice gets reconstructed, it asks
-Kafka for events starting at that offset, so Kafka replays any missed
-events before it starts sending new ones. Thus, we ensure that the state
-of the microservice is always up to date, even in the case of termination
-and reconstruction.&lt;/li&gt;
+&lt;li&gt;Between the moment in time that a certain microservice instance prematurely ceases to exist, and the moment in time that a new incarnation of that microservice is ready for showtime on a freshly assigned server, some events from the messaging backbone may be lost. To avoid inconsistencies in the state of the microservice, we must utilize a messaging backbone which is capable of replaying events.
+&lt;ul&gt;
+&lt;li&gt;For example, if we use Kafka, then the stateful microservice can make sure to include among its persistent state what is known in Kafka terminology as the &amp;quot;consumer offset&amp;quot;. Thus, when the microservice gets reconstructed, it asks Kafka for events starting at that offset, so Kafka replays any missed events before it starts sending new ones. Thus, we ensure that the state of the microservice is always up to date, even in the case of termination and reconstruction.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Thus, stateful microservices can achieve not only scalability but also
-resilience.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Thus, stateful microservices can achieve not only scalability but also resilience.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: Photo of two elephants friendly interacting with each other, from
-&lt;a class="external"
+&lt;p&gt;Cover image: Photo of two elephants friendly interacting with each other, from &lt;a class="external"
 href="https://www.scientificamerican.com/article/elephants-never-forget/" target="_blank"
 &gt;The Scientific American: &lt;em&gt;Fact or Fiction?: Elephants Never Forget&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>On Stateless Microservices</title><link>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</link><pubDate>Thu, 14 Oct 2021 10:53:38 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-on-stateless-microservices/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-on-stateless-microservices/media/8.png"
 width="1090"
