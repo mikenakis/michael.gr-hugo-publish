@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 14 Aug 2026 17:21:05 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>IriusRisk Threat Modeling Foundations (IR-TMF) Certification</title><link>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</link><pubDate>Tue, 11 Aug 2026 14:33:43 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/media/iriusrisk-tmf-certification-cover.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 18 Aug 2026 07:32:40 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
+loading="lazy"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Fun thing I learned today:&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://en.wikipedia.org/wiki/Tcl_%28programming_language%29" target="_blank"
+&gt;TCL&lt;/a&gt; used to be pronounced &amp;quot;&lt;em&gt;&lt;strong&gt;Tickle&lt;/strong&gt;&lt;/em&gt;&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Then there was this movement known as &lt;a class="external"
+href="https://en.wikipedia.org/wiki/MeToo_movement" target="_blank"
+&gt;#MeToo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And it was decided that &amp;quot;Tickle&amp;quot; was a bit too risqué.&lt;/p&gt;
+&lt;p&gt;And so they have now started pronouncing it &lt;em&gt;&lt;strong&gt;tee-see-ell&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;From here: &lt;a class="external"
+href="https://www.youtube.com/watch?v=V_qzqY1bb7I" target="_blank"
+&gt;YouTube: Reliability Lessons From SQLite - Richard Hipp | SSW 2026&lt;/a&gt; (Around 27':50'')&lt;/p&gt;
+&lt;p&gt;Gee, I wish something similar could happen to SQL, so that people stop pronouncing it &amp;quot;Sequel&amp;quot;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image adapted from official logo found at &lt;a class="external"
+href="https://wiki.tcl-lang.org/page/A&amp;#43;logo&amp;#43;for&amp;#43;Tcl&amp;#43;9" target="_blank"
+&gt;tcl-lang.org: A logo for Tcl 9&lt;/a&gt;&lt;/p&gt;</description></item><item><title>IriusRisk Threat Modeling Foundations (IR-TMF) Certification</title><link>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</link><pubDate>Tue, 11 Aug 2026 14:33:43 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/media/iriusrisk-tmf-certification-cover.jpg"
 width="1980"
 height="1533"
 loading="lazy"
@@ -10015,16 +10035,20 @@ data-flex-basis="359px"
 &lt;/h3&gt;&lt;p&gt;My thoughts and notes on how I would like a new programming language to look like.&lt;/p&gt;
 &lt;p&gt;The unique selling point of the language is:&lt;/p&gt;
 &lt;p&gt;Automatic memory reclamation without garbage collection.&lt;/p&gt;
-&lt;p&gt;Other selling points of the language are:&lt;/p&gt;
+&lt;p&gt;The secondary selling point of the language is:&lt;/p&gt;
+&lt;p&gt;&amp;quot;Looks like Python.&amp;quot; (The similarity is only superficial, but that is irrelevant.)&lt;/p&gt;
+&lt;p&gt;The complete set of selling points of the language are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Simple and elegant. (So that it is suitable for the academia.)&lt;/li&gt;
-&lt;li&gt;Expressive. (So that it is suitable for experienced programmers.)&lt;/li&gt;
-&lt;li&gt;Consistent. (So that it is attractive to developer teams.)&lt;/li&gt;
-&lt;li&gt;Guiding. (So that it promotes best practices.)&lt;/li&gt;
-&lt;li&gt;Fast. (So that it is suitable for high performance computing.)&lt;/li&gt;
-&lt;li&gt;Lean. (So that it is suitable for resource-constrained computing.)&lt;/li&gt;
+&lt;li&gt;Elegant. (Attractive for learning, and for non-programmers.)&lt;/li&gt;
+&lt;li&gt;Expressive. (Attractive to experienced programmers.)&lt;/li&gt;
+&lt;li&gt;Consistent. (Attractive to developer teams.)&lt;/li&gt;
+&lt;li&gt;Safe. (Suitable for mission-critical applications.)&lt;/li&gt;
+&lt;li&gt;Performant. (Suitable for high &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Performance_per_watt" target="_blank"
+&gt;performance-per-watt&lt;/a&gt; applications.)&lt;/li&gt;
+&lt;li&gt;Lean. (Suitable for resource-constrained computing.)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust.&lt;/p&gt;
+&lt;p&gt;This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust, and get ideas from it.&lt;/p&gt;
 &lt;h3 id="summary-of-language-characteristics"&gt;Summary of language characteristics
 &lt;/h3&gt;&lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
@@ -10032,11 +10056,11 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;The main goals of the language are achieved via the following characteristics:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;For simplicity and elegance:&lt;/p&gt;
+&lt;p&gt;For elegance:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Scoping by indentation instead of curly braces. (Similar to python.)&lt;/li&gt;
-&lt;li&gt;Keyword-rich syntax which avoids cryptic abbreviations and symbols.&lt;/li&gt;
-&lt;li&gt;Clear distinction between what is a statement and what is an expression.&lt;/li&gt;
+&lt;li&gt;Keyword-rich syntax which avoids cryptic and/or inelegant abbreviations and symbols.&lt;/li&gt;
+&lt;li&gt;Clear distinction between statements and expressions.&lt;/li&gt;
 &lt;li&gt;Automatic memory management.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -10047,24 +10071,38 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;li&gt;Type inference whenever possible.&lt;/li&gt;
 &lt;li&gt;Explicit nullability of reference types.&lt;/li&gt;
 &lt;li&gt;Full support for functional programming.&lt;/li&gt;
-&lt;li&gt;Full support for imperative programming without functional Nazism.&lt;/li&gt;
+&lt;li&gt;Full support for imperative programming. (No functional Nazism.)&lt;/li&gt;
 &lt;li&gt;Async-transparency.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;For consistency:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Extensive, mandatory, and in many cases non-suppressible, code inspections.&lt;/li&gt;
-&lt;li&gt;Whenever possible, only one way of expressing any given thing.&lt;/li&gt;
-&lt;li&gt;Extensive and strict formatting rules ensure all code looks the same.&lt;/li&gt;
-&lt;li&gt;Reformatability spares developers from having to type code in a particular way.&lt;/li&gt;
+&lt;li&gt;When possible, and practical, only one way of expressing a given thing.&lt;/li&gt;
+&lt;li&gt;Extensive, non-suppressible built-in static analysis. (Analysis rules / Code inspections / &amp;quot;warnings&amp;quot;.)&lt;/li&gt;
+&lt;li&gt;Absolutely strict formatting rules ensuring all code is formatted the same way.&lt;/li&gt;
+&lt;li&gt;Perfectly complete set of formatting rules guarantees total reformatability, which in turn spares the programmer from having to type code in a particular way.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For safety:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;No &lt;a class="external"
+href="https://en.wikipedia.org/wiki/Undefined_behavior" target="_blank"
+&gt;undefined behavior&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;No pointer arithmetic, built-in mandatory array bounds checking, etc. (&lt;a class="external"
+href="https://en.wikipedia.org/wiki/Memory_safety" target="_blank"
+&gt;Memory-safety&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Optional arithmetic overflow checking (as in C#)&lt;/li&gt;
+&lt;li&gt;Assertions a first-class construct.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;For performance:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Strongly typed.&lt;/li&gt;
-&lt;li&gt;Primitive value types correspond to machine words.&lt;/li&gt;
+&lt;li&gt;Statically typed. (&amp;quot;Dynamic&amp;quot; typing not even an option.)&lt;/li&gt;
+&lt;li&gt;Primitive value types that correspond to a machine word. (The &lt;code&gt;nint&lt;/code&gt;, &lt;code&gt;nuint&lt;/code&gt; types of C#)&lt;/li&gt;
 &lt;li&gt;Intermediate-code-based, Just-In-Time compiled.&lt;/li&gt;
 &lt;li&gt;Fibers. (By means of async-transparency.)&lt;/li&gt;
 &lt;/ul&gt;
@@ -10074,7 +10112,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;ul&gt;
 &lt;li&gt;Reference counting instead of garbage collection.&lt;/li&gt;
 &lt;li&gt;Minimalistic mandatory runtime library.&lt;/li&gt;
-&lt;li&gt;Separate and optional standard library.&lt;/li&gt;
+&lt;li&gt;Separate, optional, and modular standard library. (Pay-for-what-you-use.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -10209,7 +10247,7 @@ href="https://openjdk.org/jeps/425" target="_blank"
 &lt;li&gt;TODO: describe how a fiber exposes a proxy for invocation from other fibers and how the proxy asserts that everything passed back and forth is either thread-safe or immutable.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Note that in multi-threaded execution models purity is of very limited usefulness because it does not prevent reading mutable state, so it does not avoid race conditions. However, this language makes use of fibers instead of threads, so there can be no race conditions, so purity becomes useful.&lt;/li&gt;
+&lt;li&gt;Note that in multi-threaded execution models purity is of very limited usefulness because it does not prevent reading mutable state, so it does not prevent race conditions.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -10248,6 +10286,11 @@ href="https://openjdk.org/jeps/425" target="_blank"
 &lt;/li&gt;
 &lt;li&gt;The functional forms make use of the &lt;code&gt;yield&lt;/code&gt; keyword to produce values. So, the functional &lt;code&gt;if&lt;/code&gt; statement is &lt;code&gt;if( x ) yield 5; else yield 6;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Functional loops evaluate to &lt;code&gt;Enumerable&lt;/code&gt; and each execution of &lt;code&gt;yield&lt;/code&gt; produces a new element.&lt;/li&gt;
+&lt;li&gt;The functional &lt;code&gt;for&lt;/code&gt; loop is a first-class language construct, not yet another higher order function.
+&lt;ul&gt;
+&lt;li&gt;Thus, when single-stepping through code, you do not have to remember to use step-into instead of step-over in order to skip the header of the loop and reach the body of the loop.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;The standard library offers various monads like &lt;code&gt;Optional&lt;/code&gt;, &lt;code&gt;Try&lt;/code&gt;, and other common functional goodies.&lt;/li&gt;
@@ -10265,14 +10308,9 @@ href="https://openjdk.org/jeps/425" target="_blank"
 &lt;li&gt;No functional Nazism.
 &lt;ul&gt;
 &lt;li&gt;No obstacles to having mutable state, other than having to use an extra keyword here and there.&lt;/li&gt;
-&lt;li&gt;A proper &lt;code&gt;for&lt;/code&gt; loop.
-&lt;ul&gt;
-&lt;li&gt;Even the functional version of the &lt;code&gt;for&lt;/code&gt; loop is a first-class language construct, not yet another higher order function.&lt;/li&gt;
-&lt;li&gt;Thus, when single-stepping through code, you do not have to remember to use step-into instead of step-over in order to skip the header of the loop and reach the body of the loop.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;A proper imperative &lt;code&gt;for&lt;/code&gt; loop.&lt;/li&gt;
 &lt;li&gt;Proper &lt;code&gt;break&lt;/code&gt; and &lt;code&gt;continue&lt;/code&gt; keywords.&lt;/li&gt;
-&lt;li&gt;Freedom to re-assign parameters.
+&lt;li&gt;Freedom to re-assign method parameters.
 &lt;ul&gt;
 &lt;li&gt;Thus making the original value inaccessible.&lt;/li&gt;
 &lt;li&gt;To allow this, the &lt;code&gt;mutable&lt;/code&gt; keyword must be added to the parameter.&lt;/li&gt;
@@ -10377,8 +10415,7 @@ method to be overridable, you have to declare it as overridable.&lt;/li&gt;
 &lt;li&gt;A function:
 &lt;ul&gt;
 &lt;li&gt;Returns something.&lt;/li&gt;
-&lt;li&gt;Can indicate failure either by throwing an exception or by returning
-a &lt;code&gt;Try&lt;/code&gt; monad.&lt;/li&gt;
+&lt;li&gt;Can indicate failure either by throwing an exception or by returning a &lt;code&gt;Try&lt;/code&gt; monad.&lt;/li&gt;
 &lt;li&gt;Is pure. (Must have no side-effects.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -10451,10 +10488,7 @@ a &lt;code&gt;Try&lt;/code&gt; monad.&lt;/li&gt;
 &lt;li&gt;The Boolean type is &lt;code&gt;boolean&lt;/code&gt;, not &lt;code&gt;bool&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;The Integer type is &lt;code&gt;integer&lt;/code&gt;, not &lt;code&gt;int&lt;/code&gt;.
 &lt;ul&gt;
-&lt;li&gt;Nobody will ever have to type &lt;code&gt;i&lt;/code&gt;, &lt;code&gt;n&lt;/code&gt;, &lt;code&gt;t&lt;/code&gt;, &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;g&lt;/code&gt;, &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;r&lt;/code&gt;,
-because any halfway decent code editor will give you &lt;code&gt;integer&lt;/code&gt; if
-you just type &lt;code&gt;i&lt;/code&gt;, hit &lt;code&gt;Ctrl+Space&lt;/code&gt; to open up auto-completion,
-and then &lt;code&gt;Enter&lt;/code&gt; to pick the first suggestion.&lt;/li&gt;
+&lt;li&gt;Nobody will ever have to type &lt;code&gt;i&lt;/code&gt;, &lt;code&gt;n&lt;/code&gt;, &lt;code&gt;t&lt;/code&gt;, &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;g&lt;/code&gt;, &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;r&lt;/code&gt;, because any halfway decent code editor will give you &lt;code&gt;integer&lt;/code&gt; if you just type &lt;code&gt;i&lt;/code&gt;, hit &lt;code&gt;Ctrl+Space&lt;/code&gt; to open up auto-completion, and then &lt;code&gt;Enter&lt;/code&gt; to pick the first suggestion.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;The Long Integer type is &lt;code&gt;long integer&lt;/code&gt;, not &lt;code&gt;long&lt;/code&gt;.&lt;/li&gt;
@@ -10473,14 +10507,9 @@ and then &lt;code&gt;Enter&lt;/code&gt; to pick the first suggestion.&lt;/li&gt;
 &lt;/li&gt;
 &lt;li&gt;In general, the language favors words over punctuation, so:
 &lt;ul&gt;
-&lt;li&gt;Inheritance by means of &lt;code&gt;extends&lt;/code&gt; and &lt;code&gt;implements&lt;/code&gt; keywords as in Java instead of the &lt;code&gt;:&lt;/code&gt; character of C#.&lt;/li&gt;
+&lt;li&gt;Inheritance by means of &lt;code&gt;extends&lt;/code&gt; and &lt;code&gt;implements&lt;/code&gt; keywords as in Java instead of the &lt;code&gt;:&lt;/code&gt; character of C++ and C#.&lt;/li&gt;
 &lt;li&gt;Fully spelled out &lt;code&gt;for each a in b do&lt;/code&gt; like C# instead of the &lt;code&gt;for( a : b )&lt;/code&gt; of Java.&lt;/li&gt;
-&lt;li&gt;Boolean operators are words, like Pascal and Python and unlike the
-C family.
-&lt;ul&gt;
-&lt;li&gt;i.e. the operators are &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, and &lt;code&gt;not&lt;/code&gt; instead of &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;, &lt;code&gt;||&lt;/code&gt;, and &lt;code&gt;!&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;Boolean operators are words, (i.e. &lt;code&gt;and&lt;/code&gt;, &lt;code&gt;or&lt;/code&gt;, &lt;code&gt;xor&lt;/code&gt;, and &lt;code&gt;not&lt;/code&gt; ) as in Pascal and Python, instead of punctuation symbols (i.e. &lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;, &lt;code&gt;||&lt;/code&gt;, &lt;code&gt;^&lt;/code&gt;, and &lt;code&gt;!&lt;/code&gt;) as in the C family of languages.&lt;/li&gt;
 &lt;li&gt;The compiler handles boolean operators, applying operator precedence and short-circuit evaluation.&lt;/li&gt;
 &lt;li&gt;The compiler maps all other operators to method calls, (observing operator precedence rules,) as follows:
 &lt;ul&gt;
@@ -10491,11 +10520,11 @@ C family.
 &lt;li&gt;&lt;code&gt;a % b&lt;/code&gt; maps to &lt;code&gt;a.Modulo( b )&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;a ^ b&lt;/code&gt; maps to &lt;code&gt;a.Power( b )&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;a = b&lt;/code&gt; maps to &lt;code&gt;a.Equals( b )&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;a &amp;amp;lt; b&lt;/code&gt; maps to &lt;code&gt;a.Below( b )&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;a &amp;amp;gt; b&lt;/code&gt; maps to &lt;code&gt;a.Above( b )&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a &amp;lt; b&lt;/code&gt; maps to &lt;code&gt;a.Below( b )&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a &amp;gt; b&lt;/code&gt; maps to &lt;code&gt;a.Above( b )&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;a != b&lt;/code&gt; maps to &lt;code&gt;not a.Equals( b )&lt;/code&gt;. (*)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;a &amp;amp;lt;= b&lt;/code&gt; maps to &lt;code&gt;not a.Above( b )&lt;/code&gt;. (*)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;a =&amp;amp;gt; b&lt;/code&gt; maps to &lt;code&gt;not a.Below( b )&lt;/code&gt;. (*)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a &amp;lt;= b&lt;/code&gt; maps to &lt;code&gt;not a.Above( b )&lt;/code&gt;. (*)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;a =&amp;gt; b&lt;/code&gt; maps to &lt;code&gt;not a.Below( b )&lt;/code&gt;. (*)&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;-a&lt;/code&gt; maps to &lt;code&gt;a.Negative&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;~a&lt;/code&gt; maps to &lt;code&gt;a.TwosComplement&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;++a&lt;/code&gt; maps to &lt;code&gt;a.PreIncrement()&lt;/code&gt;.&lt;/li&gt;

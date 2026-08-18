@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humor on Michael's Blog</title><link>https://blog.michael.gr/tags/humor/</link><description>Recent content in Humor on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 29 Jul 2026 13:26:13 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/humor/index.xml" rel="self" type="application/rss+xml"/><item><title>Code review memes</title><link>https://blog.michael.gr/post/2025-06-code-review-images/</link><pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-code-review-images/</guid><description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humor on Michael's Blog</title><link>https://blog.michael.gr/tags/humor/</link><description>Recent content in Humor on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 17 Aug 2026 13:45:51 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/humor/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
+loading="lazy"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Fun thing I learned today:&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://en.wikipedia.org/wiki/Tcl_%28programming_language%29" target="_blank"
+&gt;TCL&lt;/a&gt; used to be pronounced &amp;quot;&lt;em&gt;&lt;strong&gt;Tickle&lt;/strong&gt;&lt;/em&gt;&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Then there was this movement known as &lt;a class="external"
+href="https://en.wikipedia.org/wiki/MeToo_movement" target="_blank"
+&gt;#MeToo&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;And it was decided that &amp;quot;Tickle&amp;quot; was a bit too risqué.&lt;/p&gt;
+&lt;p&gt;And so they have now started pronouncing it &lt;em&gt;&lt;strong&gt;tee-see-ell&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;From here: &lt;a class="external"
+href="https://www.youtube.com/watch?v=V_qzqY1bb7I" target="_blank"
+&gt;YouTube: Reliability Lessons From SQLite - Richard Hipp | SSW 2026&lt;/a&gt; (Around 27':50'')&lt;/p&gt;
+&lt;p&gt;Gee, I wish something similar could happen to SQL, so that people stop pronouncing it &amp;quot;Sequel&amp;quot;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cover image adapted from official logo found at &lt;a class="external"
+href="https://wiki.tcl-lang.org/page/A&amp;#43;logo&amp;#43;for&amp;#43;Tcl&amp;#43;9" target="_blank"
+&gt;tcl-lang.org: A logo for Tcl 9&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Code review memes</title><link>https://blog.michael.gr/post/2025-06-code-review-images/</link><pubDate>Fri, 06 Jun 2025 16:33:33 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-code-review-images/</guid><description>&lt;p&gt;GitLab allows the insertion of images in code review comments. They make it really easy: if you have an image on the clipboard, you can just paste it into a comment. I suppose the feature exists so that programmers can exchange screenshots, graphs, etc. to explain complicated matters during code review.&lt;/p&gt;
 &lt;p&gt;I like to use this feature to post memes.&lt;/p&gt;
 &lt;p&gt;Here is my collection of the most useful code review meme pictures:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-code-review-images/media/nooo/polar-bear-nooo-320.jpg"

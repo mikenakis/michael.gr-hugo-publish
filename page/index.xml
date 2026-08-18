@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pages on Michael's Blog</title><link>https://blog.michael.gr/page/</link><description>Recent content in pages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 11 Aug 2026 13:49:41 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/page/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/my-movie-list/media/my-movie-list.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pages on Michael's Blog</title><link>https://blog.michael.gr/page/</link><description>Recent content in pages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 17 Aug 2026 09:24:32 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/page/index.xml" rel="self" type="application/rss+xml"/><item><title>My Movie List</title><link>https://blog.michael.gr/my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/my-movie-list/media/my-movie-list.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
-&lt;p&gt;This is a list of movies that I have watched, with a short remark for each.&lt;/p&gt;
-&lt;p&gt;It also includes some movies that I have not watched yet, but I plan to watch.&lt;/p&gt;
-&lt;p&gt;The &amp;quot;Status&amp;quot; column is one of the following:&lt;/p&gt;
+&lt;p&gt;Here is my list of movies.&lt;/p&gt;
+&lt;p&gt;The &amp;quot;Status&amp;quot; column may contain:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The date when I watched the movie, (although I may have also watched the movie at an unknown earlier date,) or&lt;/li&gt;
+&lt;li&gt;The date when I watched the movie&lt;/li&gt;
 &lt;li&gt;&amp;quot;(?)&amp;quot; if I watched the movie before mid-2015, when I began keeping track, or if I forgot to record the date at the time of watching it.&lt;/li&gt;
 &lt;li&gt;&amp;quot;Not yet&amp;quot; if I intend to watch the movie but have not watched it yet.&lt;/li&gt;
 &lt;/ul&gt;
@@ -17,11 +16,14 @@ loading="lazy"
 &lt;li&gt;👍 OK to watch.&lt;/li&gt;
 &lt;li&gt;🤷 Meh.&lt;/li&gt;
 &lt;li&gt;👎 Do not watch.&lt;/li&gt;
-&lt;li&gt;🎦 Not sure / undecided / not watched.&lt;/li&gt;
+&lt;li&gt;🎦 Not sure / do not remember / not watched.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Some of those movies I watched a very, very long time ago, possibly even on Greek Public TV in the 1980s, so some of the remarks reflect the impression that a much younger me was left with after watching a movie.&lt;/p&gt;
+&lt;p&gt;Please note that the remarks that I have written for each movie reflect the impression I was left with at the time of watching that movie, which may have been quite a long time ago. So, these remarks may not be what I would have written if I had watched that movie today. (Some of these movies I even watched on Greek Public TV in the 1980s; that's like in a previous life.)&lt;/p&gt;
+&lt;p&gt;On several occasions I mention the Truffaut effect; here is some information about it: &lt;a class="external"
+href="https://www.google.com/search?q=truffaut&amp;#43;effect" target="_blank"
+&gt;Google search - Truffaut effect&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;Cover image: &lt;em&gt;my-movie-list&lt;/em&gt; by michael.gr, based on &lt;em&gt;Film&lt;/em&gt; &lt;a class="external"
+&lt;p&gt;Cover image: &lt;em&gt;my-movie-list&lt;/em&gt; by michael.gr, based on &amp;quot;&lt;em&gt;Film&lt;/em&gt;&amp;quot; &lt;a class="external"
 href="https://thenounproject.com/icon/film-539437/" target="_blank"
 &gt;by Bonnie Duffley from The Noun Project&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -65,7 +67,7 @@ href="https://www.imdb.com/title/tt0026752" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;A classic. Also see &lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1961) and &lt;em&gt;The Bounty&lt;/em&gt; (1984)&lt;/td&gt;
+&lt;td&gt;A classic. Also see &lt;strong&gt;&lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1961)&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;The Bounty&lt;/em&gt; (1984)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1939&lt;/td&gt;
@@ -105,7 +107,7 @@ href="https://www.imdb.com/title/tt0033467" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Freek says it was nothing to write home about.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1951&lt;/td&gt;
@@ -125,7 +127,7 @@ href="https://www.imdb.com/title/tt0046534" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;A classic. Also see &lt;em&gt;War of the Worlds&lt;/em&gt; (2005)&lt;/td&gt;
+&lt;td&gt;A classic. Also see &lt;strong&gt;&lt;em&gt;War of the Worlds&lt;/em&gt; (2005)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1954&lt;/td&gt;
@@ -145,7 +147,7 @@ href="https://www.imdb.com/title/tt0050083" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;A classic. Also see &lt;em&gt;12 Angry Men&lt;/em&gt; (1997)&lt;/td&gt;
+&lt;td&gt;A classic. Also see &lt;strong&gt;&lt;em&gt;12 Angry Men&lt;/em&gt; (1997)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1957&lt;/td&gt;
@@ -175,7 +177,7 @@ href="https://www.imdb.com/title/tt0052027" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;See also &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1990) and &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1999)&lt;/td&gt;
+&lt;td&gt;See also &lt;strong&gt;&lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1990)&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1999)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1959&lt;/td&gt;
@@ -195,7 +197,7 @@ href="https://www.imdb.com/title/tt0056264" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;A classic remake of the classic original. Also see &lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1935) and &lt;em&gt;The Bounty&lt;/em&gt; (1984).&lt;/td&gt;
+&lt;td&gt;A classic remake of the classic original. Also see &lt;strong&gt;&lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1935)&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;The Bounty&lt;/em&gt; (1984)&lt;/strong&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1961&lt;/td&gt;
@@ -315,7 +317,7 @@ href="https://www.imdb.com/title/tt0064276" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Decent, but disappointing considering all the hype around it.&lt;/td&gt;
+&lt;td&gt;Decent, but not living up to all the hype around it.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1970&lt;/td&gt;
@@ -324,7 +326,7 @@ href="https://www.imdb.com/title/tt0064276" target="_blank"
 href="https://www.imdb.com/title/tt0065528" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;👍&lt;/td&gt;
+&lt;td&gt;🎦&lt;/td&gt;
 &lt;td&gt;I do not remember much anymore, but I think it was very good.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -425,7 +427,7 @@ href="https://www.imdb.com/title/tt0067756" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Very good considering its time, and its low budget. An influential movie.&lt;/td&gt;
+&lt;td&gt;Very good considering its time, and its low budget. A very influential movie.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1972&lt;/td&gt;
@@ -435,7 +437,7 @@ href="https://www.imdb.com/title/tt0069280" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Very good, especially if you have read Kurt Vonnegut's classic book and hold it in very high esteem.&lt;/td&gt;
+&lt;td&gt;Very good, especially if you have read Kurt Vonnegut's classic masterpiece.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1972&lt;/td&gt;
@@ -445,7 +447,7 @@ href="https://www.imdb.com/title/tt0069113" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
-&lt;td&gt;Exciting, I suppose, for its time. Way too many impossible things going on.&lt;/td&gt;
+&lt;td&gt;Exciting, I suppose, for its time.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1973&lt;/td&gt;
@@ -505,7 +507,7 @@ href="https://www.imdb.com/title/tt0072730" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;I watched it because I had read the Sci-Fi story that it is based on, which is very good. I did not find it as good as I expected, but not bad, either.&lt;/td&gt;
+&lt;td&gt;I watched it because I had read the Sci-Fi story that it is based on, which is very good. I did not find it as good as I had expected, but not bad, either.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1975&lt;/td&gt;
@@ -535,7 +537,7 @@ href="https://www.imdb.com/title/tt0074812" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;A legendary science fiction film. The premise was a bit lame, the production was cheap, the acting was bad, the editing was butchered, and yet it is still a classic. Also see &lt;em&gt;The Island&lt;/em&gt; (2005) and &lt;em&gt;In Time&lt;/em&gt; (2011)&lt;/td&gt;
+&lt;td&gt;A legendary science fiction film. The premise was a bit lame, the production was cheap, the acting was bad, the editing was butchered, and yet it is still a classic. Also see &lt;strong&gt;&lt;em&gt;The Island&lt;/em&gt; (2005)&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;In Time&lt;/em&gt; (2011)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1976&lt;/td&gt;
@@ -565,7 +567,7 @@ href="https://www.imdb.com/title/tt0074851" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;I started watching it but stopped because it was not making any sense and seemed very cheap.&lt;/td&gt;
+&lt;td&gt;I started watching it but stopped because it was not making any sense and looked very cheap.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1977&lt;/td&gt;
@@ -665,7 +667,7 @@ href="https://www.imdb.com/title/tt0079550" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2017-07-22&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;The precursor to &lt;em&gt;Armageddon&lt;/em&gt; (1998). Extremely cheap and lame, and as if that was not enough, also slow and boring.&lt;/td&gt;
+&lt;td&gt;The precursor to &lt;strong&gt;&lt;em&gt;Armageddon&lt;/em&gt; (1998)&lt;/strong&gt;. Extremely cheap and lame, and as if that was not enough, also very slow and boring.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1979&lt;/td&gt;
@@ -715,7 +717,7 @@ href="https://www.imdb.com/title/tt0082096" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;br&gt;2020-07-29&lt;/td&gt;
 &lt;td&gt;💛&lt;/td&gt;
-&lt;td&gt;A classic. A really great movie. Also, a very influential movie. Some minor Truffaut effect. One of my personal favorites.&lt;/td&gt;
+&lt;td&gt;A really great classic masterpiece. Also, a very influential movie. Virtually no Truffaut effect. One of my personal favorites.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1981&lt;/td&gt;
@@ -845,7 +847,7 @@ href="https://www.imdb.com/title/tt0084827" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Spectacular for its day, and influential. Also see &lt;em&gt;Tron: Legacy&lt;/em&gt; (2010)&lt;/td&gt;
+&lt;td&gt;Spectacular for its day, and influential. Also see &lt;strong&gt;&lt;em&gt;Tron: Legacy&lt;/em&gt; (2010)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1983&lt;/td&gt;
@@ -855,7 +857,7 @@ href="https://www.imdb.com/title/tt0085991" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;💛&lt;/td&gt;
-&lt;td&gt;(Nankyoku Monogatari) Excellent.&lt;/td&gt;
+&lt;td&gt;(Nankyoku Monogatari) Excellent. One of my personal favorite movies. Also see &lt;strong&gt;&lt;em&gt;Eight Below&lt;/em&gt; (2006)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1983&lt;/td&gt;
@@ -864,7 +866,7 @@ href="https://www.imdb.com/title/tt0085991" target="_blank"
 href="https://www.imdb.com/title/tt0085333" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;👎&lt;/td&gt;
+&lt;td&gt;🤷&lt;/td&gt;
 &lt;td&gt;I remember I found it cool when I was 15.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -925,7 +927,7 @@ href="https://www.imdb.com/title/tt0086837" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2017-07-16&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;(Space Odyssey) Nice, but probably boring for most audiences. Certainly not as awe-inspiring, nor as influential, as the 1968 movie, but not bad either.&lt;/td&gt;
+&lt;td&gt;Nice. Certainly not as awe-inspiring, nor as influential, as the 1968 movie, but not bad either. Also see &lt;strong&gt;&lt;em&gt;2001: Space Odyssey&lt;/em&gt; (1968)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1984&lt;/td&gt;
@@ -945,7 +947,7 @@ href="https://www.imdb.com/title/tt0087544" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;(Kaze no tani no Naushika) An awesome, breathtaking phantasmagoria. (Beautiful art inspired by Mœbius, some concepts borrowed from Dune, Ecological theme, Japanese folklore, what else can you ask for?)&lt;/td&gt;
+&lt;td&gt;(Kaze no tani no Naushika) An awesome, breathtaking phantasmagoria. Beautiful art inspired by Mœbius, some concepts borrowed from Dune, Ecological theme, Japanese folklore, what else can you ask for?&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1984&lt;/td&gt;
@@ -954,7 +956,7 @@ href="https://www.imdb.com/title/tt0087544" target="_blank"
 href="https://www.imdb.com/title/tt0088194" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;👎&lt;/td&gt;
+&lt;td&gt;🤷&lt;/td&gt;
 &lt;td&gt;Back then I was impressed by it. Now I would probably find it cheesy to the point of nausea.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -965,7 +967,7 @@ href="https://www.imdb.com/title/tt0086993" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;Also see &lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1935) and &lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1961)&lt;/td&gt;
+&lt;td&gt;Also see &lt;strong&gt;&lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1935)&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;Mutiny on the Bounty&lt;/em&gt; (1961)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1984&lt;/td&gt;
@@ -975,7 +977,7 @@ href="https://www.imdb.com/title/tt0087553" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;I may have actually watched it, but I am not sure.&lt;/td&gt;
+&lt;td&gt;I may have watched it, but I am not sure.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1984&lt;/td&gt;
@@ -1055,7 +1057,7 @@ href="https://www.imdb.com/title/tt0091064" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;I watched the trailer back in 1986 and decided that a) there is no way in hell that I am watching this, b) what the hell is wrong with the world making such films, and c) what the hell is wrong with the world going and watching such films. I still stand by that conviction. &lt;em&gt;The Human Fly&lt;/em&gt; by the Cramps is a good song though.&lt;/td&gt;
+&lt;td&gt;I watched the trailer back in 1986 and decided that a) there is no way in hell that I am watching this, b) what the hell is wrong with the world making such films, and c) what the hell is wrong with the world going and watching such films. I still stand by that conviction. &lt;em&gt;The Human Fly&lt;/em&gt; by the Cramps is a good song, though.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1986&lt;/td&gt;
@@ -1064,7 +1066,7 @@ href="https://www.imdb.com/title/tt0091064" target="_blank"
 href="https://www.imdb.com/title/tt0091530" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;👍&lt;/td&gt;
+&lt;td&gt;🎦&lt;/td&gt;
 &lt;td&gt;I do not remember much anymore, but I think I found it very decent.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1105,7 +1107,7 @@ href="https://www.imdb.com/title/tt0093058" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Quite good, but very high Truffaut effect.&lt;/td&gt;
+&lt;td&gt;Quite good, but unlike previous Kubrick war movies, this one did have some Truffaut effect.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1987&lt;/td&gt;
@@ -1115,7 +1117,7 @@ href="https://www.imdb.com/title/tt0093409" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
-&lt;td&gt;Entertaining, but very high Truffaut effect.&lt;/td&gt;
+&lt;td&gt;Entertaining ultra-violence.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1987&lt;/td&gt;
@@ -1255,7 +1257,7 @@ href="https://www.imdb.com/title/tt0096754" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Awesome. Captivating. Frightening. Uplifting. Insane special effects for 1989.&lt;/td&gt;
+&lt;td&gt;Awesome. Captivating. Frightening. Uplifting. Insanely good special effects for 1989.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1989&lt;/td&gt;
@@ -1265,7 +1267,7 @@ href="https://www.imdb.com/title/tt0094764" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2019-07-25&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Powerful. Looked quite low budget. I suppose the Hunger Games were inspired by it.&lt;/td&gt;
+&lt;td&gt;Powerful for its very low budget. I suppose &lt;strong&gt;&lt;em&gt;The Hunger Games&lt;/em&gt; (2014)&lt;/strong&gt; were inspired by it.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1989&lt;/td&gt;
@@ -1284,8 +1286,8 @@ href="https://www.imdb.com/title/tt0098635" target="_blank"
 href="https://www.imdb.com/title/tt0099348" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;I do not remember much anymore, but I think it was a very good movie.&lt;/td&gt;
+&lt;td&gt;🎦&lt;/td&gt;
+&lt;td&gt;I do not remember much anymore, but I think it was a good movie.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1990&lt;/td&gt;
@@ -1315,7 +1317,7 @@ href="https://www.imdb.com/title/tt0100288" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;See also &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1958) and &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1999)&lt;/td&gt;
+&lt;td&gt;See also &lt;strong&gt;&lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1958)&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1999)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1990&lt;/td&gt;
@@ -1364,8 +1366,8 @@ href="https://www.imdb.com/title/tt0102138" target="_blank"
 href="https://www.imdb.com/title/tt0102798" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;👍&lt;/td&gt;
+&lt;td&gt;Entertaining.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1991&lt;/td&gt;
@@ -1384,7 +1386,7 @@ href="https://www.imdb.com/title/tt0103064" target="_blank"
 href="https://www.imdb.com/title/tt0103594" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;🎦&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1395,7 +1397,7 @@ href="https://www.imdb.com/title/tt0103772" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
-&lt;td&gt;Well made as far as crime/thriller/erotic drama movies go, although it is hard to claim that its main selling point was not Sharon Stone's pussy. I suppose kudos go to the producer, who managed to put this movie in theaters despite censorship laws and regulations.&lt;/td&gt;
+&lt;td&gt;Well made as far as crime/thriller/erotic drama movies go, although it is hard to claim that its main selling point was not Sharon Stone's pussy. I suppose kudos go to the producer, who managed to put this movie in theaters despite censorship.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1992&lt;/td&gt;
@@ -1415,7 +1417,7 @@ href="https://www.imdb.com/title/tt0104691" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Quite good, if you can avoid laughing at the &amp;quot;Last Mohican&amp;quot; being a westerner.&lt;/td&gt;
+&lt;td&gt;Quite good, if you can avoid laughing at the &amp;quot;Last Mohican&amp;quot; being Caucasian.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1992&lt;/td&gt;
@@ -1575,7 +1577,7 @@ href="https://www.imdb.com/title/tt0113492" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Also see &lt;strong&gt;&lt;em&gt;Dredd&lt;/em&gt; (2012)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1995&lt;/td&gt;
@@ -1685,7 +1687,7 @@ href="https://www.imdb.com/title/tt0118528" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;A remake of the classic 1957 original. Excellent. This, in turn, became a classic.&lt;/td&gt;
+&lt;td&gt;A remake of the classic 1957 original. Excellent. This, in turn, became a classic. See &lt;strong&gt;&lt;em&gt;12 Angry Men&lt;/em&gt; (1957)&lt;/strong&gt;.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -1705,7 +1707,7 @@ href="https://www.imdb.com/title/tt0118884" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Uhm, quite good. Most deviations from Carl Sagan's book were not welcome, (for example the deranged saboteur,) although the final deviation in the way the movie ends may have actually been a good idea. (Sorry Carl, but that monkey business with π was just lame, mkay?)&lt;/td&gt;
+&lt;td&gt;Uhm, quite good. Most deviations from Carl Sagan's book were not welcome, (for example the deranged saboteur,) although the deviation from the way the book ends may have actually been a good idea. (Sorry Carl, but the π monkey business was just lame, okay?)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -1745,7 +1747,7 @@ href="https://www.imdb.com/title/tt0119177" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
-&lt;td&gt;Did not see much point in it.&lt;/td&gt;
+&lt;td&gt;Did not see any point in it. I am not sure I even watched it to the end.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -1776,6 +1778,16 @@ href="https://www.imdb.com/title/tt0119698" target="_blank"
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
 &lt;td&gt;(Mononoke-hime)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1997&lt;/td&gt;
+&lt;td&gt;Seven Years in Tibet&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0120102" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;td&gt;⭐&lt;/td&gt;
+&lt;td&gt;Excellent.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1997&lt;/td&gt;
@@ -1935,7 +1947,7 @@ href="https://www.imdb.com/title/tt0169547" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
-&lt;td&gt;Not a bad movie, but I completely fail to understand all the hype about it.&lt;/td&gt;
+&lt;td&gt;Not a bad movie, but I do not understand all the hype about it.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1999&lt;/td&gt;
@@ -1946,6 +1958,16 @@ href="https://www.imdb.com/title/tt0204824" target="_blank"
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
 &lt;td&gt;I think I have watched it, but trailer is too short to be able to tell for sure.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1999&lt;/td&gt;
+&lt;td&gt;Himalaya&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0210727" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;td&gt;👍&lt;/td&gt;
+&lt;td&gt;Quite good. (Probably not for the average Hollywood movie-watching audience.)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1999&lt;/td&gt;
@@ -1995,7 +2017,7 @@ href="https://www.imdb.com/title/tt0207639" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;See also &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1958) and &lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1990)&lt;/td&gt;
+&lt;td&gt;See also &lt;strong&gt;&lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1958)&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;The Old Man and the Sea&lt;/em&gt; (1990)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;1999&lt;/td&gt;
@@ -2115,7 +2137,7 @@ href="https://www.imdb.com/title/tt0141926" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;Well done as a movie, but repulsive in principle because it is a Hollywood attempt to re-tell the story of capturing the Enigma machine, but by Americans instead of British. This kind of historical lie is immoral.&lt;/td&gt;
+&lt;td&gt;Technically well done, but repulsive in principle because it is a Hollywood attempt to re-tell the story of capturing the Enigma machine, but as if it was done by Americans instead of British. This kind of historical lie is immoral.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
@@ -2125,7 +2147,7 @@ href="https://www.imdb.com/title/tt0212720" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
-&lt;td&gt;Some very nice visuals, but other than that, boring and pointless.&lt;/td&gt;
+&lt;td&gt;Some very nice visuals, but other than that, slow, boring, and pointless.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2001&lt;/td&gt;
@@ -2257,7 +2279,7 @@ href="https://www.imdb.com/title/tt0238380" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;The scenario was so cheap that I quit watching before the middle.&lt;/td&gt;
+&lt;td&gt;The scenario and the photography were so cheap that I quit watching before the middle.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2002&lt;/td&gt;
@@ -2277,7 +2299,7 @@ href="https://www.imdb.com/title/tt0217505" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;If there was a point in this, I must have completely missed it. Was utterly uninteresting, I quit watching before the middle.&lt;/td&gt;
+&lt;td&gt;If there was a point in any of this, I completely missed it. Utterly uninteresting, quit watching before the middle.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2002&lt;/td&gt;
@@ -2447,7 +2469,7 @@ href="https://www.imdb.com/title/tt0311113" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Awesome, extremely realistic, and known for very accurately depicting sea-faring in that era.&lt;/td&gt;
+&lt;td&gt;Awesome, and very realistic.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2003&lt;/td&gt;
@@ -2457,7 +2479,7 @@ href="https://www.imdb.com/title/tt0325710" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Quite good, if you can avoid laughing at the &amp;quot;Last Samurai&amp;quot; being a westerner.&lt;/td&gt;
+&lt;td&gt;Quite good, if you can avoid laughing at the &amp;quot;Last Samurai&amp;quot; being Caucasian.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2003&lt;/td&gt;
@@ -2517,7 +2539,7 @@ href="https://www.imdb.com/title/tt0395169" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Devastating, harrowing, scarring, and worst of all, historically accurate.&lt;/td&gt;
+&lt;td&gt;Devastating, harrowing, scarring, and worst of all, based on historically accurate events.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
@@ -2527,7 +2549,7 @@ href="https://www.imdb.com/title/tt0343818" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;I do not remember what my verdict was.&lt;/td&gt;
+&lt;td&gt;I do not remember what my verdict was. Probably not very good.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
@@ -2548,6 +2570,16 @@ href="https://www.imdb.com/title/tt0362269" target="_blank"
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2004&lt;/td&gt;
+&lt;td&gt;Sky Captain and the World of Tomorrow&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0346156" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;td&gt;🎦&lt;/td&gt;
+&lt;td&gt;I do not remember whether I have watched it or not.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2004&lt;/td&gt;
@@ -2607,7 +2639,7 @@ href="https://www.imdb.com/title/tt0332452" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Quite good, except that Brad Pit was unsuitable to play Achilles; him and Patroclus looked more like California surfer boys rather than ancient Greek warriors. Also, the effeminate gayness was almost certainly quite wrong. Also, Helen could have looked more Greek and less Germanic. Other than that, it was quite a fascinating movie.&lt;/td&gt;
+&lt;td&gt;Quite good, except that Brad Pit was unsuitable to play Achilles; him and Patroclus looked more like California surfer boys rather than ancient Greek warriors. Also, the effeminate gayness was quite wrong. Also, Helen could have looked more Greek and less Germanic. The choice to not show any of the gods of the Homeric original was okay in my book. Other than that, it was true to the original, quite well made, and fascinating.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2005&lt;/td&gt;
@@ -2667,7 +2699,7 @@ href="https://www.imdb.com/title/tt0379786" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;(Actually, I think I may have watched it, but I do not remember anything, so I might as well watch it again.)&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2005&lt;/td&gt;
@@ -2697,7 +2729,17 @@ href="https://www.imdb.com/title/tt0399201" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Obviously inspired by &lt;em&gt;Logan's Run&lt;/em&gt; (1978) but reimagined and executed using modern movie-making technology. Spectacular action scenes, violence, destruction, etc. Entertaining, but very high Truffaut effect. Strangely, the actors in the poster do not look like Ewan McGregor and Scarlett Johansson, but they are.&lt;/td&gt;
+&lt;td&gt;Inspired by &lt;strong&gt;&lt;em&gt;Logan's Run&lt;/em&gt; (1978)&lt;/strong&gt; but reimagined and executed using modern movie-making technology. Spectacular action scenes, violence, destruction, etc. Very entertaining. Strangely, the actors in the poster do not look like Ewan McGregor and Scarlett Johansson, but that is who they are.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2005&lt;/td&gt;
+&lt;td&gt;V for Vendetta&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0434409" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;td&gt;👍&lt;/td&gt;
+&lt;td&gt;Interesting, entertaining. A bit cheesy.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2005&lt;/td&gt;
@@ -2707,7 +2749,7 @@ href="https://www.imdb.com/title/tt0407304" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;I do not remember anymore what I thought of that movie, but I probably found it very good. Also see &lt;em&gt;War of the Worlds&lt;/em&gt; (1953)&lt;/td&gt;
+&lt;td&gt;I do not remember anymore what I thought of that movie. I think I found it good. Also see &lt;strong&gt;&lt;em&gt;War of the Worlds&lt;/em&gt; (1953)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -2717,7 +2759,7 @@ href="https://www.imdb.com/title/tt0416449" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Very good, and true to Frank Miller's original comic. A few small issues with it, for example the unnecessary vilification of the Persians, and of Xerxes in particular.&lt;/td&gt;
+&lt;td&gt;Very good, and true to Frank Miller's original comic. A few small issues with the original, for example the unnecessary vilification of the Persians, and of Xerxes in particular.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -2727,7 +2769,7 @@ href="https://www.imdb.com/title/tt0405296" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;The artistic choice was too weird and difficult to get accustomed to. The movie did not seem to be getting anywhere fast. I quit watching it.&lt;/td&gt;
+&lt;td&gt;The artistic choice was too weird and difficult to get accustomed to. The movie did not seem to be getting anywhere fast. I lost interest and quit watching.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -2747,7 +2789,17 @@ href="https://www.imdb.com/title/tt0450259" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;A very good movie, and also an awareness-raising movie. Ironically, the movie came out just shortly after I bought a diamond ring due to getting married.&lt;/td&gt;
+&lt;td&gt;A very good movie, and also an awareness-raising movie. Ironically, the movie came out just shortly after I bought a diamond wedding ring.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2006&lt;/td&gt;
+&lt;td&gt;Borat&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0443453" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;td&gt;👎&lt;/td&gt;
+&lt;td&gt;I regret having watched it.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -2757,7 +2809,7 @@ href="https://www.imdb.com/title/tt0206634" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Quite an impressive movie, if we disregard the impossible basic premise. Allegory? Bullshit.&lt;/td&gt;
+&lt;td&gt;Quite an impressive movie, if we disregard the impossible basic premise.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -2767,7 +2819,7 @@ href="https://www.imdb.com/title/tt0397313" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;A Hollywood attempt to remake Antarctica (1983) but this time as a children's movie, with American protagonists and an all-American plot. Of course the production and the effects are better than the 1983 original, but the deviation from the original is immoral.&lt;/td&gt;
+&lt;td&gt;A Hollywood attempt to remake &lt;strong&gt;&lt;em&gt;Antarctica&lt;/em&gt; (1983)&lt;/strong&gt; but this time as a children's movie, with American protagonists and an all-American plot. Of course the production and the effects are better than the original, but the copying of the original is plagiarism and the deviation from the original is immoral.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -2777,7 +2829,7 @@ href="https://www.imdb.com/title/tt0387808" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Very, very good. Frighteningly good.&lt;/td&gt;
+&lt;td&gt;Very good. Frighteningly good.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -2788,6 +2840,26 @@ href="https://www.imdb.com/title/tt0409182" target="_blank"
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
 &lt;td&gt;Okay, I suppose.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2006&lt;/td&gt;
+&lt;td&gt;The Devil Wears Prada&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0458352" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;td&gt;🎦&lt;/td&gt;
+&lt;td&gt;I have watched it, but I do not remember what I thought of it.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2006&lt;/td&gt;
+&lt;td&gt;The Last King of Scotland&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt0455590" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;(?)&lt;/td&gt;
+&lt;td&gt;🎦&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2006&lt;/td&gt;
@@ -2856,8 +2928,8 @@ href="https://www.imdb.com/title/tt0440963" target="_blank"
 href="https://www.imdb.com/title/tt0756683" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
-&lt;td&gt;🎦&lt;/td&gt;
-&lt;td&gt;I have watched it, but I do not remember what I thought of it, so I guess I should watch it again.&lt;/td&gt;
+&lt;td&gt;👍&lt;/td&gt;
+&lt;td&gt;Quite good. It requires some patience. I think it is a theatrical play.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2008&lt;/td&gt;
@@ -2876,8 +2948,8 @@ href="https://www.imdb.com/title/tt0371746" target="_blank"
 href="https://www.imdb.com/title/tt0814314" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Good. The mystery keeps piling up, but it is manageable. In the end, it is uplifting.&lt;/td&gt;
+&lt;td&gt;👍&lt;/td&gt;
+&lt;td&gt;Decent. The mystery keeps piling up, but it is manageable. You have to ignore several unrealistic premises. In the end, it is uplifting.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2008&lt;/td&gt;
@@ -2887,7 +2959,7 @@ href="https://www.imdb.com/title/tt0936501" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Entertaining, if ultra-violence is your kind of entertainment. (You can tell a scenario is cheap when it starts with a convenient simple excuse for an ensuing one and a half hour of killing people.)&lt;/td&gt;
+&lt;td&gt;Entertaining. (If you find ultra-violence entertaining.) Cheap scenario.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2008&lt;/td&gt;
@@ -2946,7 +3018,7 @@ href="https://www.imdb.com/title/tt1186830" target="_blank"
 href="https://www.imdb.com/title/tt0499549" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;⭐&lt;/td&gt;
+&lt;td&gt;👍&lt;/td&gt;
 &lt;td&gt;Spectacular; rich in techno lust; simplistic political ideology; runaway sentimentalism; new age spiritual mumbo jumbo; and of course, ultra violence. Extremely high Truffaut effect.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -3036,8 +3108,8 @@ href="https://www.imdb.com/title/tt0898367" target="_blank"
 href="https://www.imdb.com/title/tt1542344" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;A good movie.&lt;/td&gt;
+&lt;td&gt;⭐&lt;/td&gt;
+&lt;td&gt;Unconventional. Very good, especially considering that it is about a real event.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2010&lt;/td&gt;
@@ -3107,7 +3179,7 @@ href="https://www.imdb.com/title/tt1104001" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;A movie with no reason to exist.&lt;/td&gt;
+&lt;td&gt;A movie with no reason to exist. Also see &lt;strong&gt;&lt;em&gt;Tron&lt;/em&gt; (1982)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2011&lt;/td&gt;
@@ -3117,7 +3189,7 @@ href="https://www.imdb.com/title/tt1549572" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;I was refusing to watch it due to the unbelievably lame premise. When I finally decided to give it a try, I realized that my reservations were entirely correct.&lt;/td&gt;
+&lt;td&gt;I was refusing to watch it due to the unbelievably lame premise. When I finally decided to give it a try, I realized that my reservations had been entirely correct.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2011&lt;/td&gt;
@@ -3146,8 +3218,8 @@ href="https://www.imdb.com/title/tt0780504" target="_blank"
 href="https://www.imdb.com/title/tt1637688" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
-&lt;td&gt;⭐&lt;/td&gt;
-&lt;td&gt;Another movie inspired by &lt;em&gt;Logan's Run&lt;/em&gt; (1976). Decent, entertaining.&lt;/td&gt;
+&lt;td&gt;👍&lt;/td&gt;
+&lt;td&gt;Another movie inspired by &lt;strong&gt;&lt;em&gt;Logan's Run&lt;/em&gt; (1976)&lt;/strong&gt;. Decent, entertaining.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2011&lt;/td&gt;
@@ -3187,7 +3259,7 @@ href="https://www.imdb.com/title/tt1601913" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Entertaining, if gore is your kind of entertainment. I have an issue with the scenario: why did they ever leave the plane wreck?&lt;/td&gt;
+&lt;td&gt;Entertaining. I have an issue with the scenario: why did they ever leave the plane wreck?&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
@@ -3227,7 +3299,7 @@ href="https://www.imdb.com/title/tt1343727" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
-&lt;td&gt;Entertaining, but barely. Also: it was disappointing to see that the gear was somewhat of a downgrade both from the original comic book and from the 1995 movie. Even Carl Urban's pointy chin was a downgrade from Sylvester Stallone's square chin.&lt;/td&gt;
+&lt;td&gt;Entertaining, but barely. Also: it was disappointing to see that the gear was somewhat of a downgrade both from the original comic book and from the 1995 movie. Even Carl Urban's pointy chin was a downgrade from Sylvester Stallone's square chin. See &lt;strong&gt;&lt;em&gt;Judge Dredd&lt;/em&gt; (1995)&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2012&lt;/td&gt;
@@ -3527,7 +3599,7 @@ href="https://www.imdb.com/title/tt1411250" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;(?)&lt;/td&gt;
 &lt;td&gt;👎&lt;/td&gt;
-&lt;td&gt;Starts entertaining, and then goes completely over the top, to the point where it is not entertaining anymore. I think I quit watching it in the middle.&lt;/td&gt;
+&lt;td&gt;Starts entertaining, and then goes completely over the top, to the point where it is not entertaining anymore.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2013&lt;/td&gt;
@@ -4515,7 +4587,7 @@ href="https://www.imdb.com/title/tt4425200" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2020-01-12&lt;/td&gt;
 &lt;td&gt;👍&lt;/td&gt;
-&lt;td&gt;Entertaining.&lt;/td&gt;
+&lt;td&gt;Entertaining Ultra-violence.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2017&lt;/td&gt;
@@ -5083,13 +5155,23 @@ href="https://www.imdb.com/title/tt1757678" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;2025-12-25&lt;/td&gt;
 &lt;td&gt;🤷&lt;/td&gt;
-&lt;td&gt;Absolutely spectacular New Age mumbo jumbo mixed with ultraviolence, mixed with runaway sentiment. I do not understand who this movie is for: is it for the general population of the western world? Then the general population of the western world is schizophrenic.&lt;/td&gt;
+&lt;td&gt;Absolutely spectacular New Age mumbo jumbo mixed with ultraviolence, mixed with runaway sentiment. I do not understand who this movie is for: is it for the general population? Then the general population is schizophrenic.&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;2026&lt;/td&gt;
 &lt;td&gt;Nuremberg&lt;/td&gt;
 &lt;td&gt;&lt;a class="external"
 href="https://www.imdb.com/title/tt29567915" target="_blank"
+&gt;IMDb&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Not yet.&lt;/td&gt;
+&lt;td&gt;🎦&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026&lt;/td&gt;
+&lt;td&gt;The Odyssey&lt;/td&gt;
+&lt;td&gt;&lt;a class="external"
+href="https://www.imdb.com/title/tt33764258" target="_blank"
 &gt;IMDb&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;Not yet.&lt;/td&gt;
 &lt;td&gt;🎦&lt;/td&gt;
