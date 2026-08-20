@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 18 Aug 2026 07:32:40 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 21 Aug 2026 00:22:21 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>Standardspeak</title><link>https://blog.michael.gr/post/2026-08-21-standardspeak/</link><pubDate>Fri, 21 Aug 2026 00:12:47 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-21-standardspeak/</guid><description>&lt;p&gt;Behold, my latest linguistic creation:&lt;/p&gt;
+&lt;h2 id="standardspeak-ˈstændɚdspiːk"&gt;&lt;strong&gt;stan·dard·speak&lt;/strong&gt; /ˈstæn.dɚd.spiːk/
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;noun&lt;/em&gt; &lt;code&gt;[uncountable]&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;(disapproving, linguistic slang)&lt;/strong&gt; The formal, highly stylized, and wooden jargon characteristic of technical standards, regulatory frameworks, and specifications. It is marked by rigid modal verbs (&lt;em&gt;shall&lt;/em&gt;, &lt;em&gt;should&lt;/em&gt;, &lt;em&gt;may&lt;/em&gt;), passive voice, excessive precision, and legalistic phrasing designed to minimize ambiguity at the expense of readability.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;quot;The product requirements were written in pure standardspeak, requiring three technical reviews just to decipher what the system was actually supposed to do.&amp;quot;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="usage-note"&gt;Usage Note
+&lt;/h3&gt;&lt;p&gt;Similar to &lt;em&gt;bureaucratese&lt;/em&gt; or &lt;em&gt;corporatese&lt;/em&gt;, &lt;strong&gt;standardspeak&lt;/strong&gt; often relies on normative terminology (such as RFC 2119 keyword conventions) to dictate compliance rather than communicate intent.&lt;/p&gt;
+&lt;h3 id="etymology"&gt;Etymology
+&lt;/h3&gt;&lt;p&gt;Blend of &lt;strong&gt;standard&lt;/strong&gt; + &lt;strong&gt;-speak&lt;/strong&gt; (suffix forming names of specialized, artificial, or pedantic language styles, modeled on Orwellian &lt;em&gt;Newspeak&lt;/em&gt;). First attested in mid-2020s at &lt;a
+href="https://blog.michael.gr/"
+&gt;blog.michael.gr&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id="related-terms"&gt;Related Terms
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;bureaucratese&lt;/strong&gt; (&lt;em&gt;noun&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;legalese&lt;/strong&gt; (&lt;em&gt;noun&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;wooden language&lt;/strong&gt; (&lt;em&gt;noun&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -14514,14 +14534,14 @@ href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
 &lt;/li&gt;
 &lt;li&gt;The microservice takes a backup of itself.
 &lt;ul&gt;
-&lt;li&gt;The microservice serializes the entirety of its state into a binary blob&lt;/li&gt;
+&lt;li&gt;The microservice serializes the entirety of its state in binary format in memory, creating a blob.&lt;/li&gt;
 &lt;li&gt;The blob is written into a persistent key-value store, using the session id as the key.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;The microservice remains running, doing two things:
 &lt;ul&gt;
-&lt;li&gt;Waits for the next request on the same session, and repeats the steps to process it.&lt;/li&gt;
-&lt;li&gt;Waits for the next event from the messaging backbone, and if pertinent, modifies its internal state and sends server-initiated client updates if necessary.&lt;/li&gt;
+&lt;li&gt;Waiting for the next request on the same session.&lt;/li&gt;
+&lt;li&gt;Waiting for the next event from the messaging backbone.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -14529,7 +14549,7 @@ href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
 &lt;p&gt;Continuous persistence of stateful microservices is not expected to pose a performance problem, because:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Serialization to and from a binary format performs much better than general-purpose serialization into a textual markup like JSON or XML.&lt;/li&gt;
-&lt;li&gt;The size of the blob is expected to be relatively small. (Of the order of kilobytes.)&lt;/li&gt;
+&lt;li&gt;The amount of information serialized is of the order of the amount of information that fits within a page; so, the size of the blob is expected to be relatively small. (Of the order of kilobytes.)&lt;/li&gt;
 &lt;li&gt;Key-value stores tend to have very high performance characteristics.&lt;/li&gt;
 &lt;li&gt;The backup store can be physically separate from the main data store, (even on a different network,) thus avoiding contention.&lt;/li&gt;
 &lt;li&gt;The act of serializing an in-memory data structure into a single in-memory blob and then sending that blob as one piece into persistent storage is bound to perform far better than a series of operations to update a structured data store. (For one thing, there are no index updates.)&lt;/li&gt;
@@ -14559,7 +14579,7 @@ href="https://en.wikipedia.org/wiki/Chaos_engineering" target="_blank"
 &lt;/ul&gt;
 &lt;p&gt;Between the moment in time that a certain microservice instance prematurely ceases to exist, and the moment in time that a new incarnation of that microservice is ready for showtime on a freshly assigned server, some events from the messaging backbone may be lost. To avoid inconsistencies in the state of the microservice, we must utilize a messaging backbone which is capable of replaying events.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;For example, if we use Kafka, then the stateful microservice can make sure to include among its persistent state what is known in Kafka terminology as the &amp;quot;consumer offset&amp;quot;. Thus, when the microservice gets reconstructed, it asks Kafka for events starting at that offset, so Kafka replays any missed events before it starts sending new ones. Thus, we ensure that the state of the microservice is always up to date, even in the case of termination and reconstruction.&lt;/li&gt;
+&lt;li&gt;For example, if we use Kafka, the stateful microservice can make sure to include among its persistent state what is known in Kafka terminology as the &amp;quot;consumer offset&amp;quot;. Thus, when the microservice gets reconstructed, it asks Kafka for events starting at that offset, so Kafka replays any missed events before it starts sending new ones. Thus, we ensure that the state of the microservice is always up to date, even after termination and reconstruction.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Thus, stateful microservices can achieve not only scalability but also resilience.&lt;/p&gt;
 &lt;hr&gt;

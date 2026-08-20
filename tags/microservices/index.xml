@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microservices on Michael's Blog</title><link>https://blog.michael.gr/tags/microservices/</link><description>Recent content in Microservices on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 14 Aug 2026 13:51:12 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/microservices/index.xml" rel="self" type="application/rss+xml"/><item><title>So, what is a Microservice, anyway?</title><link>https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/</link><pubDate>Thu, 14 Oct 2021 17:39:23 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/media/microservices.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microservices on Michael's Blog</title><link>https://blog.michael.gr/tags/microservices/</link><description>Recent content in Microservices on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 18 Aug 2026 14:39:13 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/microservices/index.xml" rel="self" type="application/rss+xml"/><item><title>So, what is a Microservice, anyway?</title><link>https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/</link><pubDate>Thu, 14 Oct 2021 17:39:23 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/media/microservices.svg"
 loading="lazy"
 &gt;
 This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly &lt;a
@@ -92,14 +92,14 @@ href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
 &lt;/li&gt;
 &lt;li&gt;The microservice takes a backup of itself.
 &lt;ul&gt;
-&lt;li&gt;The microservice serializes the entirety of its state into a binary blob&lt;/li&gt;
+&lt;li&gt;The microservice serializes the entirety of its state in binary format in memory, creating a blob.&lt;/li&gt;
 &lt;li&gt;The blob is written into a persistent key-value store, using the session id as the key.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;The microservice remains running, doing two things:
 &lt;ul&gt;
-&lt;li&gt;Waits for the next request on the same session, and repeats the steps to process it.&lt;/li&gt;
-&lt;li&gt;Waits for the next event from the messaging backbone, and if pertinent, modifies its internal state and sends server-initiated client updates if necessary.&lt;/li&gt;
+&lt;li&gt;Waiting for the next request on the same session.&lt;/li&gt;
+&lt;li&gt;Waiting for the next event from the messaging backbone.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -107,7 +107,7 @@ href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
 &lt;p&gt;Continuous persistence of stateful microservices is not expected to pose a performance problem, because:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Serialization to and from a binary format performs much better than general-purpose serialization into a textual markup like JSON or XML.&lt;/li&gt;
-&lt;li&gt;The size of the blob is expected to be relatively small. (Of the order of kilobytes.)&lt;/li&gt;
+&lt;li&gt;The amount of information serialized is of the order of the amount of information that fits within a page; so, the size of the blob is expected to be relatively small. (Of the order of kilobytes.)&lt;/li&gt;
 &lt;li&gt;Key-value stores tend to have very high performance characteristics.&lt;/li&gt;
 &lt;li&gt;The backup store can be physically separate from the main data store, (even on a different network,) thus avoiding contention.&lt;/li&gt;
 &lt;li&gt;The act of serializing an in-memory data structure into a single in-memory blob and then sending that blob as one piece into persistent storage is bound to perform far better than a series of operations to update a structured data store. (For one thing, there are no index updates.)&lt;/li&gt;
@@ -137,7 +137,7 @@ href="https://en.wikipedia.org/wiki/Chaos_engineering" target="_blank"
 &lt;/ul&gt;
 &lt;p&gt;Between the moment in time that a certain microservice instance prematurely ceases to exist, and the moment in time that a new incarnation of that microservice is ready for showtime on a freshly assigned server, some events from the messaging backbone may be lost. To avoid inconsistencies in the state of the microservice, we must utilize a messaging backbone which is capable of replaying events.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;For example, if we use Kafka, then the stateful microservice can make sure to include among its persistent state what is known in Kafka terminology as the &amp;quot;consumer offset&amp;quot;. Thus, when the microservice gets reconstructed, it asks Kafka for events starting at that offset, so Kafka replays any missed events before it starts sending new ones. Thus, we ensure that the state of the microservice is always up to date, even in the case of termination and reconstruction.&lt;/li&gt;
+&lt;li&gt;For example, if we use Kafka, the stateful microservice can make sure to include among its persistent state what is known in Kafka terminology as the &amp;quot;consumer offset&amp;quot;. Thus, when the microservice gets reconstructed, it asks Kafka for events starting at that offset, so Kafka replays any missed events before it starts sending new ones. Thus, we ensure that the state of the microservice is always up to date, even after termination and reconstruction.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Thus, stateful microservices can achieve not only scalability but also resilience.&lt;/p&gt;
 &lt;hr&gt;
