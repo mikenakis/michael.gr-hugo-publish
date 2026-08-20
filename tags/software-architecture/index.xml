@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Architecture on Michael's Blog</title><link>https://blog.michael.gr/tags/software-architecture/</link><description>Recent content in Software Architecture on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 18 Aug 2026 14:39:13 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Simon Brown at Miro, Amsterdam</title><link>https://blog.michael.gr/post/2026-07-01-simon-brown-c4/</link><pubDate>Thu, 02 Jul 2026 08:23:44 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-01-simon-brown-c4/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-01-simon-brown-c4/media/PXL_20260701_171017403_1620.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software Architecture on Michael's Blog</title><link>https://blog.michael.gr/tags/software-architecture/</link><description>Recent content in Software Architecture on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 21 Aug 2026 00:35:39 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/software-architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Simon Brown at Miro, Amsterdam</title><link>https://blog.michael.gr/post/2026-07-01-simon-brown-c4/</link><pubDate>Thu, 02 Jul 2026 08:23:44 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-01-simon-brown-c4/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-01-simon-brown-c4/media/PXL_20260701_171017403_1620.jpg"
 width="1620"
 height="1001"
 loading="lazy"
@@ -2570,7 +2570,9 @@ href="https://en.wikipedia.org/wiki/Component_diagram" target="_blank"
 &gt;&lt;em&gt;&lt;strong&gt;UML Component Diagram&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;, but there exist no tools that I am aware of that are capable of either guiding the composition of such a diagram from existing software components, or materializing such a diagram into a running system. Furthermore, if any such tools were to be introduced today, they are unlikely to be well-received, because by now people have developed a distaste towards UML and anything associated with it.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;UML literature follows a &lt;em&gt;&lt;strong&gt;standardspeak&lt;/strong&gt;&lt;/em&gt;&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt; writing style which is not just incomprehensible, but actually &lt;em&gt;&lt;strong&gt;annoyingly incomprehensible&lt;/strong&gt;&lt;/em&gt;. For details, keep reading.&lt;/p&gt;
+&lt;p&gt;UML literature follows a &lt;a
+href="https://blog.michael.gr/post/2026-08-21-standardspeak/"
+&gt;standardspeak&lt;/a&gt; writing style which is not just incomprehensible, but actually &lt;em&gt;&lt;strong&gt;annoyingly incomprehensible&lt;/strong&gt;&lt;/em&gt;. For details, keep reading.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;So, I tried looking up the term &lt;em&gt;&lt;strong&gt;collaboration&lt;/strong&gt;&lt;/em&gt; in UML literature, and here is what I found in &lt;a class="external"
@@ -2617,17 +2619,7 @@ data-flex-basis="265px"
 &lt;hr&gt;
 &lt;p&gt;Cover image: The UML logo, by Object Management Group®, Inc. from &lt;a class="external"
 href="https://www.uml.org/" target="_blank"
-&gt;uml.org&lt;/a&gt;; Public Domain.&lt;/p&gt;
-&lt;div class="footnotes" role="doc-endnotes"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn:1"&gt;
-&lt;p&gt;&lt;strong&gt;standardspeak&lt;/strong&gt;: I just coined this term in the fashion of Orwellian &lt;a class="external"
-href="https://en.wikipedia.org/wiki/Newspeak" target="_blank"
-&gt;Newspeak&lt;/a&gt;.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;</description></item><item><title>Incremental Integration Testing</title><link>https://blog.michael.gr/post/2022-10-incremental-integration-testing/</link><pubDate>Tue, 14 Dec 2021 09:07:09 +0000</pubDate><guid>https://blog.michael.gr/post/2022-10-incremental-integration-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-10-incremental-integration-testing/media/incremental_integration_testing.svg"
+&gt;uml.org&lt;/a&gt;; Public Domain.&lt;/p&gt;</description></item><item><title>Incremental Integration Testing</title><link>https://blog.michael.gr/post/2022-10-incremental-integration-testing/</link><pubDate>Tue, 14 Dec 2021 09:07:09 +0000</pubDate><guid>https://blog.michael.gr/post/2022-10-incremental-integration-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-10-incremental-integration-testing/media/incremental_integration_testing.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
