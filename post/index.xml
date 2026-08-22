@@ -1,6 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 21 Aug 2026 00:35:39 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Standardspeak</title><link>https://blog.michael.gr/post/2026-08-21-standardspeak/</link><pubDate>Fri, 21 Aug 2026 00:12:47 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-21-standardspeak/</guid><description>&lt;p&gt;Behold, my latest linguistic creation:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>posts on Michael's Blog</title><link>https://blog.michael.gr/post/</link><description>Recent content in posts on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sat, 22 Aug 2026 15:04:45 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Standardspeak</title><link>https://blog.michael.gr/post/2026-08-21-standardspeak/</link><pubDate>Fri, 21 Aug 2026 00:12:47 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-21-standardspeak/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-21-standardspeak/media/standardspeak.svg"
+loading="lazy"
+&gt;
+&lt;/p&gt;
+&lt;p&gt;Behold, my latest contribution to the English language:&lt;/p&gt;
 &lt;h2 id="standardspeak-ˈstændɚdspiːk"&gt;&lt;strong&gt;stan·dard·speak&lt;/strong&gt; /ˈstæn.dɚd.spiːk/
-&lt;/h2&gt;&lt;p&gt;&lt;em&gt;noun&lt;/em&gt; &lt;code&gt;[uncountable]&lt;/code&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;&lt;em&gt;noun&lt;/em&gt; [uncountable]&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;(disapproving, linguistic slang)&lt;/strong&gt; The formal, highly stylized, and wooden jargon characteristic of technical standards, regulatory frameworks, and specifications. It is marked by rigid modal verbs (&lt;em&gt;shall&lt;/em&gt;, &lt;em&gt;should&lt;/em&gt;, &lt;em&gt;may&lt;/em&gt;), passive voice, excessive precision, and legalistic phrasing designed to minimize ambiguity at the expense of readability.&lt;/li&gt;
 &lt;/ol&gt;
@@ -8,7 +12,7 @@
 &lt;p&gt;&lt;em&gt;&amp;quot;The product requirements were written in pure standardspeak, requiring three technical reviews just to decipher what the system was actually supposed to do.&amp;quot;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id="usage-note"&gt;Usage Note
-&lt;/h3&gt;&lt;p&gt;Similar to &lt;em&gt;bureaucratese&lt;/em&gt; or &lt;em&gt;corporatese&lt;/em&gt;, &lt;strong&gt;standardspeak&lt;/strong&gt; often relies on normative terminology (such as RFC 2119 keyword conventions) to dictate compliance rather than communicate intent.&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;Similar to &lt;em&gt;bureaucratese&lt;/em&gt; or &lt;em&gt;corporatese&lt;/em&gt;, &lt;strong&gt;standardspeak&lt;/strong&gt; often relies on normative terminology (such as RFC 2119 keyword conventions) to dictate compliance rather than communicate intent. Its alleged purpose is correctness, but in reality it is impossible to understand, so it is impossible to tell whether it is correct or not. Its ultimate goal is to force the reader to go buy the book, which explains the exact same things in language that is actually understandable by humans.&lt;/p&gt;
 &lt;h3 id="etymology"&gt;Etymology
 &lt;/h3&gt;&lt;p&gt;Blend of &lt;strong&gt;standard&lt;/strong&gt; + &lt;strong&gt;-speak&lt;/strong&gt; (suffix forming names of specialized, artificial, or pedantic language styles, modeled on &lt;a class="external"
 href="https://en.wikipedia.org/wiki/George_Orwell" target="_blank"

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1620mm"
+   height="1200mm"
+   viewBox="0 0 1620 1200"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="standardspeak.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#c0c0c0"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#7e7e7e"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.12995318"
+     inkscape:cx="2727.9055"
+     inkscape:cy="2500.9007"
+     inkscape:window-width="1816"
+     inkscape:window-height="1150"
+     inkscape:window-x="85"
+     inkscape:window-y="64"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+<defs>
+</defs>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+	text
+	{
+      font-family: "Open Sans", times;
+	  font-weight:800;
+	}
+</style>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-32.830334,-35.884319)">
+    <rect
+       style="fill:#7f7f7f;fill-opacity:0.01;stroke-width:0.264583;stroke-linecap:round"
+       id="rect1"
+       width="1620"
+       height="1200"
+       x="32.830334"
+       y="35.884319" />
+    <text
+       xml:space="preserve"
+       style="font-size:170.331px;text-anchor:middle;fill:#808080;fill-opacity:0.754026;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       x="839.87781"
+       y="681.08691"
+       id="text1">Standardspeak!</text>
+  </g>
+</svg>
