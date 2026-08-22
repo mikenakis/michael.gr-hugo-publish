@@ -34,15 +34,7 @@
      inkscape:current-layer="layer1" />
 <defs>
 </defs>
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-	text
-	{
-      font-family: "Open Sans", times;
-	  font-weight:800;
-	}
-</style>
-  <g
+ <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
@@ -56,9 +48,9 @@
        y="35.884319" />
     <text
        xml:space="preserve"
-       style="font-size:170.331px;text-anchor:middle;fill:#808080;fill-opacity:0.754026;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
+       style="font-size:170.331px;font-family:'Open Sans',times;font-weight:800;text-anchor:middle;fill:#808080;fill-opacity:0.754026;font-style:normal;font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal"
        x="839.87781"
        y="681.08691"
-       id="text1">Standardspeak!</text>
+       id="text1">Standardspeak</text>
   </g>
 </svg>
