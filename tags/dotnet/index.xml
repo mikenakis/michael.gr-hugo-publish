@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotnet on Michael's Blog</title><link>https://blog.michael.gr/tags/dotnet/</link><description>Recent content in Dotnet on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Thu, 23 Oct 2025 20:43:29 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/dotnet/index.xml" rel="self" type="application/rss+xml"/><item><title>Build configurations</title><link>https://blog.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-build-configurations/media/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dotnet on Michael's Blog</title><link>https://blog.michael.gr/tags/dotnet/</link><description>Recent content in Dotnet on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 18:48:54 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/dotnet/index.xml" rel="self" type="application/rss+xml"/><item><title>Build configurations</title><link>https://blog.michael.gr/post/2025-06-build-configurations/</link><pubDate>Sun, 04 May 2025 13:39:03 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-build-configurations/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-build-configurations/media/ChatGPT-Image-Jun-11,-2025,-12_31_08-PM---fixed.jpg"
 width="1536"
 height="1024"
 loading="lazy"
@@ -7,13 +7,13 @@ data-flex-grow="150"
 data-flex-basis="360px"
 &gt;
 &lt;/p&gt;
-&lt;h3 id="abstract"&gt;Abstract
-&lt;/h3&gt;&lt;p&gt;The popular practice of having only two different kinds of builds (&lt;em&gt;Debug&lt;/em&gt; and &lt;em&gt;Release&lt;/em&gt;) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.&lt;/p&gt;
+&lt;h2 id="abstract"&gt;Abstract
+&lt;/h2&gt;&lt;p&gt;The popular practice of having only two different kinds of builds (&lt;em&gt;Debug&lt;/em&gt; and &lt;em&gt;Release&lt;/em&gt;) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="the-issue"&gt;The Issue
-&lt;/h3&gt;&lt;p&gt;In software development we often want our creations to have different characteristics under different circumstances; for example:&lt;/p&gt;
+&lt;h2 id="the-issue"&gt;The Issue
+&lt;/h2&gt;&lt;p&gt;In software development we often want our creations to have different characteristics under different circumstances; for example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Optimizations:
 &lt;ul&gt;
@@ -28,12 +28,12 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="the-history"&gt;The History
-&lt;/h3&gt;&lt;p&gt;In C and C++, different behavior has historically been achieved by means of compiler options controlling optimization, and preprocessor macros controlling conditional compilation. The standard stipulates an NDEBUG macro which, if defined, causes assertions to compile to nothing. This means that software systems written in C and C++ generally have two builds: a &lt;em&gt;Debug&lt;/em&gt; build, for use while debugging, and a &lt;em&gt;Release&lt;/em&gt; build, for shipping or deploying to production.&lt;/p&gt;
+&lt;h2 id="the-history"&gt;The History
+&lt;/h2&gt;&lt;p&gt;In C and C++, different behavior has historically been achieved by means of compiler options controlling optimization, and preprocessor macros controlling conditional compilation. The standard stipulates an NDEBUG macro which, if defined, causes assertions to compile to nothing. This means that software systems written in C and C++ generally have two builds: a &lt;em&gt;Debug&lt;/em&gt; build, for use while debugging, and a &lt;em&gt;Release&lt;/em&gt; build, for shipping or deploying to production.&lt;/p&gt;
 &lt;p&gt;When Java came along, it was decided that a single build should be good for everyone: conditional compilation was abolished&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;, all optimization-related choices were delegated to the Just-In-Time compiler (JITter,) assertions were made to always compile into the binaries, and the &lt;code&gt;enableassertions&lt;/code&gt; switch was added to the virtual machine for controlling during runtime, rather than during compilation, whether assertions should be executing or not. This essentially gives Java developers the ability to choose between a &lt;em&gt;debug &lt;strong&gt;run&lt;/strong&gt;&lt;/em&gt; or a &lt;em&gt;release &lt;strong&gt;run&lt;/strong&gt;&lt;/em&gt;, as opposed to a debug build or a release build.&lt;/p&gt;
 &lt;p&gt;C# has brought back a compiler option for controlling optimization, and conditional compilation by means of a simplified version of the preprocessor macros (called &amp;quot;define constants&amp;quot; in C#) and the &lt;code&gt;Conditional&lt;/code&gt; attribute. Two different kinds of builds (called &lt;em&gt;&lt;strong&gt;Build Configurations&lt;/strong&gt;&lt;/em&gt;) are predefined: &lt;code&gt;Debug&lt;/code&gt; and &lt;code&gt;Release&lt;/code&gt;. The build system offers great flexibility in defining additional build configurations, but C# developers rarely bother with that.&lt;/p&gt;
-&lt;h3 id="the-problem"&gt;The Problem
-&lt;/h3&gt;&lt;p&gt;Since developers rarely bother with defining any build configurations besides the predefined ones, the vast majority of dotnet projects use only the two predefined ones: 'Debug' and 'Release'. (Many projects actually use only 'Debug', but let us pretend we never heard of them.) Thus all different needs and usage scenarios are being shoe-horned to fit into one of those two options. For example:&lt;/p&gt;
+&lt;h2 id="the-problem"&gt;The Problem
+&lt;/h2&gt;&lt;p&gt;Since developers rarely bother with defining any build configurations besides the predefined ones, the vast majority of dotnet projects use only the two predefined ones: 'Debug' and 'Release'. (Many projects actually use only 'Debug', but let us pretend we never heard of them.) Thus all different needs and usage scenarios are being shoe-horned to fit into one of those two options. For example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;There is only one configuration that can be tested, namely the &lt;code&gt;Debug&lt;/code&gt; configuration, which means that this configuration is used not only for running tests on a developer's computer, but also for running tests on the build server.&lt;/li&gt;
 &lt;li&gt;There is only one configuration of a library that can be published, namely the 'Release' configuration, which means that this configuration is used not only in production scenarios, but also in development scenarios, where software is being developed that is making use of a published library.&lt;/li&gt;
@@ -65,8 +65,8 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;An extreme example to illustrate this scenario is the binary search function, which should, in principle, be enforcing the precondition that the array to search must be sorted. Yes, this means guarding a &lt;strong&gt;O(log&lt;sub&gt;2&lt;/sub&gt;(N))&lt;/strong&gt; operation with a &lt;strong&gt;O(N)&lt;/strong&gt; operation. This is fine during development, because we test with small amounts of data anyway, but is a terrible thing to be doing on production; thus, there is virtually no library in existence with such a precondition in it, despite the fact that it is necessary.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="the-solution"&gt;The Solution
-&lt;/h3&gt;&lt;p&gt;From the description of the problem it becomes evident that preconditions must be controlled separately from assertions, and both of those must be controlled separately from optimizations. Therefore, four different build configurations can be thought of:&lt;/p&gt;
+&lt;h2 id="the-solution"&gt;The Solution
+&lt;/h2&gt;&lt;p&gt;From the description of the problem it becomes evident that preconditions must be controlled separately from assertions, and both of those must be controlled separately from optimizations. Therefore, four different build configurations can be thought of:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;A 'Debug' configuration&lt;/p&gt;
@@ -226,8 +226,8 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nt"&gt;&amp;lt;/PropertyGroup&amp;gt;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, packages can be referenced as follows:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-xml" data-lang="xml"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;lt;PackageReference&lt;/span&gt; &lt;span class="na"&gt;Include=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;MyPackage-$(PackagesConfiguration)&amp;#34;&lt;/span&gt; &lt;span class="na"&gt;Version=&lt;/span&gt;&lt;span class="s"&gt;&amp;#34;...&amp;#34;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="conclusions"&gt;Conclusions
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="conclusions"&gt;Conclusions
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;An 'Optimized' build configuration has been proposed, for cutting in half the time it takes to run slow, computationally expensive tests on build servers. (Not needed by projects with small, fast tests.)&lt;/li&gt;
 &lt;li&gt;A 'Develop' build configuration for libraries has been proposed, intended for use during development of software using the libraries, but not for shipping to production. It has preconditions enabled, in order to catch bugs in the software using the libraries.&lt;/li&gt;
 &lt;li&gt;A 'Release' build configuration for libraries has been proposed, intended for shipping to production. It improves performance by not executing preconditions.&lt;/li&gt;

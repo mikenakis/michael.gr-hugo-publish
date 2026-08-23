@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humor on Michael's Blog</title><link>https://blog.michael.gr/tags/humor/</link><description>Recent content in Humor on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 17 Aug 2026 13:45:51 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/humor/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Humor on Michael's Blog</title><link>https://blog.michael.gr/tags/humor/</link><description>Recent content in Humor on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 19:09:25 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/humor/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Fun thing I learned today:&lt;/p&gt;
 &lt;p&gt;&lt;a class="external"
 href="https://en.wikipedia.org/wiki/Tcl_%28programming_language%29" target="_blank"
-&gt;TCL&lt;/a&gt; used to be pronounced &amp;quot;&lt;em&gt;&lt;strong&gt;Tickle&lt;/strong&gt;&lt;/em&gt;&amp;quot;.&lt;/p&gt;
+&gt;TCL&lt;/a&gt; (Tool Command Language) used to be pronounced &amp;quot;&lt;em&gt;&lt;strong&gt;tickle&lt;/strong&gt;&lt;/em&gt;&amp;quot;.&lt;/p&gt;
 &lt;p&gt;Then there was this movement known as &lt;a class="external"
 href="https://en.wikipedia.org/wiki/MeToo_movement" target="_blank"
 &gt;#MeToo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And it was decided that &amp;quot;Tickle&amp;quot; was a bit too risqué.&lt;/p&gt;
-&lt;p&gt;And so they have now started pronouncing it &lt;em&gt;&lt;strong&gt;tee-see-ell&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;And then it was decided that tickle was a bit too risqué.&lt;/p&gt;
+&lt;p&gt;And so they dropped tickle and started pronouncing it ti-si-el.&lt;/p&gt;
 &lt;p&gt;From here: &lt;a class="external"
 href="https://www.youtube.com/watch?v=V_qzqY1bb7I" target="_blank"
 &gt;YouTube: Reliability Lessons From SQLite - Richard Hipp | SSW 2026&lt;/a&gt; (Around 27':50'')&lt;/p&gt;
-&lt;p&gt;Gee, I wish something similar could happen to SQL, so that people stop pronouncing it &amp;quot;Sequel&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Gee, I wish something similar could somehow happen to SQL, so that people might stop pronouncing it &amp;quot;Sequel&amp;quot;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image adapted from official logo found at &lt;a class="external"
 href="https://wiki.tcl-lang.org/page/A&amp;#43;logo&amp;#43;for&amp;#43;Tcl&amp;#43;9" target="_blank"
@@ -326,30 +326,30 @@ href="https://web.archive.org/web/20120123121524/http://stackoverflow.com/questi
 &lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; First read the question, then go to the last answer and start reading the answers back-to-front after skipping those with scores of -1, 0, and 1. Make sure you have an hour to spare.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Here is some programming jargon which I have coined:&lt;/p&gt;
-&lt;h3 id="magical-incantation"&gt;Magical Incantation
-&lt;/h3&gt;&lt;p&gt;Any statement, argument, command, formulation, or construct that a) is necessary to get something to work as intended, b) one could have never guessed, and c) absolutely no hint for it was provided. Also, any construct that one could never infer what it accomplishes, either after a quick look, or after in-depth study and extensive reasoning.&lt;/p&gt;
-&lt;h3 id="pearl"&gt;PEARL
-&lt;/h3&gt;&lt;p&gt;A keyword that I add to source code comments that explain weird, unexpected, usually lame, sometimes incredibly lame behavior of other people's software that my software has to account for and work around.&lt;/p&gt;
-&lt;h3 id="blasphemy"&gt;Blasphemy
-&lt;/h3&gt;&lt;p&gt;Any choice which, although technically valid, nonetheless feels wrong, such as a buffer size which is not a power of two, a raster image when a vector image would have served equally well, a for-loop index variable which is called &lt;code&gt;a&lt;/code&gt; instead of &lt;code&gt;i&lt;/code&gt;, etc.&lt;/p&gt;
-&lt;h3 id="hail-mary-initialization"&gt;Hail-Mary Initialization
-&lt;/h3&gt;&lt;p&gt;The cargo-cult programming practice of pre-initializing a local variable with some meaningless value which is later overwritten with some other value, in all execution paths, before it is ever read. See &lt;a
+&lt;h2 id="magical-incantation"&gt;Magical Incantation
+&lt;/h2&gt;&lt;p&gt;Any statement, argument, command, formulation, or construct that a) is necessary to get something to work as intended, b) one could have never guessed, and c) absolutely no hint for it was provided. Also, any construct that one could never infer what it accomplishes, either after a quick look, or after in-depth study and extensive reasoning.&lt;/p&gt;
+&lt;h2 id="pearl"&gt;PEARL
+&lt;/h2&gt;&lt;p&gt;A keyword that I add to source code comments that explain weird, unexpected, usually lame, sometimes incredibly lame behavior of other people's software that my software has to account for and work around.&lt;/p&gt;
+&lt;h2 id="blasphemy"&gt;Blasphemy
+&lt;/h2&gt;&lt;p&gt;Any choice which, although technically valid, nonetheless feels wrong, such as a buffer size which is not a power of two, a raster image when a vector image would have served equally well, a for-loop index variable which is called &lt;code&gt;a&lt;/code&gt; instead of &lt;code&gt;i&lt;/code&gt;, etc.&lt;/p&gt;
+&lt;h2 id="hail-mary-initialization"&gt;Hail-Mary Initialization
+&lt;/h2&gt;&lt;p&gt;The cargo-cult programming practice of pre-initializing a local variable with some meaningless value which is later overwritten with some other value, in all execution paths, before it is ever read. See &lt;a
 href="https://blog.michael.gr/post/2012-01-03-hail-mary-initialization/"
 &gt;Hail-Mary Initialization&lt;/a&gt;.&lt;/p&gt;
-&lt;h3 id="undocumented"&gt;Undocumented
-&lt;/h3&gt;&lt;p&gt;adverb: documented in a way that does not really explain anything. For example: &lt;code&gt;// A value of 'null' is undocumented to signify that the file is &amp;quot;not directly accessible&amp;quot;, whatever they mean by that.&lt;/code&gt; The word is useful for attaching to a comment to succinctly indicate that the comment reflects the official documentation, but the official documentation is nonesense. Often the result of documentation written with the intent of not being wrong rather than the intent of explaining anything. Often used together with PEARL.&lt;/p&gt;
-&lt;h3 id="undocumentedly"&gt;Undocumentedly
-&lt;/h3&gt;&lt;p&gt;adverb: attested despite lack of documentation. For example: &lt;code&gt;zork.close(); // undocumentedly also flushes the zork before closing it.&lt;/code&gt; The word is useful for attaching to a comment to succinctly indicate that the described behavior was not found in documentation, and was instead divined through guesswork and trial-and-error. Often used together with PEARL.&lt;/p&gt;
+&lt;h2 id="undocumented"&gt;Undocumented
+&lt;/h2&gt;&lt;p&gt;adverb: documented in a way that does not really explain anything. For example: &lt;code&gt;// A value of 'null' is undocumented to signify that the file is &amp;quot;not directly accessible&amp;quot;, whatever they mean by that.&lt;/code&gt; The word is useful for attaching to a comment to succinctly indicate that the comment reflects the official documentation, but the official documentation is nonsense. Often the result of documentation written with the intent of not being wrong rather than the intent of explaining anything. Often used together with PEARL.&lt;/p&gt;
+&lt;h2 id="undocumentedly"&gt;Undocumentedly
+&lt;/h2&gt;&lt;p&gt;adverb: attested despite lack of documentation. For example: &lt;code&gt;zork.close(); // undocumentedly also flushes the zork before closing it.&lt;/code&gt; The word is useful for attaching to a comment to succinctly indicate that the described behavior was not found in documentation, and was instead divined through guesswork and trial-and-error. Often used together with PEARL.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;And here is some jargon which I have picked up and doing my best to increase its popularity:&lt;/p&gt;
-&lt;h3 id="get-run-over-by-a-crocodile"&gt;Get run over by a crocodile
-&lt;/h3&gt;&lt;p&gt;Refers to the possibility that the programmer who has written all of the software that a company depends on might one day quit working for that company or otherwise become incapable of continuing with their duties. Combination of &amp;quot;get run over by a bus&amp;quot; and &amp;quot;get eaten by a crocodile&amp;quot;, similar to &amp;quot;rocket surgery&amp;quot;.&lt;/p&gt;
-&lt;h3 id="search-and-destroy"&gt;Search and destroy
-&lt;/h3&gt;&lt;p&gt;Refers to a botched &amp;quot;search and replace&amp;quot; operation that seriously fouls up the source code. Common in scripting languages, where lack of types means that refactoring is practically impossible and has to be faked by means of search-and-replace, and where lack of a compilation step means that the fouled up code cannot be discovered unless an attempt is made to execute that code.&lt;/p&gt;
-&lt;h3 id="wtfpm"&gt;WTFPM
-&lt;/h3&gt;&lt;p&gt;What-The-Fucks-Per-Minute -- a measure of how smoothly (or not) code review is progressing.&lt;/p&gt;
-&lt;h3 id="cargo-cult-programming"&gt;Cargo Cult Programming
-&lt;/h3&gt;&lt;p&gt;Doing something in a certain way not because there is any actual benefit in that way, but because some folks proclaim that way to be &amp;quot;common knowledge&amp;quot;, or a &amp;quot;pattern&amp;quot;, or even &amp;quot;best practice&amp;quot;, based on reasons that are either dubious, or severely outdated, or outright fictitious. For an example, see &lt;a
+&lt;p&gt;And here is some jargon which I have not coined, but I have picked up and doing my best to increase its popularity:&lt;/p&gt;
+&lt;h2 id="get-run-over-by-a-crocodile"&gt;Get run over by a crocodile
+&lt;/h2&gt;&lt;p&gt;Refers to the possibility that the programmer who has written all of the software that a company depends on might one day quit working for that company or otherwise become incapable of continuing with their duties. Combination of &amp;quot;get run over by a bus&amp;quot; and &amp;quot;get eaten by a crocodile&amp;quot;, similar to &amp;quot;rocket surgery&amp;quot;.&lt;/p&gt;
+&lt;h2 id="search-and-destroy"&gt;Search and destroy
+&lt;/h2&gt;&lt;p&gt;Refers to a botched &amp;quot;search and replace&amp;quot; operation that seriously fouls up the source code. Common in scripting languages, where lack of types means that refactoring is practically impossible and has to be faked by means of search-and-replace, and where lack of a compilation step means that the fouled up code cannot be discovered unless an attempt is made to execute that code.&lt;/p&gt;
+&lt;h2 id="wtfpm"&gt;WTFPM
+&lt;/h2&gt;&lt;p&gt;What-The-Fucks-Per-Minute -- a measure of how smoothly (or not) code review is progressing.&lt;/p&gt;
+&lt;h2 id="cargo-cult-programming"&gt;Cargo Cult Programming
+&lt;/h2&gt;&lt;p&gt;Doing something in a certain way not because there is any actual benefit in that way, but because some folks proclaim that way to be &amp;quot;common knowledge&amp;quot;, or a &amp;quot;pattern&amp;quot;, or even &amp;quot;best practice&amp;quot;, based on reasons that are either dubious, or severely outdated, or outright fictitious. For an example, see &lt;a
 href="https://blog.michael.gr/post/2012-01-03-hail-mary-initialization/"
 &gt;Hail-Mary Initialization&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Confucius On Naming Things</title><link>https://blog.michael.gr/post/2018-05-confucius-on-naming/</link><pubDate>Mon, 21 May 2018 23:50:55 +0000</pubDate><guid>https://blog.michael.gr/post/2018-05-confucius-on-naming/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2018-05-confucius-on-naming/media/confucius.jpg"
 width="1125"

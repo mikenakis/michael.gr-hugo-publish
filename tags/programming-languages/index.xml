@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming languages on Michael's Blog</title><link>https://blog.michael.gr/tags/programming-languages/</link><description>Recent content in Programming languages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Tue, 18 Aug 2026 07:32:40 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/programming-languages/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming languages on Michael's Blog</title><link>https://blog.michael.gr/tags/programming-languages/</link><description>Recent content in Programming languages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 19:12:56 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/programming-languages/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;Fun thing I learned today:&lt;/p&gt;
 &lt;p&gt;&lt;a class="external"
 href="https://en.wikipedia.org/wiki/Tcl_%28programming_language%29" target="_blank"
-&gt;TCL&lt;/a&gt; used to be pronounced &amp;quot;&lt;em&gt;&lt;strong&gt;Tickle&lt;/strong&gt;&lt;/em&gt;&amp;quot;.&lt;/p&gt;
+&gt;TCL&lt;/a&gt; (Tool Command Language) used to be pronounced &amp;quot;&lt;em&gt;&lt;strong&gt;tickle&lt;/strong&gt;&lt;/em&gt;&amp;quot;.&lt;/p&gt;
 &lt;p&gt;Then there was this movement known as &lt;a class="external"
 href="https://en.wikipedia.org/wiki/MeToo_movement" target="_blank"
 &gt;#MeToo&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;And it was decided that &amp;quot;Tickle&amp;quot; was a bit too risqué.&lt;/p&gt;
-&lt;p&gt;And so they have now started pronouncing it &lt;em&gt;&lt;strong&gt;tee-see-ell&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;And then it was decided that tickle was a bit too risqué.&lt;/p&gt;
+&lt;p&gt;And so they dropped tickle and started pronouncing it ti-si-el.&lt;/p&gt;
 &lt;p&gt;From here: &lt;a class="external"
 href="https://www.youtube.com/watch?v=V_qzqY1bb7I" target="_blank"
 &gt;YouTube: Reliability Lessons From SQLite - Richard Hipp | SSW 2026&lt;/a&gt; (Around 27':50'')&lt;/p&gt;
-&lt;p&gt;Gee, I wish something similar could happen to SQL, so that people stop pronouncing it &amp;quot;Sequel&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Gee, I wish something similar could somehow happen to SQL, so that people might stop pronouncing it &amp;quot;Sequel&amp;quot;.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image adapted from official logo found at &lt;a class="external"
 href="https://wiki.tcl-lang.org/page/A&amp;#43;logo&amp;#43;for&amp;#43;Tcl&amp;#43;9" target="_blank"
@@ -78,13 +78,13 @@ data-flex-basis="213px"
 loading="lazy"
 &gt;
 &lt;/p&gt;
-&lt;h3 id="abstract"&gt;Abstract
-&lt;/h3&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
+&lt;h2 id="abstract"&gt;Abstract
+&lt;/h2&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
 &lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id="the-problem"&gt;The Problem
-&lt;/h3&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
+&lt;h2 id="the-problem"&gt;The Problem
+&lt;/h2&gt;&lt;p&gt;When creating software systems of nontrivial complexity we often need to be able to apply certain operations on the invocations that are being made between certain components. Examples of such operations are:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Logging:&lt;/strong&gt; Recording information about each invocation being made.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Multicasting:&lt;/strong&gt; Delivering a single invocation to multiple recipients.&lt;/li&gt;
@@ -95,8 +95,8 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/ul&gt;
 &lt;p&gt;Ordinarily, the components doing the invocations are application-specific, and the interfaces between them are also application-specific, but the operators that we want to interject between them are general-purpose, so they need to remain agnostic of the application-specific details of the invocations, in a way analogous to how a general-purpose sorting algorithm is agnostic of the application-specific format of the data it sorts.&lt;/p&gt;
 &lt;p&gt;Therefore, we need some way of expressing application-specific invocations in a general-purpose form.&lt;/p&gt;
-&lt;h3 id="prior-art"&gt;Prior Art
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id="prior-art"&gt;Prior Art
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a
 href="https://blog.michael.gr/post/2022-12-messages-and-message-passing/"
@@ -115,8 +115,8 @@ Unfortunately:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Dynamic Proxies:&lt;/strong&gt; Both in Java and in C# there exist mechanisms that can be used to convert application-specific invocations to a general-purpose form, but not the other way around. These are &lt;code&gt;java.lang.reflect.Proxy&lt;/code&gt; for Java, and various libraries like Castle's and LinFu for C#. The reverse operation can be achieved using reflection, but this involves a round-trip to native-land, which incurs a heavy performance penalty. Furthermore, these mechanisms suffer from additional issues, such as messing with exceptions, doing more work than necessary, etc.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="the-solution"&gt;The Solution
-&lt;/h3&gt;&lt;p&gt;In order to be able to perform general-purpose operations on application-specific invocations we need a mechanism for converting application-specific invocations into a general-purpose form and back, so that the operators can act upon the general-purpose form. What follows is a description of such a mechanism, which I call &lt;em&gt;&lt;strong&gt;Intertwine&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id="the-solution"&gt;The Solution
+&lt;/h2&gt;&lt;p&gt;In order to be able to perform general-purpose operations on application-specific invocations we need a mechanism for converting application-specific invocations into a general-purpose form and back, so that the operators can act upon the general-purpose form. What follows is a description of such a mechanism, which I call &lt;em&gt;&lt;strong&gt;Intertwine&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;Intertwine introduces a general-purpose form for expressing invocations, which is called &lt;em&gt;&lt;strong&gt;the normal form of invocations&lt;/strong&gt;&lt;/em&gt;, and is represented by a single method of the following signature:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;MethodKey&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
@@ -181,8 +181,8 @@ following:
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="a-hand-crafted-implementation"&gt;A hand-crafted implementation
-&lt;/h3&gt;&lt;p&gt;Before we look at the automatic creation of entwiners and untwiners, let us take a look at an example of how we would implement an entwiner and untwiner for a certain interface if we were to do it by hand.&lt;/p&gt;
+&lt;h2 id="a-hand-crafted-implementation"&gt;A hand-crafted implementation
+&lt;/h2&gt;&lt;p&gt;Before we look at the automatic creation of entwiners and untwiners, let us take a look at an example of how we would implement an entwiner and untwiner for a certain interface if we were to do it by hand.&lt;/p&gt;
 &lt;p&gt;Let us consider the following interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
@@ -332,8 +332,8 @@ following:
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Note that &lt;code&gt;Run2()&lt;/code&gt; has exactly the same end-result as &lt;code&gt;Run1()&lt;/code&gt;, but there is a big difference in what goes on under the hood: all outbound interface method calls from the &lt;code&gt;InvokeFoo&lt;/code&gt; function are now arriving at the entwiner, which converts them to &lt;code&gt;AnyCall&lt;/code&gt; invocations, which are then forwarded to the untwiner, which converts them back to &lt;code&gt;IFooable&lt;/code&gt; calls, which are then forwarded to our &lt;code&gt;FooImplementation&lt;/code&gt; object. This means that if we wanted to, we could interject a chain of objects between the entwiner and the untwiner, each one of these objects implementing an &lt;code&gt;AnyCall&lt;/code&gt; delegate and invoking another &lt;code&gt;AnyCall&lt;/code&gt; delegate, thus enabling us to perform any conceivable operation upon those invocations without having any built-in knowledge of the &lt;code&gt;IFooable&lt;/code&gt; interface.&lt;/p&gt;
 &lt;p&gt;As the complexity of the interface increases, and as additional subtleties come into the picture, such as parameters passed with ref or out, coding entwiners and untwiners by hand can become very tedious and error-prone, so, obviously, we would like to have it automated.&lt;/p&gt;
-&lt;h3 id="automating-it-with-reflection"&gt;Automating it with reflection
-&lt;/h3&gt;&lt;p&gt;It is possible to write a general-purpose untwiner that does its job using reflection, but reflection is slow, so the result is going to suffer performance-wise. For the sake of completeness, here is a possible implementation for a general-purpose reflecting untwiner using reflection:&lt;/p&gt;
+&lt;h2 id="automating-it-with-reflection"&gt;Automating it with reflection
+&lt;/h2&gt;&lt;p&gt;It is possible to write a general-purpose untwiner that does its job using reflection, but reflection is slow, so the result is going to suffer performance-wise. For the sake of completeness, here is a possible implementation for a general-purpose reflecting untwiner using reflection:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
 &lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
 &lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt" id="hl-8-1"&gt;&lt;a class="lnlinks" href="#hl-8-1"&gt; 1&lt;/a&gt;
@@ -372,8 +372,8 @@ following:
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;Note that untwiner creation could be optimized by caching the MethodInfos of frequently used types, but that's not the problem; the real bottleneck is the &lt;code&gt;MethodInfo.Invoke()&lt;/code&gt; call. If you put a breakpoint on the target and examine the stack, you will see that between the &lt;code&gt;AnyCall&lt;/code&gt; frame and the target frame there will be a managed-to-native transition and a native-to-managed transition, which is something to be avoided at all costs.&lt;/p&gt;
 &lt;p&gt;Also note: it is impossible to write a reflecting entwiner.&lt;/p&gt;
-&lt;h3 id="automating-it-with-intertwine"&gt;Automating it with Intertwine
-&lt;/h3&gt;&lt;p&gt;The Intertwine library will automatically generate for us a pair of optimally-performing entwiner and untwiner classes for any interface. These classes are generated at runtime, so no extra build step is needed. To accomplish this, the C# implementation of Intertwine generates MSIL and creates assemblies from it; the Java Implementation generates bytecode and creates classes from it.&lt;/p&gt;
+&lt;h2 id="automating-it-with-intertwine"&gt;Automating it with Intertwine
+&lt;/h2&gt;&lt;p&gt;The Intertwine library will automatically generate for us a pair of optimally-performing entwiner and untwiner classes for any interface. These classes are generated at runtime, so no extra build step is needed. To accomplish this, the C# implementation of Intertwine generates MSIL and creates assemblies from it; the Java Implementation generates bytecode and creates classes from it.&lt;/p&gt;
 &lt;p&gt;The following method of the &lt;code&gt;Intertwine.Factory&lt;/code&gt; class creates an entwiner:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-CSharp" data-lang="CSharp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt; &lt;span class="n"&gt;NewEntwiner&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt; &lt;span class="n"&gt;AnyCall&lt;/span&gt; &lt;span class="n"&gt;anycall&lt;/span&gt; &lt;span class="p"&gt;);&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For &lt;code&gt;T&lt;/code&gt; we give the type of our interface, and for &lt;code&gt;anycall&lt;/code&gt; we give a delegate of ours that will be receiving calls. This method returns a reference to an implementation of our interface, provided by an Entwiner-derived class that has been dynamically generated specifically for our interface, and instantiated to work with the given &lt;code&gt;AnyCall&lt;/code&gt; instance. For every call received through a method of our interface, this special entwiner will be marshalling the arguments and forwarding the call to our &lt;code&gt;AnyCall&lt;/code&gt; delegate.&lt;/p&gt;
@@ -410,8 +410,8 @@ href="https://github.com/mikenakis/IntertwineCSharp" target="_blank"
 &lt;a class="external"
 href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank"
 &gt;https://github.com/mikenakis/Public/tree/master/intertwine&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id="appendix-an-example-interface-multicasts-events-in-c"&gt;Appendix: An example: Interface multicasts (events) in C#
-&lt;/h3&gt;&lt;p&gt;If you are still with me you may be thinking that it is about time for a demonstration. What follows is not just an example, but actually a complete and useful application of intertwine which you may be able to start utilizing in your projects right away.&lt;/p&gt;
+&lt;h2 id="appendix-an-example-interface-multicasts-events-in-c"&gt;Appendix: An example: Interface multicasts (events) in C#
+&lt;/h2&gt;&lt;p&gt;If you are still with me you may be thinking that it is about time for a demonstration. What follows is not just an example, but actually a complete and useful application of intertwine which you may be able to start utilizing in your projects right away.&lt;/p&gt;
 &lt;p&gt;The C# language has built-in support for multicasts (events) but only delegates can be used as event observers. There are many cases, however, where interfaces would be more suitable. Java does not even have built-in support for multicasts, so programmers generally have to write their own, using single-method (functional) interfaces. In either language, if you want to achieve multicasting on multi-method interfaces, you have to rewrite the multicasting code for every single method of every single interface.&lt;/p&gt;
 &lt;p&gt;Consider the following interface:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
@@ -459,8 +459,8 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;This approach is self-explanatory, and the amount of code you have to write in order to use it is optimal; you do not need to deal with anything more than what is necessary, and if you ever add a notification, it will be a new interface method, so all existing implementations of that interface will automatically be flagged by the compiler as incomplete. With the help of Intertwine, this event manager is implemented in just 150 lines of code, including extensive comments.&lt;/p&gt;
-&lt;h3 id="end-notes"&gt;End-notes
-&lt;/h3&gt;&lt;p&gt;Back in 2011 I posted a question on stackoverflow.com, titled &lt;a class="external"
+&lt;h2 id="end-notes"&gt;End-notes
+&lt;/h2&gt;&lt;p&gt;Back in 2011 I posted a question on stackoverflow.com, titled &lt;a class="external"
 href="https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing" target="_blank"
 &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
 &lt;p&gt;This post supersedes the original post from 2011: &lt;a
@@ -982,8 +982,8 @@ data-flex-grow="149"
 data-flex-basis="359px"
 &gt;
 &lt;/p&gt;
-&lt;h3 id="abstract"&gt;Abstract
-&lt;/h3&gt;&lt;p&gt;My thoughts and notes on how I would like a new programming language to look like.&lt;/p&gt;
+&lt;h2 id="abstract"&gt;Abstract
+&lt;/h2&gt;&lt;p&gt;My thoughts and notes on how I would like a new programming language to look like.&lt;/p&gt;
 &lt;p&gt;The unique selling point of the language is:&lt;/p&gt;
 &lt;p&gt;Automatic memory reclamation without garbage collection.&lt;/p&gt;
 &lt;p&gt;The secondary selling point of the language is:&lt;/p&gt;
@@ -1000,8 +1000,8 @@ href="https://en.wikipedia.org/wiki/Performance_per_watt" target="_blank"
 &lt;li&gt;Lean. (Suitable for resource-constrained computing.)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;This is work-in-progress; It is bound to be heavily amended as time passes, especially if I try some new language, like Kotlin or Rust, and get ideas from it.&lt;/p&gt;
-&lt;h3 id="summary-of-language-characteristics"&gt;Summary of language characteristics
-&lt;/h3&gt;&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;h2 id="summary-of-language-characteristics"&gt;Summary of language characteristics
+&lt;/h2&gt;&lt;p&gt;(Useful pre-reading: &lt;a
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The main goals of the language are achieved via the following characteristics:&lt;/p&gt;
@@ -1084,8 +1084,8 @@ href="https://blog.michael.gr/post/2021-10-what-is-wrong-with-scala/"
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="language-characteristics-in-detail"&gt;Language characteristics in detail
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id="language-characteristics-in-detail"&gt;Language characteristics in detail
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Supports reference types and value types, as C# does.&lt;/p&gt;
 &lt;/li&gt;

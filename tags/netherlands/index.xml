@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Netherlands on Michael's Blog</title><link>https://blog.michael.gr/tags/netherlands/</link><description>Recent content in The Netherlands on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 29 Jul 2026 17:06:52 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/netherlands/index.xml" rel="self" type="application/rss+xml"/><item><title>Buienradar vs. Buienalarm: 2-0</title><link>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</link><pubDate>Wed, 10 Jun 2026 07:35:16 +0200</pubDate><guid>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/cover.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Netherlands on Michael's Blog</title><link>https://blog.michael.gr/tags/netherlands/</link><description>Recent content in The Netherlands on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 19:16:30 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/netherlands/index.xml" rel="self" type="application/rss+xml"/><item><title>Buienradar vs. Buienalarm: 2-0</title><link>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</link><pubDate>Wed, 10 Jun 2026 07:35:16 +0200</pubDate><guid>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/cover.svg"
 loading="lazy"
 &gt;
 &lt;/p&gt;
@@ -41,12 +41,12 @@ loading="lazy"
 &gt;
 &lt;/p&gt;
 &lt;p&gt;So, today I had the chance to observe an example of the relative accuracy of buienalarm.nl vs. buienradar.nl&lt;/p&gt;
-&lt;h1 id="time-1300"&gt;Time: ~13:00
-&lt;/h1&gt;&lt;p&gt;Around 13:00 I wanted to know what the weather was going to be at 17:00, and I noticed that buienradar was predicting complete dryness,
+&lt;h2 id="time-1300"&gt;Time: ~13:00
+&lt;/h2&gt;&lt;p&gt;Around 13:00 I wanted to know what the weather was going to be at 17:00, and I noticed that buienradar was predicting complete dryness,
 whereas buienalarm was predicting torrential rain.&lt;/p&gt;
 &lt;p&gt;Here are the screenshots:&lt;/p&gt;
-&lt;h4 id="buienradar-1300"&gt;Buienradar ~13:00
-&lt;/h4&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienradar.png"
+&lt;h3 id="buienradar-1300"&gt;Buienradar ~13:00
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienradar.png"
 width="1086"
 height="362"
 loading="lazy"
@@ -55,8 +55,8 @@ data-flex-grow="300"
 data-flex-basis="720px"
 &gt;
 &lt;/p&gt;
-&lt;h4 id="buienalarm-1300"&gt;Buienalarm ~13:00
-&lt;/h4&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienalarm.png"
+&lt;h3 id="buienalarm-1300"&gt;Buienalarm ~13:00
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienalarm.png"
 width="1337"
 height="662"
 loading="lazy"
@@ -65,10 +65,10 @@ data-flex-grow="201"
 data-flex-basis="484px"
 &gt;
 &lt;/p&gt;
-&lt;h1 id="time-1600"&gt;Time: ~16:00
-&lt;/h1&gt;&lt;p&gt;When I checked again around 16:00, buienradar was showing more or less the same thing, while buienalarm had completely changed its mind!&lt;/p&gt;
-&lt;h4 id="buienradar-1600"&gt;Buienradar ~16:00
-&lt;/h4&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienradar2.png"
+&lt;h2 id="time-1600"&gt;Time: ~16:00
+&lt;/h2&gt;&lt;p&gt;When I checked again around 16:00, buienradar was showing more or less the same thing, while buienalarm had completely changed its mind!&lt;/p&gt;
+&lt;h3 id="buienradar-1600"&gt;Buienradar ~16:00
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienradar2.png"
 width="1128"
 height="376"
 loading="lazy"
@@ -77,8 +77,8 @@ data-flex-grow="300"
 data-flex-basis="720px"
 &gt;
 &lt;/p&gt;
-&lt;h4 id="buienalarm-1600"&gt;Buienalarm ~16:00
-&lt;/h4&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienalarm2.png"
+&lt;h3 id="buienalarm-1600"&gt;Buienalarm ~16:00
+&lt;/h3&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienalarm2.png"
 width="1327"
 height="665"
 loading="lazy"
@@ -87,8 +87,8 @@ data-flex-grow="199"
 data-flex-basis="478px"
 &gt;
 &lt;/p&gt;
-&lt;h1 id="time-1700"&gt;Time: 17:00
-&lt;/h1&gt;&lt;p&gt;Sure enough, at 17:00 the weather was completely dry. Here is the view from my office window:&lt;/p&gt;
+&lt;h2 id="time-1700"&gt;Time: 17:00
+&lt;/h2&gt;&lt;p&gt;Sure enough, at 17:00 the weather was completely dry. Here is the view from my office window:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/weather-1000.jpg"
 width="1328"
 height="1000"
@@ -112,7 +112,8 @@ href="https://en.wikipedia.org/wiki/EF_Education_First" target="_blank"
 &gt;Wikipedia&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;I can attest that at least in the Randstad area, (where half the population of the country lives,) almost everyone speaks English, and many do so very fluently.&lt;/p&gt;
 &lt;p&gt;Nonetheless, there are certain mistakes that the Dutch are somewhat prone to make in English, mostly due to interference from peculiarities of the Dutch language. When this happens, it is called &lt;em&gt;&lt;strong&gt;Dutchlish&lt;/strong&gt;&lt;/em&gt; or &lt;em&gt;&lt;strong&gt;Dunglish&lt;/strong&gt;&lt;/em&gt;. The phenomenon is acknowledged by the Dutch, who have their own word for it: &lt;em&gt;&lt;strong&gt;Steenkolenengels&lt;/strong&gt;&lt;/em&gt;, which literally means &lt;em&gt;&lt;strong&gt;coal-English&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Here is a long list of examples of Steenkolenengels that I have compiled over the course of several years of living in The Netherlands.&lt;/p&gt;
+&lt;h2 id="the-list"&gt;The List
+&lt;/h2&gt;&lt;p&gt;Here is a long list of examples of Steenkolenengels that I have compiled over the course of several years of living in The Netherlands.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id="i-will-learn-you-how-to-skate"&gt;I will learn you how to skate.
 &lt;/h3&gt;&lt;p&gt;&lt;em&gt;&lt;strong&gt;Learn&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;teach&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
@@ -304,8 +305,8 @@ data-flex-basis="271px"
 &lt;p&gt;Because the Dutch word for &lt;em&gt;&lt;strong&gt;or&lt;/strong&gt;&lt;/em&gt; is in fact &lt;em&gt;&lt;strong&gt;of&lt;/strong&gt;&lt;/em&gt;. Go figure.&lt;/p&gt;
 &lt;p&gt;(And if you are wondering what their word for &lt;em&gt;&lt;strong&gt;of&lt;/strong&gt;&lt;/em&gt; is, you already know it; it is &lt;em&gt;&lt;strong&gt;van&lt;/strong&gt;&lt;/em&gt;, as in &lt;em&gt;Vincent van Gogh&lt;/em&gt;, or Eddie van Halen. And remember, it is pronounced &amp;quot;fan&amp;quot;, not &amp;quot;van&amp;quot;.)&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id="further-reading"&gt;Further reading...
-&lt;/h3&gt;&lt;p&gt;If you have not had enough of this already, then:&lt;/p&gt;
+&lt;h2 id="further-reading"&gt;Further reading...
+&lt;/h2&gt;&lt;p&gt;If you have not had enough of this already, then:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;head over to the &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Dunglish" target="_blank"
