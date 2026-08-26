@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Movies on Michael's Blog</title><link>https://blog.michael.gr/tags/movies/</link><description>Recent content in Movies on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Fri, 07 Aug 2026 16:53:27 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/movies/index.xml" rel="self" type="application/rss+xml"/><item><title>Introducing My Movie List</title><link>https://blog.michael.gr/post/2026-07-27-introducing-my-movie-list/</link><pubDate>Tue, 21 Jul 2026 17:06:04 +0200</pubDate><guid>https://blog.michael.gr/post/2026-07-27-introducing-my-movie-list/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-07-27-introducing-my-movie-list/media/introducing-my-movie-list.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;I created a new page with a list of all movies that I have watched.&lt;/p&gt;
-&lt;p&gt;Here it is: &lt;a
+&lt;p&gt;Here it is: &lt;a class="internal"
 href="https://blog.michael.gr/my-movie-list/"
 &gt;My Movie List&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Movie: Dawn of the Planet of the Apes</title><link>https://blog.michael.gr/post/2014-12-movie-dawn-of-planet-of-apes/</link><pubDate>Mon, 29 Dec 2014 23:32:57 +0000</pubDate><guid>https://blog.michael.gr/post/2014-12-movie-dawn-of-planet-of-apes/</guid><description>&lt;p&gt;This post does not contain any spoilers, unless you would consider as a spoiler my opinion on how the quality if the movie varies as the movie progresses. (Or the image below.)&lt;/p&gt;
 &lt;table&gt;
@@ -16,8 +15,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
 data-flex-basis="400px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -40,8 +38,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="120"
 data-flex-basis="289px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -64,8 +61,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="186"
 data-flex-basis="446px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -84,8 +80,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="237"
 data-flex-basis="570px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;In the movie &amp;quot;Sunshine&amp;quot; by Danny Boyle (&lt;a class="external"
 href="https://www.imdb.com/title/tt0448134/" target="_blank"
 &gt;IMDB&lt;/a&gt;) there is a scene which is impossible to comprehend unless you have some knowledge of physics. The protagonist Robert Capa (Cillian Murphy) finds himself trapped in an airlock from which he must escape at any cost. The airlock contains a space suit, and has one outer hatch towards space, and one inner hatch towards the interior of the spaceship, which is locked.&lt;/p&gt;
@@ -98,8 +93,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;What blew up the inner hatch was the tiny hole that Capa bore on it before decompressing the airlock. It works exactly the same way a pin prick causes a balloon to explode. You can read all about it in &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Balloon_popping" target="_blank"
 &gt;Wikipedia: Balloon popping&lt;/a&gt; but I think I can do a better job at explaining it:&lt;/p&gt;

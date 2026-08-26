@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Java on Michael's Blog</title><link>https://blog.michael.gr/tags/java/</link><description>Recent content in Java on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 19:42:21 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Immutability Assessment</title><link>https://blog.michael.gr/post/2025-06-immutability-assessment/</link><pubDate>Mon, 02 Jun 2025 13:16:41 +0000</pubDate><guid>https://blog.michael.gr/post/2025-06-immutability-assessment/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2025-06-immutability-assessment/media/diamond.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;The need is identified for programmatically ascertaining the immutability of certain objects used in situations where they are expected to be immutable, in languages like C# and Java. The technicalities of immutability assessment are discussed. A mechanism is described for achieving it.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;The Problem
@@ -113,7 +112,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;For this reason, every mutable instance assessment must come with a sentence explaining to the programmer why the assessment was issued. Since every mutable instance assessment typically has one or more other assessments that are the reasons that led to it, these sentences will often form entire trees, each sentence being further explained by nested sentences.&lt;/p&gt;
 &lt;p&gt;I call this feature elucidation.&lt;/p&gt;
 &lt;h3 id="an-implementation"&gt;An Implementation
-&lt;/h3&gt;&lt;p&gt;I have already created a library for Java that achieves all of the above; I call it &lt;a
+&lt;/h3&gt;&lt;p&gt;I have already created a library for Java that achieves all of the above; I call it &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-05-bathyscaphe/"
 &gt;Bathyscaphe&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I have also ported this library to C#, and all of its (quite extensive) tests pass, so I have sufficient reason to believe that it is working correctly; however, I have yet to try it in any real projects, so I cannot confidently proclaim it to be of release grade at the moment. I am planning to release it as soon as I can.&lt;/p&gt;
@@ -150,11 +149,10 @@ href="https://thenounproject.com/icon/diamond-4452869/" target="_blank"
 href="http://mustoverride.com/tuples%5C_structs/" target="_blank"
 &gt;Vladimir Sadov: &amp;quot;C# Tuples. Why mutable structs?&amp;quot;&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Testana: A better way of running tests</title><link>https://blog.michael.gr/post/2024-10-testana/</link><pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate><guid>https://blog.michael.gr/post/2024-10-testana/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-10-testana/media/testana-logo.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;A software testing tool is presented, which uses &lt;em&gt;&lt;strong&gt;dependency analysis&lt;/strong&gt;&lt;/em&gt; to greatly optimize the process of running tests.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="what-is-testana"&gt;What is Testana?
@@ -205,7 +203,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;/h2&gt;&lt;p&gt;Existing test frameworks do not do anything intelligent in the direction of automatically figuring out some order of test execution that has any purpose or merit. The order tends to be arbitrary, and not configurable. In the best case it is alphabetic, but this is still problematic, because our criteria for naming test modules usually have nothing to do with the order in which we would like to see them executing.&lt;/p&gt;
 &lt;p&gt;For example, it is very common for a code base to contain a module called &amp;quot;Utilities&amp;quot;, which most other modules depend on; Since it is a highly dependent-upon module, it should be tested first, but since its name begins with a &amp;quot;U&amp;quot;, it tends to be tested last.&lt;/p&gt;
 &lt;p&gt;Testana executes test modules in order of dependency. This means that modules with no dependencies are tested first, modules that depend upon them are tested next, and so on until everything has been tested. Thus, the first test failure is guaranteed to point at the most fundamental problem; there is no need to look further down in case some other test failure indicates a more fundamental problem. Subsequently, Testana stops executing tests after the first failure, so it saves even more time.&lt;/p&gt;
-&lt;p&gt;For more information about this way of testing, see &lt;a
+&lt;p&gt;For more information about this way of testing, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="why-should-i-care-about-running-test-methods-in-natural-order"&gt;Why should I care about running test methods in natural order?
@@ -214,7 +212,7 @@ href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;p&gt;Tests of operations that rely upon an operation whose test has failed might as well be skipped, because they can all be expected to fail. Reporting those failures before the failure of the more fundamental operation is an act of sabotage against the developer, because it is sending us looking for problems in places where there are no problems to be found, and it is making it more difficult for us to locate the real problem, which typically lies in the test that failed first &lt;em&gt;&lt;strong&gt;in the source file&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;To give an example, suppose I am developing some kind of data store with insert and find functionality, and I am writing tests to make sure this functionality works. The find-item-in-store test necessarily involves insertion before finding, so I am likely to precede it with an insert-item-to-store test. In such a scenario, it is counter-productive to be told that my find-item-in-store test failed, sending me to troubleshoot the find function, and only later to be told that my insert-item-to-store test failed, which obviously means that it was in fact the insert function that needed troubleshooting; if insert-item-to-store fails, it is game over; no other operation on this store can possibly succeed, so there is no point in running any other tests on it, just as there is no point in beating a dead horse.&lt;/p&gt;
 &lt;p&gt;Finally, another very simple, very straightforward, and very important reason for wanting the test methods to be executed in natural order is because seeing the test methods listed in any other order is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;A related rant can be found here: &lt;a
+&lt;p&gt;A related rant can be found here: &lt;a class="internal"
 href="https://blog.michael.gr/post/2018-04-random-order-of-tests/"
 &gt;On JUnit's random order of test method execution&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="why-should-i-care-for-running-test-methods-in-ascending-order-of-inheritance"&gt;Why should I care for running test methods in ascending order of inheritance?
@@ -230,7 +228,7 @@ href="https://blog.michael.gr/post/2018-04-random-order-of-tests/"
 &lt;h2 id="can-testana-be-fooled-by-inversion-of-control"&gt;Can Testana be fooled by Inversion of Control?
 &lt;/h2&gt;&lt;p&gt;No. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, the test of A still has to instantiate both A and B in order to supply A with the I interface of B, so the test depends on both A and B, which means that Testana will run the test if there is a change in either A or B.&lt;/p&gt;
 &lt;h2 id="can-testana-be-fooled-by-the-use-of-mocks"&gt;Can Testana be fooled by the use of mocks?
-&lt;/h2&gt;&lt;p&gt;Yes, Testana can be fooled by mocks, because that is what mocks do: they make a mockery out of the software testing process. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, and the test of A also refrains from depending on B by just mocking I, Testana will of course not run the test of A when there is a change in B. This, however, should not be a problem, because you should not be using mocks anyway; for more information, see &lt;a
+&lt;/h2&gt;&lt;p&gt;Yes, Testana can be fooled by mocks, because that is what mocks do: they make a mockery out of the software testing process. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, and the test of A also refrains from depending on B by just mocking I, Testana will of course not run the test of A when there is a change in B. This, however, should not be a problem, because you should not be using mocks anyway; for more information, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-14-mocking/"
 &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="can-testana-be-fooled-by-the-use-of-fakes"&gt;Can Testana be fooled by the use of fakes?
@@ -239,7 +237,7 @@ href="https://blog.michael.gr/post/2023-01-14-mocking/"
 &lt;li&gt;If you make a breaking change to the real thing, then your tests will show you that you need to make the corresponding change to the fake; the change in the fake will in turn cause Testana to run the tests that utilize the fake.&lt;/li&gt;
 &lt;li&gt;If you make a non-breaking change to the real thing, then the fake will remain unchanged, and this is what gives you the luxury of not having to re-run tests utilizing the fake when you make a change that only affects the real thing.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;For more information, see &lt;a
+&lt;p&gt;For more information, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="what-about-undiscoverable-dependencies-due-to-weak-typing-the-use-of-rest-etc"&gt;What about undiscoverable dependencies due to weak typing, the use of REST, etc?
@@ -252,7 +250,7 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;Abnegating dependencies via &lt;em&gt;&lt;strong&gt;non-programmatic interfaces&lt;/strong&gt;&lt;/em&gt; such as REST.&lt;/li&gt;
 &lt;li&gt;Fragmenting dependencies via &lt;em&gt;&lt;strong&gt;cross-language invocations&lt;/strong&gt;&lt;/em&gt; (following the &lt;em&gt;&lt;strong&gt;polyglot craze&lt;/strong&gt;&lt;/em&gt;.)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Seriously, stop all this fuckery and use a single, &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt; programming language, (that is, a programming language with &lt;em&gt;&lt;strong&gt;strong typing&lt;/strong&gt;&lt;/em&gt;,) encode your dependencies via the type system, and everything will be fine. For more information, see &lt;a
+&lt;p&gt;Seriously, stop all this fuckery and use a single, &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt; programming language, (that is, a programming language with &lt;em&gt;&lt;strong&gt;strong typing&lt;/strong&gt;&lt;/em&gt;,) encode your dependencies via the type system, and everything will be fine. For more information, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2017-05-on-scripting-languages/"
 &gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="how-compatible-is-testana-with-what-i-already-have"&gt;How compatible is Testana with what I already have?
@@ -341,11 +339,10 @@ href="https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-
 &lt;p&gt;I changed the name of the artifact in the second repository from bathyscaphe-claims to bathyscaphe-claims2 and it worked.&lt;/p&gt;
 &lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>Intertwine</title><link>https://blog.michael.gr/post/2022-12-intertwine/</link><pubDate>Sun, 11 Dec 2022 16:18:00 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-intertwine/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-intertwine/media/intertwine-logo.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;A mechanism is described for automatically converting method invocations of any programmatic interface into a single-method &lt;em&gt;&lt;strong&gt;normal form&lt;/strong&gt;&lt;/em&gt; and converting back to invocations of the original interface, so that general-purpose operations can be performed on the normal form without explicit knowledge of the interface being invoked. Implementations are provided for C# and for Java.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;The Problem
@@ -363,7 +360,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;h2 id="prior-art"&gt;Prior Art
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a
+&lt;p&gt;&lt;strong&gt;Messages and message-passing:&lt;/strong&gt; The mechanism historically used for expressing invocations in a general-purpose form is message-passing. Unfortunately, its use is laborious, and it floods systems with debilitating amounts of incidental complexity. For details, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-12-messages-and-message-passing/"
 &gt;On messages and message-passing&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
@@ -728,14 +725,14 @@ href="https://github.com/mikenakis/Public/tree/master/intertwine" target="_blank
 &lt;/h2&gt;&lt;p&gt;Back in 2011 I posted a question on stackoverflow.com, titled &lt;a class="external"
 href="https://stackoverflow.com/questions/6154205/multiplexing-interface-method-calls-into-a-single-delegate-and-demultiplexing" target="_blank"
 &gt;Multiplexing interface method calls into a single delegate and demultiplexing&lt;/a&gt; asking if anyone knows of anything like Intertwine, but nobody did, so I built it myself.&lt;/p&gt;
-&lt;p&gt;This post supersedes the original post from 2011: &lt;a
+&lt;p&gt;This post supersedes the original post from 2011: &lt;a class="internal"
 href="https://blog.michael.gr/post/2011-10-16-intertwine-normalizing-interface/"
 &gt;Intertwine: Normalizing Interface Invocations&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: The Intertwine Logo, by michael.gr&lt;/p&gt;</description></item><item><title>Bathyscaphe</title><link>https://blog.michael.gr/post/2022-05-bathyscaphe/</link><pubDate>Tue, 19 Apr 2022 10:54:08 +0000</pubDate><guid>https://blog.michael.gr/post/2022-05-bathyscaphe/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-05-bathyscaphe/media/bathyscaphe-logo.svg"
-loading="lazy" alt="Bathyscaphe logo"
-&gt;
-&lt;/p&gt;
+loading="lazy"
+alt="Bathyscaphe logo"
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;This article introduces Bathyscaphe, an open-source java library that you can use to assert that your objects are immutable and/or thread-safe.&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;The problem
@@ -1103,8 +1100,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;A command-line utility for dumping the contents of class files.&lt;/p&gt;
 &lt;p&gt;Read the README.md file at &lt;a class="external"
 href="https://github.com/mikenakis/Public/tree/master/classdump" target="_blank"
@@ -1116,8 +1112,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="175"
 data-flex-basis="420px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Now that Java 9 is out, I decided to migrate to it my pet project, which is around 120K lines of java.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;The first step is to just start compiling and running against jdk9, without using any of its features yet.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;This is an account of the surprisingly few issues that I encountered during this first step and how I resolved them.&lt;/p&gt;
@@ -1172,12 +1167,12 @@ for( URL url : Collections.list( classLoader.getResources( &amp;quot;&amp;quot; 
 &lt;p&gt;At the end of all this, my 817 tests passed, so I consider the migration complete.&lt;/p&gt;</description></item><item><title>Oracle Certified Associate</title><link>https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/</link><pubDate>Fri, 04 Nov 2016 00:00:00 +0100</pubDate><guid>https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2016-11-04-oracle-certified-associate/media/oracle-certified-associate.png"
 width="1189"
 height="790"
-loading="lazy" alt="Mike Nakis - Oracle Certified Associate"
+loading="lazy"
+alt="Mike Nakis - Oracle Certified Associate"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="361px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;On November 4, 2016 I passed the &amp;quot;Java SE 8 Programmer I&amp;quot; exam and received the &amp;quot;Oracle Certified Associate&amp;quot; certification.&lt;/p&gt;
 &lt;p&gt;Here is the link to the certification:&lt;/p&gt;
 &lt;p&gt;&lt;a class="external"

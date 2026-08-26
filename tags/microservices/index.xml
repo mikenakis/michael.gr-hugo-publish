@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Microservices on Michael's Blog</title><link>https://blog.michael.gr/tags/microservices/</link><description>Recent content in Microservices on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 19:30:54 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/microservices/index.xml" rel="self" type="application/rss+xml"/><item><title>So, what is a Microservice, anyway?</title><link>https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/</link><pubDate>Thu, 14 Oct 2021 17:39:23 +0000</pubDate><guid>https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/media/microservices.svg"
 loading="lazy"
 &gt;
-This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly &lt;a
+This article attempts to shed some light on what a microservice really is; it is meant as support material for other posts of mine that discuss microservices, mainly &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
 &gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="what-is-a-microservice"&gt;What is a microservice?
@@ -29,7 +29,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;blockquote&gt;
 &lt;p&gt;From a purely technical standpoint, a microservice is a scalable and resilient module.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Further reading: &lt;a
+&lt;p&gt;Further reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-10-on-stateless-microservices/"
 &gt;On Stateless Microservices&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -49,13 +49,12 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;I did a quick search for the term &amp;quot;Stateful Microservice&amp;quot; and did not find anything concrete, so I thought I might as well publicly document my thoughts.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Almost everyone doing microservices today will tell you that microservices need to be stateless. In another article I explain that statelessness is not an end in and of itself; instead, it is just a means to an end. The desired technical ends are scalability and resilience, and statelessness is just one way of achieving them. Furthermore, I explain that statelessness in particular performs very badly, and is a very cowardly solution from an engineering standpoint. For details, please see &lt;a
+&lt;p&gt;Almost everyone doing microservices today will tell you that microservices need to be stateless. In another article I explain that statelessness is not an end in and of itself; instead, it is just a means to an end. The desired technical ends are scalability and resilience, and statelessness is just one way of achieving them. Furthermore, I explain that statelessness in particular performs very badly, and is a very cowardly solution from an engineering standpoint. For details, please see &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-10-on-stateless-microservices/"
 &gt;On Stateless Microservices&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;What remains to be shown is whether there exists an alternative.&lt;/p&gt;
@@ -70,7 +69,7 @@ href="https://blog.michael.gr/post/2021-10-on-stateless-microservices/"
 &lt;/ul&gt;
 &lt;p&gt;From the above it should be obvious that a stateful microservice is necessarily session-oriented, meaning that it requires a specific client to talk to. Session-agnostic stateful microservices already exist, and we do not think of them as anything special; they are microservices that implement caches, containing information that is pertinent to not just one client, but to all clients. These microservices are already scalable and resilient because a cache can be trivially duplicated to an arbitrary degree and it can also be destroyed and trivially re-created from scratch.&lt;/p&gt;
 &lt;p&gt;We now need to show how a stateful microservice can still be called a microservice.&lt;/p&gt;
-&lt;p&gt;In a previous post of mine I examined what a microservice really is, and I came to the conclusion that from a purely technical standpoint, it is simply a scalable and resilient module. (See &lt;a
+&lt;p&gt;In a previous post of mine I examined what a microservice really is, and I came to the conclusion that from a purely technical standpoint, it is simply a scalable and resilient module. (See &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
 &gt;So, what is a Microservice, anyway?&lt;/a&gt;) Even if you disagree with this definition, and you regard microservices as necessarily more than that, I hope you will at least agree that the purpose of statelessness in microservices is precisely to achieve scalability and resilience, so the definition of a microservice as a scalable and resilient module can serve as a working definition for the purposes of this discussion.&lt;/p&gt;
 &lt;p&gt;So, we need to show how stateful microservices can be scalable and resilient, just as their stateless counterparts are.&lt;/p&gt;
@@ -150,16 +149,15 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="67"
 data-flex-basis="161px"
-&gt;
-&lt;/p&gt;
-&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as support material for other posts of mine that discuss microservices, mainly &lt;a
+&gt;&lt;/p&gt;
+&lt;p&gt;This post discusses the stateless microservice design pattern; it is meant as support material for other posts of mine that discuss microservices, mainly &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
 &gt;The Stateful Microservice&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="is-statelessness-a-requirement-for-a-microservice"&gt;Is statelessness a requirement for a microservice?
-&lt;/h2&gt;&lt;p&gt;In another post (see &lt;a
+&lt;/h2&gt;&lt;p&gt;In another post (see &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
 &gt;So, what is a Microservice, anyway?&lt;/a&gt;) I examine what a microservice really is, and I come to the conclusion that from a purely technical standpoint, a working definition could be as simple as this:&lt;/p&gt;
 &lt;p&gt;A microservice is a scalable and resilient module.&lt;/p&gt;
@@ -196,7 +194,7 @@ href="https://blog.michael.gr/post/2021-10-so-what-is-microservice-anyway/"
 &lt;li&gt;Some use polling, meaning that each client keeps sending requests to the server at regular intervals asking whether there are any updates. This is wasteful, because each of these requests represents work that needs to be done, but very few of them will result in anything useful happening. At the same time, in order to reduce server load, the polling cannot be too frequent, which in turn means that there will always be a time lapse between the moment that an event occurs on the server and the moment that the clients take notice.&lt;/li&gt;
 &lt;li&gt;Some opt to have special stateful modules working side by side with the stateless microservices to handle the push notifications in a completely separate way, under the assumption that notifications are a kind of optional, &amp;quot;nice to have&amp;quot; thing anyway, so if performance suffers due to lack of scaling, or if service is interrupted due to lack of resilience, it will not hurt too much. On top of being clunky, this approach is also short-sighted because from the entire broad topic of server-initiated client updates it only considers the narrow case of updates being used for the sole purpose of on-screen notifications.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Further reading: &lt;a
+&lt;p&gt;Further reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-10-14-the-stateful-microservice/"
 &gt;The Stateful Microservice&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;

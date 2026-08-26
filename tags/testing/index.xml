@@ -5,8 +5,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="160"
 data-flex-basis="384px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Virtually everyone claims to be doing Unit Testing, but there is a surprising amount of disagreement as to how unit testing is defined. Let us see what the authorities on the subject have to say about it. What follows is mainly quotations from reputable sources, with some minimal commentary by me.&lt;/p&gt;
 &lt;h2 id="wikipedia"&gt;Wikipedia
 &lt;/h2&gt;&lt;p&gt;Let us begin by checking &lt;a class="external"
@@ -153,11 +152,10 @@ href="https://www.infoq.com/presentations/tdd-original/" target="_blank"
 &lt;hr&gt;
 &lt;p&gt;Cover image: Created by michael.gr using ChatGPT, and then retouched to remove imperfections. The prompt used was: &amp;quot;Please give me an image of a crash test dummy in the style of The Thinker, by Auguste Rodin.&amp;quot;&lt;/p&gt;</description></item><item><title>Testana: A better way of running tests</title><link>https://blog.michael.gr/post/2024-10-testana/</link><pubDate>Sat, 26 Oct 2024 10:58:59 +0000</pubDate><guid>https://blog.michael.gr/post/2024-10-testana/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-10-testana/media/testana-logo.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;A software testing tool is presented, which uses &lt;em&gt;&lt;strong&gt;dependency analysis&lt;/strong&gt;&lt;/em&gt; to greatly optimize the process of running tests.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="what-is-testana"&gt;What is Testana?
@@ -208,7 +206,7 @@ at the root of the source tree, and is also meant to be excluded from source con
 &lt;/h2&gt;&lt;p&gt;Existing test frameworks do not do anything intelligent in the direction of automatically figuring out some order of test execution that has any purpose or merit. The order tends to be arbitrary, and not configurable. In the best case it is alphabetic, but this is still problematic, because our criteria for naming test modules usually have nothing to do with the order in which we would like to see them executing.&lt;/p&gt;
 &lt;p&gt;For example, it is very common for a code base to contain a module called &amp;quot;Utilities&amp;quot;, which most other modules depend on; Since it is a highly dependent-upon module, it should be tested first, but since its name begins with a &amp;quot;U&amp;quot;, it tends to be tested last.&lt;/p&gt;
 &lt;p&gt;Testana executes test modules in order of dependency. This means that modules with no dependencies are tested first, modules that depend upon them are tested next, and so on until everything has been tested. Thus, the first test failure is guaranteed to point at the most fundamental problem; there is no need to look further down in case some other test failure indicates a more fundamental problem. Subsequently, Testana stops executing tests after the first failure, so it saves even more time.&lt;/p&gt;
-&lt;p&gt;For more information about this way of testing, see &lt;a
+&lt;p&gt;For more information about this way of testing, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="why-should-i-care-about-running-test-methods-in-natural-order"&gt;Why should I care about running test methods in natural order?
@@ -217,7 +215,7 @@ href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;p&gt;Tests of operations that rely upon an operation whose test has failed might as well be skipped, because they can all be expected to fail. Reporting those failures before the failure of the more fundamental operation is an act of sabotage against the developer, because it is sending us looking for problems in places where there are no problems to be found, and it is making it more difficult for us to locate the real problem, which typically lies in the test that failed first &lt;em&gt;&lt;strong&gt;in the source file&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;To give an example, suppose I am developing some kind of data store with insert and find functionality, and I am writing tests to make sure this functionality works. The find-item-in-store test necessarily involves insertion before finding, so I am likely to precede it with an insert-item-to-store test. In such a scenario, it is counter-productive to be told that my find-item-in-store test failed, sending me to troubleshoot the find function, and only later to be told that my insert-item-to-store test failed, which obviously means that it was in fact the insert function that needed troubleshooting; if insert-item-to-store fails, it is game over; no other operation on this store can possibly succeed, so there is no point in running any other tests on it, just as there is no point in beating a dead horse.&lt;/p&gt;
 &lt;p&gt;Finally, another very simple, very straightforward, and very important reason for wanting the test methods to be executed in natural order is because seeing the test methods listed in any other order is &lt;em&gt;&lt;strong&gt;brainfuck&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;A related rant can be found here: &lt;a
+&lt;p&gt;A related rant can be found here: &lt;a class="internal"
 href="https://blog.michael.gr/post/2018-04-random-order-of-tests/"
 &gt;On JUnit's random order of test method execution&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="why-should-i-care-for-running-test-methods-in-ascending-order-of-inheritance"&gt;Why should I care for running test methods in ascending order of inheritance?
@@ -233,7 +231,7 @@ href="https://blog.michael.gr/post/2018-04-random-order-of-tests/"
 &lt;h2 id="can-testana-be-fooled-by-inversion-of-control"&gt;Can Testana be fooled by Inversion of Control?
 &lt;/h2&gt;&lt;p&gt;No. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, the test of A still has to instantiate both A and B in order to supply A with the I interface of B, so the test depends on both A and B, which means that Testana will run the test if there is a change in either A or B.&lt;/p&gt;
 &lt;h2 id="can-testana-be-fooled-by-the-use-of-mocks"&gt;Can Testana be fooled by the use of mocks?
-&lt;/h2&gt;&lt;p&gt;Yes, Testana can be fooled by mocks, because that is what mocks do: they make a mockery out of the software testing process. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, and the test of A also refrains from depending on B by just mocking I, Testana will of course not run the test of A when there is a change in B. This, however, should not be a problem, because you should not be using mocks anyway; for more information, see &lt;a
+&lt;/h2&gt;&lt;p&gt;Yes, Testana can be fooled by mocks, because that is what mocks do: they make a mockery out of the software testing process. In a scenario where class A receives and invokes interface I without having a dependency on class B which implements I, and the test of A also refrains from depending on B by just mocking I, Testana will of course not run the test of A when there is a change in B. This, however, should not be a problem, because you should not be using mocks anyway; for more information, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-14-mocking/"
 &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="can-testana-be-fooled-by-the-use-of-fakes"&gt;Can Testana be fooled by the use of fakes?
@@ -242,7 +240,7 @@ href="https://blog.michael.gr/post/2023-01-14-mocking/"
 &lt;li&gt;If you make a breaking change to the real thing, then your tests will show you that you need to make the corresponding change to the fake; the change in the fake will in turn cause Testana to run the tests that utilize the fake.&lt;/li&gt;
 &lt;li&gt;If you make a non-breaking change to the real thing, then the fake will remain unchanged, and this is what gives you the luxury of not having to re-run tests utilizing the fake when you make a change that only affects the real thing.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;For more information, see &lt;a
+&lt;p&gt;For more information, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="what-about-undiscoverable-dependencies-due-to-weak-typing-the-use-of-rest-etc"&gt;What about undiscoverable dependencies due to weak typing, the use of REST, etc?
@@ -255,7 +253,7 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;li&gt;Abnegating dependencies via &lt;em&gt;&lt;strong&gt;non-programmatic interfaces&lt;/strong&gt;&lt;/em&gt; such as REST.&lt;/li&gt;
 &lt;li&gt;Fragmenting dependencies via &lt;em&gt;&lt;strong&gt;cross-language invocations&lt;/strong&gt;&lt;/em&gt; (following the &lt;em&gt;&lt;strong&gt;polyglot craze&lt;/strong&gt;&lt;/em&gt;.)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Seriously, stop all this fuckery and use a single, &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt; programming language, (that is, a programming language with &lt;em&gt;&lt;strong&gt;strong typing&lt;/strong&gt;&lt;/em&gt;,) encode your dependencies via the type system, and everything will be fine. For more information, see &lt;a
+&lt;p&gt;Seriously, stop all this fuckery and use a single, &lt;em&gt;&lt;strong&gt;real&lt;/strong&gt;&lt;/em&gt; programming language, (that is, a programming language with &lt;em&gt;&lt;strong&gt;strong typing&lt;/strong&gt;&lt;/em&gt;,) encode your dependencies via the type system, and everything will be fine. For more information, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2017-05-on-scripting-languages/"
 &gt;On Scripting Languages&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="how-compatible-is-testana-with-what-i-already-have"&gt;How compatible is Testana with what I already have?
@@ -313,11 +311,10 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="172"
 data-flex-basis="413px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;In this paper I put forth the proposition that contrary to popular belief, 100% code coverage can be a very advantageous thing to have, and I discuss a couple of techniques for achieving it without excessive effort.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;The problem
@@ -366,11 +363,11 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;li&gt;It does not always represent the best value for money.
 (You only want to be writing tests for code that is important enough to warrant testing.)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;If you decide to write a test, you can still minimize the effort of doing so, by utilizing certain techniques that I talk about in other posts, such as &lt;a
+&lt;p&gt;If you decide to write a test, you can still minimize the effort of doing so, by utilizing certain techniques that I talk about in other posts, such as &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
-&gt;Approval Testing&lt;/a&gt;, &lt;a
+&gt;Approval Testing&lt;/a&gt;, &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
-&gt;Testing with Fakes instead of Mocks&lt;/a&gt;, and &lt;a
+&gt;Testing with Fakes instead of Mocks&lt;/a&gt;, and &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id="selective-exclusion"&gt;Selective Exclusion
@@ -383,7 +380,7 @@ href="https://learn.microsoft.com/en-us/dotnet/api/system.diagnostics.codeanalys
 &gt;the ExcludeFromCodeCoverage attribute&lt;/a&gt;, found in the &lt;code&gt;System.Diagnostics.CodeAnalysis&lt;/code&gt; namespace.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;In the Java world, IntelliJ IDEA offers a setting for specifying what annotation we want to use for marking methods to be excluded from code coverage, so we can use any annotation we like. (See &lt;a
+&lt;p&gt;In the Java world, IntelliJ IDEA offers a setting for specifying what annotation we want to use for marking methods to be excluded from code coverage, so we can use any annotation we like. (See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-12-intellij-idea-can-now-exclude-methods/"
 &gt;IntelliJ IDEA can now exclude methods from code coverage&lt;/a&gt;.)&lt;/p&gt;
 &lt;/li&gt;
@@ -479,11 +476,10 @@ href="https://en.wikipedia.org/wiki/Box-drawing_character" target="_blank"
 href="https://unsplash.com/@teapowered" target="_blank"
 &gt;Patrick Robert Doyle from Unsplash&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Approval Testing</title><link>https://blog.michael.gr/post/2024-04-approval-testing/</link><pubDate>Fri, 09 Feb 2024 14:55:40 +0000</pubDate><guid>https://blog.michael.gr/post/2024-04-approval-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-04-approval-testing/media/approval-testing.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;An automated software testing technique is presented which spares us from having to stipulate our expectations in test code, and from having to go fixing test code each time our expectations change.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-problem"&gt;The Problem
@@ -549,7 +545,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Other external factors.&lt;/p&gt;
-&lt;p&gt;User names, computer names, file creation times, IP addresses resolved from DNS, etc. must either be prevented from finding their way into the test output file, or they must be faked when running tests. Fake your file-system; fake The Internet if necessary. For more information about faking stuff, see &lt;a
+&lt;p&gt;User names, computer names, file creation times, IP addresses resolved from DNS, etc. must either be prevented from finding their way into the test output file, or they must be faked when running tests. Fake your file-system; fake The Internet if necessary. For more information about faking stuff, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
@@ -618,11 +614,10 @@ href="https://www.youtube.com/watch?v=5H2s1knHUlA" target="_blank"
 &lt;hr&gt;
 &lt;p&gt;Cover image: &amp;quot;Approval Testing&amp;quot; by michael.gr.&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/mocking.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;The practice of using Mock Objects in automated software testing is examined from a critical point of view and found to be highly problematic. Opinions of some well known industry speakers are cited. The supposed benefits of Mock Objects are shown to be either no real benefits, or achievable via alternative means.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h1 id="introduction"&gt;Introduction
@@ -709,17 +704,17 @@ href="https://www.youtube.com/watch?v=EZ05e7EMOLM" target="_blank"
 &lt;ul&gt;
 &lt;li&gt;Mocking achieves defect localization by eliminating collaborators from the picture and allowing components to be tested in strict isolation from each other.
 &lt;ul&gt;
-&lt;li&gt;Defect localization is useful, but it is not an absolute necessity, and it does not have to be done to absolute perfection as mocking aims to do; we can achieve more than good enough defect localization by testing each component in integration with its collaborators, simply by arranging the order in which tests are executed to ensure that by the time a component gets tested, all of its collaborators have already passed their tests. See &lt;a
+&lt;li&gt;Defect localization is useful, but it is not an absolute necessity, and it does not have to be done to absolute perfection as mocking aims to do; we can achieve more than good enough defect localization by testing each component in integration with its collaborators, simply by arranging the order in which tests are executed to ensure that by the time a component gets tested, all of its collaborators have already passed their tests. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows a component to be tested without the performance overhead of instantiating and invoking its real collaborators.
 &lt;ul&gt;
-&lt;li&gt;The performance overhead of instantiating and invoking the real collaborators is not always prohibitive, or even noticeable, so in many cases it is perfectly fine to test a component in integration with its real collaborators. See &lt;a
+&lt;li&gt;The performance overhead of instantiating and invoking the real collaborators is not always prohibitive, or even noticeable, so in many cases it is perfectly fine to test a component in integration with its real collaborators. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;In the limited number of cases where the performance overhead is indeed prohibitive, it can be avoided with the use of Fakes instead of Mocks. See &lt;a
+&lt;li&gt;In the limited number of cases where the performance overhead is indeed prohibitive, it can be avoided with the use of Fakes instead of Mocks. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -728,32 +723,32 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;ul&gt;
 &lt;li&gt;In most cases, examining the invocations made by the component-under-test to its collaborators is in fact bad practice, because it constitutes white-box testing. The only reason why this is being widely practiced in the industry is because mocking does not work otherwise, so in this regard mocking contains a certain element of a self-serving paradigm.&lt;/li&gt;
 &lt;li&gt;In those rare cases where examining the invocations is in fact necessary, it is still bad practice to do so programmatically, because it results in tests that are over-specified and fragile.&lt;/li&gt;
-&lt;li&gt;What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See &lt;a
+&lt;li&gt;What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
-&gt;Approval Testing&lt;/a&gt; and &lt;a
+&gt;Approval Testing&lt;/a&gt; and &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to fabricate the results returned from a collaborator to the component-under-test, so as to guarantee that they are free from defects that could be caused by bugs in the implementation of the real collaborator.
 &lt;ul&gt;
-&lt;li&gt;Fabricating the results that would have been returned by a real collaborator is in fact bad practice, because it will not magically make any bugs go away, (in this sense it can be likened to ostrich policy,) and because as I have already explained, it is highly presumptuous. The definitive authority on what results are returned by a certain collaborator is the real implementation of that collaborator, or a fake thereof, which in turn necessitates integration testing. See &lt;a
+&lt;li&gt;Fabricating the results that would have been returned by a real collaborator is in fact bad practice, because it will not magically make any bugs go away, (in this sense it can be likened to ostrich policy,) and because as I have already explained, it is highly presumptuous. The definitive authority on what results are returned by a certain collaborator is the real implementation of that collaborator, or a fake thereof, which in turn necessitates integration testing. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to verify the correctness of components that generate their output by means of forwarding results to collaborators rather than by returning results from invocations.
 &lt;ul&gt;
-&lt;li&gt;Even in this case, &lt;em&gt;Collaboration Monitoring&lt;/em&gt; can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See &lt;a
+&lt;li&gt;Even in this case, &lt;em&gt;Collaboration Monitoring&lt;/em&gt; can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
-&gt;Approval Testing&lt;/a&gt; and &lt;a
+&gt;Approval Testing&lt;/a&gt; and &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to start testing a component while one or more of its collaborators are not ready yet for integration because they are still in development, and no fakes of them are available either.
 &lt;ul&gt;
-&lt;li&gt;This is true, but once the collaborators (or fakes thereof) become available, it is best to integrate them in the tests, and to unceremoniously throw away the mocks. See &lt;a
+&lt;li&gt;This is true, but once the collaborators (or fakes thereof) become available, it is best to integrate them in the tests, and to unceremoniously throw away the mocks. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -761,7 +756,7 @@ href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;li&gt;Mocking allows us to develop a component without depending on factors that we have no control over, such as the time of delivery of collaborators, the quality of their implementation, and the quality of their testing. With the use of Mocks we can claim that our component is complete and fully tested, based on nothing but the specification of its collaborators, and we can claim that it should work fine in integration with its collaborators when they happen to be delivered, and if they happen to work according to spec.
 &lt;ul&gt;
 &lt;li&gt;True, but this implies a very bureaucratic way of working, and utter lack of trust towards the developers of the collaborators; it is best if it never comes to that.&lt;/li&gt;
-&lt;li&gt;We can still avoid the use of mocks by creating fakes of the collaborators ourselves. See &lt;a
+&lt;li&gt;We can still avoid the use of mocks by creating fakes of the collaborators ourselves. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -769,15 +764,15 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;/ul&gt;
 &lt;p&gt;To summarize, mocks can always be replaced with one or more of the following:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Fakes (see &lt;a
+&lt;li&gt;Fakes (see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a
+&lt;li&gt;&lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a
+&lt;li&gt;&lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
-&gt;Approval Testing&lt;/a&gt; and &lt;a
+&gt;Approval Testing&lt;/a&gt; and &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -793,8 +788,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="77"
 data-flex-basis="186px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -813,11 +807,10 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
 data-flex-basis="480px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;An automated software testing technique is presented which solves the fragile test problem of white-box testing by allowing us to ensure that the component-under-test interacts with its collaborators according to our expectations without having to stipulate our expectations as test code, without having the tests fail each time our expectations change, and without having to go fixing test code each time this happens.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="summary"&gt;Summary
@@ -843,7 +836,7 @@ href="https://xunitpatterns.com/Fragile%20Test.html" target="_blank"
 &lt;li&gt;In high-criticality software, which is all about safety, not only the requirements must be met, but also nothing must be left to chance. Thus, the cost of white-box testing is justified, and the goal is in fact to ensure that the component-under-test not only produces correct results, but also that while doing so, it interacts with its collaborators as expected.&lt;/li&gt;
 &lt;li&gt;In reactive programming, the component-under-test does not produce output by returning results from function calls; instead, it produces output by forwarding results to collaborators. Thus, even if all we want to do is to ascertain the correctness of the component's output, we have to examine how it interacts with its collaborators, because that is the only way to observe its output.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The prevalent mechanism by which the Software Industry achieves Collaboration Validation today is Mock Objects. As I argue elsewhere, (see &lt;a
+&lt;p&gt;The prevalent mechanism by which the Software Industry achieves Collaboration Validation today is Mock Objects. As I argue elsewhere, (see &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-14-mocking/"
 &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;) the use of mocks is generally ill-advised due to various reasons, but with respect to Collaboration Validation in specific, the problem with mocks is that their use is extremely laborious:&lt;/p&gt;
 &lt;ul&gt;
@@ -864,7 +857,7 @@ href="https://blog.michael.gr/post/2023-01-14-mocking/"
 &lt;li&gt;Each time we modify some code and run the tests, we want to be able to see what has changed in the interactions as a result of only those modifications, so that we do not have to pore through long lists of irrelevant interactions, and so that no information gets lost in the noise.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;To achieve this, I use a technique that I call Collaboration Monitoring.&lt;/p&gt;
-&lt;p&gt;Collaboration Monitoring is based on another testing technique called Approval Testing, so it might be a good idea to read the related paper before proceeding: &lt;a
+&lt;p&gt;Collaboration Monitoring is based on another testing technique called Approval Testing, so it might be a good idea to read the related paper before proceeding: &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &gt;Approval Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Let us assume that we have a component that we want to test, which invokes interface T as part of its job. In order to test the component, we have to wire it with a collaborator that implements T. For this, we can use either the real collaborator that would be wired in the production environment, or a Fake thereof. Regardless of what we choose, we have a very simple picture which looks like this:&lt;/p&gt;
@@ -875,10 +868,9 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="570"
 data-flex-basis="1368px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Note that with this setup we can exercise the component-under-test as a black-box, but we cannot yet observe how it interacts with its collaborator.&lt;/p&gt;
-&lt;p&gt;In order to observe how the component-under-test interacts with its collaborator, we interject between the two of them a new component, called a &lt;em&gt;&lt;strong&gt;Collaboration Monitor&lt;/strong&gt;&lt;/em&gt;, which is a decorator of T. The purpose of this Collaboration Monitor is to record into a text file information about each function call that passes through it. The text file is called a &lt;em&gt;&lt;strong&gt;Snoop File&lt;/strong&gt;&lt;/em&gt;, and it is a special form of &lt;em&gt;&lt;strong&gt;test output file&lt;/strong&gt;&lt;/em&gt;. (See &lt;a
+&lt;p&gt;In order to observe how the component-under-test interacts with its collaborator, we interject between the two of them a new component, called a &lt;em&gt;&lt;strong&gt;Collaboration Monitor&lt;/strong&gt;&lt;/em&gt;, which is a decorator of T. The purpose of this Collaboration Monitor is to record into a text file information about each function call that passes through it. The text file is called a &lt;em&gt;&lt;strong&gt;Snoop File&lt;/strong&gt;&lt;/em&gt;, and it is a special form of &lt;em&gt;&lt;strong&gt;test output file&lt;/strong&gt;&lt;/em&gt;. (See &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &gt;Approval Testing&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Thus, we now have the following picture:&lt;/p&gt;
@@ -889,15 +881,14 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="294"
 data-flex-basis="706px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;The information that the Collaboration Monitor saves for each function call includes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The name of the function.&lt;/li&gt;
 &lt;li&gt;A serialization of the value of each parameter that was passed to the function.&lt;/li&gt;
 &lt;li&gt;A serialization of the return value of the function.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As dictated by &lt;a
+&lt;p&gt;As dictated by &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &gt;Approval Testing&lt;/a&gt;, the Snoop File is saved in the source code tree, right next to the source code file of the test that generated it, and gets committed into the Source Code Repository / Version Control System along with the source code. For example, if we have &lt;code&gt;SuchAndSuchTest.java&lt;/code&gt;, then after running the tests for the first time we will find a &lt;code&gt;SuchAndSuchTest.snoop&lt;/code&gt; file right next to it. We can examine this file to ensure that the component-under-test interacted with the collaborator exactly as expected.&lt;/p&gt;
 &lt;p&gt;As we continue developing our system, the modifications that we make to the code will sometimes have no effect on how collaborators interact with each other, and sometimes will cause the collaborators to start interacting differently. Thus, as we continue running our tests while developing our system, we will be observing the following:&lt;/p&gt;
@@ -905,7 +896,7 @@ href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &lt;li&gt;For as long as the collaborations continue in exactly the same way, the contents of the Snoop Files remain unchanged, despite the fact that the files are re-generated on each test run.&lt;/li&gt;
 &lt;li&gt;As soon as some collaborations change, the contents of some Snoop Files will change.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;As per &lt;a
+&lt;p&gt;As per &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &gt;Approval Testing&lt;/a&gt;, we can then leverage our Version Control System and our Integrated Development Environment to take care of the rest of the workflow, as follows:&lt;/p&gt;
 &lt;ul&gt;
@@ -915,15 +906,15 @@ href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &lt;li&gt;When we are confident that the differences in the interactions are exactly as expected according to the changes that we made to the code, we commit our revision, along with the Snoop Files.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="what-about-code-review"&gt;What about code review?
-&lt;/h2&gt;&lt;p&gt;As per &lt;a
+&lt;/h2&gt;&lt;p&gt;As per &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &gt;Approval Testing&lt;/a&gt;, the reviewer is able to see both the changes in the code, and the corresponding changes in the Snoop Files, and vouch for them, or not, as the case might be.&lt;/p&gt;
 &lt;h2 id="requirements"&gt;Requirements
-&lt;/h2&gt;&lt;p&gt;For Collaboration Monitoring to work, snoop files must be free from non-deterministic noise, and it is best if they are also free from deterministic noise. For more information about these types of noise and what you can do about them, see &lt;a
+&lt;/h2&gt;&lt;p&gt;For Collaboration Monitoring to work, snoop files must be free from non-deterministic noise, and it is best if they are also free from deterministic noise. For more information about these types of noise and what you can do about them, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &gt;Approval Testing&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="automation"&gt;Automation
-&lt;/h2&gt;&lt;p&gt;When using languages like Java and C# which support reflection and intermediate code generation, we do not have to write Collaboration Monitors by hand; we can instead create a facility which will be automatically generating them for us on demand, at runtime. Such a facility can be very easily written with the help of Intertwine (see &lt;a
+&lt;/h2&gt;&lt;p&gt;When using languages like Java and C# which support reflection and intermediate code generation, we do not have to write Collaboration Monitors by hand; we can instead create a facility which will be automatically generating them for us on demand, at runtime. Such a facility can be very easily written with the help of Intertwine (see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-12-intertwine/"
 &gt;Intertwine&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Using Intertwine, we can create a Collaboration Monitor for any interface T. Such a Collaboration Monitor works as follows:&lt;/p&gt;
@@ -1008,7 +999,7 @@ wrong:
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id="conclusion"&gt;Conclusion
-&lt;/h2&gt;&lt;p&gt;Collaboration Monitoring is an adaptation of &lt;a
+&lt;/h2&gt;&lt;p&gt;Collaboration Monitoring is an adaptation of &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
 &gt;Approval Testing&lt;/a&gt; which allows the developer to write black-box tests which only exercise the public interface of the component-under-test, while remaining confident that the component interacts with its collaborators inside the black box according to their expectations, without having to write white-box testing code to stipulate the expectations, and without having to modify white-box testing code each time the expectations change.&lt;/p&gt;
 &lt;hr&gt;
@@ -1023,12 +1014,11 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
 data-flex-basis="480px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;What are &lt;em&gt;fakes&lt;/em&gt;, what are their benefits, and why they are incontestably preferable over &lt;em&gt;mocks&lt;/em&gt;. Also, how to create fakes if needed.&lt;/p&gt;
 &lt;h2 id="introduction"&gt;Introduction
-&lt;/h2&gt;&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;/h2&gt;&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;When testing a component it is often necessary to refrain from connecting it with the real collaborators that it would be connected with in a production environment, and instead to connect it with special substitutes of its collaborators, also known as &lt;em&gt;test doubles&lt;/em&gt;, which are more suitable for testing than the real ones.&lt;/p&gt;
@@ -1037,7 +1027,7 @@ href="https://xunitpatterns.com/" target="_blank"
 &gt;xunitpatterns.com&lt;/a&gt;) though I first read about them from &lt;a class="external"
 href="https://martinfowler.com/bliki/TestDouble.html" target="_blank"
 &gt;martinfowler.com - TestDouble&lt;/a&gt;, which refers to Meszaros as the original source.&lt;/p&gt;
-&lt;p&gt;There exist a few different kinds of test doubles; by far the most commonly used kind is mocks, which, as I explain elsewhere, are a very bad idea and should be avoided like COVID-19. (See &lt;a
+&lt;p&gt;There exist a few different kinds of test doubles; by far the most commonly used kind is mocks, which, as I explain elsewhere, are a very bad idea and should be avoided like COVID-19. (See &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-14-mocking/"
 &gt;If you are using mock objects you are doing it wrong&lt;/a&gt;.) Another kind of test double, which does not suffer from the disadvantages of mocks, is &lt;em&gt;&lt;strong&gt;Fake Objects&lt;/strong&gt;&lt;/em&gt;, or simply &lt;em&gt;&lt;strong&gt;fakes&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id="what-are-fakes"&gt;What are fakes
@@ -1159,7 +1149,7 @@ it,) so:&lt;/li&gt;
 &lt;li&gt;In either case, a single change in the real thing will generally require a single corresponding change in the fake, whereas if we are using mocks we invariably have to go changing an arbitrary number of mocking snippets scattered throughout the tests.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Furthermore, the use of fakes instead of mocks promotes the creation of black-box tests instead of white-box tests. Once we get into the habit of writing all of our tests as black-box tests, new possibilities open up which greatly ease the development of fakes: we can now write a test for a certain module, and then reuse that test in order to test its fake. The test can be reused because it is a black-box test, so it does not care how the module works internally, therefore it can test the real thing just as well as the fake of the real thing. Once we run the test on the real thing, we run the same test on the fake, and if both pass, then from that moment on we can continue using the fake in place of the real thing in all other tests.&lt;/p&gt;
-&lt;p&gt;The tests that exercise the real thing will be slow, but the real thing does not change very often, (if ever,) so here is where a testing tool like Testana shines: by using Testana we ensure that the tests exercising the real thing will only run in the rare event that the real thing actually changes. For more information about Testana, see &lt;a
+&lt;p&gt;The tests that exercise the real thing will be slow, but the real thing does not change very often, (if ever,) so here is where a testing tool like Testana shines: by using Testana we ensure that the tests exercising the real thing will only run in the rare event that the real thing actually changes. For more information about Testana, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-10-testana/"
 &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="faking-external-components"&gt;Faking external components
@@ -1178,7 +1168,7 @@ loading="lazy"
 &gt;
 Let me get one thing out of the way first: I am open to Test-Driven Development (TDD). I am not currently practicing it, because when I gave it a try some time ago it did not seem to resonate with me, but I do not have any objections to it in principle, so I might give it another try in the future. Let us just say that it was not love at first sight, but then again some relationships do take some time to warm up.&lt;/p&gt;
 &lt;p&gt;Having said that, let me now express a few reasons why I am skeptical of TDD. The previous paragraph should have established that I am not trashing TDD, I am just expressing some reservations.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Reasons why I am skeptical of TDD:&lt;/p&gt;
@@ -1215,11 +1205,10 @@ href="https://github.com/johnousterhout/aposd-vs-clean-code?tab=readme-ov-file#t
 &lt;hr&gt;
 &lt;p&gt;Cover image: Conceptual illustration of Test-Driven Development, by michael.gr&lt;/p&gt;</description></item><item><title>Incremental Integration Testing</title><link>https://blog.michael.gr/post/2022-10-incremental-integration-testing/</link><pubDate>Tue, 14 Dec 2021 09:07:09 +0000</pubDate><guid>https://blog.michael.gr/post/2022-10-incremental-integration-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-10-incremental-integration-testing/media/incremental_integration_testing.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;A new method for &lt;em&gt;&lt;strong&gt;Automated Software Testing&lt;/strong&gt;&lt;/em&gt; is presented as an alternative to &lt;em&gt;&lt;strong&gt;Unit Testing&lt;/strong&gt;&lt;/em&gt;. The new method retains the benefit of Unit Testing, which is &lt;em&gt;&lt;strong&gt;Defect Localization&lt;/strong&gt;&lt;/em&gt;, but eliminates white-box testing and mocking, thus greatly lessening the effort of writing and maintaining tests.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="summary"&gt;Summary
@@ -1376,7 +1365,7 @@ com.acme.T03_charlie_depends_on_alpha_tests&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;No testing framework that I know of (JUnit, MSTest, etc.) is capable of doing the above; for this reason, I have developed a utility which I call &lt;em&gt;&lt;strong&gt;Testana&lt;/strong&gt;&lt;/em&gt;, that does exactly that.&lt;/p&gt;
-&lt;p&gt;Testana will analyze a system to discover its structure, will analyze modules to discover dependencies and tests, and will run the tests in the right order so as to achieve Incremental Integration Testing. It will also do a few other nice things, like keep track of last successful test runs, and examine timestamps, so as to refrain from running tests whose dependencies have not changed since the last successful test run. For more information, see &lt;a
+&lt;p&gt;Testana will analyze a system to discover its structure, will analyze modules to discover dependencies and tests, and will run the tests in the right order so as to achieve Incremental Integration Testing. It will also do a few other nice things, like keep track of last successful test runs, and examine timestamps, so as to refrain from running tests whose dependencies have not changed since the last successful test run. For more information, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-10-testana/"
 &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="what-if-my-dependencies-are-not-discoverable"&gt;What if my dependencies are not discoverable?
@@ -1395,7 +1384,7 @@ href="https://blog.michael.gr/post/2024-10-testana/"
 &lt;li&gt;When collaborators are replaced with Mocks, the tests tend to be fast.&lt;/li&gt;
 &lt;li&gt;When actual collaborators are integrated, such as file systems, relational database management systems, messaging queues, and what not, the tests can become very slow.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;To address the performance issue I recommend the use of &lt;em&gt;&lt;strong&gt;Fakes&lt;/strong&gt;&lt;/em&gt;, not Mocks. For an explanation of what Fakes are, and why they are incontestably preferable over Mocks, please read &lt;a
+&lt;p&gt;To address the performance issue I recommend the use of &lt;em&gt;&lt;strong&gt;Fakes&lt;/strong&gt;&lt;/em&gt;, not Mocks. For an explanation of what Fakes are, and why they are incontestably preferable over Mocks, please read &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;By supplying a component under test with a Fake instead of a Mock we benefit from great performance, while utilizing a collaborator which has already been tested by its creators and can be reasonably assumed to be free of defects. In doing so, we continue to avoid White-Box Testing and we keep defects localized.&lt;/p&gt;
@@ -1408,7 +1397,7 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;h2 id="benefits-of-incremental-integration-testing"&gt;Benefits of Incremental Integration Testing
 &lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;It greatly reduces the effort of writing and maintaining tests, by eliminating the need for mocking code in each test.&lt;/li&gt;
-&lt;li&gt;It allows our tests to engage in Black-Box Testing instead of White-Box Testing. For an in-depth discussion of what is wrong with White-Box Testing, see &lt;a
+&lt;li&gt;It allows our tests to engage in Black-Box Testing instead of White-Box Testing. For an in-depth discussion of what is wrong with White-Box Testing, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-12-white-box-vs-black-box-testing/"
 &gt;White-Box vs. Black-Box Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;It makes tests more effective and accurate, by eliminating assumptions about the behavior of the real collaborators.&lt;/li&gt;
@@ -1448,7 +1437,7 @@ href="https://en.wikipedia.org/wiki/Ostrich_policy" target="_blank"
 &lt;p&gt;With Unit Testing, you can ensure that a certain module not only produces the right results, but also that it follows an expected sequence of steps to produce those results. With Incremental Integration Testing you cannot observe the steps, you can only check the results. Thus, the internal workings of a component might be slightly wrong, or less than ideal, and you would never know.&lt;/p&gt;
 &lt;p&gt;Counter-arguments:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;This is true, and this is why Incremental Integration Testing might be unsuitable for high-criticality software, where White-Box Testing is the explicit intention, since it is necessary to ensure not only that the software produces correct results, but also that its internals are working exactly according to plan. However, Incremental Integration Testing is not being proposed as a perfect solution, it is being proposed as a pragmatic solution: the vast majority of software being developed in the world is regular, commercial-grade, non-high-criticality software, where Black-Box Testing is appropriate and sufficient, since all that matters is that the requirements be met. Essentially, Incremental Integration Testing represents the realization that in the general case, tests which worry not only about the behavior, but also about the inner workings of a component, constitute over-engineering. For a more in-depth discussion about this, please read &lt;a
+&lt;li&gt;This is true, and this is why Incremental Integration Testing might be unsuitable for high-criticality software, where White-Box Testing is the explicit intention, since it is necessary to ensure not only that the software produces correct results, but also that its internals are working exactly according to plan. However, Incremental Integration Testing is not being proposed as a perfect solution, it is being proposed as a pragmatic solution: the vast majority of software being developed in the world is regular, commercial-grade, non-high-criticality software, where Black-Box Testing is appropriate and sufficient, since all that matters is that the requirements be met. Essentially, Incremental Integration Testing represents the realization that in the general case, tests which worry not only about the behavior, but also about the inner workings of a component, constitute over-engineering. For a more in-depth discussion about this, please read &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-12-white-box-vs-black-box-testing/"
 &gt;White-Box vs. Black-Box Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;In order to make sure that everything is happening as expected under the hood, you do not have to stipulate in excruciating detail what should be happening, you do not have to fail the tests at the slightest sign of deviation from what was expected, and you do not have to go fixing tests each time the expectations change. Another way of ensuring the same thing is to simply:
@@ -1457,7 +1446,7 @@ href="https://blog.michael.gr/post/2021-12-white-box-vs-black-box-testing/"
 &lt;li&gt;Be notified when something different starts happening.&lt;/li&gt;
 &lt;li&gt;Visually examine what is now different.&lt;/li&gt;
 &lt;li&gt;Vouch for the differences being as expected.
-For more details about this, see &lt;a
+For more details about this, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1471,7 +1460,7 @@ href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &lt;ul&gt;
 &lt;li&gt;Picking an individual test and running it is meaningless under all scenarios. It is usually done in the interest of saving time, but it is based on the assumption that we know what tests have been affected by the changes we just made to the source code. This is never a safe assumption to make.&lt;/li&gt;
 &lt;li&gt;Instead of picking an individual test and running it, we need a way to automatically run all tests that have been affected by the changes we just made, which requires knowledge of the dependency graph of the system.&lt;/li&gt;
-&lt;li&gt;If you are unsure as to exactly what you just changed, and exactly what depends on it, then consider using a tool like Testana, which figures all this out for you. See &lt;a
+&lt;li&gt;If you are unsure as to exactly what you just changed, and exactly what depends on it, then consider using a tool like Testana, which figures all this out for you. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-10-testana/"
 &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1482,7 +1471,7 @@ href="https://blog.michael.gr/post/2024-10-testana/"
 &lt;p&gt;Counter-arguments:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;My intention is to show the way; if people see the way, the tools will come.&lt;/li&gt;
-&lt;li&gt;I have already built such a tool which is compatible with some combinations of programming languages, build systems, and testing frameworks; see &lt;a
+&lt;li&gt;I have already built such a tool which is compatible with some combinations of programming languages, build systems, and testing frameworks; see &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-10-testana/"
 &gt;Testana: A better way of running tests&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Even in lack of tools, it is possible to start experimenting with Incremental Integration Testing today by following the poor-man's approach, which consists of simply naming the tests, and the directories in which they reside, in such a way that your existing testing framework will run them in the right order. This is described in the &amp;quot;poor man's approach&amp;quot; section of this paper.&lt;/li&gt;
@@ -1501,15 +1490,14 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="250"
 data-flex-basis="600px"
-&gt;
-&lt;/a&gt;&lt;/p&gt;
+&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I have something blasphemous to tell you.&lt;/p&gt;
 &lt;p&gt;Unit Testing is wrong.&lt;/p&gt;
 &lt;p&gt;There, I said it.&lt;/p&gt;
 &lt;p&gt;I know I just insulted most people's sacred cow.&lt;/p&gt;
 &lt;p&gt;Sorry, not sorry.&lt;/p&gt;
 &lt;p&gt;I will explain, bear with me.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="so-what-is-unit-testing-anyway"&gt;So, what is Unit Testing anyway?
@@ -1595,7 +1583,7 @@ href="https://web.archive.org/web/20180825215727/http://www.richardlord.net/blog
 &lt;/ul&gt;
 &lt;h2 id="if-not-unit-testing-then-what"&gt;If not Unit Testing, then what?
 &lt;/h2&gt;&lt;p&gt;So, one might ask: if Unit Testing is wrong, then what should we be doing instead? The original impetus behind the invention of Unit Testing still remains: when we test a module we want to make sure that the observed behavior is not affected by potential malfunction in its dependencies. How can we avoid that?&lt;/p&gt;
-&lt;p&gt;The way I have been handling this in recent years is by means of a method that I call &lt;em&gt;Incremental Integration Testing&lt;/em&gt;. You can read about it here: &lt;a
+&lt;p&gt;The way I have been handling this in recent years is by means of a method that I call &lt;em&gt;Incremental Integration Testing&lt;/em&gt;. You can read about it here: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>The case for software testing</title><link>https://blog.michael.gr/post/2019-12-on-software-testing/</link><pubDate>Sun, 01 Dec 2019 20:48:53 +0000</pubDate><guid>https://blog.michael.gr/post/2019-12-on-software-testing/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2019-12-on-software-testing/media/test-pattern.webp"
 width="960"
@@ -1604,15 +1592,14 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="160"
 data-flex-basis="384px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;What to reply to a non-programmer who thinks that testing is unnecessary or secondary&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;At some point during his or her career, a programmer might come across the following argument, presented by some colleague, partner, or decision maker:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Since we can always test our software by hand, we do not need to implement Automated Software Testing.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Apparently, I reached that point in my career, so now I need to debate this argument. I decided to be a good internet citizen and publish my thoughts. So, in this post I am going to be deconstructing that argument, and demolishing it from every angle that it can be examined. I will be doing so using language that is easy to process by people from outside of our discipline.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;In the particular company where that argument was brought forth, there exist mitigating factors which are specific to the product, the customers, and the type of relationship we have with them, all of which make the argument not as unreasonable as it may sound when taken out of context. Even in light of these factors, the argument still deserves to be blown out of the water, but I will not be bothering the reader with the specific situation of this company, so as to ensure that the discussion is applicable to software development in general.&lt;/p&gt;
@@ -1731,7 +1718,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;Definition: Natural method order is the order in which methods appear in the source file.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="what-is-the-problem"&gt;What is the problem?
-&lt;/h2&gt;&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;/h2&gt;&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Up until and including Java 6, when enumerating the methods of a java class, the JVM would yield them in natural order. However, when Java 7 came out, Oracle changed something in the internals of the JVM, and this operation started yielding methods in random order.&lt;/p&gt;
@@ -1755,5 +1742,4 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-&gt;
-&lt;/p&gt;</description></item></channel></rss>
+&gt;&lt;/p&gt;</description></item></channel></rss>

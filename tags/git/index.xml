@@ -37,12 +37,11 @@ href="https://github.community/t/maven-deploy-fails-with-http-422-unprocessable-
 &lt;p&gt;The situation was certainly made worse by this contemptible monstrosity that goes by the name of “maven”, which never gives any meaningful error message whatsoever when the slightest thing goes wrong. I mean, “unprocessable entity”? Really? It must have been some very special kind of idiot who came up with this error message.&lt;/p&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
 width="1620"
 height="983"
-loading="lazy" title="Illustration from &amp;#39;The history of slavery and the slave trade, ancient and modern&amp;#39; by Blake, William O (1860) from wikimedia.org"
+loading="lazy"
 class="gallery-image"
 data-flex-grow="164"
 data-flex-basis="395px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;The origins of the debate go so far back that they are lost in the mists of time, but a good starting point (which contains references to prior debate) is an Internet Draft from 2018 titled &lt;em&gt;&lt;a class="external"
 href="https://datatracker.ietf.org/doc/draft-knodel-terminology/" target="_blank"
 &gt;Terminology, Power, and Inclusive Language in Internet-Drafts and RFCs&lt;/a&gt;&lt;/em&gt;. Some especially &lt;a class="external"
@@ -50,7 +49,7 @@ href="https://www.urbandictionary.com/define.php?term=woke" target="_blank"
 &gt;woke&lt;/a&gt; communities like the Python community had already started applying some of the recommendations in this draft as early as 2019, but things really picked up steam in 2020, with &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Murder_of_George_Floyd" target="_blank"
 &gt;the murder of George Floyd&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Programmers all over the world, the overwhelming majority of whom are white boys, wanted to feel like they are doing something about the whole &lt;a class="external"
@@ -91,8 +90,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="149"
 data-flex-basis="358px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;

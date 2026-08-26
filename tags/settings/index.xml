@@ -3,7 +3,7 @@ loading="lazy"
 &gt;
 Visual Studio is a capricious product, and its &amp;quot;Solution&amp;quot; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
 &lt;p&gt;Here is a list of things I have (painfully) found out over the years.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-project-directory-structure-must-be-entirely-flat"&gt;The project directory structure must be entirely flat.
@@ -53,8 +53,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="284"
 data-flex-basis="682px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Some time ago and for about a year I used a Mac, which had natural scrolling by default. I decided to resist the urge to immediately configure it to work like Windows, and instead I made it a point to give natural scrolling a try for at least a while before making up my mind as to whether to keep it or lose it. While giving it a try, I was surprised to see that it was very easy for me to adjust to it, despite the fact that I have been using the unnatural Windows scrolling mode for nearly 30 years. (Ever since the mouse wheel became a thing.) I found that natural scrolling was indeed... natural. So, I kept using it, and I became addicted to it. Ever since then, I always have to configure natural scrolling on any Windows machine that I get my hands on before I can start using that machine.&lt;/p&gt;
 &lt;p&gt;For decades, Windows has been so poor that it did not offer any user interface through which a novice user can change the mouse wheel scrolling mode. To do that you had to edit the registry, and the setting you had to modify was a machine setting, so you would be affecting the mouse wheel mode for all users, not just for yourself. This is unbelievably lame, but hey, that's Windows, we are totally used to lame.&lt;/p&gt;
 &lt;p&gt;As of Windows 11, update 24H2 which came out in late 2024, there is now support for switching to natural mouse wheel scrolling as a regular user setting; however, this setting is not necessarily observed by software that accesses the mouse via low-level APIs such as DirectX; thus, you may change the setting, and you may enjoy natural mouse wheel scrolling on all of your regular Windows applications, but if you try to play a game, you will find that the wheel works the wrong way in the game, and there is no way to work around that.&lt;/p&gt;

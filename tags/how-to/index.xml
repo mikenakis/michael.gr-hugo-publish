@@ -5,8 +5,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="113"
 data-flex-basis="273px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Sometimes I have trouble sleeping, and this can have severe consequences the following day, especially if it is a workday.&lt;/p&gt;
 &lt;p&gt;For a long time I had been thinking that techniques must have been devised for helping people fall asleep, especially in high-stakes settings such as professional sports, key value driving professions, the military, etc. This means that finding such a technique is probably just a matter of a brief internet research. However, this idea would always occur to me while lying in bed, trying to fall asleep, which is never the right time to get up and start doing internet research.&lt;/p&gt;
 &lt;p&gt;One day, while catching up with my friend Freek (a co-worker from a long time ago, when we used to work at TopDesk) I brought this up to him, and he searched for it right then and there, on his phone. He immediately found this technique, developed by famous U.S. track coach &lt;a class="external"
@@ -157,8 +156,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="179"
 data-flex-basis="430px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="how-to"&gt;How-To
 &lt;/h2&gt;&lt;p&gt;In a tall glass with &lt;strong&gt;no ice&lt;/strong&gt;, mix the following:&lt;/p&gt;
 &lt;ul&gt;
@@ -205,8 +203,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="320px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -231,8 +228,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="200"
 data-flex-basis="480px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -257,8 +253,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="139"
 data-flex-basis="334px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -281,8 +276,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="144"
 data-flex-basis="345px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -303,8 +297,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="147"
 data-flex-basis="354px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -325,8 +318,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -349,8 +341,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="162"
 data-flex-basis="388px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -381,7 +372,7 @@ loading="lazy"
 &gt;
 Visual Studio is a capricious product, and its &amp;quot;Solution&amp;quot; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
 &lt;p&gt;Here is a list of things I have (painfully) found out over the years.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-project-directory-structure-must-be-entirely-flat"&gt;The project directory structure must be entirely flat.
@@ -418,10 +409,9 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="303"
 data-flex-basis="727px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;I have a lot to say about the modern trend in graphical user interface design which aims to achieve an impossibly clean look at the expense of usability, but this is going to be the subject of another blog post. In this post, I want to talk about simplifying the user interface when the simplification is clearly a win, both from a usability point of view and, incidentally, from an aesthetics point of view. Specifically, I want to show how a yes/no/cancel prompt can be reduced to just a yes/cancel prompt.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;A typical example of such a prompt is when an application asks the user what to do when the user tries to quit the application while a file is unsaved.&lt;/p&gt;
@@ -442,7 +432,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;Save the file before quitting? [Yes] / [No] / [Cancel]&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Needless to say, presenting the user with an application-modal prompt containing not one, not two, but three options is terrible. (If you think that
-&amp;quot;terrible&amp;quot; is a harsh word for such a low-impact problem, then please read &lt;a
+&amp;quot;terrible&amp;quot; is a harsh word for such a low-impact problem, then please read &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-05-incident-impact-calculation/"
 &gt;Incident Impact Calculation Formula&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Note that the replacement of a generic &amp;quot;Yes&amp;quot; / &amp;quot;No&amp;quot; / &amp;quot;Cancel&amp;quot; prompt with a more specific &amp;quot;Save and exit&amp;quot; / &amp;quot;Exit without saving&amp;quot; / &amp;quot;Do not exit&amp;quot; prompt is probably an improvement, but this is not what I am discussing here. I would like to reduce the number of choices to less than three; once the number of choices has been reduced, finding some better wording for the remaining choices is all the better.&lt;/p&gt;
@@ -477,8 +467,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="268"
 data-flex-basis="644px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;I recently did this at work, and I decided to document the process here in the form of a how-to guide. Please note that I am not an expert, I am learning as I go along, so there may be mistakes.&lt;/p&gt;
 &lt;p&gt;Sdk-style project files have existed since net5, but when they were introduced they were made compatible with earlier versions of dotnet, such as dotnet framework 4.7.2. The kind of project files we were using before can now be called legacy-style project files.&lt;/p&gt;
 &lt;ul&gt;
@@ -607,11 +596,10 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="268"
 data-flex-basis="644px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;I recently did this at work, and I decided to document the process here in the form of a how-to guide. Please note that I am not an expert, I am learning as I go along, so there may be mistakes.&lt;/p&gt;
 &lt;h2 id="convert-all-projects-to-sdk-style"&gt;Convert all projects to sdk-style.
-&lt;/h2&gt;&lt;p&gt;This is necessary for net7, and also a very useful thing to do even if we were staying in net472. I cover it in another post: &lt;a
+&lt;/h2&gt;&lt;p&gt;This is necessary for net7, and also a very useful thing to do even if we were staying in net472. I cover it in another post: &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-09-05-sdk-style-msbuild-projects/"
 &gt;Converting MSBuild project files from legacy-style to SDK-style&lt;/a&gt; and it actually represents most of the work needed to migrate to net7.&lt;/p&gt;
 &lt;h2 id="change-the-actual-version"&gt;Change the actual version.
@@ -729,7 +717,7 @@ href="https://stackoverflow.com/a/62141464/773113" target="_blank"
 &lt;p&gt;&lt;strong&gt;Release Build Problem: ConfuserEx does not work anymore&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In our application we use obfuscation. So far, this has caused us a lot of trouble: first we used to employ a tool called Confuser, which was later abandoned and re-incarnated as ConfuserEx, so we had to start using that one. Then, that one was abandoned too, so we had to find a fork of it that was still being maintained by someone.&lt;/p&gt;
 &lt;p&gt;Now with DotNet 7, ConfuserEx does not work for us anymore: it fails with a message saying that it does not know the executable file format. There is a question-and-answer where someone asks the author for a solution, and the author points them to an alpha build of some version 2.0 of that tool, but that was a long time ago, and the artifacts of that alpha build do not exist anymore.&lt;/p&gt;
-&lt;p&gt;There is a new tool called Dotfuscator, which is bundled with Visual Studio, but there are all kinds of serious problems with it, see another post of mine about that: &lt;a
+&lt;p&gt;There is a new tool called Dotfuscator, which is bundled with Visual Studio, but there are all kinds of serious problems with it, see another post of mine about that: &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-08-15-on-dotfuscator-by-preemptive/"
 &gt;On Dotfuscator by PreEmptive Solutions&lt;/a&gt;. I am currently working on this, when I find a solution I will update this article with my findings.&lt;/p&gt;
 &lt;hr&gt;
@@ -740,8 +728,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="179"
 data-flex-basis="430px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;The XAML Hot Reload feature of WPF is extremely useful because GUI work often involves tweaking visual aspects of an application, so being able to modify XAML, save it, and immediately see the changes on the screen saves a huge amount of time as opposed to having to terminate the application, modify the code, re-compile, re-run, and go clickety-clickety-click to navigate to the same page and finally see your changes.&lt;/p&gt;
 &lt;p&gt;Unfortunately, as a WPF project grows, the XAML Hot Reload feature inevitably one day stops working: You modify your XAML, you save the XAML file, and yet nothing changes on the screen. The message &amp;quot;No changes were found&amp;quot; appears in the Hot Reload tab of the Visual Studio Output Window, but it is a damned lie, because you just made changes. This can really be a problem.&lt;/p&gt;
 &lt;p&gt;When you find yourself in this extremely unpleasant situation, here is a list of things to try:&lt;/p&gt;
@@ -814,8 +801,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="284"
 data-flex-basis="682px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Some time ago and for about a year I used a Mac, which had natural scrolling by default. I decided to resist the urge to immediately configure it to work like Windows, and instead I made it a point to give natural scrolling a try for at least a while before making up my mind as to whether to keep it or lose it. While giving it a try, I was surprised to see that it was very easy for me to adjust to it, despite the fact that I have been using the unnatural Windows scrolling mode for nearly 30 years. (Ever since the mouse wheel became a thing.) I found that natural scrolling was indeed... natural. So, I kept using it, and I became addicted to it. Ever since then, I always have to configure natural scrolling on any Windows machine that I get my hands on before I can start using that machine.&lt;/p&gt;
 &lt;p&gt;For decades, Windows has been so poor that it did not offer any user interface through which a novice user can change the mouse wheel scrolling mode. To do that you had to edit the registry, and the setting you had to modify was a machine setting, so you would be affecting the mouse wheel mode for all users, not just for yourself. This is unbelievably lame, but hey, that's Windows, we are totally used to lame.&lt;/p&gt;
 &lt;p&gt;As of Windows 11, update 24H2 which came out in late 2024, there is now support for switching to natural mouse wheel scrolling as a regular user setting; however, this setting is not necessarily observed by software that accesses the mouse via low-level APIs such as DirectX; thus, you may change the setting, and you may enjoy natural mouse wheel scrolling on all of your regular Windows applications, but if you try to play a game, you will find that the wheel works the wrong way in the game, and there is no way to work around that.&lt;/p&gt;
@@ -980,8 +966,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="288"
 data-flex-basis="692px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;And then the box just disappears, without an error message or any other hint as to what might have gone wrong.&lt;/p&gt;
 &lt;p&gt;The interwebz abound with reports of this happening, and people asking how to fix it, and various solutions being offered that range from the complex to the hopelessly complex.&lt;/p&gt;
 &lt;p&gt;Luckily, every time I have encountered this problem, the solution for me was very simple: just wait and try again later. The remote computer is probably busy booting, or perhaps booting and installing updates.&lt;/p&gt;
@@ -1001,8 +986,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="615"
 data-flex-basis="1476px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;(This is despite the fact that during installation I explicitly specified that this MySQL server is going to be used for development, not for production.)&lt;/p&gt;
 &lt;p&gt;A quick search on the web shows that this preposterous amount of memory can be reduced to something less preposterous by editing my.ini (usually found in some place like ProgramData\MySQL\MySQL Server 5.6) and replacing the following line:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1021,8 +1005,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="615"
 data-flex-basis="1476px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;So, I tried to trim it down as much as possible by doing some more reading up on the subject and tweaking with more settings of my.ini, and this is what I finally managed to get it down to:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-03-minimal-mysql-memory-footprint/media/mysql-20MB.png"
 width="449"
@@ -1031,8 +1014,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="615"
 data-flex-basis="1476px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;So, the &amp;quot;private bytes&amp;quot; went from 630MB down to 20MB and the &amp;quot;working set&amp;quot; went from 450MB down to 21MB. Not bad, eh?&lt;/p&gt;
 &lt;p&gt;The server is functional, too, meaning that I ran the tests of a medium-sized project, which do heavily hit the database, and they all completed as easily as they used to with the bloated out-of-the-box server.&lt;/p&gt;
 &lt;p&gt;This is the my.ini file that achieves these savings:&lt;/p&gt;

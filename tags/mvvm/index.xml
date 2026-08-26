@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MVVM on Michael's Blog</title><link>https://blog.michael.gr/tags/mvvm/</link><description>Recent content in MVVM on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 19:06:32 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/mvvm/index.xml" rel="self" type="application/rss+xml"/><item><title>My journey to MVVM</title><link>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</link><pubDate>Mon, 02 Mar 2026 10:22:36 +0100</pubDate><guid>https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-03-02-journey-to-mvvm/media/wpf-mvvm.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;This writing is an answer to the question &amp;quot;why MVVM?&amp;quot; written from an auto-biographical point of view.&lt;/p&gt;
 &lt;h2 id="previous-experience"&gt;Previous experience
 &lt;/h2&gt;&lt;p&gt;I started programming in the mid-eighties. Over the decades I have done a lot of work with GUIs. I have written GUI code in several different programming languages, and for several different GUI frameworks in each language. In Java alone, I have worked with AWT, Swing, and SWT. I have also built an entire windowed GUI framework from scratch, based on just 3 primitives provided to me by a graphics engine: a draw-image primitive, a draw-text primitive, and a measure-text primitive allowing me to implement a layout mechanism. Then, on top of that GUI, I wrote a big part of the application that the GUI was built for. That's a lot of GUI work. Until 2019, all that work had been on conventional (non-MVVM) GUI frameworks.&lt;/p&gt;
@@ -83,7 +82,7 @@ As a result of this problem, people do not usually test user workflows of conven
 &lt;p&gt;Okay, let us see, how do you write &amp;quot;Hello, world!&amp;quot; in WPF?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;...and go on from there, learning how to do things with WPF, one thing at a time, without first having a high-level understanding of why things are done this way in WPF.&lt;/p&gt;
-&lt;p&gt;Further reading: &lt;a
+&lt;p&gt;Further reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/"
 &gt;The MVVM architectural design pattern&lt;/a&gt;&lt;/p&gt;</description></item><item><title>The MVVM architectural design pattern</title><link>https://blog.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/</link><pubDate>Sat, 16 Jan 2021 14:47:04 +0000</pubDate><guid>https://blog.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2021-01-the-mvvm-architectural-design-pattern/media/mvvm.png"
 width="800"
@@ -92,8 +91,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="330"
 data-flex-basis="793px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;This is a brief technical explanation of MVVM, with enough detail (borrowed from its WPF implementation) and examples to allow the reader to grasp how it actually works.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;em&gt;MVVM&lt;/em&gt; is an architectural design pattern for building interactive applications. Its aim is to achieve complete decoupling of application logic from presentation logic.&lt;/li&gt;

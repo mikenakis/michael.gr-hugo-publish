@@ -3,7 +3,7 @@ loading="lazy"
 &gt;
 Visual Studio is a capricious product, and its &amp;quot;Solution&amp;quot; subsystem is especially capricious. When you look at what options are available you might think you have a great degree of freedom to structure things the way you want, but as you will inevitably (and painfully) find out later, many things have to be done in precisely one, entirely undocumented way, or else there will be pain of the worst kind: Visual Studio will malfunction either without any error message, or with error messages that are completely unhelpful for locating and fixing the problem.&lt;/p&gt;
 &lt;p&gt;Here is a list of things I have (painfully) found out over the years.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-project-directory-structure-must-be-entirely-flat"&gt;The project directory structure must be entirely flat.
@@ -40,8 +40,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="151"
 data-flex-basis="362px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;The Mike Nakis formula for calculating the impact of an incident:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;I = S × G × T&lt;/p&gt;
@@ -68,8 +67,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="236"
 data-flex-basis="567px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;I am giving this tool a try at work, and I am encountering a great many problems with it. I decided to publicly document my findings.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -281,8 +279,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="241"
 data-flex-basis="580px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;There are some words in English that are uncountable. For example: &lt;em&gt;cheese&lt;/em&gt;, &lt;em&gt;furniture&lt;/em&gt;, &lt;em&gt;music&lt;/em&gt;, &lt;em&gt;evidence&lt;/em&gt;, &lt;em&gt;research&lt;/em&gt;, &lt;em&gt;knowledge&lt;/em&gt;, &lt;em&gt;information&lt;/em&gt;, etc. When we speak of those things in plural, we still use the singular form: &amp;quot;I would like to order a four-&lt;em&gt;&lt;strong&gt;cheese&lt;/strong&gt;&lt;/em&gt; pizza&amp;quot;, &amp;quot;Let me give you some of my &lt;em&gt;&lt;strong&gt;furniture&lt;/strong&gt;&lt;/em&gt;&amp;quot;, &amp;quot;We need to consider all the &lt;em&gt;&lt;strong&gt;evidence&lt;/strong&gt;&lt;/em&gt;&amp;quot;, etc.&lt;/p&gt;
 &lt;p&gt;Another such word is &lt;em&gt;&lt;strong&gt;code&lt;/strong&gt;&lt;/em&gt;, in the context of programming.&lt;/p&gt;
 &lt;p&gt;When referring to program code, the word &lt;em&gt;code&lt;/em&gt; is uncountable. &amp;quot;I wrote the code for all those apps&amp;quot;, &amp;quot;You have a lot of code to review&amp;quot;, &amp;quot;We write new code every day&amp;quot;.&lt;/p&gt;
@@ -299,8 +296,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="66"
 data-flex-basis="160px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Or like this complete idiot:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-05-26-code-is-uncountable/media/hat-fail-03.jpg"
 width="1110"
@@ -309,8 +305,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="78"
 data-flex-basis="188px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Do you want to come across like a complete idiot?&lt;/p&gt;
 &lt;p&gt;The choice is yours.&lt;/p&gt;
 &lt;p&gt;(Grumpy cat meme unnecessary; this was grumpy enough by itself.)&lt;/p&gt;</description></item><item><title>[SOLVED] Windows: Sound becomes distorted after 1 second of playback</title><link>https://blog.michael.gr/post/2023-03-15-solved-windows-sound-becomes-distorted/</link><pubDate>Wed, 15 Mar 2023 19:53:01 +0000</pubDate><guid>https://blog.michael.gr/post/2023-03-15-solved-windows-sound-becomes-distorted/</guid><description>&lt;p&gt;So today I started encountering a very weird audio issue: When I play music, it sounds normal in the beginning, but then after about a second the sound gets distorted, as if it is muffled, or as if it is undergoing severe lossy compression. If I stop and resume the music, it goes through the same.&lt;/p&gt;
@@ -328,11 +323,10 @@ obviously, nobody should ever want to fix any sound problems, because obviously,
 &lt;p&gt;&lt;strong&gt;Afterword&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;I probably started experiencing this problem right after pairing a new bluetooth sound device. Apparently when Windows detects a new sound device it sets some things up for it, and while doing that it entirely arbitrarily also goes and resets some settings for existing devices, e.g. it enables this &amp;quot;Enhancements&amp;quot; setting for my existing speakers.&lt;/p&gt;</description></item><item><title>If you are using mock objects you are doing it wrong</title><link>https://blog.michael.gr/post/2023-01-14-mocking/</link><pubDate>Sat, 14 Jan 2023 14:13:37 +0000</pubDate><guid>https://blog.michael.gr/post/2023-01-14-mocking/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-01-14-mocking/media/mocking.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;The practice of using Mock Objects in automated software testing is examined from a critical point of view and found to be highly problematic. Opinions of some well known industry speakers are cited. The supposed benefits of Mock Objects are shown to be either no real benefits, or achievable via alternative means.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h1 id="introduction"&gt;Introduction
@@ -419,17 +413,17 @@ href="https://www.youtube.com/watch?v=EZ05e7EMOLM" target="_blank"
 &lt;ul&gt;
 &lt;li&gt;Mocking achieves defect localization by eliminating collaborators from the picture and allowing components to be tested in strict isolation from each other.
 &lt;ul&gt;
-&lt;li&gt;Defect localization is useful, but it is not an absolute necessity, and it does not have to be done to absolute perfection as mocking aims to do; we can achieve more than good enough defect localization by testing each component in integration with its collaborators, simply by arranging the order in which tests are executed to ensure that by the time a component gets tested, all of its collaborators have already passed their tests. See &lt;a
+&lt;li&gt;Defect localization is useful, but it is not an absolute necessity, and it does not have to be done to absolute perfection as mocking aims to do; we can achieve more than good enough defect localization by testing each component in integration with its collaborators, simply by arranging the order in which tests are executed to ensure that by the time a component gets tested, all of its collaborators have already passed their tests. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows a component to be tested without the performance overhead of instantiating and invoking its real collaborators.
 &lt;ul&gt;
-&lt;li&gt;The performance overhead of instantiating and invoking the real collaborators is not always prohibitive, or even noticeable, so in many cases it is perfectly fine to test a component in integration with its real collaborators. See &lt;a
+&lt;li&gt;The performance overhead of instantiating and invoking the real collaborators is not always prohibitive, or even noticeable, so in many cases it is perfectly fine to test a component in integration with its real collaborators. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;In the limited number of cases where the performance overhead is indeed prohibitive, it can be avoided with the use of Fakes instead of Mocks. See &lt;a
+&lt;li&gt;In the limited number of cases where the performance overhead is indeed prohibitive, it can be avoided with the use of Fakes instead of Mocks. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -438,32 +432,32 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;ul&gt;
 &lt;li&gt;In most cases, examining the invocations made by the component-under-test to its collaborators is in fact bad practice, because it constitutes white-box testing. The only reason why this is being widely practiced in the industry is because mocking does not work otherwise, so in this regard mocking contains a certain element of a self-serving paradigm.&lt;/li&gt;
 &lt;li&gt;In those rare cases where examining the invocations is in fact necessary, it is still bad practice to do so programmatically, because it results in tests that are over-specified and fragile.&lt;/li&gt;
-&lt;li&gt;What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See &lt;a
+&lt;li&gt;What we can do instead is to record the interactions during each test run, visually compare the latest recording with that of the last known good run, and decide whether the differences match our expectations; if they do not match, then we must keep working on our code; but if they do match, then we are done without the need to go fixing any tests. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
-&gt;Approval Testing&lt;/a&gt; and &lt;a
+&gt;Approval Testing&lt;/a&gt; and &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to fabricate the results returned from a collaborator to the component-under-test, so as to guarantee that they are free from defects that could be caused by bugs in the implementation of the real collaborator.
 &lt;ul&gt;
-&lt;li&gt;Fabricating the results that would have been returned by a real collaborator is in fact bad practice, because it will not magically make any bugs go away, (in this sense it can be likened to ostrich policy,) and because as I have already explained, it is highly presumptuous. The definitive authority on what results are returned by a certain collaborator is the real implementation of that collaborator, or a fake thereof, which in turn necessitates integration testing. See &lt;a
+&lt;li&gt;Fabricating the results that would have been returned by a real collaborator is in fact bad practice, because it will not magically make any bugs go away, (in this sense it can be likened to ostrich policy,) and because as I have already explained, it is highly presumptuous. The definitive authority on what results are returned by a certain collaborator is the real implementation of that collaborator, or a fake thereof, which in turn necessitates integration testing. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to verify the correctness of components that generate their output by means of forwarding results to collaborators rather than by returning results from invocations.
 &lt;ul&gt;
-&lt;li&gt;Even in this case, &lt;em&gt;Collaboration Monitoring&lt;/em&gt; can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See &lt;a
+&lt;li&gt;Even in this case, &lt;em&gt;Collaboration Monitoring&lt;/em&gt; can be used instead of mocking, to verify that the results are generated as expected without having to programmatically describe what the results should be and without having to go fixing tests each time we modify the component under test and deliberately change something about the results it generates. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
-&gt;Approval Testing&lt;/a&gt; and &lt;a
+&gt;Approval Testing&lt;/a&gt; and &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Mocking allows us to start testing a component while one or more of its collaborators are not ready yet for integration because they are still in development, and no fakes of them are available either.
 &lt;ul&gt;
-&lt;li&gt;This is true, but once the collaborators (or fakes thereof) become available, it is best to integrate them in the tests, and to unceremoniously throw away the mocks. See &lt;a
+&lt;li&gt;This is true, but once the collaborators (or fakes thereof) become available, it is best to integrate them in the tests, and to unceremoniously throw away the mocks. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -471,7 +465,7 @@ href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &lt;li&gt;Mocking allows us to develop a component without depending on factors that we have no control over, such as the time of delivery of collaborators, the quality of their implementation, and the quality of their testing. With the use of Mocks we can claim that our component is complete and fully tested, based on nothing but the specification of its collaborators, and we can claim that it should work fine in integration with its collaborators when they happen to be delivered, and if they happen to work according to spec.
 &lt;ul&gt;
 &lt;li&gt;True, but this implies a very bureaucratic way of working, and utter lack of trust towards the developers of the collaborators; it is best if it never comes to that.&lt;/li&gt;
-&lt;li&gt;We can still avoid the use of mocks by creating fakes of the collaborators ourselves. See &lt;a
+&lt;li&gt;We can still avoid the use of mocks by creating fakes of the collaborators ourselves. See &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
@@ -479,15 +473,15 @@ href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &lt;/ul&gt;
 &lt;p&gt;To summarize, mocks can always be replaced with one or more of the following:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Fakes (see &lt;a
+&lt;li&gt;Fakes (see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-testing-with-fakes/"
 &gt;Testing with Fakes instead of Mocks&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;a
+&lt;li&gt;&lt;a class="internal"
 href="https://blog.michael.gr/post/2022-10-incremental-integration-testing/"
 &gt;Incremental Integration Testing&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a
+&lt;li&gt;&lt;a class="internal"
 href="https://blog.michael.gr/post/2024-04-approval-testing/"
-&gt;Approval Testing&lt;/a&gt; and &lt;a
+&gt;Approval Testing&lt;/a&gt; and &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-01-06-collaboration-monitoring/"
 &gt;Collaboration Monitoring&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -503,8 +497,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="77"
 data-flex-basis="186px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -523,10 +516,9 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="178"
 data-flex-basis="429px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Over the decades, numerous software system architectures have emerged which require invocations across subsystems to be done via message-passing instead of programmatic interface method calls. Such architectures are so common that many programmers have come to regard message-passing as an end in and of itself, oblivious of the fact that it is nothing but a (poor) technical mechanism for accomplishing a certain architectural goal.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The architectural goal is to be able to perform general-purpose operations on invocations, for example routing the invocations according to configuration, or queuing the invocations for delivery on a different thread. In order to be able to do things like that, the invocations must first be expressed in a general-purpose form.&lt;/p&gt;
@@ -548,7 +540,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;Message-passing has enjoyed widespread use mainly due to the historical inability of application programmers to think in terms of abstractions: it is always possible, even in systems that require message-passing, to write all application code so that it never deals with any messages at all, and uses nothing but application-specific programmatic interfaces instead; the trick is to create packaging and unpackaging adaptors, where on the sending side we are simply invoking a programmatic interface which is implemented by a packaging adaptor that creates messages, packs them, and sends them off to be enqueued, while on the receiving side a corresponding unpackaging adaptor is fed with messages from the queue, unpacks them, and calls the corresponding implementation of the interface. Alas, this arrangement requires a modicum of abstract thinking, and application programmers are generally not into that sort of thing.&lt;/p&gt;
 &lt;p&gt;Furthermore, if we bother creating such packaging and unpackaging adaptors, the realization quickly starts to sink-in that all the message classes are irrelevant; there is no need to define a special message class containing a separate field for each parameter of each method, because the only code that would ever deal with such a class would be the corresponding pair of packaging and unpackaging adaptors; so, the adaptors might as well use a single universal message class which simply stores all parameters in an array of object, and voila, the entire menagerie of message classes becomes entirely unnecessary.&lt;/p&gt;
 &lt;p&gt;Thus, it becomes evident that what we are really after is not message-passing per se; it is some general-purpose form of expressing invocations, so that general-purpose operations can be performed on them, and some mechanism for converting back and forth between this general-purpose form and the natural form, which is programmatic interface method calls, so that we can write code naturally. Ideally, the conversion mechanism would be automatic and transparent, so that we do not even have to write those adaptors. Messages have only existed due to the historical absence of such an automatic and transparent mechanism.&lt;/p&gt;
-&lt;p&gt;Fortunately, with modern reflecting, intermediate-code-based, just-in-time compiled programming languages, today we have at our disposal all that is necessary to build such mechanisms. For more information see &lt;a
+&lt;p&gt;Fortunately, with modern reflecting, intermediate-code-based, just-in-time compiled programming languages, today we have at our disposal all that is necessary to build such mechanisms. For more information see &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-12-intertwine/"
 &gt;Intertwine&lt;/a&gt;.&lt;/p&gt;
 &lt;table&gt;
@@ -561,8 +553,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="88"
 data-flex-basis="213px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -579,16 +570,15 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
-&gt;
-&lt;/p&gt;
-&lt;p&gt;This post is intended as support material for another post of mine; see &lt;a
+&gt;&lt;/p&gt;
+&lt;p&gt;This post is intended as support material for another post of mine; see &lt;a class="internal"
 href="https://blog.michael.gr/post/2023-12-09-authoritative-technical-design/"
 &gt;Towards Authoritative Software Design&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Unified_Modeling_Language" target="_blank"
 &gt;Universal Modeling Language (UML)&lt;/a&gt; was intended to be a standard notation for expressing software designs, and to replace the multitude of ad-hoc notations that software architects have been using. The idea was that by following a standard notation which prescribes a specific way of expressing each concept, every diagram would be readily and unambiguously understood by everyone.&lt;/p&gt;
 &lt;p&gt;It has miserably failed.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;UML is probably very close to the top of the list of things that everyone claims to know, but nobody actually uses. &lt;a class="external"
@@ -646,7 +636,7 @@ href="https://en.wikipedia.org/wiki/Component_diagram" target="_blank"
 &gt;&lt;em&gt;&lt;strong&gt;UML Component Diagram&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;, but there exist no tools that I am aware of that are capable of either guiding the composition of such a diagram from existing software components, or materializing such a diagram into a running system. Furthermore, if any such tools were to be introduced today, they are unlikely to be well-received, because by now people have developed a distaste towards UML and anything associated with it.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;UML literature follows a &lt;a
+&lt;p&gt;UML literature follows a &lt;a class="internal"
 href="https://blog.michael.gr/post/2026-08-21-standardspeak/"
 &gt;standardspeak&lt;/a&gt; writing style which is not just incomprehensible, but actually &lt;em&gt;&lt;strong&gt;annoyingly incomprehensible&lt;/strong&gt;&lt;/em&gt;. For details, keep reading.&lt;/p&gt;
 &lt;/li&gt;
@@ -689,8 +679,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="110"
 data-flex-basis="265px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Mandatory Grumpy Cat Meme. &amp;quot;UML: I hate it.&amp;quot;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Cover image: The UML logo, by Object Management Group®, Inc. from &lt;a class="external"
@@ -698,12 +687,11 @@ href="https://www.uml.org/" target="_blank"
 &gt;uml.org&lt;/a&gt;; Public Domain.&lt;/p&gt;</description></item><item><title>So the "master" branch is not kosher anymore</title><link>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</link><pubDate>Fri, 27 May 2022 09:12:37 +0000</pubDate><guid>https://blog.michael.gr/post/2022-12-master-branch-not-kosher/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-12-master-branch-not-kosher/media/slavery-cropped.jpg"
 width="1620"
 height="983"
-loading="lazy" title="Illustration from &amp;#39;The history of slavery and the slave trade, ancient and modern&amp;#39; by Blake, William O (1860) from wikimedia.org"
+loading="lazy"
 class="gallery-image"
 data-flex-grow="164"
 data-flex-basis="395px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;The origins of the debate go so far back that they are lost in the mists of time, but a good starting point (which contains references to prior debate) is an Internet Draft from 2018 titled &lt;em&gt;&lt;a class="external"
 href="https://datatracker.ietf.org/doc/draft-knodel-terminology/" target="_blank"
 &gt;Terminology, Power, and Inclusive Language in Internet-Drafts and RFCs&lt;/a&gt;&lt;/em&gt;. Some especially &lt;a class="external"
@@ -711,7 +699,7 @@ href="https://www.urbandictionary.com/define.php?term=woke" target="_blank"
 &gt;woke&lt;/a&gt; communities like the Python community had already started applying some of the recommendations in this draft as early as 2019, but things really picked up steam in 2020, with &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Murder_of_George_Floyd" target="_blank"
 &gt;the murder of George Floyd&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Programmers all over the world, the overwhelming majority of whom are white boys, wanted to feel like they are doing something about the whole &lt;a class="external"
@@ -752,8 +740,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="149"
 data-flex-basis="358px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -768,15 +755,14 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="174"
 data-flex-basis="418px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;If you have done any software development under Microsoft Windows you have probably come across this famous error message:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;System.IO.FileNotFoundException : Could not load file or assembly 'Acme.dll' or one of its dependencies. The specified module could not be found.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Naturally, when you see this message, you check whether Acme.dll is there, and what you usually discover is that the file is in fact there.&lt;/p&gt;
 &lt;p&gt;When dealing with computers, most error messages leave some room for troubleshooting; but when the system is reporting that a file does not exist while your eyes are telling you that the file is there, there is nothing to troubleshoot: the situation looks completely hopeless. The computer says black, but what you clearly see is white. What is happening makes no sense, and there is no alternative way to look at it from which a solution might be found. You are stuck. You are stymied. You are frustrated. You are exasperated. You are thinking to yourself: &amp;quot;how can this be happening to me?&amp;quot;&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;At this point you are likely to start shot-gunning the problem by trying various random tricks in the hope that one of them will magically make the problem go away: you try running the application again just in case it was a glitch, you try obtaining a fresh copy of the library in case this one somehow got corrupted, you restart Windows because we always try that, right? -- and none of these attempts yields any results.&lt;/p&gt;
@@ -796,8 +782,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="81"
 data-flex-basis="194px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="the-microsoft-visual-c-dynamically-linkable-runtime-libraries-sub-problem"&gt;The Microsoft Visual C++ Dynamically Linkable Runtime Libraries sub-problem
 &lt;/h2&gt;&lt;p&gt;Quite often the dependency analyzer finds that the culprit is msvcr100.dll, or vcruntime140.dll, or something similar. These files are the dynamically-linkable runtime libraries for software written using some old versions of Microsoft Visual C++, which is a very popular language for writing all sorts of software under Windows; so, if your application is using any third-party libraries, then one or more of them have almost certainly been written in MSVC. And for some reason, the developers of third-party libraries choose to make their product depend on an external, dynamically-linkable instance of the MSVC runtime library, instead of statically linking the runtime library into their product. This creates an extra moving part, which in an ideal world should not matter, but in this quite short of ideal world, such moving parts must often be dealt with by others, like... you.&lt;/p&gt;
 &lt;p&gt;What is especially treacherous about these runtime libraries is that many applications contain one of them, and install it in your Windows/System32 folder, so once you have installed a few commonly used apps on your machine you almost certainly have one or more of those runtime libraries. This causes two insidious problems:&lt;/p&gt;
@@ -813,7 +798,7 @@ data-flex-basis="194px"
 &lt;p&gt;The above problems are especially treacherous in light of the fact that when the problem arises, the error message is sabotaging you by refraining from telling you which file is missing, and instead telling you that a file is missing which is in fact there.&lt;/p&gt;
 &lt;p&gt;The approach recommended by Microsoft for solving this kind of problem is to include the &amp;quot;Microsoft Visual C++ Redistributable&amp;quot; installable package, and install it as part of the application's installation process. An easier way is to simply include a copy of msvcr100.dll or vcruntime140.dll etc. in the directory from which your application launches.&lt;/p&gt;</description></item><item><title>The Wild, Wild Web</title><link>https://blog.michael.gr/post/2020-10-19-the-wild-wild-web/</link><pubDate>Mon, 19 Oct 2020 15:05:21 +0000</pubDate><guid>https://blog.michael.gr/post/2020-10-19-the-wild-wild-web/</guid><description>&lt;p&gt;This is a little history of the early World Wide Web (WWW) for the benefit of the younger generation which may have not experienced the Internet in its infancy and therefore might not be aware of the horrors that it involved, and why certain things have come to be the way they are today.&lt;/p&gt;
 &lt;p&gt;As you are reading this, and thinking to yourself that it could not possibly have been as bad as I am describing it, remember, the general public was experiencing it using 2400 baud modems.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The World Wide Web was created in 1989 at &lt;a class="external"
@@ -855,7 +840,7 @@ href="https://www.w3.org/People/Raggett/book4/ch02.html" target="_blank"
 &lt;p&gt;Definition: Natural method order is the order in which methods appear in the source file.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id="what-is-the-problem"&gt;What is the problem?
-&lt;/h2&gt;&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;/h2&gt;&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Up until and including Java 6, when enumerating the methods of a java class, the JVM would yield them in natural order. However, when Java 7 came out, Oracle changed something in the internals of the JVM, and this operation started yielding methods in random order.&lt;/p&gt;
@@ -879,8 +864,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-&gt;
-&lt;/p&gt;</description></item><item><title>What is wrong with UUIDs and GUIDs</title><link>https://blog.michael.gr/post/2017-06-on-uuids-and-guids/</link><pubDate>Mon, 12 Jun 2017 17:47:55 +0000</pubDate><guid>https://blog.michael.gr/post/2017-06-on-uuids-and-guids/</guid><description>&lt;h2 id="introduction"&gt;Introduction
+&gt;&lt;/p&gt;</description></item><item><title>What is wrong with UUIDs and GUIDs</title><link>https://blog.michael.gr/post/2017-06-on-uuids-and-guids/</link><pubDate>Mon, 12 Jun 2017 17:47:55 +0000</pubDate><guid>https://blog.michael.gr/post/2017-06-on-uuids-and-guids/</guid><description>&lt;h2 id="introduction"&gt;Introduction
 &lt;/h2&gt;&lt;p&gt;Universally Unique Identifiers (UUIDs) otherwise known as Globally Unique Identifiers (GUIDs) are 128-bit numbers that are often used to identify information. In its canonical representation, a UUID looks like this: 2205cf3e-139c-4abc-be2d-e29b692934b0.&lt;/p&gt;
 &lt;p&gt;The Wikipedia entry for &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blank"
@@ -891,7 +875,7 @@ href="https://en.wikipedia.org/wiki/Universally_unique_identifier" target="_blan
 &lt;/blockquote&gt;
 &lt;p&gt;Great.&lt;/p&gt;
 &lt;p&gt;Now, let me tell you why I hate UUIDs.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="known-disadvantages"&gt;Known disadvantages
@@ -963,8 +947,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;This post was inspired by a Stack Overflow answer that I wrote, here:
 &lt;a class="external"
 href="https://stackoverflow.com/a/8642874/773113" target="_blank"
@@ -975,8 +958,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="426px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="foreword"&gt;Foreword
 &lt;/h2&gt;&lt;p&gt;Historically, the difference between scripting languages and real programming languages has been understood as the presence or absence of a compilation step. However, in recent decades the distinction has blurred; from time to time we have seen:&lt;/p&gt;
 &lt;ul&gt;
@@ -988,7 +970,7 @@ interpreting it.&lt;/li&gt;
 rarely converted to machine code.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;So, compiled vs. interpreted does not seem to be the real differentiating factor; nonetheless, we can usually tell a scripting language when we see one. So, what is it that we see?&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;First, let us identify the three different kinds of error that can potentially occur in program code:&lt;/p&gt;
@@ -1152,12 +1134,12 @@ href="https://www.xkcd.com/1638/" target="_blank"
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/xkcd-backslash.png"
 width="571"
 height="207"
-loading="lazy" alt="Backslashes" title="I searched my .bash_history for the line with the highest ratio of special characters to regular alphanumeric characters, and the winner was: cat out.txt | grep -o &amp;amp;quot;[[(].*[])][^]]*$&amp;amp;quot; ... I have no memory of this and no idea what I was trying to do, but I sure hope it worked."
+loading="lazy"
+alt="Backslashes"
 class="gallery-image"
 data-flex-grow="275"
 data-flex-basis="662px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;A scripting language that owes its bad syntax to being hastily hacked together is &lt;em&gt;&lt;strong&gt;JavaScript&lt;/strong&gt;&lt;/em&gt;. Its creator, &lt;em&gt;&lt;strong&gt;Brendan Eich&lt;/strong&gt;&lt;/em&gt;, has admitted that the language was developed within a couple of weeks, and that it was not meant for anything but short isolated snippets of code. He is honest enough to speak of his own creation in derogatory terms, and to accept blame. (See &lt;a class="external"
 href="https://www.youtube.com/watch?v=zlcnOr81lPc" target="_blank"
 &gt;TEDxVienna 2016&lt;/a&gt;, opening statement, &amp;quot;Hello, I am to blame for JavaScript&amp;quot;.) Also, pretty much anyone deeply involved with JavaScript will admit that it has serious problems. One of the most highly acclaimed books on the language is &lt;em&gt;&lt;strong&gt;JavaScript: The Good Parts&lt;/strong&gt;&lt;/em&gt;, authored by Douglas Crockford and published by O'Reilly; you can take the title of the book as a hint.&lt;/p&gt;
@@ -1169,8 +1151,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
 data-flex-basis="427px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;A scripting language that owes its horrific syntax to lack of competence is &lt;em&gt;&lt;strong&gt;PHP&lt;/strong&gt;&lt;/em&gt;. Its creator, &lt;em&gt;&lt;strong&gt;Rasmus Lerdorf&lt;/strong&gt;&lt;/em&gt;, is quoted on &lt;a class="external"
 href="https://en.wikipedia.org/wiki/PHP#Early_history" target="_blank"
 &gt;the Wikipedia article about PHP&lt;/a&gt; as saying &amp;quot;I don't know how to stop it, there was never any intent to write a programming language {...} I have absolutely no idea how to write a programming language, I just kept adding the next logical step on the way.&amp;quot;&lt;/p&gt;
@@ -1201,13 +1182,13 @@ href="https://en.wikipedia.org/wiki/PHP#Early_history" target="_blank"
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2017-05-on-scripting-languages/media/grumpy-cat-scripting-languages.jpg"
 width="600"
 height="400"
-loading="lazy" alt="Mandatory grumpy cat meme" title="Scripting Languages - I Hate Them"
+loading="lazy"
+alt="Mandatory grumpy cat meme"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
-&gt;
-&lt;/p&gt;
-&lt;p&gt;Also read: &lt;a
+&gt;&lt;/p&gt;
+&lt;p&gt;Also read: &lt;a class="internal"
 href="https://blog.michael.gr/post/2018-01-tablecloth/"
 &gt;Tablecloth&lt;/a&gt; (A high-tech, sci-fi horror short-story)&lt;/p&gt;
 &lt;p&gt;Note: This is a draft. It may contain inaccuracies or mistakes. There are bound to be corrections after I receive some feedback.&lt;/p&gt;
@@ -1240,8 +1221,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="120"
 data-flex-basis="288px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;If you were thinking of installing the &amp;quot;Andy&amp;quot; android emulator on your PC, think again. Here is my experience with it:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;The installable file (Andy_46.2_207_x64bit.exe) is a whole 431 MB.&lt;/li&gt;
@@ -1330,13 +1310,12 @@ data-flex-basis="288px"
 \[Cancel\]&lt;p&gt; &lt;/p&gt;
 \[Update now\]&lt;p&gt;. A screenshot that was captured earlier is now adorned in the notification menu with some crap which I believe was not there before, about sharing it or editing it and stuff. So, going back to the &amp;quot;Quick connect&amp;quot; and &amp;quot;Turn on quick connect&amp;quot; screen, I select &amp;quot;Only when quick connect turned on&amp;quot; and click on &amp;quot;Turn on quick connect&amp;quot;, and I see the &amp;quot;Update Quick connect&amp;quot; popup again. I cancel it, and nothing else happens. So I go back to the notification menu, select &amp;quot;Quick connect&amp;quot; again, and some previously unseen screen opens up, but it is immediately covered by the &amp;quot;Update Quick connect&amp;quot; popup so I cannot use it. I cancel the popup, and everything disappears. So, it is impossible to go back to the &amp;quot;Quick connect&amp;quot; screen again. The fucker secured my consent to turn itself on, and now it won't run unless I consent to also updating it. Also, I cannot find any way of disabling it, since there is no &amp;quot;Quick connect&amp;quot; app in the apps. This is a serious time waster and seriously driving me nuts.&lt;/p&gt;</description></item><item><title>Why Oracle Sucks</title><link>https://blog.michael.gr/post/2015-09-why-oracle-sucks/</link><pubDate>Mon, 14 Sep 2015 11:40:29 +0000</pubDate><guid>https://blog.michael.gr/post/2015-09-why-oracle-sucks/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2015-09-why-oracle-sucks/media/oracle-logo.svg"
 loading="lazy"
-&gt;
-Oracle talks a lot about 11g Express Edition, and how it differs from the full (paid) versions of their database, but it does not say a word about the most important thing:&lt;/p&gt;
+&gt;Oracle talks a lot about 11g Express Edition, and how it differs from the full (paid) versions of their database, but it does not say a word about the most important thing:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Is it compatible at the SQL syntax level?&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;No way to find out other than to try it. So, let's try it.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The downloaded installation zip file contains a folder called DISK1. Now, Oracle Database Express Edition 11g Release 2 bears the date June 4, 2014, so 14 years into the 3rd millennium Oracle is still masturbating with the concept of &amp;quot;disks&amp;quot;.&lt;/p&gt;
@@ -1421,8 +1400,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="187"
 data-flex-basis="450px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;So, Microsoft has pushed this trojan horse to every single user of Windows on the planet. It displays a Windows 10 logo on the taskbar, and it is basically telling you that not only &lt;strong&gt;you will&lt;/strong&gt; get Windows 10 as soon as it comes out, but you should right now begin acting as if you are looking forward to it. Because, you know, you are their biatch.&lt;/p&gt;
 &lt;p&gt;So, let's see:&lt;/p&gt;
 &lt;ul&gt;

@@ -5,11 +5,10 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="abstract"&gt;Abstract
 &lt;/h2&gt;&lt;p&gt;The popular practice of having only two different kinds of builds (&lt;em&gt;Debug&lt;/em&gt; and &lt;em&gt;Release&lt;/em&gt;) is shown to be inadequate. Three to four different kinds of builds are proposed instead, allowing more thorough error checking during development, better performance of the final system on production, and potentially better performance when running tests on a build server.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="the-issue"&gt;The Issue
@@ -248,8 +247,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;/ol&gt;
 &lt;/div&gt;</description></item><item><title>New GitHub project: VsDebugLogger</title><link>https://blog.michael.gr/post/2023-02-09-vs-debug-logger/</link><pubDate>Thu, 09 Feb 2023 10:41:59 +0000</pubDate><guid>https://blog.michael.gr/post/2023-02-09-vs-debug-logger/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2023-02-09-vs-debug-logger/media/vs-debug-logger-logo.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Speeds up Visual Studio debug output by orders of magnitude.&lt;/p&gt;
 &lt;p&gt;On GitHub: &lt;a class="external"
 href="https://github.com/mikenakis/VsDebugLogger" target="_blank"

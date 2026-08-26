@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogging on Michael's Blog</title><link>https://blog.michael.gr/tags/blogging/</link><description>Recent content in Blogging on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 20:21:37 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/blogging/index.xml" rel="self" type="application/rss+xml"/><item><title>Netlify vs. Cloudflare</title><link>https://blog.michael.gr/post/2026-01-25-netlify-vs-cloudflare/</link><pubDate>Sun, 25 Jan 2026 15:49:29 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-25-netlify-vs-cloudflare/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-25-netlify-vs-cloudflare/media/netlify-vs-cloudflare.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
-&lt;p&gt;While looking for a free web host for my new blog, (see &lt;a
+&gt;&lt;/p&gt;
+&lt;p&gt;While looking for a free web host for my new blog, (see &lt;a class="internal"
 href="https://blog.michael.gr/post/2026-01-08-new-blog/"
 &gt;New year, new blog!&lt;/a&gt;,) I did a bit of research and very quickly found &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Netlify" target="_blank"
@@ -36,10 +35,9 @@ href="https://darkreader.org/" target="_blank"
 &lt;h2 id="update-2026-07-29"&gt;Update 2026-07-29
 &lt;/h2&gt;&lt;p&gt;So, each month I have been receiving e-mails from Netlify warning me that I have used a certain percentage of my credits. On months when I did not make any posts, it was 0%. On months when I made one or two posts there was a warning for 25% or 50%. This July was a vacation month for me, so I worked on my blog more than usual, and by the 23rd of July I received a warning for having used 75% of my credits. I decided cannot live with this anxiety, so today I moved from Netlify to Cloudflare.&lt;/p&gt;</description></item><item><title>New year, new blog!</title><link>https://blog.michael.gr/post/2026-01-08-new-blog/</link><pubDate>Thu, 08 Jan 2026 12:05:54 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-08-new-blog/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-08-new-blog/media/new-blog.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;As of today, I have a brand new blog. (You are reading it right now.) The old posts are still here, but the look and feel, and everything under the hood, is different. Everything except the domain name is still free for me.&lt;/p&gt;
-&lt;p&gt;To read why I transitioned from my old blog to this new blog, see &lt;a
+&lt;p&gt;To read why I transitioned from my old blog to this new blog, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2026-01-07-goodbye-blogger/"
 &gt;Goodbye blogger!&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This post lists the technologies involved in editing and publishing my new blog.&lt;/p&gt;
@@ -88,7 +86,7 @@ href="https://en.wikipedia.org/wiki/Gravatar" target="_blank"
 &lt;h2 id="cloudflare"&gt;Cloudflare
 &lt;/h2&gt;&lt;p&gt;&lt;img class="drop-cap-image" src="media/logo-cloudflare.svg" alt="CloudFlare logo"/&gt;For serving my static website to the world, I currently have a free hosting plan with &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Cloudflare" target="_blank"
-&gt;Cloudflare&lt;/a&gt;, a well-known web hosting company headquartered in San Francisco, CA, USA. Once Hugo generates my static website, and I decide that it is ready for publishing, I push it to yet another private GitHub repository, and from there Cloudflare automatically clones it, processes it, and makes it available to the world within a few seconds. If it turns out that Cloudflare does not suit my needs, I can move my blog elsewhere. For the reasons why I switched to Cloudflare from Netlify, see &lt;a
+&gt;Cloudflare&lt;/a&gt;, a well-known web hosting company headquartered in San Francisco, CA, USA. Once Hugo generates my static website, and I decide that it is ready for publishing, I push it to yet another private GitHub repository, and from there Cloudflare automatically clones it, processes it, and makes it available to the world within a few seconds. If it turns out that Cloudflare does not suit my needs, I can move my blog elsewhere. For the reasons why I switched to Cloudflare from Netlify, see &lt;a class="internal"
 href="https://blog.michael.gr/post/2026-01-25-netlify-vs-cloudflare/"
 &gt;Netlify vs. Cloudflare&lt;/a&gt;.&lt;/p&gt;
 &lt;hr&gt;
@@ -96,8 +94,7 @@ href="https://blog.michael.gr/post/2026-01-25-netlify-vs-cloudflare/"
 &lt;hr&gt;
 &lt;p&gt;Cover image: the logos of the technologies that I am currently using for blogging.&lt;/p&gt;</description></item><item><title>Goodbye blogger!</title><link>https://blog.michael.gr/post/2026-01-07-goodbye-blogger/</link><pubDate>Wed, 07 Jan 2026 08:33:59 +0100</pubDate><guid>https://blog.michael.gr/post/2026-01-07-goodbye-blogger/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-01-07-goodbye-blogger/media/blogger-logo.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;My first attempt at blogging started in 2001, with a web-site entirely hand-made in HTML. It was crude, it had no commenting, and it was very difficult to maintain it, so it was necessarily tiny. Back then, finding a web host that was both free and would allow you to use your own domain name for free was quite difficult, so I had no option but to go with various questionable free hosting places.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;First it was &lt;strong&gt;united.net.kg&lt;/strong&gt;. (Where &lt;strong&gt;kg&lt;/strong&gt; is the top-level-domain of &lt;a class="external"
@@ -146,7 +143,7 @@ href="https://blogger.com" target="_blank"
 &lt;p&gt;To do this, I first had to convert my blog from blogger HTML to markdown. Blogger did in fact generate an export of my blog when I asked it to, but it was a very complicated set of data without a shred of documentation as to how to make sense out of it. I had to do some reverse engineering to figure things out, and then I had to write an application in C# which read the export, parsed the html, converted it to markdown, fixed links between posts, fixed links to media, processed and added visitor comments, etc. It was a huge amount of work. For any brave souls that might want to try their luck and follow my steps, the DotNet/C# project is here: &lt;a class="external"
 href="https://github.com/mikenakis/MarkdownFromBlogger" target="_blank"
 &gt;https://github.com/mikenakis/MarkdownFromBlogger&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Once I converted my blogger content to markdown and media files, the next step was to create my new blog from those. How I created it, and how I maintain it, is described in &lt;a
+&lt;p&gt;Once I converted my blogger content to markdown and media files, the next step was to create my new blog from those. How I created it, and how I maintain it, is described in &lt;a class="internal"
 href="https://blog.michael.gr/post/2026-01-08-new-blog/"
 &gt;New year, new blog!&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The old blog is here, for posterity: &lt;a class="external"

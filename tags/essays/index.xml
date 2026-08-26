@@ -5,8 +5,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="160"
 data-flex-basis="384px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;It is not a law.&lt;/p&gt;
 &lt;p&gt;It never was a law.&lt;/p&gt;
 &lt;p&gt;An observation is all that it ever was, or a prediction, but not a law.&lt;/p&gt;
@@ -28,10 +27,9 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="141"
 data-flex-basis="339px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;What causes homosexuality? The predominant understanding is that the causes are genetic, but this seems to be in conflict with the notion of natural selection: an individual who does not reproduce is a dead-end for the genes that they carry; therefore, the 'gay gene' should have gone extinct. A number of hypotheses have been proposed, attempting to resolve this paradox, but they are not very convincing. In this post I present a couple of my own hypotheses, which I believe do a better job at resolving the paradox.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;One prominent scientist who has publicly addressed the paradox of the 'gay gene' is professor Richard Dawkins. In his YouTube Channel &amp;quot;The Poetry of Reality&amp;quot; he attempts to give some possible answers to the question, in a video titled &amp;quot;How is the 'Gay Gene' alive?&amp;quot; (&lt;a class="external"
@@ -87,11 +85,10 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="149"
 data-flex-basis="359px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="introduction"&gt;Introduction
 &lt;/h2&gt;&lt;p&gt;It is becoming customary in western societies to ask people in various settings to state their preferred pronouns. It started among younger people of the particularly woke persuasion, and it is spreading everywhere. When I find myself in such a setting, I do of course go along, because doing otherwise would be awkward, but I hope that it is only a fad which will eventually go away. While waiting to see how it pans out, let me describe a few issues I have with it.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="an-example"&gt;An example
@@ -124,15 +121,14 @@ href="https://www.pexels.com/photo/group-of-multiethnic-people-gathering-around-
 &lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Continuous Code Quality Improvement</title><link>https://blog.michael.gr/post/2024-09-boy-scouting/</link><pubDate>Fri, 12 Apr 2024 10:48:53 +0000</pubDate><guid>https://blog.michael.gr/post/2024-09-boy-scouting/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-09-boy-scouting/media/quality.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="introduction"&gt;Introduction
 &lt;/h2&gt;&lt;p&gt;While working on code in the context of a certain task, a programmer often discovers some preexisting quality issue. When this happens, there is a choice to be made:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Fix the quality issue on the spot, and commit the fix in the context of the task at hand; or:&lt;/li&gt;
 &lt;li&gt;Only make changes that are strictly necessary for the task at hand, and introduce a separate task for fixing the quality issue.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;The practice of continuously improving the quality of the code-base is called &lt;em&gt;&lt;strong&gt;Boy-Scouting&lt;/strong&gt;&lt;/em&gt;. The term comes from a rule of the &lt;em&gt;&lt;strong&gt;Boy Scouts of America&lt;/strong&gt;&lt;/em&gt; that says: &lt;em&gt;&lt;strong&gt;Always leave the campground cleaner than you found it&lt;/strong&gt;&lt;/em&gt;. In the first chapter of &lt;em&gt;Clean Code&lt;/em&gt; by Robert C. Martin (uncle Bob) there is a short section titled &lt;em&gt;The Boy Scout Rule&lt;/em&gt; where the author gives an adaptation of that rule for software: &lt;em&gt;&lt;strong&gt;Always leave the code you are editing a little better than you found it&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
@@ -235,11 +231,10 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Biological anthropologists generally agree that humans evolved reasoning to facilitate hunting together as a group; however, there are many other species that hunt in packs, and yet reasoning is unique to humans. Therefore, in order to explain reasoning, it is not enough to consider how it was beneficial to us; we also need to consider what enabled reasoning to emerge specifically in humans as opposed to any other species.&lt;/p&gt;
 &lt;p&gt;I have a hypothesis which attempts to explain how this happened.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;h2 id="exaptation-of-neural-circuitry-for-arboreal-navigationa-hypothesis-for-the-emergence-of-reasoning-in-early-humans"&gt;Exaptation of Neural Circuitry for Arboreal Navigation&lt;br/&gt;&lt;sup&gt;A hypothesis for the emergence of reasoning in early humans&lt;/sup&gt;
@@ -304,8 +299,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;This band has been haunting me for the past days. I feel compelled to write about it. This post will be completely different from the kind of posts you normally see on this blog.&lt;/p&gt;
 &lt;p&gt;While going through some random playlist on YouTube I stumbled upon this band that I immediately took a liking to, which is something that does not happen often. When I tried to find out a bit more information about them, what I discovered wrecked me.&lt;/p&gt;
 &lt;p&gt;The name of the band is &lt;em&gt;&lt;strong&gt;Trees of Eternity&lt;/strong&gt;&lt;/em&gt;, and they are said to belong to the &lt;em&gt;&lt;strong&gt;Doom/Gothic Metal&lt;/strong&gt;&lt;/em&gt; genre, which is not exactly the kind of music that I listen to, but in the case of this particular band, their sound matches my taste very well.&lt;/p&gt;
@@ -318,8 +312,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="240px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;She has an extraordinarily soft, breathy voice the like of which I have never heard before. It has been described as delicate, angelic, ethereal. It is feminine, but not girly; I would actually call it solemn. Because she sings so softly, she keeps her mouth very close to the microphone, so you can hear her inhaling between sentences, and this creates a feeling of presence, as if she is singing right next to you. Their instruments sound like &lt;em&gt;&lt;strong&gt;Symphonic/Goth Metal&lt;/strong&gt;&lt;/em&gt;, but without excitement or fanfare; they play masterfully, but they stay in the background so as to keep her beautiful voice verily in the foreground.&lt;/p&gt;
 &lt;p&gt;The grand sum of all this is definitely grave and gloomy, but mature, and completely free from pretentiousness and hyperbole, which are so common in the genre. It constitutes the most cohesive sound I have heard in many years.&lt;/p&gt;
 &lt;p&gt;Then my eyes fell upon the comments below the video. I read the first one.&lt;/p&gt;
@@ -392,8 +385,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="162"
 data-flex-basis="388px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -458,8 +450,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;

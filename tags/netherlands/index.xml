@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Netherlands on Michael's Blog</title><link>https://blog.michael.gr/tags/netherlands/</link><description>Recent content in The Netherlands on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 19:16:30 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/netherlands/index.xml" rel="self" type="application/rss+xml"/><item><title>Buienradar vs. Buienalarm: 2-0</title><link>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</link><pubDate>Wed, 10 Jun 2026 07:35:16 +0200</pubDate><guid>https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/cover.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
-&lt;p&gt;The previous post in this series is here: &lt;a
+&gt;&lt;/p&gt;
+&lt;p&gt;The previous post in this series is here: &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/"
 &gt;Buienradar vs. Buienalarm: 1-0&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Below are two screenshots of the two websites as they looked in the morning.&lt;/p&gt;
@@ -17,8 +16,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="93"
 data-flex-basis="224px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/2026-06-09-buinealarm.png"
 width="1899"
 height="2021"
@@ -26,8 +24,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="93"
 data-flex-basis="225px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-06-09-buienalarm-buienradar/media/PXL_20260609_160512286_1620.jpg"
 width="1620"
 height="1220"
@@ -35,11 +32,9 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="132"
 data-flex-basis="318px"
-&gt;
-&lt;/p&gt;</description></item><item><title>Buienradar vs. Buienalarm: 1-0</title><link>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</link><pubDate>Thu, 16 May 2024 14:00:09 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/cover.svg"
+&gt;&lt;/p&gt;</description></item><item><title>Buienradar vs. Buienalarm: 1-0</title><link>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</link><pubDate>Thu, 16 May 2024 14:00:09 +0000</pubDate><guid>https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/cover.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;So, today I had the chance to observe an example of the relative accuracy of buienalarm.nl vs. buienradar.nl&lt;/p&gt;
 &lt;h2 id="time-1300"&gt;Time: ~13:00
 &lt;/h2&gt;&lt;p&gt;Around 13:00 I wanted to know what the weather was going to be at 17:00, and I noticed that buienradar was predicting complete dryness,
@@ -53,8 +48,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="300"
 data-flex-basis="720px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h3 id="buienalarm-1300"&gt;Buienalarm ~13:00
 &lt;/h3&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienalarm.png"
 width="1337"
@@ -63,8 +57,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="201"
 data-flex-basis="484px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="time-1600"&gt;Time: ~16:00
 &lt;/h2&gt;&lt;p&gt;When I checked again around 16:00, buienradar was showing more or less the same thing, while buienalarm had completely changed its mind!&lt;/p&gt;
 &lt;h3 id="buienradar-1600"&gt;Buienradar ~16:00
@@ -75,8 +68,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="300"
 data-flex-basis="720px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h3 id="buienalarm-1600"&gt;Buienalarm ~16:00
 &lt;/h3&gt;&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/buienalarm2.png"
 width="1327"
@@ -85,8 +77,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="199"
 data-flex-basis="478px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;h2 id="time-1700"&gt;Time: 17:00
 &lt;/h2&gt;&lt;p&gt;Sure enough, at 17:00 the weather was completely dry. Here is the view from my office window:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://blog.michael.gr/post/2024-05-buienalarm-vs-buienradar/media/weather-1000.jpg"
@@ -96,15 +87,13 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="132"
 data-flex-basis="318px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Of course this is just a single observation; in another observation, the roles might be reversed. It will take many more comparisons before I can tell if there is a pattern. But for now, the score is: Buienradar: 1, Buienalarm: 0&lt;/p&gt;
 &lt;p&gt;Cover image: &amp;quot;Relief map of the European Netherlands&amp;quot; &lt;a class="external"
 href="https://en.wikipedia.org/wiki/Netherlands#/media/File:2012-NL-prov-relief-3000.jpg" target="_blank"
 &gt;from Wikipedia&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Common mistakes Dutchies make in the use of English</title><link>https://blog.michael.gr/post/2022-01-dutchlish/</link><pubDate>Thu, 13 Jan 2022 12:17:42 +0000</pubDate><guid>https://blog.michael.gr/post/2022-01-dutchlish/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2022-01-dutchlish/media/dutch-tongue.svg"
 loading="lazy"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;The Dutch rank &lt;em&gt;#1 in the world&lt;/em&gt; in English-as-a-foreign-language proficiency, and they have been ranking #1 consistently every year for many years now, according to &lt;a class="external"
 href="https://www.ef.com/wwen/epi/" target="_blank"
 &gt;yearly reports&lt;/a&gt; by the &lt;em&gt;Education First (EF)&lt;/em&gt; organization. (&lt;a class="external"
@@ -173,8 +162,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="203"
 data-flex-basis="487px"
-&gt;
-&lt;/th&gt;
+&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
@@ -236,8 +224,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="160"
 data-flex-basis="384px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;Here is an indicative list of Dutch domain names that belong to taxi firms: &lt;a class="external"
 href="https://www.my-tax.nl/" target="_blank"
 &gt;my-tax.nl&lt;/a&gt;; &lt;a class="external"
@@ -278,8 +265,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="113"
 data-flex-basis="271px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;I suspect this stems from the rampant, indiscriminate, and uncritical use of Microsoft Office machine translation:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Google Translate plays it safe, and translates &lt;em&gt;&lt;strong&gt;verzuim&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;absence&lt;/strong&gt;&lt;/em&gt;, whereas&lt;/li&gt;

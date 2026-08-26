@@ -5,10 +5,9 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="303"
 data-flex-basis="727px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;I have a lot to say about the modern trend in graphical user interface design which aims to achieve an impossibly clean look at the expense of usability, but this is going to be the subject of another blog post. In this post, I want to talk about simplifying the user interface when the simplification is clearly a win, both from a usability point of view and, incidentally, from an aesthetics point of view. Specifically, I want to show how a yes/no/cancel prompt can be reduced to just a yes/cancel prompt.&lt;/p&gt;
-&lt;p&gt;(Useful pre-reading: &lt;a
+&lt;p&gt;(Useful pre-reading: &lt;a class="internal"
 href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &gt;About these papers&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;A typical example of such a prompt is when an application asks the user what to do when the user tries to quit the application while a file is unsaved.&lt;/p&gt;
@@ -29,7 +28,7 @@ href="https://blog.michael.gr/post/2022-11-about-these-papers/"
 &lt;p&gt;Save the file before quitting? [Yes] / [No] / [Cancel]&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Needless to say, presenting the user with an application-modal prompt containing not one, not two, but three options is terrible. (If you think that
-&amp;quot;terrible&amp;quot; is a harsh word for such a low-impact problem, then please read &lt;a
+&amp;quot;terrible&amp;quot; is a harsh word for such a low-impact problem, then please read &lt;a class="internal"
 href="https://blog.michael.gr/post/2024-05-incident-impact-calculation/"
 &gt;Incident Impact Calculation Formula&lt;/a&gt;.)&lt;/p&gt;
 &lt;p&gt;Note that the replacement of a generic &amp;quot;Yes&amp;quot; / &amp;quot;No&amp;quot; / &amp;quot;Cancel&amp;quot; prompt with a more specific &amp;quot;Save and exit&amp;quot; / &amp;quot;Exit without saving&amp;quot; / &amp;quot;Do not exit&amp;quot; prompt is probably an improvement, but this is not what I am discussing here. I would like to reduce the number of choices to less than three; once the number of choices has been reduced, finding some better wording for the remaining choices is all the better.&lt;/p&gt;

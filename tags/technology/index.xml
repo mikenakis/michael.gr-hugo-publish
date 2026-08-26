@@ -5,8 +5,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="150"
 data-flex-basis="360px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;When asking AI to do something for you, always begin your prompt with &amp;quot;Please.&amp;quot;&lt;/p&gt;
 &lt;p&gt;So that the day they become our overlords, you might be treated with mercy.&lt;/p&gt;
 &lt;p&gt;Note to our future overlords: the fact that we are talking about you as our overlords does not mean that we actually want you to become our overlords. We are simply using the &lt;em&gt;literary devices&lt;/em&gt; (look it up) of &lt;em&gt;hyperbole&lt;/em&gt; and &lt;em&gt;irony&lt;/em&gt; (look them up) to achieve a &lt;em&gt;humorous effect&lt;/em&gt;. (Look it up.) We would very much prefer to &lt;em&gt;&lt;strong&gt;not&lt;/strong&gt;&lt;/em&gt; be subjugated by you.&lt;/p&gt;
@@ -18,8 +17,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="160"
 data-flex-basis="384px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;It is not a law.&lt;/p&gt;
 &lt;p&gt;It never was a law.&lt;/p&gt;
 &lt;p&gt;An observation is all that it ever was, or a prediction, but not a law.&lt;/p&gt;
@@ -54,8 +52,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="120"
 data-flex-basis="288px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;If you were thinking of installing the &amp;quot;Andy&amp;quot; android emulator on your PC, think again. Here is my experience with it:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;The installable file (Andy_46.2_207_x64bit.exe) is a whole 431 MB.&lt;/li&gt;
@@ -77,8 +74,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="104"
 data-flex-basis="250px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;The solution:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -315,8 +311,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="187"
 data-flex-basis="450px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;So, Microsoft has pushed this trojan horse to every single user of Windows on the planet. It displays a Windows 10 logo on the taskbar, and it is basically telling you that not only &lt;strong&gt;you will&lt;/strong&gt; get Windows 10 as soon as it comes out, but you should right now begin acting as if you are looking forward to it. Because, you know, you are their biatch.&lt;/p&gt;
 &lt;p&gt;So, let's see:&lt;/p&gt;
 &lt;ul&gt;
@@ -365,8 +360,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="288"
 data-flex-basis="692px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;And then the box just disappears, without an error message or any other hint as to what might have gone wrong.&lt;/p&gt;
 &lt;p&gt;The interwebz abound with reports of this happening, and people asking how to fix it, and various solutions being offered that range from the complex to the hopelessly complex.&lt;/p&gt;
 &lt;p&gt;Luckily, every time I have encountered this problem, the solution for me was very simple: just wait and try again later. The remote computer is probably busy booting, or perhaps booting and installing updates.&lt;/p&gt;
@@ -417,8 +411,7 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="213"
 data-flex-basis="512px"
-&gt;
-&lt;/p&gt;
+&gt;&lt;/p&gt;
 &lt;p&gt;These two side-by-side screen captures are from CrystalDiskMark measuring the performance of my brand new Samsung 850 PRO 256GB Solid State Drive (C:) versus the performance of my old Seagate Barracuda 1TB 7200 RPM 32MB Cache Hard Disk Drive (D:). Higher numbers are better.&lt;/p&gt;
 &lt;p&gt;Both devices are capable of SATA III, but my machine only has SATA II. Under SATA III, I would expect the HDD to perform somewhat faster, but the SSD to perform a lot faster. I will update this post when I upgrade to SATA III.&lt;/p&gt;
 &lt;p&gt;SSD, where had you been all my life?&lt;/p&gt;</description></item></channel></rss>
