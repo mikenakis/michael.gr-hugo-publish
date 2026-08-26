@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming languages on Michael's Blog</title><link>https://blog.michael.gr/tags/programming-languages/</link><description>Recent content in Programming languages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Sun, 23 Aug 2026 19:12:56 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/programming-languages/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming languages on Michael's Blog</title><link>https://blog.michael.gr/tags/programming-languages/</link><description>Recent content in Programming languages on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 26 Aug 2026 10:28:31 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/tags/programming-languages/index.xml" rel="self" type="application/rss+xml"/><item><title>TCL</title><link>https://blog.michael.gr/post/2026-08-17-tcl/</link><pubDate>Mon, 17 Aug 2026 10:58:34 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-17-tcl/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-17-tcl/media/tcl.svg"
 loading="lazy"
 &gt;&lt;/p&gt;
 &lt;p&gt;Fun thing I learned today:&lt;/p&gt;
@@ -9,7 +9,7 @@ href="https://en.wikipedia.org/wiki/Tcl_%28programming_language%29" target="_bla
 href="https://en.wikipedia.org/wiki/MeToo_movement" target="_blank"
 &gt;#MeToo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;And then it was decided that tickle was a bit too risqué.&lt;/p&gt;
-&lt;p&gt;And so they dropped tickle and started pronouncing it ti-si-el.&lt;/p&gt;
+&lt;p&gt;And so they dropped tickle and started pronouncing it tee-see-ell.&lt;/p&gt;
 &lt;p&gt;From here: &lt;a class="external"
 href="https://www.youtube.com/watch?v=V_qzqY1bb7I" target="_blank"
 &gt;YouTube: Reliability Lessons From SQLite - Richard Hipp | SSW 2026&lt;/a&gt; (Around 27':50'')&lt;/p&gt;

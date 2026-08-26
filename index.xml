@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Mon, 24 Aug 2026 13:13:01 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>Standardspeak</title><link>https://blog.michael.gr/post/2026-08-21-standardspeak/</link><pubDate>Fri, 21 Aug 2026 00:12:47 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-21-standardspeak/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-21-standardspeak/media/standardspeak.svg"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Michael's Blog</title><link>https://blog.michael.gr/</link><description>Recent content on Michael's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Michael Belivanakis (a.k.a. Mike Nakis)</copyright><lastBuildDate>Wed, 26 Aug 2026 14:44:25 +0200</lastBuildDate><atom:link href="https://blog.michael.gr/index.xml" rel="self" type="application/rss+xml"/><item><title>IriusRisk Secure-By-Design (SBD) Essentials Certification</title><link>https://blog.michael.gr/post/2026-08-26-iriusrisk-secure-by-design-essentials-certification/</link><pubDate>Wed, 26 Aug 2026 14:42:00 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-26-iriusrisk-secure-by-design-essentials-certification/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-26-iriusrisk-secure-by-design-essentials-certification/media/iriusrisk-sbd-cover.png"
+width="2200"
+height="1700"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="310px"
+&gt;&lt;/p&gt;
+&lt;p&gt;I just received the &lt;em&gt;&lt;strong&gt;IriusRisk Secure-By-Design (SBD) Essentials&lt;/strong&gt;&lt;/em&gt; certification.&lt;/p&gt;
+&lt;p&gt;Here is a link to my certification, on IriusRisk Academy:&lt;/p&gt;
+&lt;p&gt;&lt;a class="external"
+href="https://certifications.iriusrisk.academy/8e2e2b3b-da24-4062-8d61-8251e61d6ce4" target="_blank"
+&gt;IriusRisk Certification - Secure-By-Design Essentials Course • Michael Belivanakis • ThreatModeler Academy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here is my own copy of the PDF file of my certification:&lt;/p&gt;
+&lt;p&gt;&lt;a class="internal"
+href="https://blog.michael.gr/post/2026-08-26-iriusrisk-secure-by-design-essentials-certification/media/iriusrisk-secure-by-design-essentials-certification.pdf"
+&gt;IriusRisk Secure-By-Design (SBD) Essentials Certification - Michael Belivanakis (PDF)&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;PDF converted to PNG using &lt;a class="external"
+href="https://pdf2png.com/" target="_blank"
+&gt;pdf2png.com/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Standardspeak</title><link>https://blog.michael.gr/post/2026-08-21-standardspeak/</link><pubDate>Fri, 21 Aug 2026 00:12:47 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-21-standardspeak/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-21-standardspeak/media/standardspeak.svg"
 loading="lazy"
 &gt;&lt;/p&gt;
 &lt;p&gt;Behold, my latest contribution to the English language:&lt;/p&gt;
@@ -44,7 +64,7 @@ href="https://en.wikipedia.org/wiki/Tcl_%28programming_language%29" target="_bla
 href="https://en.wikipedia.org/wiki/MeToo_movement" target="_blank"
 &gt;#MeToo&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;And then it was decided that tickle was a bit too risqué.&lt;/p&gt;
-&lt;p&gt;And so they dropped tickle and started pronouncing it ti-si-el.&lt;/p&gt;
+&lt;p&gt;And so they dropped tickle and started pronouncing it tee-see-ell.&lt;/p&gt;
 &lt;p&gt;From here: &lt;a class="external"
 href="https://www.youtube.com/watch?v=V_qzqY1bb7I" target="_blank"
 &gt;YouTube: Reliability Lessons From SQLite - Richard Hipp | SSW 2026&lt;/a&gt; (Around 27':50'')&lt;/p&gt;
@@ -52,23 +72,27 @@ href="https://www.youtube.com/watch?v=V_qzqY1bb7I" target="_blank"
 &lt;hr&gt;
 &lt;p&gt;Cover image adapted from official logo found at &lt;a class="external"
 href="https://wiki.tcl-lang.org/page/A&amp;#43;logo&amp;#43;for&amp;#43;Tcl&amp;#43;9" target="_blank"
-&gt;tcl-lang.org: A logo for Tcl 9&lt;/a&gt;&lt;/p&gt;</description></item><item><title>IriusRisk Threat Modeling Foundations (IR-TMF) Certification</title><link>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</link><pubDate>Tue, 11 Aug 2026 14:33:43 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/media/iriusrisk-tmf-certification-cover.jpg"
-width="1980"
-height="1533"
+&gt;tcl-lang.org: A logo for Tcl 9&lt;/a&gt;&lt;/p&gt;</description></item><item><title>IriusRisk Threat Modeling Foundations (IR-TMF) Certification</title><link>https://blog.michael.gr/post/2026-08-11-iriusrisk-threat-modeling-foundations-certification/</link><pubDate>Tue, 11 Aug 2026 14:33:43 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-11-iriusrisk-threat-modeling-foundations-certification/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-11-iriusrisk-threat-modeling-foundations-certification/media/iriusrisk-tmf-cover.png"
+width="2200"
+height="1700"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="129"
-data-flex-basis="309px"
+data-flex-basis="310px"
 &gt;&lt;/p&gt;
-&lt;p&gt;I just received the IriusRisk Threat Modeling Foundations (IR-TMF) certification.&lt;/p&gt;
+&lt;p&gt;I just received the &lt;em&gt;&lt;strong&gt;IriusRisk Threat Modeling Foundations (IR-TMF)&lt;/strong&gt;&lt;/em&gt; certification.&lt;/p&gt;
 &lt;p&gt;Here is a link to my certification, on IriusRisk Academy:&lt;/p&gt;
 &lt;p&gt;&lt;a class="external"
-href="https://certifications.iriusrisk.academy/ce238817-f5b2-4a66-8fc1-3b9a6c35df93#acc.CfnWKM3z" target="_blank"
+href="https://certifications.iriusrisk.academy/ce238817-f5b2-4a66-8fc1-3b9a6c35df93" target="_blank"
 &gt;IriusRisk Certification - Threat Modeling Foundations (TM-F) Course • Michael Belivanakis • ThreatModeler Academy&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Here is my own copy of the PDF file of my certification:&lt;/p&gt;
 &lt;p&gt;&lt;a class="internal"
-href="https://blog.michael.gr/post/2026-08-11-iriusrisk-tmf-certification/media/iriusrisk-tmf-certification.pdf"
-&gt;IriusRisk Threat Modeling Foundations Certification - Michael Belivanakis (PDF)&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Notes on "How to be charismatic" by Charles Duhigg</title><link>https://blog.michael.gr/post/2026-08-08-how-to-be-charismatic/</link><pubDate>Fri, 07 Aug 2026 19:05:46 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-08-how-to-be-charismatic/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-08-how-to-be-charismatic/media/how-to-be-charismatic.jpg"
+href="https://blog.michael.gr/post/2026-08-11-iriusrisk-threat-modeling-foundations-certification/media/iriusrisk-threat-modeling-foundations-certification.pdf"
+&gt;IriusRisk Threat Modeling Foundations Certification - Michael Belivanakis (PDF)&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;PDF converted to PNG using &lt;a class="external"
+href="https://pdf2png.com/" target="_blank"
+&gt;pdf2png.com/&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Notes on "How to be charismatic" by Charles Duhigg</title><link>https://blog.michael.gr/post/2026-08-08-how-to-be-charismatic/</link><pubDate>Fri, 07 Aug 2026 19:05:46 +0200</pubDate><guid>https://blog.michael.gr/post/2026-08-08-how-to-be-charismatic/</guid><description>&lt;p&gt;&lt;img src="https://blog.michael.gr/post/2026-08-08-how-to-be-charismatic/media/how-to-be-charismatic.jpg"
 width="2273"
 height="1279"
 loading="lazy"
