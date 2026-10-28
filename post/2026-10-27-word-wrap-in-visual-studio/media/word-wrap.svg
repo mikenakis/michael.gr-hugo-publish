@@ -1,11 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1620" height="1000" viewBox="0 0 1620 1000">
-  <defs>
-    <style>.light-defaultgrey{fill: #212121; opacity: 1;}.light-blue{fill: #005dba; opacity: 1;}</style>
-  </defs>
-  <title>IconLightWordWrap</title>
-  <g id="level-1" transform="translate(643.333 333.333) scale(20.8333)">
-    <rect id="active-frame" x="-2.5" y="-2.5" width="21" height="21" rx="3" fill="none" stroke="#3399ff" stroke-width="1" />
-    <path class="light-defaultgrey" d="M8,3.008a1.978,1.978,0,0,0-1,.278V1H6V7H7V6.729a1.969,1.969,0,0,0,1,.279,2,2,0,0,0,0-4Zm.013,3.026a1,1,0,1,1,1-1A1,1,0,0,1,8.013,6.034ZM4,3.286a1.978,1.978,0,0,0-1-.278,2,2,0,0,0,0,4,1.969,1.969,0,0,0,1-.279V7H5V3H4ZM2.993,6.034a1,1,0,1,1,1-1A1,1,0,0,1,2.993,6.034Zm.711,5.7.719.7A2,2,0,1,1,4.393,9.6l-.7.714a1,1,0,1,0-.7,1.716A.992.992,0,0,0,3.7,11.734Z" />
-    <path class="light-blue" d="M15,5.5v6l-.5.5H7.679l1.677,1.678-.707.707-2.5-2.5v-.707l2.5-2.5.707.707L7.741,11H14V6H11V5h3.5Z" />
-  </g>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg:svg width="1620" height="1000" viewBox="0 0 1620 1000" version="1.1" id="svg2" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  
+  <svg:defs id="defs1">
+    <svg:style id="style1">.light-defaultgrey{fill: #212121; opacity: 1;}.light-blue{fill: #005dba; opacity: 1;}</svg:style>
+  </svg:defs>
+  <svg:title id="title1">IconLightWordWrap</svg:title>
+  <svg:rect id="active-frame" x="591.24976" y="281.24976" width="437.4993" height="437.4993" rx="62.499901" fill="#d0d0d0" stroke="#3399ff" stroke-width="20.8333" style="fill:#b4b4b4;fill-opacity:1" />
+  <svg:path class="light-defaultgrey" d="m 809.9994,395.99957 a 41.208267,41.208267 0 0 0 -20.8333,5.79165 V 354.1663 h -20.8333 v 124.9998 h 20.8333 v -5.64582 a 41.020768,41.020768 0 0 0 20.8333,5.81249 41.6666,41.6666 0 0 0 0,-83.3332 z m 0.27083,63.04156 a 20.8333,20.8333 0 1 1 20.8333,-20.8333 20.8333,20.8333 0 0 1 -20.8333,20.8333 z M 726.6662,401.79122 a 41.208267,41.208267 0 0 0 -20.8333,-5.79165 41.6666,41.6666 0 0 0 0,83.3332 41.020768,41.020768 0 0 0 20.8333,-5.81249 v 5.64582 h 20.8333 v -83.3332 h -20.8333 z m -20.97913,57.24991 a 20.8333,20.8333 0 1 1 20.8333,-20.8333 20.8333,20.8333 0 0 1 -20.8333,20.8333 z m 14.81247,118.74981 14.97915,14.58331 a 41.6666,41.6666 0 1 1 -0.625,-59.04157 l -14.58331,14.87498 a 20.8333,20.8333 0 1 0 -14.58331,35.74994 20.666634,20.666634 0 0 0 14.72914,-6.16666 z" id="path1" style="stroke-width:20.8333" />
+  <svg:path class="light-blue" d="m 955.8325,447.91615 v 124.9998 L 945.41585,583.3326 H 803.31191 l 34.93744,34.95828 -14.72914,14.72914 -52.08325,-52.08325 v -14.72914 l 52.08325,-52.08325 14.72914,14.72914 -33.64577,33.64578 H 934.9992 V 458.3328 h -62.4999 v -20.8333 h 72.91655 z" id="path2" style="stroke-width:20.8333" />
+  
+</svg:svg>
