@@ -11,7 +11,9 @@
 /2024/07/gregorys.html /post/2024-07-gregorys/ 301
 /2024/07/on-preferred-pronouns.html /post/2024-07-on-preferred-pronouns/ 301
 /2024/03/codecoverage.html /post/2024-03-codecoverage/ 301
-/2024/04/audittesting.html /post/2024-04-approval-testing/ 301
+/2024/04/audittesting.html /post/2024-04-audit-testing/ 301
+/post/2024-04-approval-testing /post/2024-04-audit-testing/ 301
+/post/2024-04-approval-testing/ /post/2024-04-audit-testing/ 301
 /2023/12/call-graph-acyclicity.html /post/2023-12-27-call-graph-acyclicity/ 301
 /2023/12/authoritative-technical-design.html /post/2023-12-09-authoritative-technical-design/ 301
 /2023/09/sdk-style-msbuild-projects.html /post/2023-09-05-sdk-style-msbuild-projects/ 301

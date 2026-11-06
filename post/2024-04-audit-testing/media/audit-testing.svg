@@ -2,14 +2,13 @@
 
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
-<svg:svg width="1620mm" height="1000mm" viewBox="0 0 1620 999.99998" version="1.1" id="svg851" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<svg:svg width="1620.0001mm" height="1000mm" viewBox="0 0 1620.0001 999.99998" version="1.1" id="svg851" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
   
   <svg:defs id="defs848">
     <svg:rect x="962.64587" y="697.69751" width="2093.0925" height="2137.2505" id="rect1" />
   </svg:defs>
-  <svg:g id="layer1" transform="translate(715.97973,-32.252042)">
-    <svg:rect style="fill:#000000;fill-opacity:0;stroke:#ccceff;stroke-width:0.705556;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-opacity:1;stop-color:#000000" id="background" width="1619.2944" height="999.29443" x="-715.62695" y="32.60482" />
-    <svg:g id="g1" transform="matrix(0.95210992,0,0,0.95210992,-176.73418,25.810145)" style="stroke-width:1.0503">
+  <svg:g id="layer1" transform="translate(715.67203,-32.559751)">
+    <svg:g id="g1" transform="matrix(0.99944757,0,0,1.0013809,-190.80945,-0.0450449)" style="stroke-width:1.0503">
       <svg:g id="test-symbol" transform="matrix(53.08439,0,0,53.084381,-1919.1395,-1068.1549)" style="stroke-width:0.0747843">
         <svg:g id="black" style="stroke-width:0.0747843">
           <svg:path id="bottom-right" d="m 41.509615,39.547994 c 5.203306,0 9.424171,-4.220864 9.424171,-9.424171 h -9.424171 z" style="fill:#323232;fill-opacity:1;stroke:none;stroke-width:0.0272116;stroke-opacity:1" />
