@@ -1,5 +1,5 @@
 @echo off
-::Hugo
+::Hugo (https://gohugo.io/installation/windows)
 call :install Hugo.Hugo.Extended
 ::VLC (https://www.videolan.org)
 call :install VideoLAN.VLC 
@@ -7,8 +7,11 @@ call :install VideoLAN.VLC
 call :install Git.Git
 ::SickSartori SvgPreview (https://github.com/SickSartori/svg-preview)
 call :install SickSartori.SvgPreview 
+::KeePassXC (https://keepassxc.org)
 call :install KeePassXCTeam.KeePassXC
+::SyncThing (https://syncthing.net)
 call :install Syncthing.Syncthing
+::Chrome (https://www.google.com/chrome)
 call :install Google.Chrome
 ::WhatsApp
 call :install 9NKSQGP7F2NH --source msstore
@@ -22,9 +25,11 @@ call :install Inkscape.Inkscape
 call :install PeterPawlowski.foobar2000
 ::Foobar2000 Encoder Pack (https://www.foobar2000.org/encoderpack)
 call :install PeterPawlowski.foobar2000.EncoderPack
+::Audacious (https://audacious-media-player.org)
+call :install Audacious.MediaPlayer
 ::Ditto (https://ditto-cp.sourceforge.io)
 call :install Ditto.Ditto
-::7-zip
+::7-zip (https://www.7-zip.org)
 call :install 7zip.7zip
 ::Firefox (https://www.mozilla.org/en-US)
 call :install Mozilla.Firefox
