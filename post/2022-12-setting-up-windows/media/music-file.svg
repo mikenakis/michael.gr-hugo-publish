@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E6ECF4"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E3E9F2"/>
+      <stop offset="1" stop-color="#B9C5D6"/>
+    </linearGradient>
+    <linearGradient id="note" gradientUnits="userSpaceOnUse" x1="150" y1="72" x2="90" y2="226">
+      <stop offset="0" stop-color="#3D8BFF"/>
+      <stop offset="1" stop-color="#6A35E0"/>
+    </linearGradient>
+  </defs>
+  <path id="sheet" fill="url(#page)" stroke="#8E9CB0" stroke-width="6" stroke-linejoin="round" d="M48 8H164L220 64V236A12 12 0 0 1 208 248H48A12 12 0 0 1 36 236V20A12 12 0 0 1 48 8Z"/>
+  <path id="corner" fill="url(#fold)" stroke="#8E9CB0" stroke-width="6" stroke-linejoin="round" d="M164 8V52A12 12 0 0 0 176 64H220Z"/>
+  <g id="eighth-note" fill="url(#note)">
+    <ellipse cx="104" cy="196" rx="38" ry="28" transform="rotate(-18 104 196)"/>
+    <path d="M124 191V78H141.2C143.2 106 192 114 183 170C176 140 160 130 141.2 127V190.8Z"/>
+  </g>
+</svg>
