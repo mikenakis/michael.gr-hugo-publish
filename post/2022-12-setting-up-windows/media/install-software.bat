@@ -45,6 +45,8 @@ call :install Microsoft.VisualStudio.Community
 call :install Microsoft.Sysinternals.ProcessExplorer
 ::Opera (https://www.opera.com)
 call :install Opera.Opera
+::LibreOffice (https://www.libreoffice.org)
+call :install TheDocumentFoundation.LibreOffice
 goto :eof
 
 ::Optionally:
