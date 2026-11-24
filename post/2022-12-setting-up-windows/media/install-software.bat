@@ -43,6 +43,8 @@ call :install TortoiseGit.TortoiseGit
 call :install Microsoft.VisualStudio.Community
 ::SysInternals Process Explorer (https://learn.microsoft.com/en-us/sysinternals/downloads/process-explorer)
 call :install Microsoft.Sysinternals.ProcessExplorer
+::SysInternals Handle (https://learn.microsoft.com/en-us/sysinternals/downloads/handle)
+call :install Microsoft.Sysinternals.Handle
 ::Opera (https://www.opera.com)
 call :install Opera.Opera
 ::LibreOffice (https://www.libreoffice.org)
