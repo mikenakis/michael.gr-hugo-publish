@@ -4,7 +4,7 @@
   <svg:defs id="defs15" />
   
   <!-- [Claude] The group below is the official logo of eM Client, from emclient.com (emc_img_logo_new.svg). -->
-  <svg:rect width="1620" height="1000" fill="#ffffff" id="rect1" style="fill:#808080;fill-opacity:0.5" />
+  <svg:rect width="1620" height="1000" fill="#ffffff" id="rect1" style="fill:#cdcdcd;fill-opacity:0.5" />
   <svg:g transform="translate(196 280) scale(10)" id="g4">
     <svg:defs id="defs1">
       <svg:path id="a" d="M0 28.814h122.733V0H0z" />
